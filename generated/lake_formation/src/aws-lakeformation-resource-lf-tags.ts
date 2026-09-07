@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfResourceLfTagsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsResourceLfTagsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#catalog_id TfResourceLfTags#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#catalog_id AwsResourceLfTags#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#id TfResourceLfTags#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#id AwsResourceLfTags#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,45 +20,45 @@ export interface TfResourceLfTagsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#region TfResourceLfTags#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#region AwsResourceLfTags#region}
   */
   readonly region?: string;
   /**
   * database block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#database TfResourceLfTags#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#database AwsResourceLfTags#database}
   */
-  readonly database?: TfResourceLfTags.DatabaseProperty;
+  readonly database?: AwsResourceLfTags.DatabaseProperty;
   /**
   * lf_tag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#lf_tag TfResourceLfTags#lf_tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#lf_tag AwsResourceLfTags#lf_tag}
   */
-  readonly lfTag: TfResourceLfTags.LfTagProperty[] | cdktn.IResolvable;
+  readonly lfTag: AwsResourceLfTags.LfTagProperty[] | cdktn.IResolvable;
   /**
   * table block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#table TfResourceLfTags#table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#table AwsResourceLfTags#table}
   */
-  readonly table?: TfResourceLfTags.TableProperty;
+  readonly table?: AwsResourceLfTags.TableProperty;
   /**
   * table_with_columns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#table_with_columns TfResourceLfTags#table_with_columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#table_with_columns AwsResourceLfTags#table_with_columns}
   */
-  readonly tableWithColumns?: TfResourceLfTags.TableWithColumnsProperty;
+  readonly tableWithColumns?: AwsResourceLfTags.TableWithColumnsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#timeouts TfResourceLfTags#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#timeouts AwsResourceLfTags#timeouts}
   */
-  readonly timeouts?: TfResourceLfTags.TimeoutsProperty;
+  readonly timeouts?: AwsResourceLfTags.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags aws_lakeformation_resource_lf_tags}
 */
-export class TfResourceLfTags extends cdktn.TerraformResource {
+export class AwsResourceLfTags extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfResourceLfTags extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfResourceLfTags resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsResourceLfTags resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfResourceLfTags to import
-  * @param importFromId The id of the existing TfResourceLfTags that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfResourceLfTags to import is found
+  * @param importToId The construct id used in the generated config for the AwsResourceLfTags to import
+  * @param importFromId The id of the existing AwsResourceLfTags that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsResourceLfTags to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lakeformation_resource_lf_tags", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfResourceLfTags extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfResourceLfTagsConfig
+  * @param options AwsResourceLfTagsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfResourceLfTagsConfig) {
+  public constructor(scope: Construct, id: string, config: AwsResourceLfTagsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lakeformation_resource_lf_tags',
       terraformGeneratorMetadata: {
@@ -169,11 +169,11 @@ export class TfResourceLfTags extends cdktn.TerraformResource {
   }
 
   // database - computed: false, optional: true, required: false
-  private _database = new TfResourceLfTags.DatabasePropertyOutputReference(this, "database");
+  private _database = new AwsResourceLfTags.DatabasePropertyOutputReference(this, "database");
   public get database() {
     return this._database;
   }
-  public putDatabase(value: TfResourceLfTags.DatabaseProperty) {
+  public putDatabase(value: AwsResourceLfTags.DatabaseProperty) {
     this._database.internalValue = value;
   }
   public resetDatabase() {
@@ -185,11 +185,11 @@ export class TfResourceLfTags extends cdktn.TerraformResource {
   }
 
   // lf_tag - computed: false, optional: false, required: true
-  private _lfTag = new TfResourceLfTags.LfTagPropertyList(this, "lf_tag", true);
+  private _lfTag = new AwsResourceLfTags.LfTagPropertyList(this, "lf_tag", true);
   public get lfTag() {
     return this._lfTag;
   }
-  public putLfTag(value: TfResourceLfTags.LfTagProperty[] | cdktn.IResolvable) {
+  public putLfTag(value: AwsResourceLfTags.LfTagProperty[] | cdktn.IResolvable) {
     this._lfTag.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -198,11 +198,11 @@ export class TfResourceLfTags extends cdktn.TerraformResource {
   }
 
   // table - computed: false, optional: true, required: false
-  private _table = new TfResourceLfTags.TablePropertyOutputReference(this, "table");
+  private _table = new AwsResourceLfTags.TablePropertyOutputReference(this, "table");
   public get table() {
     return this._table;
   }
-  public putTable(value: TfResourceLfTags.TableProperty) {
+  public putTable(value: AwsResourceLfTags.TableProperty) {
     this._table.internalValue = value;
   }
   public resetTable() {
@@ -214,11 +214,11 @@ export class TfResourceLfTags extends cdktn.TerraformResource {
   }
 
   // table_with_columns - computed: false, optional: true, required: false
-  private _tableWithColumns = new TfResourceLfTags.TableWithColumnsPropertyOutputReference(this, "table_with_columns");
+  private _tableWithColumns = new AwsResourceLfTags.TableWithColumnsPropertyOutputReference(this, "table_with_columns");
   public get tableWithColumns() {
     return this._tableWithColumns;
   }
-  public putTableWithColumns(value: TfResourceLfTags.TableWithColumnsProperty) {
+  public putTableWithColumns(value: AwsResourceLfTags.TableWithColumnsProperty) {
     this._tableWithColumns.internalValue = value;
   }
   public resetTableWithColumns() {
@@ -230,11 +230,11 @@ export class TfResourceLfTags extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfResourceLfTags.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsResourceLfTags.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfResourceLfTags.TimeoutsProperty) {
+  public putTimeouts(value: AwsResourceLfTags.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -254,11 +254,11 @@ export class TfResourceLfTags extends cdktn.TerraformResource {
       catalog_id: cdktn.stringToTerraform(this._catalogId),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      database: tfResourceLfTagsDatabasePropertyToTerraform(this._database.internalValue),
-      lf_tag: cdktn.listMapper(tfResourceLfTagsLfTagPropertyToTerraform, true)(this._lfTag.internalValue),
-      table: tfResourceLfTagsTablePropertyToTerraform(this._table.internalValue),
-      table_with_columns: tfResourceLfTagsTableWithColumnsPropertyToTerraform(this._tableWithColumns.internalValue),
-      timeouts: tfResourceLfTagsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      database: awsResourceLfTagsDatabasePropertyToTerraform(this._database.internalValue),
+      lf_tag: cdktn.listMapper(awsResourceLfTagsLfTagPropertyToTerraform, true)(this._lfTag.internalValue),
+      table: awsResourceLfTagsTablePropertyToTerraform(this._table.internalValue),
+      table_with_columns: awsResourceLfTagsTableWithColumnsPropertyToTerraform(this._tableWithColumns.internalValue),
+      timeouts: awsResourceLfTagsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -283,34 +283,34 @@ export class TfResourceLfTags extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       database: {
-        value: tfResourceLfTagsDatabasePropertyToHclTerraform(this._database.internalValue),
+        value: awsResourceLfTagsDatabasePropertyToHclTerraform(this._database.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfResourceLfTags.DatabasePropertyList",
+        storageClassType: "AwsResourceLfTags.DatabasePropertyList",
       },
       lf_tag: {
-        value: cdktn.listMapperHcl(tfResourceLfTagsLfTagPropertyToHclTerraform, true)(this._lfTag.internalValue),
+        value: cdktn.listMapperHcl(awsResourceLfTagsLfTagPropertyToHclTerraform, true)(this._lfTag.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfResourceLfTags.LfTagPropertyList",
+        storageClassType: "AwsResourceLfTags.LfTagPropertyList",
       },
       table: {
-        value: tfResourceLfTagsTablePropertyToHclTerraform(this._table.internalValue),
+        value: awsResourceLfTagsTablePropertyToHclTerraform(this._table.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfResourceLfTags.TablePropertyList",
+        storageClassType: "AwsResourceLfTags.TablePropertyList",
       },
       table_with_columns: {
-        value: tfResourceLfTagsTableWithColumnsPropertyToHclTerraform(this._tableWithColumns.internalValue),
+        value: awsResourceLfTagsTableWithColumnsPropertyToHclTerraform(this._tableWithColumns.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfResourceLfTags.TableWithColumnsPropertyList",
+        storageClassType: "AwsResourceLfTags.TableWithColumnsPropertyList",
       },
       timeouts: {
-        value: tfResourceLfTagsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsResourceLfTagsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfResourceLfTags.TimeoutsProperty",
+        storageClassType: "AwsResourceLfTags.TimeoutsProperty",
       },
     };
 
@@ -319,7 +319,7 @@ export class TfResourceLfTags extends cdktn.TerraformResource {
   }
 }
 
-export function tfResourceLfTagsDatabasePropertyToTerraform(struct?: TfResourceLfTags.DatabasePropertyOutputReference | TfResourceLfTags.DatabaseProperty): any {
+export function awsResourceLfTagsDatabasePropertyToTerraform(struct?: AwsResourceLfTags.DatabasePropertyOutputReference | AwsResourceLfTags.DatabaseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -331,7 +331,7 @@ export function tfResourceLfTagsDatabasePropertyToTerraform(struct?: TfResourceL
 }
 
 
-export function tfResourceLfTagsDatabasePropertyToHclTerraform(struct?: TfResourceLfTags.DatabasePropertyOutputReference | TfResourceLfTags.DatabaseProperty): any {
+export function awsResourceLfTagsDatabasePropertyToHclTerraform(struct?: AwsResourceLfTags.DatabasePropertyOutputReference | AwsResourceLfTags.DatabaseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -356,7 +356,7 @@ export function tfResourceLfTagsDatabasePropertyToHclTerraform(struct?: TfResour
 }
 
 
-export function tfResourceLfTagsLfTagPropertyToTerraform(struct?: TfResourceLfTags.LfTagProperty | cdktn.IResolvable): any {
+export function awsResourceLfTagsLfTagPropertyToTerraform(struct?: AwsResourceLfTags.LfTagProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -369,7 +369,7 @@ export function tfResourceLfTagsLfTagPropertyToTerraform(struct?: TfResourceLfTa
 }
 
 
-export function tfResourceLfTagsLfTagPropertyToHclTerraform(struct?: TfResourceLfTags.LfTagProperty | cdktn.IResolvable): any {
+export function awsResourceLfTagsLfTagPropertyToHclTerraform(struct?: AwsResourceLfTags.LfTagProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -400,7 +400,7 @@ export function tfResourceLfTagsLfTagPropertyToHclTerraform(struct?: TfResourceL
 }
 
 
-export function tfResourceLfTagsTablePropertyToTerraform(struct?: TfResourceLfTags.TablePropertyOutputReference | TfResourceLfTags.TableProperty): any {
+export function awsResourceLfTagsTablePropertyToTerraform(struct?: AwsResourceLfTags.TablePropertyOutputReference | AwsResourceLfTags.TableProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,7 +414,7 @@ export function tfResourceLfTagsTablePropertyToTerraform(struct?: TfResourceLfTa
 }
 
 
-export function tfResourceLfTagsTablePropertyToHclTerraform(struct?: TfResourceLfTags.TablePropertyOutputReference | TfResourceLfTags.TableProperty): any {
+export function awsResourceLfTagsTablePropertyToHclTerraform(struct?: AwsResourceLfTags.TablePropertyOutputReference | AwsResourceLfTags.TableProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function tfResourceLfTagsTablePropertyToHclTerraform(struct?: TfResourceL
 }
 
 
-export function tfResourceLfTagsTableWithColumnsPropertyToTerraform(struct?: TfResourceLfTags.TableWithColumnsPropertyOutputReference | TfResourceLfTags.TableWithColumnsProperty): any {
+export function awsResourceLfTagsTableWithColumnsPropertyToTerraform(struct?: AwsResourceLfTags.TableWithColumnsPropertyOutputReference | AwsResourceLfTags.TableWithColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -467,7 +467,7 @@ export function tfResourceLfTagsTableWithColumnsPropertyToTerraform(struct?: TfR
 }
 
 
-export function tfResourceLfTagsTableWithColumnsPropertyToHclTerraform(struct?: TfResourceLfTags.TableWithColumnsPropertyOutputReference | TfResourceLfTags.TableWithColumnsProperty): any {
+export function awsResourceLfTagsTableWithColumnsPropertyToHclTerraform(struct?: AwsResourceLfTags.TableWithColumnsPropertyOutputReference | AwsResourceLfTags.TableWithColumnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -516,7 +516,7 @@ export function tfResourceLfTagsTableWithColumnsPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfResourceLfTagsTimeoutsPropertyToTerraform(struct?: TfResourceLfTags.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsResourceLfTagsTimeoutsPropertyToTerraform(struct?: AwsResourceLfTags.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -528,7 +528,7 @@ export function tfResourceLfTagsTimeoutsPropertyToTerraform(struct?: TfResourceL
 }
 
 
-export function tfResourceLfTagsTimeoutsPropertyToHclTerraform(struct?: TfResourceLfTags.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsResourceLfTagsTimeoutsPropertyToHclTerraform(struct?: AwsResourceLfTags.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -553,14 +553,14 @@ export function tfResourceLfTagsTimeoutsPropertyToHclTerraform(struct?: TfResour
 }
 
 
-export namespace TfResourceLfTags {
+export namespace AwsResourceLfTags {
 export interface DatabaseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#catalog_id TfResourceLfTags#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#catalog_id AwsResourceLfTags#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#name TfResourceLfTags#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#name AwsResourceLfTags#name}
   */
   readonly name: string;
 }
@@ -633,15 +633,15 @@ export class DatabasePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LfTagProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#catalog_id TfResourceLfTags#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#catalog_id AwsResourceLfTags#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#key TfResourceLfTags#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#key AwsResourceLfTags#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#value TfResourceLfTags#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#value AwsResourceLfTags#value}
   */
   readonly value: string;
 }
@@ -765,19 +765,19 @@ export class LfTagPropertyList extends cdktn.ComplexList {
 }
 export interface TableProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#catalog_id TfResourceLfTags#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#catalog_id AwsResourceLfTags#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#database_name TfResourceLfTags#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#database_name AwsResourceLfTags#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#name TfResourceLfTags#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#name AwsResourceLfTags#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#wildcard TfResourceLfTags#wildcard}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#wildcard AwsResourceLfTags#wildcard}
   */
   readonly wildcard?: boolean | cdktn.IResolvable;
 }
@@ -894,27 +894,27 @@ export class TablePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TableWithColumnsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#catalog_id TfResourceLfTags#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#catalog_id AwsResourceLfTags#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#column_names TfResourceLfTags#column_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#column_names AwsResourceLfTags#column_names}
   */
   readonly columnNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#database_name TfResourceLfTags#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#database_name AwsResourceLfTags#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#excluded_column_names TfResourceLfTags#excluded_column_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#excluded_column_names AwsResourceLfTags#excluded_column_names}
   */
   readonly excludedColumnNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#name TfResourceLfTags#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#name AwsResourceLfTags#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#wildcard TfResourceLfTags#wildcard}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#wildcard AwsResourceLfTags#wildcard}
   */
   readonly wildcard?: boolean | cdktn.IResolvable;
 }
@@ -1072,11 +1072,11 @@ export class TableWithColumnsPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#create TfResourceLfTags#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#create AwsResourceLfTags#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#delete TfResourceLfTags#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lakeformation_resource_lf_tags#delete AwsResourceLfTags#delete}
   */
   readonly delete?: string;
 }

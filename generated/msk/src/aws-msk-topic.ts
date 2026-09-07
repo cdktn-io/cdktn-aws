@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTopicConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTopicConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#cluster_arn TfTopic#cluster_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#cluster_arn AwsTopic#cluster_arn}
   */
   readonly clusterArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#configs TfTopic#configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#configs AwsTopic#configs}
   */
   readonly configs?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#name TfTopic#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#name AwsTopic#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#partition_count TfTopic#partition_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#partition_count AwsTopic#partition_count}
   */
   readonly partitionCount: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#region TfTopic#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#region AwsTopic#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#replication_factor TfTopic#replication_factor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#replication_factor AwsTopic#replication_factor}
   */
   readonly replicationFactor: number;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#timeouts TfTopic#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#timeouts AwsTopic#timeouts}
   */
-  readonly timeouts?: TfTopic.TimeoutsProperty;
+  readonly timeouts?: AwsTopic.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic aws_msk_topic}
 */
-export class TfTopic extends cdktn.TerraformResource {
+export class AwsTopic extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class TfTopic extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTopic resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTopic resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTopic to import
-  * @param importFromId The id of the existing TfTopic that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTopic to import is found
+  * @param importToId The construct id used in the generated config for the AwsTopic to import
+  * @param importFromId The id of the existing AwsTopic that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTopic to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_msk_topic", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class TfTopic extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTopicConfig
+  * @param options AwsTopicConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTopicConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTopicConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_msk_topic',
       terraformGeneratorMetadata: {
@@ -199,11 +199,11 @@ export class TfTopic extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTopic.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTopic.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTopic.TimeoutsProperty) {
+  public putTimeouts(value: AwsTopic.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -226,7 +226,7 @@ export class TfTopic extends cdktn.TerraformResource {
       partition_count: cdktn.numberToTerraform(this._partitionCount),
       region: cdktn.stringToTerraform(this._region),
       replication_factor: cdktn.numberToTerraform(this._replicationFactor),
-      timeouts: tfTopicTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsTopicTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -269,10 +269,10 @@ export class TfTopic extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       timeouts: {
-        value: tfTopicTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTopicTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTopic.TimeoutsProperty",
+        storageClassType: "AwsTopic.TimeoutsProperty",
       },
     };
 
@@ -281,7 +281,7 @@ export class TfTopic extends cdktn.TerraformResource {
   }
 }
 
-export function tfTopicTimeoutsPropertyToTerraform(struct?: TfTopic.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTopicTimeoutsPropertyToTerraform(struct?: AwsTopic.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -294,7 +294,7 @@ export function tfTopicTimeoutsPropertyToTerraform(struct?: TfTopic.TimeoutsProp
 }
 
 
-export function tfTopicTimeoutsPropertyToHclTerraform(struct?: TfTopic.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTopicTimeoutsPropertyToHclTerraform(struct?: AwsTopic.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,24 +325,24 @@ export function tfTopicTimeoutsPropertyToHclTerraform(struct?: TfTopic.TimeoutsP
 }
 
 
-export namespace TfTopic {
+export namespace AwsTopic {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#create TfTopic#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#create AwsTopic#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#delete TfTopic#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#delete AwsTopic#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#update TfTopic#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_topic#update AwsTopic#update}
   */
   readonly update?: string;
 }

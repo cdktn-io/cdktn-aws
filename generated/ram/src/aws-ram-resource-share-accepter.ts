@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfResourceShareAccepterConfig extends cdktn.TerraformMetaArguments {
+export interface AwsResourceShareAccepterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_accepter#id TfResourceShareAccepter#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_accepter#id AwsResourceShareAccepter#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,25 +16,25 @@ export interface TfResourceShareAccepterConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_accepter#region TfResourceShareAccepter#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_accepter#region AwsResourceShareAccepter#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_accepter#share_arn TfResourceShareAccepter#share_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_accepter#share_arn AwsResourceShareAccepter#share_arn}
   */
   readonly shareArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_accepter#timeouts TfResourceShareAccepter#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_accepter#timeouts AwsResourceShareAccepter#timeouts}
   */
-  readonly timeouts?: TfResourceShareAccepter.TimeoutsProperty;
+  readonly timeouts?: AwsResourceShareAccepter.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_accepter aws_ram_resource_share_accepter}
 */
-export class TfResourceShareAccepter extends cdktn.TerraformResource {
+export class AwsResourceShareAccepter extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfResourceShareAccepter extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfResourceShareAccepter resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsResourceShareAccepter resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfResourceShareAccepter to import
-  * @param importFromId The id of the existing TfResourceShareAccepter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_accepter#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfResourceShareAccepter to import is found
+  * @param importToId The construct id used in the generated config for the AwsResourceShareAccepter to import
+  * @param importFromId The id of the existing AwsResourceShareAccepter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_accepter#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsResourceShareAccepter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ram_resource_share_accepter", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfResourceShareAccepter extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfResourceShareAccepterConfig
+  * @param options AwsResourceShareAccepterConfig
   */
-  public constructor(scope: Construct, id: string, config: TfResourceShareAccepterConfig) {
+  public constructor(scope: Construct, id: string, config: AwsResourceShareAccepterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ram_resource_share_accepter',
       terraformGeneratorMetadata: {
@@ -173,11 +173,11 @@ export class TfResourceShareAccepter extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfResourceShareAccepter.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsResourceShareAccepter.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfResourceShareAccepter.TimeoutsProperty) {
+  public putTimeouts(value: AwsResourceShareAccepter.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -197,7 +197,7 @@ export class TfResourceShareAccepter extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       share_arn: cdktn.stringToTerraform(this._shareArn),
-      timeouts: tfResourceShareAccepterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsResourceShareAccepterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -222,10 +222,10 @@ export class TfResourceShareAccepter extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfResourceShareAccepterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsResourceShareAccepterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfResourceShareAccepter.TimeoutsProperty",
+        storageClassType: "AwsResourceShareAccepter.TimeoutsProperty",
       },
     };
 
@@ -234,7 +234,7 @@ export class TfResourceShareAccepter extends cdktn.TerraformResource {
   }
 }
 
-export function tfResourceShareAccepterTimeoutsPropertyToTerraform(struct?: TfResourceShareAccepter.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsResourceShareAccepterTimeoutsPropertyToTerraform(struct?: AwsResourceShareAccepter.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -246,7 +246,7 @@ export function tfResourceShareAccepterTimeoutsPropertyToTerraform(struct?: TfRe
 }
 
 
-export function tfResourceShareAccepterTimeoutsPropertyToHclTerraform(struct?: TfResourceShareAccepter.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsResourceShareAccepterTimeoutsPropertyToHclTerraform(struct?: AwsResourceShareAccepter.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -271,14 +271,14 @@ export function tfResourceShareAccepterTimeoutsPropertyToHclTerraform(struct?: T
 }
 
 
-export namespace TfResourceShareAccepter {
+export namespace AwsResourceShareAccepter {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_accepter#create TfResourceShareAccepter#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_accepter#create AwsResourceShareAccepter#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_accepter#delete TfResourceShareAccepter#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ram_resource_share_accepter#delete AwsResourceShareAccepter#delete}
   */
   readonly delete?: string;
 }

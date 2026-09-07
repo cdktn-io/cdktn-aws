@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfResolverFirewallRuleConfig extends cdktn.TerraformMetaArguments {
+export interface AwsResolverFirewallRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#action TfResolverFirewallRule#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#action AwsResolverFirewallRule#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#block_override_dns_type TfResolverFirewallRule#block_override_dns_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#block_override_dns_type AwsResolverFirewallRule#block_override_dns_type}
   */
   readonly blockOverrideDnsType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#block_override_domain TfResolverFirewallRule#block_override_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#block_override_domain AwsResolverFirewallRule#block_override_domain}
   */
   readonly blockOverrideDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#block_override_ttl TfResolverFirewallRule#block_override_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#block_override_ttl AwsResolverFirewallRule#block_override_ttl}
   */
   readonly blockOverrideTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#block_response TfResolverFirewallRule#block_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#block_response AwsResolverFirewallRule#block_response}
   */
   readonly blockResponse?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#confidence_threshold TfResolverFirewallRule#confidence_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#confidence_threshold AwsResolverFirewallRule#confidence_threshold}
   */
   readonly confidenceThreshold?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#dns_threat_protection TfResolverFirewallRule#dns_threat_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#dns_threat_protection AwsResolverFirewallRule#dns_threat_protection}
   */
   readonly dnsThreatProtection?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#firewall_domain_list_id TfResolverFirewallRule#firewall_domain_list_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#firewall_domain_list_id AwsResolverFirewallRule#firewall_domain_list_id}
   */
   readonly firewallDomainListId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#firewall_domain_redirection_action TfResolverFirewallRule#firewall_domain_redirection_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#firewall_domain_redirection_action AwsResolverFirewallRule#firewall_domain_redirection_action}
   */
   readonly firewallDomainRedirectionAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#firewall_rule_group_id TfResolverFirewallRule#firewall_rule_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#firewall_rule_group_id AwsResolverFirewallRule#firewall_rule_group_id}
   */
   readonly firewallRuleGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#id TfResolverFirewallRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#id AwsResolverFirewallRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#name TfResolverFirewallRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#name AwsResolverFirewallRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#priority TfResolverFirewallRule#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#priority AwsResolverFirewallRule#priority}
   */
   readonly priority: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#q_type TfResolverFirewallRule#q_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#q_type AwsResolverFirewallRule#q_type}
   */
   readonly qType?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#region TfResolverFirewallRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#region AwsResolverFirewallRule#region}
   */
   readonly region?: string;
 }
@@ -76,7 +76,7 @@ export interface TfResolverFirewallRuleConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule aws_route53_resolver_firewall_rule}
 */
-export class TfResolverFirewallRule extends cdktn.TerraformResource {
+export class AwsResolverFirewallRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -87,11 +87,11 @@ export class TfResolverFirewallRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfResolverFirewallRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsResolverFirewallRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfResolverFirewallRule to import
-  * @param importFromId The id of the existing TfResolverFirewallRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfResolverFirewallRule to import is found
+  * @param importToId The construct id used in the generated config for the AwsResolverFirewallRule to import
+  * @param importFromId The id of the existing AwsResolverFirewallRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_firewall_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsResolverFirewallRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_resolver_firewall_rule", importId: importFromId, provider });
@@ -106,9 +106,9 @@ export class TfResolverFirewallRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfResolverFirewallRuleConfig
+  * @param options AwsResolverFirewallRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: TfResolverFirewallRuleConfig) {
+  public constructor(scope: Construct, id: string, config: AwsResolverFirewallRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_resolver_firewall_rule',
       terraformGeneratorMetadata: {

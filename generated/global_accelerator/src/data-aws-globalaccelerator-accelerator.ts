@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfAcceleratorConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsAcceleratorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_accelerator#arn DataTfAccelerator#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_accelerator#arn DataAwsAccelerator#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_accelerator#name DataTfAccelerator#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_accelerator#name DataAwsAccelerator#name}
   */
   readonly name?: string;
 }
@@ -19,7 +19,7 @@ export interface DataTfAcceleratorConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_accelerator aws_globalaccelerator_accelerator}
 */
-export class DataTfAccelerator extends cdktn.TerraformDataSource {
+export class DataAwsAccelerator extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -30,11 +30,11 @@ export class DataTfAccelerator extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfAccelerator resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsAccelerator resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfAccelerator to import
-  * @param importFromId The id of the existing DataTfAccelerator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_accelerator#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfAccelerator to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsAccelerator to import
+  * @param importFromId The id of the existing DataAwsAccelerator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/globalaccelerator_accelerator#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsAccelerator to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_globalaccelerator_accelerator", importId: importFromId, provider });
@@ -49,9 +49,9 @@ export class DataTfAccelerator extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfAcceleratorConfig = {}
+  * @param options DataAwsAcceleratorConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfAcceleratorConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsAcceleratorConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_globalaccelerator_accelerator',
       terraformGeneratorMetadata: {
@@ -92,7 +92,7 @@ export class DataTfAccelerator extends cdktn.TerraformDataSource {
   }
 
   // attributes - computed: true, optional: false, required: false
-  private _attributes = new DataTfAccelerator.AttributesPropertyList(this, "attributes", false);
+  private _attributes = new DataAwsAccelerator.AttributesPropertyList(this, "attributes", false);
   public get attributes() {
     return this._attributes;
   }
@@ -128,7 +128,7 @@ export class DataTfAccelerator extends cdktn.TerraformDataSource {
   }
 
   // ip_sets - computed: true, optional: false, required: false
-  private _ipSets = new DataTfAccelerator.IpSetsPropertyList(this, "ip_sets", false);
+  private _ipSets = new DataAwsAccelerator.IpSetsPropertyList(this, "ip_sets", false);
   public get ipSets() {
     return this._ipSets;
   }
@@ -187,7 +187,7 @@ export class DataTfAccelerator extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfAcceleratorAttributesPropertyToTerraform(struct?: DataTfAccelerator.AttributesProperty): any {
+export function dataAwsAcceleratorAttributesPropertyToTerraform(struct?: DataAwsAccelerator.AttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -197,7 +197,7 @@ export function dataTfAcceleratorAttributesPropertyToTerraform(struct?: DataTfAc
 }
 
 
-export function dataTfAcceleratorAttributesPropertyToHclTerraform(struct?: DataTfAccelerator.AttributesProperty): any {
+export function dataAwsAcceleratorAttributesPropertyToHclTerraform(struct?: DataAwsAccelerator.AttributesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -208,7 +208,7 @@ export function dataTfAcceleratorAttributesPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfAcceleratorIpSetsPropertyToTerraform(struct?: DataTfAccelerator.IpSetsProperty): any {
+export function dataAwsAcceleratorIpSetsPropertyToTerraform(struct?: DataAwsAccelerator.IpSetsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -218,7 +218,7 @@ export function dataTfAcceleratorIpSetsPropertyToTerraform(struct?: DataTfAccele
 }
 
 
-export function dataTfAcceleratorIpSetsPropertyToHclTerraform(struct?: DataTfAccelerator.IpSetsProperty): any {
+export function dataAwsAcceleratorIpSetsPropertyToHclTerraform(struct?: DataAwsAccelerator.IpSetsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -229,7 +229,7 @@ export function dataTfAcceleratorIpSetsPropertyToHclTerraform(struct?: DataTfAcc
 }
 
 
-export namespace DataTfAccelerator {
+export namespace DataAwsAccelerator {
 export interface AttributesProperty {
 }
 export class AttributesPropertyOutputReference extends cdktn.ComplexObject {

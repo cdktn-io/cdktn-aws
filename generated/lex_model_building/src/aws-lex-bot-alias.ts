@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBotAliasConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBotAliasConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#bot_name TfBotAlias#bot_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#bot_name AwsBotAlias#bot_name}
   */
   readonly botName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#bot_version TfBotAlias#bot_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#bot_version AwsBotAlias#bot_version}
   */
   readonly botVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#description TfBotAlias#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#description AwsBotAlias#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#id TfBotAlias#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#id AwsBotAlias#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#name TfBotAlias#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#name AwsBotAlias#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#region TfBotAlias#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#region AwsBotAlias#region}
   */
   readonly region?: string;
   /**
   * conversation_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#conversation_logs TfBotAlias#conversation_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#conversation_logs AwsBotAlias#conversation_logs}
   */
-  readonly conversationLogs?: TfBotAlias.ConversationLogsProperty;
+  readonly conversationLogs?: AwsBotAlias.ConversationLogsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#timeouts TfBotAlias#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#timeouts AwsBotAlias#timeouts}
   */
-  readonly timeouts?: TfBotAlias.TimeoutsProperty;
+  readonly timeouts?: AwsBotAlias.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias aws_lex_bot_alias}
 */
-export class TfBotAlias extends cdktn.TerraformResource {
+export class AwsBotAlias extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class TfBotAlias extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBotAlias resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBotAlias resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBotAlias to import
-  * @param importFromId The id of the existing TfBotAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBotAlias to import is found
+  * @param importToId The construct id used in the generated config for the AwsBotAlias to import
+  * @param importFromId The id of the existing AwsBotAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBotAlias to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lex_bot_alias", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class TfBotAlias extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBotAliasConfig
+  * @param options AwsBotAliasConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBotAliasConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBotAliasConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lex_bot_alias',
       terraformGeneratorMetadata: {
@@ -222,11 +222,11 @@ export class TfBotAlias extends cdktn.TerraformResource {
   }
 
   // conversation_logs - computed: false, optional: true, required: false
-  private _conversationLogs = new TfBotAlias.ConversationLogsPropertyOutputReference(this, "conversation_logs");
+  private _conversationLogs = new AwsBotAlias.ConversationLogsPropertyOutputReference(this, "conversation_logs");
   public get conversationLogs() {
     return this._conversationLogs;
   }
-  public putConversationLogs(value: TfBotAlias.ConversationLogsProperty) {
+  public putConversationLogs(value: AwsBotAlias.ConversationLogsProperty) {
     this._conversationLogs.internalValue = value;
   }
   public resetConversationLogs() {
@@ -238,11 +238,11 @@ export class TfBotAlias extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfBotAlias.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsBotAlias.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfBotAlias.TimeoutsProperty) {
+  public putTimeouts(value: AwsBotAlias.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -265,8 +265,8 @@ export class TfBotAlias extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      conversation_logs: tfBotAliasConversationLogsPropertyToTerraform(this._conversationLogs.internalValue),
-      timeouts: tfBotAliasTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      conversation_logs: awsBotAliasConversationLogsPropertyToTerraform(this._conversationLogs.internalValue),
+      timeouts: awsBotAliasTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -309,16 +309,16 @@ export class TfBotAlias extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       conversation_logs: {
-        value: tfBotAliasConversationLogsPropertyToHclTerraform(this._conversationLogs.internalValue),
+        value: awsBotAliasConversationLogsPropertyToHclTerraform(this._conversationLogs.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBotAlias.ConversationLogsPropertyList",
+        storageClassType: "AwsBotAlias.ConversationLogsPropertyList",
       },
       timeouts: {
-        value: tfBotAliasTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsBotAliasTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfBotAlias.TimeoutsProperty",
+        storageClassType: "AwsBotAlias.TimeoutsProperty",
       },
     };
 
@@ -327,7 +327,7 @@ export class TfBotAlias extends cdktn.TerraformResource {
   }
 }
 
-export function tfBotAliasLogSettingsPropertyToTerraform(struct?: TfBotAlias.LogSettingsProperty | cdktn.IResolvable): any {
+export function awsBotAliasLogSettingsPropertyToTerraform(struct?: AwsBotAlias.LogSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,7 +341,7 @@ export function tfBotAliasLogSettingsPropertyToTerraform(struct?: TfBotAlias.Log
 }
 
 
-export function tfBotAliasLogSettingsPropertyToHclTerraform(struct?: TfBotAlias.LogSettingsProperty | cdktn.IResolvable): any {
+export function awsBotAliasLogSettingsPropertyToHclTerraform(struct?: AwsBotAlias.LogSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,19 +378,19 @@ export function tfBotAliasLogSettingsPropertyToHclTerraform(struct?: TfBotAlias.
 }
 
 
-export function tfBotAliasConversationLogsPropertyToTerraform(struct?: TfBotAlias.ConversationLogsPropertyOutputReference | TfBotAlias.ConversationLogsProperty): any {
+export function awsBotAliasConversationLogsPropertyToTerraform(struct?: AwsBotAlias.ConversationLogsPropertyOutputReference | AwsBotAlias.ConversationLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     iam_role_arn: cdktn.stringToTerraform(struct!.iamRoleArn),
-    log_settings: cdktn.listMapper(tfBotAliasLogSettingsPropertyToTerraform, true)(struct!.logSettings),
+    log_settings: cdktn.listMapper(awsBotAliasLogSettingsPropertyToTerraform, true)(struct!.logSettings),
   }
 }
 
 
-export function tfBotAliasConversationLogsPropertyToHclTerraform(struct?: TfBotAlias.ConversationLogsPropertyOutputReference | TfBotAlias.ConversationLogsProperty): any {
+export function awsBotAliasConversationLogsPropertyToHclTerraform(struct?: AwsBotAlias.ConversationLogsPropertyOutputReference | AwsBotAlias.ConversationLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,7 +403,7 @@ export function tfBotAliasConversationLogsPropertyToHclTerraform(struct?: TfBotA
       storageClassType: "string",
     },
     log_settings: {
-      value: cdktn.listMapperHcl(tfBotAliasLogSettingsPropertyToHclTerraform, true)(struct!.logSettings),
+      value: cdktn.listMapperHcl(awsBotAliasLogSettingsPropertyToHclTerraform, true)(struct!.logSettings),
       isBlock: true,
       type: "set",
       storageClassType: "LogSettingsPropertyList",
@@ -415,7 +415,7 @@ export function tfBotAliasConversationLogsPropertyToHclTerraform(struct?: TfBotA
 }
 
 
-export function tfBotAliasTimeoutsPropertyToTerraform(struct?: TfBotAlias.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBotAliasTimeoutsPropertyToTerraform(struct?: AwsBotAlias.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -428,7 +428,7 @@ export function tfBotAliasTimeoutsPropertyToTerraform(struct?: TfBotAlias.Timeou
 }
 
 
-export function tfBotAliasTimeoutsPropertyToHclTerraform(struct?: TfBotAlias.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBotAliasTimeoutsPropertyToHclTerraform(struct?: AwsBotAlias.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -459,22 +459,22 @@ export function tfBotAliasTimeoutsPropertyToHclTerraform(struct?: TfBotAlias.Tim
 }
 
 
-export namespace TfBotAlias {
+export namespace AwsBotAlias {
 export interface LogSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#destination TfBotAlias#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#destination AwsBotAlias#destination}
   */
   readonly destination: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#kms_key_arn TfBotAlias#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#kms_key_arn AwsBotAlias#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#log_type TfBotAlias#log_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#log_type AwsBotAlias#log_type}
   */
   readonly logType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#resource_arn TfBotAlias#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#resource_arn AwsBotAlias#resource_arn}
   */
   readonly resourceArn: string;
 }
@@ -622,13 +622,13 @@ export class LogSettingsPropertyList extends cdktn.ComplexList {
 }
 export interface ConversationLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#iam_role_arn TfBotAlias#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#iam_role_arn AwsBotAlias#iam_role_arn}
   */
   readonly iamRoleArn: string;
   /**
   * log_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#log_settings TfBotAlias#log_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#log_settings AwsBotAlias#log_settings}
   */
   readonly logSettings?: LogSettingsProperty[] | cdktn.IResolvable;
 }
@@ -701,15 +701,15 @@ export class ConversationLogsPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#create TfBotAlias#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#create AwsBotAlias#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#delete TfBotAlias#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#delete AwsBotAlias#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#update TfBotAlias#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot_alias#update AwsBotAlias#update}
   */
   readonly update?: string;
 }

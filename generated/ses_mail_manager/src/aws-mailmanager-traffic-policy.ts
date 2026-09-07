@@ -5,41 +5,41 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTrafficPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTrafficPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#default_action TfTrafficPolicy#default_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#default_action AwsTrafficPolicy#default_action}
   */
   readonly defaultAction: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#max_message_size_bytes TfTrafficPolicy#max_message_size_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#max_message_size_bytes AwsTrafficPolicy#max_message_size_bytes}
   */
   readonly maxMessageSizeBytes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#name TfTrafficPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#name AwsTrafficPolicy#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#region TfTrafficPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#region AwsTrafficPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#tags TfTrafficPolicy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#tags AwsTrafficPolicy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * policy_statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#policy_statement TfTrafficPolicy#policy_statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#policy_statement AwsTrafficPolicy#policy_statement}
   */
-  readonly policyStatement?: TfTrafficPolicy.PolicyStatementProperty[] | cdktn.IResolvable;
+  readonly policyStatement?: AwsTrafficPolicy.PolicyStatementProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy aws_mailmanager_traffic_policy}
 */
-export class TfTrafficPolicy extends cdktn.TerraformResource {
+export class AwsTrafficPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -50,11 +50,11 @@ export class TfTrafficPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTrafficPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTrafficPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTrafficPolicy to import
-  * @param importFromId The id of the existing TfTrafficPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTrafficPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsTrafficPolicy to import
+  * @param importFromId The id of the existing AwsTrafficPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTrafficPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_mailmanager_traffic_policy", importId: importFromId, provider });
@@ -69,9 +69,9 @@ export class TfTrafficPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTrafficPolicyConfig
+  * @param options AwsTrafficPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTrafficPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTrafficPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_mailmanager_traffic_policy',
       terraformGeneratorMetadata: {
@@ -200,11 +200,11 @@ export class TfTrafficPolicy extends cdktn.TerraformResource {
   }
 
   // policy_statement - computed: false, optional: true, required: false
-  private _policyStatement = new TfTrafficPolicy.PolicyStatementPropertyList(this, "policy_statement", false);
+  private _policyStatement = new AwsTrafficPolicy.PolicyStatementPropertyList(this, "policy_statement", false);
   public get policyStatement() {
     return this._policyStatement;
   }
-  public putPolicyStatement(value: TfTrafficPolicy.PolicyStatementProperty[] | cdktn.IResolvable) {
+  public putPolicyStatement(value: AwsTrafficPolicy.PolicyStatementProperty[] | cdktn.IResolvable) {
     this._policyStatement.internalValue = value;
   }
   public resetPolicyStatement() {
@@ -226,7 +226,7 @@ export class TfTrafficPolicy extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      policy_statement: cdktn.listMapper(tfTrafficPolicyPolicyStatementPropertyToTerraform, true)(this._policyStatement.internalValue),
+      policy_statement: cdktn.listMapper(awsTrafficPolicyPolicyStatementPropertyToTerraform, true)(this._policyStatement.internalValue),
     };
   }
 
@@ -263,10 +263,10 @@ export class TfTrafficPolicy extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       policy_statement: {
-        value: cdktn.listMapperHcl(tfTrafficPolicyPolicyStatementPropertyToHclTerraform, true)(this._policyStatement.internalValue),
+        value: cdktn.listMapperHcl(awsTrafficPolicyPolicyStatementPropertyToHclTerraform, true)(this._policyStatement.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrafficPolicy.PolicyStatementPropertyList",
+        storageClassType: "AwsTrafficPolicy.PolicyStatementPropertyList",
       },
     };
 
@@ -275,7 +275,7 @@ export class TfTrafficPolicy extends cdktn.TerraformResource {
   }
 }
 
-export function tfTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluateAnalysisPropertyToTerraform(struct?: TfTrafficPolicy.PolicyStatementConditionBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluateAnalysisPropertyToTerraform(struct?: AwsTrafficPolicy.PolicyStatementConditionBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,7 +287,7 @@ export function tfTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluate
 }
 
 
-export function tfTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: TfTrafficPolicy.PolicyStatementConditionBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: AwsTrafficPolicy.PolicyStatementConditionBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,7 +312,7 @@ export function tfTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluate
 }
 
 
-export function tfTrafficPolicyIsInAddressListPropertyToTerraform(struct?: TfTrafficPolicy.IsInAddressListProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyIsInAddressListPropertyToTerraform(struct?: AwsTrafficPolicy.IsInAddressListProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,7 +324,7 @@ export function tfTrafficPolicyIsInAddressListPropertyToTerraform(struct?: TfTra
 }
 
 
-export function tfTrafficPolicyIsInAddressListPropertyToHclTerraform(struct?: TfTrafficPolicy.IsInAddressListProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyIsInAddressListPropertyToHclTerraform(struct?: AwsTrafficPolicy.IsInAddressListProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,32 +349,32 @@ export function tfTrafficPolicyIsInAddressListPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluatePropertyToTerraform(struct?: TfTrafficPolicy.PolicyStatementConditionBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluatePropertyToTerraform(struct?: AwsTrafficPolicy.PolicyStatementConditionBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    analysis: cdktn.listMapper(tfTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
-    is_in_address_list: cdktn.listMapper(tfTrafficPolicyIsInAddressListPropertyToTerraform, true)(struct!.isInAddressList),
+    analysis: cdktn.listMapper(awsTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
+    is_in_address_list: cdktn.listMapper(awsTrafficPolicyIsInAddressListPropertyToTerraform, true)(struct!.isInAddressList),
   }
 }
 
 
-export function tfTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluatePropertyToHclTerraform(struct?: TfTrafficPolicy.PolicyStatementConditionBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluatePropertyToHclTerraform(struct?: AwsTrafficPolicy.PolicyStatementConditionBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     analysis: {
-      value: cdktn.listMapperHcl(tfTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
+      value: cdktn.listMapperHcl(awsTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
       isBlock: true,
       type: "list",
       storageClassType: "PolicyStatementConditionBooleanExpressionEvaluateAnalysisPropertyList",
     },
     is_in_address_list: {
-      value: cdktn.listMapperHcl(tfTrafficPolicyIsInAddressListPropertyToHclTerraform, true)(struct!.isInAddressList),
+      value: cdktn.listMapperHcl(awsTrafficPolicyIsInAddressListPropertyToHclTerraform, true)(struct!.isInAddressList),
       isBlock: true,
       type: "list",
       storageClassType: "IsInAddressListPropertyList",
@@ -386,19 +386,19 @@ export function tfTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluate
 }
 
 
-export function tfTrafficPolicyBooleanExpressionPropertyToTerraform(struct?: TfTrafficPolicy.BooleanExpressionProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyBooleanExpressionPropertyToTerraform(struct?: AwsTrafficPolicy.BooleanExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
-    evaluate: cdktn.listMapper(tfTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(awsTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function tfTrafficPolicyBooleanExpressionPropertyToHclTerraform(struct?: TfTrafficPolicy.BooleanExpressionProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyBooleanExpressionPropertyToHclTerraform(struct?: AwsTrafficPolicy.BooleanExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -411,7 +411,7 @@ export function tfTrafficPolicyBooleanExpressionPropertyToHclTerraform(struct?: 
       storageClassType: "string",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(tfTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(awsTrafficPolicyPolicyStatementConditionBooleanExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "PolicyStatementConditionBooleanExpressionEvaluatePropertyList",
@@ -423,7 +423,7 @@ export function tfTrafficPolicyBooleanExpressionPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfTrafficPolicyPolicyStatementConditionIpExpressionEvaluatePropertyToTerraform(struct?: TfTrafficPolicy.PolicyStatementConditionIpExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyPolicyStatementConditionIpExpressionEvaluatePropertyToTerraform(struct?: AwsTrafficPolicy.PolicyStatementConditionIpExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -434,7 +434,7 @@ export function tfTrafficPolicyPolicyStatementConditionIpExpressionEvaluatePrope
 }
 
 
-export function tfTrafficPolicyPolicyStatementConditionIpExpressionEvaluatePropertyToHclTerraform(struct?: TfTrafficPolicy.PolicyStatementConditionIpExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyPolicyStatementConditionIpExpressionEvaluatePropertyToHclTerraform(struct?: AwsTrafficPolicy.PolicyStatementConditionIpExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -453,7 +453,7 @@ export function tfTrafficPolicyPolicyStatementConditionIpExpressionEvaluatePrope
 }
 
 
-export function tfTrafficPolicyIpExpressionPropertyToTerraform(struct?: TfTrafficPolicy.IpExpressionProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyIpExpressionPropertyToTerraform(struct?: AwsTrafficPolicy.IpExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,12 +461,12 @@ export function tfTrafficPolicyIpExpressionPropertyToTerraform(struct?: TfTraffi
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
-    evaluate: cdktn.listMapper(tfTrafficPolicyPolicyStatementConditionIpExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(awsTrafficPolicyPolicyStatementConditionIpExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function tfTrafficPolicyIpExpressionPropertyToHclTerraform(struct?: TfTrafficPolicy.IpExpressionProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyIpExpressionPropertyToHclTerraform(struct?: AwsTrafficPolicy.IpExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -485,7 +485,7 @@ export function tfTrafficPolicyIpExpressionPropertyToHclTerraform(struct?: TfTra
       storageClassType: "stringList",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(tfTrafficPolicyPolicyStatementConditionIpExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(awsTrafficPolicyPolicyStatementConditionIpExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "PolicyStatementConditionIpExpressionEvaluatePropertyList",
@@ -497,7 +497,7 @@ export function tfTrafficPolicyIpExpressionPropertyToHclTerraform(struct?: TfTra
 }
 
 
-export function tfTrafficPolicyPolicyStatementConditionIpv6ExpressionEvaluatePropertyToTerraform(struct?: TfTrafficPolicy.PolicyStatementConditionIpv6ExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyPolicyStatementConditionIpv6ExpressionEvaluatePropertyToTerraform(struct?: AwsTrafficPolicy.PolicyStatementConditionIpv6ExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -508,7 +508,7 @@ export function tfTrafficPolicyPolicyStatementConditionIpv6ExpressionEvaluatePro
 }
 
 
-export function tfTrafficPolicyPolicyStatementConditionIpv6ExpressionEvaluatePropertyToHclTerraform(struct?: TfTrafficPolicy.PolicyStatementConditionIpv6ExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyPolicyStatementConditionIpv6ExpressionEvaluatePropertyToHclTerraform(struct?: AwsTrafficPolicy.PolicyStatementConditionIpv6ExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -527,7 +527,7 @@ export function tfTrafficPolicyPolicyStatementConditionIpv6ExpressionEvaluatePro
 }
 
 
-export function tfTrafficPolicyIpv6ExpressionPropertyToTerraform(struct?: TfTrafficPolicy.Ipv6ExpressionProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyIpv6ExpressionPropertyToTerraform(struct?: AwsTrafficPolicy.Ipv6ExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -535,12 +535,12 @@ export function tfTrafficPolicyIpv6ExpressionPropertyToTerraform(struct?: TfTraf
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
-    evaluate: cdktn.listMapper(tfTrafficPolicyPolicyStatementConditionIpv6ExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(awsTrafficPolicyPolicyStatementConditionIpv6ExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function tfTrafficPolicyIpv6ExpressionPropertyToHclTerraform(struct?: TfTrafficPolicy.Ipv6ExpressionProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyIpv6ExpressionPropertyToHclTerraform(struct?: AwsTrafficPolicy.Ipv6ExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -559,7 +559,7 @@ export function tfTrafficPolicyIpv6ExpressionPropertyToHclTerraform(struct?: TfT
       storageClassType: "stringList",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(tfTrafficPolicyPolicyStatementConditionIpv6ExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(awsTrafficPolicyPolicyStatementConditionIpv6ExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "PolicyStatementConditionIpv6ExpressionEvaluatePropertyList",
@@ -571,7 +571,7 @@ export function tfTrafficPolicyIpv6ExpressionPropertyToHclTerraform(struct?: TfT
 }
 
 
-export function tfTrafficPolicyPolicyStatementConditionStringExpressionEvaluateAnalysisPropertyToTerraform(struct?: TfTrafficPolicy.PolicyStatementConditionStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyPolicyStatementConditionStringExpressionEvaluateAnalysisPropertyToTerraform(struct?: AwsTrafficPolicy.PolicyStatementConditionStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -583,7 +583,7 @@ export function tfTrafficPolicyPolicyStatementConditionStringExpressionEvaluateA
 }
 
 
-export function tfTrafficPolicyPolicyStatementConditionStringExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: TfTrafficPolicy.PolicyStatementConditionStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyPolicyStatementConditionStringExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: AwsTrafficPolicy.PolicyStatementConditionStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -608,19 +608,19 @@ export function tfTrafficPolicyPolicyStatementConditionStringExpressionEvaluateA
 }
 
 
-export function tfTrafficPolicyPolicyStatementConditionStringExpressionEvaluatePropertyToTerraform(struct?: TfTrafficPolicy.PolicyStatementConditionStringExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyPolicyStatementConditionStringExpressionEvaluatePropertyToTerraform(struct?: AwsTrafficPolicy.PolicyStatementConditionStringExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     attribute: cdktn.stringToTerraform(struct!.attribute),
-    analysis: cdktn.listMapper(tfTrafficPolicyPolicyStatementConditionStringExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
+    analysis: cdktn.listMapper(awsTrafficPolicyPolicyStatementConditionStringExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
   }
 }
 
 
-export function tfTrafficPolicyPolicyStatementConditionStringExpressionEvaluatePropertyToHclTerraform(struct?: TfTrafficPolicy.PolicyStatementConditionStringExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyPolicyStatementConditionStringExpressionEvaluatePropertyToHclTerraform(struct?: AwsTrafficPolicy.PolicyStatementConditionStringExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -633,7 +633,7 @@ export function tfTrafficPolicyPolicyStatementConditionStringExpressionEvaluateP
       storageClassType: "string",
     },
     analysis: {
-      value: cdktn.listMapperHcl(tfTrafficPolicyPolicyStatementConditionStringExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
+      value: cdktn.listMapperHcl(awsTrafficPolicyPolicyStatementConditionStringExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
       isBlock: true,
       type: "list",
       storageClassType: "PolicyStatementConditionStringExpressionEvaluateAnalysisPropertyList",
@@ -645,7 +645,7 @@ export function tfTrafficPolicyPolicyStatementConditionStringExpressionEvaluateP
 }
 
 
-export function tfTrafficPolicyStringExpressionPropertyToTerraform(struct?: TfTrafficPolicy.StringExpressionProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyStringExpressionPropertyToTerraform(struct?: AwsTrafficPolicy.StringExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -653,12 +653,12 @@ export function tfTrafficPolicyStringExpressionPropertyToTerraform(struct?: TfTr
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
-    evaluate: cdktn.listMapper(tfTrafficPolicyPolicyStatementConditionStringExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(awsTrafficPolicyPolicyStatementConditionStringExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function tfTrafficPolicyStringExpressionPropertyToHclTerraform(struct?: TfTrafficPolicy.StringExpressionProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyStringExpressionPropertyToHclTerraform(struct?: AwsTrafficPolicy.StringExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -677,7 +677,7 @@ export function tfTrafficPolicyStringExpressionPropertyToHclTerraform(struct?: T
       storageClassType: "stringList",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(tfTrafficPolicyPolicyStatementConditionStringExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(awsTrafficPolicyPolicyStatementConditionStringExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "PolicyStatementConditionStringExpressionEvaluatePropertyList",
@@ -689,7 +689,7 @@ export function tfTrafficPolicyStringExpressionPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfTrafficPolicyPolicyStatementConditionTlsExpressionEvaluatePropertyToTerraform(struct?: TfTrafficPolicy.PolicyStatementConditionTlsExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyPolicyStatementConditionTlsExpressionEvaluatePropertyToTerraform(struct?: AwsTrafficPolicy.PolicyStatementConditionTlsExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -700,7 +700,7 @@ export function tfTrafficPolicyPolicyStatementConditionTlsExpressionEvaluateProp
 }
 
 
-export function tfTrafficPolicyPolicyStatementConditionTlsExpressionEvaluatePropertyToHclTerraform(struct?: TfTrafficPolicy.PolicyStatementConditionTlsExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyPolicyStatementConditionTlsExpressionEvaluatePropertyToHclTerraform(struct?: AwsTrafficPolicy.PolicyStatementConditionTlsExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -719,7 +719,7 @@ export function tfTrafficPolicyPolicyStatementConditionTlsExpressionEvaluateProp
 }
 
 
-export function tfTrafficPolicyTlsExpressionPropertyToTerraform(struct?: TfTrafficPolicy.TlsExpressionProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyTlsExpressionPropertyToTerraform(struct?: AwsTrafficPolicy.TlsExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -727,12 +727,12 @@ export function tfTrafficPolicyTlsExpressionPropertyToTerraform(struct?: TfTraff
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     value: cdktn.stringToTerraform(struct!.value),
-    evaluate: cdktn.listMapper(tfTrafficPolicyPolicyStatementConditionTlsExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(awsTrafficPolicyPolicyStatementConditionTlsExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function tfTrafficPolicyTlsExpressionPropertyToHclTerraform(struct?: TfTrafficPolicy.TlsExpressionProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyTlsExpressionPropertyToHclTerraform(struct?: AwsTrafficPolicy.TlsExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -751,7 +751,7 @@ export function tfTrafficPolicyTlsExpressionPropertyToHclTerraform(struct?: TfTr
       storageClassType: "string",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(tfTrafficPolicyPolicyStatementConditionTlsExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(awsTrafficPolicyPolicyStatementConditionTlsExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "PolicyStatementConditionTlsExpressionEvaluatePropertyList",
@@ -763,53 +763,53 @@ export function tfTrafficPolicyTlsExpressionPropertyToHclTerraform(struct?: TfTr
 }
 
 
-export function tfTrafficPolicyConditionPropertyToTerraform(struct?: TfTrafficPolicy.ConditionProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyConditionPropertyToTerraform(struct?: AwsTrafficPolicy.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    boolean_expression: cdktn.listMapper(tfTrafficPolicyBooleanExpressionPropertyToTerraform, true)(struct!.booleanExpression),
-    ip_expression: cdktn.listMapper(tfTrafficPolicyIpExpressionPropertyToTerraform, true)(struct!.ipExpression),
-    ipv6_expression: cdktn.listMapper(tfTrafficPolicyIpv6ExpressionPropertyToTerraform, true)(struct!.ipv6Expression),
-    string_expression: cdktn.listMapper(tfTrafficPolicyStringExpressionPropertyToTerraform, true)(struct!.stringExpression),
-    tls_expression: cdktn.listMapper(tfTrafficPolicyTlsExpressionPropertyToTerraform, true)(struct!.tlsExpression),
+    boolean_expression: cdktn.listMapper(awsTrafficPolicyBooleanExpressionPropertyToTerraform, true)(struct!.booleanExpression),
+    ip_expression: cdktn.listMapper(awsTrafficPolicyIpExpressionPropertyToTerraform, true)(struct!.ipExpression),
+    ipv6_expression: cdktn.listMapper(awsTrafficPolicyIpv6ExpressionPropertyToTerraform, true)(struct!.ipv6Expression),
+    string_expression: cdktn.listMapper(awsTrafficPolicyStringExpressionPropertyToTerraform, true)(struct!.stringExpression),
+    tls_expression: cdktn.listMapper(awsTrafficPolicyTlsExpressionPropertyToTerraform, true)(struct!.tlsExpression),
   }
 }
 
 
-export function tfTrafficPolicyConditionPropertyToHclTerraform(struct?: TfTrafficPolicy.ConditionProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyConditionPropertyToHclTerraform(struct?: AwsTrafficPolicy.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     boolean_expression: {
-      value: cdktn.listMapperHcl(tfTrafficPolicyBooleanExpressionPropertyToHclTerraform, true)(struct!.booleanExpression),
+      value: cdktn.listMapperHcl(awsTrafficPolicyBooleanExpressionPropertyToHclTerraform, true)(struct!.booleanExpression),
       isBlock: true,
       type: "list",
       storageClassType: "BooleanExpressionPropertyList",
     },
     ip_expression: {
-      value: cdktn.listMapperHcl(tfTrafficPolicyIpExpressionPropertyToHclTerraform, true)(struct!.ipExpression),
+      value: cdktn.listMapperHcl(awsTrafficPolicyIpExpressionPropertyToHclTerraform, true)(struct!.ipExpression),
       isBlock: true,
       type: "list",
       storageClassType: "IpExpressionPropertyList",
     },
     ipv6_expression: {
-      value: cdktn.listMapperHcl(tfTrafficPolicyIpv6ExpressionPropertyToHclTerraform, true)(struct!.ipv6Expression),
+      value: cdktn.listMapperHcl(awsTrafficPolicyIpv6ExpressionPropertyToHclTerraform, true)(struct!.ipv6Expression),
       isBlock: true,
       type: "list",
       storageClassType: "Ipv6ExpressionPropertyList",
     },
     string_expression: {
-      value: cdktn.listMapperHcl(tfTrafficPolicyStringExpressionPropertyToHclTerraform, true)(struct!.stringExpression),
+      value: cdktn.listMapperHcl(awsTrafficPolicyStringExpressionPropertyToHclTerraform, true)(struct!.stringExpression),
       isBlock: true,
       type: "list",
       storageClassType: "StringExpressionPropertyList",
     },
     tls_expression: {
-      value: cdktn.listMapperHcl(tfTrafficPolicyTlsExpressionPropertyToHclTerraform, true)(struct!.tlsExpression),
+      value: cdktn.listMapperHcl(awsTrafficPolicyTlsExpressionPropertyToHclTerraform, true)(struct!.tlsExpression),
       isBlock: true,
       type: "list",
       storageClassType: "TlsExpressionPropertyList",
@@ -821,19 +821,19 @@ export function tfTrafficPolicyConditionPropertyToHclTerraform(struct?: TfTraffi
 }
 
 
-export function tfTrafficPolicyPolicyStatementPropertyToTerraform(struct?: TfTrafficPolicy.PolicyStatementProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyPolicyStatementPropertyToTerraform(struct?: AwsTrafficPolicy.PolicyStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     action: cdktn.stringToTerraform(struct!.action),
-    condition: cdktn.listMapper(tfTrafficPolicyConditionPropertyToTerraform, true)(struct!.condition),
+    condition: cdktn.listMapper(awsTrafficPolicyConditionPropertyToTerraform, true)(struct!.condition),
   }
 }
 
 
-export function tfTrafficPolicyPolicyStatementPropertyToHclTerraform(struct?: TfTrafficPolicy.PolicyStatementProperty | cdktn.IResolvable): any {
+export function awsTrafficPolicyPolicyStatementPropertyToHclTerraform(struct?: AwsTrafficPolicy.PolicyStatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -846,7 +846,7 @@ export function tfTrafficPolicyPolicyStatementPropertyToHclTerraform(struct?: Tf
       storageClassType: "string",
     },
     condition: {
-      value: cdktn.listMapperHcl(tfTrafficPolicyConditionPropertyToHclTerraform, true)(struct!.condition),
+      value: cdktn.listMapperHcl(awsTrafficPolicyConditionPropertyToHclTerraform, true)(struct!.condition),
       isBlock: true,
       type: "list",
       storageClassType: "ConditionPropertyList",
@@ -858,14 +858,14 @@ export function tfTrafficPolicyPolicyStatementPropertyToHclTerraform(struct?: Tf
 }
 
 
-export namespace TfTrafficPolicy {
+export namespace AwsTrafficPolicy {
 export interface PolicyStatementConditionBooleanExpressionEvaluateAnalysisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#analyzer TfTrafficPolicy#analyzer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#analyzer AwsTrafficPolicy#analyzer}
   */
   readonly analyzer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#result_field TfTrafficPolicy#result_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#result_field AwsTrafficPolicy#result_field}
   */
   readonly resultField: string;
 }
@@ -967,11 +967,11 @@ export class PolicyStatementConditionBooleanExpressionEvaluateAnalysisPropertyLi
 }
 export interface IsInAddressListProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#address_lists TfTrafficPolicy#address_lists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#address_lists AwsTrafficPolicy#address_lists}
   */
   readonly addressLists: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#attribute TfTrafficPolicy#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#attribute AwsTrafficPolicy#attribute}
   */
   readonly attribute: string;
 }
@@ -1075,13 +1075,13 @@ export interface PolicyStatementConditionBooleanExpressionEvaluateProperty {
   /**
   * analysis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#analysis TfTrafficPolicy#analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#analysis AwsTrafficPolicy#analysis}
   */
   readonly analysis?: PolicyStatementConditionBooleanExpressionEvaluateAnalysisProperty[] | cdktn.IResolvable;
   /**
   * is_in_address_list block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#is_in_address_list TfTrafficPolicy#is_in_address_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#is_in_address_list AwsTrafficPolicy#is_in_address_list}
   */
   readonly isInAddressList?: IsInAddressListProperty[] | cdktn.IResolvable;
 }
@@ -1189,13 +1189,13 @@ export class PolicyStatementConditionBooleanExpressionEvaluatePropertyList exten
 }
 export interface BooleanExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#operator TfTrafficPolicy#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#operator AwsTrafficPolicy#operator}
   */
   readonly operator: string;
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#evaluate TfTrafficPolicy#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#evaluate AwsTrafficPolicy#evaluate}
   */
   readonly evaluate?: PolicyStatementConditionBooleanExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -1300,7 +1300,7 @@ export class BooleanExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface PolicyStatementConditionIpExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#attribute TfTrafficPolicy#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#attribute AwsTrafficPolicy#attribute}
   */
   readonly attribute: string;
 }
@@ -1383,17 +1383,17 @@ export class PolicyStatementConditionIpExpressionEvaluatePropertyList extends cd
 }
 export interface IpExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#operator TfTrafficPolicy#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#operator AwsTrafficPolicy#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#values TfTrafficPolicy#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#values AwsTrafficPolicy#values}
   */
   readonly values: string[];
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#evaluate TfTrafficPolicy#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#evaluate AwsTrafficPolicy#evaluate}
   */
   readonly evaluate?: PolicyStatementConditionIpExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -1517,7 +1517,7 @@ export class IpExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface PolicyStatementConditionIpv6ExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#attribute TfTrafficPolicy#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#attribute AwsTrafficPolicy#attribute}
   */
   readonly attribute: string;
 }
@@ -1600,17 +1600,17 @@ export class PolicyStatementConditionIpv6ExpressionEvaluatePropertyList extends 
 }
 export interface Ipv6ExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#operator TfTrafficPolicy#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#operator AwsTrafficPolicy#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#values TfTrafficPolicy#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#values AwsTrafficPolicy#values}
   */
   readonly values: string[];
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#evaluate TfTrafficPolicy#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#evaluate AwsTrafficPolicy#evaluate}
   */
   readonly evaluate?: PolicyStatementConditionIpv6ExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -1734,11 +1734,11 @@ export class Ipv6ExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface PolicyStatementConditionStringExpressionEvaluateAnalysisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#analyzer TfTrafficPolicy#analyzer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#analyzer AwsTrafficPolicy#analyzer}
   */
   readonly analyzer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#result_field TfTrafficPolicy#result_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#result_field AwsTrafficPolicy#result_field}
   */
   readonly resultField: string;
 }
@@ -1840,13 +1840,13 @@ export class PolicyStatementConditionStringExpressionEvaluateAnalysisPropertyLis
 }
 export interface PolicyStatementConditionStringExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#attribute TfTrafficPolicy#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#attribute AwsTrafficPolicy#attribute}
   */
   readonly attribute?: string;
   /**
   * analysis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#analysis TfTrafficPolicy#analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#analysis AwsTrafficPolicy#analysis}
   */
   readonly analysis?: PolicyStatementConditionStringExpressionEvaluateAnalysisProperty[] | cdktn.IResolvable;
 }
@@ -1954,17 +1954,17 @@ export class PolicyStatementConditionStringExpressionEvaluatePropertyList extend
 }
 export interface StringExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#operator TfTrafficPolicy#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#operator AwsTrafficPolicy#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#values TfTrafficPolicy#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#values AwsTrafficPolicy#values}
   */
   readonly values: string[];
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#evaluate TfTrafficPolicy#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#evaluate AwsTrafficPolicy#evaluate}
   */
   readonly evaluate?: PolicyStatementConditionStringExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -2088,7 +2088,7 @@ export class StringExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface PolicyStatementConditionTlsExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#attribute TfTrafficPolicy#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#attribute AwsTrafficPolicy#attribute}
   */
   readonly attribute: string;
 }
@@ -2171,17 +2171,17 @@ export class PolicyStatementConditionTlsExpressionEvaluatePropertyList extends c
 }
 export interface TlsExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#operator TfTrafficPolicy#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#operator AwsTrafficPolicy#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#value TfTrafficPolicy#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#value AwsTrafficPolicy#value}
   */
   readonly value: string;
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#evaluate TfTrafficPolicy#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#evaluate AwsTrafficPolicy#evaluate}
   */
   readonly evaluate?: PolicyStatementConditionTlsExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -2307,31 +2307,31 @@ export interface ConditionProperty {
   /**
   * boolean_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#boolean_expression TfTrafficPolicy#boolean_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#boolean_expression AwsTrafficPolicy#boolean_expression}
   */
   readonly booleanExpression?: BooleanExpressionProperty[] | cdktn.IResolvable;
   /**
   * ip_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#ip_expression TfTrafficPolicy#ip_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#ip_expression AwsTrafficPolicy#ip_expression}
   */
   readonly ipExpression?: IpExpressionProperty[] | cdktn.IResolvable;
   /**
   * ipv6_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#ipv6_expression TfTrafficPolicy#ipv6_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#ipv6_expression AwsTrafficPolicy#ipv6_expression}
   */
   readonly ipv6Expression?: Ipv6ExpressionProperty[] | cdktn.IResolvable;
   /**
   * string_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#string_expression TfTrafficPolicy#string_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#string_expression AwsTrafficPolicy#string_expression}
   */
   readonly stringExpression?: StringExpressionProperty[] | cdktn.IResolvable;
   /**
   * tls_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#tls_expression TfTrafficPolicy#tls_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#tls_expression AwsTrafficPolicy#tls_expression}
   */
   readonly tlsExpression?: TlsExpressionProperty[] | cdktn.IResolvable;
 }
@@ -2505,13 +2505,13 @@ export class ConditionPropertyList extends cdktn.ComplexList {
 }
 export interface PolicyStatementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#action TfTrafficPolicy#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#action AwsTrafficPolicy#action}
   */
   readonly action: string;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#condition TfTrafficPolicy#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_traffic_policy#condition AwsTrafficPolicy#condition}
   */
   readonly condition?: ConditionProperty[] | cdktn.IResolvable;
 }

@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfMultiRegionAccessPointConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsMultiRegionAccessPointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_point#account_id DataTfMultiRegionAccessPoint#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_point#account_id DataAwsMultiRegionAccessPoint#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_point#id DataTfMultiRegionAccessPoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_point#id DataAwsMultiRegionAccessPoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_point#name DataTfMultiRegionAccessPoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_point#name DataAwsMultiRegionAccessPoint#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_point#region DataTfMultiRegionAccessPoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_point#region DataAwsMultiRegionAccessPoint#region}
   */
   readonly region?: string;
 }
@@ -32,7 +32,7 @@ export interface DataTfMultiRegionAccessPointConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_point aws_s3control_multi_region_access_point}
 */
-export class DataTfMultiRegionAccessPoint extends cdktn.TerraformDataSource {
+export class DataAwsMultiRegionAccessPoint extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfMultiRegionAccessPoint extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfMultiRegionAccessPoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsMultiRegionAccessPoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfMultiRegionAccessPoint to import
-  * @param importFromId The id of the existing DataTfMultiRegionAccessPoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_point#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfMultiRegionAccessPoint to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsMultiRegionAccessPoint to import
+  * @param importFromId The id of the existing DataAwsMultiRegionAccessPoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_point#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsMultiRegionAccessPoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3control_multi_region_access_point", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfMultiRegionAccessPoint extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfMultiRegionAccessPointConfig
+  * @param options DataAwsMultiRegionAccessPointConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfMultiRegionAccessPointConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsMultiRegionAccessPointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3control_multi_region_access_point',
       terraformGeneratorMetadata: {
@@ -156,7 +156,7 @@ export class DataTfMultiRegionAccessPoint extends cdktn.TerraformDataSource {
   }
 
   // public_access_block - computed: true, optional: false, required: false
-  private _publicAccessBlock = new DataTfMultiRegionAccessPoint.PublicAccessBlockPropertyList(this, "public_access_block", false);
+  private _publicAccessBlock = new DataAwsMultiRegionAccessPoint.PublicAccessBlockPropertyList(this, "public_access_block", false);
   public get publicAccessBlock() {
     return this._publicAccessBlock;
   }
@@ -178,7 +178,7 @@ export class DataTfMultiRegionAccessPoint extends cdktn.TerraformDataSource {
   }
 
   // regions - computed: true, optional: false, required: false
-  private _regions = new DataTfMultiRegionAccessPoint.RegionsPropertyList(this, "regions", false);
+  private _regions = new DataAwsMultiRegionAccessPoint.RegionsPropertyList(this, "regions", false);
   public get regions() {
     return this._regions;
   }
@@ -234,7 +234,7 @@ export class DataTfMultiRegionAccessPoint extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfMultiRegionAccessPointPublicAccessBlockPropertyToTerraform(struct?: DataTfMultiRegionAccessPoint.PublicAccessBlockProperty): any {
+export function dataAwsMultiRegionAccessPointPublicAccessBlockPropertyToTerraform(struct?: DataAwsMultiRegionAccessPoint.PublicAccessBlockProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,7 +244,7 @@ export function dataTfMultiRegionAccessPointPublicAccessBlockPropertyToTerraform
 }
 
 
-export function dataTfMultiRegionAccessPointPublicAccessBlockPropertyToHclTerraform(struct?: DataTfMultiRegionAccessPoint.PublicAccessBlockProperty): any {
+export function dataAwsMultiRegionAccessPointPublicAccessBlockPropertyToHclTerraform(struct?: DataAwsMultiRegionAccessPoint.PublicAccessBlockProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -255,7 +255,7 @@ export function dataTfMultiRegionAccessPointPublicAccessBlockPropertyToHclTerraf
 }
 
 
-export function dataTfMultiRegionAccessPointRegionsPropertyToTerraform(struct?: DataTfMultiRegionAccessPoint.RegionsProperty): any {
+export function dataAwsMultiRegionAccessPointRegionsPropertyToTerraform(struct?: DataAwsMultiRegionAccessPoint.RegionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,7 +265,7 @@ export function dataTfMultiRegionAccessPointRegionsPropertyToTerraform(struct?: 
 }
 
 
-export function dataTfMultiRegionAccessPointRegionsPropertyToHclTerraform(struct?: DataTfMultiRegionAccessPoint.RegionsProperty): any {
+export function dataAwsMultiRegionAccessPointRegionsPropertyToHclTerraform(struct?: DataAwsMultiRegionAccessPoint.RegionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -276,7 +276,7 @@ export function dataTfMultiRegionAccessPointRegionsPropertyToHclTerraform(struct
 }
 
 
-export namespace DataTfMultiRegionAccessPoint {
+export namespace DataAwsMultiRegionAccessPoint {
 export interface PublicAccessBlockProperty {
 }
 export class PublicAccessBlockPropertyOutputReference extends cdktn.ComplexObject {

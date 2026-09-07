@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfResolverQueryLogConfigConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsResolverQueryLogConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#id DataTfResolverQueryLogConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#id DataAwsResolverQueryLogConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#name DataTfResolverQueryLogConfig#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#name DataAwsResolverQueryLogConfig#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#region DataTfResolverQueryLogConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#region DataAwsResolverQueryLogConfig#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#resolver_query_log_config_id DataTfResolverQueryLogConfig#resolver_query_log_config_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#resolver_query_log_config_id DataAwsResolverQueryLogConfig#resolver_query_log_config_id}
   */
   readonly resolverQueryLogConfigId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#tags DataTfResolverQueryLogConfig#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#tags DataAwsResolverQueryLogConfig#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#filter DataTfResolverQueryLogConfig#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#filter DataAwsResolverQueryLogConfig#filter}
   */
-  readonly filter?: DataTfResolverQueryLogConfig.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsResolverQueryLogConfig.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config aws_route53_resolver_query_log_config}
 */
-export class DataTfResolverQueryLogConfig extends cdktn.TerraformDataSource {
+export class DataAwsResolverQueryLogConfig extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class DataTfResolverQueryLogConfig extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfResolverQueryLogConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsResolverQueryLogConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfResolverQueryLogConfig to import
-  * @param importFromId The id of the existing DataTfResolverQueryLogConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfResolverQueryLogConfig to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsResolverQueryLogConfig to import
+  * @param importFromId The id of the existing DataAwsResolverQueryLogConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsResolverQueryLogConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_resolver_query_log_config", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class DataTfResolverQueryLogConfig extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfResolverQueryLogConfigConfig = {}
+  * @param options DataAwsResolverQueryLogConfigConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfResolverQueryLogConfigConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsResolverQueryLogConfigConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_resolver_query_log_config',
       terraformGeneratorMetadata: {
@@ -203,11 +203,11 @@ export class DataTfResolverQueryLogConfig extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfResolverQueryLogConfig.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsResolverQueryLogConfig.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfResolverQueryLogConfig.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsResolverQueryLogConfig.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -229,7 +229,7 @@ export class DataTfResolverQueryLogConfig extends cdktn.TerraformDataSource {
       region: cdktn.stringToTerraform(this._region),
       resolver_query_log_config_id: cdktn.stringToTerraform(this._resolverQueryLogConfigId),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataTfResolverQueryLogConfigFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataAwsResolverQueryLogConfigFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -266,10 +266,10 @@ export class DataTfResolverQueryLogConfig extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfResolverQueryLogConfigFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsResolverQueryLogConfigFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfResolverQueryLogConfig.FilterPropertyList",
+        storageClassType: "DataAwsResolverQueryLogConfig.FilterPropertyList",
       },
     };
 
@@ -278,7 +278,7 @@ export class DataTfResolverQueryLogConfig extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfResolverQueryLogConfigFilterPropertyToTerraform(struct?: DataTfResolverQueryLogConfig.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsResolverQueryLogConfigFilterPropertyToTerraform(struct?: DataAwsResolverQueryLogConfig.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function dataTfResolverQueryLogConfigFilterPropertyToTerraform(struct?: D
 }
 
 
-export function dataTfResolverQueryLogConfigFilterPropertyToHclTerraform(struct?: DataTfResolverQueryLogConfig.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsResolverQueryLogConfigFilterPropertyToHclTerraform(struct?: DataAwsResolverQueryLogConfig.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -315,14 +315,14 @@ export function dataTfResolverQueryLogConfigFilterPropertyToHclTerraform(struct?
 }
 
 
-export namespace DataTfResolverQueryLogConfig {
+export namespace DataAwsResolverQueryLogConfig {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#name DataTfResolverQueryLogConfig#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#name DataAwsResolverQueryLogConfig#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#values DataTfResolverQueryLogConfig#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53_resolver_query_log_config#values DataAwsResolverQueryLogConfig#values}
   */
   readonly values: string[];
 }

@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRouteConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRouteConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#client_vpn_endpoint_id TfRoute#client_vpn_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#client_vpn_endpoint_id AwsRoute#client_vpn_endpoint_id}
   */
   readonly clientVpnEndpointId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#description TfRoute#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#description AwsRoute#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#destination_cidr_block TfRoute#destination_cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#destination_cidr_block AwsRoute#destination_cidr_block}
   */
   readonly destinationCidrBlock: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#id TfRoute#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#id AwsRoute#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,25 +28,25 @@ export interface TfRouteConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#region TfRoute#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#region AwsRoute#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#target_vpc_subnet_id TfRoute#target_vpc_subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#target_vpc_subnet_id AwsRoute#target_vpc_subnet_id}
   */
   readonly targetVpcSubnetId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#timeouts TfRoute#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#timeouts AwsRoute#timeouts}
   */
-  readonly timeouts?: TfRoute.TimeoutsProperty;
+  readonly timeouts?: AwsRoute.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route aws_ec2_client_vpn_route}
 */
-export class TfRoute extends cdktn.TerraformResource {
+export class AwsRoute extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfRoute extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRoute resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRoute resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRoute to import
-  * @param importFromId The id of the existing TfRoute that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRoute to import is found
+  * @param importToId The construct id used in the generated config for the AwsRoute to import
+  * @param importFromId The id of the existing AwsRoute that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRoute to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_client_vpn_route", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfRoute extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRouteConfig
+  * @param options AwsRouteConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRouteConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRouteConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_client_vpn_route',
       terraformGeneratorMetadata: {
@@ -213,11 +213,11 @@ export class TfRoute extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfRoute.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsRoute.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfRoute.TimeoutsProperty) {
+  public putTimeouts(value: AwsRoute.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -240,7 +240,7 @@ export class TfRoute extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       target_vpc_subnet_id: cdktn.stringToTerraform(this._targetVpcSubnetId),
-      timeouts: tfRouteTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsRouteTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -283,10 +283,10 @@ export class TfRoute extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfRouteTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsRouteTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfRoute.TimeoutsProperty",
+        storageClassType: "AwsRoute.TimeoutsProperty",
       },
     };
 
@@ -295,7 +295,7 @@ export class TfRoute extends cdktn.TerraformResource {
   }
 }
 
-export function tfRouteTimeoutsPropertyToTerraform(struct?: TfRoute.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRouteTimeoutsPropertyToTerraform(struct?: AwsRoute.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function tfRouteTimeoutsPropertyToTerraform(struct?: TfRoute.TimeoutsProp
 }
 
 
-export function tfRouteTimeoutsPropertyToHclTerraform(struct?: TfRoute.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRouteTimeoutsPropertyToHclTerraform(struct?: AwsRoute.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,14 +332,14 @@ export function tfRouteTimeoutsPropertyToHclTerraform(struct?: TfRoute.TimeoutsP
 }
 
 
-export namespace TfRoute {
+export namespace AwsRoute {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#create TfRoute#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#create AwsRoute#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#delete TfRoute#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_route#delete AwsRoute#delete}
   */
   readonly delete?: string;
 }

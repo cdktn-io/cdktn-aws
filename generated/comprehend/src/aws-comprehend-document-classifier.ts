@@ -5,90 +5,90 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDocumentClassifierConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDocumentClassifierConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#data_access_role_arn TfDocumentClassifier#data_access_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#data_access_role_arn AwsDocumentClassifier#data_access_role_arn}
   */
   readonly dataAccessRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#id TfDocumentClassifier#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#id AwsDocumentClassifier#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#language_code TfDocumentClassifier#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#language_code AwsDocumentClassifier#language_code}
   */
   readonly languageCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#mode TfDocumentClassifier#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#mode AwsDocumentClassifier#mode}
   */
   readonly mode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#model_kms_key_id TfDocumentClassifier#model_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#model_kms_key_id AwsDocumentClassifier#model_kms_key_id}
   */
   readonly modelKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#name TfDocumentClassifier#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#name AwsDocumentClassifier#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#region TfDocumentClassifier#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#region AwsDocumentClassifier#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#tags TfDocumentClassifier#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#tags AwsDocumentClassifier#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#tags_all TfDocumentClassifier#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#tags_all AwsDocumentClassifier#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#version_name TfDocumentClassifier#version_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#version_name AwsDocumentClassifier#version_name}
   */
   readonly versionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#version_name_prefix TfDocumentClassifier#version_name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#version_name_prefix AwsDocumentClassifier#version_name_prefix}
   */
   readonly versionNamePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#volume_kms_key_id TfDocumentClassifier#volume_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#volume_kms_key_id AwsDocumentClassifier#volume_kms_key_id}
   */
   readonly volumeKmsKeyId?: string;
   /**
   * input_data_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#input_data_config TfDocumentClassifier#input_data_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#input_data_config AwsDocumentClassifier#input_data_config}
   */
-  readonly inputDataConfig: TfDocumentClassifier.InputDataConfigProperty;
+  readonly inputDataConfig: AwsDocumentClassifier.InputDataConfigProperty;
   /**
   * output_data_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#output_data_config TfDocumentClassifier#output_data_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#output_data_config AwsDocumentClassifier#output_data_config}
   */
-  readonly outputDataConfig?: TfDocumentClassifier.OutputDataConfigProperty;
+  readonly outputDataConfig?: AwsDocumentClassifier.OutputDataConfigProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#timeouts TfDocumentClassifier#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#timeouts AwsDocumentClassifier#timeouts}
   */
-  readonly timeouts?: TfDocumentClassifier.TimeoutsProperty;
+  readonly timeouts?: AwsDocumentClassifier.TimeoutsProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#vpc_config TfDocumentClassifier#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#vpc_config AwsDocumentClassifier#vpc_config}
   */
-  readonly vpcConfig?: TfDocumentClassifier.VpcConfigProperty;
+  readonly vpcConfig?: AwsDocumentClassifier.VpcConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier aws_comprehend_document_classifier}
 */
-export class TfDocumentClassifier extends cdktn.TerraformResource {
+export class AwsDocumentClassifier extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -99,11 +99,11 @@ export class TfDocumentClassifier extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDocumentClassifier resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDocumentClassifier resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDocumentClassifier to import
-  * @param importFromId The id of the existing TfDocumentClassifier that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDocumentClassifier to import is found
+  * @param importToId The construct id used in the generated config for the AwsDocumentClassifier to import
+  * @param importFromId The id of the existing AwsDocumentClassifier that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDocumentClassifier to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_comprehend_document_classifier", importId: importFromId, provider });
@@ -118,9 +118,9 @@ export class TfDocumentClassifier extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDocumentClassifierConfig
+  * @param options AwsDocumentClassifierConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDocumentClassifierConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDocumentClassifierConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_comprehend_document_classifier',
       terraformGeneratorMetadata: {
@@ -347,11 +347,11 @@ export class TfDocumentClassifier extends cdktn.TerraformResource {
   }
 
   // input_data_config - computed: false, optional: false, required: true
-  private _inputDataConfig = new TfDocumentClassifier.InputDataConfigPropertyOutputReference(this, "input_data_config");
+  private _inputDataConfig = new AwsDocumentClassifier.InputDataConfigPropertyOutputReference(this, "input_data_config");
   public get inputDataConfig() {
     return this._inputDataConfig;
   }
-  public putInputDataConfig(value: TfDocumentClassifier.InputDataConfigProperty) {
+  public putInputDataConfig(value: AwsDocumentClassifier.InputDataConfigProperty) {
     this._inputDataConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -360,11 +360,11 @@ export class TfDocumentClassifier extends cdktn.TerraformResource {
   }
 
   // output_data_config - computed: false, optional: true, required: false
-  private _outputDataConfig = new TfDocumentClassifier.OutputDataConfigPropertyOutputReference(this, "output_data_config");
+  private _outputDataConfig = new AwsDocumentClassifier.OutputDataConfigPropertyOutputReference(this, "output_data_config");
   public get outputDataConfig() {
     return this._outputDataConfig;
   }
-  public putOutputDataConfig(value: TfDocumentClassifier.OutputDataConfigProperty) {
+  public putOutputDataConfig(value: AwsDocumentClassifier.OutputDataConfigProperty) {
     this._outputDataConfig.internalValue = value;
   }
   public resetOutputDataConfig() {
@@ -376,11 +376,11 @@ export class TfDocumentClassifier extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDocumentClassifier.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsDocumentClassifier.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDocumentClassifier.TimeoutsProperty) {
+  public putTimeouts(value: AwsDocumentClassifier.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -392,11 +392,11 @@ export class TfDocumentClassifier extends cdktn.TerraformResource {
   }
 
   // vpc_config - computed: false, optional: true, required: false
-  private _vpcConfig = new TfDocumentClassifier.VpcConfigPropertyOutputReference(this, "vpc_config");
+  private _vpcConfig = new AwsDocumentClassifier.VpcConfigPropertyOutputReference(this, "vpc_config");
   public get vpcConfig() {
     return this._vpcConfig;
   }
-  public putVpcConfig(value: TfDocumentClassifier.VpcConfigProperty) {
+  public putVpcConfig(value: AwsDocumentClassifier.VpcConfigProperty) {
     this._vpcConfig.internalValue = value;
   }
   public resetVpcConfig() {
@@ -425,10 +425,10 @@ export class TfDocumentClassifier extends cdktn.TerraformResource {
       version_name: cdktn.stringToTerraform(this._versionName),
       version_name_prefix: cdktn.stringToTerraform(this._versionNamePrefix),
       volume_kms_key_id: cdktn.stringToTerraform(this._volumeKmsKeyId),
-      input_data_config: tfDocumentClassifierInputDataConfigPropertyToTerraform(this._inputDataConfig.internalValue),
-      output_data_config: tfDocumentClassifierOutputDataConfigPropertyToTerraform(this._outputDataConfig.internalValue),
-      timeouts: tfDocumentClassifierTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_config: tfDocumentClassifierVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
+      input_data_config: awsDocumentClassifierInputDataConfigPropertyToTerraform(this._inputDataConfig.internalValue),
+      output_data_config: awsDocumentClassifierOutputDataConfigPropertyToTerraform(this._outputDataConfig.internalValue),
+      timeouts: awsDocumentClassifierTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_config: awsDocumentClassifierVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
     };
   }
 
@@ -507,28 +507,28 @@ export class TfDocumentClassifier extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       input_data_config: {
-        value: tfDocumentClassifierInputDataConfigPropertyToHclTerraform(this._inputDataConfig.internalValue),
+        value: awsDocumentClassifierInputDataConfigPropertyToHclTerraform(this._inputDataConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDocumentClassifier.InputDataConfigPropertyList",
+        storageClassType: "AwsDocumentClassifier.InputDataConfigPropertyList",
       },
       output_data_config: {
-        value: tfDocumentClassifierOutputDataConfigPropertyToHclTerraform(this._outputDataConfig.internalValue),
+        value: awsDocumentClassifierOutputDataConfigPropertyToHclTerraform(this._outputDataConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDocumentClassifier.OutputDataConfigPropertyList",
+        storageClassType: "AwsDocumentClassifier.OutputDataConfigPropertyList",
       },
       timeouts: {
-        value: tfDocumentClassifierTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsDocumentClassifierTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDocumentClassifier.TimeoutsProperty",
+        storageClassType: "AwsDocumentClassifier.TimeoutsProperty",
       },
       vpc_config: {
-        value: tfDocumentClassifierVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
+        value: awsDocumentClassifierVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDocumentClassifier.VpcConfigPropertyList",
+        storageClassType: "AwsDocumentClassifier.VpcConfigPropertyList",
       },
     };
 
@@ -537,7 +537,7 @@ export class TfDocumentClassifier extends cdktn.TerraformResource {
   }
 }
 
-export function tfDocumentClassifierAugmentedManifestsPropertyToTerraform(struct?: TfDocumentClassifier.AugmentedManifestsProperty | cdktn.IResolvable): any {
+export function awsDocumentClassifierAugmentedManifestsPropertyToTerraform(struct?: AwsDocumentClassifier.AugmentedManifestsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -553,7 +553,7 @@ export function tfDocumentClassifierAugmentedManifestsPropertyToTerraform(struct
 }
 
 
-export function tfDocumentClassifierAugmentedManifestsPropertyToHclTerraform(struct?: TfDocumentClassifier.AugmentedManifestsProperty | cdktn.IResolvable): any {
+export function awsDocumentClassifierAugmentedManifestsPropertyToHclTerraform(struct?: AwsDocumentClassifier.AugmentedManifestsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -602,7 +602,7 @@ export function tfDocumentClassifierAugmentedManifestsPropertyToHclTerraform(str
 }
 
 
-export function tfDocumentClassifierInputDataConfigPropertyToTerraform(struct?: TfDocumentClassifier.InputDataConfigPropertyOutputReference | TfDocumentClassifier.InputDataConfigProperty): any {
+export function awsDocumentClassifierInputDataConfigPropertyToTerraform(struct?: AwsDocumentClassifier.InputDataConfigPropertyOutputReference | AwsDocumentClassifier.InputDataConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -612,12 +612,12 @@ export function tfDocumentClassifierInputDataConfigPropertyToTerraform(struct?: 
     label_delimiter: cdktn.stringToTerraform(struct!.labelDelimiter),
     s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
     test_s3_uri: cdktn.stringToTerraform(struct!.testS3Uri),
-    augmented_manifests: cdktn.listMapper(tfDocumentClassifierAugmentedManifestsPropertyToTerraform, true)(struct!.augmentedManifests),
+    augmented_manifests: cdktn.listMapper(awsDocumentClassifierAugmentedManifestsPropertyToTerraform, true)(struct!.augmentedManifests),
   }
 }
 
 
-export function tfDocumentClassifierInputDataConfigPropertyToHclTerraform(struct?: TfDocumentClassifier.InputDataConfigPropertyOutputReference | TfDocumentClassifier.InputDataConfigProperty): any {
+export function awsDocumentClassifierInputDataConfigPropertyToHclTerraform(struct?: AwsDocumentClassifier.InputDataConfigPropertyOutputReference | AwsDocumentClassifier.InputDataConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -648,7 +648,7 @@ export function tfDocumentClassifierInputDataConfigPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     augmented_manifests: {
-      value: cdktn.listMapperHcl(tfDocumentClassifierAugmentedManifestsPropertyToHclTerraform, true)(struct!.augmentedManifests),
+      value: cdktn.listMapperHcl(awsDocumentClassifierAugmentedManifestsPropertyToHclTerraform, true)(struct!.augmentedManifests),
       isBlock: true,
       type: "set",
       storageClassType: "AugmentedManifestsPropertyList",
@@ -660,7 +660,7 @@ export function tfDocumentClassifierInputDataConfigPropertyToHclTerraform(struct
 }
 
 
-export function tfDocumentClassifierOutputDataConfigPropertyToTerraform(struct?: TfDocumentClassifier.OutputDataConfigPropertyOutputReference | TfDocumentClassifier.OutputDataConfigProperty): any {
+export function awsDocumentClassifierOutputDataConfigPropertyToTerraform(struct?: AwsDocumentClassifier.OutputDataConfigPropertyOutputReference | AwsDocumentClassifier.OutputDataConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -672,7 +672,7 @@ export function tfDocumentClassifierOutputDataConfigPropertyToTerraform(struct?:
 }
 
 
-export function tfDocumentClassifierOutputDataConfigPropertyToHclTerraform(struct?: TfDocumentClassifier.OutputDataConfigPropertyOutputReference | TfDocumentClassifier.OutputDataConfigProperty): any {
+export function awsDocumentClassifierOutputDataConfigPropertyToHclTerraform(struct?: AwsDocumentClassifier.OutputDataConfigPropertyOutputReference | AwsDocumentClassifier.OutputDataConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -697,7 +697,7 @@ export function tfDocumentClassifierOutputDataConfigPropertyToHclTerraform(struc
 }
 
 
-export function tfDocumentClassifierTimeoutsPropertyToTerraform(struct?: TfDocumentClassifier.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDocumentClassifierTimeoutsPropertyToTerraform(struct?: AwsDocumentClassifier.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -710,7 +710,7 @@ export function tfDocumentClassifierTimeoutsPropertyToTerraform(struct?: TfDocum
 }
 
 
-export function tfDocumentClassifierTimeoutsPropertyToHclTerraform(struct?: TfDocumentClassifier.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDocumentClassifierTimeoutsPropertyToHclTerraform(struct?: AwsDocumentClassifier.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -741,7 +741,7 @@ export function tfDocumentClassifierTimeoutsPropertyToHclTerraform(struct?: TfDo
 }
 
 
-export function tfDocumentClassifierVpcConfigPropertyToTerraform(struct?: TfDocumentClassifier.VpcConfigPropertyOutputReference | TfDocumentClassifier.VpcConfigProperty): any {
+export function awsDocumentClassifierVpcConfigPropertyToTerraform(struct?: AwsDocumentClassifier.VpcConfigPropertyOutputReference | AwsDocumentClassifier.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -753,7 +753,7 @@ export function tfDocumentClassifierVpcConfigPropertyToTerraform(struct?: TfDocu
 }
 
 
-export function tfDocumentClassifierVpcConfigPropertyToHclTerraform(struct?: TfDocumentClassifier.VpcConfigPropertyOutputReference | TfDocumentClassifier.VpcConfigProperty): any {
+export function awsDocumentClassifierVpcConfigPropertyToHclTerraform(struct?: AwsDocumentClassifier.VpcConfigPropertyOutputReference | AwsDocumentClassifier.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -778,30 +778,30 @@ export function tfDocumentClassifierVpcConfigPropertyToHclTerraform(struct?: TfD
 }
 
 
-export namespace TfDocumentClassifier {
+export namespace AwsDocumentClassifier {
 export interface AugmentedManifestsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#annotation_data_s3_uri TfDocumentClassifier#annotation_data_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#annotation_data_s3_uri AwsDocumentClassifier#annotation_data_s3_uri}
   */
   readonly annotationDataS3Uri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#attribute_names TfDocumentClassifier#attribute_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#attribute_names AwsDocumentClassifier#attribute_names}
   */
   readonly attributeNames: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#document_type TfDocumentClassifier#document_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#document_type AwsDocumentClassifier#document_type}
   */
   readonly documentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#s3_uri TfDocumentClassifier#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#s3_uri AwsDocumentClassifier#s3_uri}
   */
   readonly s3Uri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#source_documents_s3_uri TfDocumentClassifier#source_documents_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#source_documents_s3_uri AwsDocumentClassifier#source_documents_s3_uri}
   */
   readonly sourceDocumentsS3Uri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#split TfDocumentClassifier#split}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#split AwsDocumentClassifier#split}
   */
   readonly split?: string;
 }
@@ -991,25 +991,25 @@ export class AugmentedManifestsPropertyList extends cdktn.ComplexList {
 }
 export interface InputDataConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#data_format TfDocumentClassifier#data_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#data_format AwsDocumentClassifier#data_format}
   */
   readonly dataFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#label_delimiter TfDocumentClassifier#label_delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#label_delimiter AwsDocumentClassifier#label_delimiter}
   */
   readonly labelDelimiter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#s3_uri TfDocumentClassifier#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#s3_uri AwsDocumentClassifier#s3_uri}
   */
   readonly s3Uri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#test_s3_uri TfDocumentClassifier#test_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#test_s3_uri AwsDocumentClassifier#test_s3_uri}
   */
   readonly testS3Uri?: string;
   /**
   * augmented_manifests block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#augmented_manifests TfDocumentClassifier#augmented_manifests}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#augmented_manifests AwsDocumentClassifier#augmented_manifests}
   */
   readonly augmentedManifests?: AugmentedManifestsProperty[] | cdktn.IResolvable;
 }
@@ -1151,11 +1151,11 @@ export class InputDataConfigPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface OutputDataConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#kms_key_id TfDocumentClassifier#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#kms_key_id AwsDocumentClassifier#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#s3_uri TfDocumentClassifier#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#s3_uri AwsDocumentClassifier#s3_uri}
   */
   readonly s3Uri: string;
 }
@@ -1233,15 +1233,15 @@ export class OutputDataConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#create TfDocumentClassifier#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#create AwsDocumentClassifier#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#delete TfDocumentClassifier#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#delete AwsDocumentClassifier#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#update TfDocumentClassifier#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#update AwsDocumentClassifier#update}
   */
   readonly update?: string;
 }
@@ -1349,11 +1349,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#security_group_ids TfDocumentClassifier#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#security_group_ids AwsDocumentClassifier#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#subnets TfDocumentClassifier#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/comprehend_document_classifier#subnets AwsDocumentClassifier#subnets}
   */
   readonly subnets: string[];
 }

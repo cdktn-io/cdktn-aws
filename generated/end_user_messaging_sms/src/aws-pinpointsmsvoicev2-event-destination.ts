@@ -5,61 +5,61 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEventDestinationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEventDestinationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Name of the configuration set this event destination belongs to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#configuration_set_name TfEventDestination#configuration_set_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#configuration_set_name AwsEventDestination#configuration_set_name}
   */
   readonly configurationSetName: string;
   /**
   * Whether the event destination is enabled. Defaults to `true`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#enabled TfEventDestination#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#enabled AwsEventDestination#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
   * Name of the event destination.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#event_destination_name TfEventDestination#event_destination_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#event_destination_name AwsEventDestination#event_destination_name}
   */
   readonly eventDestinationName: string;
   /**
   * Event types for which the destination receives records.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#matching_event_types TfEventDestination#matching_event_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#matching_event_types AwsEventDestination#matching_event_types}
   */
   readonly matchingEventTypes: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#region TfEventDestination#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#region AwsEventDestination#region}
   */
   readonly region?: string;
   /**
   * cloudwatch_logs_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#cloudwatch_logs_destination TfEventDestination#cloudwatch_logs_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#cloudwatch_logs_destination AwsEventDestination#cloudwatch_logs_destination}
   */
-  readonly cloudwatchLogsDestination?: TfEventDestination.CloudwatchLogsDestinationProperty[] | cdktn.IResolvable;
+  readonly cloudwatchLogsDestination?: AwsEventDestination.CloudwatchLogsDestinationProperty[] | cdktn.IResolvable;
   /**
   * kinesis_firehose_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#kinesis_firehose_destination TfEventDestination#kinesis_firehose_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#kinesis_firehose_destination AwsEventDestination#kinesis_firehose_destination}
   */
-  readonly kinesisFirehoseDestination?: TfEventDestination.KinesisFirehoseDestinationProperty[] | cdktn.IResolvable;
+  readonly kinesisFirehoseDestination?: AwsEventDestination.KinesisFirehoseDestinationProperty[] | cdktn.IResolvable;
   /**
   * sns_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#sns_destination TfEventDestination#sns_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#sns_destination AwsEventDestination#sns_destination}
   */
-  readonly snsDestination?: TfEventDestination.SnsDestinationProperty[] | cdktn.IResolvable;
+  readonly snsDestination?: AwsEventDestination.SnsDestinationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination aws_pinpointsmsvoicev2_event_destination}
 */
-export class TfEventDestination extends cdktn.TerraformResource {
+export class AwsEventDestination extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -70,11 +70,11 @@ export class TfEventDestination extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEventDestination resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEventDestination resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEventDestination to import
-  * @param importFromId The id of the existing TfEventDestination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEventDestination to import is found
+  * @param importToId The construct id used in the generated config for the AwsEventDestination to import
+  * @param importFromId The id of the existing AwsEventDestination that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEventDestination to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_pinpointsmsvoicev2_event_destination", importId: importFromId, provider });
@@ -89,9 +89,9 @@ export class TfEventDestination extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEventDestinationConfig
+  * @param options AwsEventDestinationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEventDestinationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEventDestinationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_pinpointsmsvoicev2_event_destination',
       terraformGeneratorMetadata: {
@@ -198,11 +198,11 @@ export class TfEventDestination extends cdktn.TerraformResource {
   }
 
   // cloudwatch_logs_destination - computed: false, optional: true, required: false
-  private _cloudwatchLogsDestination = new TfEventDestination.CloudwatchLogsDestinationPropertyList(this, "cloudwatch_logs_destination", false);
+  private _cloudwatchLogsDestination = new AwsEventDestination.CloudwatchLogsDestinationPropertyList(this, "cloudwatch_logs_destination", false);
   public get cloudwatchLogsDestination() {
     return this._cloudwatchLogsDestination;
   }
-  public putCloudwatchLogsDestination(value: TfEventDestination.CloudwatchLogsDestinationProperty[] | cdktn.IResolvable) {
+  public putCloudwatchLogsDestination(value: AwsEventDestination.CloudwatchLogsDestinationProperty[] | cdktn.IResolvable) {
     this._cloudwatchLogsDestination.internalValue = value;
   }
   public resetCloudwatchLogsDestination() {
@@ -214,11 +214,11 @@ export class TfEventDestination extends cdktn.TerraformResource {
   }
 
   // kinesis_firehose_destination - computed: false, optional: true, required: false
-  private _kinesisFirehoseDestination = new TfEventDestination.KinesisFirehoseDestinationPropertyList(this, "kinesis_firehose_destination", false);
+  private _kinesisFirehoseDestination = new AwsEventDestination.KinesisFirehoseDestinationPropertyList(this, "kinesis_firehose_destination", false);
   public get kinesisFirehoseDestination() {
     return this._kinesisFirehoseDestination;
   }
-  public putKinesisFirehoseDestination(value: TfEventDestination.KinesisFirehoseDestinationProperty[] | cdktn.IResolvable) {
+  public putKinesisFirehoseDestination(value: AwsEventDestination.KinesisFirehoseDestinationProperty[] | cdktn.IResolvable) {
     this._kinesisFirehoseDestination.internalValue = value;
   }
   public resetKinesisFirehoseDestination() {
@@ -230,11 +230,11 @@ export class TfEventDestination extends cdktn.TerraformResource {
   }
 
   // sns_destination - computed: false, optional: true, required: false
-  private _snsDestination = new TfEventDestination.SnsDestinationPropertyList(this, "sns_destination", false);
+  private _snsDestination = new AwsEventDestination.SnsDestinationPropertyList(this, "sns_destination", false);
   public get snsDestination() {
     return this._snsDestination;
   }
-  public putSnsDestination(value: TfEventDestination.SnsDestinationProperty[] | cdktn.IResolvable) {
+  public putSnsDestination(value: AwsEventDestination.SnsDestinationProperty[] | cdktn.IResolvable) {
     this._snsDestination.internalValue = value;
   }
   public resetSnsDestination() {
@@ -256,9 +256,9 @@ export class TfEventDestination extends cdktn.TerraformResource {
       event_destination_name: cdktn.stringToTerraform(this._eventDestinationName),
       matching_event_types: cdktn.listMapper(cdktn.stringToTerraform, false)(this._matchingEventTypes),
       region: cdktn.stringToTerraform(this._region),
-      cloudwatch_logs_destination: cdktn.listMapper(tfEventDestinationCloudwatchLogsDestinationPropertyToTerraform, true)(this._cloudwatchLogsDestination.internalValue),
-      kinesis_firehose_destination: cdktn.listMapper(tfEventDestinationKinesisFirehoseDestinationPropertyToTerraform, true)(this._kinesisFirehoseDestination.internalValue),
-      sns_destination: cdktn.listMapper(tfEventDestinationSnsDestinationPropertyToTerraform, true)(this._snsDestination.internalValue),
+      cloudwatch_logs_destination: cdktn.listMapper(awsEventDestinationCloudwatchLogsDestinationPropertyToTerraform, true)(this._cloudwatchLogsDestination.internalValue),
+      kinesis_firehose_destination: cdktn.listMapper(awsEventDestinationKinesisFirehoseDestinationPropertyToTerraform, true)(this._kinesisFirehoseDestination.internalValue),
+      sns_destination: cdktn.listMapper(awsEventDestinationSnsDestinationPropertyToTerraform, true)(this._snsDestination.internalValue),
     };
   }
 
@@ -295,22 +295,22 @@ export class TfEventDestination extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       cloudwatch_logs_destination: {
-        value: cdktn.listMapperHcl(tfEventDestinationCloudwatchLogsDestinationPropertyToHclTerraform, true)(this._cloudwatchLogsDestination.internalValue),
+        value: cdktn.listMapperHcl(awsEventDestinationCloudwatchLogsDestinationPropertyToHclTerraform, true)(this._cloudwatchLogsDestination.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEventDestination.CloudwatchLogsDestinationPropertyList",
+        storageClassType: "AwsEventDestination.CloudwatchLogsDestinationPropertyList",
       },
       kinesis_firehose_destination: {
-        value: cdktn.listMapperHcl(tfEventDestinationKinesisFirehoseDestinationPropertyToHclTerraform, true)(this._kinesisFirehoseDestination.internalValue),
+        value: cdktn.listMapperHcl(awsEventDestinationKinesisFirehoseDestinationPropertyToHclTerraform, true)(this._kinesisFirehoseDestination.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEventDestination.KinesisFirehoseDestinationPropertyList",
+        storageClassType: "AwsEventDestination.KinesisFirehoseDestinationPropertyList",
       },
       sns_destination: {
-        value: cdktn.listMapperHcl(tfEventDestinationSnsDestinationPropertyToHclTerraform, true)(this._snsDestination.internalValue),
+        value: cdktn.listMapperHcl(awsEventDestinationSnsDestinationPropertyToHclTerraform, true)(this._snsDestination.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEventDestination.SnsDestinationPropertyList",
+        storageClassType: "AwsEventDestination.SnsDestinationPropertyList",
       },
     };
 
@@ -319,7 +319,7 @@ export class TfEventDestination extends cdktn.TerraformResource {
   }
 }
 
-export function tfEventDestinationCloudwatchLogsDestinationPropertyToTerraform(struct?: TfEventDestination.CloudwatchLogsDestinationProperty | cdktn.IResolvable): any {
+export function awsEventDestinationCloudwatchLogsDestinationPropertyToTerraform(struct?: AwsEventDestination.CloudwatchLogsDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -331,7 +331,7 @@ export function tfEventDestinationCloudwatchLogsDestinationPropertyToTerraform(s
 }
 
 
-export function tfEventDestinationCloudwatchLogsDestinationPropertyToHclTerraform(struct?: TfEventDestination.CloudwatchLogsDestinationProperty | cdktn.IResolvable): any {
+export function awsEventDestinationCloudwatchLogsDestinationPropertyToHclTerraform(struct?: AwsEventDestination.CloudwatchLogsDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -356,7 +356,7 @@ export function tfEventDestinationCloudwatchLogsDestinationPropertyToHclTerrafor
 }
 
 
-export function tfEventDestinationKinesisFirehoseDestinationPropertyToTerraform(struct?: TfEventDestination.KinesisFirehoseDestinationProperty | cdktn.IResolvable): any {
+export function awsEventDestinationKinesisFirehoseDestinationPropertyToTerraform(struct?: AwsEventDestination.KinesisFirehoseDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -368,7 +368,7 @@ export function tfEventDestinationKinesisFirehoseDestinationPropertyToTerraform(
 }
 
 
-export function tfEventDestinationKinesisFirehoseDestinationPropertyToHclTerraform(struct?: TfEventDestination.KinesisFirehoseDestinationProperty | cdktn.IResolvable): any {
+export function awsEventDestinationKinesisFirehoseDestinationPropertyToHclTerraform(struct?: AwsEventDestination.KinesisFirehoseDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,7 +393,7 @@ export function tfEventDestinationKinesisFirehoseDestinationPropertyToHclTerrafo
 }
 
 
-export function tfEventDestinationSnsDestinationPropertyToTerraform(struct?: TfEventDestination.SnsDestinationProperty | cdktn.IResolvable): any {
+export function awsEventDestinationSnsDestinationPropertyToTerraform(struct?: AwsEventDestination.SnsDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -404,7 +404,7 @@ export function tfEventDestinationSnsDestinationPropertyToTerraform(struct?: TfE
 }
 
 
-export function tfEventDestinationSnsDestinationPropertyToHclTerraform(struct?: TfEventDestination.SnsDestinationProperty | cdktn.IResolvable): any {
+export function awsEventDestinationSnsDestinationPropertyToHclTerraform(struct?: AwsEventDestination.SnsDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,18 +423,18 @@ export function tfEventDestinationSnsDestinationPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace TfEventDestination {
+export namespace AwsEventDestination {
 export interface CloudwatchLogsDestinationProperty {
   /**
   * ARN of the IAM role that End User Messaging SMS assumes to write to the log group.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#iam_role_arn TfEventDestination#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#iam_role_arn AwsEventDestination#iam_role_arn}
   */
   readonly iamRoleArn: string;
   /**
   * ARN of the Amazon CloudWatch log group that receives the events.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#log_group_arn TfEventDestination#log_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#log_group_arn AwsEventDestination#log_group_arn}
   */
   readonly logGroupArn: string;
 }
@@ -538,13 +538,13 @@ export interface KinesisFirehoseDestinationProperty {
   /**
   * ARN of the Amazon Data Firehose delivery stream that receives the events.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#delivery_stream_arn TfEventDestination#delivery_stream_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#delivery_stream_arn AwsEventDestination#delivery_stream_arn}
   */
   readonly deliveryStreamArn: string;
   /**
   * ARN of the IAM role that End User Messaging SMS assumes to write to the delivery stream.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#iam_role_arn TfEventDestination#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#iam_role_arn AwsEventDestination#iam_role_arn}
   */
   readonly iamRoleArn: string;
 }
@@ -648,7 +648,7 @@ export interface SnsDestinationProperty {
   /**
   * ARN of the Amazon SNS topic that receives the events.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#topic_arn TfEventDestination#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_event_destination#topic_arn AwsEventDestination#topic_arn}
   */
   readonly topicArn: string;
 }

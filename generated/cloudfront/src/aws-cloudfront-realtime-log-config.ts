@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRealtimeLogConfigConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRealtimeLogConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#fields TfRealtimeLogConfig#fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#fields AwsRealtimeLogConfig#fields}
   */
   readonly fields: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#id TfRealtimeLogConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#id AwsRealtimeLogConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#name TfRealtimeLogConfig#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#name AwsRealtimeLogConfig#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#sampling_rate TfRealtimeLogConfig#sampling_rate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#sampling_rate AwsRealtimeLogConfig#sampling_rate}
   */
   readonly samplingRate: number;
   /**
   * endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#endpoint TfRealtimeLogConfig#endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#endpoint AwsRealtimeLogConfig#endpoint}
   */
-  readonly endpoint: TfRealtimeLogConfig.EndpointProperty;
+  readonly endpoint: AwsRealtimeLogConfig.EndpointProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config aws_cloudfront_realtime_log_config}
 */
-export class TfRealtimeLogConfig extends cdktn.TerraformResource {
+export class AwsRealtimeLogConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfRealtimeLogConfig extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRealtimeLogConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRealtimeLogConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRealtimeLogConfig to import
-  * @param importFromId The id of the existing TfRealtimeLogConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRealtimeLogConfig to import is found
+  * @param importToId The construct id used in the generated config for the AwsRealtimeLogConfig to import
+  * @param importFromId The id of the existing AwsRealtimeLogConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRealtimeLogConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_realtime_log_config", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfRealtimeLogConfig extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRealtimeLogConfigConfig
+  * @param options AwsRealtimeLogConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRealtimeLogConfigConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRealtimeLogConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_realtime_log_config',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class TfRealtimeLogConfig extends cdktn.TerraformResource {
   }
 
   // endpoint - computed: false, optional: false, required: true
-  private _endpoint = new TfRealtimeLogConfig.EndpointPropertyOutputReference(this, "endpoint");
+  private _endpoint = new AwsRealtimeLogConfig.EndpointPropertyOutputReference(this, "endpoint");
   public get endpoint() {
     return this._endpoint;
   }
-  public putEndpoint(value: TfRealtimeLogConfig.EndpointProperty) {
+  public putEndpoint(value: AwsRealtimeLogConfig.EndpointProperty) {
     this._endpoint.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -178,7 +178,7 @@ export class TfRealtimeLogConfig extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       sampling_rate: cdktn.numberToTerraform(this._samplingRate),
-      endpoint: tfRealtimeLogConfigEndpointPropertyToTerraform(this._endpoint.internalValue),
+      endpoint: awsRealtimeLogConfigEndpointPropertyToTerraform(this._endpoint.internalValue),
     };
   }
 
@@ -209,10 +209,10 @@ export class TfRealtimeLogConfig extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       endpoint: {
-        value: tfRealtimeLogConfigEndpointPropertyToHclTerraform(this._endpoint.internalValue),
+        value: awsRealtimeLogConfigEndpointPropertyToHclTerraform(this._endpoint.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRealtimeLogConfig.EndpointPropertyList",
+        storageClassType: "AwsRealtimeLogConfig.EndpointPropertyList",
       },
     };
 
@@ -221,7 +221,7 @@ export class TfRealtimeLogConfig extends cdktn.TerraformResource {
   }
 }
 
-export function tfRealtimeLogConfigKinesisStreamConfigPropertyToTerraform(struct?: TfRealtimeLogConfig.KinesisStreamConfigPropertyOutputReference | TfRealtimeLogConfig.KinesisStreamConfigProperty): any {
+export function awsRealtimeLogConfigKinesisStreamConfigPropertyToTerraform(struct?: AwsRealtimeLogConfig.KinesisStreamConfigPropertyOutputReference | AwsRealtimeLogConfig.KinesisStreamConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,7 +233,7 @@ export function tfRealtimeLogConfigKinesisStreamConfigPropertyToTerraform(struct
 }
 
 
-export function tfRealtimeLogConfigKinesisStreamConfigPropertyToHclTerraform(struct?: TfRealtimeLogConfig.KinesisStreamConfigPropertyOutputReference | TfRealtimeLogConfig.KinesisStreamConfigProperty): any {
+export function awsRealtimeLogConfigKinesisStreamConfigPropertyToHclTerraform(struct?: AwsRealtimeLogConfig.KinesisStreamConfigPropertyOutputReference | AwsRealtimeLogConfig.KinesisStreamConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -258,19 +258,19 @@ export function tfRealtimeLogConfigKinesisStreamConfigPropertyToHclTerraform(str
 }
 
 
-export function tfRealtimeLogConfigEndpointPropertyToTerraform(struct?: TfRealtimeLogConfig.EndpointPropertyOutputReference | TfRealtimeLogConfig.EndpointProperty): any {
+export function awsRealtimeLogConfigEndpointPropertyToTerraform(struct?: AwsRealtimeLogConfig.EndpointPropertyOutputReference | AwsRealtimeLogConfig.EndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     stream_type: cdktn.stringToTerraform(struct!.streamType),
-    kinesis_stream_config: tfRealtimeLogConfigKinesisStreamConfigPropertyToTerraform(struct!.kinesisStreamConfig),
+    kinesis_stream_config: awsRealtimeLogConfigKinesisStreamConfigPropertyToTerraform(struct!.kinesisStreamConfig),
   }
 }
 
 
-export function tfRealtimeLogConfigEndpointPropertyToHclTerraform(struct?: TfRealtimeLogConfig.EndpointPropertyOutputReference | TfRealtimeLogConfig.EndpointProperty): any {
+export function awsRealtimeLogConfigEndpointPropertyToHclTerraform(struct?: AwsRealtimeLogConfig.EndpointPropertyOutputReference | AwsRealtimeLogConfig.EndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -283,7 +283,7 @@ export function tfRealtimeLogConfigEndpointPropertyToHclTerraform(struct?: TfRea
       storageClassType: "string",
     },
     kinesis_stream_config: {
-      value: tfRealtimeLogConfigKinesisStreamConfigPropertyToHclTerraform(struct!.kinesisStreamConfig),
+      value: awsRealtimeLogConfigKinesisStreamConfigPropertyToHclTerraform(struct!.kinesisStreamConfig),
       isBlock: true,
       type: "list",
       storageClassType: "KinesisStreamConfigPropertyList",
@@ -295,14 +295,14 @@ export function tfRealtimeLogConfigEndpointPropertyToHclTerraform(struct?: TfRea
 }
 
 
-export namespace TfRealtimeLogConfig {
+export namespace AwsRealtimeLogConfig {
 export interface KinesisStreamConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#role_arn TfRealtimeLogConfig#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#role_arn AwsRealtimeLogConfig#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#stream_arn TfRealtimeLogConfig#stream_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#stream_arn AwsRealtimeLogConfig#stream_arn}
   */
   readonly streamArn: string;
 }
@@ -372,13 +372,13 @@ export class KinesisStreamConfigPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface EndpointProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#stream_type TfRealtimeLogConfig#stream_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#stream_type AwsRealtimeLogConfig#stream_type}
   */
   readonly streamType: string;
   /**
   * kinesis_stream_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#kinesis_stream_config TfRealtimeLogConfig#kinesis_stream_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_realtime_log_config#kinesis_stream_config AwsRealtimeLogConfig#kinesis_stream_config}
   */
   readonly kinesisStreamConfig: KinesisStreamConfigProperty;
 }

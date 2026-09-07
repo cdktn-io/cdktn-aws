@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDomainNameAccessAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDomainNameAccessAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_domain_name_access_association#access_association_source TfDomainNameAccessAssociation#access_association_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_domain_name_access_association#access_association_source AwsDomainNameAccessAssociation#access_association_source}
   */
   readonly accessAssociationSource: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_domain_name_access_association#access_association_source_type TfDomainNameAccessAssociation#access_association_source_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_domain_name_access_association#access_association_source_type AwsDomainNameAccessAssociation#access_association_source_type}
   */
   readonly accessAssociationSourceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_domain_name_access_association#domain_name_arn TfDomainNameAccessAssociation#domain_name_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_domain_name_access_association#domain_name_arn AwsDomainNameAccessAssociation#domain_name_arn}
   */
   readonly domainNameArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_domain_name_access_association#region TfDomainNameAccessAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_domain_name_access_association#region AwsDomainNameAccessAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_domain_name_access_association#tags TfDomainNameAccessAssociation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_domain_name_access_association#tags AwsDomainNameAccessAssociation#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -33,7 +33,7 @@ export interface TfDomainNameAccessAssociationConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_domain_name_access_association aws_api_gateway_domain_name_access_association}
 */
-export class TfDomainNameAccessAssociation extends cdktn.TerraformResource {
+export class AwsDomainNameAccessAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class TfDomainNameAccessAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDomainNameAccessAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDomainNameAccessAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDomainNameAccessAssociation to import
-  * @param importFromId The id of the existing TfDomainNameAccessAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_domain_name_access_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDomainNameAccessAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsDomainNameAccessAssociation to import
+  * @param importFromId The id of the existing AwsDomainNameAccessAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_domain_name_access_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDomainNameAccessAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_domain_name_access_association", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class TfDomainNameAccessAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDomainNameAccessAssociationConfig
+  * @param options AwsDomainNameAccessAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDomainNameAccessAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDomainNameAccessAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_api_gateway_domain_name_access_association',
       terraformGeneratorMetadata: {

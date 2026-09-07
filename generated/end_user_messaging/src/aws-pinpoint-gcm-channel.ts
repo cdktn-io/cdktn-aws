@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfGcmChannelConfig extends cdktn.TerraformMetaArguments {
+export interface AwsGcmChannelConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel#api_key TfGcmChannel#api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel#api_key AwsGcmChannel#api_key}
   */
   readonly apiKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel#application_id TfGcmChannel#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel#application_id AwsGcmChannel#application_id}
   */
   readonly applicationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel#default_authentication_method TfGcmChannel#default_authentication_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel#default_authentication_method AwsGcmChannel#default_authentication_method}
   */
   readonly defaultAuthenticationMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel#enabled TfGcmChannel#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel#enabled AwsGcmChannel#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel#id TfGcmChannel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel#id AwsGcmChannel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -32,11 +32,11 @@ export interface TfGcmChannelConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel#region TfGcmChannel#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel#region AwsGcmChannel#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel#service_json TfGcmChannel#service_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel#service_json AwsGcmChannel#service_json}
   */
   readonly serviceJson?: string;
 }
@@ -44,7 +44,7 @@ export interface TfGcmChannelConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel aws_pinpoint_gcm_channel}
 */
-export class TfGcmChannel extends cdktn.TerraformResource {
+export class AwsGcmChannel extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfGcmChannel extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfGcmChannel resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsGcmChannel resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfGcmChannel to import
-  * @param importFromId The id of the existing TfGcmChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfGcmChannel to import is found
+  * @param importToId The construct id used in the generated config for the AwsGcmChannel to import
+  * @param importFromId The id of the existing AwsGcmChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_gcm_channel#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGcmChannel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_pinpoint_gcm_channel", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfGcmChannel extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfGcmChannelConfig
+  * @param options AwsGcmChannelConfig
   */
-  public constructor(scope: Construct, id: string, config: TfGcmChannelConfig) {
+  public constructor(scope: Construct, id: string, config: AwsGcmChannelConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_pinpoint_gcm_channel',
       terraformGeneratorMetadata: {

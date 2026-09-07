@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAuthorizerConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAuthorizerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#authorizer_credentials TfAuthorizer#authorizer_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#authorizer_credentials AwsAuthorizer#authorizer_credentials}
   */
   readonly authorizerCredentials?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#authorizer_result_ttl_in_seconds TfAuthorizer#authorizer_result_ttl_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#authorizer_result_ttl_in_seconds AwsAuthorizer#authorizer_result_ttl_in_seconds}
   */
   readonly authorizerResultTtlInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#authorizer_uri TfAuthorizer#authorizer_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#authorizer_uri AwsAuthorizer#authorizer_uri}
   */
   readonly authorizerUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#id TfAuthorizer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#id AwsAuthorizer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#identity_source TfAuthorizer#identity_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#identity_source AwsAuthorizer#identity_source}
   */
   readonly identitySource?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#identity_validation_expression TfAuthorizer#identity_validation_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#identity_validation_expression AwsAuthorizer#identity_validation_expression}
   */
   readonly identityValidationExpression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#name TfAuthorizer#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#name AwsAuthorizer#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#provider_arns TfAuthorizer#provider_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#provider_arns AwsAuthorizer#provider_arns}
   */
   readonly providerArns?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#region TfAuthorizer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#region AwsAuthorizer#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#rest_api_id TfAuthorizer#rest_api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#rest_api_id AwsAuthorizer#rest_api_id}
   */
   readonly restApiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#type TfAuthorizer#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#type AwsAuthorizer#type}
   */
   readonly type?: string;
 }
@@ -60,7 +60,7 @@ export interface TfAuthorizerConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer aws_api_gateway_authorizer}
 */
-export class TfAuthorizer extends cdktn.TerraformResource {
+export class AwsAuthorizer extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class TfAuthorizer extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAuthorizer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAuthorizer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAuthorizer to import
-  * @param importFromId The id of the existing TfAuthorizer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAuthorizer to import is found
+  * @param importToId The construct id used in the generated config for the AwsAuthorizer to import
+  * @param importFromId The id of the existing AwsAuthorizer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_authorizer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAuthorizer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_authorizer", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class TfAuthorizer extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAuthorizerConfig
+  * @param options AwsAuthorizerConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAuthorizerConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAuthorizerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_api_gateway_authorizer',
       terraformGeneratorMetadata: {

@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfNodeGroupsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsNodeGroupsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_groups#cluster_name DataTfNodeGroups#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_groups#cluster_name DataAwsNodeGroups#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_groups#id DataTfNodeGroups#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_groups#id DataAwsNodeGroups#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface DataTfNodeGroupsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_groups#region DataTfNodeGroups#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_groups#region DataAwsNodeGroups#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataTfNodeGroupsConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_groups aws_eks_node_groups}
 */
-export class DataTfNodeGroups extends cdktn.TerraformDataSource {
+export class DataAwsNodeGroups extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataTfNodeGroups extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfNodeGroups resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsNodeGroups resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfNodeGroups to import
-  * @param importFromId The id of the existing DataTfNodeGroups that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_groups#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfNodeGroups to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsNodeGroups to import
+  * @param importFromId The id of the existing DataAwsNodeGroups that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/eks_node_groups#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsNodeGroups to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eks_node_groups", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataTfNodeGroups extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfNodeGroupsConfig
+  * @param options DataAwsNodeGroupsConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfNodeGroupsConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsNodeGroupsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_eks_node_groups',
       terraformGeneratorMetadata: {

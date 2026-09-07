@@ -5,57 +5,57 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCapacityProviderConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCapacityProviderConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#capacity_provider_scaling_config TfCapacityProvider#capacity_provider_scaling_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#capacity_provider_scaling_config AwsCapacityProvider#capacity_provider_scaling_config}
   */
-  readonly capacityProviderScalingConfig?: TfCapacityProvider.CapacityProviderScalingConfigProperty[] | cdktn.IResolvable;
+  readonly capacityProviderScalingConfig?: AwsCapacityProvider.CapacityProviderScalingConfigProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#instance_requirements TfCapacityProvider#instance_requirements}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#instance_requirements AwsCapacityProvider#instance_requirements}
   */
-  readonly instanceRequirements?: TfCapacityProvider.InstanceRequirementsProperty[] | cdktn.IResolvable;
+  readonly instanceRequirements?: AwsCapacityProvider.InstanceRequirementsProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#kms_key_arn TfCapacityProvider#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#kms_key_arn AwsCapacityProvider#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#name TfCapacityProvider#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#name AwsCapacityProvider#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#region TfCapacityProvider#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#region AwsCapacityProvider#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#tags TfCapacityProvider#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#tags AwsCapacityProvider#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * permissions_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#permissions_config TfCapacityProvider#permissions_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#permissions_config AwsCapacityProvider#permissions_config}
   */
-  readonly permissionsConfig?: TfCapacityProvider.PermissionsConfigProperty[] | cdktn.IResolvable;
+  readonly permissionsConfig?: AwsCapacityProvider.PermissionsConfigProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#timeouts TfCapacityProvider#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#timeouts AwsCapacityProvider#timeouts}
   */
-  readonly timeouts?: TfCapacityProvider.TimeoutsProperty;
+  readonly timeouts?: AwsCapacityProvider.TimeoutsProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#vpc_config TfCapacityProvider#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#vpc_config AwsCapacityProvider#vpc_config}
   */
-  readonly vpcConfig?: TfCapacityProvider.VpcConfigProperty[] | cdktn.IResolvable;
+  readonly vpcConfig?: AwsCapacityProvider.VpcConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider aws_lambda_capacity_provider}
 */
-export class TfCapacityProvider extends cdktn.TerraformResource {
+export class AwsCapacityProvider extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -66,11 +66,11 @@ export class TfCapacityProvider extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCapacityProvider resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCapacityProvider resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCapacityProvider to import
-  * @param importFromId The id of the existing TfCapacityProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCapacityProvider to import is found
+  * @param importToId The construct id used in the generated config for the AwsCapacityProvider to import
+  * @param importFromId The id of the existing AwsCapacityProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCapacityProvider to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambda_capacity_provider", importId: importFromId, provider });
@@ -85,9 +85,9 @@ export class TfCapacityProvider extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCapacityProviderConfig
+  * @param options AwsCapacityProviderConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCapacityProviderConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCapacityProviderConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambda_capacity_provider',
       terraformGeneratorMetadata: {
@@ -124,11 +124,11 @@ export class TfCapacityProvider extends cdktn.TerraformResource {
   }
 
   // capacity_provider_scaling_config - computed: true, optional: true, required: false
-  private _capacityProviderScalingConfig = new TfCapacityProvider.CapacityProviderScalingConfigPropertyList(this, "capacity_provider_scaling_config", false);
+  private _capacityProviderScalingConfig = new AwsCapacityProvider.CapacityProviderScalingConfigPropertyList(this, "capacity_provider_scaling_config", false);
   public get capacityProviderScalingConfig() {
     return this._capacityProviderScalingConfig;
   }
-  public putCapacityProviderScalingConfig(value: TfCapacityProvider.CapacityProviderScalingConfigProperty[] | cdktn.IResolvable) {
+  public putCapacityProviderScalingConfig(value: AwsCapacityProvider.CapacityProviderScalingConfigProperty[] | cdktn.IResolvable) {
     this._capacityProviderScalingConfig.internalValue = value;
   }
   public resetCapacityProviderScalingConfig() {
@@ -140,11 +140,11 @@ export class TfCapacityProvider extends cdktn.TerraformResource {
   }
 
   // instance_requirements - computed: true, optional: true, required: false
-  private _instanceRequirements = new TfCapacityProvider.InstanceRequirementsPropertyList(this, "instance_requirements", false);
+  private _instanceRequirements = new AwsCapacityProvider.InstanceRequirementsPropertyList(this, "instance_requirements", false);
   public get instanceRequirements() {
     return this._instanceRequirements;
   }
-  public putInstanceRequirements(value: TfCapacityProvider.InstanceRequirementsProperty[] | cdktn.IResolvable) {
+  public putInstanceRequirements(value: AwsCapacityProvider.InstanceRequirementsProperty[] | cdktn.IResolvable) {
     this._instanceRequirements.internalValue = value;
   }
   public resetInstanceRequirements() {
@@ -223,11 +223,11 @@ export class TfCapacityProvider extends cdktn.TerraformResource {
   }
 
   // permissions_config - computed: false, optional: true, required: false
-  private _permissionsConfig = new TfCapacityProvider.PermissionsConfigPropertyList(this, "permissions_config", false);
+  private _permissionsConfig = new AwsCapacityProvider.PermissionsConfigPropertyList(this, "permissions_config", false);
   public get permissionsConfig() {
     return this._permissionsConfig;
   }
-  public putPermissionsConfig(value: TfCapacityProvider.PermissionsConfigProperty[] | cdktn.IResolvable) {
+  public putPermissionsConfig(value: AwsCapacityProvider.PermissionsConfigProperty[] | cdktn.IResolvable) {
     this._permissionsConfig.internalValue = value;
   }
   public resetPermissionsConfig() {
@@ -239,11 +239,11 @@ export class TfCapacityProvider extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCapacityProvider.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCapacityProvider.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCapacityProvider.TimeoutsProperty) {
+  public putTimeouts(value: AwsCapacityProvider.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -255,11 +255,11 @@ export class TfCapacityProvider extends cdktn.TerraformResource {
   }
 
   // vpc_config - computed: false, optional: true, required: false
-  private _vpcConfig = new TfCapacityProvider.VpcConfigPropertyList(this, "vpc_config", false);
+  private _vpcConfig = new AwsCapacityProvider.VpcConfigPropertyList(this, "vpc_config", false);
   public get vpcConfig() {
     return this._vpcConfig;
   }
-  public putVpcConfig(value: TfCapacityProvider.VpcConfigProperty[] | cdktn.IResolvable) {
+  public putVpcConfig(value: AwsCapacityProvider.VpcConfigProperty[] | cdktn.IResolvable) {
     this._vpcConfig.internalValue = value;
   }
   public resetVpcConfig() {
@@ -276,31 +276,31 @@ export class TfCapacityProvider extends cdktn.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      capacity_provider_scaling_config: cdktn.listMapper(tfCapacityProviderCapacityProviderScalingConfigPropertyToTerraform, false)(this._capacityProviderScalingConfig.internalValue),
-      instance_requirements: cdktn.listMapper(tfCapacityProviderInstanceRequirementsPropertyToTerraform, false)(this._instanceRequirements.internalValue),
+      capacity_provider_scaling_config: cdktn.listMapper(awsCapacityProviderCapacityProviderScalingConfigPropertyToTerraform, false)(this._capacityProviderScalingConfig.internalValue),
+      instance_requirements: cdktn.listMapper(awsCapacityProviderInstanceRequirementsPropertyToTerraform, false)(this._instanceRequirements.internalValue),
       kms_key_arn: cdktn.stringToTerraform(this._kmsKeyArn),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      permissions_config: cdktn.listMapper(tfCapacityProviderPermissionsConfigPropertyToTerraform, true)(this._permissionsConfig.internalValue),
-      timeouts: tfCapacityProviderTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_config: cdktn.listMapper(tfCapacityProviderVpcConfigPropertyToTerraform, true)(this._vpcConfig.internalValue),
+      permissions_config: cdktn.listMapper(awsCapacityProviderPermissionsConfigPropertyToTerraform, true)(this._permissionsConfig.internalValue),
+      timeouts: awsCapacityProviderTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_config: cdktn.listMapper(awsCapacityProviderVpcConfigPropertyToTerraform, true)(this._vpcConfig.internalValue),
     };
   }
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       capacity_provider_scaling_config: {
-        value: cdktn.listMapperHcl(tfCapacityProviderCapacityProviderScalingConfigPropertyToHclTerraform, false)(this._capacityProviderScalingConfig.internalValue),
+        value: cdktn.listMapperHcl(awsCapacityProviderCapacityProviderScalingConfigPropertyToHclTerraform, false)(this._capacityProviderScalingConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCapacityProvider.CapacityProviderScalingConfigPropertyList",
+        storageClassType: "AwsCapacityProvider.CapacityProviderScalingConfigPropertyList",
       },
       instance_requirements: {
-        value: cdktn.listMapperHcl(tfCapacityProviderInstanceRequirementsPropertyToHclTerraform, false)(this._instanceRequirements.internalValue),
+        value: cdktn.listMapperHcl(awsCapacityProviderInstanceRequirementsPropertyToHclTerraform, false)(this._instanceRequirements.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCapacityProvider.InstanceRequirementsPropertyList",
+        storageClassType: "AwsCapacityProvider.InstanceRequirementsPropertyList",
       },
       kms_key_arn: {
         value: cdktn.stringToHclTerraform(this._kmsKeyArn),
@@ -327,22 +327,22 @@ export class TfCapacityProvider extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       permissions_config: {
-        value: cdktn.listMapperHcl(tfCapacityProviderPermissionsConfigPropertyToHclTerraform, true)(this._permissionsConfig.internalValue),
+        value: cdktn.listMapperHcl(awsCapacityProviderPermissionsConfigPropertyToHclTerraform, true)(this._permissionsConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCapacityProvider.PermissionsConfigPropertyList",
+        storageClassType: "AwsCapacityProvider.PermissionsConfigPropertyList",
       },
       timeouts: {
-        value: tfCapacityProviderTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCapacityProviderTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCapacityProvider.TimeoutsProperty",
+        storageClassType: "AwsCapacityProvider.TimeoutsProperty",
       },
       vpc_config: {
-        value: cdktn.listMapperHcl(tfCapacityProviderVpcConfigPropertyToHclTerraform, true)(this._vpcConfig.internalValue),
+        value: cdktn.listMapperHcl(awsCapacityProviderVpcConfigPropertyToHclTerraform, true)(this._vpcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCapacityProvider.VpcConfigPropertyList",
+        storageClassType: "AwsCapacityProvider.VpcConfigPropertyList",
       },
     };
 
@@ -351,7 +351,7 @@ export class TfCapacityProvider extends cdktn.TerraformResource {
   }
 }
 
-export function tfCapacityProviderScalingPoliciesPropertyToTerraform(struct?: TfCapacityProvider.ScalingPoliciesProperty | cdktn.IResolvable): any {
+export function awsCapacityProviderScalingPoliciesPropertyToTerraform(struct?: AwsCapacityProvider.ScalingPoliciesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -363,7 +363,7 @@ export function tfCapacityProviderScalingPoliciesPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfCapacityProviderScalingPoliciesPropertyToHclTerraform(struct?: TfCapacityProvider.ScalingPoliciesProperty | cdktn.IResolvable): any {
+export function awsCapacityProviderScalingPoliciesPropertyToHclTerraform(struct?: AwsCapacityProvider.ScalingPoliciesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function tfCapacityProviderScalingPoliciesPropertyToHclTerraform(struct?:
 }
 
 
-export function tfCapacityProviderCapacityProviderScalingConfigPropertyToTerraform(struct?: TfCapacityProvider.CapacityProviderScalingConfigProperty | cdktn.IResolvable): any {
+export function awsCapacityProviderCapacityProviderScalingConfigPropertyToTerraform(struct?: AwsCapacityProvider.CapacityProviderScalingConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -396,12 +396,12 @@ export function tfCapacityProviderCapacityProviderScalingConfigPropertyToTerrafo
   return {
     max_vcpu_count: cdktn.numberToTerraform(struct!.maxVcpuCount),
     scaling_mode: cdktn.stringToTerraform(struct!.scalingMode),
-    scaling_policies: cdktn.listMapper(tfCapacityProviderScalingPoliciesPropertyToTerraform, false)(struct!.scalingPolicies),
+    scaling_policies: cdktn.listMapper(awsCapacityProviderScalingPoliciesPropertyToTerraform, false)(struct!.scalingPolicies),
   }
 }
 
 
-export function tfCapacityProviderCapacityProviderScalingConfigPropertyToHclTerraform(struct?: TfCapacityProvider.CapacityProviderScalingConfigProperty | cdktn.IResolvable): any {
+export function awsCapacityProviderCapacityProviderScalingConfigPropertyToHclTerraform(struct?: AwsCapacityProvider.CapacityProviderScalingConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,7 +420,7 @@ export function tfCapacityProviderCapacityProviderScalingConfigPropertyToHclTerr
       storageClassType: "string",
     },
     scaling_policies: {
-      value: cdktn.listMapperHcl(tfCapacityProviderScalingPoliciesPropertyToHclTerraform, false)(struct!.scalingPolicies),
+      value: cdktn.listMapperHcl(awsCapacityProviderScalingPoliciesPropertyToHclTerraform, false)(struct!.scalingPolicies),
       isBlock: true,
       type: "list",
       storageClassType: "ScalingPoliciesPropertyList",
@@ -432,7 +432,7 @@ export function tfCapacityProviderCapacityProviderScalingConfigPropertyToHclTerr
 }
 
 
-export function tfCapacityProviderInstanceRequirementsPropertyToTerraform(struct?: TfCapacityProvider.InstanceRequirementsProperty | cdktn.IResolvable): any {
+export function awsCapacityProviderInstanceRequirementsPropertyToTerraform(struct?: AwsCapacityProvider.InstanceRequirementsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -445,7 +445,7 @@ export function tfCapacityProviderInstanceRequirementsPropertyToTerraform(struct
 }
 
 
-export function tfCapacityProviderInstanceRequirementsPropertyToHclTerraform(struct?: TfCapacityProvider.InstanceRequirementsProperty | cdktn.IResolvable): any {
+export function awsCapacityProviderInstanceRequirementsPropertyToHclTerraform(struct?: AwsCapacityProvider.InstanceRequirementsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,7 +476,7 @@ export function tfCapacityProviderInstanceRequirementsPropertyToHclTerraform(str
 }
 
 
-export function tfCapacityProviderPermissionsConfigPropertyToTerraform(struct?: TfCapacityProvider.PermissionsConfigProperty | cdktn.IResolvable): any {
+export function awsCapacityProviderPermissionsConfigPropertyToTerraform(struct?: AwsCapacityProvider.PermissionsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -487,7 +487,7 @@ export function tfCapacityProviderPermissionsConfigPropertyToTerraform(struct?: 
 }
 
 
-export function tfCapacityProviderPermissionsConfigPropertyToHclTerraform(struct?: TfCapacityProvider.PermissionsConfigProperty | cdktn.IResolvable): any {
+export function awsCapacityProviderPermissionsConfigPropertyToHclTerraform(struct?: AwsCapacityProvider.PermissionsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -506,7 +506,7 @@ export function tfCapacityProviderPermissionsConfigPropertyToHclTerraform(struct
 }
 
 
-export function tfCapacityProviderTimeoutsPropertyToTerraform(struct?: TfCapacityProvider.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCapacityProviderTimeoutsPropertyToTerraform(struct?: AwsCapacityProvider.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -519,7 +519,7 @@ export function tfCapacityProviderTimeoutsPropertyToTerraform(struct?: TfCapacit
 }
 
 
-export function tfCapacityProviderTimeoutsPropertyToHclTerraform(struct?: TfCapacityProvider.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCapacityProviderTimeoutsPropertyToHclTerraform(struct?: AwsCapacityProvider.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -550,7 +550,7 @@ export function tfCapacityProviderTimeoutsPropertyToHclTerraform(struct?: TfCapa
 }
 
 
-export function tfCapacityProviderVpcConfigPropertyToTerraform(struct?: TfCapacityProvider.VpcConfigProperty | cdktn.IResolvable): any {
+export function awsCapacityProviderVpcConfigPropertyToTerraform(struct?: AwsCapacityProvider.VpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -562,7 +562,7 @@ export function tfCapacityProviderVpcConfigPropertyToTerraform(struct?: TfCapaci
 }
 
 
-export function tfCapacityProviderVpcConfigPropertyToHclTerraform(struct?: TfCapacityProvider.VpcConfigProperty | cdktn.IResolvable): any {
+export function awsCapacityProviderVpcConfigPropertyToHclTerraform(struct?: AwsCapacityProvider.VpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -587,14 +587,14 @@ export function tfCapacityProviderVpcConfigPropertyToHclTerraform(struct?: TfCap
 }
 
 
-export namespace TfCapacityProvider {
+export namespace AwsCapacityProvider {
 export interface ScalingPoliciesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#predefined_metric_type TfCapacityProvider#predefined_metric_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#predefined_metric_type AwsCapacityProvider#predefined_metric_type}
   */
   readonly predefinedMetricType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#target_value TfCapacityProvider#target_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#target_value AwsCapacityProvider#target_value}
   */
   readonly targetValue?: number;
 }
@@ -702,15 +702,15 @@ export class ScalingPoliciesPropertyList extends cdktn.ComplexList {
 }
 export interface CapacityProviderScalingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#max_vcpu_count TfCapacityProvider#max_vcpu_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#max_vcpu_count AwsCapacityProvider#max_vcpu_count}
   */
   readonly maxVcpuCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#scaling_mode TfCapacityProvider#scaling_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#scaling_mode AwsCapacityProvider#scaling_mode}
   */
   readonly scalingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#scaling_policies TfCapacityProvider#scaling_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#scaling_policies AwsCapacityProvider#scaling_policies}
   */
   readonly scalingPolicies?: ScalingPoliciesProperty[] | cdktn.IResolvable;
 }
@@ -840,15 +840,15 @@ export class CapacityProviderScalingConfigPropertyList extends cdktn.ComplexList
 }
 export interface InstanceRequirementsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#allowed_instance_types TfCapacityProvider#allowed_instance_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#allowed_instance_types AwsCapacityProvider#allowed_instance_types}
   */
   readonly allowedInstanceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#architectures TfCapacityProvider#architectures}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#architectures AwsCapacityProvider#architectures}
   */
   readonly architectures?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#excluded_instance_types TfCapacityProvider#excluded_instance_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#excluded_instance_types AwsCapacityProvider#excluded_instance_types}
   */
   readonly excludedInstanceTypes?: string[];
 }
@@ -978,7 +978,7 @@ export class InstanceRequirementsPropertyList extends cdktn.ComplexList {
 }
 export interface PermissionsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#capacity_provider_operator_role_arn TfCapacityProvider#capacity_provider_operator_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#capacity_provider_operator_role_arn AwsCapacityProvider#capacity_provider_operator_role_arn}
   */
   readonly capacityProviderOperatorRoleArn: string;
 }
@@ -1063,19 +1063,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#create TfCapacityProvider#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#create AwsCapacityProvider#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#delete TfCapacityProvider#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#delete AwsCapacityProvider#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#update TfCapacityProvider#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#update AwsCapacityProvider#update}
   */
   readonly update?: string;
 }
@@ -1183,11 +1183,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#security_group_ids TfCapacityProvider#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#security_group_ids AwsCapacityProvider#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#subnet_ids TfCapacityProvider#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_capacity_provider#subnet_ids AwsCapacityProvider#subnet_ids}
   */
   readonly subnetIds: string[];
 }

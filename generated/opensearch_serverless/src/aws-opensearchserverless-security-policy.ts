@@ -5,35 +5,35 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSecurityPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSecurityPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
   * Description of the policy. Typically used to store information about the permissions defined in the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_policy#description TfSecurityPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_policy#description AwsSecurityPolicy#description}
   */
   readonly description?: string;
   /**
   * Name of the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_policy#name TfSecurityPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_policy#name AwsSecurityPolicy#name}
   */
   readonly name: string;
   /**
   * JSON policy document to use as the content for the new policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_policy#policy TfSecurityPolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_policy#policy AwsSecurityPolicy#policy}
   */
   readonly policy: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_policy#region TfSecurityPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_policy#region AwsSecurityPolicy#region}
   */
   readonly region?: string;
   /**
   * Type of security policy. One of `encryption` or `network`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_policy#type TfSecurityPolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_policy#type AwsSecurityPolicy#type}
   */
   readonly type: string;
 }
@@ -41,7 +41,7 @@ export interface TfSecurityPolicyConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_policy aws_opensearchserverless_security_policy}
 */
-export class TfSecurityPolicy extends cdktn.TerraformResource {
+export class AwsSecurityPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -52,11 +52,11 @@ export class TfSecurityPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSecurityPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSecurityPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSecurityPolicy to import
-  * @param importFromId The id of the existing TfSecurityPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSecurityPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsSecurityPolicy to import
+  * @param importFromId The id of the existing AwsSecurityPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSecurityPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearchserverless_security_policy", importId: importFromId, provider });
@@ -71,9 +71,9 @@ export class TfSecurityPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSecurityPolicyConfig
+  * @param options AwsSecurityPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSecurityPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSecurityPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearchserverless_security_policy',
       terraformGeneratorMetadata: {

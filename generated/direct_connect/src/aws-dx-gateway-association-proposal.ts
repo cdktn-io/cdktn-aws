@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfGatewayAssociationProposalConfig extends cdktn.TerraformMetaArguments {
+export interface AwsGatewayAssociationProposalConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association_proposal#allowed_prefixes TfGatewayAssociationProposal#allowed_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association_proposal#allowed_prefixes AwsGatewayAssociationProposal#allowed_prefixes}
   */
   readonly allowedPrefixes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association_proposal#associated_gateway_id TfGatewayAssociationProposal#associated_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association_proposal#associated_gateway_id AwsGatewayAssociationProposal#associated_gateway_id}
   */
   readonly associatedGatewayId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association_proposal#dx_gateway_id TfGatewayAssociationProposal#dx_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association_proposal#dx_gateway_id AwsGatewayAssociationProposal#dx_gateway_id}
   */
   readonly dxGatewayId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association_proposal#dx_gateway_owner_account_id TfGatewayAssociationProposal#dx_gateway_owner_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association_proposal#dx_gateway_owner_account_id AwsGatewayAssociationProposal#dx_gateway_owner_account_id}
   */
   readonly dxGatewayOwnerAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association_proposal#id TfGatewayAssociationProposal#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association_proposal#id AwsGatewayAssociationProposal#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -32,7 +32,7 @@ export interface TfGatewayAssociationProposalConfig extends cdktn.TerraformMetaA
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association_proposal#region TfGatewayAssociationProposal#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association_proposal#region AwsGatewayAssociationProposal#region}
   */
   readonly region?: string;
 }
@@ -40,7 +40,7 @@ export interface TfGatewayAssociationProposalConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association_proposal aws_dx_gateway_association_proposal}
 */
-export class TfGatewayAssociationProposal extends cdktn.TerraformResource {
+export class AwsGatewayAssociationProposal extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfGatewayAssociationProposal extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfGatewayAssociationProposal resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsGatewayAssociationProposal resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfGatewayAssociationProposal to import
-  * @param importFromId The id of the existing TfGatewayAssociationProposal that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association_proposal#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfGatewayAssociationProposal to import is found
+  * @param importToId The construct id used in the generated config for the AwsGatewayAssociationProposal to import
+  * @param importFromId The id of the existing AwsGatewayAssociationProposal that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_gateway_association_proposal#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGatewayAssociationProposal to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dx_gateway_association_proposal", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfGatewayAssociationProposal extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfGatewayAssociationProposalConfig
+  * @param options AwsGatewayAssociationProposalConfig
   */
-  public constructor(scope: Construct, id: string, config: TfGatewayAssociationProposalConfig) {
+  public constructor(scope: Construct, id: string, config: AwsGatewayAssociationProposalConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dx_gateway_association_proposal',
       terraformGeneratorMetadata: {

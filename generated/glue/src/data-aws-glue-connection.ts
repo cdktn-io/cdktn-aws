@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfConnectionConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsConnectionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_connection#id DataTfConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_connection#id DataAwsConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,11 +16,11 @@ export interface DataTfConnectionConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_connection#region DataTfConnection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_connection#region DataAwsConnection#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_connection#tags DataTfConnection#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_connection#tags DataAwsConnection#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -28,7 +28,7 @@ export interface DataTfConnectionConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_connection aws_glue_connection}
 */
-export class DataTfConnection extends cdktn.TerraformDataSource {
+export class DataAwsConnection extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataTfConnection extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfConnection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsConnection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfConnection to import
-  * @param importFromId The id of the existing DataTfConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_connection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfConnection to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsConnection to import
+  * @param importFromId The id of the existing DataAwsConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_connection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_connection", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataTfConnection extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfConnectionConfig
+  * @param options DataAwsConnectionConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfConnectionConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_connection',
       terraformGeneratorMetadata: {
@@ -97,7 +97,7 @@ export class DataTfConnection extends cdktn.TerraformDataSource {
   }
 
   // authentication_configuration - computed: true, optional: false, required: false
-  private _authenticationConfiguration = new DataTfConnection.AuthenticationConfigurationPropertyList(this, "authentication_configuration", false);
+  private _authenticationConfiguration = new DataAwsConnection.AuthenticationConfigurationPropertyList(this, "authentication_configuration", false);
   public get authenticationConfiguration() {
     return this._authenticationConfiguration;
   }
@@ -147,7 +147,7 @@ export class DataTfConnection extends cdktn.TerraformDataSource {
   }
 
   // physical_connection_requirements - computed: true, optional: false, required: false
-  private _physicalConnectionRequirements = new DataTfConnection.PhysicalConnectionRequirementsPropertyList(this, "physical_connection_requirements", false);
+  private _physicalConnectionRequirements = new DataAwsConnection.PhysicalConnectionRequirementsPropertyList(this, "physical_connection_requirements", false);
   public get physicalConnectionRequirements() {
     return this._physicalConnectionRequirements;
   }
@@ -223,7 +223,7 @@ export class DataTfConnection extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfConnectionBasicAuthenticationCredentialsPropertyToTerraform(struct?: DataTfConnection.BasicAuthenticationCredentialsProperty): any {
+export function dataAwsConnectionBasicAuthenticationCredentialsPropertyToTerraform(struct?: DataAwsConnection.BasicAuthenticationCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,7 +233,7 @@ export function dataTfConnectionBasicAuthenticationCredentialsPropertyToTerrafor
 }
 
 
-export function dataTfConnectionBasicAuthenticationCredentialsPropertyToHclTerraform(struct?: DataTfConnection.BasicAuthenticationCredentialsProperty): any {
+export function dataAwsConnectionBasicAuthenticationCredentialsPropertyToHclTerraform(struct?: DataAwsConnection.BasicAuthenticationCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,7 +244,7 @@ export function dataTfConnectionBasicAuthenticationCredentialsPropertyToHclTerra
 }
 
 
-export function dataTfConnectionAuthorizationCodePropertiesPropertyToTerraform(struct?: DataTfConnection.AuthorizationCodePropertiesProperty): any {
+export function dataAwsConnectionAuthorizationCodePropertiesPropertyToTerraform(struct?: DataAwsConnection.AuthorizationCodePropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -254,7 +254,7 @@ export function dataTfConnectionAuthorizationCodePropertiesPropertyToTerraform(s
 }
 
 
-export function dataTfConnectionAuthorizationCodePropertiesPropertyToHclTerraform(struct?: DataTfConnection.AuthorizationCodePropertiesProperty): any {
+export function dataAwsConnectionAuthorizationCodePropertiesPropertyToHclTerraform(struct?: DataAwsConnection.AuthorizationCodePropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,7 +265,7 @@ export function dataTfConnectionAuthorizationCodePropertiesPropertyToHclTerrafor
 }
 
 
-export function dataTfConnectionOauth2ClientApplicationPropertyToTerraform(struct?: DataTfConnection.Oauth2ClientApplicationProperty): any {
+export function dataAwsConnectionOauth2ClientApplicationPropertyToTerraform(struct?: DataAwsConnection.Oauth2ClientApplicationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function dataTfConnectionOauth2ClientApplicationPropertyToTerraform(struc
 }
 
 
-export function dataTfConnectionOauth2ClientApplicationPropertyToHclTerraform(struct?: DataTfConnection.Oauth2ClientApplicationProperty): any {
+export function dataAwsConnectionOauth2ClientApplicationPropertyToHclTerraform(struct?: DataAwsConnection.Oauth2ClientApplicationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,7 +286,7 @@ export function dataTfConnectionOauth2ClientApplicationPropertyToHclTerraform(st
 }
 
 
-export function dataTfConnectionOauth2CredentialsPropertyToTerraform(struct?: DataTfConnection.Oauth2CredentialsProperty): any {
+export function dataAwsConnectionOauth2CredentialsPropertyToTerraform(struct?: DataAwsConnection.Oauth2CredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -296,7 +296,7 @@ export function dataTfConnectionOauth2CredentialsPropertyToTerraform(struct?: Da
 }
 
 
-export function dataTfConnectionOauth2CredentialsPropertyToHclTerraform(struct?: DataTfConnection.Oauth2CredentialsProperty): any {
+export function dataAwsConnectionOauth2CredentialsPropertyToHclTerraform(struct?: DataAwsConnection.Oauth2CredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function dataTfConnectionOauth2CredentialsPropertyToHclTerraform(struct?:
 }
 
 
-export function dataTfConnectionOauth2PropertiesPropertyToTerraform(struct?: DataTfConnection.Oauth2PropertiesProperty): any {
+export function dataAwsConnectionOauth2PropertiesPropertyToTerraform(struct?: DataAwsConnection.Oauth2PropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function dataTfConnectionOauth2PropertiesPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataTfConnectionOauth2PropertiesPropertyToHclTerraform(struct?: DataTfConnection.Oauth2PropertiesProperty): any {
+export function dataAwsConnectionOauth2PropertiesPropertyToHclTerraform(struct?: DataAwsConnection.Oauth2PropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function dataTfConnectionOauth2PropertiesPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataTfConnectionAuthenticationConfigurationPropertyToTerraform(struct?: DataTfConnection.AuthenticationConfigurationProperty): any {
+export function dataAwsConnectionAuthenticationConfigurationPropertyToTerraform(struct?: DataAwsConnection.AuthenticationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -338,7 +338,7 @@ export function dataTfConnectionAuthenticationConfigurationPropertyToTerraform(s
 }
 
 
-export function dataTfConnectionAuthenticationConfigurationPropertyToHclTerraform(struct?: DataTfConnection.AuthenticationConfigurationProperty): any {
+export function dataAwsConnectionAuthenticationConfigurationPropertyToHclTerraform(struct?: DataAwsConnection.AuthenticationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function dataTfConnectionAuthenticationConfigurationPropertyToHclTerrafor
 }
 
 
-export function dataTfConnectionPhysicalConnectionRequirementsPropertyToTerraform(struct?: DataTfConnection.PhysicalConnectionRequirementsProperty): any {
+export function dataAwsConnectionPhysicalConnectionRequirementsPropertyToTerraform(struct?: DataAwsConnection.PhysicalConnectionRequirementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -359,7 +359,7 @@ export function dataTfConnectionPhysicalConnectionRequirementsPropertyToTerrafor
 }
 
 
-export function dataTfConnectionPhysicalConnectionRequirementsPropertyToHclTerraform(struct?: DataTfConnection.PhysicalConnectionRequirementsProperty): any {
+export function dataAwsConnectionPhysicalConnectionRequirementsPropertyToHclTerraform(struct?: DataAwsConnection.PhysicalConnectionRequirementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -370,7 +370,7 @@ export function dataTfConnectionPhysicalConnectionRequirementsPropertyToHclTerra
 }
 
 
-export namespace DataTfConnection {
+export namespace DataAwsConnection {
 export interface BasicAuthenticationCredentialsProperty {
 }
 export class BasicAuthenticationCredentialsPropertyOutputReference extends cdktn.ComplexObject {

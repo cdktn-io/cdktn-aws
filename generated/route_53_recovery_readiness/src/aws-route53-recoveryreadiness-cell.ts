@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCellConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCellConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell#cell_name TfCell#cell_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell#cell_name AwsCell#cell_name}
   */
   readonly cellName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell#cells TfCell#cells}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell#cells AwsCell#cells}
   */
   readonly cells?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell#id TfCell#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell#id AwsCell#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell#tags TfCell#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell#tags AwsCell#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell#tags_all TfCell#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell#tags_all AwsCell#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell#timeouts TfCell#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell#timeouts AwsCell#timeouts}
   */
-  readonly timeouts?: TfCell.TimeoutsProperty;
+  readonly timeouts?: AwsCell.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell aws_route53recoveryreadiness_cell}
 */
-export class TfCell extends cdktn.TerraformResource {
+export class AwsCell extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfCell extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCell resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCell resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCell to import
-  * @param importFromId The id of the existing TfCell that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCell to import is found
+  * @param importToId The construct id used in the generated config for the AwsCell to import
+  * @param importFromId The id of the existing AwsCell that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCell to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53recoveryreadiness_cell", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfCell extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCellConfig
+  * @param options AwsCellConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCellConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCellConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53recoveryreadiness_cell',
       terraformGeneratorMetadata: {
@@ -188,11 +188,11 @@ export class TfCell extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCell.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCell.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCell.TimeoutsProperty) {
+  public putTimeouts(value: AwsCell.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -214,7 +214,7 @@ export class TfCell extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfCellTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsCellTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -251,10 +251,10 @@ export class TfCell extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfCellTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCellTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCell.TimeoutsProperty",
+        storageClassType: "AwsCell.TimeoutsProperty",
       },
     };
 
@@ -263,7 +263,7 @@ export class TfCell extends cdktn.TerraformResource {
   }
 }
 
-export function tfCellTimeoutsPropertyToTerraform(struct?: TfCell.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCellTimeoutsPropertyToTerraform(struct?: AwsCell.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function tfCellTimeoutsPropertyToTerraform(struct?: TfCell.TimeoutsProper
 }
 
 
-export function tfCellTimeoutsPropertyToHclTerraform(struct?: TfCell.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCellTimeoutsPropertyToHclTerraform(struct?: AwsCell.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,10 +293,10 @@ export function tfCellTimeoutsPropertyToHclTerraform(struct?: TfCell.TimeoutsPro
 }
 
 
-export namespace TfCell {
+export namespace AwsCell {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell#delete TfCell#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53recoveryreadiness_cell#delete AwsCell#delete}
   */
   readonly delete?: string;
 }

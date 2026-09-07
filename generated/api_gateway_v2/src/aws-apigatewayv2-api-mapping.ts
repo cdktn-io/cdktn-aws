@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfApiMappingConfig extends cdktn.TerraformMetaArguments {
+export interface AwsApiMappingConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api_mapping#api_id TfApiMapping#api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api_mapping#api_id AwsApiMapping#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api_mapping#api_mapping_key TfApiMapping#api_mapping_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api_mapping#api_mapping_key AwsApiMapping#api_mapping_key}
   */
   readonly apiMappingKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api_mapping#domain_name TfApiMapping#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api_mapping#domain_name AwsApiMapping#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api_mapping#id TfApiMapping#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api_mapping#id AwsApiMapping#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,11 +28,11 @@ export interface TfApiMappingConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api_mapping#region TfApiMapping#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api_mapping#region AwsApiMapping#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api_mapping#stage TfApiMapping#stage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api_mapping#stage AwsApiMapping#stage}
   */
   readonly stage: string;
 }
@@ -40,7 +40,7 @@ export interface TfApiMappingConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api_mapping aws_apigatewayv2_api_mapping}
 */
-export class TfApiMapping extends cdktn.TerraformResource {
+export class AwsApiMapping extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfApiMapping extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfApiMapping resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsApiMapping resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfApiMapping to import
-  * @param importFromId The id of the existing TfApiMapping that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api_mapping#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfApiMapping to import is found
+  * @param importToId The construct id used in the generated config for the AwsApiMapping to import
+  * @param importFromId The id of the existing AwsApiMapping that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api_mapping#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsApiMapping to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apigatewayv2_api_mapping", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfApiMapping extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfApiMappingConfig
+  * @param options AwsApiMappingConfig
   */
-  public constructor(scope: Construct, id: string, config: TfApiMappingConfig) {
+  public constructor(scope: Construct, id: string, config: AwsApiMappingConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apigatewayv2_api_mapping',
       terraformGeneratorMetadata: {

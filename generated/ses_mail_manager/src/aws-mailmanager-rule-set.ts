@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRuleSetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRuleSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#name TfRuleSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#name AwsRuleSet#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#region TfRuleSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#region AwsRuleSet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#tags TfRuleSet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#tags AwsRuleSet#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#rule TfRuleSet#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#rule AwsRuleSet#rule}
   */
-  readonly rule?: TfRuleSet.RuleProperty[] | cdktn.IResolvable;
+  readonly rule?: AwsRuleSet.RuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set aws_mailmanager_rule_set}
 */
-export class TfRuleSet extends cdktn.TerraformResource {
+export class AwsRuleSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class TfRuleSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRuleSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRuleSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRuleSet to import
-  * @param importFromId The id of the existing TfRuleSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRuleSet to import is found
+  * @param importToId The construct id used in the generated config for the AwsRuleSet to import
+  * @param importFromId The id of the existing AwsRuleSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRuleSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_mailmanager_rule_set", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class TfRuleSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRuleSetConfig
+  * @param options AwsRuleSetConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRuleSetConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRuleSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_mailmanager_rule_set',
       terraformGeneratorMetadata: {
@@ -161,11 +161,11 @@ export class TfRuleSet extends cdktn.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule = new TfRuleSet.RulePropertyList(this, "rule", false);
+  private _rule = new AwsRuleSet.RulePropertyList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: TfRuleSet.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: AwsRuleSet.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   public resetRule() {
@@ -185,7 +185,7 @@ export class TfRuleSet extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      rule: cdktn.listMapper(tfRuleSetRulePropertyToTerraform, true)(this._rule.internalValue),
+      rule: cdktn.listMapper(awsRuleSetRulePropertyToTerraform, true)(this._rule.internalValue),
     };
   }
 
@@ -210,10 +210,10 @@ export class TfRuleSet extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       rule: {
-        value: cdktn.listMapperHcl(tfRuleSetRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(awsRuleSetRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRuleSet.RulePropertyList",
+        storageClassType: "AwsRuleSet.RulePropertyList",
       },
     };
 
@@ -222,7 +222,7 @@ export class TfRuleSet extends cdktn.TerraformResource {
   }
 }
 
-export function tfRuleSetAddHeaderPropertyToTerraform(struct?: TfRuleSet.AddHeaderProperty | cdktn.IResolvable): any {
+export function awsRuleSetAddHeaderPropertyToTerraform(struct?: AwsRuleSet.AddHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -234,7 +234,7 @@ export function tfRuleSetAddHeaderPropertyToTerraform(struct?: TfRuleSet.AddHead
 }
 
 
-export function tfRuleSetAddHeaderPropertyToHclTerraform(struct?: TfRuleSet.AddHeaderProperty | cdktn.IResolvable): any {
+export function awsRuleSetAddHeaderPropertyToHclTerraform(struct?: AwsRuleSet.AddHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function tfRuleSetAddHeaderPropertyToHclTerraform(struct?: TfRuleSet.AddH
 }
 
 
-export function tfRuleSetArchivePropertyToTerraform(struct?: TfRuleSet.ArchiveProperty | cdktn.IResolvable): any {
+export function awsRuleSetArchivePropertyToTerraform(struct?: AwsRuleSet.ArchiveProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -271,7 +271,7 @@ export function tfRuleSetArchivePropertyToTerraform(struct?: TfRuleSet.ArchivePr
 }
 
 
-export function tfRuleSetArchivePropertyToHclTerraform(struct?: TfRuleSet.ArchiveProperty | cdktn.IResolvable): any {
+export function awsRuleSetArchivePropertyToHclTerraform(struct?: AwsRuleSet.ArchiveProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -296,7 +296,7 @@ export function tfRuleSetArchivePropertyToHclTerraform(struct?: TfRuleSet.Archiv
 }
 
 
-export function tfRuleSetBouncePropertyToTerraform(struct?: TfRuleSet.BounceProperty | cdktn.IResolvable): any {
+export function awsRuleSetBouncePropertyToTerraform(struct?: AwsRuleSet.BounceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function tfRuleSetBouncePropertyToTerraform(struct?: TfRuleSet.BounceProp
 }
 
 
-export function tfRuleSetBouncePropertyToHclTerraform(struct?: TfRuleSet.BounceProperty | cdktn.IResolvable): any {
+export function awsRuleSetBouncePropertyToHclTerraform(struct?: AwsRuleSet.BounceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -368,7 +368,7 @@ export function tfRuleSetBouncePropertyToHclTerraform(struct?: TfRuleSet.BounceP
 }
 
 
-export function tfRuleSetDeliverToMailboxPropertyToTerraform(struct?: TfRuleSet.DeliverToMailboxProperty | cdktn.IResolvable): any {
+export function awsRuleSetDeliverToMailboxPropertyToTerraform(struct?: AwsRuleSet.DeliverToMailboxProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -381,7 +381,7 @@ export function tfRuleSetDeliverToMailboxPropertyToTerraform(struct?: TfRuleSet.
 }
 
 
-export function tfRuleSetDeliverToMailboxPropertyToHclTerraform(struct?: TfRuleSet.DeliverToMailboxProperty | cdktn.IResolvable): any {
+export function awsRuleSetDeliverToMailboxPropertyToHclTerraform(struct?: AwsRuleSet.DeliverToMailboxProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,7 +412,7 @@ export function tfRuleSetDeliverToMailboxPropertyToHclTerraform(struct?: TfRuleS
 }
 
 
-export function tfRuleSetDeliverToQBusinessPropertyToTerraform(struct?: TfRuleSet.DeliverToQBusinessProperty | cdktn.IResolvable): any {
+export function awsRuleSetDeliverToQBusinessPropertyToTerraform(struct?: AwsRuleSet.DeliverToQBusinessProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -426,7 +426,7 @@ export function tfRuleSetDeliverToQBusinessPropertyToTerraform(struct?: TfRuleSe
 }
 
 
-export function tfRuleSetDeliverToQBusinessPropertyToHclTerraform(struct?: TfRuleSet.DeliverToQBusinessProperty | cdktn.IResolvable): any {
+export function awsRuleSetDeliverToQBusinessPropertyToHclTerraform(struct?: AwsRuleSet.DeliverToQBusinessProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -463,7 +463,7 @@ export function tfRuleSetDeliverToQBusinessPropertyToHclTerraform(struct?: TfRul
 }
 
 
-export function tfRuleSetDropPropertyToTerraform(struct?: TfRuleSet.DropProperty | cdktn.IResolvable): any {
+export function awsRuleSetDropPropertyToTerraform(struct?: AwsRuleSet.DropProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -473,7 +473,7 @@ export function tfRuleSetDropPropertyToTerraform(struct?: TfRuleSet.DropProperty
 }
 
 
-export function tfRuleSetDropPropertyToHclTerraform(struct?: TfRuleSet.DropProperty | cdktn.IResolvable): any {
+export function awsRuleSetDropPropertyToHclTerraform(struct?: AwsRuleSet.DropProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -484,7 +484,7 @@ export function tfRuleSetDropPropertyToHclTerraform(struct?: TfRuleSet.DropPrope
 }
 
 
-export function tfRuleSetInvokeLambdaPropertyToTerraform(struct?: TfRuleSet.InvokeLambdaProperty | cdktn.IResolvable): any {
+export function awsRuleSetInvokeLambdaPropertyToTerraform(struct?: AwsRuleSet.InvokeLambdaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -499,7 +499,7 @@ export function tfRuleSetInvokeLambdaPropertyToTerraform(struct?: TfRuleSet.Invo
 }
 
 
-export function tfRuleSetInvokeLambdaPropertyToHclTerraform(struct?: TfRuleSet.InvokeLambdaProperty | cdktn.IResolvable): any {
+export function awsRuleSetInvokeLambdaPropertyToHclTerraform(struct?: AwsRuleSet.InvokeLambdaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -542,7 +542,7 @@ export function tfRuleSetInvokeLambdaPropertyToHclTerraform(struct?: TfRuleSet.I
 }
 
 
-export function tfRuleSetPublishToSnsPropertyToTerraform(struct?: TfRuleSet.PublishToSnsProperty | cdktn.IResolvable): any {
+export function awsRuleSetPublishToSnsPropertyToTerraform(struct?: AwsRuleSet.PublishToSnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -557,7 +557,7 @@ export function tfRuleSetPublishToSnsPropertyToTerraform(struct?: TfRuleSet.Publ
 }
 
 
-export function tfRuleSetPublishToSnsPropertyToHclTerraform(struct?: TfRuleSet.PublishToSnsProperty | cdktn.IResolvable): any {
+export function awsRuleSetPublishToSnsPropertyToHclTerraform(struct?: AwsRuleSet.PublishToSnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -600,7 +600,7 @@ export function tfRuleSetPublishToSnsPropertyToHclTerraform(struct?: TfRuleSet.P
 }
 
 
-export function tfRuleSetRelayPropertyToTerraform(struct?: TfRuleSet.RelayProperty | cdktn.IResolvable): any {
+export function awsRuleSetRelayPropertyToTerraform(struct?: AwsRuleSet.RelayProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -613,7 +613,7 @@ export function tfRuleSetRelayPropertyToTerraform(struct?: TfRuleSet.RelayProper
 }
 
 
-export function tfRuleSetRelayPropertyToHclTerraform(struct?: TfRuleSet.RelayProperty | cdktn.IResolvable): any {
+export function awsRuleSetRelayPropertyToHclTerraform(struct?: AwsRuleSet.RelayProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -644,7 +644,7 @@ export function tfRuleSetRelayPropertyToHclTerraform(struct?: TfRuleSet.RelayPro
 }
 
 
-export function tfRuleSetReplaceRecipientPropertyToTerraform(struct?: TfRuleSet.ReplaceRecipientProperty | cdktn.IResolvable): any {
+export function awsRuleSetReplaceRecipientPropertyToTerraform(struct?: AwsRuleSet.ReplaceRecipientProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -655,7 +655,7 @@ export function tfRuleSetReplaceRecipientPropertyToTerraform(struct?: TfRuleSet.
 }
 
 
-export function tfRuleSetReplaceRecipientPropertyToHclTerraform(struct?: TfRuleSet.ReplaceRecipientProperty | cdktn.IResolvable): any {
+export function awsRuleSetReplaceRecipientPropertyToHclTerraform(struct?: AwsRuleSet.ReplaceRecipientProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -674,7 +674,7 @@ export function tfRuleSetReplaceRecipientPropertyToHclTerraform(struct?: TfRuleS
 }
 
 
-export function tfRuleSetSendPropertyToTerraform(struct?: TfRuleSet.SendProperty | cdktn.IResolvable): any {
+export function awsRuleSetSendPropertyToTerraform(struct?: AwsRuleSet.SendProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -686,7 +686,7 @@ export function tfRuleSetSendPropertyToTerraform(struct?: TfRuleSet.SendProperty
 }
 
 
-export function tfRuleSetSendPropertyToHclTerraform(struct?: TfRuleSet.SendProperty | cdktn.IResolvable): any {
+export function awsRuleSetSendPropertyToHclTerraform(struct?: AwsRuleSet.SendProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -711,7 +711,7 @@ export function tfRuleSetSendPropertyToHclTerraform(struct?: TfRuleSet.SendPrope
 }
 
 
-export function tfRuleSetWriteToS3PropertyToTerraform(struct?: TfRuleSet.WriteToS3Property | cdktn.IResolvable): any {
+export function awsRuleSetWriteToS3PropertyToTerraform(struct?: AwsRuleSet.WriteToS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -726,7 +726,7 @@ export function tfRuleSetWriteToS3PropertyToTerraform(struct?: TfRuleSet.WriteTo
 }
 
 
-export function tfRuleSetWriteToS3PropertyToHclTerraform(struct?: TfRuleSet.WriteToS3Property | cdktn.IResolvable): any {
+export function awsRuleSetWriteToS3PropertyToHclTerraform(struct?: AwsRuleSet.WriteToS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -769,102 +769,102 @@ export function tfRuleSetWriteToS3PropertyToHclTerraform(struct?: TfRuleSet.Writ
 }
 
 
-export function tfRuleSetActionPropertyToTerraform(struct?: TfRuleSet.ActionProperty | cdktn.IResolvable): any {
+export function awsRuleSetActionPropertyToTerraform(struct?: AwsRuleSet.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    add_header: cdktn.listMapper(tfRuleSetAddHeaderPropertyToTerraform, true)(struct!.addHeader),
-    archive: cdktn.listMapper(tfRuleSetArchivePropertyToTerraform, true)(struct!.archive),
-    bounce: cdktn.listMapper(tfRuleSetBouncePropertyToTerraform, true)(struct!.bounce),
-    deliver_to_mailbox: cdktn.listMapper(tfRuleSetDeliverToMailboxPropertyToTerraform, true)(struct!.deliverToMailbox),
-    deliver_to_q_business: cdktn.listMapper(tfRuleSetDeliverToQBusinessPropertyToTerraform, true)(struct!.deliverToQBusiness),
-    drop: cdktn.listMapper(tfRuleSetDropPropertyToTerraform, true)(struct!.drop),
-    invoke_lambda: cdktn.listMapper(tfRuleSetInvokeLambdaPropertyToTerraform, true)(struct!.invokeLambda),
-    publish_to_sns: cdktn.listMapper(tfRuleSetPublishToSnsPropertyToTerraform, true)(struct!.publishToSns),
-    relay: cdktn.listMapper(tfRuleSetRelayPropertyToTerraform, true)(struct!.relay),
-    replace_recipient: cdktn.listMapper(tfRuleSetReplaceRecipientPropertyToTerraform, true)(struct!.replaceRecipient),
-    send: cdktn.listMapper(tfRuleSetSendPropertyToTerraform, true)(struct!.send),
-    write_to_s3: cdktn.listMapper(tfRuleSetWriteToS3PropertyToTerraform, true)(struct!.writeToS3),
+    add_header: cdktn.listMapper(awsRuleSetAddHeaderPropertyToTerraform, true)(struct!.addHeader),
+    archive: cdktn.listMapper(awsRuleSetArchivePropertyToTerraform, true)(struct!.archive),
+    bounce: cdktn.listMapper(awsRuleSetBouncePropertyToTerraform, true)(struct!.bounce),
+    deliver_to_mailbox: cdktn.listMapper(awsRuleSetDeliverToMailboxPropertyToTerraform, true)(struct!.deliverToMailbox),
+    deliver_to_q_business: cdktn.listMapper(awsRuleSetDeliverToQBusinessPropertyToTerraform, true)(struct!.deliverToQBusiness),
+    drop: cdktn.listMapper(awsRuleSetDropPropertyToTerraform, true)(struct!.drop),
+    invoke_lambda: cdktn.listMapper(awsRuleSetInvokeLambdaPropertyToTerraform, true)(struct!.invokeLambda),
+    publish_to_sns: cdktn.listMapper(awsRuleSetPublishToSnsPropertyToTerraform, true)(struct!.publishToSns),
+    relay: cdktn.listMapper(awsRuleSetRelayPropertyToTerraform, true)(struct!.relay),
+    replace_recipient: cdktn.listMapper(awsRuleSetReplaceRecipientPropertyToTerraform, true)(struct!.replaceRecipient),
+    send: cdktn.listMapper(awsRuleSetSendPropertyToTerraform, true)(struct!.send),
+    write_to_s3: cdktn.listMapper(awsRuleSetWriteToS3PropertyToTerraform, true)(struct!.writeToS3),
   }
 }
 
 
-export function tfRuleSetActionPropertyToHclTerraform(struct?: TfRuleSet.ActionProperty | cdktn.IResolvable): any {
+export function awsRuleSetActionPropertyToHclTerraform(struct?: AwsRuleSet.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     add_header: {
-      value: cdktn.listMapperHcl(tfRuleSetAddHeaderPropertyToHclTerraform, true)(struct!.addHeader),
+      value: cdktn.listMapperHcl(awsRuleSetAddHeaderPropertyToHclTerraform, true)(struct!.addHeader),
       isBlock: true,
       type: "list",
       storageClassType: "AddHeaderPropertyList",
     },
     archive: {
-      value: cdktn.listMapperHcl(tfRuleSetArchivePropertyToHclTerraform, true)(struct!.archive),
+      value: cdktn.listMapperHcl(awsRuleSetArchivePropertyToHclTerraform, true)(struct!.archive),
       isBlock: true,
       type: "list",
       storageClassType: "ArchivePropertyList",
     },
     bounce: {
-      value: cdktn.listMapperHcl(tfRuleSetBouncePropertyToHclTerraform, true)(struct!.bounce),
+      value: cdktn.listMapperHcl(awsRuleSetBouncePropertyToHclTerraform, true)(struct!.bounce),
       isBlock: true,
       type: "list",
       storageClassType: "BouncePropertyList",
     },
     deliver_to_mailbox: {
-      value: cdktn.listMapperHcl(tfRuleSetDeliverToMailboxPropertyToHclTerraform, true)(struct!.deliverToMailbox),
+      value: cdktn.listMapperHcl(awsRuleSetDeliverToMailboxPropertyToHclTerraform, true)(struct!.deliverToMailbox),
       isBlock: true,
       type: "list",
       storageClassType: "DeliverToMailboxPropertyList",
     },
     deliver_to_q_business: {
-      value: cdktn.listMapperHcl(tfRuleSetDeliverToQBusinessPropertyToHclTerraform, true)(struct!.deliverToQBusiness),
+      value: cdktn.listMapperHcl(awsRuleSetDeliverToQBusinessPropertyToHclTerraform, true)(struct!.deliverToQBusiness),
       isBlock: true,
       type: "list",
       storageClassType: "DeliverToQBusinessPropertyList",
     },
     drop: {
-      value: cdktn.listMapperHcl(tfRuleSetDropPropertyToHclTerraform, true)(struct!.drop),
+      value: cdktn.listMapperHcl(awsRuleSetDropPropertyToHclTerraform, true)(struct!.drop),
       isBlock: true,
       type: "list",
       storageClassType: "DropPropertyList",
     },
     invoke_lambda: {
-      value: cdktn.listMapperHcl(tfRuleSetInvokeLambdaPropertyToHclTerraform, true)(struct!.invokeLambda),
+      value: cdktn.listMapperHcl(awsRuleSetInvokeLambdaPropertyToHclTerraform, true)(struct!.invokeLambda),
       isBlock: true,
       type: "list",
       storageClassType: "InvokeLambdaPropertyList",
     },
     publish_to_sns: {
-      value: cdktn.listMapperHcl(tfRuleSetPublishToSnsPropertyToHclTerraform, true)(struct!.publishToSns),
+      value: cdktn.listMapperHcl(awsRuleSetPublishToSnsPropertyToHclTerraform, true)(struct!.publishToSns),
       isBlock: true,
       type: "list",
       storageClassType: "PublishToSnsPropertyList",
     },
     relay: {
-      value: cdktn.listMapperHcl(tfRuleSetRelayPropertyToHclTerraform, true)(struct!.relay),
+      value: cdktn.listMapperHcl(awsRuleSetRelayPropertyToHclTerraform, true)(struct!.relay),
       isBlock: true,
       type: "list",
       storageClassType: "RelayPropertyList",
     },
     replace_recipient: {
-      value: cdktn.listMapperHcl(tfRuleSetReplaceRecipientPropertyToHclTerraform, true)(struct!.replaceRecipient),
+      value: cdktn.listMapperHcl(awsRuleSetReplaceRecipientPropertyToHclTerraform, true)(struct!.replaceRecipient),
       isBlock: true,
       type: "list",
       storageClassType: "ReplaceRecipientPropertyList",
     },
     send: {
-      value: cdktn.listMapperHcl(tfRuleSetSendPropertyToHclTerraform, true)(struct!.send),
+      value: cdktn.listMapperHcl(awsRuleSetSendPropertyToHclTerraform, true)(struct!.send),
       isBlock: true,
       type: "list",
       storageClassType: "SendPropertyList",
     },
     write_to_s3: {
-      value: cdktn.listMapperHcl(tfRuleSetWriteToS3PropertyToHclTerraform, true)(struct!.writeToS3),
+      value: cdktn.listMapperHcl(awsRuleSetWriteToS3PropertyToHclTerraform, true)(struct!.writeToS3),
       isBlock: true,
       type: "list",
       storageClassType: "WriteToS3PropertyList",
@@ -876,7 +876,7 @@ export function tfRuleSetActionPropertyToHclTerraform(struct?: TfRuleSet.ActionP
 }
 
 
-export function tfRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyToTerraform(struct?: TfRuleSet.RuleConditionBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyToTerraform(struct?: AwsRuleSet.RuleConditionBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -888,7 +888,7 @@ export function tfRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyT
 }
 
 
-export function tfRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: AwsRuleSet.RuleConditionBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -913,7 +913,7 @@ export function tfRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyT
 }
 
 
-export function tfRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPropertyToTerraform(struct?: TfRuleSet.RuleConditionBooleanExpressionEvaluateIsInAddressListProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPropertyToTerraform(struct?: AwsRuleSet.RuleConditionBooleanExpressionEvaluateIsInAddressListProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -925,7 +925,7 @@ export function tfRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPr
 }
 
 
-export function tfRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionBooleanExpressionEvaluateIsInAddressListProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPropertyToHclTerraform(struct?: AwsRuleSet.RuleConditionBooleanExpressionEvaluateIsInAddressListProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -950,20 +950,20 @@ export function tfRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPr
 }
 
 
-export function tfRuleSetRuleConditionBooleanExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleConditionBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionBooleanExpressionEvaluatePropertyToTerraform(struct?: AwsRuleSet.RuleConditionBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     attribute: cdktn.stringToTerraform(struct!.attribute),
-    analysis: cdktn.listMapper(tfRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
-    is_in_address_list: cdktn.listMapper(tfRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPropertyToTerraform, true)(struct!.isInAddressList),
+    analysis: cdktn.listMapper(awsRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
+    is_in_address_list: cdktn.listMapper(awsRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPropertyToTerraform, true)(struct!.isInAddressList),
   }
 }
 
 
-export function tfRuleSetRuleConditionBooleanExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleConditionBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionBooleanExpressionEvaluatePropertyToHclTerraform(struct?: AwsRuleSet.RuleConditionBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -976,13 +976,13 @@ export function tfRuleSetRuleConditionBooleanExpressionEvaluatePropertyToHclTerr
       storageClassType: "string",
     },
     analysis: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
+      value: cdktn.listMapperHcl(awsRuleSetRuleConditionBooleanExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionBooleanExpressionEvaluateAnalysisPropertyList",
     },
     is_in_address_list: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPropertyToHclTerraform, true)(struct!.isInAddressList),
+      value: cdktn.listMapperHcl(awsRuleSetRuleConditionBooleanExpressionEvaluateIsInAddressListPropertyToHclTerraform, true)(struct!.isInAddressList),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionBooleanExpressionEvaluateIsInAddressListPropertyList",
@@ -994,19 +994,19 @@ export function tfRuleSetRuleConditionBooleanExpressionEvaluatePropertyToHclTerr
 }
 
 
-export function tfRuleSetRuleConditionBooleanExpressionPropertyToTerraform(struct?: TfRuleSet.RuleConditionBooleanExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionBooleanExpressionPropertyToTerraform(struct?: AwsRuleSet.RuleConditionBooleanExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
-    evaluate: cdktn.listMapper(tfRuleSetRuleConditionBooleanExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(awsRuleSetRuleConditionBooleanExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function tfRuleSetRuleConditionBooleanExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionBooleanExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionBooleanExpressionPropertyToHclTerraform(struct?: AwsRuleSet.RuleConditionBooleanExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1019,7 +1019,7 @@ export function tfRuleSetRuleConditionBooleanExpressionPropertyToHclTerraform(st
       storageClassType: "string",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleConditionBooleanExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(awsRuleSetRuleConditionBooleanExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionBooleanExpressionEvaluatePropertyList",
@@ -1031,7 +1031,7 @@ export function tfRuleSetRuleConditionBooleanExpressionPropertyToHclTerraform(st
 }
 
 
-export function tfRuleSetRuleConditionDmarcExpressionPropertyToTerraform(struct?: TfRuleSet.RuleConditionDmarcExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionDmarcExpressionPropertyToTerraform(struct?: AwsRuleSet.RuleConditionDmarcExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1043,7 +1043,7 @@ export function tfRuleSetRuleConditionDmarcExpressionPropertyToTerraform(struct?
 }
 
 
-export function tfRuleSetRuleConditionDmarcExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionDmarcExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionDmarcExpressionPropertyToHclTerraform(struct?: AwsRuleSet.RuleConditionDmarcExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1068,7 +1068,7 @@ export function tfRuleSetRuleConditionDmarcExpressionPropertyToHclTerraform(stru
 }
 
 
-export function tfRuleSetRuleConditionIpExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleConditionIpExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionIpExpressionEvaluatePropertyToTerraform(struct?: AwsRuleSet.RuleConditionIpExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1079,7 +1079,7 @@ export function tfRuleSetRuleConditionIpExpressionEvaluatePropertyToTerraform(st
 }
 
 
-export function tfRuleSetRuleConditionIpExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleConditionIpExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionIpExpressionEvaluatePropertyToHclTerraform(struct?: AwsRuleSet.RuleConditionIpExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1098,7 +1098,7 @@ export function tfRuleSetRuleConditionIpExpressionEvaluatePropertyToHclTerraform
 }
 
 
-export function tfRuleSetRuleConditionIpExpressionPropertyToTerraform(struct?: TfRuleSet.RuleConditionIpExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionIpExpressionPropertyToTerraform(struct?: AwsRuleSet.RuleConditionIpExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1106,12 +1106,12 @@ export function tfRuleSetRuleConditionIpExpressionPropertyToTerraform(struct?: T
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
-    evaluate: cdktn.listMapper(tfRuleSetRuleConditionIpExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(awsRuleSetRuleConditionIpExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function tfRuleSetRuleConditionIpExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionIpExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionIpExpressionPropertyToHclTerraform(struct?: AwsRuleSet.RuleConditionIpExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1130,7 +1130,7 @@ export function tfRuleSetRuleConditionIpExpressionPropertyToHclTerraform(struct?
       storageClassType: "stringList",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleConditionIpExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(awsRuleSetRuleConditionIpExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionIpExpressionEvaluatePropertyList",
@@ -1142,7 +1142,7 @@ export function tfRuleSetRuleConditionIpExpressionPropertyToHclTerraform(struct?
 }
 
 
-export function tfRuleSetRuleConditionNumberExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleConditionNumberExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionNumberExpressionEvaluatePropertyToTerraform(struct?: AwsRuleSet.RuleConditionNumberExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1153,7 +1153,7 @@ export function tfRuleSetRuleConditionNumberExpressionEvaluatePropertyToTerrafor
 }
 
 
-export function tfRuleSetRuleConditionNumberExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleConditionNumberExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionNumberExpressionEvaluatePropertyToHclTerraform(struct?: AwsRuleSet.RuleConditionNumberExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1172,7 +1172,7 @@ export function tfRuleSetRuleConditionNumberExpressionEvaluatePropertyToHclTerra
 }
 
 
-export function tfRuleSetRuleConditionNumberExpressionPropertyToTerraform(struct?: TfRuleSet.RuleConditionNumberExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionNumberExpressionPropertyToTerraform(struct?: AwsRuleSet.RuleConditionNumberExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1180,12 +1180,12 @@ export function tfRuleSetRuleConditionNumberExpressionPropertyToTerraform(struct
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     value: cdktn.numberToTerraform(struct!.value),
-    evaluate: cdktn.listMapper(tfRuleSetRuleConditionNumberExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(awsRuleSetRuleConditionNumberExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function tfRuleSetRuleConditionNumberExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionNumberExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionNumberExpressionPropertyToHclTerraform(struct?: AwsRuleSet.RuleConditionNumberExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1204,7 +1204,7 @@ export function tfRuleSetRuleConditionNumberExpressionPropertyToHclTerraform(str
       storageClassType: "number",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleConditionNumberExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(awsRuleSetRuleConditionNumberExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionNumberExpressionEvaluatePropertyList",
@@ -1216,7 +1216,7 @@ export function tfRuleSetRuleConditionNumberExpressionPropertyToHclTerraform(str
 }
 
 
-export function tfRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyToTerraform(struct?: TfRuleSet.RuleConditionStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyToTerraform(struct?: AwsRuleSet.RuleConditionStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1228,7 +1228,7 @@ export function tfRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyTo
 }
 
 
-export function tfRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: AwsRuleSet.RuleConditionStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1253,7 +1253,7 @@ export function tfRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyTo
 }
 
 
-export function tfRuleSetRuleConditionStringExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleConditionStringExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionStringExpressionEvaluatePropertyToTerraform(struct?: AwsRuleSet.RuleConditionStringExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1262,12 +1262,12 @@ export function tfRuleSetRuleConditionStringExpressionEvaluatePropertyToTerrafor
     attribute: cdktn.stringToTerraform(struct!.attribute),
     client_certificate_attribute: cdktn.stringToTerraform(struct!.clientCertificateAttribute),
     mime_header_attribute: cdktn.stringToTerraform(struct!.mimeHeaderAttribute),
-    analysis: cdktn.listMapper(tfRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
+    analysis: cdktn.listMapper(awsRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
   }
 }
 
 
-export function tfRuleSetRuleConditionStringExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleConditionStringExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionStringExpressionEvaluatePropertyToHclTerraform(struct?: AwsRuleSet.RuleConditionStringExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1292,7 +1292,7 @@ export function tfRuleSetRuleConditionStringExpressionEvaluatePropertyToHclTerra
       storageClassType: "string",
     },
     analysis: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
+      value: cdktn.listMapperHcl(awsRuleSetRuleConditionStringExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionStringExpressionEvaluateAnalysisPropertyList",
@@ -1304,7 +1304,7 @@ export function tfRuleSetRuleConditionStringExpressionEvaluatePropertyToHclTerra
 }
 
 
-export function tfRuleSetRuleConditionStringExpressionPropertyToTerraform(struct?: TfRuleSet.RuleConditionStringExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionStringExpressionPropertyToTerraform(struct?: AwsRuleSet.RuleConditionStringExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1312,12 +1312,12 @@ export function tfRuleSetRuleConditionStringExpressionPropertyToTerraform(struct
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
-    evaluate: cdktn.listMapper(tfRuleSetRuleConditionStringExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(awsRuleSetRuleConditionStringExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function tfRuleSetRuleConditionStringExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionStringExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionStringExpressionPropertyToHclTerraform(struct?: AwsRuleSet.RuleConditionStringExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1336,7 +1336,7 @@ export function tfRuleSetRuleConditionStringExpressionPropertyToHclTerraform(str
       storageClassType: "stringList",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleConditionStringExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(awsRuleSetRuleConditionStringExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionStringExpressionEvaluatePropertyList",
@@ -1348,7 +1348,7 @@ export function tfRuleSetRuleConditionStringExpressionPropertyToHclTerraform(str
 }
 
 
-export function tfRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyToTerraform(struct?: TfRuleSet.RuleConditionVerdictExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyToTerraform(struct?: AwsRuleSet.RuleConditionVerdictExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1360,7 +1360,7 @@ export function tfRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyT
 }
 
 
-export function tfRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionVerdictExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: AwsRuleSet.RuleConditionVerdictExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1385,19 +1385,19 @@ export function tfRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyT
 }
 
 
-export function tfRuleSetRuleConditionVerdictExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleConditionVerdictExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionVerdictExpressionEvaluatePropertyToTerraform(struct?: AwsRuleSet.RuleConditionVerdictExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     attribute: cdktn.stringToTerraform(struct!.attribute),
-    analysis: cdktn.listMapper(tfRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
+    analysis: cdktn.listMapper(awsRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
   }
 }
 
 
-export function tfRuleSetRuleConditionVerdictExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleConditionVerdictExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionVerdictExpressionEvaluatePropertyToHclTerraform(struct?: AwsRuleSet.RuleConditionVerdictExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1410,7 +1410,7 @@ export function tfRuleSetRuleConditionVerdictExpressionEvaluatePropertyToHclTerr
       storageClassType: "string",
     },
     analysis: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
+      value: cdktn.listMapperHcl(awsRuleSetRuleConditionVerdictExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionVerdictExpressionEvaluateAnalysisPropertyList",
@@ -1422,7 +1422,7 @@ export function tfRuleSetRuleConditionVerdictExpressionEvaluatePropertyToHclTerr
 }
 
 
-export function tfRuleSetRuleConditionVerdictExpressionPropertyToTerraform(struct?: TfRuleSet.RuleConditionVerdictExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionVerdictExpressionPropertyToTerraform(struct?: AwsRuleSet.RuleConditionVerdictExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1430,12 +1430,12 @@ export function tfRuleSetRuleConditionVerdictExpressionPropertyToTerraform(struc
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
-    evaluate: cdktn.listMapper(tfRuleSetRuleConditionVerdictExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(awsRuleSetRuleConditionVerdictExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function tfRuleSetRuleConditionVerdictExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleConditionVerdictExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleConditionVerdictExpressionPropertyToHclTerraform(struct?: AwsRuleSet.RuleConditionVerdictExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1454,7 +1454,7 @@ export function tfRuleSetRuleConditionVerdictExpressionPropertyToHclTerraform(st
       storageClassType: "stringList",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleConditionVerdictExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(awsRuleSetRuleConditionVerdictExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionVerdictExpressionEvaluatePropertyList",
@@ -1466,60 +1466,60 @@ export function tfRuleSetRuleConditionVerdictExpressionPropertyToHclTerraform(st
 }
 
 
-export function tfRuleSetConditionPropertyToTerraform(struct?: TfRuleSet.ConditionProperty | cdktn.IResolvable): any {
+export function awsRuleSetConditionPropertyToTerraform(struct?: AwsRuleSet.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    boolean_expression: cdktn.listMapper(tfRuleSetRuleConditionBooleanExpressionPropertyToTerraform, true)(struct!.booleanExpression),
-    dmarc_expression: cdktn.listMapper(tfRuleSetRuleConditionDmarcExpressionPropertyToTerraform, true)(struct!.dmarcExpression),
-    ip_expression: cdktn.listMapper(tfRuleSetRuleConditionIpExpressionPropertyToTerraform, true)(struct!.ipExpression),
-    number_expression: cdktn.listMapper(tfRuleSetRuleConditionNumberExpressionPropertyToTerraform, true)(struct!.numberExpression),
-    string_expression: cdktn.listMapper(tfRuleSetRuleConditionStringExpressionPropertyToTerraform, true)(struct!.stringExpression),
-    verdict_expression: cdktn.listMapper(tfRuleSetRuleConditionVerdictExpressionPropertyToTerraform, true)(struct!.verdictExpression),
+    boolean_expression: cdktn.listMapper(awsRuleSetRuleConditionBooleanExpressionPropertyToTerraform, true)(struct!.booleanExpression),
+    dmarc_expression: cdktn.listMapper(awsRuleSetRuleConditionDmarcExpressionPropertyToTerraform, true)(struct!.dmarcExpression),
+    ip_expression: cdktn.listMapper(awsRuleSetRuleConditionIpExpressionPropertyToTerraform, true)(struct!.ipExpression),
+    number_expression: cdktn.listMapper(awsRuleSetRuleConditionNumberExpressionPropertyToTerraform, true)(struct!.numberExpression),
+    string_expression: cdktn.listMapper(awsRuleSetRuleConditionStringExpressionPropertyToTerraform, true)(struct!.stringExpression),
+    verdict_expression: cdktn.listMapper(awsRuleSetRuleConditionVerdictExpressionPropertyToTerraform, true)(struct!.verdictExpression),
   }
 }
 
 
-export function tfRuleSetConditionPropertyToHclTerraform(struct?: TfRuleSet.ConditionProperty | cdktn.IResolvable): any {
+export function awsRuleSetConditionPropertyToHclTerraform(struct?: AwsRuleSet.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     boolean_expression: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleConditionBooleanExpressionPropertyToHclTerraform, true)(struct!.booleanExpression),
+      value: cdktn.listMapperHcl(awsRuleSetRuleConditionBooleanExpressionPropertyToHclTerraform, true)(struct!.booleanExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionBooleanExpressionPropertyList",
     },
     dmarc_expression: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleConditionDmarcExpressionPropertyToHclTerraform, true)(struct!.dmarcExpression),
+      value: cdktn.listMapperHcl(awsRuleSetRuleConditionDmarcExpressionPropertyToHclTerraform, true)(struct!.dmarcExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionDmarcExpressionPropertyList",
     },
     ip_expression: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleConditionIpExpressionPropertyToHclTerraform, true)(struct!.ipExpression),
+      value: cdktn.listMapperHcl(awsRuleSetRuleConditionIpExpressionPropertyToHclTerraform, true)(struct!.ipExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionIpExpressionPropertyList",
     },
     number_expression: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleConditionNumberExpressionPropertyToHclTerraform, true)(struct!.numberExpression),
+      value: cdktn.listMapperHcl(awsRuleSetRuleConditionNumberExpressionPropertyToHclTerraform, true)(struct!.numberExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionNumberExpressionPropertyList",
     },
     string_expression: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleConditionStringExpressionPropertyToHclTerraform, true)(struct!.stringExpression),
+      value: cdktn.listMapperHcl(awsRuleSetRuleConditionStringExpressionPropertyToHclTerraform, true)(struct!.stringExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionStringExpressionPropertyList",
     },
     verdict_expression: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleConditionVerdictExpressionPropertyToHclTerraform, true)(struct!.verdictExpression),
+      value: cdktn.listMapperHcl(awsRuleSetRuleConditionVerdictExpressionPropertyToHclTerraform, true)(struct!.verdictExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleConditionVerdictExpressionPropertyList",
@@ -1531,7 +1531,7 @@ export function tfRuleSetConditionPropertyToHclTerraform(struct?: TfRuleSet.Cond
 }
 
 
-export function tfRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToTerraform(struct?: TfRuleSet.RuleUnlessBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToTerraform(struct?: AwsRuleSet.RuleUnlessBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1543,7 +1543,7 @@ export function tfRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToTe
 }
 
 
-export function tfRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: AwsRuleSet.RuleUnlessBooleanExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1568,7 +1568,7 @@ export function tfRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToHc
 }
 
 
-export function tfRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyToTerraform(struct?: TfRuleSet.RuleUnlessBooleanExpressionEvaluateIsInAddressListProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyToTerraform(struct?: AwsRuleSet.RuleUnlessBooleanExpressionEvaluateIsInAddressListProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1580,7 +1580,7 @@ export function tfRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPrope
 }
 
 
-export function tfRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessBooleanExpressionEvaluateIsInAddressListProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyToHclTerraform(struct?: AwsRuleSet.RuleUnlessBooleanExpressionEvaluateIsInAddressListProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1605,20 +1605,20 @@ export function tfRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPrope
 }
 
 
-export function tfRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleUnlessBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToTerraform(struct?: AwsRuleSet.RuleUnlessBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     attribute: cdktn.stringToTerraform(struct!.attribute),
-    analysis: cdktn.listMapper(tfRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
-    is_in_address_list: cdktn.listMapper(tfRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyToTerraform, true)(struct!.isInAddressList),
+    analysis: cdktn.listMapper(awsRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
+    is_in_address_list: cdktn.listMapper(awsRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyToTerraform, true)(struct!.isInAddressList),
   }
 }
 
 
-export function tfRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToHclTerraform(struct?: AwsRuleSet.RuleUnlessBooleanExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1631,13 +1631,13 @@ export function tfRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToHclTerrafo
       storageClassType: "string",
     },
     analysis: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
+      value: cdktn.listMapperHcl(awsRuleSetRuleUnlessBooleanExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessBooleanExpressionEvaluateAnalysisPropertyList",
     },
     is_in_address_list: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyToHclTerraform, true)(struct!.isInAddressList),
+      value: cdktn.listMapperHcl(awsRuleSetRuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyToHclTerraform, true)(struct!.isInAddressList),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyList",
@@ -1649,19 +1649,19 @@ export function tfRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToHclTerrafo
 }
 
 
-export function tfRuleSetRuleUnlessBooleanExpressionPropertyToTerraform(struct?: TfRuleSet.RuleUnlessBooleanExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessBooleanExpressionPropertyToTerraform(struct?: AwsRuleSet.RuleUnlessBooleanExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
-    evaluate: cdktn.listMapper(tfRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(awsRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function tfRuleSetRuleUnlessBooleanExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessBooleanExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessBooleanExpressionPropertyToHclTerraform(struct?: AwsRuleSet.RuleUnlessBooleanExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1674,7 +1674,7 @@ export function tfRuleSetRuleUnlessBooleanExpressionPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(awsRuleSetRuleUnlessBooleanExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessBooleanExpressionEvaluatePropertyList",
@@ -1686,7 +1686,7 @@ export function tfRuleSetRuleUnlessBooleanExpressionPropertyToHclTerraform(struc
 }
 
 
-export function tfRuleSetRuleUnlessDmarcExpressionPropertyToTerraform(struct?: TfRuleSet.RuleUnlessDmarcExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessDmarcExpressionPropertyToTerraform(struct?: AwsRuleSet.RuleUnlessDmarcExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1698,7 +1698,7 @@ export function tfRuleSetRuleUnlessDmarcExpressionPropertyToTerraform(struct?: T
 }
 
 
-export function tfRuleSetRuleUnlessDmarcExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessDmarcExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessDmarcExpressionPropertyToHclTerraform(struct?: AwsRuleSet.RuleUnlessDmarcExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1723,7 +1723,7 @@ export function tfRuleSetRuleUnlessDmarcExpressionPropertyToHclTerraform(struct?
 }
 
 
-export function tfRuleSetRuleUnlessIpExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleUnlessIpExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessIpExpressionEvaluatePropertyToTerraform(struct?: AwsRuleSet.RuleUnlessIpExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1734,7 +1734,7 @@ export function tfRuleSetRuleUnlessIpExpressionEvaluatePropertyToTerraform(struc
 }
 
 
-export function tfRuleSetRuleUnlessIpExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessIpExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessIpExpressionEvaluatePropertyToHclTerraform(struct?: AwsRuleSet.RuleUnlessIpExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1753,7 +1753,7 @@ export function tfRuleSetRuleUnlessIpExpressionEvaluatePropertyToHclTerraform(st
 }
 
 
-export function tfRuleSetRuleUnlessIpExpressionPropertyToTerraform(struct?: TfRuleSet.RuleUnlessIpExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessIpExpressionPropertyToTerraform(struct?: AwsRuleSet.RuleUnlessIpExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1761,12 +1761,12 @@ export function tfRuleSetRuleUnlessIpExpressionPropertyToTerraform(struct?: TfRu
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
-    evaluate: cdktn.listMapper(tfRuleSetRuleUnlessIpExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(awsRuleSetRuleUnlessIpExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function tfRuleSetRuleUnlessIpExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessIpExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessIpExpressionPropertyToHclTerraform(struct?: AwsRuleSet.RuleUnlessIpExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1785,7 +1785,7 @@ export function tfRuleSetRuleUnlessIpExpressionPropertyToHclTerraform(struct?: T
       storageClassType: "stringList",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessIpExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(awsRuleSetRuleUnlessIpExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessIpExpressionEvaluatePropertyList",
@@ -1797,7 +1797,7 @@ export function tfRuleSetRuleUnlessIpExpressionPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfRuleSetRuleUnlessNumberExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleUnlessNumberExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessNumberExpressionEvaluatePropertyToTerraform(struct?: AwsRuleSet.RuleUnlessNumberExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1808,7 +1808,7 @@ export function tfRuleSetRuleUnlessNumberExpressionEvaluatePropertyToTerraform(s
 }
 
 
-export function tfRuleSetRuleUnlessNumberExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessNumberExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessNumberExpressionEvaluatePropertyToHclTerraform(struct?: AwsRuleSet.RuleUnlessNumberExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1827,7 +1827,7 @@ export function tfRuleSetRuleUnlessNumberExpressionEvaluatePropertyToHclTerrafor
 }
 
 
-export function tfRuleSetRuleUnlessNumberExpressionPropertyToTerraform(struct?: TfRuleSet.RuleUnlessNumberExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessNumberExpressionPropertyToTerraform(struct?: AwsRuleSet.RuleUnlessNumberExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1835,12 +1835,12 @@ export function tfRuleSetRuleUnlessNumberExpressionPropertyToTerraform(struct?: 
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     value: cdktn.numberToTerraform(struct!.value),
-    evaluate: cdktn.listMapper(tfRuleSetRuleUnlessNumberExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(awsRuleSetRuleUnlessNumberExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function tfRuleSetRuleUnlessNumberExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessNumberExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessNumberExpressionPropertyToHclTerraform(struct?: AwsRuleSet.RuleUnlessNumberExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1859,7 +1859,7 @@ export function tfRuleSetRuleUnlessNumberExpressionPropertyToHclTerraform(struct
       storageClassType: "number",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessNumberExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(awsRuleSetRuleUnlessNumberExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessNumberExpressionEvaluatePropertyList",
@@ -1871,7 +1871,7 @@ export function tfRuleSetRuleUnlessNumberExpressionPropertyToHclTerraform(struct
 }
 
 
-export function tfRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToTerraform(struct?: TfRuleSet.RuleUnlessStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToTerraform(struct?: AwsRuleSet.RuleUnlessStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1883,7 +1883,7 @@ export function tfRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToTer
 }
 
 
-export function tfRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: AwsRuleSet.RuleUnlessStringExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1908,7 +1908,7 @@ export function tfRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToHcl
 }
 
 
-export function tfRuleSetRuleUnlessStringExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleUnlessStringExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessStringExpressionEvaluatePropertyToTerraform(struct?: AwsRuleSet.RuleUnlessStringExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1917,12 +1917,12 @@ export function tfRuleSetRuleUnlessStringExpressionEvaluatePropertyToTerraform(s
     attribute: cdktn.stringToTerraform(struct!.attribute),
     client_certificate_attribute: cdktn.stringToTerraform(struct!.clientCertificateAttribute),
     mime_header_attribute: cdktn.stringToTerraform(struct!.mimeHeaderAttribute),
-    analysis: cdktn.listMapper(tfRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
+    analysis: cdktn.listMapper(awsRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
   }
 }
 
 
-export function tfRuleSetRuleUnlessStringExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessStringExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessStringExpressionEvaluatePropertyToHclTerraform(struct?: AwsRuleSet.RuleUnlessStringExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1947,7 +1947,7 @@ export function tfRuleSetRuleUnlessStringExpressionEvaluatePropertyToHclTerrafor
       storageClassType: "string",
     },
     analysis: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
+      value: cdktn.listMapperHcl(awsRuleSetRuleUnlessStringExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessStringExpressionEvaluateAnalysisPropertyList",
@@ -1959,7 +1959,7 @@ export function tfRuleSetRuleUnlessStringExpressionEvaluatePropertyToHclTerrafor
 }
 
 
-export function tfRuleSetRuleUnlessStringExpressionPropertyToTerraform(struct?: TfRuleSet.RuleUnlessStringExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessStringExpressionPropertyToTerraform(struct?: AwsRuleSet.RuleUnlessStringExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1967,12 +1967,12 @@ export function tfRuleSetRuleUnlessStringExpressionPropertyToTerraform(struct?: 
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
-    evaluate: cdktn.listMapper(tfRuleSetRuleUnlessStringExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(awsRuleSetRuleUnlessStringExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function tfRuleSetRuleUnlessStringExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessStringExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessStringExpressionPropertyToHclTerraform(struct?: AwsRuleSet.RuleUnlessStringExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1991,7 +1991,7 @@ export function tfRuleSetRuleUnlessStringExpressionPropertyToHclTerraform(struct
       storageClassType: "stringList",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessStringExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(awsRuleSetRuleUnlessStringExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessStringExpressionEvaluatePropertyList",
@@ -2003,7 +2003,7 @@ export function tfRuleSetRuleUnlessStringExpressionPropertyToHclTerraform(struct
 }
 
 
-export function tfRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToTerraform(struct?: TfRuleSet.RuleUnlessVerdictExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToTerraform(struct?: AwsRuleSet.RuleUnlessVerdictExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2015,7 +2015,7 @@ export function tfRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToTe
 }
 
 
-export function tfRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessVerdictExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToHclTerraform(struct?: AwsRuleSet.RuleUnlessVerdictExpressionEvaluateAnalysisProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2040,19 +2040,19 @@ export function tfRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToHc
 }
 
 
-export function tfRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToTerraform(struct?: TfRuleSet.RuleUnlessVerdictExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToTerraform(struct?: AwsRuleSet.RuleUnlessVerdictExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     attribute: cdktn.stringToTerraform(struct!.attribute),
-    analysis: cdktn.listMapper(tfRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
+    analysis: cdktn.listMapper(awsRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToTerraform, true)(struct!.analysis),
   }
 }
 
 
-export function tfRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessVerdictExpressionEvaluateProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToHclTerraform(struct?: AwsRuleSet.RuleUnlessVerdictExpressionEvaluateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2065,7 +2065,7 @@ export function tfRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToHclTerrafo
       storageClassType: "string",
     },
     analysis: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
+      value: cdktn.listMapperHcl(awsRuleSetRuleUnlessVerdictExpressionEvaluateAnalysisPropertyToHclTerraform, true)(struct!.analysis),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessVerdictExpressionEvaluateAnalysisPropertyList",
@@ -2077,7 +2077,7 @@ export function tfRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToHclTerrafo
 }
 
 
-export function tfRuleSetRuleUnlessVerdictExpressionPropertyToTerraform(struct?: TfRuleSet.RuleUnlessVerdictExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessVerdictExpressionPropertyToTerraform(struct?: AwsRuleSet.RuleUnlessVerdictExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2085,12 +2085,12 @@ export function tfRuleSetRuleUnlessVerdictExpressionPropertyToTerraform(struct?:
   return {
     operator: cdktn.stringToTerraform(struct!.operator),
     values: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.values),
-    evaluate: cdktn.listMapper(tfRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
+    evaluate: cdktn.listMapper(awsRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToTerraform, true)(struct!.evaluate),
   }
 }
 
 
-export function tfRuleSetRuleUnlessVerdictExpressionPropertyToHclTerraform(struct?: TfRuleSet.RuleUnlessVerdictExpressionProperty | cdktn.IResolvable): any {
+export function awsRuleSetRuleUnlessVerdictExpressionPropertyToHclTerraform(struct?: AwsRuleSet.RuleUnlessVerdictExpressionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2109,7 +2109,7 @@ export function tfRuleSetRuleUnlessVerdictExpressionPropertyToHclTerraform(struc
       storageClassType: "stringList",
     },
     evaluate: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
+      value: cdktn.listMapperHcl(awsRuleSetRuleUnlessVerdictExpressionEvaluatePropertyToHclTerraform, true)(struct!.evaluate),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessVerdictExpressionEvaluatePropertyList",
@@ -2121,60 +2121,60 @@ export function tfRuleSetRuleUnlessVerdictExpressionPropertyToHclTerraform(struc
 }
 
 
-export function tfRuleSetUnlessPropertyToTerraform(struct?: TfRuleSet.UnlessProperty | cdktn.IResolvable): any {
+export function awsRuleSetUnlessPropertyToTerraform(struct?: AwsRuleSet.UnlessProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    boolean_expression: cdktn.listMapper(tfRuleSetRuleUnlessBooleanExpressionPropertyToTerraform, true)(struct!.booleanExpression),
-    dmarc_expression: cdktn.listMapper(tfRuleSetRuleUnlessDmarcExpressionPropertyToTerraform, true)(struct!.dmarcExpression),
-    ip_expression: cdktn.listMapper(tfRuleSetRuleUnlessIpExpressionPropertyToTerraform, true)(struct!.ipExpression),
-    number_expression: cdktn.listMapper(tfRuleSetRuleUnlessNumberExpressionPropertyToTerraform, true)(struct!.numberExpression),
-    string_expression: cdktn.listMapper(tfRuleSetRuleUnlessStringExpressionPropertyToTerraform, true)(struct!.stringExpression),
-    verdict_expression: cdktn.listMapper(tfRuleSetRuleUnlessVerdictExpressionPropertyToTerraform, true)(struct!.verdictExpression),
+    boolean_expression: cdktn.listMapper(awsRuleSetRuleUnlessBooleanExpressionPropertyToTerraform, true)(struct!.booleanExpression),
+    dmarc_expression: cdktn.listMapper(awsRuleSetRuleUnlessDmarcExpressionPropertyToTerraform, true)(struct!.dmarcExpression),
+    ip_expression: cdktn.listMapper(awsRuleSetRuleUnlessIpExpressionPropertyToTerraform, true)(struct!.ipExpression),
+    number_expression: cdktn.listMapper(awsRuleSetRuleUnlessNumberExpressionPropertyToTerraform, true)(struct!.numberExpression),
+    string_expression: cdktn.listMapper(awsRuleSetRuleUnlessStringExpressionPropertyToTerraform, true)(struct!.stringExpression),
+    verdict_expression: cdktn.listMapper(awsRuleSetRuleUnlessVerdictExpressionPropertyToTerraform, true)(struct!.verdictExpression),
   }
 }
 
 
-export function tfRuleSetUnlessPropertyToHclTerraform(struct?: TfRuleSet.UnlessProperty | cdktn.IResolvable): any {
+export function awsRuleSetUnlessPropertyToHclTerraform(struct?: AwsRuleSet.UnlessProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     boolean_expression: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessBooleanExpressionPropertyToHclTerraform, true)(struct!.booleanExpression),
+      value: cdktn.listMapperHcl(awsRuleSetRuleUnlessBooleanExpressionPropertyToHclTerraform, true)(struct!.booleanExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessBooleanExpressionPropertyList",
     },
     dmarc_expression: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessDmarcExpressionPropertyToHclTerraform, true)(struct!.dmarcExpression),
+      value: cdktn.listMapperHcl(awsRuleSetRuleUnlessDmarcExpressionPropertyToHclTerraform, true)(struct!.dmarcExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessDmarcExpressionPropertyList",
     },
     ip_expression: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessIpExpressionPropertyToHclTerraform, true)(struct!.ipExpression),
+      value: cdktn.listMapperHcl(awsRuleSetRuleUnlessIpExpressionPropertyToHclTerraform, true)(struct!.ipExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessIpExpressionPropertyList",
     },
     number_expression: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessNumberExpressionPropertyToHclTerraform, true)(struct!.numberExpression),
+      value: cdktn.listMapperHcl(awsRuleSetRuleUnlessNumberExpressionPropertyToHclTerraform, true)(struct!.numberExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessNumberExpressionPropertyList",
     },
     string_expression: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessStringExpressionPropertyToHclTerraform, true)(struct!.stringExpression),
+      value: cdktn.listMapperHcl(awsRuleSetRuleUnlessStringExpressionPropertyToHclTerraform, true)(struct!.stringExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessStringExpressionPropertyList",
     },
     verdict_expression: {
-      value: cdktn.listMapperHcl(tfRuleSetRuleUnlessVerdictExpressionPropertyToHclTerraform, true)(struct!.verdictExpression),
+      value: cdktn.listMapperHcl(awsRuleSetRuleUnlessVerdictExpressionPropertyToHclTerraform, true)(struct!.verdictExpression),
       isBlock: true,
       type: "list",
       storageClassType: "RuleUnlessVerdictExpressionPropertyList",
@@ -2186,21 +2186,21 @@ export function tfRuleSetUnlessPropertyToHclTerraform(struct?: TfRuleSet.UnlessP
 }
 
 
-export function tfRuleSetRulePropertyToTerraform(struct?: TfRuleSet.RuleProperty | cdktn.IResolvable): any {
+export function awsRuleSetRulePropertyToTerraform(struct?: AwsRuleSet.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    action: cdktn.listMapper(tfRuleSetActionPropertyToTerraform, true)(struct!.action),
-    condition: cdktn.listMapper(tfRuleSetConditionPropertyToTerraform, true)(struct!.condition),
-    unless: cdktn.listMapper(tfRuleSetUnlessPropertyToTerraform, true)(struct!.unless),
+    action: cdktn.listMapper(awsRuleSetActionPropertyToTerraform, true)(struct!.action),
+    condition: cdktn.listMapper(awsRuleSetConditionPropertyToTerraform, true)(struct!.condition),
+    unless: cdktn.listMapper(awsRuleSetUnlessPropertyToTerraform, true)(struct!.unless),
   }
 }
 
 
-export function tfRuleSetRulePropertyToHclTerraform(struct?: TfRuleSet.RuleProperty | cdktn.IResolvable): any {
+export function awsRuleSetRulePropertyToHclTerraform(struct?: AwsRuleSet.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2213,19 +2213,19 @@ export function tfRuleSetRulePropertyToHclTerraform(struct?: TfRuleSet.RulePrope
       storageClassType: "string",
     },
     action: {
-      value: cdktn.listMapperHcl(tfRuleSetActionPropertyToHclTerraform, true)(struct!.action),
+      value: cdktn.listMapperHcl(awsRuleSetActionPropertyToHclTerraform, true)(struct!.action),
       isBlock: true,
       type: "list",
       storageClassType: "ActionPropertyList",
     },
     condition: {
-      value: cdktn.listMapperHcl(tfRuleSetConditionPropertyToHclTerraform, true)(struct!.condition),
+      value: cdktn.listMapperHcl(awsRuleSetConditionPropertyToHclTerraform, true)(struct!.condition),
       isBlock: true,
       type: "list",
       storageClassType: "ConditionPropertyList",
     },
     unless: {
-      value: cdktn.listMapperHcl(tfRuleSetUnlessPropertyToHclTerraform, true)(struct!.unless),
+      value: cdktn.listMapperHcl(awsRuleSetUnlessPropertyToHclTerraform, true)(struct!.unless),
       isBlock: true,
       type: "list",
       storageClassType: "UnlessPropertyList",
@@ -2237,14 +2237,14 @@ export function tfRuleSetRulePropertyToHclTerraform(struct?: TfRuleSet.RulePrope
 }
 
 
-export namespace TfRuleSet {
+export namespace AwsRuleSet {
 export interface AddHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#header_name TfRuleSet#header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#header_name AwsRuleSet#header_name}
   */
   readonly headerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#header_value TfRuleSet#header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#header_value AwsRuleSet#header_value}
   */
   readonly headerValue: string;
 }
@@ -2346,11 +2346,11 @@ export class AddHeaderPropertyList extends cdktn.ComplexList {
 }
 export interface ArchiveProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#target_archive TfRuleSet#target_archive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#target_archive AwsRuleSet#target_archive}
   */
   readonly targetArchive: string;
 }
@@ -2455,31 +2455,31 @@ export class ArchivePropertyList extends cdktn.ComplexList {
 }
 export interface BounceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#diagnostic_message TfRuleSet#diagnostic_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#diagnostic_message AwsRuleSet#diagnostic_message}
   */
   readonly diagnosticMessage: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#message TfRuleSet#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#message AwsRuleSet#message}
   */
   readonly message?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn TfRuleSet#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn AwsRuleSet#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#sender TfRuleSet#sender}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#sender AwsRuleSet#sender}
   */
   readonly sender: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#smtp_reply_code TfRuleSet#smtp_reply_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#smtp_reply_code AwsRuleSet#smtp_reply_code}
   */
   readonly smtpReplyCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#status_code TfRuleSet#status_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#status_code AwsRuleSet#status_code}
   */
   readonly statusCode: string;
 }
@@ -2682,15 +2682,15 @@ export class BouncePropertyList extends cdktn.ComplexList {
 }
 export interface DeliverToMailboxProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#mailbox_arn TfRuleSet#mailbox_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#mailbox_arn AwsRuleSet#mailbox_arn}
   */
   readonly mailboxArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn TfRuleSet#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn AwsRuleSet#role_arn}
   */
   readonly roleArn: string;
 }
@@ -2814,19 +2814,19 @@ export class DeliverToMailboxPropertyList extends cdktn.ComplexList {
 }
 export interface DeliverToQBusinessProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#application_id TfRuleSet#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#application_id AwsRuleSet#application_id}
   */
   readonly applicationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#index_id TfRuleSet#index_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#index_id AwsRuleSet#index_id}
   */
   readonly indexId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn TfRuleSet#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn AwsRuleSet#role_arn}
   */
   readonly roleArn: string;
 }
@@ -3029,23 +3029,23 @@ export class DropPropertyList extends cdktn.ComplexList {
 }
 export interface InvokeLambdaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#function_arn TfRuleSet#function_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#function_arn AwsRuleSet#function_arn}
   */
   readonly functionArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#invocation_type TfRuleSet#invocation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#invocation_type AwsRuleSet#invocation_type}
   */
   readonly invocationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#retry_time_minutes TfRuleSet#retry_time_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#retry_time_minutes AwsRuleSet#retry_time_minutes}
   */
   readonly retryTimeMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn TfRuleSet#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn AwsRuleSet#role_arn}
   */
   readonly roleArn: string;
 }
@@ -3210,23 +3210,23 @@ export class InvokeLambdaPropertyList extends cdktn.ComplexList {
 }
 export interface PublishToSnsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#encoding TfRuleSet#encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#encoding AwsRuleSet#encoding}
   */
   readonly encoding?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#payload_type TfRuleSet#payload_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#payload_type AwsRuleSet#payload_type}
   */
   readonly payloadType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn TfRuleSet#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn AwsRuleSet#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#topic_arn TfRuleSet#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#topic_arn AwsRuleSet#topic_arn}
   */
   readonly topicArn: string;
 }
@@ -3394,15 +3394,15 @@ export class PublishToSnsPropertyList extends cdktn.ComplexList {
 }
 export interface RelayProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#mail_from TfRuleSet#mail_from}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#mail_from AwsRuleSet#mail_from}
   */
   readonly mailFrom?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#relay TfRuleSet#relay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#relay AwsRuleSet#relay}
   */
   readonly relay: string;
 }
@@ -3529,7 +3529,7 @@ export class RelayPropertyList extends cdktn.ComplexList {
 }
 export interface ReplaceRecipientProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#replace_with TfRuleSet#replace_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#replace_with AwsRuleSet#replace_with}
   */
   readonly replaceWith?: string[];
 }
@@ -3615,11 +3615,11 @@ export class ReplaceRecipientPropertyList extends cdktn.ComplexList {
 }
 export interface SendProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn TfRuleSet#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn AwsRuleSet#role_arn}
   */
   readonly roleArn: string;
 }
@@ -3724,23 +3724,23 @@ export class SendPropertyList extends cdktn.ComplexList {
 }
 export interface WriteToS3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy TfRuleSet#action_failure_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action_failure_policy AwsRuleSet#action_failure_policy}
   */
   readonly actionFailurePolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn TfRuleSet#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#role_arn AwsRuleSet#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#s3_bucket TfRuleSet#s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#s3_bucket AwsRuleSet#s3_bucket}
   */
   readonly s3Bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#s3_prefix TfRuleSet#s3_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#s3_prefix AwsRuleSet#s3_prefix}
   */
   readonly s3Prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#s3_sse_kms_key_id TfRuleSet#s3_sse_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#s3_sse_kms_key_id AwsRuleSet#s3_sse_kms_key_id}
   */
   readonly s3SseKmsKeyId?: string;
 }
@@ -3910,73 +3910,73 @@ export interface ActionProperty {
   /**
   * add_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#add_header TfRuleSet#add_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#add_header AwsRuleSet#add_header}
   */
   readonly addHeader?: AddHeaderProperty[] | cdktn.IResolvable;
   /**
   * archive block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#archive TfRuleSet#archive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#archive AwsRuleSet#archive}
   */
   readonly archive?: ArchiveProperty[] | cdktn.IResolvable;
   /**
   * bounce block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#bounce TfRuleSet#bounce}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#bounce AwsRuleSet#bounce}
   */
   readonly bounce?: BounceProperty[] | cdktn.IResolvable;
   /**
   * deliver_to_mailbox block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#deliver_to_mailbox TfRuleSet#deliver_to_mailbox}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#deliver_to_mailbox AwsRuleSet#deliver_to_mailbox}
   */
   readonly deliverToMailbox?: DeliverToMailboxProperty[] | cdktn.IResolvable;
   /**
   * deliver_to_q_business block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#deliver_to_q_business TfRuleSet#deliver_to_q_business}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#deliver_to_q_business AwsRuleSet#deliver_to_q_business}
   */
   readonly deliverToQBusiness?: DeliverToQBusinessProperty[] | cdktn.IResolvable;
   /**
   * drop block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#drop TfRuleSet#drop}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#drop AwsRuleSet#drop}
   */
   readonly drop?: DropProperty[] | cdktn.IResolvable;
   /**
   * invoke_lambda block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#invoke_lambda TfRuleSet#invoke_lambda}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#invoke_lambda AwsRuleSet#invoke_lambda}
   */
   readonly invokeLambda?: InvokeLambdaProperty[] | cdktn.IResolvable;
   /**
   * publish_to_sns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#publish_to_sns TfRuleSet#publish_to_sns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#publish_to_sns AwsRuleSet#publish_to_sns}
   */
   readonly publishToSns?: PublishToSnsProperty[] | cdktn.IResolvable;
   /**
   * relay block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#relay TfRuleSet#relay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#relay AwsRuleSet#relay}
   */
   readonly relay?: RelayProperty[] | cdktn.IResolvable;
   /**
   * replace_recipient block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#replace_recipient TfRuleSet#replace_recipient}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#replace_recipient AwsRuleSet#replace_recipient}
   */
   readonly replaceRecipient?: ReplaceRecipientProperty[] | cdktn.IResolvable;
   /**
   * send block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#send TfRuleSet#send}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#send AwsRuleSet#send}
   */
   readonly send?: SendProperty[] | cdktn.IResolvable;
   /**
   * write_to_s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#write_to_s3 TfRuleSet#write_to_s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#write_to_s3 AwsRuleSet#write_to_s3}
   */
   readonly writeToS3?: WriteToS3Property[] | cdktn.IResolvable;
 }
@@ -4304,11 +4304,11 @@ export class ActionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleConditionBooleanExpressionEvaluateAnalysisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer TfRuleSet#analyzer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer AwsRuleSet#analyzer}
   */
   readonly analyzer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field TfRuleSet#result_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field AwsRuleSet#result_field}
   */
   readonly resultField: string;
 }
@@ -4410,11 +4410,11 @@ export class RuleConditionBooleanExpressionEvaluateAnalysisPropertyList extends 
 }
 export interface RuleConditionBooleanExpressionEvaluateIsInAddressListProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#address_lists TfRuleSet#address_lists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#address_lists AwsRuleSet#address_lists}
   */
   readonly addressLists: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsRuleSet#attribute}
   */
   readonly attribute: string;
 }
@@ -4516,19 +4516,19 @@ export class RuleConditionBooleanExpressionEvaluateIsInAddressListPropertyList e
 }
 export interface RuleConditionBooleanExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsRuleSet#attribute}
   */
   readonly attribute?: string;
   /**
   * analysis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis TfRuleSet#analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis AwsRuleSet#analysis}
   */
   readonly analysis?: RuleConditionBooleanExpressionEvaluateAnalysisProperty[] | cdktn.IResolvable;
   /**
   * is_in_address_list block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#is_in_address_list TfRuleSet#is_in_address_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#is_in_address_list AwsRuleSet#is_in_address_list}
   */
   readonly isInAddressList?: RuleConditionBooleanExpressionEvaluateIsInAddressListProperty[] | cdktn.IResolvable;
 }
@@ -4658,13 +4658,13 @@ export class RuleConditionBooleanExpressionEvaluatePropertyList extends cdktn.Co
 }
 export interface RuleConditionBooleanExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsRuleSet#operator}
   */
   readonly operator: string;
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsRuleSet#evaluate}
   */
   readonly evaluate?: RuleConditionBooleanExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -4769,11 +4769,11 @@ export class RuleConditionBooleanExpressionPropertyList extends cdktn.ComplexLis
 }
 export interface RuleConditionDmarcExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values TfRuleSet#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values AwsRuleSet#values}
   */
   readonly values: string[];
 }
@@ -4875,7 +4875,7 @@ export class RuleConditionDmarcExpressionPropertyList extends cdktn.ComplexList 
 }
 export interface RuleConditionIpExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsRuleSet#attribute}
   */
   readonly attribute: string;
 }
@@ -4958,17 +4958,17 @@ export class RuleConditionIpExpressionEvaluatePropertyList extends cdktn.Complex
 }
 export interface RuleConditionIpExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values TfRuleSet#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values AwsRuleSet#values}
   */
   readonly values: string[];
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsRuleSet#evaluate}
   */
   readonly evaluate?: RuleConditionIpExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -5092,7 +5092,7 @@ export class RuleConditionIpExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleConditionNumberExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsRuleSet#attribute}
   */
   readonly attribute: string;
 }
@@ -5175,17 +5175,17 @@ export class RuleConditionNumberExpressionEvaluatePropertyList extends cdktn.Com
 }
 export interface RuleConditionNumberExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#value TfRuleSet#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#value AwsRuleSet#value}
   */
   readonly value: number;
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsRuleSet#evaluate}
   */
   readonly evaluate?: RuleConditionNumberExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -5309,11 +5309,11 @@ export class RuleConditionNumberExpressionPropertyList extends cdktn.ComplexList
 }
 export interface RuleConditionStringExpressionEvaluateAnalysisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer TfRuleSet#analyzer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer AwsRuleSet#analyzer}
   */
   readonly analyzer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field TfRuleSet#result_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field AwsRuleSet#result_field}
   */
   readonly resultField: string;
 }
@@ -5415,21 +5415,21 @@ export class RuleConditionStringExpressionEvaluateAnalysisPropertyList extends c
 }
 export interface RuleConditionStringExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsRuleSet#attribute}
   */
   readonly attribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#client_certificate_attribute TfRuleSet#client_certificate_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#client_certificate_attribute AwsRuleSet#client_certificate_attribute}
   */
   readonly clientCertificateAttribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#mime_header_attribute TfRuleSet#mime_header_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#mime_header_attribute AwsRuleSet#mime_header_attribute}
   */
   readonly mimeHeaderAttribute?: string;
   /**
   * analysis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis TfRuleSet#analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis AwsRuleSet#analysis}
   */
   readonly analysis?: RuleConditionStringExpressionEvaluateAnalysisProperty[] | cdktn.IResolvable;
 }
@@ -5581,17 +5581,17 @@ export class RuleConditionStringExpressionEvaluatePropertyList extends cdktn.Com
 }
 export interface RuleConditionStringExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values TfRuleSet#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values AwsRuleSet#values}
   */
   readonly values: string[];
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsRuleSet#evaluate}
   */
   readonly evaluate?: RuleConditionStringExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -5715,11 +5715,11 @@ export class RuleConditionStringExpressionPropertyList extends cdktn.ComplexList
 }
 export interface RuleConditionVerdictExpressionEvaluateAnalysisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer TfRuleSet#analyzer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer AwsRuleSet#analyzer}
   */
   readonly analyzer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field TfRuleSet#result_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field AwsRuleSet#result_field}
   */
   readonly resultField: string;
 }
@@ -5821,13 +5821,13 @@ export class RuleConditionVerdictExpressionEvaluateAnalysisPropertyList extends 
 }
 export interface RuleConditionVerdictExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsRuleSet#attribute}
   */
   readonly attribute?: string;
   /**
   * analysis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis TfRuleSet#analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis AwsRuleSet#analysis}
   */
   readonly analysis?: RuleConditionVerdictExpressionEvaluateAnalysisProperty[] | cdktn.IResolvable;
 }
@@ -5935,17 +5935,17 @@ export class RuleConditionVerdictExpressionEvaluatePropertyList extends cdktn.Co
 }
 export interface RuleConditionVerdictExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values TfRuleSet#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values AwsRuleSet#values}
   */
   readonly values: string[];
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsRuleSet#evaluate}
   */
   readonly evaluate?: RuleConditionVerdictExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -6071,37 +6071,37 @@ export interface ConditionProperty {
   /**
   * boolean_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#boolean_expression TfRuleSet#boolean_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#boolean_expression AwsRuleSet#boolean_expression}
   */
   readonly booleanExpression?: RuleConditionBooleanExpressionProperty[] | cdktn.IResolvable;
   /**
   * dmarc_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#dmarc_expression TfRuleSet#dmarc_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#dmarc_expression AwsRuleSet#dmarc_expression}
   */
   readonly dmarcExpression?: RuleConditionDmarcExpressionProperty[] | cdktn.IResolvable;
   /**
   * ip_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#ip_expression TfRuleSet#ip_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#ip_expression AwsRuleSet#ip_expression}
   */
   readonly ipExpression?: RuleConditionIpExpressionProperty[] | cdktn.IResolvable;
   /**
   * number_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#number_expression TfRuleSet#number_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#number_expression AwsRuleSet#number_expression}
   */
   readonly numberExpression?: RuleConditionNumberExpressionProperty[] | cdktn.IResolvable;
   /**
   * string_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#string_expression TfRuleSet#string_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#string_expression AwsRuleSet#string_expression}
   */
   readonly stringExpression?: RuleConditionStringExpressionProperty[] | cdktn.IResolvable;
   /**
   * verdict_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#verdict_expression TfRuleSet#verdict_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#verdict_expression AwsRuleSet#verdict_expression}
   */
   readonly verdictExpression?: RuleConditionVerdictExpressionProperty[] | cdktn.IResolvable;
 }
@@ -6297,11 +6297,11 @@ export class ConditionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleUnlessBooleanExpressionEvaluateAnalysisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer TfRuleSet#analyzer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer AwsRuleSet#analyzer}
   */
   readonly analyzer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field TfRuleSet#result_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field AwsRuleSet#result_field}
   */
   readonly resultField: string;
 }
@@ -6403,11 +6403,11 @@ export class RuleUnlessBooleanExpressionEvaluateAnalysisPropertyList extends cdk
 }
 export interface RuleUnlessBooleanExpressionEvaluateIsInAddressListProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#address_lists TfRuleSet#address_lists}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#address_lists AwsRuleSet#address_lists}
   */
   readonly addressLists: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsRuleSet#attribute}
   */
   readonly attribute: string;
 }
@@ -6509,19 +6509,19 @@ export class RuleUnlessBooleanExpressionEvaluateIsInAddressListPropertyList exte
 }
 export interface RuleUnlessBooleanExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsRuleSet#attribute}
   */
   readonly attribute?: string;
   /**
   * analysis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis TfRuleSet#analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis AwsRuleSet#analysis}
   */
   readonly analysis?: RuleUnlessBooleanExpressionEvaluateAnalysisProperty[] | cdktn.IResolvable;
   /**
   * is_in_address_list block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#is_in_address_list TfRuleSet#is_in_address_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#is_in_address_list AwsRuleSet#is_in_address_list}
   */
   readonly isInAddressList?: RuleUnlessBooleanExpressionEvaluateIsInAddressListProperty[] | cdktn.IResolvable;
 }
@@ -6651,13 +6651,13 @@ export class RuleUnlessBooleanExpressionEvaluatePropertyList extends cdktn.Compl
 }
 export interface RuleUnlessBooleanExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsRuleSet#operator}
   */
   readonly operator: string;
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsRuleSet#evaluate}
   */
   readonly evaluate?: RuleUnlessBooleanExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -6762,11 +6762,11 @@ export class RuleUnlessBooleanExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleUnlessDmarcExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values TfRuleSet#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values AwsRuleSet#values}
   */
   readonly values: string[];
 }
@@ -6868,7 +6868,7 @@ export class RuleUnlessDmarcExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleUnlessIpExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsRuleSet#attribute}
   */
   readonly attribute: string;
 }
@@ -6951,17 +6951,17 @@ export class RuleUnlessIpExpressionEvaluatePropertyList extends cdktn.ComplexLis
 }
 export interface RuleUnlessIpExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values TfRuleSet#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values AwsRuleSet#values}
   */
   readonly values: string[];
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsRuleSet#evaluate}
   */
   readonly evaluate?: RuleUnlessIpExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -7085,7 +7085,7 @@ export class RuleUnlessIpExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleUnlessNumberExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsRuleSet#attribute}
   */
   readonly attribute: string;
 }
@@ -7168,17 +7168,17 @@ export class RuleUnlessNumberExpressionEvaluatePropertyList extends cdktn.Comple
 }
 export interface RuleUnlessNumberExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#value TfRuleSet#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#value AwsRuleSet#value}
   */
   readonly value: number;
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsRuleSet#evaluate}
   */
   readonly evaluate?: RuleUnlessNumberExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -7302,11 +7302,11 @@ export class RuleUnlessNumberExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleUnlessStringExpressionEvaluateAnalysisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer TfRuleSet#analyzer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer AwsRuleSet#analyzer}
   */
   readonly analyzer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field TfRuleSet#result_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field AwsRuleSet#result_field}
   */
   readonly resultField: string;
 }
@@ -7408,21 +7408,21 @@ export class RuleUnlessStringExpressionEvaluateAnalysisPropertyList extends cdkt
 }
 export interface RuleUnlessStringExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsRuleSet#attribute}
   */
   readonly attribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#client_certificate_attribute TfRuleSet#client_certificate_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#client_certificate_attribute AwsRuleSet#client_certificate_attribute}
   */
   readonly clientCertificateAttribute?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#mime_header_attribute TfRuleSet#mime_header_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#mime_header_attribute AwsRuleSet#mime_header_attribute}
   */
   readonly mimeHeaderAttribute?: string;
   /**
   * analysis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis TfRuleSet#analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis AwsRuleSet#analysis}
   */
   readonly analysis?: RuleUnlessStringExpressionEvaluateAnalysisProperty[] | cdktn.IResolvable;
 }
@@ -7574,17 +7574,17 @@ export class RuleUnlessStringExpressionEvaluatePropertyList extends cdktn.Comple
 }
 export interface RuleUnlessStringExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values TfRuleSet#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values AwsRuleSet#values}
   */
   readonly values: string[];
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsRuleSet#evaluate}
   */
   readonly evaluate?: RuleUnlessStringExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -7708,11 +7708,11 @@ export class RuleUnlessStringExpressionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleUnlessVerdictExpressionEvaluateAnalysisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer TfRuleSet#analyzer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analyzer AwsRuleSet#analyzer}
   */
   readonly analyzer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field TfRuleSet#result_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#result_field AwsRuleSet#result_field}
   */
   readonly resultField: string;
 }
@@ -7814,13 +7814,13 @@ export class RuleUnlessVerdictExpressionEvaluateAnalysisPropertyList extends cdk
 }
 export interface RuleUnlessVerdictExpressionEvaluateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute TfRuleSet#attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#attribute AwsRuleSet#attribute}
   */
   readonly attribute?: string;
   /**
   * analysis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis TfRuleSet#analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#analysis AwsRuleSet#analysis}
   */
   readonly analysis?: RuleUnlessVerdictExpressionEvaluateAnalysisProperty[] | cdktn.IResolvable;
 }
@@ -7928,17 +7928,17 @@ export class RuleUnlessVerdictExpressionEvaluatePropertyList extends cdktn.Compl
 }
 export interface RuleUnlessVerdictExpressionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator TfRuleSet#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#operator AwsRuleSet#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values TfRuleSet#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#values AwsRuleSet#values}
   */
   readonly values: string[];
   /**
   * evaluate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate TfRuleSet#evaluate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#evaluate AwsRuleSet#evaluate}
   */
   readonly evaluate?: RuleUnlessVerdictExpressionEvaluateProperty[] | cdktn.IResolvable;
 }
@@ -8064,37 +8064,37 @@ export interface UnlessProperty {
   /**
   * boolean_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#boolean_expression TfRuleSet#boolean_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#boolean_expression AwsRuleSet#boolean_expression}
   */
   readonly booleanExpression?: RuleUnlessBooleanExpressionProperty[] | cdktn.IResolvable;
   /**
   * dmarc_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#dmarc_expression TfRuleSet#dmarc_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#dmarc_expression AwsRuleSet#dmarc_expression}
   */
   readonly dmarcExpression?: RuleUnlessDmarcExpressionProperty[] | cdktn.IResolvable;
   /**
   * ip_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#ip_expression TfRuleSet#ip_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#ip_expression AwsRuleSet#ip_expression}
   */
   readonly ipExpression?: RuleUnlessIpExpressionProperty[] | cdktn.IResolvable;
   /**
   * number_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#number_expression TfRuleSet#number_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#number_expression AwsRuleSet#number_expression}
   */
   readonly numberExpression?: RuleUnlessNumberExpressionProperty[] | cdktn.IResolvable;
   /**
   * string_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#string_expression TfRuleSet#string_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#string_expression AwsRuleSet#string_expression}
   */
   readonly stringExpression?: RuleUnlessStringExpressionProperty[] | cdktn.IResolvable;
   /**
   * verdict_expression block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#verdict_expression TfRuleSet#verdict_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#verdict_expression AwsRuleSet#verdict_expression}
   */
   readonly verdictExpression?: RuleUnlessVerdictExpressionProperty[] | cdktn.IResolvable;
 }
@@ -8290,25 +8290,25 @@ export class UnlessPropertyList extends cdktn.ComplexList {
 }
 export interface RuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#name TfRuleSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#name AwsRuleSet#name}
   */
   readonly name?: string;
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action TfRuleSet#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#action AwsRuleSet#action}
   */
   readonly action?: ActionProperty[] | cdktn.IResolvable;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#condition TfRuleSet#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#condition AwsRuleSet#condition}
   */
   readonly condition?: ConditionProperty[] | cdktn.IResolvable;
   /**
   * unless block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#unless TfRuleSet#unless}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/mailmanager_rule_set#unless AwsRuleSet#unless}
   */
   readonly unless?: UnlessProperty[] | cdktn.IResolvable;
 }

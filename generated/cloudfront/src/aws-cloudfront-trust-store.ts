@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTrustStoreConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTrustStoreConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#name TfTrustStore#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#name AwsTrustStore#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#tags TfTrustStore#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#tags AwsTrustStore#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * ca_certificates_bundle_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#ca_certificates_bundle_source TfTrustStore#ca_certificates_bundle_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#ca_certificates_bundle_source AwsTrustStore#ca_certificates_bundle_source}
   */
-  readonly caCertificatesBundleSource?: TfTrustStore.CaCertificatesBundleSourceProperty[] | cdktn.IResolvable;
+  readonly caCertificatesBundleSource?: AwsTrustStore.CaCertificatesBundleSourceProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#timeouts TfTrustStore#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#timeouts AwsTrustStore#timeouts}
   */
-  readonly timeouts?: TfTrustStore.TimeoutsProperty;
+  readonly timeouts?: AwsTrustStore.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store aws_cloudfront_trust_store}
 */
-export class TfTrustStore extends cdktn.TerraformResource {
+export class AwsTrustStore extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class TfTrustStore extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTrustStore resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTrustStore resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTrustStore to import
-  * @param importFromId The id of the existing TfTrustStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTrustStore to import is found
+  * @param importToId The construct id used in the generated config for the AwsTrustStore to import
+  * @param importFromId The id of the existing AwsTrustStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTrustStore to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_trust_store", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class TfTrustStore extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTrustStoreConfig
+  * @param options AwsTrustStoreConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTrustStoreConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTrustStoreConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_trust_store',
       terraformGeneratorMetadata: {
@@ -145,11 +145,11 @@ export class TfTrustStore extends cdktn.TerraformResource {
   }
 
   // ca_certificates_bundle_source - computed: false, optional: true, required: false
-  private _caCertificatesBundleSource = new TfTrustStore.CaCertificatesBundleSourcePropertyList(this, "ca_certificates_bundle_source", false);
+  private _caCertificatesBundleSource = new AwsTrustStore.CaCertificatesBundleSourcePropertyList(this, "ca_certificates_bundle_source", false);
   public get caCertificatesBundleSource() {
     return this._caCertificatesBundleSource;
   }
-  public putCaCertificatesBundleSource(value: TfTrustStore.CaCertificatesBundleSourceProperty[] | cdktn.IResolvable) {
+  public putCaCertificatesBundleSource(value: AwsTrustStore.CaCertificatesBundleSourceProperty[] | cdktn.IResolvable) {
     this._caCertificatesBundleSource.internalValue = value;
   }
   public resetCaCertificatesBundleSource() {
@@ -161,11 +161,11 @@ export class TfTrustStore extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTrustStore.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTrustStore.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTrustStore.TimeoutsProperty) {
+  public putTimeouts(value: AwsTrustStore.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -184,8 +184,8 @@ export class TfTrustStore extends cdktn.TerraformResource {
     return {
       name: cdktn.stringToTerraform(this._name),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      ca_certificates_bundle_source: cdktn.listMapper(tfTrustStoreCaCertificatesBundleSourcePropertyToTerraform, true)(this._caCertificatesBundleSource.internalValue),
-      timeouts: tfTrustStoreTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      ca_certificates_bundle_source: cdktn.listMapper(awsTrustStoreCaCertificatesBundleSourcePropertyToTerraform, true)(this._caCertificatesBundleSource.internalValue),
+      timeouts: awsTrustStoreTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -204,16 +204,16 @@ export class TfTrustStore extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       ca_certificates_bundle_source: {
-        value: cdktn.listMapperHcl(tfTrustStoreCaCertificatesBundleSourcePropertyToHclTerraform, true)(this._caCertificatesBundleSource.internalValue),
+        value: cdktn.listMapperHcl(awsTrustStoreCaCertificatesBundleSourcePropertyToHclTerraform, true)(this._caCertificatesBundleSource.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrustStore.CaCertificatesBundleSourcePropertyList",
+        storageClassType: "AwsTrustStore.CaCertificatesBundleSourcePropertyList",
       },
       timeouts: {
-        value: tfTrustStoreTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTrustStoreTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTrustStore.TimeoutsProperty",
+        storageClassType: "AwsTrustStore.TimeoutsProperty",
       },
     };
 
@@ -222,7 +222,7 @@ export class TfTrustStore extends cdktn.TerraformResource {
   }
 }
 
-export function tfTrustStoreCaCertificatesBundleS3LocationPropertyToTerraform(struct?: TfTrustStore.CaCertificatesBundleS3LocationProperty | cdktn.IResolvable): any {
+export function awsTrustStoreCaCertificatesBundleS3LocationPropertyToTerraform(struct?: AwsTrustStore.CaCertificatesBundleS3LocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function tfTrustStoreCaCertificatesBundleS3LocationPropertyToTerraform(st
 }
 
 
-export function tfTrustStoreCaCertificatesBundleS3LocationPropertyToHclTerraform(struct?: TfTrustStore.CaCertificatesBundleS3LocationProperty | cdktn.IResolvable): any {
+export function awsTrustStoreCaCertificatesBundleS3LocationPropertyToHclTerraform(struct?: AwsTrustStore.CaCertificatesBundleS3LocationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -273,25 +273,25 @@ export function tfTrustStoreCaCertificatesBundleS3LocationPropertyToHclTerraform
 }
 
 
-export function tfTrustStoreCaCertificatesBundleSourcePropertyToTerraform(struct?: TfTrustStore.CaCertificatesBundleSourceProperty | cdktn.IResolvable): any {
+export function awsTrustStoreCaCertificatesBundleSourcePropertyToTerraform(struct?: AwsTrustStore.CaCertificatesBundleSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    ca_certificates_bundle_s3_location: cdktn.listMapper(tfTrustStoreCaCertificatesBundleS3LocationPropertyToTerraform, true)(struct!.caCertificatesBundleS3Location),
+    ca_certificates_bundle_s3_location: cdktn.listMapper(awsTrustStoreCaCertificatesBundleS3LocationPropertyToTerraform, true)(struct!.caCertificatesBundleS3Location),
   }
 }
 
 
-export function tfTrustStoreCaCertificatesBundleSourcePropertyToHclTerraform(struct?: TfTrustStore.CaCertificatesBundleSourceProperty | cdktn.IResolvable): any {
+export function awsTrustStoreCaCertificatesBundleSourcePropertyToHclTerraform(struct?: AwsTrustStore.CaCertificatesBundleSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     ca_certificates_bundle_s3_location: {
-      value: cdktn.listMapperHcl(tfTrustStoreCaCertificatesBundleS3LocationPropertyToHclTerraform, true)(struct!.caCertificatesBundleS3Location),
+      value: cdktn.listMapperHcl(awsTrustStoreCaCertificatesBundleS3LocationPropertyToHclTerraform, true)(struct!.caCertificatesBundleS3Location),
       isBlock: true,
       type: "list",
       storageClassType: "CaCertificatesBundleS3LocationPropertyList",
@@ -303,7 +303,7 @@ export function tfTrustStoreCaCertificatesBundleSourcePropertyToHclTerraform(str
 }
 
 
-export function tfTrustStoreTimeoutsPropertyToTerraform(struct?: TfTrustStore.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTrustStoreTimeoutsPropertyToTerraform(struct?: AwsTrustStore.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,7 +316,7 @@ export function tfTrustStoreTimeoutsPropertyToTerraform(struct?: TfTrustStore.Ti
 }
 
 
-export function tfTrustStoreTimeoutsPropertyToHclTerraform(struct?: TfTrustStore.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTrustStoreTimeoutsPropertyToHclTerraform(struct?: AwsTrustStore.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,22 +347,22 @@ export function tfTrustStoreTimeoutsPropertyToHclTerraform(struct?: TfTrustStore
 }
 
 
-export namespace TfTrustStore {
+export namespace AwsTrustStore {
 export interface CaCertificatesBundleS3LocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#bucket TfTrustStore#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#bucket AwsTrustStore#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#key TfTrustStore#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#key AwsTrustStore#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#region TfTrustStore#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#region AwsTrustStore#region}
   */
   readonly region: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#version TfTrustStore#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#version AwsTrustStore#version}
   */
   readonly version?: string;
 }
@@ -507,7 +507,7 @@ export interface CaCertificatesBundleSourceProperty {
   /**
   * ca_certificates_bundle_s3_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#ca_certificates_bundle_s3_location TfTrustStore#ca_certificates_bundle_s3_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#ca_certificates_bundle_s3_location AwsTrustStore#ca_certificates_bundle_s3_location}
   */
   readonly caCertificatesBundleS3Location?: CaCertificatesBundleS3LocationProperty[] | cdktn.IResolvable;
 }
@@ -595,19 +595,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#create TfTrustStore#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#create AwsTrustStore#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#delete TfTrustStore#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#delete AwsTrustStore#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#update TfTrustStore#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_trust_store#update AwsTrustStore#update}
   */
   readonly update?: string;
 }

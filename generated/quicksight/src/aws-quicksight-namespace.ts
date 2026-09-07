@@ -5,41 +5,41 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfNamespaceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsNamespaceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#aws_account_id TfNamespace#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#aws_account_id AwsNamespace#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#identity_store TfNamespace#identity_store}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#identity_store AwsNamespace#identity_store}
   */
   readonly identityStore?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#namespace TfNamespace#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#namespace AwsNamespace#namespace}
   */
   readonly namespace: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#region TfNamespace#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#region AwsNamespace#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#tags TfNamespace#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#tags AwsNamespace#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#timeouts TfNamespace#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#timeouts AwsNamespace#timeouts}
   */
-  readonly timeouts?: TfNamespace.TimeoutsProperty;
+  readonly timeouts?: AwsNamespace.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace aws_quicksight_namespace}
 */
-export class TfNamespace extends cdktn.TerraformResource {
+export class AwsNamespace extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -50,11 +50,11 @@ export class TfNamespace extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfNamespace resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsNamespace resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfNamespace to import
-  * @param importFromId The id of the existing TfNamespace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfNamespace to import is found
+  * @param importToId The construct id used in the generated config for the AwsNamespace to import
+  * @param importFromId The id of the existing AwsNamespace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsNamespace to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_namespace", importId: importFromId, provider });
@@ -69,9 +69,9 @@ export class TfNamespace extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfNamespaceConfig
+  * @param options AwsNamespaceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfNamespaceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsNamespaceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_namespace',
       terraformGeneratorMetadata: {
@@ -203,11 +203,11 @@ export class TfNamespace extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfNamespace.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsNamespace.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfNamespace.TimeoutsProperty) {
+  public putTimeouts(value: AwsNamespace.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -229,7 +229,7 @@ export class TfNamespace extends cdktn.TerraformResource {
       namespace: cdktn.stringToTerraform(this._namespace),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: tfNamespaceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsNamespaceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -266,10 +266,10 @@ export class TfNamespace extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfNamespaceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsNamespaceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfNamespace.TimeoutsProperty",
+        storageClassType: "AwsNamespace.TimeoutsProperty",
       },
     };
 
@@ -278,7 +278,7 @@ export class TfNamespace extends cdktn.TerraformResource {
   }
 }
 
-export function tfNamespaceTimeoutsPropertyToTerraform(struct?: TfNamespace.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsNamespaceTimeoutsPropertyToTerraform(struct?: AwsNamespace.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function tfNamespaceTimeoutsPropertyToTerraform(struct?: TfNamespace.Time
 }
 
 
-export function tfNamespaceTimeoutsPropertyToHclTerraform(struct?: TfNamespace.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsNamespaceTimeoutsPropertyToHclTerraform(struct?: AwsNamespace.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -315,18 +315,18 @@ export function tfNamespaceTimeoutsPropertyToHclTerraform(struct?: TfNamespace.T
 }
 
 
-export namespace TfNamespace {
+export namespace AwsNamespace {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#create TfNamespace#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#create AwsNamespace#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#delete TfNamespace#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_namespace#delete AwsNamespace#delete}
   */
   readonly delete?: string;
 }

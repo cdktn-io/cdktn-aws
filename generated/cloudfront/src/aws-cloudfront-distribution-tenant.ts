@@ -5,67 +5,67 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDistributionTenantConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDistributionTenantConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#connection_group_id TfDistributionTenant#connection_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#connection_group_id AwsDistributionTenant#connection_group_id}
   */
   readonly connectionGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#distribution_id TfDistributionTenant#distribution_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#distribution_id AwsDistributionTenant#distribution_id}
   */
   readonly distributionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#enabled TfDistributionTenant#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#enabled AwsDistributionTenant#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#name TfDistributionTenant#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#name AwsDistributionTenant#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#tags TfDistributionTenant#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#tags AwsDistributionTenant#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#wait_for_deployment TfDistributionTenant#wait_for_deployment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#wait_for_deployment AwsDistributionTenant#wait_for_deployment}
   */
   readonly waitForDeployment?: boolean | cdktn.IResolvable;
   /**
   * customizations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#customizations TfDistributionTenant#customizations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#customizations AwsDistributionTenant#customizations}
   */
-  readonly customizations?: TfDistributionTenant.CustomizationsProperty[] | cdktn.IResolvable;
+  readonly customizations?: AwsDistributionTenant.CustomizationsProperty[] | cdktn.IResolvable;
   /**
   * domain block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#domain TfDistributionTenant#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#domain AwsDistributionTenant#domain}
   */
-  readonly domain?: TfDistributionTenant.DomainProperty[] | cdktn.IResolvable;
+  readonly domain?: AwsDistributionTenant.DomainProperty[] | cdktn.IResolvable;
   /**
   * managed_certificate_request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#managed_certificate_request TfDistributionTenant#managed_certificate_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#managed_certificate_request AwsDistributionTenant#managed_certificate_request}
   */
-  readonly managedCertificateRequest?: TfDistributionTenant.ManagedCertificateRequestProperty[] | cdktn.IResolvable;
+  readonly managedCertificateRequest?: AwsDistributionTenant.ManagedCertificateRequestProperty[] | cdktn.IResolvable;
   /**
   * parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#parameter TfDistributionTenant#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#parameter AwsDistributionTenant#parameter}
   */
-  readonly parameter?: TfDistributionTenant.ParameterProperty[] | cdktn.IResolvable;
+  readonly parameter?: AwsDistributionTenant.ParameterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#timeouts TfDistributionTenant#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#timeouts AwsDistributionTenant#timeouts}
   */
-  readonly timeouts?: TfDistributionTenant.TimeoutsProperty;
+  readonly timeouts?: AwsDistributionTenant.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant aws_cloudfront_distribution_tenant}
 */
-export class TfDistributionTenant extends cdktn.TerraformResource {
+export class AwsDistributionTenant extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -76,11 +76,11 @@ export class TfDistributionTenant extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDistributionTenant resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDistributionTenant resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDistributionTenant to import
-  * @param importFromId The id of the existing TfDistributionTenant that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDistributionTenant to import is found
+  * @param importToId The construct id used in the generated config for the AwsDistributionTenant to import
+  * @param importFromId The id of the existing AwsDistributionTenant that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDistributionTenant to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_distribution_tenant", importId: importFromId, provider });
@@ -95,9 +95,9 @@ export class TfDistributionTenant extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDistributionTenantConfig
+  * @param options AwsDistributionTenantConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDistributionTenantConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDistributionTenantConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_distribution_tenant',
       terraformGeneratorMetadata: {
@@ -247,11 +247,11 @@ export class TfDistributionTenant extends cdktn.TerraformResource {
   }
 
   // customizations - computed: false, optional: true, required: false
-  private _customizations = new TfDistributionTenant.CustomizationsPropertyList(this, "customizations", false);
+  private _customizations = new AwsDistributionTenant.CustomizationsPropertyList(this, "customizations", false);
   public get customizations() {
     return this._customizations;
   }
-  public putCustomizations(value: TfDistributionTenant.CustomizationsProperty[] | cdktn.IResolvable) {
+  public putCustomizations(value: AwsDistributionTenant.CustomizationsProperty[] | cdktn.IResolvable) {
     this._customizations.internalValue = value;
   }
   public resetCustomizations() {
@@ -263,11 +263,11 @@ export class TfDistributionTenant extends cdktn.TerraformResource {
   }
 
   // domain - computed: false, optional: true, required: false
-  private _domain = new TfDistributionTenant.DomainPropertyList(this, "domain", true);
+  private _domain = new AwsDistributionTenant.DomainPropertyList(this, "domain", true);
   public get domain() {
     return this._domain;
   }
-  public putDomain(value: TfDistributionTenant.DomainProperty[] | cdktn.IResolvable) {
+  public putDomain(value: AwsDistributionTenant.DomainProperty[] | cdktn.IResolvable) {
     this._domain.internalValue = value;
   }
   public resetDomain() {
@@ -279,11 +279,11 @@ export class TfDistributionTenant extends cdktn.TerraformResource {
   }
 
   // managed_certificate_request - computed: false, optional: true, required: false
-  private _managedCertificateRequest = new TfDistributionTenant.ManagedCertificateRequestPropertyList(this, "managed_certificate_request", false);
+  private _managedCertificateRequest = new AwsDistributionTenant.ManagedCertificateRequestPropertyList(this, "managed_certificate_request", false);
   public get managedCertificateRequest() {
     return this._managedCertificateRequest;
   }
-  public putManagedCertificateRequest(value: TfDistributionTenant.ManagedCertificateRequestProperty[] | cdktn.IResolvable) {
+  public putManagedCertificateRequest(value: AwsDistributionTenant.ManagedCertificateRequestProperty[] | cdktn.IResolvable) {
     this._managedCertificateRequest.internalValue = value;
   }
   public resetManagedCertificateRequest() {
@@ -295,11 +295,11 @@ export class TfDistributionTenant extends cdktn.TerraformResource {
   }
 
   // parameter - computed: false, optional: true, required: false
-  private _parameter = new TfDistributionTenant.ParameterPropertyList(this, "parameter", true);
+  private _parameter = new AwsDistributionTenant.ParameterPropertyList(this, "parameter", true);
   public get parameter() {
     return this._parameter;
   }
-  public putParameter(value: TfDistributionTenant.ParameterProperty[] | cdktn.IResolvable) {
+  public putParameter(value: AwsDistributionTenant.ParameterProperty[] | cdktn.IResolvable) {
     this._parameter.internalValue = value;
   }
   public resetParameter() {
@@ -311,11 +311,11 @@ export class TfDistributionTenant extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDistributionTenant.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsDistributionTenant.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDistributionTenant.TimeoutsProperty) {
+  public putTimeouts(value: AwsDistributionTenant.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -338,11 +338,11 @@ export class TfDistributionTenant extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       wait_for_deployment: cdktn.booleanToTerraform(this._waitForDeployment),
-      customizations: cdktn.listMapper(tfDistributionTenantCustomizationsPropertyToTerraform, true)(this._customizations.internalValue),
-      domain: cdktn.listMapper(tfDistributionTenantDomainPropertyToTerraform, true)(this._domain.internalValue),
-      managed_certificate_request: cdktn.listMapper(tfDistributionTenantManagedCertificateRequestPropertyToTerraform, true)(this._managedCertificateRequest.internalValue),
-      parameter: cdktn.listMapper(tfDistributionTenantParameterPropertyToTerraform, true)(this._parameter.internalValue),
-      timeouts: tfDistributionTenantTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      customizations: cdktn.listMapper(awsDistributionTenantCustomizationsPropertyToTerraform, true)(this._customizations.internalValue),
+      domain: cdktn.listMapper(awsDistributionTenantDomainPropertyToTerraform, true)(this._domain.internalValue),
+      managed_certificate_request: cdktn.listMapper(awsDistributionTenantManagedCertificateRequestPropertyToTerraform, true)(this._managedCertificateRequest.internalValue),
+      parameter: cdktn.listMapper(awsDistributionTenantParameterPropertyToTerraform, true)(this._parameter.internalValue),
+      timeouts: awsDistributionTenantTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -385,34 +385,34 @@ export class TfDistributionTenant extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       customizations: {
-        value: cdktn.listMapperHcl(tfDistributionTenantCustomizationsPropertyToHclTerraform, true)(this._customizations.internalValue),
+        value: cdktn.listMapperHcl(awsDistributionTenantCustomizationsPropertyToHclTerraform, true)(this._customizations.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDistributionTenant.CustomizationsPropertyList",
+        storageClassType: "AwsDistributionTenant.CustomizationsPropertyList",
       },
       domain: {
-        value: cdktn.listMapperHcl(tfDistributionTenantDomainPropertyToHclTerraform, true)(this._domain.internalValue),
+        value: cdktn.listMapperHcl(awsDistributionTenantDomainPropertyToHclTerraform, true)(this._domain.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDistributionTenant.DomainPropertyList",
+        storageClassType: "AwsDistributionTenant.DomainPropertyList",
       },
       managed_certificate_request: {
-        value: cdktn.listMapperHcl(tfDistributionTenantManagedCertificateRequestPropertyToHclTerraform, true)(this._managedCertificateRequest.internalValue),
+        value: cdktn.listMapperHcl(awsDistributionTenantManagedCertificateRequestPropertyToHclTerraform, true)(this._managedCertificateRequest.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDistributionTenant.ManagedCertificateRequestPropertyList",
+        storageClassType: "AwsDistributionTenant.ManagedCertificateRequestPropertyList",
       },
       parameter: {
-        value: cdktn.listMapperHcl(tfDistributionTenantParameterPropertyToHclTerraform, true)(this._parameter.internalValue),
+        value: cdktn.listMapperHcl(awsDistributionTenantParameterPropertyToHclTerraform, true)(this._parameter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDistributionTenant.ParameterPropertyList",
+        storageClassType: "AwsDistributionTenant.ParameterPropertyList",
       },
       timeouts: {
-        value: tfDistributionTenantTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsDistributionTenantTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDistributionTenant.TimeoutsProperty",
+        storageClassType: "AwsDistributionTenant.TimeoutsProperty",
       },
     };
 
@@ -421,7 +421,7 @@ export class TfDistributionTenant extends cdktn.TerraformResource {
   }
 }
 
-export function tfDistributionTenantCertificatePropertyToTerraform(struct?: TfDistributionTenant.CertificateProperty | cdktn.IResolvable): any {
+export function awsDistributionTenantCertificatePropertyToTerraform(struct?: AwsDistributionTenant.CertificateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -432,7 +432,7 @@ export function tfDistributionTenantCertificatePropertyToTerraform(struct?: TfDi
 }
 
 
-export function tfDistributionTenantCertificatePropertyToHclTerraform(struct?: TfDistributionTenant.CertificateProperty | cdktn.IResolvable): any {
+export function awsDistributionTenantCertificatePropertyToHclTerraform(struct?: AwsDistributionTenant.CertificateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function tfDistributionTenantCertificatePropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDistributionTenantGeoRestrictionPropertyToTerraform(struct?: TfDistributionTenant.GeoRestrictionProperty | cdktn.IResolvable): any {
+export function awsDistributionTenantGeoRestrictionPropertyToTerraform(struct?: AwsDistributionTenant.GeoRestrictionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -463,7 +463,7 @@ export function tfDistributionTenantGeoRestrictionPropertyToTerraform(struct?: T
 }
 
 
-export function tfDistributionTenantGeoRestrictionPropertyToHclTerraform(struct?: TfDistributionTenant.GeoRestrictionProperty | cdktn.IResolvable): any {
+export function awsDistributionTenantGeoRestrictionPropertyToHclTerraform(struct?: AwsDistributionTenant.GeoRestrictionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -488,7 +488,7 @@ export function tfDistributionTenantGeoRestrictionPropertyToHclTerraform(struct?
 }
 
 
-export function tfDistributionTenantWebAclPropertyToTerraform(struct?: TfDistributionTenant.WebAclProperty | cdktn.IResolvable): any {
+export function awsDistributionTenantWebAclPropertyToTerraform(struct?: AwsDistributionTenant.WebAclProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,7 +500,7 @@ export function tfDistributionTenantWebAclPropertyToTerraform(struct?: TfDistrib
 }
 
 
-export function tfDistributionTenantWebAclPropertyToHclTerraform(struct?: TfDistributionTenant.WebAclProperty | cdktn.IResolvable): any {
+export function awsDistributionTenantWebAclPropertyToHclTerraform(struct?: AwsDistributionTenant.WebAclProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -525,39 +525,39 @@ export function tfDistributionTenantWebAclPropertyToHclTerraform(struct?: TfDist
 }
 
 
-export function tfDistributionTenantCustomizationsPropertyToTerraform(struct?: TfDistributionTenant.CustomizationsProperty | cdktn.IResolvable): any {
+export function awsDistributionTenantCustomizationsPropertyToTerraform(struct?: AwsDistributionTenant.CustomizationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    certificate: cdktn.listMapper(tfDistributionTenantCertificatePropertyToTerraform, true)(struct!.certificate),
-    geo_restriction: cdktn.listMapper(tfDistributionTenantGeoRestrictionPropertyToTerraform, true)(struct!.geoRestriction),
-    web_acl: cdktn.listMapper(tfDistributionTenantWebAclPropertyToTerraform, true)(struct!.webAcl),
+    certificate: cdktn.listMapper(awsDistributionTenantCertificatePropertyToTerraform, true)(struct!.certificate),
+    geo_restriction: cdktn.listMapper(awsDistributionTenantGeoRestrictionPropertyToTerraform, true)(struct!.geoRestriction),
+    web_acl: cdktn.listMapper(awsDistributionTenantWebAclPropertyToTerraform, true)(struct!.webAcl),
   }
 }
 
 
-export function tfDistributionTenantCustomizationsPropertyToHclTerraform(struct?: TfDistributionTenant.CustomizationsProperty | cdktn.IResolvable): any {
+export function awsDistributionTenantCustomizationsPropertyToHclTerraform(struct?: AwsDistributionTenant.CustomizationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     certificate: {
-      value: cdktn.listMapperHcl(tfDistributionTenantCertificatePropertyToHclTerraform, true)(struct!.certificate),
+      value: cdktn.listMapperHcl(awsDistributionTenantCertificatePropertyToHclTerraform, true)(struct!.certificate),
       isBlock: true,
       type: "list",
       storageClassType: "CertificatePropertyList",
     },
     geo_restriction: {
-      value: cdktn.listMapperHcl(tfDistributionTenantGeoRestrictionPropertyToHclTerraform, true)(struct!.geoRestriction),
+      value: cdktn.listMapperHcl(awsDistributionTenantGeoRestrictionPropertyToHclTerraform, true)(struct!.geoRestriction),
       isBlock: true,
       type: "list",
       storageClassType: "GeoRestrictionPropertyList",
     },
     web_acl: {
-      value: cdktn.listMapperHcl(tfDistributionTenantWebAclPropertyToHclTerraform, true)(struct!.webAcl),
+      value: cdktn.listMapperHcl(awsDistributionTenantWebAclPropertyToHclTerraform, true)(struct!.webAcl),
       isBlock: true,
       type: "list",
       storageClassType: "WebAclPropertyList",
@@ -569,7 +569,7 @@ export function tfDistributionTenantCustomizationsPropertyToHclTerraform(struct?
 }
 
 
-export function tfDistributionTenantDomainPropertyToTerraform(struct?: TfDistributionTenant.DomainProperty | cdktn.IResolvable): any {
+export function awsDistributionTenantDomainPropertyToTerraform(struct?: AwsDistributionTenant.DomainProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -580,7 +580,7 @@ export function tfDistributionTenantDomainPropertyToTerraform(struct?: TfDistrib
 }
 
 
-export function tfDistributionTenantDomainPropertyToHclTerraform(struct?: TfDistributionTenant.DomainProperty | cdktn.IResolvable): any {
+export function awsDistributionTenantDomainPropertyToHclTerraform(struct?: AwsDistributionTenant.DomainProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -599,7 +599,7 @@ export function tfDistributionTenantDomainPropertyToHclTerraform(struct?: TfDist
 }
 
 
-export function tfDistributionTenantManagedCertificateRequestPropertyToTerraform(struct?: TfDistributionTenant.ManagedCertificateRequestProperty | cdktn.IResolvable): any {
+export function awsDistributionTenantManagedCertificateRequestPropertyToTerraform(struct?: AwsDistributionTenant.ManagedCertificateRequestProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -612,7 +612,7 @@ export function tfDistributionTenantManagedCertificateRequestPropertyToTerraform
 }
 
 
-export function tfDistributionTenantManagedCertificateRequestPropertyToHclTerraform(struct?: TfDistributionTenant.ManagedCertificateRequestProperty | cdktn.IResolvable): any {
+export function awsDistributionTenantManagedCertificateRequestPropertyToHclTerraform(struct?: AwsDistributionTenant.ManagedCertificateRequestProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -643,7 +643,7 @@ export function tfDistributionTenantManagedCertificateRequestPropertyToHclTerraf
 }
 
 
-export function tfDistributionTenantParameterPropertyToTerraform(struct?: TfDistributionTenant.ParameterProperty | cdktn.IResolvable): any {
+export function awsDistributionTenantParameterPropertyToTerraform(struct?: AwsDistributionTenant.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -655,7 +655,7 @@ export function tfDistributionTenantParameterPropertyToTerraform(struct?: TfDist
 }
 
 
-export function tfDistributionTenantParameterPropertyToHclTerraform(struct?: TfDistributionTenant.ParameterProperty | cdktn.IResolvable): any {
+export function awsDistributionTenantParameterPropertyToHclTerraform(struct?: AwsDistributionTenant.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -680,7 +680,7 @@ export function tfDistributionTenantParameterPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDistributionTenantTimeoutsPropertyToTerraform(struct?: TfDistributionTenant.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDistributionTenantTimeoutsPropertyToTerraform(struct?: AwsDistributionTenant.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -693,7 +693,7 @@ export function tfDistributionTenantTimeoutsPropertyToTerraform(struct?: TfDistr
 }
 
 
-export function tfDistributionTenantTimeoutsPropertyToHclTerraform(struct?: TfDistributionTenant.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDistributionTenantTimeoutsPropertyToHclTerraform(struct?: AwsDistributionTenant.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -724,10 +724,10 @@ export function tfDistributionTenantTimeoutsPropertyToHclTerraform(struct?: TfDi
 }
 
 
-export namespace TfDistributionTenant {
+export namespace AwsDistributionTenant {
 export interface CertificateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#arn TfDistributionTenant#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#arn AwsDistributionTenant#arn}
   */
   readonly arn?: string;
 }
@@ -813,11 +813,11 @@ export class CertificatePropertyList extends cdktn.ComplexList {
 }
 export interface GeoRestrictionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#locations TfDistributionTenant#locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#locations AwsDistributionTenant#locations}
   */
   readonly locations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#restriction_type TfDistributionTenant#restriction_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#restriction_type AwsDistributionTenant#restriction_type}
   */
   readonly restrictionType?: string;
 }
@@ -925,11 +925,11 @@ export class GeoRestrictionPropertyList extends cdktn.ComplexList {
 }
 export interface WebAclProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#action TfDistributionTenant#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#action AwsDistributionTenant#action}
   */
   readonly action?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#arn TfDistributionTenant#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#arn AwsDistributionTenant#arn}
   */
   readonly arn?: string;
 }
@@ -1039,19 +1039,19 @@ export interface CustomizationsProperty {
   /**
   * certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#certificate TfDistributionTenant#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#certificate AwsDistributionTenant#certificate}
   */
   readonly certificate?: CertificateProperty[] | cdktn.IResolvable;
   /**
   * geo_restriction block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#geo_restriction TfDistributionTenant#geo_restriction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#geo_restriction AwsDistributionTenant#geo_restriction}
   */
   readonly geoRestriction?: GeoRestrictionProperty[] | cdktn.IResolvable;
   /**
   * web_acl block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#web_acl TfDistributionTenant#web_acl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#web_acl AwsDistributionTenant#web_acl}
   */
   readonly webAcl?: WebAclProperty[] | cdktn.IResolvable;
 }
@@ -1181,7 +1181,7 @@ export class CustomizationsPropertyList extends cdktn.ComplexList {
 }
 export interface DomainProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#domain TfDistributionTenant#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#domain AwsDistributionTenant#domain}
   */
   readonly domain: string;
 }
@@ -1269,15 +1269,15 @@ export class DomainPropertyList extends cdktn.ComplexList {
 }
 export interface ManagedCertificateRequestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#certificate_transparency_logging_preference TfDistributionTenant#certificate_transparency_logging_preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#certificate_transparency_logging_preference AwsDistributionTenant#certificate_transparency_logging_preference}
   */
   readonly certificateTransparencyLoggingPreference?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#primary_domain_name TfDistributionTenant#primary_domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#primary_domain_name AwsDistributionTenant#primary_domain_name}
   */
   readonly primaryDomainName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#validation_token_host TfDistributionTenant#validation_token_host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#validation_token_host AwsDistributionTenant#validation_token_host}
   */
   readonly validationTokenHost?: string;
 }
@@ -1407,11 +1407,11 @@ export class ManagedCertificateRequestPropertyList extends cdktn.ComplexList {
 }
 export interface ParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#name TfDistributionTenant#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#name AwsDistributionTenant#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#value TfDistributionTenant#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#value AwsDistributionTenant#value}
   */
   readonly value: string;
 }
@@ -1515,19 +1515,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#create TfDistributionTenant#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#create AwsDistributionTenant#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#delete TfDistributionTenant#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#delete AwsDistributionTenant#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#update TfDistributionTenant#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_distribution_tenant#update AwsDistributionTenant#update}
   */
   readonly update?: string;
 }

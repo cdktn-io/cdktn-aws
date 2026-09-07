@@ -3,7 +3,7 @@
 /**
  * The `@cdktn/provider-aws` identity of a terraform type — the *classic* per-resource library the
  * unmodified cdk-terrain pipeline generates, which is what a consumer migrating to `@cdktn/aws`
- * 0.2.0 is coming from.
+ * is coming from.
  *
  * Nothing here re-implements a naming rule. The names are read off the models the VENDORED parser
  * (`src/vendored/cdktn/resource-parser.ts`) produces, driven in the same order `bin/baseline.ts`

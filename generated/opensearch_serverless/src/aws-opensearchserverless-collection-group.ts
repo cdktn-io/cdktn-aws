@@ -5,43 +5,43 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCollectionGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCollectionGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#capacity_limits TfCollectionGroup#capacity_limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#capacity_limits AwsCollectionGroup#capacity_limits}
   */
-  readonly capacityLimits?: TfCollectionGroup.CapacityLimitsProperty[] | cdktn.IResolvable;
+  readonly capacityLimits?: AwsCollectionGroup.CapacityLimitsProperty[] | cdktn.IResolvable;
   /**
   * Description of the collection group.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#description TfCollectionGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#description AwsCollectionGroup#description}
   */
   readonly description?: string;
   /**
   * Generation of the collection group.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#generation TfCollectionGroup#generation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#generation AwsCollectionGroup#generation}
   */
   readonly generation?: string;
   /**
   * Name of the collection group.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#name TfCollectionGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#name AwsCollectionGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#region TfCollectionGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#region AwsCollectionGroup#region}
   */
   readonly region?: string;
   /**
   * Indicates whether standby replicas should be used for collections in this group. One of `ENABLED` or `DISABLED`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#standby_replicas TfCollectionGroup#standby_replicas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#standby_replicas AwsCollectionGroup#standby_replicas}
   */
   readonly standbyReplicas: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#tags TfCollectionGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#tags AwsCollectionGroup#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -49,7 +49,7 @@ export interface TfCollectionGroupConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group aws_opensearchserverless_collection_group}
 */
-export class TfCollectionGroup extends cdktn.TerraformResource {
+export class AwsCollectionGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -60,11 +60,11 @@ export class TfCollectionGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCollectionGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCollectionGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCollectionGroup to import
-  * @param importFromId The id of the existing TfCollectionGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCollectionGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsCollectionGroup to import
+  * @param importFromId The id of the existing AwsCollectionGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCollectionGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearchserverless_collection_group", importId: importFromId, provider });
@@ -79,9 +79,9 @@ export class TfCollectionGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCollectionGroupConfig
+  * @param options AwsCollectionGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCollectionGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCollectionGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearchserverless_collection_group',
       terraformGeneratorMetadata: {
@@ -116,11 +116,11 @@ export class TfCollectionGroup extends cdktn.TerraformResource {
   }
 
   // capacity_limits - computed: true, optional: true, required: false
-  private _capacityLimits = new TfCollectionGroup.CapacityLimitsPropertyList(this, "capacity_limits", false);
+  private _capacityLimits = new AwsCollectionGroup.CapacityLimitsPropertyList(this, "capacity_limits", false);
   public get capacityLimits() {
     return this._capacityLimits;
   }
-  public putCapacityLimits(value: TfCollectionGroup.CapacityLimitsProperty[] | cdktn.IResolvable) {
+  public putCapacityLimits(value: AwsCollectionGroup.CapacityLimitsProperty[] | cdktn.IResolvable) {
     this._capacityLimits.internalValue = value;
   }
   public resetCapacityLimits() {
@@ -243,7 +243,7 @@ export class TfCollectionGroup extends cdktn.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      capacity_limits: cdktn.listMapper(tfCollectionGroupCapacityLimitsPropertyToTerraform, false)(this._capacityLimits.internalValue),
+      capacity_limits: cdktn.listMapper(awsCollectionGroupCapacityLimitsPropertyToTerraform, false)(this._capacityLimits.internalValue),
       description: cdktn.stringToTerraform(this._description),
       generation: cdktn.stringToTerraform(this._generation),
       name: cdktn.stringToTerraform(this._name),
@@ -256,10 +256,10 @@ export class TfCollectionGroup extends cdktn.TerraformResource {
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       capacity_limits: {
-        value: cdktn.listMapperHcl(tfCollectionGroupCapacityLimitsPropertyToHclTerraform, false)(this._capacityLimits.internalValue),
+        value: cdktn.listMapperHcl(awsCollectionGroupCapacityLimitsPropertyToHclTerraform, false)(this._capacityLimits.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCollectionGroup.CapacityLimitsPropertyList",
+        storageClassType: "AwsCollectionGroup.CapacityLimitsPropertyList",
       },
       description: {
         value: cdktn.stringToHclTerraform(this._description),
@@ -304,7 +304,7 @@ export class TfCollectionGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfCollectionGroupCapacityLimitsPropertyToTerraform(struct?: TfCollectionGroup.CapacityLimitsProperty | cdktn.IResolvable): any {
+export function awsCollectionGroupCapacityLimitsPropertyToTerraform(struct?: AwsCollectionGroup.CapacityLimitsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function tfCollectionGroupCapacityLimitsPropertyToTerraform(struct?: TfCo
 }
 
 
-export function tfCollectionGroupCapacityLimitsPropertyToHclTerraform(struct?: TfCollectionGroup.CapacityLimitsProperty | cdktn.IResolvable): any {
+export function awsCollectionGroupCapacityLimitsPropertyToHclTerraform(struct?: AwsCollectionGroup.CapacityLimitsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,22 +355,22 @@ export function tfCollectionGroupCapacityLimitsPropertyToHclTerraform(struct?: T
 }
 
 
-export namespace TfCollectionGroup {
+export namespace AwsCollectionGroup {
 export interface CapacityLimitsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#max_indexing_capacity_in_ocu TfCollectionGroup#max_indexing_capacity_in_ocu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#max_indexing_capacity_in_ocu AwsCollectionGroup#max_indexing_capacity_in_ocu}
   */
   readonly maxIndexingCapacityInOcu?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#max_search_capacity_in_ocu TfCollectionGroup#max_search_capacity_in_ocu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#max_search_capacity_in_ocu AwsCollectionGroup#max_search_capacity_in_ocu}
   */
   readonly maxSearchCapacityInOcu?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#min_indexing_capacity_in_ocu TfCollectionGroup#min_indexing_capacity_in_ocu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#min_indexing_capacity_in_ocu AwsCollectionGroup#min_indexing_capacity_in_ocu}
   */
   readonly minIndexingCapacityInOcu?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#min_search_capacity_in_ocu TfCollectionGroup#min_search_capacity_in_ocu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_collection_group#min_search_capacity_in_ocu AwsCollectionGroup#min_search_capacity_in_ocu}
   */
   readonly minSearchCapacityInOcu?: number;
 }

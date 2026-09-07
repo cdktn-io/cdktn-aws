@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSinkConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSinkConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#id TfSink#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#id AwsSink#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#name TfSink#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#name AwsSink#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#region TfSink#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#region AwsSink#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#tags TfSink#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#tags AwsSink#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#tags_all TfSink#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#tags_all AwsSink#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#timeouts TfSink#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#timeouts AwsSink#timeouts}
   */
-  readonly timeouts?: TfSink.TimeoutsProperty;
+  readonly timeouts?: AwsSink.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink aws_oam_sink}
 */
-export class TfSink extends cdktn.TerraformResource {
+export class AwsSink extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class TfSink extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSink resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSink resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSink to import
-  * @param importFromId The id of the existing TfSink that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSink to import is found
+  * @param importToId The construct id used in the generated config for the AwsSink to import
+  * @param importFromId The id of the existing AwsSink that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSink to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_oam_sink", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class TfSink extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSinkConfig
+  * @param options AwsSinkConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSinkConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSinkConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_oam_sink',
       terraformGeneratorMetadata: {
@@ -190,11 +190,11 @@ export class TfSink extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfSink.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsSink.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfSink.TimeoutsProperty) {
+  public putTimeouts(value: AwsSink.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -216,7 +216,7 @@ export class TfSink extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfSinkTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsSinkTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -253,10 +253,10 @@ export class TfSink extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfSinkTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsSinkTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfSink.TimeoutsProperty",
+        storageClassType: "AwsSink.TimeoutsProperty",
       },
     };
 
@@ -265,7 +265,7 @@ export class TfSink extends cdktn.TerraformResource {
   }
 }
 
-export function tfSinkTimeoutsPropertyToTerraform(struct?: TfSink.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSinkTimeoutsPropertyToTerraform(struct?: AwsSink.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -278,7 +278,7 @@ export function tfSinkTimeoutsPropertyToTerraform(struct?: TfSink.TimeoutsProper
 }
 
 
-export function tfSinkTimeoutsPropertyToHclTerraform(struct?: TfSink.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSinkTimeoutsPropertyToHclTerraform(struct?: AwsSink.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,18 +309,18 @@ export function tfSinkTimeoutsPropertyToHclTerraform(struct?: TfSink.TimeoutsPro
 }
 
 
-export namespace TfSink {
+export namespace AwsSink {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#create TfSink#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#create AwsSink#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#delete TfSink#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#delete AwsSink#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#update TfSink#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_sink#update AwsSink#update}
   */
   readonly update?: string;
 }

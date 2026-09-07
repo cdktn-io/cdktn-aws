@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDistributionConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDistributionConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#description TfDistributionConfiguration#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#description AwsDistributionConfiguration#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#id TfDistributionConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#id AwsDistributionConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#name TfDistributionConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#name AwsDistributionConfiguration#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#region TfDistributionConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#region AwsDistributionConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#tags TfDistributionConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#tags AwsDistributionConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#tags_all TfDistributionConfiguration#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#tags_all AwsDistributionConfiguration#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * distribution block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#distribution TfDistributionConfiguration#distribution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#distribution AwsDistributionConfiguration#distribution}
   */
-  readonly distribution: TfDistributionConfiguration.DistributionProperty[] | cdktn.IResolvable;
+  readonly distribution: AwsDistributionConfiguration.DistributionProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration aws_imagebuilder_distribution_configuration}
 */
-export class TfDistributionConfiguration extends cdktn.TerraformResource {
+export class AwsDistributionConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfDistributionConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDistributionConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDistributionConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDistributionConfiguration to import
-  * @param importFromId The id of the existing TfDistributionConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDistributionConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsDistributionConfiguration to import
+  * @param importFromId The id of the existing AwsDistributionConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDistributionConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_imagebuilder_distribution_configuration", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfDistributionConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDistributionConfigurationConfig
+  * @param options AwsDistributionConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDistributionConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDistributionConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_imagebuilder_distribution_configuration',
       terraformGeneratorMetadata: {
@@ -216,11 +216,11 @@ export class TfDistributionConfiguration extends cdktn.TerraformResource {
   }
 
   // distribution - computed: false, optional: false, required: true
-  private _distribution = new TfDistributionConfiguration.DistributionPropertyList(this, "distribution", true);
+  private _distribution = new AwsDistributionConfiguration.DistributionPropertyList(this, "distribution", true);
   public get distribution() {
     return this._distribution;
   }
-  public putDistribution(value: TfDistributionConfiguration.DistributionProperty[] | cdktn.IResolvable) {
+  public putDistribution(value: AwsDistributionConfiguration.DistributionProperty[] | cdktn.IResolvable) {
     this._distribution.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -240,7 +240,7 @@ export class TfDistributionConfiguration extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      distribution: cdktn.listMapper(tfDistributionConfigurationDistributionPropertyToTerraform, true)(this._distribution.internalValue),
+      distribution: cdktn.listMapper(awsDistributionConfigurationDistributionPropertyToTerraform, true)(this._distribution.internalValue),
     };
   }
 
@@ -283,10 +283,10 @@ export class TfDistributionConfiguration extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       distribution: {
-        value: cdktn.listMapperHcl(tfDistributionConfigurationDistributionPropertyToHclTerraform, true)(this._distribution.internalValue),
+        value: cdktn.listMapperHcl(awsDistributionConfigurationDistributionPropertyToHclTerraform, true)(this._distribution.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDistributionConfiguration.DistributionPropertyList",
+        storageClassType: "AwsDistributionConfiguration.DistributionPropertyList",
       },
     };
 
@@ -295,7 +295,7 @@ export class TfDistributionConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfDistributionConfigurationLaunchPermissionPropertyToTerraform(struct?: TfDistributionConfiguration.LaunchPermissionPropertyOutputReference | TfDistributionConfiguration.LaunchPermissionProperty): any {
+export function awsDistributionConfigurationLaunchPermissionPropertyToTerraform(struct?: AwsDistributionConfiguration.LaunchPermissionPropertyOutputReference | AwsDistributionConfiguration.LaunchPermissionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,7 +309,7 @@ export function tfDistributionConfigurationLaunchPermissionPropertyToTerraform(s
 }
 
 
-export function tfDistributionConfigurationLaunchPermissionPropertyToHclTerraform(struct?: TfDistributionConfiguration.LaunchPermissionPropertyOutputReference | TfDistributionConfiguration.LaunchPermissionProperty): any {
+export function awsDistributionConfigurationLaunchPermissionPropertyToHclTerraform(struct?: AwsDistributionConfiguration.LaunchPermissionPropertyOutputReference | AwsDistributionConfiguration.LaunchPermissionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,7 +346,7 @@ export function tfDistributionConfigurationLaunchPermissionPropertyToHclTerrafor
 }
 
 
-export function tfDistributionConfigurationAmiDistributionConfigurationPropertyToTerraform(struct?: TfDistributionConfiguration.AmiDistributionConfigurationPropertyOutputReference | TfDistributionConfiguration.AmiDistributionConfigurationProperty): any {
+export function awsDistributionConfigurationAmiDistributionConfigurationPropertyToTerraform(struct?: AwsDistributionConfiguration.AmiDistributionConfigurationPropertyOutputReference | AwsDistributionConfiguration.AmiDistributionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,12 +357,12 @@ export function tfDistributionConfigurationAmiDistributionConfigurationPropertyT
     kms_key_id: cdktn.stringToTerraform(struct!.kmsKeyId),
     name: cdktn.stringToTerraform(struct!.name),
     target_account_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.targetAccountIds),
-    launch_permission: tfDistributionConfigurationLaunchPermissionPropertyToTerraform(struct!.launchPermission),
+    launch_permission: awsDistributionConfigurationLaunchPermissionPropertyToTerraform(struct!.launchPermission),
   }
 }
 
 
-export function tfDistributionConfigurationAmiDistributionConfigurationPropertyToHclTerraform(struct?: TfDistributionConfiguration.AmiDistributionConfigurationPropertyOutputReference | TfDistributionConfiguration.AmiDistributionConfigurationProperty): any {
+export function awsDistributionConfigurationAmiDistributionConfigurationPropertyToHclTerraform(struct?: AwsDistributionConfiguration.AmiDistributionConfigurationPropertyOutputReference | AwsDistributionConfiguration.AmiDistributionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -399,7 +399,7 @@ export function tfDistributionConfigurationAmiDistributionConfigurationPropertyT
       storageClassType: "stringList",
     },
     launch_permission: {
-      value: tfDistributionConfigurationLaunchPermissionPropertyToHclTerraform(struct!.launchPermission),
+      value: awsDistributionConfigurationLaunchPermissionPropertyToHclTerraform(struct!.launchPermission),
       isBlock: true,
       type: "list",
       storageClassType: "LaunchPermissionPropertyList",
@@ -411,7 +411,7 @@ export function tfDistributionConfigurationAmiDistributionConfigurationPropertyT
 }
 
 
-export function tfDistributionConfigurationTargetRepositoryPropertyToTerraform(struct?: TfDistributionConfiguration.TargetRepositoryPropertyOutputReference | TfDistributionConfiguration.TargetRepositoryProperty): any {
+export function awsDistributionConfigurationTargetRepositoryPropertyToTerraform(struct?: AwsDistributionConfiguration.TargetRepositoryPropertyOutputReference | AwsDistributionConfiguration.TargetRepositoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,7 +423,7 @@ export function tfDistributionConfigurationTargetRepositoryPropertyToTerraform(s
 }
 
 
-export function tfDistributionConfigurationTargetRepositoryPropertyToHclTerraform(struct?: TfDistributionConfiguration.TargetRepositoryPropertyOutputReference | TfDistributionConfiguration.TargetRepositoryProperty): any {
+export function awsDistributionConfigurationTargetRepositoryPropertyToHclTerraform(struct?: AwsDistributionConfiguration.TargetRepositoryPropertyOutputReference | AwsDistributionConfiguration.TargetRepositoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,7 +448,7 @@ export function tfDistributionConfigurationTargetRepositoryPropertyToHclTerrafor
 }
 
 
-export function tfDistributionConfigurationContainerDistributionConfigurationPropertyToTerraform(struct?: TfDistributionConfiguration.ContainerDistributionConfigurationPropertyOutputReference | TfDistributionConfiguration.ContainerDistributionConfigurationProperty): any {
+export function awsDistributionConfigurationContainerDistributionConfigurationPropertyToTerraform(struct?: AwsDistributionConfiguration.ContainerDistributionConfigurationPropertyOutputReference | AwsDistributionConfiguration.ContainerDistributionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -456,12 +456,12 @@ export function tfDistributionConfigurationContainerDistributionConfigurationPro
   return {
     container_tags: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.containerTags),
     description: cdktn.stringToTerraform(struct!.description),
-    target_repository: tfDistributionConfigurationTargetRepositoryPropertyToTerraform(struct!.targetRepository),
+    target_repository: awsDistributionConfigurationTargetRepositoryPropertyToTerraform(struct!.targetRepository),
   }
 }
 
 
-export function tfDistributionConfigurationContainerDistributionConfigurationPropertyToHclTerraform(struct?: TfDistributionConfiguration.ContainerDistributionConfigurationPropertyOutputReference | TfDistributionConfiguration.ContainerDistributionConfigurationProperty): any {
+export function awsDistributionConfigurationContainerDistributionConfigurationPropertyToHclTerraform(struct?: AwsDistributionConfiguration.ContainerDistributionConfigurationPropertyOutputReference | AwsDistributionConfiguration.ContainerDistributionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -480,7 +480,7 @@ export function tfDistributionConfigurationContainerDistributionConfigurationPro
       storageClassType: "string",
     },
     target_repository: {
-      value: tfDistributionConfigurationTargetRepositoryPropertyToHclTerraform(struct!.targetRepository),
+      value: awsDistributionConfigurationTargetRepositoryPropertyToHclTerraform(struct!.targetRepository),
       isBlock: true,
       type: "list",
       storageClassType: "TargetRepositoryPropertyList",
@@ -492,7 +492,7 @@ export function tfDistributionConfigurationContainerDistributionConfigurationPro
 }
 
 
-export function tfDistributionConfigurationLaunchTemplatePropertyToTerraform(struct?: TfDistributionConfiguration.LaunchTemplatePropertyOutputReference | TfDistributionConfiguration.LaunchTemplateProperty): any {
+export function awsDistributionConfigurationLaunchTemplatePropertyToTerraform(struct?: AwsDistributionConfiguration.LaunchTemplatePropertyOutputReference | AwsDistributionConfiguration.LaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -505,7 +505,7 @@ export function tfDistributionConfigurationLaunchTemplatePropertyToTerraform(str
 }
 
 
-export function tfDistributionConfigurationLaunchTemplatePropertyToHclTerraform(struct?: TfDistributionConfiguration.LaunchTemplatePropertyOutputReference | TfDistributionConfiguration.LaunchTemplateProperty): any {
+export function awsDistributionConfigurationLaunchTemplatePropertyToHclTerraform(struct?: AwsDistributionConfiguration.LaunchTemplatePropertyOutputReference | AwsDistributionConfiguration.LaunchTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -536,7 +536,7 @@ export function tfDistributionConfigurationLaunchTemplatePropertyToHclTerraform(
 }
 
 
-export function tfDistributionConfigurationSnapshotConfigurationPropertyToTerraform(struct?: TfDistributionConfiguration.SnapshotConfigurationPropertyOutputReference | TfDistributionConfiguration.SnapshotConfigurationProperty): any {
+export function awsDistributionConfigurationSnapshotConfigurationPropertyToTerraform(struct?: AwsDistributionConfiguration.SnapshotConfigurationPropertyOutputReference | AwsDistributionConfiguration.SnapshotConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -547,7 +547,7 @@ export function tfDistributionConfigurationSnapshotConfigurationPropertyToTerraf
 }
 
 
-export function tfDistributionConfigurationSnapshotConfigurationPropertyToHclTerraform(struct?: TfDistributionConfiguration.SnapshotConfigurationPropertyOutputReference | TfDistributionConfiguration.SnapshotConfigurationProperty): any {
+export function awsDistributionConfigurationSnapshotConfigurationPropertyToHclTerraform(struct?: AwsDistributionConfiguration.SnapshotConfigurationPropertyOutputReference | AwsDistributionConfiguration.SnapshotConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -566,7 +566,7 @@ export function tfDistributionConfigurationSnapshotConfigurationPropertyToHclTer
 }
 
 
-export function tfDistributionConfigurationFastLaunchConfigurationPropertyToTerraform(struct?: TfDistributionConfiguration.FastLaunchConfigurationProperty | cdktn.IResolvable): any {
+export function awsDistributionConfigurationFastLaunchConfigurationPropertyToTerraform(struct?: AwsDistributionConfiguration.FastLaunchConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -575,13 +575,13 @@ export function tfDistributionConfigurationFastLaunchConfigurationPropertyToTerr
     account_id: cdktn.stringToTerraform(struct!.accountId),
     enabled: cdktn.booleanToTerraform(struct!.enabled),
     max_parallel_launches: cdktn.numberToTerraform(struct!.maxParallelLaunches),
-    launch_template: tfDistributionConfigurationLaunchTemplatePropertyToTerraform(struct!.launchTemplate),
-    snapshot_configuration: tfDistributionConfigurationSnapshotConfigurationPropertyToTerraform(struct!.snapshotConfiguration),
+    launch_template: awsDistributionConfigurationLaunchTemplatePropertyToTerraform(struct!.launchTemplate),
+    snapshot_configuration: awsDistributionConfigurationSnapshotConfigurationPropertyToTerraform(struct!.snapshotConfiguration),
   }
 }
 
 
-export function tfDistributionConfigurationFastLaunchConfigurationPropertyToHclTerraform(struct?: TfDistributionConfiguration.FastLaunchConfigurationProperty | cdktn.IResolvable): any {
+export function awsDistributionConfigurationFastLaunchConfigurationPropertyToHclTerraform(struct?: AwsDistributionConfiguration.FastLaunchConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -606,13 +606,13 @@ export function tfDistributionConfigurationFastLaunchConfigurationPropertyToHclT
       storageClassType: "number",
     },
     launch_template: {
-      value: tfDistributionConfigurationLaunchTemplatePropertyToHclTerraform(struct!.launchTemplate),
+      value: awsDistributionConfigurationLaunchTemplatePropertyToHclTerraform(struct!.launchTemplate),
       isBlock: true,
       type: "list",
       storageClassType: "LaunchTemplatePropertyList",
     },
     snapshot_configuration: {
-      value: tfDistributionConfigurationSnapshotConfigurationPropertyToHclTerraform(struct!.snapshotConfiguration),
+      value: awsDistributionConfigurationSnapshotConfigurationPropertyToHclTerraform(struct!.snapshotConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SnapshotConfigurationPropertyList",
@@ -624,7 +624,7 @@ export function tfDistributionConfigurationFastLaunchConfigurationPropertyToHclT
 }
 
 
-export function tfDistributionConfigurationLaunchTemplateConfigurationPropertyToTerraform(struct?: TfDistributionConfiguration.LaunchTemplateConfigurationProperty | cdktn.IResolvable): any {
+export function awsDistributionConfigurationLaunchTemplateConfigurationPropertyToTerraform(struct?: AwsDistributionConfiguration.LaunchTemplateConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -637,7 +637,7 @@ export function tfDistributionConfigurationLaunchTemplateConfigurationPropertyTo
 }
 
 
-export function tfDistributionConfigurationLaunchTemplateConfigurationPropertyToHclTerraform(struct?: TfDistributionConfiguration.LaunchTemplateConfigurationProperty | cdktn.IResolvable): any {
+export function awsDistributionConfigurationLaunchTemplateConfigurationPropertyToHclTerraform(struct?: AwsDistributionConfiguration.LaunchTemplateConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -668,7 +668,7 @@ export function tfDistributionConfigurationLaunchTemplateConfigurationPropertyTo
 }
 
 
-export function tfDistributionConfigurationS3ExportConfigurationPropertyToTerraform(struct?: TfDistributionConfiguration.S3ExportConfigurationPropertyOutputReference | TfDistributionConfiguration.S3ExportConfigurationProperty): any {
+export function awsDistributionConfigurationS3ExportConfigurationPropertyToTerraform(struct?: AwsDistributionConfiguration.S3ExportConfigurationPropertyOutputReference | AwsDistributionConfiguration.S3ExportConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -682,7 +682,7 @@ export function tfDistributionConfigurationS3ExportConfigurationPropertyToTerraf
 }
 
 
-export function tfDistributionConfigurationS3ExportConfigurationPropertyToHclTerraform(struct?: TfDistributionConfiguration.S3ExportConfigurationPropertyOutputReference | TfDistributionConfiguration.S3ExportConfigurationProperty): any {
+export function awsDistributionConfigurationS3ExportConfigurationPropertyToHclTerraform(struct?: AwsDistributionConfiguration.S3ExportConfigurationPropertyOutputReference | AwsDistributionConfiguration.S3ExportConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -719,7 +719,7 @@ export function tfDistributionConfigurationS3ExportConfigurationPropertyToHclTer
 }
 
 
-export function tfDistributionConfigurationSsmParameterConfigurationPropertyToTerraform(struct?: TfDistributionConfiguration.SsmParameterConfigurationProperty | cdktn.IResolvable): any {
+export function awsDistributionConfigurationSsmParameterConfigurationPropertyToTerraform(struct?: AwsDistributionConfiguration.SsmParameterConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -732,7 +732,7 @@ export function tfDistributionConfigurationSsmParameterConfigurationPropertyToTe
 }
 
 
-export function tfDistributionConfigurationSsmParameterConfigurationPropertyToHclTerraform(struct?: TfDistributionConfiguration.SsmParameterConfigurationProperty | cdktn.IResolvable): any {
+export function awsDistributionConfigurationSsmParameterConfigurationPropertyToHclTerraform(struct?: AwsDistributionConfiguration.SsmParameterConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -763,7 +763,7 @@ export function tfDistributionConfigurationSsmParameterConfigurationPropertyToHc
 }
 
 
-export function tfDistributionConfigurationDistributionPropertyToTerraform(struct?: TfDistributionConfiguration.DistributionProperty | cdktn.IResolvable): any {
+export function awsDistributionConfigurationDistributionPropertyToTerraform(struct?: AwsDistributionConfiguration.DistributionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -771,17 +771,17 @@ export function tfDistributionConfigurationDistributionPropertyToTerraform(struc
   return {
     license_configuration_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.licenseConfigurationArns),
     region: cdktn.stringToTerraform(struct!.region),
-    ami_distribution_configuration: tfDistributionConfigurationAmiDistributionConfigurationPropertyToTerraform(struct!.amiDistributionConfiguration),
-    container_distribution_configuration: tfDistributionConfigurationContainerDistributionConfigurationPropertyToTerraform(struct!.containerDistributionConfiguration),
-    fast_launch_configuration: cdktn.listMapper(tfDistributionConfigurationFastLaunchConfigurationPropertyToTerraform, true)(struct!.fastLaunchConfiguration),
-    launch_template_configuration: cdktn.listMapper(tfDistributionConfigurationLaunchTemplateConfigurationPropertyToTerraform, true)(struct!.launchTemplateConfiguration),
-    s3_export_configuration: tfDistributionConfigurationS3ExportConfigurationPropertyToTerraform(struct!.s3ExportConfiguration),
-    ssm_parameter_configuration: cdktn.listMapper(tfDistributionConfigurationSsmParameterConfigurationPropertyToTerraform, true)(struct!.ssmParameterConfiguration),
+    ami_distribution_configuration: awsDistributionConfigurationAmiDistributionConfigurationPropertyToTerraform(struct!.amiDistributionConfiguration),
+    container_distribution_configuration: awsDistributionConfigurationContainerDistributionConfigurationPropertyToTerraform(struct!.containerDistributionConfiguration),
+    fast_launch_configuration: cdktn.listMapper(awsDistributionConfigurationFastLaunchConfigurationPropertyToTerraform, true)(struct!.fastLaunchConfiguration),
+    launch_template_configuration: cdktn.listMapper(awsDistributionConfigurationLaunchTemplateConfigurationPropertyToTerraform, true)(struct!.launchTemplateConfiguration),
+    s3_export_configuration: awsDistributionConfigurationS3ExportConfigurationPropertyToTerraform(struct!.s3ExportConfiguration),
+    ssm_parameter_configuration: cdktn.listMapper(awsDistributionConfigurationSsmParameterConfigurationPropertyToTerraform, true)(struct!.ssmParameterConfiguration),
   }
 }
 
 
-export function tfDistributionConfigurationDistributionPropertyToHclTerraform(struct?: TfDistributionConfiguration.DistributionProperty | cdktn.IResolvable): any {
+export function awsDistributionConfigurationDistributionPropertyToHclTerraform(struct?: AwsDistributionConfiguration.DistributionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -800,37 +800,37 @@ export function tfDistributionConfigurationDistributionPropertyToHclTerraform(st
       storageClassType: "string",
     },
     ami_distribution_configuration: {
-      value: tfDistributionConfigurationAmiDistributionConfigurationPropertyToHclTerraform(struct!.amiDistributionConfiguration),
+      value: awsDistributionConfigurationAmiDistributionConfigurationPropertyToHclTerraform(struct!.amiDistributionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "AmiDistributionConfigurationPropertyList",
     },
     container_distribution_configuration: {
-      value: tfDistributionConfigurationContainerDistributionConfigurationPropertyToHclTerraform(struct!.containerDistributionConfiguration),
+      value: awsDistributionConfigurationContainerDistributionConfigurationPropertyToHclTerraform(struct!.containerDistributionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ContainerDistributionConfigurationPropertyList",
     },
     fast_launch_configuration: {
-      value: cdktn.listMapperHcl(tfDistributionConfigurationFastLaunchConfigurationPropertyToHclTerraform, true)(struct!.fastLaunchConfiguration),
+      value: cdktn.listMapperHcl(awsDistributionConfigurationFastLaunchConfigurationPropertyToHclTerraform, true)(struct!.fastLaunchConfiguration),
       isBlock: true,
       type: "set",
       storageClassType: "FastLaunchConfigurationPropertyList",
     },
     launch_template_configuration: {
-      value: cdktn.listMapperHcl(tfDistributionConfigurationLaunchTemplateConfigurationPropertyToHclTerraform, true)(struct!.launchTemplateConfiguration),
+      value: cdktn.listMapperHcl(awsDistributionConfigurationLaunchTemplateConfigurationPropertyToHclTerraform, true)(struct!.launchTemplateConfiguration),
       isBlock: true,
       type: "set",
       storageClassType: "LaunchTemplateConfigurationPropertyList",
     },
     s3_export_configuration: {
-      value: tfDistributionConfigurationS3ExportConfigurationPropertyToHclTerraform(struct!.s3ExportConfiguration),
+      value: awsDistributionConfigurationS3ExportConfigurationPropertyToHclTerraform(struct!.s3ExportConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "S3ExportConfigurationPropertyList",
     },
     ssm_parameter_configuration: {
-      value: cdktn.listMapperHcl(tfDistributionConfigurationSsmParameterConfigurationPropertyToHclTerraform, true)(struct!.ssmParameterConfiguration),
+      value: cdktn.listMapperHcl(awsDistributionConfigurationSsmParameterConfigurationPropertyToHclTerraform, true)(struct!.ssmParameterConfiguration),
       isBlock: true,
       type: "set",
       storageClassType: "SsmParameterConfigurationPropertyList",
@@ -842,22 +842,22 @@ export function tfDistributionConfigurationDistributionPropertyToHclTerraform(st
 }
 
 
-export namespace TfDistributionConfiguration {
+export namespace AwsDistributionConfiguration {
 export interface LaunchPermissionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#organization_arns TfDistributionConfiguration#organization_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#organization_arns AwsDistributionConfiguration#organization_arns}
   */
   readonly organizationArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#organizational_unit_arns TfDistributionConfiguration#organizational_unit_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#organizational_unit_arns AwsDistributionConfiguration#organizational_unit_arns}
   */
   readonly organizationalUnitArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#user_groups TfDistributionConfiguration#user_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#user_groups AwsDistributionConfiguration#user_groups}
   */
   readonly userGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#user_ids TfDistributionConfiguration#user_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#user_ids AwsDistributionConfiguration#user_ids}
   */
   readonly userIds?: string[];
 }
@@ -977,29 +977,29 @@ export class LaunchPermissionPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface AmiDistributionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#ami_tags TfDistributionConfiguration#ami_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#ami_tags AwsDistributionConfiguration#ami_tags}
   */
   readonly amiTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#description TfDistributionConfiguration#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#description AwsDistributionConfiguration#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#kms_key_id TfDistributionConfiguration#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#kms_key_id AwsDistributionConfiguration#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#name TfDistributionConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#name AwsDistributionConfiguration#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#target_account_ids TfDistributionConfiguration#target_account_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#target_account_ids AwsDistributionConfiguration#target_account_ids}
   */
   readonly targetAccountIds?: string[];
   /**
   * launch_permission block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#launch_permission TfDistributionConfiguration#launch_permission}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#launch_permission AwsDistributionConfiguration#launch_permission}
   */
   readonly launchPermission?: LaunchPermissionProperty;
 }
@@ -1163,11 +1163,11 @@ export class AmiDistributionConfigurationPropertyOutputReference extends cdktn.C
 }
 export interface TargetRepositoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#repository_name TfDistributionConfiguration#repository_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#repository_name AwsDistributionConfiguration#repository_name}
   */
   readonly repositoryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#service TfDistributionConfiguration#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#service AwsDistributionConfiguration#service}
   */
   readonly service: string;
 }
@@ -1237,17 +1237,17 @@ export class TargetRepositoryPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface ContainerDistributionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#container_tags TfDistributionConfiguration#container_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#container_tags AwsDistributionConfiguration#container_tags}
   */
   readonly containerTags?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#description TfDistributionConfiguration#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#description AwsDistributionConfiguration#description}
   */
   readonly description?: string;
   /**
   * target_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#target_repository TfDistributionConfiguration#target_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#target_repository AwsDistributionConfiguration#target_repository}
   */
   readonly targetRepository: TargetRepositoryProperty;
 }
@@ -1342,15 +1342,15 @@ export class ContainerDistributionConfigurationPropertyOutputReference extends c
 }
 export interface LaunchTemplateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#launch_template_id TfDistributionConfiguration#launch_template_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#launch_template_id AwsDistributionConfiguration#launch_template_id}
   */
   readonly launchTemplateId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#launch_template_name TfDistributionConfiguration#launch_template_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#launch_template_name AwsDistributionConfiguration#launch_template_name}
   */
   readonly launchTemplateName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#launch_template_version TfDistributionConfiguration#launch_template_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#launch_template_version AwsDistributionConfiguration#launch_template_version}
   */
   readonly launchTemplateVersion?: string;
 }
@@ -1448,7 +1448,7 @@ export class LaunchTemplatePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SnapshotConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#target_resource_count TfDistributionConfiguration#target_resource_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#target_resource_count AwsDistributionConfiguration#target_resource_count}
   */
   readonly targetResourceCount?: number;
 }
@@ -1502,27 +1502,27 @@ export class SnapshotConfigurationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface FastLaunchConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#account_id TfDistributionConfiguration#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#account_id AwsDistributionConfiguration#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#enabled TfDistributionConfiguration#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#enabled AwsDistributionConfiguration#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#max_parallel_launches TfDistributionConfiguration#max_parallel_launches}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#max_parallel_launches AwsDistributionConfiguration#max_parallel_launches}
   */
   readonly maxParallelLaunches?: number;
   /**
   * launch_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#launch_template TfDistributionConfiguration#launch_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#launch_template AwsDistributionConfiguration#launch_template}
   */
   readonly launchTemplate?: LaunchTemplateProperty;
   /**
   * snapshot_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#snapshot_configuration TfDistributionConfiguration#snapshot_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#snapshot_configuration AwsDistributionConfiguration#snapshot_configuration}
   */
   readonly snapshotConfiguration?: SnapshotConfigurationProperty;
 }
@@ -1690,15 +1690,15 @@ export class FastLaunchConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface LaunchTemplateConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#account_id TfDistributionConfiguration#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#account_id AwsDistributionConfiguration#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#default TfDistributionConfiguration#default}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#default AwsDistributionConfiguration#default}
   */
   readonly default?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#launch_template_id TfDistributionConfiguration#launch_template_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#launch_template_id AwsDistributionConfiguration#launch_template_id}
   */
   readonly launchTemplateId: string;
 }
@@ -1825,19 +1825,19 @@ export class LaunchTemplateConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface S3ExportConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#disk_image_format TfDistributionConfiguration#disk_image_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#disk_image_format AwsDistributionConfiguration#disk_image_format}
   */
   readonly diskImageFormat: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#role_name TfDistributionConfiguration#role_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#role_name AwsDistributionConfiguration#role_name}
   */
   readonly roleName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#s3_bucket TfDistributionConfiguration#s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#s3_bucket AwsDistributionConfiguration#s3_bucket}
   */
   readonly s3Bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#s3_prefix TfDistributionConfiguration#s3_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#s3_prefix AwsDistributionConfiguration#s3_prefix}
   */
   readonly s3Prefix?: string;
 }
@@ -1948,15 +1948,15 @@ export class S3ExportConfigurationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface SsmParameterConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#ami_account_id TfDistributionConfiguration#ami_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#ami_account_id AwsDistributionConfiguration#ami_account_id}
   */
   readonly amiAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#data_type TfDistributionConfiguration#data_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#data_type AwsDistributionConfiguration#data_type}
   */
   readonly dataType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#parameter_name TfDistributionConfiguration#parameter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#parameter_name AwsDistributionConfiguration#parameter_name}
   */
   readonly parameterName: string;
 }
@@ -2083,47 +2083,47 @@ export class SsmParameterConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface DistributionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#license_configuration_arns TfDistributionConfiguration#license_configuration_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#license_configuration_arns AwsDistributionConfiguration#license_configuration_arns}
   */
   readonly licenseConfigurationArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#region TfDistributionConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#region AwsDistributionConfiguration#region}
   */
   readonly region: string;
   /**
   * ami_distribution_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#ami_distribution_configuration TfDistributionConfiguration#ami_distribution_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#ami_distribution_configuration AwsDistributionConfiguration#ami_distribution_configuration}
   */
   readonly amiDistributionConfiguration?: AmiDistributionConfigurationProperty;
   /**
   * container_distribution_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#container_distribution_configuration TfDistributionConfiguration#container_distribution_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#container_distribution_configuration AwsDistributionConfiguration#container_distribution_configuration}
   */
   readonly containerDistributionConfiguration?: ContainerDistributionConfigurationProperty;
   /**
   * fast_launch_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#fast_launch_configuration TfDistributionConfiguration#fast_launch_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#fast_launch_configuration AwsDistributionConfiguration#fast_launch_configuration}
   */
   readonly fastLaunchConfiguration?: FastLaunchConfigurationProperty[] | cdktn.IResolvable;
   /**
   * launch_template_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#launch_template_configuration TfDistributionConfiguration#launch_template_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#launch_template_configuration AwsDistributionConfiguration#launch_template_configuration}
   */
   readonly launchTemplateConfiguration?: LaunchTemplateConfigurationProperty[] | cdktn.IResolvable;
   /**
   * s3_export_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#s3_export_configuration TfDistributionConfiguration#s3_export_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#s3_export_configuration AwsDistributionConfiguration#s3_export_configuration}
   */
   readonly s3ExportConfiguration?: S3ExportConfigurationProperty;
   /**
   * ssm_parameter_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#ssm_parameter_configuration TfDistributionConfiguration#ssm_parameter_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/imagebuilder_distribution_configuration#ssm_parameter_configuration AwsDistributionConfiguration#ssm_parameter_configuration}
   */
   readonly ssmParameterConfiguration?: SsmParameterConfigurationProperty[] | cdktn.IResolvable;
 }

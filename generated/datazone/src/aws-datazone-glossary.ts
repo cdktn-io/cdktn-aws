@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfGlossaryConfig extends cdktn.TerraformMetaArguments {
+export interface AwsGlossaryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary#description TfGlossary#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary#description AwsGlossary#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary#domain_identifier TfGlossary#domain_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary#domain_identifier AwsGlossary#domain_identifier}
   */
   readonly domainIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary#name TfGlossary#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary#name AwsGlossary#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary#owning_project_identifier TfGlossary#owning_project_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary#owning_project_identifier AwsGlossary#owning_project_identifier}
   */
   readonly owningProjectIdentifier: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary#region TfGlossary#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary#region AwsGlossary#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary#status TfGlossary#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary#status AwsGlossary#status}
   */
   readonly status?: string;
 }
@@ -37,7 +37,7 @@ export interface TfGlossaryConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary aws_datazone_glossary}
 */
-export class TfGlossary extends cdktn.TerraformResource {
+export class AwsGlossary extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class TfGlossary extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfGlossary resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsGlossary resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfGlossary to import
-  * @param importFromId The id of the existing TfGlossary that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfGlossary to import is found
+  * @param importToId The construct id used in the generated config for the AwsGlossary to import
+  * @param importFromId The id of the existing AwsGlossary that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGlossary to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datazone_glossary", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class TfGlossary extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfGlossaryConfig
+  * @param options AwsGlossaryConfig
   */
-  public constructor(scope: Construct, id: string, config: TfGlossaryConfig) {
+  public constructor(scope: Construct, id: string, config: AwsGlossaryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datazone_glossary',
       terraformGeneratorMetadata: {

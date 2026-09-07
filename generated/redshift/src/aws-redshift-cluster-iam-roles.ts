@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfClusterIamRolesConfig extends cdktn.TerraformMetaArguments {
+export interface AwsClusterIamRolesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#cluster_identifier TfClusterIamRoles#cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#cluster_identifier AwsClusterIamRoles#cluster_identifier}
   */
   readonly clusterIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#default_iam_role_arn TfClusterIamRoles#default_iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#default_iam_role_arn AwsClusterIamRoles#default_iam_role_arn}
   */
   readonly defaultIamRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#iam_role_arns TfClusterIamRoles#iam_role_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#iam_role_arns AwsClusterIamRoles#iam_role_arns}
   */
   readonly iamRoleArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#id TfClusterIamRoles#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#id AwsClusterIamRoles#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,21 +28,21 @@ export interface TfClusterIamRolesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#region TfClusterIamRoles#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#region AwsClusterIamRoles#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#timeouts TfClusterIamRoles#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#timeouts AwsClusterIamRoles#timeouts}
   */
-  readonly timeouts?: TfClusterIamRoles.TimeoutsProperty;
+  readonly timeouts?: AwsClusterIamRoles.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles aws_redshift_cluster_iam_roles}
 */
-export class TfClusterIamRoles extends cdktn.TerraformResource {
+export class AwsClusterIamRoles extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class TfClusterIamRoles extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfClusterIamRoles resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsClusterIamRoles resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfClusterIamRoles to import
-  * @param importFromId The id of the existing TfClusterIamRoles that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfClusterIamRoles to import is found
+  * @param importToId The construct id used in the generated config for the AwsClusterIamRoles to import
+  * @param importFromId The id of the existing AwsClusterIamRoles that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsClusterIamRoles to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshift_cluster_iam_roles", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class TfClusterIamRoles extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfClusterIamRolesConfig
+  * @param options AwsClusterIamRolesConfig
   */
-  public constructor(scope: Construct, id: string, config: TfClusterIamRolesConfig) {
+  public constructor(scope: Construct, id: string, config: AwsClusterIamRolesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshift_cluster_iam_roles',
       terraformGeneratorMetadata: {
@@ -180,11 +180,11 @@ export class TfClusterIamRoles extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfClusterIamRoles.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsClusterIamRoles.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfClusterIamRoles.TimeoutsProperty) {
+  public putTimeouts(value: AwsClusterIamRoles.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -206,7 +206,7 @@ export class TfClusterIamRoles extends cdktn.TerraformResource {
       iam_role_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(this._iamRoleArns),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfClusterIamRolesTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsClusterIamRolesTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -243,10 +243,10 @@ export class TfClusterIamRoles extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfClusterIamRolesTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsClusterIamRolesTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfClusterIamRoles.TimeoutsProperty",
+        storageClassType: "AwsClusterIamRoles.TimeoutsProperty",
       },
     };
 
@@ -255,7 +255,7 @@ export class TfClusterIamRoles extends cdktn.TerraformResource {
   }
 }
 
-export function tfClusterIamRolesTimeoutsPropertyToTerraform(struct?: TfClusterIamRoles.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsClusterIamRolesTimeoutsPropertyToTerraform(struct?: AwsClusterIamRoles.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function tfClusterIamRolesTimeoutsPropertyToTerraform(struct?: TfClusterI
 }
 
 
-export function tfClusterIamRolesTimeoutsPropertyToHclTerraform(struct?: TfClusterIamRoles.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsClusterIamRolesTimeoutsPropertyToHclTerraform(struct?: AwsClusterIamRoles.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,18 +299,18 @@ export function tfClusterIamRolesTimeoutsPropertyToHclTerraform(struct?: TfClust
 }
 
 
-export namespace TfClusterIamRoles {
+export namespace AwsClusterIamRoles {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#create TfClusterIamRoles#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#create AwsClusterIamRoles#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#delete TfClusterIamRoles#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#delete AwsClusterIamRoles#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#update TfClusterIamRoles#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_cluster_iam_roles#update AwsClusterIamRoles#update}
   */
   readonly update?: string;
 }

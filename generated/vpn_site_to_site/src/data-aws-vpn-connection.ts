@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfConnectionConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsConnectionConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_connection#region DataTfConnection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_connection#region DataAwsConnection#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_connection#vpn_connection_id DataTfConnection#vpn_connection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_connection#vpn_connection_id DataAwsConnection#vpn_connection_id}
   */
   readonly vpnConnectionId?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_connection#filter DataTfConnection#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_connection#filter DataAwsConnection#filter}
   */
-  readonly filter?: DataTfConnection.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsConnection.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_connection aws_vpn_connection}
 */
-export class DataTfConnection extends cdktn.TerraformDataSource {
+export class DataAwsConnection extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class DataTfConnection extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfConnection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsConnection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfConnection to import
-  * @param importFromId The id of the existing DataTfConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_connection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfConnection to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsConnection to import
+  * @param importFromId The id of the existing DataAwsConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_connection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpn_connection", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class DataTfConnection extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfConnectionConfig = {}
+  * @param options DataAwsConnectionConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfConnectionConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsConnectionConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_vpn_connection',
       terraformGeneratorMetadata: {
@@ -136,7 +136,7 @@ export class DataTfConnection extends cdktn.TerraformDataSource {
   }
 
   // routes - computed: true, optional: false, required: false
-  private _routes = new DataTfConnection.RoutesPropertyList(this, "routes", false);
+  private _routes = new DataAwsConnection.RoutesPropertyList(this, "routes", false);
   public get routes() {
     return this._routes;
   }
@@ -163,7 +163,7 @@ export class DataTfConnection extends cdktn.TerraformDataSource {
   }
 
   // vgw_telemetries - computed: true, optional: false, required: false
-  private _vgwTelemetries = new DataTfConnection.VgwTelemetriesPropertyList(this, "vgw_telemetries", false);
+  private _vgwTelemetries = new DataAwsConnection.VgwTelemetriesPropertyList(this, "vgw_telemetries", false);
   public get vgwTelemetries() {
     return this._vgwTelemetries;
   }
@@ -195,11 +195,11 @@ export class DataTfConnection extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfConnection.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsConnection.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfConnection.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsConnection.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -218,7 +218,7 @@ export class DataTfConnection extends cdktn.TerraformDataSource {
     return {
       region: cdktn.stringToTerraform(this._region),
       vpn_connection_id: cdktn.stringToTerraform(this._vpnConnectionId),
-      filter: cdktn.listMapper(dataTfConnectionFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataAwsConnectionFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -237,10 +237,10 @@ export class DataTfConnection extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfConnectionFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsConnectionFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfConnection.FilterPropertyList",
+        storageClassType: "DataAwsConnection.FilterPropertyList",
       },
     };
 
@@ -249,7 +249,7 @@ export class DataTfConnection extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfConnectionRoutesPropertyToTerraform(struct?: DataTfConnection.RoutesProperty): any {
+export function dataAwsConnectionRoutesPropertyToTerraform(struct?: DataAwsConnection.RoutesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function dataTfConnectionRoutesPropertyToTerraform(struct?: DataTfConnect
 }
 
 
-export function dataTfConnectionRoutesPropertyToHclTerraform(struct?: DataTfConnection.RoutesProperty): any {
+export function dataAwsConnectionRoutesPropertyToHclTerraform(struct?: DataAwsConnection.RoutesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -270,7 +270,7 @@ export function dataTfConnectionRoutesPropertyToHclTerraform(struct?: DataTfConn
 }
 
 
-export function dataTfConnectionVgwTelemetriesPropertyToTerraform(struct?: DataTfConnection.VgwTelemetriesProperty): any {
+export function dataAwsConnectionVgwTelemetriesPropertyToTerraform(struct?: DataAwsConnection.VgwTelemetriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -280,7 +280,7 @@ export function dataTfConnectionVgwTelemetriesPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfConnectionVgwTelemetriesPropertyToHclTerraform(struct?: DataTfConnection.VgwTelemetriesProperty): any {
+export function dataAwsConnectionVgwTelemetriesPropertyToHclTerraform(struct?: DataAwsConnection.VgwTelemetriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -291,7 +291,7 @@ export function dataTfConnectionVgwTelemetriesPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfConnectionFilterPropertyToTerraform(struct?: DataTfConnection.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsConnectionFilterPropertyToTerraform(struct?: DataAwsConnection.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -303,7 +303,7 @@ export function dataTfConnectionFilterPropertyToTerraform(struct?: DataTfConnect
 }
 
 
-export function dataTfConnectionFilterPropertyToHclTerraform(struct?: DataTfConnection.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsConnectionFilterPropertyToHclTerraform(struct?: DataAwsConnection.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function dataTfConnectionFilterPropertyToHclTerraform(struct?: DataTfConn
 }
 
 
-export namespace DataTfConnection {
+export namespace DataAwsConnection {
 export interface RoutesProperty {
 }
 export class RoutesPropertyOutputReference extends cdktn.ComplexObject {
@@ -469,11 +469,11 @@ export class VgwTelemetriesPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_connection#name DataTfConnection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_connection#name DataAwsConnection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_connection#values DataTfConnection#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpn_connection#values DataAwsConnection#values}
   */
   readonly values: string[];
 }

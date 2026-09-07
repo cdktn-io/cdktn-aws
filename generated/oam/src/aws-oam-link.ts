@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLinkConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLinkConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#id TfLink#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#id AwsLink#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#label_template TfLink#label_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#label_template AwsLink#label_template}
   */
   readonly labelTemplate: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#region TfLink#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#region AwsLink#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#resource_types TfLink#resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#resource_types AwsLink#resource_types}
   */
   readonly resourceTypes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#sink_identifier TfLink#sink_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#sink_identifier AwsLink#sink_identifier}
   */
   readonly sinkIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#tags TfLink#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#tags AwsLink#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#tags_all TfLink#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#tags_all AwsLink#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * link_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#link_configuration TfLink#link_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#link_configuration AwsLink#link_configuration}
   */
-  readonly linkConfiguration?: TfLink.LinkConfigurationProperty;
+  readonly linkConfiguration?: AwsLink.LinkConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#timeouts TfLink#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#timeouts AwsLink#timeouts}
   */
-  readonly timeouts?: TfLink.TimeoutsProperty;
+  readonly timeouts?: AwsLink.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link aws_oam_link}
 */
-export class TfLink extends cdktn.TerraformResource {
+export class AwsLink extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class TfLink extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLink resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLink resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLink to import
-  * @param importFromId The id of the existing TfLink that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLink to import is found
+  * @param importToId The construct id used in the generated config for the AwsLink to import
+  * @param importFromId The id of the existing AwsLink that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLink to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_oam_link", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class TfLink extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLinkConfig
+  * @param options AwsLinkConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLinkConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLinkConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_oam_link',
       terraformGeneratorMetadata: {
@@ -243,11 +243,11 @@ export class TfLink extends cdktn.TerraformResource {
   }
 
   // link_configuration - computed: false, optional: true, required: false
-  private _linkConfiguration = new TfLink.LinkConfigurationPropertyOutputReference(this, "link_configuration");
+  private _linkConfiguration = new AwsLink.LinkConfigurationPropertyOutputReference(this, "link_configuration");
   public get linkConfiguration() {
     return this._linkConfiguration;
   }
-  public putLinkConfiguration(value: TfLink.LinkConfigurationProperty) {
+  public putLinkConfiguration(value: AwsLink.LinkConfigurationProperty) {
     this._linkConfiguration.internalValue = value;
   }
   public resetLinkConfiguration() {
@@ -259,11 +259,11 @@ export class TfLink extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfLink.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsLink.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfLink.TimeoutsProperty) {
+  public putTimeouts(value: AwsLink.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -287,8 +287,8 @@ export class TfLink extends cdktn.TerraformResource {
       sink_identifier: cdktn.stringToTerraform(this._sinkIdentifier),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      link_configuration: tfLinkLinkConfigurationPropertyToTerraform(this._linkConfiguration.internalValue),
-      timeouts: tfLinkTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      link_configuration: awsLinkLinkConfigurationPropertyToTerraform(this._linkConfiguration.internalValue),
+      timeouts: awsLinkTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -337,16 +337,16 @@ export class TfLink extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       link_configuration: {
-        value: tfLinkLinkConfigurationPropertyToHclTerraform(this._linkConfiguration.internalValue),
+        value: awsLinkLinkConfigurationPropertyToHclTerraform(this._linkConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLink.LinkConfigurationPropertyList",
+        storageClassType: "AwsLink.LinkConfigurationPropertyList",
       },
       timeouts: {
-        value: tfLinkTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsLinkTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfLink.TimeoutsProperty",
+        storageClassType: "AwsLink.TimeoutsProperty",
       },
     };
 
@@ -355,7 +355,7 @@ export class TfLink extends cdktn.TerraformResource {
   }
 }
 
-export function tfLinkLogGroupConfigurationPropertyToTerraform(struct?: TfLink.LogGroupConfigurationPropertyOutputReference | TfLink.LogGroupConfigurationProperty): any {
+export function awsLinkLogGroupConfigurationPropertyToTerraform(struct?: AwsLink.LogGroupConfigurationPropertyOutputReference | AwsLink.LogGroupConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function tfLinkLogGroupConfigurationPropertyToTerraform(struct?: TfLink.L
 }
 
 
-export function tfLinkLogGroupConfigurationPropertyToHclTerraform(struct?: TfLink.LogGroupConfigurationPropertyOutputReference | TfLink.LogGroupConfigurationProperty): any {
+export function awsLinkLogGroupConfigurationPropertyToHclTerraform(struct?: AwsLink.LogGroupConfigurationPropertyOutputReference | AwsLink.LogGroupConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function tfLinkLogGroupConfigurationPropertyToHclTerraform(struct?: TfLin
 }
 
 
-export function tfLinkMetricConfigurationPropertyToTerraform(struct?: TfLink.MetricConfigurationPropertyOutputReference | TfLink.MetricConfigurationProperty): any {
+export function awsLinkMetricConfigurationPropertyToTerraform(struct?: AwsLink.MetricConfigurationPropertyOutputReference | AwsLink.MetricConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -396,7 +396,7 @@ export function tfLinkMetricConfigurationPropertyToTerraform(struct?: TfLink.Met
 }
 
 
-export function tfLinkMetricConfigurationPropertyToHclTerraform(struct?: TfLink.MetricConfigurationPropertyOutputReference | TfLink.MetricConfigurationProperty): any {
+export function awsLinkMetricConfigurationPropertyToHclTerraform(struct?: AwsLink.MetricConfigurationPropertyOutputReference | AwsLink.MetricConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -415,32 +415,32 @@ export function tfLinkMetricConfigurationPropertyToHclTerraform(struct?: TfLink.
 }
 
 
-export function tfLinkLinkConfigurationPropertyToTerraform(struct?: TfLink.LinkConfigurationPropertyOutputReference | TfLink.LinkConfigurationProperty): any {
+export function awsLinkLinkConfigurationPropertyToTerraform(struct?: AwsLink.LinkConfigurationPropertyOutputReference | AwsLink.LinkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    log_group_configuration: tfLinkLogGroupConfigurationPropertyToTerraform(struct!.logGroupConfiguration),
-    metric_configuration: tfLinkMetricConfigurationPropertyToTerraform(struct!.metricConfiguration),
+    log_group_configuration: awsLinkLogGroupConfigurationPropertyToTerraform(struct!.logGroupConfiguration),
+    metric_configuration: awsLinkMetricConfigurationPropertyToTerraform(struct!.metricConfiguration),
   }
 }
 
 
-export function tfLinkLinkConfigurationPropertyToHclTerraform(struct?: TfLink.LinkConfigurationPropertyOutputReference | TfLink.LinkConfigurationProperty): any {
+export function awsLinkLinkConfigurationPropertyToHclTerraform(struct?: AwsLink.LinkConfigurationPropertyOutputReference | AwsLink.LinkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     log_group_configuration: {
-      value: tfLinkLogGroupConfigurationPropertyToHclTerraform(struct!.logGroupConfiguration),
+      value: awsLinkLogGroupConfigurationPropertyToHclTerraform(struct!.logGroupConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "LogGroupConfigurationPropertyList",
     },
     metric_configuration: {
-      value: tfLinkMetricConfigurationPropertyToHclTerraform(struct!.metricConfiguration),
+      value: awsLinkMetricConfigurationPropertyToHclTerraform(struct!.metricConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "MetricConfigurationPropertyList",
@@ -452,7 +452,7 @@ export function tfLinkLinkConfigurationPropertyToHclTerraform(struct?: TfLink.Li
 }
 
 
-export function tfLinkTimeoutsPropertyToTerraform(struct?: TfLink.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsLinkTimeoutsPropertyToTerraform(struct?: AwsLink.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -465,7 +465,7 @@ export function tfLinkTimeoutsPropertyToTerraform(struct?: TfLink.TimeoutsProper
 }
 
 
-export function tfLinkTimeoutsPropertyToHclTerraform(struct?: TfLink.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsLinkTimeoutsPropertyToHclTerraform(struct?: AwsLink.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,10 +496,10 @@ export function tfLinkTimeoutsPropertyToHclTerraform(struct?: TfLink.TimeoutsPro
 }
 
 
-export namespace TfLink {
+export namespace AwsLink {
 export interface LogGroupConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#filter TfLink#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#filter AwsLink#filter}
   */
   readonly filter: string;
 }
@@ -550,7 +550,7 @@ export class LogGroupConfigurationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface MetricConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#filter TfLink#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#filter AwsLink#filter}
   */
   readonly filter: string;
 }
@@ -603,13 +603,13 @@ export interface LinkConfigurationProperty {
   /**
   * log_group_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#log_group_configuration TfLink#log_group_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#log_group_configuration AwsLink#log_group_configuration}
   */
   readonly logGroupConfiguration?: LogGroupConfigurationProperty;
   /**
   * metric_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#metric_configuration TfLink#metric_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#metric_configuration AwsLink#metric_configuration}
   */
   readonly metricConfiguration?: MetricConfigurationProperty;
 }
@@ -685,15 +685,15 @@ export class LinkConfigurationPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#create TfLink#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#create AwsLink#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#delete TfLink#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#delete AwsLink#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#update TfLink#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/oam_link#update AwsLink#update}
   */
   readonly update?: string;
 }

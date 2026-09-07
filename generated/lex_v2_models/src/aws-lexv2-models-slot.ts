@@ -5,77 +5,77 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSlotConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSlotConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#bot_id TfSlot#bot_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#bot_id AwsSlot#bot_id}
   */
   readonly botId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#bot_version TfSlot#bot_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#bot_version AwsSlot#bot_version}
   */
   readonly botVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#description TfSlot#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#description AwsSlot#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#intent_id TfSlot#intent_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#intent_id AwsSlot#intent_id}
   */
   readonly intentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#locale_id TfSlot#locale_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#locale_id AwsSlot#locale_id}
   */
   readonly localeId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#name TfSlot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#name AwsSlot#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#region TfSlot#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#region AwsSlot#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#slot_type_id TfSlot#slot_type_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#slot_type_id AwsSlot#slot_type_id}
   */
   readonly slotTypeId?: string;
   /**
   * multiple_values_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#multiple_values_setting TfSlot#multiple_values_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#multiple_values_setting AwsSlot#multiple_values_setting}
   */
-  readonly multipleValuesSetting?: TfSlot.MultipleValuesSettingProperty[] | cdktn.IResolvable;
+  readonly multipleValuesSetting?: AwsSlot.MultipleValuesSettingProperty[] | cdktn.IResolvable;
   /**
   * obfuscation_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#obfuscation_setting TfSlot#obfuscation_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#obfuscation_setting AwsSlot#obfuscation_setting}
   */
-  readonly obfuscationSetting?: TfSlot.ObfuscationSettingProperty[] | cdktn.IResolvable;
+  readonly obfuscationSetting?: AwsSlot.ObfuscationSettingProperty[] | cdktn.IResolvable;
   /**
   * sub_slot_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#sub_slot_setting TfSlot#sub_slot_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#sub_slot_setting AwsSlot#sub_slot_setting}
   */
-  readonly subSlotSetting?: TfSlot.SubSlotSettingProperty[] | cdktn.IResolvable;
+  readonly subSlotSetting?: AwsSlot.SubSlotSettingProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#timeouts TfSlot#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#timeouts AwsSlot#timeouts}
   */
-  readonly timeouts?: TfSlot.TimeoutsProperty;
+  readonly timeouts?: AwsSlot.TimeoutsProperty;
   /**
   * value_elicitation_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value_elicitation_setting TfSlot#value_elicitation_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value_elicitation_setting AwsSlot#value_elicitation_setting}
   */
-  readonly valueElicitationSetting?: TfSlot.ValueElicitationSettingProperty[] | cdktn.IResolvable;
+  readonly valueElicitationSetting?: AwsSlot.ValueElicitationSettingProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot aws_lexv2models_slot}
 */
-export class TfSlot extends cdktn.TerraformResource {
+export class AwsSlot extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -86,11 +86,11 @@ export class TfSlot extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSlot resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSlot resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSlot to import
-  * @param importFromId The id of the existing TfSlot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSlot to import is found
+  * @param importToId The construct id used in the generated config for the AwsSlot to import
+  * @param importFromId The id of the existing AwsSlot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSlot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lexv2models_slot", importId: importFromId, provider });
@@ -105,9 +105,9 @@ export class TfSlot extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSlotConfig
+  * @param options AwsSlotConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSlotConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSlotConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lexv2models_slot',
       terraformGeneratorMetadata: {
@@ -266,11 +266,11 @@ export class TfSlot extends cdktn.TerraformResource {
   }
 
   // multiple_values_setting - computed: false, optional: true, required: false
-  private _multipleValuesSetting = new TfSlot.MultipleValuesSettingPropertyList(this, "multiple_values_setting", false);
+  private _multipleValuesSetting = new AwsSlot.MultipleValuesSettingPropertyList(this, "multiple_values_setting", false);
   public get multipleValuesSetting() {
     return this._multipleValuesSetting;
   }
-  public putMultipleValuesSetting(value: TfSlot.MultipleValuesSettingProperty[] | cdktn.IResolvable) {
+  public putMultipleValuesSetting(value: AwsSlot.MultipleValuesSettingProperty[] | cdktn.IResolvable) {
     this._multipleValuesSetting.internalValue = value;
   }
   public resetMultipleValuesSetting() {
@@ -282,11 +282,11 @@ export class TfSlot extends cdktn.TerraformResource {
   }
 
   // obfuscation_setting - computed: false, optional: true, required: false
-  private _obfuscationSetting = new TfSlot.ObfuscationSettingPropertyList(this, "obfuscation_setting", false);
+  private _obfuscationSetting = new AwsSlot.ObfuscationSettingPropertyList(this, "obfuscation_setting", false);
   public get obfuscationSetting() {
     return this._obfuscationSetting;
   }
-  public putObfuscationSetting(value: TfSlot.ObfuscationSettingProperty[] | cdktn.IResolvable) {
+  public putObfuscationSetting(value: AwsSlot.ObfuscationSettingProperty[] | cdktn.IResolvable) {
     this._obfuscationSetting.internalValue = value;
   }
   public resetObfuscationSetting() {
@@ -298,11 +298,11 @@ export class TfSlot extends cdktn.TerraformResource {
   }
 
   // sub_slot_setting - computed: false, optional: true, required: false
-  private _subSlotSetting = new TfSlot.SubSlotSettingPropertyList(this, "sub_slot_setting", false);
+  private _subSlotSetting = new AwsSlot.SubSlotSettingPropertyList(this, "sub_slot_setting", false);
   public get subSlotSetting() {
     return this._subSlotSetting;
   }
-  public putSubSlotSetting(value: TfSlot.SubSlotSettingProperty[] | cdktn.IResolvable) {
+  public putSubSlotSetting(value: AwsSlot.SubSlotSettingProperty[] | cdktn.IResolvable) {
     this._subSlotSetting.internalValue = value;
   }
   public resetSubSlotSetting() {
@@ -314,11 +314,11 @@ export class TfSlot extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfSlot.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsSlot.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfSlot.TimeoutsProperty) {
+  public putTimeouts(value: AwsSlot.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -330,11 +330,11 @@ export class TfSlot extends cdktn.TerraformResource {
   }
 
   // value_elicitation_setting - computed: false, optional: true, required: false
-  private _valueElicitationSetting = new TfSlot.ValueElicitationSettingPropertyList(this, "value_elicitation_setting", false);
+  private _valueElicitationSetting = new AwsSlot.ValueElicitationSettingPropertyList(this, "value_elicitation_setting", false);
   public get valueElicitationSetting() {
     return this._valueElicitationSetting;
   }
-  public putValueElicitationSetting(value: TfSlot.ValueElicitationSettingProperty[] | cdktn.IResolvable) {
+  public putValueElicitationSetting(value: AwsSlot.ValueElicitationSettingProperty[] | cdktn.IResolvable) {
     this._valueElicitationSetting.internalValue = value;
   }
   public resetValueElicitationSetting() {
@@ -359,11 +359,11 @@ export class TfSlot extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       slot_type_id: cdktn.stringToTerraform(this._slotTypeId),
-      multiple_values_setting: cdktn.listMapper(tfSlotMultipleValuesSettingPropertyToTerraform, true)(this._multipleValuesSetting.internalValue),
-      obfuscation_setting: cdktn.listMapper(tfSlotObfuscationSettingPropertyToTerraform, true)(this._obfuscationSetting.internalValue),
-      sub_slot_setting: cdktn.listMapper(tfSlotSubSlotSettingPropertyToTerraform, true)(this._subSlotSetting.internalValue),
-      timeouts: tfSlotTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      value_elicitation_setting: cdktn.listMapper(tfSlotValueElicitationSettingPropertyToTerraform, true)(this._valueElicitationSetting.internalValue),
+      multiple_values_setting: cdktn.listMapper(awsSlotMultipleValuesSettingPropertyToTerraform, true)(this._multipleValuesSetting.internalValue),
+      obfuscation_setting: cdktn.listMapper(awsSlotObfuscationSettingPropertyToTerraform, true)(this._obfuscationSetting.internalValue),
+      sub_slot_setting: cdktn.listMapper(awsSlotSubSlotSettingPropertyToTerraform, true)(this._subSlotSetting.internalValue),
+      timeouts: awsSlotTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      value_elicitation_setting: cdktn.listMapper(awsSlotValueElicitationSettingPropertyToTerraform, true)(this._valueElicitationSetting.internalValue),
     };
   }
 
@@ -418,34 +418,34 @@ export class TfSlot extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       multiple_values_setting: {
-        value: cdktn.listMapperHcl(tfSlotMultipleValuesSettingPropertyToHclTerraform, true)(this._multipleValuesSetting.internalValue),
+        value: cdktn.listMapperHcl(awsSlotMultipleValuesSettingPropertyToHclTerraform, true)(this._multipleValuesSetting.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSlot.MultipleValuesSettingPropertyList",
+        storageClassType: "AwsSlot.MultipleValuesSettingPropertyList",
       },
       obfuscation_setting: {
-        value: cdktn.listMapperHcl(tfSlotObfuscationSettingPropertyToHclTerraform, true)(this._obfuscationSetting.internalValue),
+        value: cdktn.listMapperHcl(awsSlotObfuscationSettingPropertyToHclTerraform, true)(this._obfuscationSetting.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSlot.ObfuscationSettingPropertyList",
+        storageClassType: "AwsSlot.ObfuscationSettingPropertyList",
       },
       sub_slot_setting: {
-        value: cdktn.listMapperHcl(tfSlotSubSlotSettingPropertyToHclTerraform, true)(this._subSlotSetting.internalValue),
+        value: cdktn.listMapperHcl(awsSlotSubSlotSettingPropertyToHclTerraform, true)(this._subSlotSetting.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSlot.SubSlotSettingPropertyList",
+        storageClassType: "AwsSlot.SubSlotSettingPropertyList",
       },
       timeouts: {
-        value: tfSlotTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsSlotTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfSlot.TimeoutsProperty",
+        storageClassType: "AwsSlot.TimeoutsProperty",
       },
       value_elicitation_setting: {
-        value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPropertyToHclTerraform, true)(this._valueElicitationSetting.internalValue),
+        value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPropertyToHclTerraform, true)(this._valueElicitationSetting.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSlot.ValueElicitationSettingPropertyList",
+        storageClassType: "AwsSlot.ValueElicitationSettingPropertyList",
       },
     };
 
@@ -454,7 +454,7 @@ export class TfSlot extends cdktn.TerraformResource {
   }
 }
 
-export function tfSlotMultipleValuesSettingPropertyToTerraform(struct?: TfSlot.MultipleValuesSettingProperty | cdktn.IResolvable): any {
+export function awsSlotMultipleValuesSettingPropertyToTerraform(struct?: AwsSlot.MultipleValuesSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -465,7 +465,7 @@ export function tfSlotMultipleValuesSettingPropertyToTerraform(struct?: TfSlot.M
 }
 
 
-export function tfSlotMultipleValuesSettingPropertyToHclTerraform(struct?: TfSlot.MultipleValuesSettingProperty | cdktn.IResolvable): any {
+export function awsSlotMultipleValuesSettingPropertyToHclTerraform(struct?: AwsSlot.MultipleValuesSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -484,7 +484,7 @@ export function tfSlotMultipleValuesSettingPropertyToHclTerraform(struct?: TfSlo
 }
 
 
-export function tfSlotObfuscationSettingPropertyToTerraform(struct?: TfSlot.ObfuscationSettingProperty | cdktn.IResolvable): any {
+export function awsSlotObfuscationSettingPropertyToTerraform(struct?: AwsSlot.ObfuscationSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -495,7 +495,7 @@ export function tfSlotObfuscationSettingPropertyToTerraform(struct?: TfSlot.Obfu
 }
 
 
-export function tfSlotObfuscationSettingPropertyToHclTerraform(struct?: TfSlot.ObfuscationSettingProperty | cdktn.IResolvable): any {
+export function awsSlotObfuscationSettingPropertyToHclTerraform(struct?: AwsSlot.ObfuscationSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -514,7 +514,7 @@ export function tfSlotObfuscationSettingPropertyToHclTerraform(struct?: TfSlot.O
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationDefaultValueListProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationDefaultValueListProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -525,7 +525,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefa
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationDefaultValueListProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationDefaultValueListProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -544,25 +544,25 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefa
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    default_value_list: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyToTerraform, true)(struct!.defaultValueList),
+    default_value_list: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyToTerraform, true)(struct!.defaultValueList),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     default_value_list: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyToHclTerraform, true)(struct!.defaultValueList),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyToHclTerraform, true)(struct!.defaultValueList),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyList",
@@ -574,7 +574,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefa
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -585,7 +585,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -604,7 +604,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -616,7 +616,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -641,7 +641,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -650,12 +650,12 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
     image_url: cdktn.stringToTerraform(struct!.imageUrl),
     subtitle: cdktn.stringToTerraform(struct!.subtitle),
     title: cdktn.stringToTerraform(struct!.title),
-    button: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
+    button: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -680,7 +680,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
       storageClassType: "string",
     },
     button: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyList",
@@ -692,7 +692,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -703,7 +703,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -722,7 +722,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -733,7 +733,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -752,46 +752,46 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_payload: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
-    image_response_card: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
-    plain_text_message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
-    ssml_message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
+    custom_payload: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
+    image_response_card: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
+    plain_text_message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
+    ssml_message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_payload: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyList",
     },
     image_response_card: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyList",
     },
     plain_text_message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyList",
     },
     ssml_message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyList",
@@ -803,7 +803,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -814,7 +814,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -833,7 +833,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -845,7 +845,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -870,7 +870,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -879,12 +879,12 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
     image_url: cdktn.stringToTerraform(struct!.imageUrl),
     subtitle: cdktn.stringToTerraform(struct!.subtitle),
     title: cdktn.stringToTerraform(struct!.title),
-    button: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
+    button: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -909,7 +909,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
       storageClassType: "string",
     },
     button: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyList",
@@ -921,7 +921,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -932,7 +932,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -951,7 +951,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -962,7 +962,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -981,46 +981,46 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_payload: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
-    image_response_card: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
-    plain_text_message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
-    ssml_message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
+    custom_payload: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
+    image_response_card: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
+    plain_text_message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
+    ssml_message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_payload: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyList",
     },
     image_response_card: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyList",
     },
     plain_text_message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyList",
     },
     ssml_message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyList",
@@ -1032,32 +1032,32 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyToTerraform, true)(struct!.message),
-    variation: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyToTerraform, true)(struct!.variation),
+    message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyToTerraform, true)(struct!.message),
+    variation: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyToTerraform, true)(struct!.variation),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyList",
     },
     variation: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyToHclTerraform, true)(struct!.variation),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyToHclTerraform, true)(struct!.variation),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyList",
@@ -1069,7 +1069,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1081,7 +1081,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1106,7 +1106,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1118,7 +1118,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1143,7 +1143,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1157,7 +1157,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1194,20 +1194,20 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     start_timeout_ms: cdktn.numberToTerraform(struct!.startTimeoutMs),
-    audio_specification: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyToTerraform, true)(struct!.audioSpecification),
-    dtmf_specification: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyToTerraform, true)(struct!.dtmfSpecification),
+    audio_specification: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyToTerraform, true)(struct!.audioSpecification),
+    dtmf_specification: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyToTerraform, true)(struct!.dtmfSpecification),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1220,13 +1220,13 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
       storageClassType: "number",
     },
     audio_specification: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyToHclTerraform, true)(struct!.audioSpecification),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyToHclTerraform, true)(struct!.audioSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyList",
     },
     dtmf_specification: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyToHclTerraform, true)(struct!.dtmfSpecification),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyToHclTerraform, true)(struct!.dtmfSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyList",
@@ -1238,7 +1238,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1249,7 +1249,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1268,7 +1268,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1276,14 +1276,14 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
   return {
     allow_interrupt: cdktn.booleanToTerraform(struct!.allowInterrupt),
     map_block_key: cdktn.stringToTerraform(struct!.mapBlockKey),
-    allowed_input_types: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyToTerraform, true)(struct!.allowedInputTypes),
-    audio_and_dtmf_input_specification: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyToTerraform, true)(struct!.audioAndDtmfInputSpecification),
-    text_input_specification: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyToTerraform, true)(struct!.textInputSpecification),
+    allowed_input_types: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyToTerraform, true)(struct!.allowedInputTypes),
+    audio_and_dtmf_input_specification: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyToTerraform, true)(struct!.audioAndDtmfInputSpecification),
+    text_input_specification: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyToTerraform, true)(struct!.textInputSpecification),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1302,19 +1302,19 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
       storageClassType: "string",
     },
     allowed_input_types: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyToHclTerraform, true)(struct!.allowedInputTypes),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyToHclTerraform, true)(struct!.allowedInputTypes),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyList",
     },
     audio_and_dtmf_input_specification: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyToHclTerraform, true)(struct!.audioAndDtmfInputSpecification),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyToHclTerraform, true)(struct!.audioAndDtmfInputSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyList",
     },
     text_input_specification: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyToHclTerraform, true)(struct!.textInputSpecification),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyToHclTerraform, true)(struct!.textInputSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyList",
@@ -1326,7 +1326,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1335,13 +1335,13 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
     allow_interrupt: cdktn.booleanToTerraform(struct!.allowInterrupt),
     max_retries: cdktn.numberToTerraform(struct!.maxRetries),
     message_selection_strategy: cdktn.stringToTerraform(struct!.messageSelectionStrategy),
-    message_group: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupPropertyToTerraform, true)(struct!.messageGroup),
-    prompt_attempts_specification: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyToTerraform, true)(struct!.promptAttemptsSpecification),
+    message_group: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupPropertyToTerraform, true)(struct!.messageGroup),
+    prompt_attempts_specification: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyToTerraform, true)(struct!.promptAttemptsSpecification),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1366,13 +1366,13 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
       storageClassType: "string",
     },
     message_group: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupPropertyToHclTerraform, true)(struct!.messageGroup),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupPropertyToHclTerraform, true)(struct!.messageGroup),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupPropertyList",
     },
     prompt_attempts_specification: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyToHclTerraform, true)(struct!.promptAttemptsSpecification),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyToHclTerraform, true)(struct!.promptAttemptsSpecification),
       isBlock: true,
       type: "set",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyList",
@@ -1384,7 +1384,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProm
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingSampleUtterancePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingSampleUtteranceProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingSampleUtterancePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingSampleUtteranceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1395,7 +1395,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingSamp
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingSampleUtterancePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingSampleUtteranceProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingSampleUtterancePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingSampleUtteranceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1414,7 +1414,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingSamp
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1425,7 +1425,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1444,7 +1444,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1456,7 +1456,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1481,7 +1481,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1490,12 +1490,12 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
     image_url: cdktn.stringToTerraform(struct!.imageUrl),
     subtitle: cdktn.stringToTerraform(struct!.subtitle),
     title: cdktn.stringToTerraform(struct!.title),
-    button: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
+    button: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1520,7 +1520,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
       storageClassType: "string",
     },
     button: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyList",
@@ -1532,7 +1532,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1543,7 +1543,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1562,7 +1562,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1573,7 +1573,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1592,46 +1592,46 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_payload: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
-    image_response_card: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
-    plain_text_message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
-    ssml_message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
+    custom_payload: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
+    image_response_card: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
+    plain_text_message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
+    ssml_message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_payload: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyList",
     },
     image_response_card: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyList",
     },
     plain_text_message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyList",
     },
     ssml_message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyList",
@@ -1643,7 +1643,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1654,7 +1654,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1673,7 +1673,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1685,7 +1685,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1710,7 +1710,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1719,12 +1719,12 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
     image_url: cdktn.stringToTerraform(struct!.imageUrl),
     subtitle: cdktn.stringToTerraform(struct!.subtitle),
     title: cdktn.stringToTerraform(struct!.title),
-    button: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
+    button: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1749,7 +1749,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
       storageClassType: "string",
     },
     button: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyList",
@@ -1761,7 +1761,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1772,7 +1772,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1791,7 +1791,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1802,7 +1802,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1821,46 +1821,46 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_payload: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
-    image_response_card: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
-    plain_text_message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
-    ssml_message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
+    custom_payload: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
+    image_response_card: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
+    plain_text_message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
+    ssml_message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_payload: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyList",
     },
     image_response_card: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyList",
     },
     plain_text_message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyList",
     },
     ssml_message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyList",
@@ -1872,32 +1872,32 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyToTerraform, true)(struct!.message),
-    variation: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyToTerraform, true)(struct!.variation),
+    message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyToTerraform, true)(struct!.message),
+    variation: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyToTerraform, true)(struct!.variation),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyList",
     },
     variation: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyToHclTerraform, true)(struct!.variation),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyToHclTerraform, true)(struct!.variation),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyList",
@@ -1909,19 +1909,19 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     allow_interrupt: cdktn.booleanToTerraform(struct!.allowInterrupt),
-    message_group: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyToTerraform, true)(struct!.messageGroup),
+    message_group: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyToTerraform, true)(struct!.messageGroup),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1934,7 +1934,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
       storageClassType: "boolean",
     },
     message_group: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyToHclTerraform, true)(struct!.messageGroup),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyToHclTerraform, true)(struct!.messageGroup),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyList",
@@ -1946,7 +1946,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1957,7 +1957,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1976,7 +1976,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1988,7 +1988,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2013,7 +2013,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2022,12 +2022,12 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
     image_url: cdktn.stringToTerraform(struct!.imageUrl),
     subtitle: cdktn.stringToTerraform(struct!.subtitle),
     title: cdktn.stringToTerraform(struct!.title),
-    button: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
+    button: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2052,7 +2052,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
       storageClassType: "string",
     },
     button: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyList",
@@ -2064,7 +2064,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2075,7 +2075,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2094,7 +2094,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2105,7 +2105,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2124,46 +2124,46 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_payload: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
-    image_response_card: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
-    plain_text_message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
-    ssml_message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
+    custom_payload: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
+    image_response_card: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
+    plain_text_message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
+    ssml_message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_payload: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyList",
     },
     image_response_card: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyList",
     },
     plain_text_message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyList",
     },
     ssml_message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyList",
@@ -2175,7 +2175,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2186,7 +2186,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2205,7 +2205,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2217,7 +2217,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2242,7 +2242,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2251,12 +2251,12 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
     image_url: cdktn.stringToTerraform(struct!.imageUrl),
     subtitle: cdktn.stringToTerraform(struct!.subtitle),
     title: cdktn.stringToTerraform(struct!.title),
-    button: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
+    button: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2281,7 +2281,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
       storageClassType: "string",
     },
     button: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyList",
@@ -2293,7 +2293,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2304,7 +2304,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2323,7 +2323,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2334,7 +2334,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2353,46 +2353,46 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_payload: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
-    image_response_card: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
-    plain_text_message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
-    ssml_message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
+    custom_payload: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
+    image_response_card: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
+    plain_text_message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
+    ssml_message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_payload: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyList",
     },
     image_response_card: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyList",
     },
     plain_text_message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyList",
     },
     ssml_message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyList",
@@ -2404,32 +2404,32 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyToTerraform, true)(struct!.message),
-    variation: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyToTerraform, true)(struct!.variation),
+    message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyToTerraform, true)(struct!.message),
+    variation: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyToTerraform, true)(struct!.variation),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyList",
     },
     variation: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyToHclTerraform, true)(struct!.variation),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyToHclTerraform, true)(struct!.variation),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyList",
@@ -2441,7 +2441,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2450,12 +2450,12 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
     allow_interrupt: cdktn.booleanToTerraform(struct!.allowInterrupt),
     frequency_in_seconds: cdktn.numberToTerraform(struct!.frequencyInSeconds),
     timeout_in_seconds: cdktn.numberToTerraform(struct!.timeoutInSeconds),
-    message_group: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyToTerraform, true)(struct!.messageGroup),
+    message_group: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyToTerraform, true)(struct!.messageGroup),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2480,7 +2480,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
       storageClassType: "number",
     },
     message_group: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyToHclTerraform, true)(struct!.messageGroup),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyToHclTerraform, true)(struct!.messageGroup),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyList",
@@ -2492,7 +2492,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2503,7 +2503,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2522,7 +2522,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2534,7 +2534,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2559,7 +2559,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2568,12 +2568,12 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
     image_url: cdktn.stringToTerraform(struct!.imageUrl),
     subtitle: cdktn.stringToTerraform(struct!.subtitle),
     title: cdktn.stringToTerraform(struct!.title),
-    button: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
+    button: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2598,7 +2598,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
       storageClassType: "string",
     },
     button: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyList",
@@ -2610,7 +2610,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2621,7 +2621,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2640,7 +2640,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2651,7 +2651,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2670,46 +2670,46 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_payload: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
-    image_response_card: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
-    plain_text_message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
-    ssml_message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
+    custom_payload: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
+    image_response_card: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
+    plain_text_message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
+    ssml_message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_payload: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyList",
     },
     image_response_card: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyList",
     },
     plain_text_message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyList",
     },
     ssml_message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyList",
@@ -2721,7 +2721,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2732,7 +2732,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2751,7 +2751,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2763,7 +2763,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2788,7 +2788,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2797,12 +2797,12 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
     image_url: cdktn.stringToTerraform(struct!.imageUrl),
     subtitle: cdktn.stringToTerraform(struct!.subtitle),
     title: cdktn.stringToTerraform(struct!.title),
-    button: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
+    button: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2827,7 +2827,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
       storageClassType: "string",
     },
     button: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyList",
@@ -2839,7 +2839,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2850,7 +2850,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2869,7 +2869,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2880,7 +2880,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2899,46 +2899,46 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_payload: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
-    image_response_card: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
-    plain_text_message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
-    ssml_message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
+    custom_payload: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
+    image_response_card: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
+    plain_text_message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
+    ssml_message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_payload: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyList",
     },
     image_response_card: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyList",
     },
     plain_text_message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyList",
     },
     ssml_message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyList",
@@ -2950,32 +2950,32 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    message: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyToTerraform, true)(struct!.message),
-    variation: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyToTerraform, true)(struct!.variation),
+    message: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyToTerraform, true)(struct!.message),
+    variation: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyToTerraform, true)(struct!.variation),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     message: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyList",
     },
     variation: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyToHclTerraform, true)(struct!.variation),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyToHclTerraform, true)(struct!.variation),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyList",
@@ -2987,19 +2987,19 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     allow_interrupt: cdktn.booleanToTerraform(struct!.allowInterrupt),
-    message_group: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyToTerraform, true)(struct!.messageGroup),
+    message_group: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyToTerraform, true)(struct!.messageGroup),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3012,7 +3012,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
       storageClassType: "boolean",
     },
     message_group: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyToHclTerraform, true)(struct!.messageGroup),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyToHclTerraform, true)(struct!.messageGroup),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyList",
@@ -3024,21 +3024,21 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     active: cdktn.booleanToTerraform(struct!.active),
-    continue_response: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyToTerraform, true)(struct!.continueResponse),
-    still_waiting_response: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyToTerraform, true)(struct!.stillWaitingResponse),
-    waiting_response: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyToTerraform, true)(struct!.waitingResponse),
+    continue_response: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyToTerraform, true)(struct!.continueResponse),
+    still_waiting_response: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyToTerraform, true)(struct!.stillWaitingResponse),
+    waiting_response: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyToTerraform, true)(struct!.waitingResponse),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3051,19 +3051,19 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
       storageClassType: "boolean",
     },
     continue_response: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyToHclTerraform, true)(struct!.continueResponse),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyToHclTerraform, true)(struct!.continueResponse),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyList",
     },
     still_waiting_response: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyToHclTerraform, true)(struct!.stillWaitingResponse),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyToHclTerraform, true)(struct!.stillWaitingResponse),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyList",
     },
     waiting_response: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyToHclTerraform, true)(struct!.waitingResponse),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyToHclTerraform, true)(struct!.waitingResponse),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyList",
@@ -3075,46 +3075,46 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWait
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPropertyToTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPropertyToTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    default_value_specification: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationPropertyToTerraform, true)(struct!.defaultValueSpecification),
-    prompt_specification: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPropertyToTerraform, true)(struct!.promptSpecification),
-    sample_utterance: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingSampleUtterancePropertyToTerraform, true)(struct!.sampleUtterance),
-    wait_and_continue_specification: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationPropertyToTerraform, true)(struct!.waitAndContinueSpecification),
+    default_value_specification: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationPropertyToTerraform, true)(struct!.defaultValueSpecification),
+    prompt_specification: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPropertyToTerraform, true)(struct!.promptSpecification),
+    sample_utterance: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingSampleUtterancePropertyToTerraform, true)(struct!.sampleUtterance),
+    wait_and_continue_specification: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationPropertyToTerraform, true)(struct!.waitAndContinueSpecification),
   }
 }
 
 
-export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingSlotSpecificationValueElicitationSettingProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingSlotSpecificationValueElicitationSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     default_value_specification: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationPropertyToHclTerraform, true)(struct!.defaultValueSpecification),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationPropertyToHclTerraform, true)(struct!.defaultValueSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationPropertyList",
     },
     prompt_specification: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPropertyToHclTerraform, true)(struct!.promptSpecification),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPropertyToHclTerraform, true)(struct!.promptSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPropertyList",
     },
     sample_utterance: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingSampleUtterancePropertyToHclTerraform, true)(struct!.sampleUtterance),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingSampleUtterancePropertyToHclTerraform, true)(struct!.sampleUtterance),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingSampleUtterancePropertyList",
     },
     wait_and_continue_specification: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationPropertyToHclTerraform, true)(struct!.waitAndContinueSpecification),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationPropertyToHclTerraform, true)(struct!.waitAndContinueSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationPropertyList",
@@ -3126,7 +3126,7 @@ export function tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingProp
 }
 
 
-export function tfSlotSlotSpecificationPropertyToTerraform(struct?: TfSlot.SlotSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSlotSpecificationPropertyToTerraform(struct?: AwsSlot.SlotSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3134,12 +3134,12 @@ export function tfSlotSlotSpecificationPropertyToTerraform(struct?: TfSlot.SlotS
   return {
     map_block_key: cdktn.stringToTerraform(struct!.mapBlockKey),
     slot_type_id: cdktn.stringToTerraform(struct!.slotTypeId),
-    value_elicitation_setting: cdktn.listMapper(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPropertyToTerraform, true)(struct!.valueElicitationSetting),
+    value_elicitation_setting: cdktn.listMapper(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPropertyToTerraform, true)(struct!.valueElicitationSetting),
   }
 }
 
 
-export function tfSlotSlotSpecificationPropertyToHclTerraform(struct?: TfSlot.SlotSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotSlotSpecificationPropertyToHclTerraform(struct?: AwsSlot.SlotSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3158,7 +3158,7 @@ export function tfSlotSlotSpecificationPropertyToHclTerraform(struct?: TfSlot.Sl
       storageClassType: "string",
     },
     value_elicitation_setting: {
-      value: cdktn.listMapperHcl(tfSlotSubSlotSettingSlotSpecificationValueElicitationSettingPropertyToHclTerraform, true)(struct!.valueElicitationSetting),
+      value: cdktn.listMapperHcl(awsSlotSubSlotSettingSlotSpecificationValueElicitationSettingPropertyToHclTerraform, true)(struct!.valueElicitationSetting),
       isBlock: true,
       type: "list",
       storageClassType: "SubSlotSettingSlotSpecificationValueElicitationSettingPropertyList",
@@ -3170,19 +3170,19 @@ export function tfSlotSlotSpecificationPropertyToHclTerraform(struct?: TfSlot.Sl
 }
 
 
-export function tfSlotSubSlotSettingPropertyToTerraform(struct?: TfSlot.SubSlotSettingProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingPropertyToTerraform(struct?: AwsSlot.SubSlotSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     expression: cdktn.stringToTerraform(struct!.expression),
-    slot_specification: cdktn.listMapper(tfSlotSlotSpecificationPropertyToTerraform, true)(struct!.slotSpecification),
+    slot_specification: cdktn.listMapper(awsSlotSlotSpecificationPropertyToTerraform, true)(struct!.slotSpecification),
   }
 }
 
 
-export function tfSlotSubSlotSettingPropertyToHclTerraform(struct?: TfSlot.SubSlotSettingProperty | cdktn.IResolvable): any {
+export function awsSlotSubSlotSettingPropertyToHclTerraform(struct?: AwsSlot.SubSlotSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3195,7 +3195,7 @@ export function tfSlotSubSlotSettingPropertyToHclTerraform(struct?: TfSlot.SubSl
       storageClassType: "string",
     },
     slot_specification: {
-      value: cdktn.listMapperHcl(tfSlotSlotSpecificationPropertyToHclTerraform, true)(struct!.slotSpecification),
+      value: cdktn.listMapperHcl(awsSlotSlotSpecificationPropertyToHclTerraform, true)(struct!.slotSpecification),
       isBlock: true,
       type: "set",
       storageClassType: "SlotSpecificationPropertyList",
@@ -3207,7 +3207,7 @@ export function tfSlotSubSlotSettingPropertyToHclTerraform(struct?: TfSlot.SubSl
 }
 
 
-export function tfSlotTimeoutsPropertyToTerraform(struct?: TfSlot.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSlotTimeoutsPropertyToTerraform(struct?: AwsSlot.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3220,7 +3220,7 @@ export function tfSlotTimeoutsPropertyToTerraform(struct?: TfSlot.TimeoutsProper
 }
 
 
-export function tfSlotTimeoutsPropertyToHclTerraform(struct?: TfSlot.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSlotTimeoutsPropertyToHclTerraform(struct?: AwsSlot.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3251,7 +3251,7 @@ export function tfSlotTimeoutsPropertyToHclTerraform(struct?: TfSlot.TimeoutsPro
 }
 
 
-export function tfSlotValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingDefaultValueSpecificationDefaultValueListProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingDefaultValueSpecificationDefaultValueListProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3262,7 +3262,7 @@ export function tfSlotValueElicitationSettingDefaultValueSpecificationDefaultVal
 }
 
 
-export function tfSlotValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingDefaultValueSpecificationDefaultValueListProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingDefaultValueSpecificationDefaultValueListProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3281,25 +3281,25 @@ export function tfSlotValueElicitationSettingDefaultValueSpecificationDefaultVal
 }
 
 
-export function tfSlotValueElicitationSettingDefaultValueSpecificationPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingDefaultValueSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingDefaultValueSpecificationPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingDefaultValueSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    default_value_list: cdktn.listMapper(tfSlotValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyToTerraform, true)(struct!.defaultValueList),
+    default_value_list: cdktn.listMapper(awsSlotValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyToTerraform, true)(struct!.defaultValueList),
   }
 }
 
 
-export function tfSlotValueElicitationSettingDefaultValueSpecificationPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingDefaultValueSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingDefaultValueSpecificationPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingDefaultValueSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     default_value_list: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyToHclTerraform, true)(struct!.defaultValueList),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyToHclTerraform, true)(struct!.defaultValueList),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingDefaultValueSpecificationDefaultValueListPropertyList",
@@ -3311,7 +3311,7 @@ export function tfSlotValueElicitationSettingDefaultValueSpecificationPropertyTo
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3322,7 +3322,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMess
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3341,7 +3341,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMess
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3353,7 +3353,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMess
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3378,7 +3378,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMess
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3387,12 +3387,12 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMess
     image_url: cdktn.stringToTerraform(struct!.imageUrl),
     subtitle: cdktn.stringToTerraform(struct!.subtitle),
     title: cdktn.stringToTerraform(struct!.title),
-    button: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
+    button: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
   }
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3417,7 +3417,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMess
       storageClassType: "string",
     },
     button: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonPropertyList",
@@ -3429,7 +3429,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMess
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3440,7 +3440,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMess
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3459,7 +3459,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMess
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3470,7 +3470,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMess
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3489,46 +3489,46 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMess
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_payload: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
-    image_response_card: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
-    plain_text_message: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
-    ssml_message: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
+    custom_payload: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
+    image_response_card: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
+    plain_text_message: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
+    ssml_message: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
   }
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_payload: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadPropertyList",
     },
     image_response_card: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardPropertyList",
     },
     plain_text_message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessagePropertyList",
     },
     ssml_message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessagePropertyList",
@@ -3540,7 +3540,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupMess
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3551,7 +3551,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVari
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3570,7 +3570,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVari
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3582,7 +3582,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVari
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3607,7 +3607,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVari
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3616,12 +3616,12 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVari
     image_url: cdktn.stringToTerraform(struct!.imageUrl),
     subtitle: cdktn.stringToTerraform(struct!.subtitle),
     title: cdktn.stringToTerraform(struct!.title),
-    button: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
+    button: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
   }
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3646,7 +3646,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVari
       storageClassType: "string",
     },
     button: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonPropertyList",
@@ -3658,7 +3658,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVari
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3669,7 +3669,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVari
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3688,7 +3688,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVari
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3699,7 +3699,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVari
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3718,46 +3718,46 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVari
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_payload: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
-    image_response_card: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
-    plain_text_message: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
-    ssml_message: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
+    custom_payload: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
+    image_response_card: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
+    plain_text_message: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
+    ssml_message: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
   }
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupVariationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_payload: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadPropertyList",
     },
     image_response_card: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardPropertyList",
     },
     plain_text_message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessagePropertyList",
     },
     ssml_message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessagePropertyList",
@@ -3769,32 +3769,32 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupVari
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    message: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyToTerraform, true)(struct!.message),
-    variation: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyToTerraform, true)(struct!.variation),
+    message: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyToTerraform, true)(struct!.message),
+    variation: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyToTerraform, true)(struct!.variation),
   }
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationMessageGroupProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationMessageGroupPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationMessageGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationMessageGroupMessagePropertyList",
     },
     variation: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyToHclTerraform, true)(struct!.variation),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyToHclTerraform, true)(struct!.variation),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationMessageGroupVariationPropertyList",
@@ -3806,7 +3806,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationMessageGroupProp
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3818,7 +3818,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSp
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3843,7 +3843,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSp
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3855,7 +3855,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSp
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3880,7 +3880,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSp
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3894,7 +3894,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSp
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3931,20 +3931,20 @@ export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSp
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     start_timeout_ms: cdktn.numberToTerraform(struct!.startTimeoutMs),
-    audio_specification: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyToTerraform, true)(struct!.audioSpecification),
-    dtmf_specification: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyToTerraform, true)(struct!.dtmfSpecification),
+    audio_specification: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyToTerraform, true)(struct!.audioSpecification),
+    dtmf_specification: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyToTerraform, true)(struct!.dtmfSpecification),
   }
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3957,13 +3957,13 @@ export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSp
       storageClassType: "number",
     },
     audio_specification: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyToHclTerraform, true)(struct!.audioSpecification),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyToHclTerraform, true)(struct!.audioSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationPropertyList",
     },
     dtmf_specification: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyToHclTerraform, true)(struct!.dtmfSpecification),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyToHclTerraform, true)(struct!.dtmfSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationPropertyList",
@@ -3975,7 +3975,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSp
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3986,7 +3986,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSp
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4005,7 +4005,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSp
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4013,14 +4013,14 @@ export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSp
   return {
     allow_interrupt: cdktn.booleanToTerraform(struct!.allowInterrupt),
     map_block_key: cdktn.stringToTerraform(struct!.mapBlockKey),
-    allowed_input_types: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyToTerraform, true)(struct!.allowedInputTypes),
-    audio_and_dtmf_input_specification: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyToTerraform, true)(struct!.audioAndDtmfInputSpecification),
-    text_input_specification: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyToTerraform, true)(struct!.textInputSpecification),
+    allowed_input_types: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyToTerraform, true)(struct!.allowedInputTypes),
+    audio_and_dtmf_input_specification: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyToTerraform, true)(struct!.audioAndDtmfInputSpecification),
+    text_input_specification: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyToTerraform, true)(struct!.textInputSpecification),
   }
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4039,19 +4039,19 @@ export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSp
       storageClassType: "string",
     },
     allowed_input_types: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyToHclTerraform, true)(struct!.allowedInputTypes),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyToHclTerraform, true)(struct!.allowedInputTypes),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesPropertyList",
     },
     audio_and_dtmf_input_specification: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyToHclTerraform, true)(struct!.audioAndDtmfInputSpecification),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyToHclTerraform, true)(struct!.audioAndDtmfInputSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationPropertyList",
     },
     text_input_specification: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyToHclTerraform, true)(struct!.textInputSpecification),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyToHclTerraform, true)(struct!.textInputSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationPropertyList",
@@ -4063,7 +4063,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSp
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4072,13 +4072,13 @@ export function tfSlotValueElicitationSettingPromptSpecificationPropertyToTerraf
     allow_interrupt: cdktn.booleanToTerraform(struct!.allowInterrupt),
     max_retries: cdktn.numberToTerraform(struct!.maxRetries),
     message_selection_strategy: cdktn.stringToTerraform(struct!.messageSelectionStrategy),
-    message_group: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationMessageGroupPropertyToTerraform, true)(struct!.messageGroup),
-    prompt_attempts_specification: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyToTerraform, true)(struct!.promptAttemptsSpecification),
+    message_group: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationMessageGroupPropertyToTerraform, true)(struct!.messageGroup),
+    prompt_attempts_specification: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyToTerraform, true)(struct!.promptAttemptsSpecification),
   }
 }
 
 
-export function tfSlotValueElicitationSettingPromptSpecificationPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingPromptSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPromptSpecificationPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingPromptSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4103,13 +4103,13 @@ export function tfSlotValueElicitationSettingPromptSpecificationPropertyToHclTer
       storageClassType: "string",
     },
     message_group: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationMessageGroupPropertyToHclTerraform, true)(struct!.messageGroup),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationMessageGroupPropertyToHclTerraform, true)(struct!.messageGroup),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationMessageGroupPropertyList",
     },
     prompt_attempts_specification: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyToHclTerraform, true)(struct!.promptAttemptsSpecification),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyToHclTerraform, true)(struct!.promptAttemptsSpecification),
       isBlock: true,
       type: "set",
       storageClassType: "ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationPropertyList",
@@ -4121,7 +4121,7 @@ export function tfSlotValueElicitationSettingPromptSpecificationPropertyToHclTer
 }
 
 
-export function tfSlotValueElicitationSettingSampleUtterancePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingSampleUtteranceProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingSampleUtterancePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingSampleUtteranceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4132,7 +4132,7 @@ export function tfSlotValueElicitationSettingSampleUtterancePropertyToTerraform(
 }
 
 
-export function tfSlotValueElicitationSettingSampleUtterancePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingSampleUtteranceProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingSampleUtterancePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingSampleUtteranceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4151,7 +4151,7 @@ export function tfSlotValueElicitationSettingSampleUtterancePropertyToHclTerrafo
 }
 
 
-export function tfSlotSlotResolutionSettingPropertyToTerraform(struct?: TfSlot.SlotResolutionSettingProperty | cdktn.IResolvable): any {
+export function awsSlotSlotResolutionSettingPropertyToTerraform(struct?: AwsSlot.SlotResolutionSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4162,7 +4162,7 @@ export function tfSlotSlotResolutionSettingPropertyToTerraform(struct?: TfSlot.S
 }
 
 
-export function tfSlotSlotResolutionSettingPropertyToHclTerraform(struct?: TfSlot.SlotResolutionSettingProperty | cdktn.IResolvable): any {
+export function awsSlotSlotResolutionSettingPropertyToHclTerraform(struct?: AwsSlot.SlotResolutionSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4181,7 +4181,7 @@ export function tfSlotSlotResolutionSettingPropertyToHclTerraform(struct?: TfSlo
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4192,7 +4192,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4211,7 +4211,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4223,7 +4223,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4248,7 +4248,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4257,12 +4257,12 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
     image_url: cdktn.stringToTerraform(struct!.imageUrl),
     subtitle: cdktn.stringToTerraform(struct!.subtitle),
     title: cdktn.stringToTerraform(struct!.title),
-    button: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
+    button: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4287,7 +4287,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
       storageClassType: "string",
     },
     button: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonPropertyList",
@@ -4299,7 +4299,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4310,7 +4310,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4329,7 +4329,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4340,7 +4340,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4359,46 +4359,46 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_payload: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
-    image_response_card: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
-    plain_text_message: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
-    ssml_message: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
+    custom_payload: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
+    image_response_card: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
+    plain_text_message: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
+    ssml_message: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_payload: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadPropertyList",
     },
     image_response_card: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardPropertyList",
     },
     plain_text_message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessagePropertyList",
     },
     ssml_message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessagePropertyList",
@@ -4410,7 +4410,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4421,7 +4421,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4440,7 +4440,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4452,7 +4452,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4477,7 +4477,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4486,12 +4486,12 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
     image_url: cdktn.stringToTerraform(struct!.imageUrl),
     subtitle: cdktn.stringToTerraform(struct!.subtitle),
     title: cdktn.stringToTerraform(struct!.title),
-    button: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
+    button: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4516,7 +4516,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
       storageClassType: "string",
     },
     button: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonPropertyList",
@@ -4528,7 +4528,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4539,7 +4539,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4558,7 +4558,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4569,7 +4569,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4588,46 +4588,46 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_payload: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
-    image_response_card: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
-    plain_text_message: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
-    ssml_message: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
+    custom_payload: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
+    image_response_card: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
+    plain_text_message: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
+    ssml_message: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_payload: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadPropertyList",
     },
     image_response_card: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardPropertyList",
     },
     plain_text_message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessagePropertyList",
     },
     ssml_message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessagePropertyList",
@@ -4639,32 +4639,32 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    message: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyToTerraform, true)(struct!.message),
-    variation: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyToTerraform, true)(struct!.variation),
+    message: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyToTerraform, true)(struct!.message),
+    variation: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyToTerraform, true)(struct!.variation),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePropertyList",
     },
     variation: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyToHclTerraform, true)(struct!.variation),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyToHclTerraform, true)(struct!.variation),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPropertyList",
@@ -4676,19 +4676,19 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     allow_interrupt: cdktn.booleanToTerraform(struct!.allowInterrupt),
-    message_group: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyToTerraform, true)(struct!.messageGroup),
+    message_group: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyToTerraform, true)(struct!.messageGroup),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationContinueResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4701,7 +4701,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
       storageClassType: "boolean",
     },
     message_group: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyToHclTerraform, true)(struct!.messageGroup),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyToHclTerraform, true)(struct!.messageGroup),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupPropertyList",
@@ -4713,7 +4713,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationContinu
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4724,7 +4724,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4743,7 +4743,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4755,7 +4755,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4780,7 +4780,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4789,12 +4789,12 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
     image_url: cdktn.stringToTerraform(struct!.imageUrl),
     subtitle: cdktn.stringToTerraform(struct!.subtitle),
     title: cdktn.stringToTerraform(struct!.title),
-    button: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
+    button: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4819,7 +4819,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
       storageClassType: "string",
     },
     button: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyList",
@@ -4831,7 +4831,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4842,7 +4842,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4861,7 +4861,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4872,7 +4872,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4891,46 +4891,46 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_payload: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
-    image_response_card: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
-    plain_text_message: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
-    ssml_message: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
+    custom_payload: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
+    image_response_card: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
+    plain_text_message: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
+    ssml_message: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_payload: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadPropertyList",
     },
     image_response_card: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardPropertyList",
     },
     plain_text_message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessagePropertyList",
     },
     ssml_message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessagePropertyList",
@@ -4942,7 +4942,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4953,7 +4953,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4972,7 +4972,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4984,7 +4984,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5009,7 +5009,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5018,12 +5018,12 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
     image_url: cdktn.stringToTerraform(struct!.imageUrl),
     subtitle: cdktn.stringToTerraform(struct!.subtitle),
     title: cdktn.stringToTerraform(struct!.title),
-    button: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
+    button: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5048,7 +5048,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
       storageClassType: "string",
     },
     button: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyList",
@@ -5060,7 +5060,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5071,7 +5071,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5090,7 +5090,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5101,7 +5101,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5120,46 +5120,46 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_payload: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
-    image_response_card: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
-    plain_text_message: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
-    ssml_message: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
+    custom_payload: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
+    image_response_card: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
+    plain_text_message: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
+    ssml_message: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_payload: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadPropertyList",
     },
     image_response_card: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardPropertyList",
     },
     plain_text_message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessagePropertyList",
     },
     ssml_message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessagePropertyList",
@@ -5171,32 +5171,32 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    message: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyToTerraform, true)(struct!.message),
-    variation: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyToTerraform, true)(struct!.variation),
+    message: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyToTerraform, true)(struct!.message),
+    variation: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyToTerraform, true)(struct!.variation),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePropertyList",
     },
     variation: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyToHclTerraform, true)(struct!.variation),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyToHclTerraform, true)(struct!.variation),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPropertyList",
@@ -5208,7 +5208,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5217,12 +5217,12 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
     allow_interrupt: cdktn.booleanToTerraform(struct!.allowInterrupt),
     frequency_in_seconds: cdktn.numberToTerraform(struct!.frequencyInSeconds),
     timeout_in_seconds: cdktn.numberToTerraform(struct!.timeoutInSeconds),
-    message_group: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyToTerraform, true)(struct!.messageGroup),
+    message_group: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyToTerraform, true)(struct!.messageGroup),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5247,7 +5247,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
       storageClassType: "number",
     },
     message_group: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyToHclTerraform, true)(struct!.messageGroup),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyToHclTerraform, true)(struct!.messageGroup),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupPropertyList",
@@ -5259,7 +5259,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWa
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5270,7 +5270,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5289,7 +5289,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5301,7 +5301,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5326,7 +5326,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5335,12 +5335,12 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
     image_url: cdktn.stringToTerraform(struct!.imageUrl),
     subtitle: cdktn.stringToTerraform(struct!.subtitle),
     title: cdktn.stringToTerraform(struct!.title),
-    button: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
+    button: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5365,7 +5365,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
       storageClassType: "string",
     },
     button: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonPropertyList",
@@ -5377,7 +5377,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5388,7 +5388,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5407,7 +5407,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5418,7 +5418,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5437,46 +5437,46 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_payload: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
-    image_response_card: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
-    plain_text_message: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
-    ssml_message: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
+    custom_payload: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
+    image_response_card: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
+    plain_text_message: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
+    ssml_message: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_payload: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadPropertyList",
     },
     image_response_card: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardPropertyList",
     },
     plain_text_message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessagePropertyList",
     },
     ssml_message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessagePropertyList",
@@ -5488,7 +5488,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5499,7 +5499,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5518,7 +5518,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5530,7 +5530,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5555,7 +5555,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5564,12 +5564,12 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
     image_url: cdktn.stringToTerraform(struct!.imageUrl),
     subtitle: cdktn.stringToTerraform(struct!.subtitle),
     title: cdktn.stringToTerraform(struct!.title),
-    button: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
+    button: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToTerraform, true)(struct!.button),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5594,7 +5594,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
       storageClassType: "string",
     },
     button: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyToHclTerraform, true)(struct!.button),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonPropertyList",
@@ -5606,7 +5606,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5617,7 +5617,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5636,7 +5636,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5647,7 +5647,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5666,46 +5666,46 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_payload: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
-    image_response_card: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
-    plain_text_message: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
-    ssml_message: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
+    custom_payload: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyToTerraform, true)(struct!.customPayload),
+    image_response_card: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyToTerraform, true)(struct!.imageResponseCard),
+    plain_text_message: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyToTerraform, true)(struct!.plainTextMessage),
+    ssml_message: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyToTerraform, true)(struct!.ssmlMessage),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_payload: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyToHclTerraform, true)(struct!.customPayload),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadPropertyList",
     },
     image_response_card: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyToHclTerraform, true)(struct!.imageResponseCard),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardPropertyList",
     },
     plain_text_message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyToHclTerraform, true)(struct!.plainTextMessage),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessagePropertyList",
     },
     ssml_message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyToHclTerraform, true)(struct!.ssmlMessage),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessagePropertyList",
@@ -5717,32 +5717,32 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    message: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyToTerraform, true)(struct!.message),
-    variation: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyToTerraform, true)(struct!.variation),
+    message: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyToTerraform, true)(struct!.message),
+    variation: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyToTerraform, true)(struct!.variation),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     message: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePropertyList",
     },
     variation: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyToHclTerraform, true)(struct!.variation),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyToHclTerraform, true)(struct!.variation),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPropertyList",
@@ -5754,19 +5754,19 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     allow_interrupt: cdktn.booleanToTerraform(struct!.allowInterrupt),
-    message_group: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyToTerraform, true)(struct!.messageGroup),
+    message_group: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyToTerraform, true)(struct!.messageGroup),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5779,7 +5779,7 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
       storageClassType: "boolean",
     },
     message_group: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyToHclTerraform, true)(struct!.messageGroup),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyToHclTerraform, true)(struct!.messageGroup),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupPropertyList",
@@ -5791,21 +5791,21 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationWaiting
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     active: cdktn.booleanToTerraform(struct!.active),
-    continue_response: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyToTerraform, true)(struct!.continueResponse),
-    still_waiting_response: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyToTerraform, true)(struct!.stillWaitingResponse),
-    waiting_response: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyToTerraform, true)(struct!.waitingResponse),
+    continue_response: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyToTerraform, true)(struct!.continueResponse),
+    still_waiting_response: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyToTerraform, true)(struct!.stillWaitingResponse),
+    waiting_response: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyToTerraform, true)(struct!.waitingResponse),
   }
 }
 
 
-export function tfSlotValueElicitationSettingWaitAndContinueSpecificationPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingWaitAndContinueSpecificationProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingWaitAndContinueSpecificationPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingWaitAndContinueSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5818,19 +5818,19 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationPropert
       storageClassType: "boolean",
     },
     continue_response: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyToHclTerraform, true)(struct!.continueResponse),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyToHclTerraform, true)(struct!.continueResponse),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationContinueResponsePropertyList",
     },
     still_waiting_response: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyToHclTerraform, true)(struct!.stillWaitingResponse),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyToHclTerraform, true)(struct!.stillWaitingResponse),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponsePropertyList",
     },
     waiting_response: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyToHclTerraform, true)(struct!.waitingResponse),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyToHclTerraform, true)(struct!.waitingResponse),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationWaitingResponsePropertyList",
@@ -5842,23 +5842,23 @@ export function tfSlotValueElicitationSettingWaitAndContinueSpecificationPropert
 }
 
 
-export function tfSlotValueElicitationSettingPropertyToTerraform(struct?: TfSlot.ValueElicitationSettingProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPropertyToTerraform(struct?: AwsSlot.ValueElicitationSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     slot_constraint: cdktn.stringToTerraform(struct!.slotConstraint),
-    default_value_specification: cdktn.listMapper(tfSlotValueElicitationSettingDefaultValueSpecificationPropertyToTerraform, true)(struct!.defaultValueSpecification),
-    prompt_specification: cdktn.listMapper(tfSlotValueElicitationSettingPromptSpecificationPropertyToTerraform, true)(struct!.promptSpecification),
-    sample_utterance: cdktn.listMapper(tfSlotValueElicitationSettingSampleUtterancePropertyToTerraform, true)(struct!.sampleUtterance),
-    slot_resolution_setting: cdktn.listMapper(tfSlotSlotResolutionSettingPropertyToTerraform, true)(struct!.slotResolutionSetting),
-    wait_and_continue_specification: cdktn.listMapper(tfSlotValueElicitationSettingWaitAndContinueSpecificationPropertyToTerraform, true)(struct!.waitAndContinueSpecification),
+    default_value_specification: cdktn.listMapper(awsSlotValueElicitationSettingDefaultValueSpecificationPropertyToTerraform, true)(struct!.defaultValueSpecification),
+    prompt_specification: cdktn.listMapper(awsSlotValueElicitationSettingPromptSpecificationPropertyToTerraform, true)(struct!.promptSpecification),
+    sample_utterance: cdktn.listMapper(awsSlotValueElicitationSettingSampleUtterancePropertyToTerraform, true)(struct!.sampleUtterance),
+    slot_resolution_setting: cdktn.listMapper(awsSlotSlotResolutionSettingPropertyToTerraform, true)(struct!.slotResolutionSetting),
+    wait_and_continue_specification: cdktn.listMapper(awsSlotValueElicitationSettingWaitAndContinueSpecificationPropertyToTerraform, true)(struct!.waitAndContinueSpecification),
   }
 }
 
 
-export function tfSlotValueElicitationSettingPropertyToHclTerraform(struct?: TfSlot.ValueElicitationSettingProperty | cdktn.IResolvable): any {
+export function awsSlotValueElicitationSettingPropertyToHclTerraform(struct?: AwsSlot.ValueElicitationSettingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -5871,31 +5871,31 @@ export function tfSlotValueElicitationSettingPropertyToHclTerraform(struct?: TfS
       storageClassType: "string",
     },
     default_value_specification: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingDefaultValueSpecificationPropertyToHclTerraform, true)(struct!.defaultValueSpecification),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingDefaultValueSpecificationPropertyToHclTerraform, true)(struct!.defaultValueSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingDefaultValueSpecificationPropertyList",
     },
     prompt_specification: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingPromptSpecificationPropertyToHclTerraform, true)(struct!.promptSpecification),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingPromptSpecificationPropertyToHclTerraform, true)(struct!.promptSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingPromptSpecificationPropertyList",
     },
     sample_utterance: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingSampleUtterancePropertyToHclTerraform, true)(struct!.sampleUtterance),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingSampleUtterancePropertyToHclTerraform, true)(struct!.sampleUtterance),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingSampleUtterancePropertyList",
     },
     slot_resolution_setting: {
-      value: cdktn.listMapperHcl(tfSlotSlotResolutionSettingPropertyToHclTerraform, true)(struct!.slotResolutionSetting),
+      value: cdktn.listMapperHcl(awsSlotSlotResolutionSettingPropertyToHclTerraform, true)(struct!.slotResolutionSetting),
       isBlock: true,
       type: "list",
       storageClassType: "SlotResolutionSettingPropertyList",
     },
     wait_and_continue_specification: {
-      value: cdktn.listMapperHcl(tfSlotValueElicitationSettingWaitAndContinueSpecificationPropertyToHclTerraform, true)(struct!.waitAndContinueSpecification),
+      value: cdktn.listMapperHcl(awsSlotValueElicitationSettingWaitAndContinueSpecificationPropertyToHclTerraform, true)(struct!.waitAndContinueSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "ValueElicitationSettingWaitAndContinueSpecificationPropertyList",
@@ -5907,10 +5907,10 @@ export function tfSlotValueElicitationSettingPropertyToHclTerraform(struct?: TfS
 }
 
 
-export namespace TfSlot {
+export namespace AwsSlot {
 export interface MultipleValuesSettingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_multiple_values TfSlot#allow_multiple_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_multiple_values AwsSlot#allow_multiple_values}
   */
   readonly allowMultipleValues?: boolean | cdktn.IResolvable;
 }
@@ -5996,7 +5996,7 @@ export class MultipleValuesSettingPropertyList extends cdktn.ComplexList {
 }
 export interface ObfuscationSettingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#obfuscation_setting_type TfSlot#obfuscation_setting_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#obfuscation_setting_type AwsSlot#obfuscation_setting_type}
   */
   readonly obfuscationSettingType: string;
 }
@@ -6079,7 +6079,7 @@ export class ObfuscationSettingPropertyList extends cdktn.ComplexList {
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationDefaultValueListProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#default_value TfSlot#default_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#default_value AwsSlot#default_value}
   */
   readonly defaultValue: string;
 }
@@ -6164,7 +6164,7 @@ export interface SubSlotSettingSlotSpecificationValueElicitationSettingDefaultVa
   /**
   * default_value_list block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#default_value_list TfSlot#default_value_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#default_value_list AwsSlot#default_value_list}
   */
   readonly defaultValueList?: SubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationDefaultValueListProperty[] | cdktn.IResolvable;
 }
@@ -6250,7 +6250,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueS
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -6333,11 +6333,11 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text TfSlot#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text AwsSlot#text}
   */
   readonly text: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -6439,21 +6439,21 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url TfSlot#image_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url AwsSlot#image_url}
   */
   readonly imageUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle TfSlot#subtitle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle AwsSlot#subtitle}
   */
   readonly subtitle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title TfSlot#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title AwsSlot#title}
   */
   readonly title: string;
   /**
   * button block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button TfSlot#button}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button AwsSlot#button}
   */
   readonly button?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonProperty[] | cdktn.IResolvable;
 }
@@ -6602,7 +6602,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -6685,7 +6685,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -6770,25 +6770,25 @@ export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpe
   /**
   * custom_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload TfSlot#custom_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload AwsSlot#custom_payload}
   */
   readonly customPayload?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadProperty[] | cdktn.IResolvable;
   /**
   * image_response_card block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card TfSlot#image_response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card AwsSlot#image_response_card}
   */
   readonly imageResponseCard?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardProperty[] | cdktn.IResolvable;
   /**
   * plain_text_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message TfSlot#plain_text_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message AwsSlot#plain_text_message}
   */
   readonly plainTextMessage?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessageProperty[] | cdktn.IResolvable;
   /**
   * ssml_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message TfSlot#ssml_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message AwsSlot#ssml_message}
   */
   readonly ssmlMessage?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessageProperty[] | cdktn.IResolvable;
 }
@@ -6940,7 +6940,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -7023,11 +7023,11 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text TfSlot#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text AwsSlot#text}
   */
   readonly text: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -7129,21 +7129,21 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url TfSlot#image_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url AwsSlot#image_url}
   */
   readonly imageUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle TfSlot#subtitle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle AwsSlot#subtitle}
   */
   readonly subtitle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title TfSlot#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title AwsSlot#title}
   */
   readonly title: string;
   /**
   * button block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button TfSlot#button}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button AwsSlot#button}
   */
   readonly button?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonProperty[] | cdktn.IResolvable;
 }
@@ -7292,7 +7292,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -7375,7 +7375,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -7460,25 +7460,25 @@ export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpe
   /**
   * custom_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload TfSlot#custom_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload AwsSlot#custom_payload}
   */
   readonly customPayload?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadProperty[] | cdktn.IResolvable;
   /**
   * image_response_card block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card TfSlot#image_response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card AwsSlot#image_response_card}
   */
   readonly imageResponseCard?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardProperty[] | cdktn.IResolvable;
   /**
   * plain_text_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message TfSlot#plain_text_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message AwsSlot#plain_text_message}
   */
   readonly plainTextMessage?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessageProperty[] | cdktn.IResolvable;
   /**
   * ssml_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message TfSlot#ssml_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message AwsSlot#ssml_message}
   */
   readonly ssmlMessage?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessageProperty[] | cdktn.IResolvable;
 }
@@ -7632,13 +7632,13 @@ export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpe
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message TfSlot#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message AwsSlot#message}
   */
   readonly message?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupMessageProperty[] | cdktn.IResolvable;
   /**
   * variation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#variation TfSlot#variation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#variation AwsSlot#variation}
   */
   readonly variation?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupVariationProperty[] | cdktn.IResolvable;
 }
@@ -7746,11 +7746,11 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_audio_input TfSlot#allow_audio_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_audio_input AwsSlot#allow_audio_input}
   */
   readonly allowAudioInput: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_dtmf_input TfSlot#allow_dtmf_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_dtmf_input AwsSlot#allow_dtmf_input}
   */
   readonly allowDtmfInput: boolean | cdktn.IResolvable;
 }
@@ -7852,11 +7852,11 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#end_timeout_ms TfSlot#end_timeout_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#end_timeout_ms AwsSlot#end_timeout_ms}
   */
   readonly endTimeoutMs: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#max_length_ms TfSlot#max_length_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#max_length_ms AwsSlot#max_length_ms}
   */
   readonly maxLengthMs: number;
 }
@@ -7958,19 +7958,19 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#deletion_character TfSlot#deletion_character}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#deletion_character AwsSlot#deletion_character}
   */
   readonly deletionCharacter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#end_character TfSlot#end_character}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#end_character AwsSlot#end_character}
   */
   readonly endCharacter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#end_timeout_ms TfSlot#end_timeout_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#end_timeout_ms AwsSlot#end_timeout_ms}
   */
   readonly endTimeoutMs: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#max_length TfSlot#max_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#max_length AwsSlot#max_length}
   */
   readonly maxLength: number;
 }
@@ -8110,19 +8110,19 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#start_timeout_ms TfSlot#start_timeout_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#start_timeout_ms AwsSlot#start_timeout_ms}
   */
   readonly startTimeoutMs: number;
   /**
   * audio_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#audio_specification TfSlot#audio_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#audio_specification AwsSlot#audio_specification}
   */
   readonly audioSpecification?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationProperty[] | cdktn.IResolvable;
   /**
   * dtmf_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#dtmf_specification TfSlot#dtmf_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#dtmf_specification AwsSlot#dtmf_specification}
   */
   readonly dtmfSpecification?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationProperty[] | cdktn.IResolvable;
 }
@@ -8249,7 +8249,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#start_timeout_ms TfSlot#start_timeout_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#start_timeout_ms AwsSlot#start_timeout_ms}
   */
   readonly startTimeoutMs: number;
 }
@@ -8332,29 +8332,29 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt TfSlot#allow_interrupt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt AwsSlot#allow_interrupt}
   */
   readonly allowInterrupt?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#map_block_key TfSlot#map_block_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#map_block_key AwsSlot#map_block_key}
   */
   readonly mapBlockKey: string;
   /**
   * allowed_input_types block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allowed_input_types TfSlot#allowed_input_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allowed_input_types AwsSlot#allowed_input_types}
   */
   readonly allowedInputTypes?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesProperty[] | cdktn.IResolvable;
   /**
   * audio_and_dtmf_input_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#audio_and_dtmf_input_specification TfSlot#audio_and_dtmf_input_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#audio_and_dtmf_input_specification AwsSlot#audio_and_dtmf_input_specification}
   */
   readonly audioAndDtmfInputSpecification?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationProperty[] | cdktn.IResolvable;
   /**
   * text_input_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text_input_specification TfSlot#text_input_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text_input_specification AwsSlot#text_input_specification}
   */
   readonly textInputSpecification?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationProperty[] | cdktn.IResolvable;
 }
@@ -8525,27 +8525,27 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt TfSlot#allow_interrupt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt AwsSlot#allow_interrupt}
   */
   readonly allowInterrupt?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#max_retries TfSlot#max_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#max_retries AwsSlot#max_retries}
   */
   readonly maxRetries: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_selection_strategy TfSlot#message_selection_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_selection_strategy AwsSlot#message_selection_strategy}
   */
   readonly messageSelectionStrategy?: string;
   /**
   * message_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_group TfSlot#message_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_group AwsSlot#message_group}
   */
   readonly messageGroup?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationMessageGroupProperty[] | cdktn.IResolvable;
   /**
   * prompt_attempts_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#prompt_attempts_specification TfSlot#prompt_attempts_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#prompt_attempts_specification AwsSlot#prompt_attempts_specification}
   */
   readonly promptAttemptsSpecification?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationProperty[] | cdktn.IResolvable;
 }
@@ -8716,7 +8716,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecifi
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingSampleUtteranceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#utterance TfSlot#utterance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#utterance AwsSlot#utterance}
   */
   readonly utterance: string;
 }
@@ -8799,7 +8799,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingSampleUtteran
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -8882,11 +8882,11 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text TfSlot#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text AwsSlot#text}
   */
   readonly text: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -8988,21 +8988,21 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url TfSlot#image_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url AwsSlot#image_url}
   */
   readonly imageUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle TfSlot#subtitle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle AwsSlot#subtitle}
   */
   readonly subtitle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title TfSlot#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title AwsSlot#title}
   */
   readonly title: string;
   /**
   * button block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button TfSlot#button}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button AwsSlot#button}
   */
   readonly button?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonProperty[] | cdktn.IResolvable;
 }
@@ -9151,7 +9151,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -9234,7 +9234,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -9319,25 +9319,25 @@ export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndCo
   /**
   * custom_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload TfSlot#custom_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload AwsSlot#custom_payload}
   */
   readonly customPayload?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadProperty[] | cdktn.IResolvable;
   /**
   * image_response_card block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card TfSlot#image_response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card AwsSlot#image_response_card}
   */
   readonly imageResponseCard?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardProperty[] | cdktn.IResolvable;
   /**
   * plain_text_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message TfSlot#plain_text_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message AwsSlot#plain_text_message}
   */
   readonly plainTextMessage?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessageProperty[] | cdktn.IResolvable;
   /**
   * ssml_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message TfSlot#ssml_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message AwsSlot#ssml_message}
   */
   readonly ssmlMessage?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessageProperty[] | cdktn.IResolvable;
 }
@@ -9489,7 +9489,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -9572,11 +9572,11 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text TfSlot#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text AwsSlot#text}
   */
   readonly text: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -9678,21 +9678,21 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url TfSlot#image_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url AwsSlot#image_url}
   */
   readonly imageUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle TfSlot#subtitle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle AwsSlot#subtitle}
   */
   readonly subtitle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title TfSlot#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title AwsSlot#title}
   */
   readonly title: string;
   /**
   * button block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button TfSlot#button}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button AwsSlot#button}
   */
   readonly button?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonProperty[] | cdktn.IResolvable;
 }
@@ -9841,7 +9841,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -9924,7 +9924,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -10009,25 +10009,25 @@ export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndCo
   /**
   * custom_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload TfSlot#custom_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload AwsSlot#custom_payload}
   */
   readonly customPayload?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadProperty[] | cdktn.IResolvable;
   /**
   * image_response_card block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card TfSlot#image_response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card AwsSlot#image_response_card}
   */
   readonly imageResponseCard?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardProperty[] | cdktn.IResolvable;
   /**
   * plain_text_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message TfSlot#plain_text_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message AwsSlot#plain_text_message}
   */
   readonly plainTextMessage?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessageProperty[] | cdktn.IResolvable;
   /**
   * ssml_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message TfSlot#ssml_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message AwsSlot#ssml_message}
   */
   readonly ssmlMessage?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessageProperty[] | cdktn.IResolvable;
 }
@@ -10181,13 +10181,13 @@ export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndCo
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message TfSlot#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message AwsSlot#message}
   */
   readonly message?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageProperty[] | cdktn.IResolvable;
   /**
   * variation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#variation TfSlot#variation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#variation AwsSlot#variation}
   */
   readonly variation?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationProperty[] | cdktn.IResolvable;
 }
@@ -10295,13 +10295,13 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt TfSlot#allow_interrupt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt AwsSlot#allow_interrupt}
   */
   readonly allowInterrupt?: boolean | cdktn.IResolvable;
   /**
   * message_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_group TfSlot#message_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_group AwsSlot#message_group}
   */
   readonly messageGroup?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupProperty[] | cdktn.IResolvable;
 }
@@ -10409,7 +10409,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -10492,11 +10492,11 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text TfSlot#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text AwsSlot#text}
   */
   readonly text: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -10598,21 +10598,21 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url TfSlot#image_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url AwsSlot#image_url}
   */
   readonly imageUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle TfSlot#subtitle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle AwsSlot#subtitle}
   */
   readonly subtitle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title TfSlot#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title AwsSlot#title}
   */
   readonly title: string;
   /**
   * button block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button TfSlot#button}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button AwsSlot#button}
   */
   readonly button?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonProperty[] | cdktn.IResolvable;
 }
@@ -10761,7 +10761,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -10844,7 +10844,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -10929,25 +10929,25 @@ export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndCo
   /**
   * custom_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload TfSlot#custom_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload AwsSlot#custom_payload}
   */
   readonly customPayload?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadProperty[] | cdktn.IResolvable;
   /**
   * image_response_card block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card TfSlot#image_response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card AwsSlot#image_response_card}
   */
   readonly imageResponseCard?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardProperty[] | cdktn.IResolvable;
   /**
   * plain_text_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message TfSlot#plain_text_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message AwsSlot#plain_text_message}
   */
   readonly plainTextMessage?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessageProperty[] | cdktn.IResolvable;
   /**
   * ssml_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message TfSlot#ssml_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message AwsSlot#ssml_message}
   */
   readonly ssmlMessage?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessageProperty[] | cdktn.IResolvable;
 }
@@ -11099,7 +11099,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -11182,11 +11182,11 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text TfSlot#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text AwsSlot#text}
   */
   readonly text: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -11288,21 +11288,21 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url TfSlot#image_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url AwsSlot#image_url}
   */
   readonly imageUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle TfSlot#subtitle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle AwsSlot#subtitle}
   */
   readonly subtitle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title TfSlot#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title AwsSlot#title}
   */
   readonly title: string;
   /**
   * button block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button TfSlot#button}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button AwsSlot#button}
   */
   readonly button?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonProperty[] | cdktn.IResolvable;
 }
@@ -11451,7 +11451,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -11534,7 +11534,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -11619,25 +11619,25 @@ export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndCo
   /**
   * custom_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload TfSlot#custom_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload AwsSlot#custom_payload}
   */
   readonly customPayload?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadProperty[] | cdktn.IResolvable;
   /**
   * image_response_card block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card TfSlot#image_response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card AwsSlot#image_response_card}
   */
   readonly imageResponseCard?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardProperty[] | cdktn.IResolvable;
   /**
   * plain_text_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message TfSlot#plain_text_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message AwsSlot#plain_text_message}
   */
   readonly plainTextMessage?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessageProperty[] | cdktn.IResolvable;
   /**
   * ssml_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message TfSlot#ssml_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message AwsSlot#ssml_message}
   */
   readonly ssmlMessage?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessageProperty[] | cdktn.IResolvable;
 }
@@ -11791,13 +11791,13 @@ export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndCo
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message TfSlot#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message AwsSlot#message}
   */
   readonly message?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageProperty[] | cdktn.IResolvable;
   /**
   * variation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#variation TfSlot#variation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#variation AwsSlot#variation}
   */
   readonly variation?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationProperty[] | cdktn.IResolvable;
 }
@@ -11905,21 +11905,21 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt TfSlot#allow_interrupt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt AwsSlot#allow_interrupt}
   */
   readonly allowInterrupt?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#frequency_in_seconds TfSlot#frequency_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#frequency_in_seconds AwsSlot#frequency_in_seconds}
   */
   readonly frequencyInSeconds: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#timeout_in_seconds TfSlot#timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#timeout_in_seconds AwsSlot#timeout_in_seconds}
   */
   readonly timeoutInSeconds: number;
   /**
   * message_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_group TfSlot#message_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_group AwsSlot#message_group}
   */
   readonly messageGroup?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupProperty[] | cdktn.IResolvable;
 }
@@ -12065,7 +12065,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -12148,11 +12148,11 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text TfSlot#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text AwsSlot#text}
   */
   readonly text: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -12254,21 +12254,21 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url TfSlot#image_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url AwsSlot#image_url}
   */
   readonly imageUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle TfSlot#subtitle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle AwsSlot#subtitle}
   */
   readonly subtitle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title TfSlot#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title AwsSlot#title}
   */
   readonly title: string;
   /**
   * button block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button TfSlot#button}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button AwsSlot#button}
   */
   readonly button?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonProperty[] | cdktn.IResolvable;
 }
@@ -12417,7 +12417,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -12500,7 +12500,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -12585,25 +12585,25 @@ export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndCo
   /**
   * custom_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload TfSlot#custom_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload AwsSlot#custom_payload}
   */
   readonly customPayload?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadProperty[] | cdktn.IResolvable;
   /**
   * image_response_card block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card TfSlot#image_response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card AwsSlot#image_response_card}
   */
   readonly imageResponseCard?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardProperty[] | cdktn.IResolvable;
   /**
   * plain_text_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message TfSlot#plain_text_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message AwsSlot#plain_text_message}
   */
   readonly plainTextMessage?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessageProperty[] | cdktn.IResolvable;
   /**
   * ssml_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message TfSlot#ssml_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message AwsSlot#ssml_message}
   */
   readonly ssmlMessage?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessageProperty[] | cdktn.IResolvable;
 }
@@ -12755,7 +12755,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -12838,11 +12838,11 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text TfSlot#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text AwsSlot#text}
   */
   readonly text: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -12944,21 +12944,21 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url TfSlot#image_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url AwsSlot#image_url}
   */
   readonly imageUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle TfSlot#subtitle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle AwsSlot#subtitle}
   */
   readonly subtitle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title TfSlot#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title AwsSlot#title}
   */
   readonly title: string;
   /**
   * button block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button TfSlot#button}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button AwsSlot#button}
   */
   readonly button?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonProperty[] | cdktn.IResolvable;
 }
@@ -13107,7 +13107,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -13190,7 +13190,7 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -13275,25 +13275,25 @@ export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndCo
   /**
   * custom_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload TfSlot#custom_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload AwsSlot#custom_payload}
   */
   readonly customPayload?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadProperty[] | cdktn.IResolvable;
   /**
   * image_response_card block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card TfSlot#image_response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card AwsSlot#image_response_card}
   */
   readonly imageResponseCard?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardProperty[] | cdktn.IResolvable;
   /**
   * plain_text_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message TfSlot#plain_text_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message AwsSlot#plain_text_message}
   */
   readonly plainTextMessage?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessageProperty[] | cdktn.IResolvable;
   /**
   * ssml_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message TfSlot#ssml_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message AwsSlot#ssml_message}
   */
   readonly ssmlMessage?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessageProperty[] | cdktn.IResolvable;
 }
@@ -13447,13 +13447,13 @@ export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndCo
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message TfSlot#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message AwsSlot#message}
   */
   readonly message?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageProperty[] | cdktn.IResolvable;
   /**
   * variation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#variation TfSlot#variation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#variation AwsSlot#variation}
   */
   readonly variation?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationProperty[] | cdktn.IResolvable;
 }
@@ -13561,13 +13561,13 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt TfSlot#allow_interrupt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt AwsSlot#allow_interrupt}
   */
   readonly allowInterrupt?: boolean | cdktn.IResolvable;
   /**
   * message_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_group TfSlot#message_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_group AwsSlot#message_group}
   */
   readonly messageGroup?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupProperty[] | cdktn.IResolvable;
 }
@@ -13675,25 +13675,25 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContin
 }
 export interface SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#active TfSlot#active}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#active AwsSlot#active}
   */
   readonly active?: boolean | cdktn.IResolvable;
   /**
   * continue_response block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#continue_response TfSlot#continue_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#continue_response AwsSlot#continue_response}
   */
   readonly continueResponse?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationContinueResponseProperty[] | cdktn.IResolvable;
   /**
   * still_waiting_response block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#still_waiting_response TfSlot#still_waiting_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#still_waiting_response AwsSlot#still_waiting_response}
   */
   readonly stillWaitingResponse?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseProperty[] | cdktn.IResolvable;
   /**
   * waiting_response block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#waiting_response TfSlot#waiting_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#waiting_response AwsSlot#waiting_response}
   */
   readonly waitingResponse?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationWaitingResponseProperty[] | cdktn.IResolvable;
 }
@@ -13847,25 +13847,25 @@ export interface SubSlotSettingSlotSpecificationValueElicitationSettingProperty 
   /**
   * default_value_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#default_value_specification TfSlot#default_value_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#default_value_specification AwsSlot#default_value_specification}
   */
   readonly defaultValueSpecification?: SubSlotSettingSlotSpecificationValueElicitationSettingDefaultValueSpecificationProperty[] | cdktn.IResolvable;
   /**
   * prompt_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#prompt_specification TfSlot#prompt_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#prompt_specification AwsSlot#prompt_specification}
   */
   readonly promptSpecification?: SubSlotSettingSlotSpecificationValueElicitationSettingPromptSpecificationProperty[] | cdktn.IResolvable;
   /**
   * sample_utterance block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#sample_utterance TfSlot#sample_utterance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#sample_utterance AwsSlot#sample_utterance}
   */
   readonly sampleUtterance?: SubSlotSettingSlotSpecificationValueElicitationSettingSampleUtteranceProperty[] | cdktn.IResolvable;
   /**
   * wait_and_continue_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#wait_and_continue_specification TfSlot#wait_and_continue_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#wait_and_continue_specification AwsSlot#wait_and_continue_specification}
   */
   readonly waitAndContinueSpecification?: SubSlotSettingSlotSpecificationValueElicitationSettingWaitAndContinueSpecificationProperty[] | cdktn.IResolvable;
 }
@@ -14017,17 +14017,17 @@ export class SubSlotSettingSlotSpecificationValueElicitationSettingPropertyList 
 }
 export interface SlotSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#map_block_key TfSlot#map_block_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#map_block_key AwsSlot#map_block_key}
   */
   readonly mapBlockKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#slot_type_id TfSlot#slot_type_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#slot_type_id AwsSlot#slot_type_id}
   */
   readonly slotTypeId: string;
   /**
   * value_elicitation_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value_elicitation_setting TfSlot#value_elicitation_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value_elicitation_setting AwsSlot#value_elicitation_setting}
   */
   readonly valueElicitationSetting?: SubSlotSettingSlotSpecificationValueElicitationSettingProperty[] | cdktn.IResolvable;
 }
@@ -14151,13 +14151,13 @@ export class SlotSpecificationPropertyList extends cdktn.ComplexList {
 }
 export interface SubSlotSettingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#expression TfSlot#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#expression AwsSlot#expression}
   */
   readonly expression?: string;
   /**
   * slot_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#slot_specification TfSlot#slot_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#slot_specification AwsSlot#slot_specification}
   */
   readonly slotSpecification?: SlotSpecificationProperty[] | cdktn.IResolvable;
 }
@@ -14267,19 +14267,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#create TfSlot#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#create AwsSlot#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#delete TfSlot#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#delete AwsSlot#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#update TfSlot#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#update AwsSlot#update}
   */
   readonly update?: string;
 }
@@ -14387,7 +14387,7 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ValueElicitationSettingDefaultValueSpecificationDefaultValueListProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#default_value TfSlot#default_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#default_value AwsSlot#default_value}
   */
   readonly defaultValue: string;
 }
@@ -14472,7 +14472,7 @@ export interface ValueElicitationSettingDefaultValueSpecificationProperty {
   /**
   * default_value_list block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#default_value_list TfSlot#default_value_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#default_value_list AwsSlot#default_value_list}
   */
   readonly defaultValueList?: ValueElicitationSettingDefaultValueSpecificationDefaultValueListProperty[] | cdktn.IResolvable;
 }
@@ -14558,7 +14558,7 @@ export class ValueElicitationSettingDefaultValueSpecificationPropertyList extend
 }
 export interface ValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -14641,11 +14641,11 @@ export class ValueElicitationSettingPromptSpecificationMessageGroupMessageCustom
 }
 export interface ValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text TfSlot#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text AwsSlot#text}
   */
   readonly text: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -14747,21 +14747,21 @@ export class ValueElicitationSettingPromptSpecificationMessageGroupMessageImageR
 }
 export interface ValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url TfSlot#image_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url AwsSlot#image_url}
   */
   readonly imageUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle TfSlot#subtitle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle AwsSlot#subtitle}
   */
   readonly subtitle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title TfSlot#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title AwsSlot#title}
   */
   readonly title: string;
   /**
   * button block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button TfSlot#button}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button AwsSlot#button}
   */
   readonly button?: ValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardButtonProperty[] | cdktn.IResolvable;
 }
@@ -14910,7 +14910,7 @@ export class ValueElicitationSettingPromptSpecificationMessageGroupMessageImageR
 }
 export interface ValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -14993,7 +14993,7 @@ export class ValueElicitationSettingPromptSpecificationMessageGroupMessagePlainT
 }
 export interface ValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -15078,25 +15078,25 @@ export interface ValueElicitationSettingPromptSpecificationMessageGroupMessagePr
   /**
   * custom_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload TfSlot#custom_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload AwsSlot#custom_payload}
   */
   readonly customPayload?: ValueElicitationSettingPromptSpecificationMessageGroupMessageCustomPayloadProperty[] | cdktn.IResolvable;
   /**
   * image_response_card block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card TfSlot#image_response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card AwsSlot#image_response_card}
   */
   readonly imageResponseCard?: ValueElicitationSettingPromptSpecificationMessageGroupMessageImageResponseCardProperty[] | cdktn.IResolvable;
   /**
   * plain_text_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message TfSlot#plain_text_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message AwsSlot#plain_text_message}
   */
   readonly plainTextMessage?: ValueElicitationSettingPromptSpecificationMessageGroupMessagePlainTextMessageProperty[] | cdktn.IResolvable;
   /**
   * ssml_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message TfSlot#ssml_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message AwsSlot#ssml_message}
   */
   readonly ssmlMessage?: ValueElicitationSettingPromptSpecificationMessageGroupMessageSsmlMessageProperty[] | cdktn.IResolvable;
 }
@@ -15248,7 +15248,7 @@ export class ValueElicitationSettingPromptSpecificationMessageGroupMessageProper
 }
 export interface ValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -15331,11 +15331,11 @@ export class ValueElicitationSettingPromptSpecificationMessageGroupVariationCust
 }
 export interface ValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text TfSlot#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text AwsSlot#text}
   */
   readonly text: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -15437,21 +15437,21 @@ export class ValueElicitationSettingPromptSpecificationMessageGroupVariationImag
 }
 export interface ValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url TfSlot#image_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url AwsSlot#image_url}
   */
   readonly imageUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle TfSlot#subtitle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle AwsSlot#subtitle}
   */
   readonly subtitle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title TfSlot#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title AwsSlot#title}
   */
   readonly title: string;
   /**
   * button block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button TfSlot#button}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button AwsSlot#button}
   */
   readonly button?: ValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardButtonProperty[] | cdktn.IResolvable;
 }
@@ -15600,7 +15600,7 @@ export class ValueElicitationSettingPromptSpecificationMessageGroupVariationImag
 }
 export interface ValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -15683,7 +15683,7 @@ export class ValueElicitationSettingPromptSpecificationMessageGroupVariationPlai
 }
 export interface ValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -15768,25 +15768,25 @@ export interface ValueElicitationSettingPromptSpecificationMessageGroupVariation
   /**
   * custom_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload TfSlot#custom_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload AwsSlot#custom_payload}
   */
   readonly customPayload?: ValueElicitationSettingPromptSpecificationMessageGroupVariationCustomPayloadProperty[] | cdktn.IResolvable;
   /**
   * image_response_card block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card TfSlot#image_response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card AwsSlot#image_response_card}
   */
   readonly imageResponseCard?: ValueElicitationSettingPromptSpecificationMessageGroupVariationImageResponseCardProperty[] | cdktn.IResolvable;
   /**
   * plain_text_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message TfSlot#plain_text_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message AwsSlot#plain_text_message}
   */
   readonly plainTextMessage?: ValueElicitationSettingPromptSpecificationMessageGroupVariationPlainTextMessageProperty[] | cdktn.IResolvable;
   /**
   * ssml_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message TfSlot#ssml_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message AwsSlot#ssml_message}
   */
   readonly ssmlMessage?: ValueElicitationSettingPromptSpecificationMessageGroupVariationSsmlMessageProperty[] | cdktn.IResolvable;
 }
@@ -15940,13 +15940,13 @@ export interface ValueElicitationSettingPromptSpecificationMessageGroupProperty 
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message TfSlot#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message AwsSlot#message}
   */
   readonly message?: ValueElicitationSettingPromptSpecificationMessageGroupMessageProperty[] | cdktn.IResolvable;
   /**
   * variation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#variation TfSlot#variation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#variation AwsSlot#variation}
   */
   readonly variation?: ValueElicitationSettingPromptSpecificationMessageGroupVariationProperty[] | cdktn.IResolvable;
 }
@@ -16054,11 +16054,11 @@ export class ValueElicitationSettingPromptSpecificationMessageGroupPropertyList 
 }
 export interface ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_audio_input TfSlot#allow_audio_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_audio_input AwsSlot#allow_audio_input}
   */
   readonly allowAudioInput: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_dtmf_input TfSlot#allow_dtmf_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_dtmf_input AwsSlot#allow_dtmf_input}
   */
   readonly allowDtmfInput: boolean | cdktn.IResolvable;
 }
@@ -16160,11 +16160,11 @@ export class ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificati
 }
 export interface ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#end_timeout_ms TfSlot#end_timeout_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#end_timeout_ms AwsSlot#end_timeout_ms}
   */
   readonly endTimeoutMs: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#max_length_ms TfSlot#max_length_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#max_length_ms AwsSlot#max_length_ms}
   */
   readonly maxLengthMs: number;
 }
@@ -16266,19 +16266,19 @@ export class ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificati
 }
 export interface ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#deletion_character TfSlot#deletion_character}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#deletion_character AwsSlot#deletion_character}
   */
   readonly deletionCharacter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#end_character TfSlot#end_character}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#end_character AwsSlot#end_character}
   */
   readonly endCharacter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#end_timeout_ms TfSlot#end_timeout_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#end_timeout_ms AwsSlot#end_timeout_ms}
   */
   readonly endTimeoutMs: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#max_length TfSlot#max_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#max_length AwsSlot#max_length}
   */
   readonly maxLength: number;
 }
@@ -16418,19 +16418,19 @@ export class ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificati
 }
 export interface ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#start_timeout_ms TfSlot#start_timeout_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#start_timeout_ms AwsSlot#start_timeout_ms}
   */
   readonly startTimeoutMs: number;
   /**
   * audio_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#audio_specification TfSlot#audio_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#audio_specification AwsSlot#audio_specification}
   */
   readonly audioSpecification?: ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecificationProperty[] | cdktn.IResolvable;
   /**
   * dtmf_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#dtmf_specification TfSlot#dtmf_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#dtmf_specification AwsSlot#dtmf_specification}
   */
   readonly dtmfSpecification?: ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecificationProperty[] | cdktn.IResolvable;
 }
@@ -16557,7 +16557,7 @@ export class ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificati
 }
 export interface ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#start_timeout_ms TfSlot#start_timeout_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#start_timeout_ms AwsSlot#start_timeout_ms}
   */
   readonly startTimeoutMs: number;
 }
@@ -16640,29 +16640,29 @@ export class ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificati
 }
 export interface ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt TfSlot#allow_interrupt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt AwsSlot#allow_interrupt}
   */
   readonly allowInterrupt?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#map_block_key TfSlot#map_block_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#map_block_key AwsSlot#map_block_key}
   */
   readonly mapBlockKey: string;
   /**
   * allowed_input_types block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allowed_input_types TfSlot#allowed_input_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allowed_input_types AwsSlot#allowed_input_types}
   */
   readonly allowedInputTypes?: ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypesProperty[] | cdktn.IResolvable;
   /**
   * audio_and_dtmf_input_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#audio_and_dtmf_input_specification TfSlot#audio_and_dtmf_input_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#audio_and_dtmf_input_specification AwsSlot#audio_and_dtmf_input_specification}
   */
   readonly audioAndDtmfInputSpecification?: ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationProperty[] | cdktn.IResolvable;
   /**
   * text_input_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text_input_specification TfSlot#text_input_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text_input_specification AwsSlot#text_input_specification}
   */
   readonly textInputSpecification?: ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecificationProperty[] | cdktn.IResolvable;
 }
@@ -16833,27 +16833,27 @@ export class ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificati
 }
 export interface ValueElicitationSettingPromptSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt TfSlot#allow_interrupt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt AwsSlot#allow_interrupt}
   */
   readonly allowInterrupt?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#max_retries TfSlot#max_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#max_retries AwsSlot#max_retries}
   */
   readonly maxRetries: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_selection_strategy TfSlot#message_selection_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_selection_strategy AwsSlot#message_selection_strategy}
   */
   readonly messageSelectionStrategy?: string;
   /**
   * message_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_group TfSlot#message_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_group AwsSlot#message_group}
   */
   readonly messageGroup?: ValueElicitationSettingPromptSpecificationMessageGroupProperty[] | cdktn.IResolvable;
   /**
   * prompt_attempts_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#prompt_attempts_specification TfSlot#prompt_attempts_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#prompt_attempts_specification AwsSlot#prompt_attempts_specification}
   */
   readonly promptAttemptsSpecification?: ValueElicitationSettingPromptSpecificationPromptAttemptsSpecificationProperty[] | cdktn.IResolvable;
 }
@@ -17024,7 +17024,7 @@ export class ValueElicitationSettingPromptSpecificationPropertyList extends cdkt
 }
 export interface ValueElicitationSettingSampleUtteranceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#utterance TfSlot#utterance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#utterance AwsSlot#utterance}
   */
   readonly utterance: string;
 }
@@ -17107,7 +17107,7 @@ export class ValueElicitationSettingSampleUtterancePropertyList extends cdktn.Co
 }
 export interface SlotResolutionSettingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#slot_resolution_strategy TfSlot#slot_resolution_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#slot_resolution_strategy AwsSlot#slot_resolution_strategy}
   */
   readonly slotResolutionStrategy: string;
 }
@@ -17190,7 +17190,7 @@ export class SlotResolutionSettingPropertyList extends cdktn.ComplexList {
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -17273,11 +17273,11 @@ export class ValueElicitationSettingWaitAndContinueSpecificationContinueResponse
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text TfSlot#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text AwsSlot#text}
   */
   readonly text: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -17379,21 +17379,21 @@ export class ValueElicitationSettingWaitAndContinueSpecificationContinueResponse
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url TfSlot#image_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url AwsSlot#image_url}
   */
   readonly imageUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle TfSlot#subtitle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle AwsSlot#subtitle}
   */
   readonly subtitle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title TfSlot#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title AwsSlot#title}
   */
   readonly title: string;
   /**
   * button block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button TfSlot#button}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button AwsSlot#button}
   */
   readonly button?: ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardButtonProperty[] | cdktn.IResolvable;
 }
@@ -17542,7 +17542,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationContinueResponse
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -17625,7 +17625,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationContinueResponse
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -17710,25 +17710,25 @@ export interface ValueElicitationSettingWaitAndContinueSpecificationContinueResp
   /**
   * custom_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload TfSlot#custom_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload AwsSlot#custom_payload}
   */
   readonly customPayload?: ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageCustomPayloadProperty[] | cdktn.IResolvable;
   /**
   * image_response_card block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card TfSlot#image_response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card AwsSlot#image_response_card}
   */
   readonly imageResponseCard?: ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageImageResponseCardProperty[] | cdktn.IResolvable;
   /**
   * plain_text_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message TfSlot#plain_text_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message AwsSlot#plain_text_message}
   */
   readonly plainTextMessage?: ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessagePlainTextMessageProperty[] | cdktn.IResolvable;
   /**
   * ssml_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message TfSlot#ssml_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message AwsSlot#ssml_message}
   */
   readonly ssmlMessage?: ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageSsmlMessageProperty[] | cdktn.IResolvable;
 }
@@ -17880,7 +17880,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationContinueResponse
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -17963,11 +17963,11 @@ export class ValueElicitationSettingWaitAndContinueSpecificationContinueResponse
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text TfSlot#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text AwsSlot#text}
   */
   readonly text: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -18069,21 +18069,21 @@ export class ValueElicitationSettingWaitAndContinueSpecificationContinueResponse
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url TfSlot#image_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url AwsSlot#image_url}
   */
   readonly imageUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle TfSlot#subtitle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle AwsSlot#subtitle}
   */
   readonly subtitle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title TfSlot#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title AwsSlot#title}
   */
   readonly title: string;
   /**
   * button block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button TfSlot#button}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button AwsSlot#button}
   */
   readonly button?: ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardButtonProperty[] | cdktn.IResolvable;
 }
@@ -18232,7 +18232,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationContinueResponse
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -18315,7 +18315,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationContinueResponse
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -18400,25 +18400,25 @@ export interface ValueElicitationSettingWaitAndContinueSpecificationContinueResp
   /**
   * custom_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload TfSlot#custom_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload AwsSlot#custom_payload}
   */
   readonly customPayload?: ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationCustomPayloadProperty[] | cdktn.IResolvable;
   /**
   * image_response_card block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card TfSlot#image_response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card AwsSlot#image_response_card}
   */
   readonly imageResponseCard?: ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationImageResponseCardProperty[] | cdktn.IResolvable;
   /**
   * plain_text_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message TfSlot#plain_text_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message AwsSlot#plain_text_message}
   */
   readonly plainTextMessage?: ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationPlainTextMessageProperty[] | cdktn.IResolvable;
   /**
   * ssml_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message TfSlot#ssml_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message AwsSlot#ssml_message}
   */
   readonly ssmlMessage?: ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationSsmlMessageProperty[] | cdktn.IResolvable;
 }
@@ -18572,13 +18572,13 @@ export interface ValueElicitationSettingWaitAndContinueSpecificationContinueResp
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message TfSlot#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message AwsSlot#message}
   */
   readonly message?: ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupMessageProperty[] | cdktn.IResolvable;
   /**
   * variation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#variation TfSlot#variation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#variation AwsSlot#variation}
   */
   readonly variation?: ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupVariationProperty[] | cdktn.IResolvable;
 }
@@ -18686,13 +18686,13 @@ export class ValueElicitationSettingWaitAndContinueSpecificationContinueResponse
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationContinueResponseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt TfSlot#allow_interrupt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt AwsSlot#allow_interrupt}
   */
   readonly allowInterrupt?: boolean | cdktn.IResolvable;
   /**
   * message_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_group TfSlot#message_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_group AwsSlot#message_group}
   */
   readonly messageGroup?: ValueElicitationSettingWaitAndContinueSpecificationContinueResponseMessageGroupProperty[] | cdktn.IResolvable;
 }
@@ -18800,7 +18800,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationContinueResponse
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -18883,11 +18883,11 @@ export class ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResp
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text TfSlot#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text AwsSlot#text}
   */
   readonly text: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -18989,21 +18989,21 @@ export class ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResp
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url TfSlot#image_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url AwsSlot#image_url}
   */
   readonly imageUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle TfSlot#subtitle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle AwsSlot#subtitle}
   */
   readonly subtitle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title TfSlot#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title AwsSlot#title}
   */
   readonly title: string;
   /**
   * button block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button TfSlot#button}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button AwsSlot#button}
   */
   readonly button?: ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardButtonProperty[] | cdktn.IResolvable;
 }
@@ -19152,7 +19152,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResp
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -19235,7 +19235,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResp
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -19320,25 +19320,25 @@ export interface ValueElicitationSettingWaitAndContinueSpecificationStillWaiting
   /**
   * custom_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload TfSlot#custom_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload AwsSlot#custom_payload}
   */
   readonly customPayload?: ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageCustomPayloadProperty[] | cdktn.IResolvable;
   /**
   * image_response_card block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card TfSlot#image_response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card AwsSlot#image_response_card}
   */
   readonly imageResponseCard?: ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageImageResponseCardProperty[] | cdktn.IResolvable;
   /**
   * plain_text_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message TfSlot#plain_text_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message AwsSlot#plain_text_message}
   */
   readonly plainTextMessage?: ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessagePlainTextMessageProperty[] | cdktn.IResolvable;
   /**
   * ssml_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message TfSlot#ssml_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message AwsSlot#ssml_message}
   */
   readonly ssmlMessage?: ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageSsmlMessageProperty[] | cdktn.IResolvable;
 }
@@ -19490,7 +19490,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResp
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -19573,11 +19573,11 @@ export class ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResp
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text TfSlot#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text AwsSlot#text}
   */
   readonly text: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -19679,21 +19679,21 @@ export class ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResp
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url TfSlot#image_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url AwsSlot#image_url}
   */
   readonly imageUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle TfSlot#subtitle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle AwsSlot#subtitle}
   */
   readonly subtitle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title TfSlot#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title AwsSlot#title}
   */
   readonly title: string;
   /**
   * button block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button TfSlot#button}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button AwsSlot#button}
   */
   readonly button?: ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardButtonProperty[] | cdktn.IResolvable;
 }
@@ -19842,7 +19842,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResp
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -19925,7 +19925,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResp
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -20010,25 +20010,25 @@ export interface ValueElicitationSettingWaitAndContinueSpecificationStillWaiting
   /**
   * custom_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload TfSlot#custom_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload AwsSlot#custom_payload}
   */
   readonly customPayload?: ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationCustomPayloadProperty[] | cdktn.IResolvable;
   /**
   * image_response_card block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card TfSlot#image_response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card AwsSlot#image_response_card}
   */
   readonly imageResponseCard?: ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationImageResponseCardProperty[] | cdktn.IResolvable;
   /**
   * plain_text_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message TfSlot#plain_text_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message AwsSlot#plain_text_message}
   */
   readonly plainTextMessage?: ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationPlainTextMessageProperty[] | cdktn.IResolvable;
   /**
   * ssml_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message TfSlot#ssml_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message AwsSlot#ssml_message}
   */
   readonly ssmlMessage?: ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationSsmlMessageProperty[] | cdktn.IResolvable;
 }
@@ -20182,13 +20182,13 @@ export interface ValueElicitationSettingWaitAndContinueSpecificationStillWaiting
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message TfSlot#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message AwsSlot#message}
   */
   readonly message?: ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupMessageProperty[] | cdktn.IResolvable;
   /**
   * variation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#variation TfSlot#variation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#variation AwsSlot#variation}
   */
   readonly variation?: ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupVariationProperty[] | cdktn.IResolvable;
 }
@@ -20296,21 +20296,21 @@ export class ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResp
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt TfSlot#allow_interrupt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt AwsSlot#allow_interrupt}
   */
   readonly allowInterrupt?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#frequency_in_seconds TfSlot#frequency_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#frequency_in_seconds AwsSlot#frequency_in_seconds}
   */
   readonly frequencyInSeconds: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#timeout_in_seconds TfSlot#timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#timeout_in_seconds AwsSlot#timeout_in_seconds}
   */
   readonly timeoutInSeconds: number;
   /**
   * message_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_group TfSlot#message_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_group AwsSlot#message_group}
   */
   readonly messageGroup?: ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseMessageGroupProperty[] | cdktn.IResolvable;
 }
@@ -20456,7 +20456,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResp
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -20539,11 +20539,11 @@ export class ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseM
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text TfSlot#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text AwsSlot#text}
   */
   readonly text: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -20645,21 +20645,21 @@ export class ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseM
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url TfSlot#image_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url AwsSlot#image_url}
   */
   readonly imageUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle TfSlot#subtitle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle AwsSlot#subtitle}
   */
   readonly subtitle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title TfSlot#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title AwsSlot#title}
   */
   readonly title: string;
   /**
   * button block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button TfSlot#button}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button AwsSlot#button}
   */
   readonly button?: ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardButtonProperty[] | cdktn.IResolvable;
 }
@@ -20808,7 +20808,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseM
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -20891,7 +20891,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseM
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -20976,25 +20976,25 @@ export interface ValueElicitationSettingWaitAndContinueSpecificationWaitingRespo
   /**
   * custom_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload TfSlot#custom_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload AwsSlot#custom_payload}
   */
   readonly customPayload?: ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageCustomPayloadProperty[] | cdktn.IResolvable;
   /**
   * image_response_card block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card TfSlot#image_response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card AwsSlot#image_response_card}
   */
   readonly imageResponseCard?: ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageImageResponseCardProperty[] | cdktn.IResolvable;
   /**
   * plain_text_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message TfSlot#plain_text_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message AwsSlot#plain_text_message}
   */
   readonly plainTextMessage?: ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessagePlainTextMessageProperty[] | cdktn.IResolvable;
   /**
   * ssml_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message TfSlot#ssml_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message AwsSlot#ssml_message}
   */
   readonly ssmlMessage?: ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageSsmlMessageProperty[] | cdktn.IResolvable;
 }
@@ -21146,7 +21146,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseM
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -21229,11 +21229,11 @@ export class ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseM
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text TfSlot#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#text AwsSlot#text}
   */
   readonly text: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -21335,21 +21335,21 @@ export class ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseM
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url TfSlot#image_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_url AwsSlot#image_url}
   */
   readonly imageUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle TfSlot#subtitle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#subtitle AwsSlot#subtitle}
   */
   readonly subtitle?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title TfSlot#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#title AwsSlot#title}
   */
   readonly title: string;
   /**
   * button block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button TfSlot#button}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#button AwsSlot#button}
   */
   readonly button?: ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardButtonProperty[] | cdktn.IResolvable;
 }
@@ -21498,7 +21498,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseM
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -21581,7 +21581,7 @@ export class ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseM
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value TfSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#value AwsSlot#value}
   */
   readonly value: string;
 }
@@ -21666,25 +21666,25 @@ export interface ValueElicitationSettingWaitAndContinueSpecificationWaitingRespo
   /**
   * custom_payload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload TfSlot#custom_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#custom_payload AwsSlot#custom_payload}
   */
   readonly customPayload?: ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationCustomPayloadProperty[] | cdktn.IResolvable;
   /**
   * image_response_card block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card TfSlot#image_response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#image_response_card AwsSlot#image_response_card}
   */
   readonly imageResponseCard?: ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationImageResponseCardProperty[] | cdktn.IResolvable;
   /**
   * plain_text_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message TfSlot#plain_text_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#plain_text_message AwsSlot#plain_text_message}
   */
   readonly plainTextMessage?: ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationPlainTextMessageProperty[] | cdktn.IResolvable;
   /**
   * ssml_message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message TfSlot#ssml_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#ssml_message AwsSlot#ssml_message}
   */
   readonly ssmlMessage?: ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationSsmlMessageProperty[] | cdktn.IResolvable;
 }
@@ -21838,13 +21838,13 @@ export interface ValueElicitationSettingWaitAndContinueSpecificationWaitingRespo
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message TfSlot#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message AwsSlot#message}
   */
   readonly message?: ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupMessageProperty[] | cdktn.IResolvable;
   /**
   * variation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#variation TfSlot#variation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#variation AwsSlot#variation}
   */
   readonly variation?: ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupVariationProperty[] | cdktn.IResolvable;
 }
@@ -21952,13 +21952,13 @@ export class ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseM
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt TfSlot#allow_interrupt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#allow_interrupt AwsSlot#allow_interrupt}
   */
   readonly allowInterrupt?: boolean | cdktn.IResolvable;
   /**
   * message_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_group TfSlot#message_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#message_group AwsSlot#message_group}
   */
   readonly messageGroup?: ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseMessageGroupProperty[] | cdktn.IResolvable;
 }
@@ -22066,25 +22066,25 @@ export class ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseP
 }
 export interface ValueElicitationSettingWaitAndContinueSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#active TfSlot#active}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#active AwsSlot#active}
   */
   readonly active?: boolean | cdktn.IResolvable;
   /**
   * continue_response block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#continue_response TfSlot#continue_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#continue_response AwsSlot#continue_response}
   */
   readonly continueResponse?: ValueElicitationSettingWaitAndContinueSpecificationContinueResponseProperty[] | cdktn.IResolvable;
   /**
   * still_waiting_response block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#still_waiting_response TfSlot#still_waiting_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#still_waiting_response AwsSlot#still_waiting_response}
   */
   readonly stillWaitingResponse?: ValueElicitationSettingWaitAndContinueSpecificationStillWaitingResponseProperty[] | cdktn.IResolvable;
   /**
   * waiting_response block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#waiting_response TfSlot#waiting_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#waiting_response AwsSlot#waiting_response}
   */
   readonly waitingResponse?: ValueElicitationSettingWaitAndContinueSpecificationWaitingResponseProperty[] | cdktn.IResolvable;
 }
@@ -22236,37 +22236,37 @@ export class ValueElicitationSettingWaitAndContinueSpecificationPropertyList ext
 }
 export interface ValueElicitationSettingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#slot_constraint TfSlot#slot_constraint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#slot_constraint AwsSlot#slot_constraint}
   */
   readonly slotConstraint: string;
   /**
   * default_value_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#default_value_specification TfSlot#default_value_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#default_value_specification AwsSlot#default_value_specification}
   */
   readonly defaultValueSpecification?: ValueElicitationSettingDefaultValueSpecificationProperty[] | cdktn.IResolvable;
   /**
   * prompt_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#prompt_specification TfSlot#prompt_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#prompt_specification AwsSlot#prompt_specification}
   */
   readonly promptSpecification?: ValueElicitationSettingPromptSpecificationProperty[] | cdktn.IResolvable;
   /**
   * sample_utterance block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#sample_utterance TfSlot#sample_utterance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#sample_utterance AwsSlot#sample_utterance}
   */
   readonly sampleUtterance?: ValueElicitationSettingSampleUtteranceProperty[] | cdktn.IResolvable;
   /**
   * slot_resolution_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#slot_resolution_setting TfSlot#slot_resolution_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#slot_resolution_setting AwsSlot#slot_resolution_setting}
   */
   readonly slotResolutionSetting?: SlotResolutionSettingProperty[] | cdktn.IResolvable;
   /**
   * wait_and_continue_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#wait_and_continue_specification TfSlot#wait_and_continue_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_slot#wait_and_continue_specification AwsSlot#wait_and_continue_specification}
   */
   readonly waitAndContinueSpecification?: ValueElicitationSettingWaitAndContinueSpecificationProperty[] | cdktn.IResolvable;
 }

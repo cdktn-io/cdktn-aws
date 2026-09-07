@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCertificateConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCertificateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate#domain_name TfCertificate#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate#domain_name AwsCertificate#domain_name}
   */
   readonly domainName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate#id TfCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate#id AwsCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate#name TfCertificate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate#name AwsCertificate#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate#region TfCertificate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate#region AwsCertificate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate#subject_alternative_names TfCertificate#subject_alternative_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate#subject_alternative_names AwsCertificate#subject_alternative_names}
   */
   readonly subjectAlternativeNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate#tags TfCertificate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate#tags AwsCertificate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate#tags_all TfCertificate#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate#tags_all AwsCertificate#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -44,7 +44,7 @@ export interface TfCertificateConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate aws_lightsail_certificate}
 */
-export class TfCertificate extends cdktn.TerraformResource {
+export class AwsCertificate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfCertificate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCertificate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCertificate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCertificate to import
-  * @param importFromId The id of the existing TfCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCertificate to import is found
+  * @param importToId The construct id used in the generated config for the AwsCertificate to import
+  * @param importFromId The id of the existing AwsCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lightsail_certificate#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCertificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lightsail_certificate", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfCertificate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCertificateConfig
+  * @param options AwsCertificateConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCertificateConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lightsail_certificate',
       terraformGeneratorMetadata: {
@@ -132,7 +132,7 @@ export class TfCertificate extends cdktn.TerraformResource {
   }
 
   // domain_validation_options - computed: true, optional: false, required: false
-  private _domainValidationOptions = new TfCertificate.DomainValidationOptionsPropertyList(this, "domain_validation_options", true);
+  private _domainValidationOptions = new AwsCertificate.DomainValidationOptionsPropertyList(this, "domain_validation_options", true);
   public get domainValidationOptions() {
     return this._domainValidationOptions;
   }
@@ -297,7 +297,7 @@ export class TfCertificate extends cdktn.TerraformResource {
   }
 }
 
-export function tfCertificateDomainValidationOptionsPropertyToTerraform(struct?: TfCertificate.DomainValidationOptionsProperty): any {
+export function awsCertificateDomainValidationOptionsPropertyToTerraform(struct?: AwsCertificate.DomainValidationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function tfCertificateDomainValidationOptionsPropertyToTerraform(struct?:
 }
 
 
-export function tfCertificateDomainValidationOptionsPropertyToHclTerraform(struct?: TfCertificate.DomainValidationOptionsProperty): any {
+export function awsCertificateDomainValidationOptionsPropertyToHclTerraform(struct?: AwsCertificate.DomainValidationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function tfCertificateDomainValidationOptionsPropertyToHclTerraform(struc
 }
 
 
-export namespace TfCertificate {
+export namespace AwsCertificate {
 export interface DomainValidationOptionsProperty {
 }
 export class DomainValidationOptionsPropertyOutputReference extends cdktn.ComplexObject {

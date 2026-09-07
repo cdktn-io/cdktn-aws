@@ -5,102 +5,102 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCatalogTableConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCatalogTableConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#catalog_id TfCatalogTable#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#catalog_id AwsCatalogTable#catalog_id}
   */
   readonly catalogId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#database_name TfCatalogTable#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#database_name AwsCatalogTable#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#description TfCatalogTable#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#description AwsCatalogTable#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#id TfCatalogTable#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#id AwsCatalogTable#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#name TfCatalogTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#name AwsCatalogTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#owner TfCatalogTable#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#owner AwsCatalogTable#owner}
   */
   readonly owner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#parameters TfCatalogTable#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#parameters AwsCatalogTable#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#region TfCatalogTable#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#region AwsCatalogTable#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#retention TfCatalogTable#retention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#retention AwsCatalogTable#retention}
   */
   readonly retention?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#table_type TfCatalogTable#table_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#table_type AwsCatalogTable#table_type}
   */
   readonly tableType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#view_expanded_text TfCatalogTable#view_expanded_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#view_expanded_text AwsCatalogTable#view_expanded_text}
   */
   readonly viewExpandedText?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#view_original_text TfCatalogTable#view_original_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#view_original_text AwsCatalogTable#view_original_text}
   */
   readonly viewOriginalText?: string;
   /**
   * open_table_format_input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#open_table_format_input TfCatalogTable#open_table_format_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#open_table_format_input AwsCatalogTable#open_table_format_input}
   */
-  readonly openTableFormatInput?: TfCatalogTable.OpenTableFormatInputProperty;
+  readonly openTableFormatInput?: AwsCatalogTable.OpenTableFormatInputProperty;
   /**
   * partition_index block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#partition_index TfCatalogTable#partition_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#partition_index AwsCatalogTable#partition_index}
   */
-  readonly partitionIndex?: TfCatalogTable.PartitionIndexProperty[] | cdktn.IResolvable;
+  readonly partitionIndex?: AwsCatalogTable.PartitionIndexProperty[] | cdktn.IResolvable;
   /**
   * partition_keys block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#partition_keys TfCatalogTable#partition_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#partition_keys AwsCatalogTable#partition_keys}
   */
-  readonly partitionKeys?: TfCatalogTable.PartitionKeysProperty[] | cdktn.IResolvable;
+  readonly partitionKeys?: AwsCatalogTable.PartitionKeysProperty[] | cdktn.IResolvable;
   /**
   * storage_descriptor block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#storage_descriptor TfCatalogTable#storage_descriptor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#storage_descriptor AwsCatalogTable#storage_descriptor}
   */
-  readonly storageDescriptor?: TfCatalogTable.StorageDescriptorProperty;
+  readonly storageDescriptor?: AwsCatalogTable.StorageDescriptorProperty;
   /**
   * target_table block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#target_table TfCatalogTable#target_table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#target_table AwsCatalogTable#target_table}
   */
-  readonly targetTable?: TfCatalogTable.TargetTableProperty;
+  readonly targetTable?: AwsCatalogTable.TargetTableProperty;
   /**
   * view_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#view_definition TfCatalogTable#view_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#view_definition AwsCatalogTable#view_definition}
   */
-  readonly viewDefinition?: TfCatalogTable.ViewDefinitionProperty;
+  readonly viewDefinition?: AwsCatalogTable.ViewDefinitionProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table aws_glue_catalog_table}
 */
-export class TfCatalogTable extends cdktn.TerraformResource {
+export class AwsCatalogTable extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -111,11 +111,11 @@ export class TfCatalogTable extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCatalogTable resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCatalogTable resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCatalogTable to import
-  * @param importFromId The id of the existing TfCatalogTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCatalogTable to import is found
+  * @param importToId The construct id used in the generated config for the AwsCatalogTable to import
+  * @param importFromId The id of the existing AwsCatalogTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCatalogTable to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_catalog_table", importId: importFromId, provider });
@@ -130,9 +130,9 @@ export class TfCatalogTable extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCatalogTableConfig
+  * @param options AwsCatalogTableConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCatalogTableConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCatalogTableConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_catalog_table',
       terraformGeneratorMetadata: {
@@ -364,11 +364,11 @@ export class TfCatalogTable extends cdktn.TerraformResource {
   }
 
   // open_table_format_input - computed: false, optional: true, required: false
-  private _openTableFormatInput = new TfCatalogTable.OpenTableFormatInputPropertyOutputReference(this, "open_table_format_input");
+  private _openTableFormatInput = new AwsCatalogTable.OpenTableFormatInputPropertyOutputReference(this, "open_table_format_input");
   public get openTableFormatInput() {
     return this._openTableFormatInput;
   }
-  public putOpenTableFormatInput(value: TfCatalogTable.OpenTableFormatInputProperty) {
+  public putOpenTableFormatInput(value: AwsCatalogTable.OpenTableFormatInputProperty) {
     this._openTableFormatInput.internalValue = value;
   }
   public resetOpenTableFormatInput() {
@@ -380,11 +380,11 @@ export class TfCatalogTable extends cdktn.TerraformResource {
   }
 
   // partition_index - computed: false, optional: true, required: false
-  private _partitionIndex = new TfCatalogTable.PartitionIndexPropertyList(this, "partition_index", false);
+  private _partitionIndex = new AwsCatalogTable.PartitionIndexPropertyList(this, "partition_index", false);
   public get partitionIndex() {
     return this._partitionIndex;
   }
-  public putPartitionIndex(value: TfCatalogTable.PartitionIndexProperty[] | cdktn.IResolvable) {
+  public putPartitionIndex(value: AwsCatalogTable.PartitionIndexProperty[] | cdktn.IResolvable) {
     this._partitionIndex.internalValue = value;
   }
   public resetPartitionIndex() {
@@ -396,11 +396,11 @@ export class TfCatalogTable extends cdktn.TerraformResource {
   }
 
   // partition_keys - computed: false, optional: true, required: false
-  private _partitionKeys = new TfCatalogTable.PartitionKeysPropertyList(this, "partition_keys", false);
+  private _partitionKeys = new AwsCatalogTable.PartitionKeysPropertyList(this, "partition_keys", false);
   public get partitionKeys() {
     return this._partitionKeys;
   }
-  public putPartitionKeys(value: TfCatalogTable.PartitionKeysProperty[] | cdktn.IResolvable) {
+  public putPartitionKeys(value: AwsCatalogTable.PartitionKeysProperty[] | cdktn.IResolvable) {
     this._partitionKeys.internalValue = value;
   }
   public resetPartitionKeys() {
@@ -412,11 +412,11 @@ export class TfCatalogTable extends cdktn.TerraformResource {
   }
 
   // storage_descriptor - computed: false, optional: true, required: false
-  private _storageDescriptor = new TfCatalogTable.StorageDescriptorPropertyOutputReference(this, "storage_descriptor");
+  private _storageDescriptor = new AwsCatalogTable.StorageDescriptorPropertyOutputReference(this, "storage_descriptor");
   public get storageDescriptor() {
     return this._storageDescriptor;
   }
-  public putStorageDescriptor(value: TfCatalogTable.StorageDescriptorProperty) {
+  public putStorageDescriptor(value: AwsCatalogTable.StorageDescriptorProperty) {
     this._storageDescriptor.internalValue = value;
   }
   public resetStorageDescriptor() {
@@ -428,11 +428,11 @@ export class TfCatalogTable extends cdktn.TerraformResource {
   }
 
   // target_table - computed: false, optional: true, required: false
-  private _targetTable = new TfCatalogTable.TargetTablePropertyOutputReference(this, "target_table");
+  private _targetTable = new AwsCatalogTable.TargetTablePropertyOutputReference(this, "target_table");
   public get targetTable() {
     return this._targetTable;
   }
-  public putTargetTable(value: TfCatalogTable.TargetTableProperty) {
+  public putTargetTable(value: AwsCatalogTable.TargetTableProperty) {
     this._targetTable.internalValue = value;
   }
   public resetTargetTable() {
@@ -444,11 +444,11 @@ export class TfCatalogTable extends cdktn.TerraformResource {
   }
 
   // view_definition - computed: false, optional: true, required: false
-  private _viewDefinition = new TfCatalogTable.ViewDefinitionPropertyOutputReference(this, "view_definition");
+  private _viewDefinition = new AwsCatalogTable.ViewDefinitionPropertyOutputReference(this, "view_definition");
   public get viewDefinition() {
     return this._viewDefinition;
   }
-  public putViewDefinition(value: TfCatalogTable.ViewDefinitionProperty) {
+  public putViewDefinition(value: AwsCatalogTable.ViewDefinitionProperty) {
     this._viewDefinition.internalValue = value;
   }
   public resetViewDefinition() {
@@ -477,12 +477,12 @@ export class TfCatalogTable extends cdktn.TerraformResource {
       table_type: cdktn.stringToTerraform(this._tableType),
       view_expanded_text: cdktn.stringToTerraform(this._viewExpandedText),
       view_original_text: cdktn.stringToTerraform(this._viewOriginalText),
-      open_table_format_input: tfCatalogTableOpenTableFormatInputPropertyToTerraform(this._openTableFormatInput.internalValue),
-      partition_index: cdktn.listMapper(tfCatalogTablePartitionIndexPropertyToTerraform, true)(this._partitionIndex.internalValue),
-      partition_keys: cdktn.listMapper(tfCatalogTablePartitionKeysPropertyToTerraform, true)(this._partitionKeys.internalValue),
-      storage_descriptor: tfCatalogTableStorageDescriptorPropertyToTerraform(this._storageDescriptor.internalValue),
-      target_table: tfCatalogTableTargetTablePropertyToTerraform(this._targetTable.internalValue),
-      view_definition: tfCatalogTableViewDefinitionPropertyToTerraform(this._viewDefinition.internalValue),
+      open_table_format_input: awsCatalogTableOpenTableFormatInputPropertyToTerraform(this._openTableFormatInput.internalValue),
+      partition_index: cdktn.listMapper(awsCatalogTablePartitionIndexPropertyToTerraform, true)(this._partitionIndex.internalValue),
+      partition_keys: cdktn.listMapper(awsCatalogTablePartitionKeysPropertyToTerraform, true)(this._partitionKeys.internalValue),
+      storage_descriptor: awsCatalogTableStorageDescriptorPropertyToTerraform(this._storageDescriptor.internalValue),
+      target_table: awsCatalogTableTargetTablePropertyToTerraform(this._targetTable.internalValue),
+      view_definition: awsCatalogTableViewDefinitionPropertyToTerraform(this._viewDefinition.internalValue),
     };
   }
 
@@ -561,40 +561,40 @@ export class TfCatalogTable extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       open_table_format_input: {
-        value: tfCatalogTableOpenTableFormatInputPropertyToHclTerraform(this._openTableFormatInput.internalValue),
+        value: awsCatalogTableOpenTableFormatInputPropertyToHclTerraform(this._openTableFormatInput.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCatalogTable.OpenTableFormatInputPropertyList",
+        storageClassType: "AwsCatalogTable.OpenTableFormatInputPropertyList",
       },
       partition_index: {
-        value: cdktn.listMapperHcl(tfCatalogTablePartitionIndexPropertyToHclTerraform, true)(this._partitionIndex.internalValue),
+        value: cdktn.listMapperHcl(awsCatalogTablePartitionIndexPropertyToHclTerraform, true)(this._partitionIndex.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCatalogTable.PartitionIndexPropertyList",
+        storageClassType: "AwsCatalogTable.PartitionIndexPropertyList",
       },
       partition_keys: {
-        value: cdktn.listMapperHcl(tfCatalogTablePartitionKeysPropertyToHclTerraform, true)(this._partitionKeys.internalValue),
+        value: cdktn.listMapperHcl(awsCatalogTablePartitionKeysPropertyToHclTerraform, true)(this._partitionKeys.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCatalogTable.PartitionKeysPropertyList",
+        storageClassType: "AwsCatalogTable.PartitionKeysPropertyList",
       },
       storage_descriptor: {
-        value: tfCatalogTableStorageDescriptorPropertyToHclTerraform(this._storageDescriptor.internalValue),
+        value: awsCatalogTableStorageDescriptorPropertyToHclTerraform(this._storageDescriptor.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCatalogTable.StorageDescriptorPropertyList",
+        storageClassType: "AwsCatalogTable.StorageDescriptorPropertyList",
       },
       target_table: {
-        value: tfCatalogTableTargetTablePropertyToHclTerraform(this._targetTable.internalValue),
+        value: awsCatalogTableTargetTablePropertyToHclTerraform(this._targetTable.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCatalogTable.TargetTablePropertyList",
+        storageClassType: "AwsCatalogTable.TargetTablePropertyList",
       },
       view_definition: {
-        value: tfCatalogTableViewDefinitionPropertyToHclTerraform(this._viewDefinition.internalValue),
+        value: awsCatalogTableViewDefinitionPropertyToHclTerraform(this._viewDefinition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCatalogTable.ViewDefinitionPropertyList",
+        storageClassType: "AwsCatalogTable.ViewDefinitionPropertyList",
       },
     };
 
@@ -603,7 +603,7 @@ export class TfCatalogTable extends cdktn.TerraformResource {
   }
 }
 
-export function tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputPartitionSpecFieldsPropertyToTerraform(struct?: TfCatalogTable.OpenTableFormatInputIcebergInputIcebergTableInputPartitionSpecFieldsProperty | cdktn.IResolvable): any {
+export function awsCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputPartitionSpecFieldsPropertyToTerraform(struct?: AwsCatalogTable.OpenTableFormatInputIcebergInputIcebergTableInputPartitionSpecFieldsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -617,7 +617,7 @@ export function tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputP
 }
 
 
-export function tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputPartitionSpecFieldsPropertyToHclTerraform(struct?: TfCatalogTable.OpenTableFormatInputIcebergInputIcebergTableInputPartitionSpecFieldsProperty | cdktn.IResolvable): any {
+export function awsCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputPartitionSpecFieldsPropertyToHclTerraform(struct?: AwsCatalogTable.OpenTableFormatInputIcebergInputIcebergTableInputPartitionSpecFieldsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -654,19 +654,19 @@ export function tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputP
 }
 
 
-export function tfCatalogTablePartitionSpecPropertyToTerraform(struct?: TfCatalogTable.PartitionSpecPropertyOutputReference | TfCatalogTable.PartitionSpecProperty): any {
+export function awsCatalogTablePartitionSpecPropertyToTerraform(struct?: AwsCatalogTable.PartitionSpecPropertyOutputReference | AwsCatalogTable.PartitionSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     spec_id: cdktn.numberToTerraform(struct!.specId),
-    fields: cdktn.listMapper(tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputPartitionSpecFieldsPropertyToTerraform, true)(struct!.fields),
+    fields: cdktn.listMapper(awsCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputPartitionSpecFieldsPropertyToTerraform, true)(struct!.fields),
   }
 }
 
 
-export function tfCatalogTablePartitionSpecPropertyToHclTerraform(struct?: TfCatalogTable.PartitionSpecPropertyOutputReference | TfCatalogTable.PartitionSpecProperty): any {
+export function awsCatalogTablePartitionSpecPropertyToHclTerraform(struct?: AwsCatalogTable.PartitionSpecPropertyOutputReference | AwsCatalogTable.PartitionSpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -679,7 +679,7 @@ export function tfCatalogTablePartitionSpecPropertyToHclTerraform(struct?: TfCat
       storageClassType: "number",
     },
     fields: {
-      value: cdktn.listMapperHcl(tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputPartitionSpecFieldsPropertyToHclTerraform, true)(struct!.fields),
+      value: cdktn.listMapperHcl(awsCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputPartitionSpecFieldsPropertyToHclTerraform, true)(struct!.fields),
       isBlock: true,
       type: "list",
       storageClassType: "OpenTableFormatInputIcebergInputIcebergTableInputPartitionSpecFieldsPropertyList",
@@ -691,7 +691,7 @@ export function tfCatalogTablePartitionSpecPropertyToHclTerraform(struct?: TfCat
 }
 
 
-export function tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputSchemaFieldsPropertyToTerraform(struct?: TfCatalogTable.OpenTableFormatInputIcebergInputIcebergTableInputSchemaFieldsProperty | cdktn.IResolvable): any {
+export function awsCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputSchemaFieldsPropertyToTerraform(struct?: AwsCatalogTable.OpenTableFormatInputIcebergInputIcebergTableInputSchemaFieldsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -708,7 +708,7 @@ export function tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputS
 }
 
 
-export function tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputSchemaFieldsPropertyToHclTerraform(struct?: TfCatalogTable.OpenTableFormatInputIcebergInputIcebergTableInputSchemaFieldsProperty | cdktn.IResolvable): any {
+export function awsCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputSchemaFieldsPropertyToHclTerraform(struct?: AwsCatalogTable.OpenTableFormatInputIcebergInputIcebergTableInputSchemaFieldsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -763,7 +763,7 @@ export function tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputS
 }
 
 
-export function tfCatalogTableSchemaPropertyToTerraform(struct?: TfCatalogTable.SchemaPropertyOutputReference | TfCatalogTable.SchemaProperty): any {
+export function awsCatalogTableSchemaPropertyToTerraform(struct?: AwsCatalogTable.SchemaPropertyOutputReference | AwsCatalogTable.SchemaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -772,12 +772,12 @@ export function tfCatalogTableSchemaPropertyToTerraform(struct?: TfCatalogTable.
     identifier_field_ids: cdktn.listMapper(cdktn.numberToTerraform, false)(struct!.identifierFieldIds),
     schema_id: cdktn.numberToTerraform(struct!.schemaId),
     type: cdktn.stringToTerraform(struct!.type),
-    fields: cdktn.listMapper(tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputSchemaFieldsPropertyToTerraform, true)(struct!.fields),
+    fields: cdktn.listMapper(awsCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputSchemaFieldsPropertyToTerraform, true)(struct!.fields),
   }
 }
 
 
-export function tfCatalogTableSchemaPropertyToHclTerraform(struct?: TfCatalogTable.SchemaPropertyOutputReference | TfCatalogTable.SchemaProperty): any {
+export function awsCatalogTableSchemaPropertyToHclTerraform(struct?: AwsCatalogTable.SchemaPropertyOutputReference | AwsCatalogTable.SchemaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -802,7 +802,7 @@ export function tfCatalogTableSchemaPropertyToHclTerraform(struct?: TfCatalogTab
       storageClassType: "string",
     },
     fields: {
-      value: cdktn.listMapperHcl(tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputSchemaFieldsPropertyToHclTerraform, true)(struct!.fields),
+      value: cdktn.listMapperHcl(awsCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputSchemaFieldsPropertyToHclTerraform, true)(struct!.fields),
       isBlock: true,
       type: "list",
       storageClassType: "OpenTableFormatInputIcebergInputIcebergTableInputSchemaFieldsPropertyList",
@@ -814,7 +814,7 @@ export function tfCatalogTableSchemaPropertyToHclTerraform(struct?: TfCatalogTab
 }
 
 
-export function tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputSortOrderFieldsPropertyToTerraform(struct?: TfCatalogTable.OpenTableFormatInputIcebergInputIcebergTableInputSortOrderFieldsProperty | cdktn.IResolvable): any {
+export function awsCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputSortOrderFieldsPropertyToTerraform(struct?: AwsCatalogTable.OpenTableFormatInputIcebergInputIcebergTableInputSortOrderFieldsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -828,7 +828,7 @@ export function tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputS
 }
 
 
-export function tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputSortOrderFieldsPropertyToHclTerraform(struct?: TfCatalogTable.OpenTableFormatInputIcebergInputIcebergTableInputSortOrderFieldsProperty | cdktn.IResolvable): any {
+export function awsCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputSortOrderFieldsPropertyToHclTerraform(struct?: AwsCatalogTable.OpenTableFormatInputIcebergInputIcebergTableInputSortOrderFieldsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -865,19 +865,19 @@ export function tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputS
 }
 
 
-export function tfCatalogTableSortOrderPropertyToTerraform(struct?: TfCatalogTable.SortOrderPropertyOutputReference | TfCatalogTable.SortOrderProperty): any {
+export function awsCatalogTableSortOrderPropertyToTerraform(struct?: AwsCatalogTable.SortOrderPropertyOutputReference | AwsCatalogTable.SortOrderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     order_id: cdktn.numberToTerraform(struct!.orderId),
-    fields: cdktn.listMapper(tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputSortOrderFieldsPropertyToTerraform, true)(struct!.fields),
+    fields: cdktn.listMapper(awsCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputSortOrderFieldsPropertyToTerraform, true)(struct!.fields),
   }
 }
 
 
-export function tfCatalogTableSortOrderPropertyToHclTerraform(struct?: TfCatalogTable.SortOrderPropertyOutputReference | TfCatalogTable.SortOrderProperty): any {
+export function awsCatalogTableSortOrderPropertyToHclTerraform(struct?: AwsCatalogTable.SortOrderPropertyOutputReference | AwsCatalogTable.SortOrderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -890,7 +890,7 @@ export function tfCatalogTableSortOrderPropertyToHclTerraform(struct?: TfCatalog
       storageClassType: "number",
     },
     fields: {
-      value: cdktn.listMapperHcl(tfCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputSortOrderFieldsPropertyToHclTerraform, true)(struct!.fields),
+      value: cdktn.listMapperHcl(awsCatalogTableOpenTableFormatInputIcebergInputIcebergTableInputSortOrderFieldsPropertyToHclTerraform, true)(struct!.fields),
       isBlock: true,
       type: "list",
       storageClassType: "OpenTableFormatInputIcebergInputIcebergTableInputSortOrderFieldsPropertyList",
@@ -902,7 +902,7 @@ export function tfCatalogTableSortOrderPropertyToHclTerraform(struct?: TfCatalog
 }
 
 
-export function tfCatalogTableIcebergTableInputPropertyToTerraform(struct?: TfCatalogTable.IcebergTableInputPropertyOutputReference | TfCatalogTable.IcebergTableInputProperty): any {
+export function awsCatalogTableIcebergTableInputPropertyToTerraform(struct?: AwsCatalogTable.IcebergTableInputPropertyOutputReference | AwsCatalogTable.IcebergTableInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -910,14 +910,14 @@ export function tfCatalogTableIcebergTableInputPropertyToTerraform(struct?: TfCa
   return {
     location: cdktn.stringToTerraform(struct!.location),
     properties: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.properties),
-    partition_spec: tfCatalogTablePartitionSpecPropertyToTerraform(struct!.partitionSpec),
-    schema: tfCatalogTableSchemaPropertyToTerraform(struct!.schema),
-    sort_order: tfCatalogTableSortOrderPropertyToTerraform(struct!.sortOrder),
+    partition_spec: awsCatalogTablePartitionSpecPropertyToTerraform(struct!.partitionSpec),
+    schema: awsCatalogTableSchemaPropertyToTerraform(struct!.schema),
+    sort_order: awsCatalogTableSortOrderPropertyToTerraform(struct!.sortOrder),
   }
 }
 
 
-export function tfCatalogTableIcebergTableInputPropertyToHclTerraform(struct?: TfCatalogTable.IcebergTableInputPropertyOutputReference | TfCatalogTable.IcebergTableInputProperty): any {
+export function awsCatalogTableIcebergTableInputPropertyToHclTerraform(struct?: AwsCatalogTable.IcebergTableInputPropertyOutputReference | AwsCatalogTable.IcebergTableInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -936,19 +936,19 @@ export function tfCatalogTableIcebergTableInputPropertyToHclTerraform(struct?: T
       storageClassType: "stringMap",
     },
     partition_spec: {
-      value: tfCatalogTablePartitionSpecPropertyToHclTerraform(struct!.partitionSpec),
+      value: awsCatalogTablePartitionSpecPropertyToHclTerraform(struct!.partitionSpec),
       isBlock: true,
       type: "list",
       storageClassType: "PartitionSpecPropertyList",
     },
     schema: {
-      value: tfCatalogTableSchemaPropertyToHclTerraform(struct!.schema),
+      value: awsCatalogTableSchemaPropertyToHclTerraform(struct!.schema),
       isBlock: true,
       type: "list",
       storageClassType: "SchemaPropertyList",
     },
     sort_order: {
-      value: tfCatalogTableSortOrderPropertyToHclTerraform(struct!.sortOrder),
+      value: awsCatalogTableSortOrderPropertyToHclTerraform(struct!.sortOrder),
       isBlock: true,
       type: "list",
       storageClassType: "SortOrderPropertyList",
@@ -960,7 +960,7 @@ export function tfCatalogTableIcebergTableInputPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfCatalogTableIcebergInputPropertyToTerraform(struct?: TfCatalogTable.IcebergInputPropertyOutputReference | TfCatalogTable.IcebergInputProperty): any {
+export function awsCatalogTableIcebergInputPropertyToTerraform(struct?: AwsCatalogTable.IcebergInputPropertyOutputReference | AwsCatalogTable.IcebergInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -968,12 +968,12 @@ export function tfCatalogTableIcebergInputPropertyToTerraform(struct?: TfCatalog
   return {
     metadata_operation: cdktn.stringToTerraform(struct!.metadataOperation),
     version: cdktn.stringToTerraform(struct!.version),
-    iceberg_table_input: tfCatalogTableIcebergTableInputPropertyToTerraform(struct!.icebergTableInput),
+    iceberg_table_input: awsCatalogTableIcebergTableInputPropertyToTerraform(struct!.icebergTableInput),
   }
 }
 
 
-export function tfCatalogTableIcebergInputPropertyToHclTerraform(struct?: TfCatalogTable.IcebergInputPropertyOutputReference | TfCatalogTable.IcebergInputProperty): any {
+export function awsCatalogTableIcebergInputPropertyToHclTerraform(struct?: AwsCatalogTable.IcebergInputPropertyOutputReference | AwsCatalogTable.IcebergInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -992,7 +992,7 @@ export function tfCatalogTableIcebergInputPropertyToHclTerraform(struct?: TfCata
       storageClassType: "string",
     },
     iceberg_table_input: {
-      value: tfCatalogTableIcebergTableInputPropertyToHclTerraform(struct!.icebergTableInput),
+      value: awsCatalogTableIcebergTableInputPropertyToHclTerraform(struct!.icebergTableInput),
       isBlock: true,
       type: "list",
       storageClassType: "IcebergTableInputPropertyList",
@@ -1004,25 +1004,25 @@ export function tfCatalogTableIcebergInputPropertyToHclTerraform(struct?: TfCata
 }
 
 
-export function tfCatalogTableOpenTableFormatInputPropertyToTerraform(struct?: TfCatalogTable.OpenTableFormatInputPropertyOutputReference | TfCatalogTable.OpenTableFormatInputProperty): any {
+export function awsCatalogTableOpenTableFormatInputPropertyToTerraform(struct?: AwsCatalogTable.OpenTableFormatInputPropertyOutputReference | AwsCatalogTable.OpenTableFormatInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    iceberg_input: tfCatalogTableIcebergInputPropertyToTerraform(struct!.icebergInput),
+    iceberg_input: awsCatalogTableIcebergInputPropertyToTerraform(struct!.icebergInput),
   }
 }
 
 
-export function tfCatalogTableOpenTableFormatInputPropertyToHclTerraform(struct?: TfCatalogTable.OpenTableFormatInputPropertyOutputReference | TfCatalogTable.OpenTableFormatInputProperty): any {
+export function awsCatalogTableOpenTableFormatInputPropertyToHclTerraform(struct?: AwsCatalogTable.OpenTableFormatInputPropertyOutputReference | AwsCatalogTable.OpenTableFormatInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     iceberg_input: {
-      value: tfCatalogTableIcebergInputPropertyToHclTerraform(struct!.icebergInput),
+      value: awsCatalogTableIcebergInputPropertyToHclTerraform(struct!.icebergInput),
       isBlock: true,
       type: "list",
       storageClassType: "IcebergInputPropertyList",
@@ -1034,7 +1034,7 @@ export function tfCatalogTableOpenTableFormatInputPropertyToHclTerraform(struct?
 }
 
 
-export function tfCatalogTablePartitionIndexPropertyToTerraform(struct?: TfCatalogTable.PartitionIndexProperty | cdktn.IResolvable): any {
+export function awsCatalogTablePartitionIndexPropertyToTerraform(struct?: AwsCatalogTable.PartitionIndexProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1046,7 +1046,7 @@ export function tfCatalogTablePartitionIndexPropertyToTerraform(struct?: TfCatal
 }
 
 
-export function tfCatalogTablePartitionIndexPropertyToHclTerraform(struct?: TfCatalogTable.PartitionIndexProperty | cdktn.IResolvable): any {
+export function awsCatalogTablePartitionIndexPropertyToHclTerraform(struct?: AwsCatalogTable.PartitionIndexProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1071,7 +1071,7 @@ export function tfCatalogTablePartitionIndexPropertyToHclTerraform(struct?: TfCa
 }
 
 
-export function tfCatalogTablePartitionKeysPropertyToTerraform(struct?: TfCatalogTable.PartitionKeysProperty | cdktn.IResolvable): any {
+export function awsCatalogTablePartitionKeysPropertyToTerraform(struct?: AwsCatalogTable.PartitionKeysProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1085,7 +1085,7 @@ export function tfCatalogTablePartitionKeysPropertyToTerraform(struct?: TfCatalo
 }
 
 
-export function tfCatalogTablePartitionKeysPropertyToHclTerraform(struct?: TfCatalogTable.PartitionKeysProperty | cdktn.IResolvable): any {
+export function awsCatalogTablePartitionKeysPropertyToHclTerraform(struct?: AwsCatalogTable.PartitionKeysProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1122,7 +1122,7 @@ export function tfCatalogTablePartitionKeysPropertyToHclTerraform(struct?: TfCat
 }
 
 
-export function tfCatalogTableColumnsPropertyToTerraform(struct?: TfCatalogTable.ColumnsProperty | cdktn.IResolvable): any {
+export function awsCatalogTableColumnsPropertyToTerraform(struct?: AwsCatalogTable.ColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1136,7 +1136,7 @@ export function tfCatalogTableColumnsPropertyToTerraform(struct?: TfCatalogTable
 }
 
 
-export function tfCatalogTableColumnsPropertyToHclTerraform(struct?: TfCatalogTable.ColumnsProperty | cdktn.IResolvable): any {
+export function awsCatalogTableColumnsPropertyToHclTerraform(struct?: AwsCatalogTable.ColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1173,7 +1173,7 @@ export function tfCatalogTableColumnsPropertyToHclTerraform(struct?: TfCatalogTa
 }
 
 
-export function tfCatalogTableSchemaIdPropertyToTerraform(struct?: TfCatalogTable.SchemaIdPropertyOutputReference | TfCatalogTable.SchemaIdProperty): any {
+export function awsCatalogTableSchemaIdPropertyToTerraform(struct?: AwsCatalogTable.SchemaIdPropertyOutputReference | AwsCatalogTable.SchemaIdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1186,7 +1186,7 @@ export function tfCatalogTableSchemaIdPropertyToTerraform(struct?: TfCatalogTabl
 }
 
 
-export function tfCatalogTableSchemaIdPropertyToHclTerraform(struct?: TfCatalogTable.SchemaIdPropertyOutputReference | TfCatalogTable.SchemaIdProperty): any {
+export function awsCatalogTableSchemaIdPropertyToHclTerraform(struct?: AwsCatalogTable.SchemaIdPropertyOutputReference | AwsCatalogTable.SchemaIdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1217,7 +1217,7 @@ export function tfCatalogTableSchemaIdPropertyToHclTerraform(struct?: TfCatalogT
 }
 
 
-export function tfCatalogTableSchemaReferencePropertyToTerraform(struct?: TfCatalogTable.SchemaReferencePropertyOutputReference | TfCatalogTable.SchemaReferenceProperty): any {
+export function awsCatalogTableSchemaReferencePropertyToTerraform(struct?: AwsCatalogTable.SchemaReferencePropertyOutputReference | AwsCatalogTable.SchemaReferenceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1225,12 +1225,12 @@ export function tfCatalogTableSchemaReferencePropertyToTerraform(struct?: TfCata
   return {
     schema_version_id: cdktn.stringToTerraform(struct!.schemaVersionId),
     schema_version_number: cdktn.numberToTerraform(struct!.schemaVersionNumber),
-    schema_id: tfCatalogTableSchemaIdPropertyToTerraform(struct!.schemaId),
+    schema_id: awsCatalogTableSchemaIdPropertyToTerraform(struct!.schemaId),
   }
 }
 
 
-export function tfCatalogTableSchemaReferencePropertyToHclTerraform(struct?: TfCatalogTable.SchemaReferencePropertyOutputReference | TfCatalogTable.SchemaReferenceProperty): any {
+export function awsCatalogTableSchemaReferencePropertyToHclTerraform(struct?: AwsCatalogTable.SchemaReferencePropertyOutputReference | AwsCatalogTable.SchemaReferenceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1249,7 +1249,7 @@ export function tfCatalogTableSchemaReferencePropertyToHclTerraform(struct?: TfC
       storageClassType: "number",
     },
     schema_id: {
-      value: tfCatalogTableSchemaIdPropertyToHclTerraform(struct!.schemaId),
+      value: awsCatalogTableSchemaIdPropertyToHclTerraform(struct!.schemaId),
       isBlock: true,
       type: "list",
       storageClassType: "SchemaIdPropertyList",
@@ -1261,7 +1261,7 @@ export function tfCatalogTableSchemaReferencePropertyToHclTerraform(struct?: TfC
 }
 
 
-export function tfCatalogTableSerDeInfoPropertyToTerraform(struct?: TfCatalogTable.SerDeInfoPropertyOutputReference | TfCatalogTable.SerDeInfoProperty): any {
+export function awsCatalogTableSerDeInfoPropertyToTerraform(struct?: AwsCatalogTable.SerDeInfoPropertyOutputReference | AwsCatalogTable.SerDeInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1274,7 +1274,7 @@ export function tfCatalogTableSerDeInfoPropertyToTerraform(struct?: TfCatalogTab
 }
 
 
-export function tfCatalogTableSerDeInfoPropertyToHclTerraform(struct?: TfCatalogTable.SerDeInfoPropertyOutputReference | TfCatalogTable.SerDeInfoProperty): any {
+export function awsCatalogTableSerDeInfoPropertyToHclTerraform(struct?: AwsCatalogTable.SerDeInfoPropertyOutputReference | AwsCatalogTable.SerDeInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1305,7 +1305,7 @@ export function tfCatalogTableSerDeInfoPropertyToHclTerraform(struct?: TfCatalog
 }
 
 
-export function tfCatalogTableSkewedInfoPropertyToTerraform(struct?: TfCatalogTable.SkewedInfoPropertyOutputReference | TfCatalogTable.SkewedInfoProperty): any {
+export function awsCatalogTableSkewedInfoPropertyToTerraform(struct?: AwsCatalogTable.SkewedInfoPropertyOutputReference | AwsCatalogTable.SkewedInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1318,7 +1318,7 @@ export function tfCatalogTableSkewedInfoPropertyToTerraform(struct?: TfCatalogTa
 }
 
 
-export function tfCatalogTableSkewedInfoPropertyToHclTerraform(struct?: TfCatalogTable.SkewedInfoPropertyOutputReference | TfCatalogTable.SkewedInfoProperty): any {
+export function awsCatalogTableSkewedInfoPropertyToHclTerraform(struct?: AwsCatalogTable.SkewedInfoPropertyOutputReference | AwsCatalogTable.SkewedInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1349,7 +1349,7 @@ export function tfCatalogTableSkewedInfoPropertyToHclTerraform(struct?: TfCatalo
 }
 
 
-export function tfCatalogTableSortColumnsPropertyToTerraform(struct?: TfCatalogTable.SortColumnsProperty | cdktn.IResolvable): any {
+export function awsCatalogTableSortColumnsPropertyToTerraform(struct?: AwsCatalogTable.SortColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1361,7 +1361,7 @@ export function tfCatalogTableSortColumnsPropertyToTerraform(struct?: TfCatalogT
 }
 
 
-export function tfCatalogTableSortColumnsPropertyToHclTerraform(struct?: TfCatalogTable.SortColumnsProperty | cdktn.IResolvable): any {
+export function awsCatalogTableSortColumnsPropertyToHclTerraform(struct?: AwsCatalogTable.SortColumnsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1386,7 +1386,7 @@ export function tfCatalogTableSortColumnsPropertyToHclTerraform(struct?: TfCatal
 }
 
 
-export function tfCatalogTableStorageDescriptorPropertyToTerraform(struct?: TfCatalogTable.StorageDescriptorPropertyOutputReference | TfCatalogTable.StorageDescriptorProperty): any {
+export function awsCatalogTableStorageDescriptorPropertyToTerraform(struct?: AwsCatalogTable.StorageDescriptorPropertyOutputReference | AwsCatalogTable.StorageDescriptorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1401,16 +1401,16 @@ export function tfCatalogTableStorageDescriptorPropertyToTerraform(struct?: TfCa
     output_format: cdktn.stringToTerraform(struct!.outputFormat),
     parameters: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.parameters),
     stored_as_sub_directories: cdktn.booleanToTerraform(struct!.storedAsSubDirectories),
-    columns: cdktn.listMapper(tfCatalogTableColumnsPropertyToTerraform, true)(struct!.columns),
-    schema_reference: tfCatalogTableSchemaReferencePropertyToTerraform(struct!.schemaReference),
-    ser_de_info: tfCatalogTableSerDeInfoPropertyToTerraform(struct!.serDeInfo),
-    skewed_info: tfCatalogTableSkewedInfoPropertyToTerraform(struct!.skewedInfo),
-    sort_columns: cdktn.listMapper(tfCatalogTableSortColumnsPropertyToTerraform, true)(struct!.sortColumns),
+    columns: cdktn.listMapper(awsCatalogTableColumnsPropertyToTerraform, true)(struct!.columns),
+    schema_reference: awsCatalogTableSchemaReferencePropertyToTerraform(struct!.schemaReference),
+    ser_de_info: awsCatalogTableSerDeInfoPropertyToTerraform(struct!.serDeInfo),
+    skewed_info: awsCatalogTableSkewedInfoPropertyToTerraform(struct!.skewedInfo),
+    sort_columns: cdktn.listMapper(awsCatalogTableSortColumnsPropertyToTerraform, true)(struct!.sortColumns),
   }
 }
 
 
-export function tfCatalogTableStorageDescriptorPropertyToHclTerraform(struct?: TfCatalogTable.StorageDescriptorPropertyOutputReference | TfCatalogTable.StorageDescriptorProperty): any {
+export function awsCatalogTableStorageDescriptorPropertyToHclTerraform(struct?: AwsCatalogTable.StorageDescriptorPropertyOutputReference | AwsCatalogTable.StorageDescriptorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1471,31 +1471,31 @@ export function tfCatalogTableStorageDescriptorPropertyToHclTerraform(struct?: T
       storageClassType: "boolean",
     },
     columns: {
-      value: cdktn.listMapperHcl(tfCatalogTableColumnsPropertyToHclTerraform, true)(struct!.columns),
+      value: cdktn.listMapperHcl(awsCatalogTableColumnsPropertyToHclTerraform, true)(struct!.columns),
       isBlock: true,
       type: "list",
       storageClassType: "ColumnsPropertyList",
     },
     schema_reference: {
-      value: tfCatalogTableSchemaReferencePropertyToHclTerraform(struct!.schemaReference),
+      value: awsCatalogTableSchemaReferencePropertyToHclTerraform(struct!.schemaReference),
       isBlock: true,
       type: "list",
       storageClassType: "SchemaReferencePropertyList",
     },
     ser_de_info: {
-      value: tfCatalogTableSerDeInfoPropertyToHclTerraform(struct!.serDeInfo),
+      value: awsCatalogTableSerDeInfoPropertyToHclTerraform(struct!.serDeInfo),
       isBlock: true,
       type: "list",
       storageClassType: "SerDeInfoPropertyList",
     },
     skewed_info: {
-      value: tfCatalogTableSkewedInfoPropertyToHclTerraform(struct!.skewedInfo),
+      value: awsCatalogTableSkewedInfoPropertyToHclTerraform(struct!.skewedInfo),
       isBlock: true,
       type: "list",
       storageClassType: "SkewedInfoPropertyList",
     },
     sort_columns: {
-      value: cdktn.listMapperHcl(tfCatalogTableSortColumnsPropertyToHclTerraform, true)(struct!.sortColumns),
+      value: cdktn.listMapperHcl(awsCatalogTableSortColumnsPropertyToHclTerraform, true)(struct!.sortColumns),
       isBlock: true,
       type: "list",
       storageClassType: "SortColumnsPropertyList",
@@ -1507,7 +1507,7 @@ export function tfCatalogTableStorageDescriptorPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfCatalogTableTargetTablePropertyToTerraform(struct?: TfCatalogTable.TargetTablePropertyOutputReference | TfCatalogTable.TargetTableProperty): any {
+export function awsCatalogTableTargetTablePropertyToTerraform(struct?: AwsCatalogTable.TargetTablePropertyOutputReference | AwsCatalogTable.TargetTableProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1521,7 +1521,7 @@ export function tfCatalogTableTargetTablePropertyToTerraform(struct?: TfCatalogT
 }
 
 
-export function tfCatalogTableTargetTablePropertyToHclTerraform(struct?: TfCatalogTable.TargetTablePropertyOutputReference | TfCatalogTable.TargetTableProperty): any {
+export function awsCatalogTableTargetTablePropertyToHclTerraform(struct?: AwsCatalogTable.TargetTablePropertyOutputReference | AwsCatalogTable.TargetTableProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1558,7 +1558,7 @@ export function tfCatalogTableTargetTablePropertyToHclTerraform(struct?: TfCatal
 }
 
 
-export function tfCatalogTableRepresentationsPropertyToTerraform(struct?: TfCatalogTable.RepresentationsProperty | cdktn.IResolvable): any {
+export function awsCatalogTableRepresentationsPropertyToTerraform(struct?: AwsCatalogTable.RepresentationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1573,7 +1573,7 @@ export function tfCatalogTableRepresentationsPropertyToTerraform(struct?: TfCata
 }
 
 
-export function tfCatalogTableRepresentationsPropertyToHclTerraform(struct?: TfCatalogTable.RepresentationsProperty | cdktn.IResolvable): any {
+export function awsCatalogTableRepresentationsPropertyToHclTerraform(struct?: AwsCatalogTable.RepresentationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1616,7 +1616,7 @@ export function tfCatalogTableRepresentationsPropertyToHclTerraform(struct?: TfC
 }
 
 
-export function tfCatalogTableViewDefinitionPropertyToTerraform(struct?: TfCatalogTable.ViewDefinitionPropertyOutputReference | TfCatalogTable.ViewDefinitionProperty): any {
+export function awsCatalogTableViewDefinitionPropertyToTerraform(struct?: AwsCatalogTable.ViewDefinitionPropertyOutputReference | AwsCatalogTable.ViewDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1630,12 +1630,12 @@ export function tfCatalogTableViewDefinitionPropertyToTerraform(struct?: TfCatal
     sub_objects: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.subObjects),
     view_version_id: cdktn.numberToTerraform(struct!.viewVersionId),
     view_version_token: cdktn.stringToTerraform(struct!.viewVersionToken),
-    representations: cdktn.listMapper(tfCatalogTableRepresentationsPropertyToTerraform, true)(struct!.representations),
+    representations: cdktn.listMapper(awsCatalogTableRepresentationsPropertyToTerraform, true)(struct!.representations),
   }
 }
 
 
-export function tfCatalogTableViewDefinitionPropertyToHclTerraform(struct?: TfCatalogTable.ViewDefinitionPropertyOutputReference | TfCatalogTable.ViewDefinitionProperty): any {
+export function awsCatalogTableViewDefinitionPropertyToHclTerraform(struct?: AwsCatalogTable.ViewDefinitionPropertyOutputReference | AwsCatalogTable.ViewDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1690,7 +1690,7 @@ export function tfCatalogTableViewDefinitionPropertyToHclTerraform(struct?: TfCa
       storageClassType: "string",
     },
     representations: {
-      value: cdktn.listMapperHcl(tfCatalogTableRepresentationsPropertyToHclTerraform, true)(struct!.representations),
+      value: cdktn.listMapperHcl(awsCatalogTableRepresentationsPropertyToHclTerraform, true)(struct!.representations),
       isBlock: true,
       type: "list",
       storageClassType: "RepresentationsPropertyList",
@@ -1702,22 +1702,22 @@ export function tfCatalogTableViewDefinitionPropertyToHclTerraform(struct?: TfCa
 }
 
 
-export namespace TfCatalogTable {
+export namespace AwsCatalogTable {
 export interface OpenTableFormatInputIcebergInputIcebergTableInputPartitionSpecFieldsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#field_id TfCatalogTable#field_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#field_id AwsCatalogTable#field_id}
   */
   readonly fieldId?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#name TfCatalogTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#name AwsCatalogTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#source_id TfCatalogTable#source_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#source_id AwsCatalogTable#source_id}
   */
   readonly sourceId: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#transform TfCatalogTable#transform}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#transform AwsCatalogTable#transform}
   */
   readonly transform: string;
 }
@@ -1860,13 +1860,13 @@ export class OpenTableFormatInputIcebergInputIcebergTableInputPartitionSpecField
 }
 export interface PartitionSpecProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#spec_id TfCatalogTable#spec_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#spec_id AwsCatalogTable#spec_id}
   */
   readonly specId?: number;
   /**
   * fields block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#fields TfCatalogTable#fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#fields AwsCatalogTable#fields}
   */
   readonly fields: OpenTableFormatInputIcebergInputIcebergTableInputPartitionSpecFieldsProperty[] | cdktn.IResolvable;
 }
@@ -1939,34 +1939,34 @@ export class PartitionSpecPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OpenTableFormatInputIcebergInputIcebergTableInputSchemaFieldsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#doc TfCatalogTable#doc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#doc AwsCatalogTable#doc}
   */
   readonly doc?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#id TfCatalogTable#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#id AwsCatalogTable#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#initial_default TfCatalogTable#initial_default}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#initial_default AwsCatalogTable#initial_default}
   */
   readonly initialDefault?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#name TfCatalogTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#name AwsCatalogTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#required TfCatalogTable#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#required AwsCatalogTable#required}
   */
   readonly required: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#type TfCatalogTable#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#type AwsCatalogTable#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#write_default TfCatalogTable#write_default}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#write_default AwsCatalogTable#write_default}
   */
   readonly writeDefault?: string;
 }
@@ -2172,21 +2172,21 @@ export class OpenTableFormatInputIcebergInputIcebergTableInputSchemaFieldsProper
 }
 export interface SchemaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#identifier_field_ids TfCatalogTable#identifier_field_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#identifier_field_ids AwsCatalogTable#identifier_field_ids}
   */
   readonly identifierFieldIds?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#schema_id TfCatalogTable#schema_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#schema_id AwsCatalogTable#schema_id}
   */
   readonly schemaId?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#type TfCatalogTable#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#type AwsCatalogTable#type}
   */
   readonly type?: string;
   /**
   * fields block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#fields TfCatalogTable#fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#fields AwsCatalogTable#fields}
   */
   readonly fields: OpenTableFormatInputIcebergInputIcebergTableInputSchemaFieldsProperty[] | cdktn.IResolvable;
 }
@@ -2303,19 +2303,19 @@ export class SchemaPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OpenTableFormatInputIcebergInputIcebergTableInputSortOrderFieldsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#direction TfCatalogTable#direction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#direction AwsCatalogTable#direction}
   */
   readonly direction: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#null_order TfCatalogTable#null_order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#null_order AwsCatalogTable#null_order}
   */
   readonly nullOrder: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#source_id TfCatalogTable#source_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#source_id AwsCatalogTable#source_id}
   */
   readonly sourceId: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#transform TfCatalogTable#transform}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#transform AwsCatalogTable#transform}
   */
   readonly transform: string;
 }
@@ -2455,13 +2455,13 @@ export class OpenTableFormatInputIcebergInputIcebergTableInputSortOrderFieldsPro
 }
 export interface SortOrderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#order_id TfCatalogTable#order_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#order_id AwsCatalogTable#order_id}
   */
   readonly orderId: number;
   /**
   * fields block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#fields TfCatalogTable#fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#fields AwsCatalogTable#fields}
   */
   readonly fields: OpenTableFormatInputIcebergInputIcebergTableInputSortOrderFieldsProperty[] | cdktn.IResolvable;
 }
@@ -2531,29 +2531,29 @@ export class SortOrderPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface IcebergTableInputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#location TfCatalogTable#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#location AwsCatalogTable#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#properties TfCatalogTable#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#properties AwsCatalogTable#properties}
   */
   readonly properties?: { [key: string]: string };
   /**
   * partition_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#partition_spec TfCatalogTable#partition_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#partition_spec AwsCatalogTable#partition_spec}
   */
   readonly partitionSpec?: PartitionSpecProperty;
   /**
   * schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#schema TfCatalogTable#schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#schema AwsCatalogTable#schema}
   */
   readonly schema: SchemaProperty;
   /**
   * sort_order block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#sort_order TfCatalogTable#sort_order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#sort_order AwsCatalogTable#sort_order}
   */
   readonly sortOrder?: SortOrderProperty;
 }
@@ -2689,17 +2689,17 @@ export class IcebergTableInputPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface IcebergInputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#metadata_operation TfCatalogTable#metadata_operation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#metadata_operation AwsCatalogTable#metadata_operation}
   */
   readonly metadataOperation: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#version TfCatalogTable#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#version AwsCatalogTable#version}
   */
   readonly version?: string;
   /**
   * iceberg_table_input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#iceberg_table_input TfCatalogTable#iceberg_table_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#iceberg_table_input AwsCatalogTable#iceberg_table_input}
   */
   readonly icebergTableInput?: IcebergTableInputProperty;
 }
@@ -2796,7 +2796,7 @@ export interface OpenTableFormatInputProperty {
   /**
   * iceberg_input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#iceberg_input TfCatalogTable#iceberg_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#iceberg_input AwsCatalogTable#iceberg_input}
   */
   readonly icebergInput: IcebergInputProperty;
 }
@@ -2847,11 +2847,11 @@ export class OpenTableFormatInputPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface PartitionIndexProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#index_name TfCatalogTable#index_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#index_name AwsCatalogTable#index_name}
   */
   readonly indexName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#keys TfCatalogTable#keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#keys AwsCatalogTable#keys}
   */
   readonly keys: string[];
 }
@@ -2958,19 +2958,19 @@ export class PartitionIndexPropertyList extends cdktn.ComplexList {
 }
 export interface PartitionKeysProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#comment TfCatalogTable#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#comment AwsCatalogTable#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#name TfCatalogTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#name AwsCatalogTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#parameters TfCatalogTable#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#parameters AwsCatalogTable#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#type TfCatalogTable#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#type AwsCatalogTable#type}
   */
   readonly type?: string;
 }
@@ -3119,19 +3119,19 @@ export class PartitionKeysPropertyList extends cdktn.ComplexList {
 }
 export interface ColumnsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#comment TfCatalogTable#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#comment AwsCatalogTable#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#name TfCatalogTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#name AwsCatalogTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#parameters TfCatalogTable#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#parameters AwsCatalogTable#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#type TfCatalogTable#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#type AwsCatalogTable#type}
   */
   readonly type?: string;
 }
@@ -3280,15 +3280,15 @@ export class ColumnsPropertyList extends cdktn.ComplexList {
 }
 export interface SchemaIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#registry_name TfCatalogTable#registry_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#registry_name AwsCatalogTable#registry_name}
   */
   readonly registryName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#schema_arn TfCatalogTable#schema_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#schema_arn AwsCatalogTable#schema_arn}
   */
   readonly schemaArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#schema_name TfCatalogTable#schema_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#schema_name AwsCatalogTable#schema_name}
   */
   readonly schemaName?: string;
 }
@@ -3386,17 +3386,17 @@ export class SchemaIdPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SchemaReferenceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#schema_version_id TfCatalogTable#schema_version_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#schema_version_id AwsCatalogTable#schema_version_id}
   */
   readonly schemaVersionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#schema_version_number TfCatalogTable#schema_version_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#schema_version_number AwsCatalogTable#schema_version_number}
   */
   readonly schemaVersionNumber: number;
   /**
   * schema_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#schema_id TfCatalogTable#schema_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#schema_id AwsCatalogTable#schema_id}
   */
   readonly schemaId?: SchemaIdProperty;
 }
@@ -3491,15 +3491,15 @@ export class SchemaReferencePropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface SerDeInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#name TfCatalogTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#name AwsCatalogTable#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#parameters TfCatalogTable#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#parameters AwsCatalogTable#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#serialization_library TfCatalogTable#serialization_library}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#serialization_library AwsCatalogTable#serialization_library}
   */
   readonly serializationLibrary?: string;
 }
@@ -3597,15 +3597,15 @@ export class SerDeInfoPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SkewedInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#skewed_column_names TfCatalogTable#skewed_column_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#skewed_column_names AwsCatalogTable#skewed_column_names}
   */
   readonly skewedColumnNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#skewed_column_value_location_maps TfCatalogTable#skewed_column_value_location_maps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#skewed_column_value_location_maps AwsCatalogTable#skewed_column_value_location_maps}
   */
   readonly skewedColumnValueLocationMaps?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#skewed_column_values TfCatalogTable#skewed_column_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#skewed_column_values AwsCatalogTable#skewed_column_values}
   */
   readonly skewedColumnValues?: string[];
 }
@@ -3703,11 +3703,11 @@ export class SkewedInfoPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SortColumnsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#column TfCatalogTable#column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#column AwsCatalogTable#column}
   */
   readonly column: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#sort_order TfCatalogTable#sort_order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#sort_order AwsCatalogTable#sort_order}
   */
   readonly sortOrder: number;
 }
@@ -3809,69 +3809,69 @@ export class SortColumnsPropertyList extends cdktn.ComplexList {
 }
 export interface StorageDescriptorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#additional_locations TfCatalogTable#additional_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#additional_locations AwsCatalogTable#additional_locations}
   */
   readonly additionalLocations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#bucket_columns TfCatalogTable#bucket_columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#bucket_columns AwsCatalogTable#bucket_columns}
   */
   readonly bucketColumns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#compressed TfCatalogTable#compressed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#compressed AwsCatalogTable#compressed}
   */
   readonly compressed?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#input_format TfCatalogTable#input_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#input_format AwsCatalogTable#input_format}
   */
   readonly inputFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#location TfCatalogTable#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#location AwsCatalogTable#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#number_of_buckets TfCatalogTable#number_of_buckets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#number_of_buckets AwsCatalogTable#number_of_buckets}
   */
   readonly numberOfBuckets?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#output_format TfCatalogTable#output_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#output_format AwsCatalogTable#output_format}
   */
   readonly outputFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#parameters TfCatalogTable#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#parameters AwsCatalogTable#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#stored_as_sub_directories TfCatalogTable#stored_as_sub_directories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#stored_as_sub_directories AwsCatalogTable#stored_as_sub_directories}
   */
   readonly storedAsSubDirectories?: boolean | cdktn.IResolvable;
   /**
   * columns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#columns TfCatalogTable#columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#columns AwsCatalogTable#columns}
   */
   readonly columns?: ColumnsProperty[] | cdktn.IResolvable;
   /**
   * schema_reference block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#schema_reference TfCatalogTable#schema_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#schema_reference AwsCatalogTable#schema_reference}
   */
   readonly schemaReference?: SchemaReferenceProperty;
   /**
   * ser_de_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#ser_de_info TfCatalogTable#ser_de_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#ser_de_info AwsCatalogTable#ser_de_info}
   */
   readonly serDeInfo?: SerDeInfoProperty;
   /**
   * skewed_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#skewed_info TfCatalogTable#skewed_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#skewed_info AwsCatalogTable#skewed_info}
   */
   readonly skewedInfo?: SkewedInfoProperty;
   /**
   * sort_columns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#sort_columns TfCatalogTable#sort_columns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#sort_columns AwsCatalogTable#sort_columns}
   */
   readonly sortColumns?: SortColumnsProperty[] | cdktn.IResolvable;
 }
@@ -4211,19 +4211,19 @@ export class StorageDescriptorPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface TargetTableProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#catalog_id TfCatalogTable#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#catalog_id AwsCatalogTable#catalog_id}
   */
   readonly catalogId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#database_name TfCatalogTable#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#database_name AwsCatalogTable#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#name TfCatalogTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#name AwsCatalogTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#region TfCatalogTable#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#region AwsCatalogTable#region}
   */
   readonly region?: string;
 }
@@ -4334,23 +4334,23 @@ export class TargetTablePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RepresentationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#dialect TfCatalogTable#dialect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#dialect AwsCatalogTable#dialect}
   */
   readonly dialect?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#dialect_version TfCatalogTable#dialect_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#dialect_version AwsCatalogTable#dialect_version}
   */
   readonly dialectVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#validation_connection TfCatalogTable#validation_connection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#validation_connection AwsCatalogTable#validation_connection}
   */
   readonly validationConnection?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#view_expanded_text TfCatalogTable#view_expanded_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#view_expanded_text AwsCatalogTable#view_expanded_text}
   */
   readonly viewExpandedText?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#view_original_text TfCatalogTable#view_original_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#view_original_text AwsCatalogTable#view_original_text}
   */
   readonly viewOriginalText?: string;
 }
@@ -4524,41 +4524,41 @@ export class RepresentationsPropertyList extends cdktn.ComplexList {
 }
 export interface ViewDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#definer TfCatalogTable#definer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#definer AwsCatalogTable#definer}
   */
   readonly definer?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#is_protected TfCatalogTable#is_protected}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#is_protected AwsCatalogTable#is_protected}
   */
   readonly isProtected?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#last_refresh_type TfCatalogTable#last_refresh_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#last_refresh_type AwsCatalogTable#last_refresh_type}
   */
   readonly lastRefreshType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#refresh_seconds TfCatalogTable#refresh_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#refresh_seconds AwsCatalogTable#refresh_seconds}
   */
   readonly refreshSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#sub_object_version_ids TfCatalogTable#sub_object_version_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#sub_object_version_ids AwsCatalogTable#sub_object_version_ids}
   */
   readonly subObjectVersionIds?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#sub_objects TfCatalogTable#sub_objects}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#sub_objects AwsCatalogTable#sub_objects}
   */
   readonly subObjects?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#view_version_id TfCatalogTable#view_version_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#view_version_id AwsCatalogTable#view_version_id}
   */
   readonly viewVersionId?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#view_version_token TfCatalogTable#view_version_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#view_version_token AwsCatalogTable#view_version_token}
   */
   readonly viewVersionToken?: string;
   /**
   * representations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#representations TfCatalogTable#representations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_catalog_table#representations AwsCatalogTable#representations}
   */
   readonly representations?: RepresentationsProperty[] | cdktn.IResolvable;
 }

@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfCoipPoolConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsCoipPoolConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#id DataTfCoipPool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#id DataAwsCoipPool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#local_gateway_route_table_id DataTfCoipPool#local_gateway_route_table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#local_gateway_route_table_id DataAwsCoipPool#local_gateway_route_table_id}
   */
   readonly localGatewayRouteTableId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#pool_id DataTfCoipPool#pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#pool_id DataAwsCoipPool#pool_id}
   */
   readonly poolId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#region DataTfCoipPool#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#region DataAwsCoipPool#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#tags DataTfCoipPool#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#tags DataAwsCoipPool#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#filter DataTfCoipPool#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#filter DataAwsCoipPool#filter}
   */
-  readonly filter?: DataTfCoipPool.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsCoipPool.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#timeouts DataTfCoipPool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#timeouts DataAwsCoipPool#timeouts}
   */
-  readonly timeouts?: DataTfCoipPool.TimeoutsProperty;
+  readonly timeouts?: DataAwsCoipPool.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool aws_ec2_coip_pool}
 */
-export class DataTfCoipPool extends cdktn.TerraformDataSource {
+export class DataAwsCoipPool extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class DataTfCoipPool extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfCoipPool resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsCoipPool resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfCoipPool to import
-  * @param importFromId The id of the existing DataTfCoipPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfCoipPool to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsCoipPool to import
+  * @param importFromId The id of the existing DataAwsCoipPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsCoipPool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_coip_pool", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class DataTfCoipPool extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfCoipPoolConfig = {}
+  * @param options DataAwsCoipPoolConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfCoipPoolConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsCoipPoolConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_coip_pool',
       terraformGeneratorMetadata: {
@@ -200,11 +200,11 @@ export class DataTfCoipPool extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfCoipPool.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsCoipPool.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfCoipPool.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsCoipPool.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -216,11 +216,11 @@ export class DataTfCoipPool extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataTfCoipPool.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataAwsCoipPool.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataTfCoipPool.TimeoutsProperty) {
+  public putTimeouts(value: DataAwsCoipPool.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -242,8 +242,8 @@ export class DataTfCoipPool extends cdktn.TerraformDataSource {
       pool_id: cdktn.stringToTerraform(this._poolId),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataTfCoipPoolFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataTfCoipPoolTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataAwsCoipPoolFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataAwsCoipPoolTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -280,16 +280,16 @@ export class DataTfCoipPool extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfCoipPoolFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsCoipPoolFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfCoipPool.FilterPropertyList",
+        storageClassType: "DataAwsCoipPool.FilterPropertyList",
       },
       timeouts: {
-        value: dataTfCoipPoolTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataAwsCoipPoolTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataTfCoipPool.TimeoutsProperty",
+        storageClassType: "DataAwsCoipPool.TimeoutsProperty",
       },
     };
 
@@ -298,7 +298,7 @@ export class DataTfCoipPool extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfCoipPoolFilterPropertyToTerraform(struct?: DataTfCoipPool.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsCoipPoolFilterPropertyToTerraform(struct?: DataAwsCoipPool.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -310,7 +310,7 @@ export function dataTfCoipPoolFilterPropertyToTerraform(struct?: DataTfCoipPool.
 }
 
 
-export function dataTfCoipPoolFilterPropertyToHclTerraform(struct?: DataTfCoipPool.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsCoipPoolFilterPropertyToHclTerraform(struct?: DataAwsCoipPool.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -335,7 +335,7 @@ export function dataTfCoipPoolFilterPropertyToHclTerraform(struct?: DataTfCoipPo
 }
 
 
-export function dataTfCoipPoolTimeoutsPropertyToTerraform(struct?: DataTfCoipPool.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsCoipPoolTimeoutsPropertyToTerraform(struct?: DataAwsCoipPool.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,7 +346,7 @@ export function dataTfCoipPoolTimeoutsPropertyToTerraform(struct?: DataTfCoipPoo
 }
 
 
-export function dataTfCoipPoolTimeoutsPropertyToHclTerraform(struct?: DataTfCoipPool.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsCoipPoolTimeoutsPropertyToHclTerraform(struct?: DataAwsCoipPool.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -365,14 +365,14 @@ export function dataTfCoipPoolTimeoutsPropertyToHclTerraform(struct?: DataTfCoip
 }
 
 
-export namespace DataTfCoipPool {
+export namespace DataAwsCoipPool {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#name DataTfCoipPool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#name DataAwsCoipPool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#values DataTfCoipPool#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#values DataAwsCoipPool#values}
   */
   readonly values: string[];
 }
@@ -474,7 +474,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#read DataTfCoipPool#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_coip_pool#read DataAwsCoipPool#read}
   */
   readonly read?: string;
 }

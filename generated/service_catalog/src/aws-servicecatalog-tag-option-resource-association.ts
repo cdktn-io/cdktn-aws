@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTagOptionResourceAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTagOptionResourceAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#id TfTagOptionResourceAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#id AwsTagOptionResourceAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,29 +16,29 @@ export interface TfTagOptionResourceAssociationConfig extends cdktn.TerraformMet
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#region TfTagOptionResourceAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#region AwsTagOptionResourceAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#resource_id TfTagOptionResourceAssociation#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#resource_id AwsTagOptionResourceAssociation#resource_id}
   */
   readonly resourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#tag_option_id TfTagOptionResourceAssociation#tag_option_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#tag_option_id AwsTagOptionResourceAssociation#tag_option_id}
   */
   readonly tagOptionId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#timeouts TfTagOptionResourceAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#timeouts AwsTagOptionResourceAssociation#timeouts}
   */
-  readonly timeouts?: TfTagOptionResourceAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsTagOptionResourceAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association aws_servicecatalog_tag_option_resource_association}
 */
-export class TfTagOptionResourceAssociation extends cdktn.TerraformResource {
+export class AwsTagOptionResourceAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfTagOptionResourceAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTagOptionResourceAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTagOptionResourceAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTagOptionResourceAssociation to import
-  * @param importFromId The id of the existing TfTagOptionResourceAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTagOptionResourceAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsTagOptionResourceAssociation to import
+  * @param importFromId The id of the existing AwsTagOptionResourceAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTagOptionResourceAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_tag_option_resource_association", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfTagOptionResourceAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTagOptionResourceAssociationConfig
+  * @param options AwsTagOptionResourceAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTagOptionResourceAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTagOptionResourceAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_tag_option_resource_association',
       terraformGeneratorMetadata: {
@@ -176,11 +176,11 @@ export class TfTagOptionResourceAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTagOptionResourceAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTagOptionResourceAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTagOptionResourceAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsTagOptionResourceAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -201,7 +201,7 @@ export class TfTagOptionResourceAssociation extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       resource_id: cdktn.stringToTerraform(this._resourceId),
       tag_option_id: cdktn.stringToTerraform(this._tagOptionId),
-      timeouts: tfTagOptionResourceAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsTagOptionResourceAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -232,10 +232,10 @@ export class TfTagOptionResourceAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfTagOptionResourceAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTagOptionResourceAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTagOptionResourceAssociation.TimeoutsProperty",
+        storageClassType: "AwsTagOptionResourceAssociation.TimeoutsProperty",
       },
     };
 
@@ -244,7 +244,7 @@ export class TfTagOptionResourceAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfTagOptionResourceAssociationTimeoutsPropertyToTerraform(struct?: TfTagOptionResourceAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTagOptionResourceAssociationTimeoutsPropertyToTerraform(struct?: AwsTagOptionResourceAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -257,7 +257,7 @@ export function tfTagOptionResourceAssociationTimeoutsPropertyToTerraform(struct
 }
 
 
-export function tfTagOptionResourceAssociationTimeoutsPropertyToHclTerraform(struct?: TfTagOptionResourceAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTagOptionResourceAssociationTimeoutsPropertyToHclTerraform(struct?: AwsTagOptionResourceAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -288,18 +288,18 @@ export function tfTagOptionResourceAssociationTimeoutsPropertyToHclTerraform(str
 }
 
 
-export namespace TfTagOptionResourceAssociation {
+export namespace AwsTagOptionResourceAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#create TfTagOptionResourceAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#create AwsTagOptionResourceAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#delete TfTagOptionResourceAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#delete AwsTagOptionResourceAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#read TfTagOptionResourceAssociation#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_tag_option_resource_association#read AwsTagOptionResourceAssociation#read}
   */
   readonly read?: string;
 }

@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCustomRoutingEndpointGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCustomRoutingEndpointGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#endpoint_group_region TfCustomRoutingEndpointGroup#endpoint_group_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#endpoint_group_region AwsCustomRoutingEndpointGroup#endpoint_group_region}
   */
   readonly endpointGroupRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#id TfCustomRoutingEndpointGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#id AwsCustomRoutingEndpointGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#listener_arn TfCustomRoutingEndpointGroup#listener_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#listener_arn AwsCustomRoutingEndpointGroup#listener_arn}
   */
   readonly listenerArn: string;
   /**
   * destination_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#destination_configuration TfCustomRoutingEndpointGroup#destination_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#destination_configuration AwsCustomRoutingEndpointGroup#destination_configuration}
   */
-  readonly destinationConfiguration: TfCustomRoutingEndpointGroup.DestinationConfigurationProperty[] | cdktn.IResolvable;
+  readonly destinationConfiguration: AwsCustomRoutingEndpointGroup.DestinationConfigurationProperty[] | cdktn.IResolvable;
   /**
   * endpoint_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#endpoint_configuration TfCustomRoutingEndpointGroup#endpoint_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#endpoint_configuration AwsCustomRoutingEndpointGroup#endpoint_configuration}
   */
-  readonly endpointConfiguration?: TfCustomRoutingEndpointGroup.EndpointConfigurationProperty[] | cdktn.IResolvable;
+  readonly endpointConfiguration?: AwsCustomRoutingEndpointGroup.EndpointConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#timeouts TfCustomRoutingEndpointGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#timeouts AwsCustomRoutingEndpointGroup#timeouts}
   */
-  readonly timeouts?: TfCustomRoutingEndpointGroup.TimeoutsProperty;
+  readonly timeouts?: AwsCustomRoutingEndpointGroup.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group aws_globalaccelerator_custom_routing_endpoint_group}
 */
-export class TfCustomRoutingEndpointGroup extends cdktn.TerraformResource {
+export class AwsCustomRoutingEndpointGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfCustomRoutingEndpointGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCustomRoutingEndpointGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCustomRoutingEndpointGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCustomRoutingEndpointGroup to import
-  * @param importFromId The id of the existing TfCustomRoutingEndpointGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCustomRoutingEndpointGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsCustomRoutingEndpointGroup to import
+  * @param importFromId The id of the existing AwsCustomRoutingEndpointGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCustomRoutingEndpointGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_globalaccelerator_custom_routing_endpoint_group", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfCustomRoutingEndpointGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCustomRoutingEndpointGroupConfig
+  * @param options AwsCustomRoutingEndpointGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCustomRoutingEndpointGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCustomRoutingEndpointGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_globalaccelerator_custom_routing_endpoint_group',
       terraformGeneratorMetadata: {
@@ -155,11 +155,11 @@ export class TfCustomRoutingEndpointGroup extends cdktn.TerraformResource {
   }
 
   // destination_configuration - computed: false, optional: false, required: true
-  private _destinationConfiguration = new TfCustomRoutingEndpointGroup.DestinationConfigurationPropertyList(this, "destination_configuration", true);
+  private _destinationConfiguration = new AwsCustomRoutingEndpointGroup.DestinationConfigurationPropertyList(this, "destination_configuration", true);
   public get destinationConfiguration() {
     return this._destinationConfiguration;
   }
-  public putDestinationConfiguration(value: TfCustomRoutingEndpointGroup.DestinationConfigurationProperty[] | cdktn.IResolvable) {
+  public putDestinationConfiguration(value: AwsCustomRoutingEndpointGroup.DestinationConfigurationProperty[] | cdktn.IResolvable) {
     this._destinationConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -168,11 +168,11 @@ export class TfCustomRoutingEndpointGroup extends cdktn.TerraformResource {
   }
 
   // endpoint_configuration - computed: false, optional: true, required: false
-  private _endpointConfiguration = new TfCustomRoutingEndpointGroup.EndpointConfigurationPropertyList(this, "endpoint_configuration", true);
+  private _endpointConfiguration = new AwsCustomRoutingEndpointGroup.EndpointConfigurationPropertyList(this, "endpoint_configuration", true);
   public get endpointConfiguration() {
     return this._endpointConfiguration;
   }
-  public putEndpointConfiguration(value: TfCustomRoutingEndpointGroup.EndpointConfigurationProperty[] | cdktn.IResolvable) {
+  public putEndpointConfiguration(value: AwsCustomRoutingEndpointGroup.EndpointConfigurationProperty[] | cdktn.IResolvable) {
     this._endpointConfiguration.internalValue = value;
   }
   public resetEndpointConfiguration() {
@@ -184,11 +184,11 @@ export class TfCustomRoutingEndpointGroup extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCustomRoutingEndpointGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCustomRoutingEndpointGroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCustomRoutingEndpointGroup.TimeoutsProperty) {
+  public putTimeouts(value: AwsCustomRoutingEndpointGroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -208,9 +208,9 @@ export class TfCustomRoutingEndpointGroup extends cdktn.TerraformResource {
       endpoint_group_region: cdktn.stringToTerraform(this._endpointGroupRegion),
       id: cdktn.stringToTerraform(this._id),
       listener_arn: cdktn.stringToTerraform(this._listenerArn),
-      destination_configuration: cdktn.listMapper(tfCustomRoutingEndpointGroupDestinationConfigurationPropertyToTerraform, true)(this._destinationConfiguration.internalValue),
-      endpoint_configuration: cdktn.listMapper(tfCustomRoutingEndpointGroupEndpointConfigurationPropertyToTerraform, true)(this._endpointConfiguration.internalValue),
-      timeouts: tfCustomRoutingEndpointGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      destination_configuration: cdktn.listMapper(awsCustomRoutingEndpointGroupDestinationConfigurationPropertyToTerraform, true)(this._destinationConfiguration.internalValue),
+      endpoint_configuration: cdktn.listMapper(awsCustomRoutingEndpointGroupEndpointConfigurationPropertyToTerraform, true)(this._endpointConfiguration.internalValue),
+      timeouts: awsCustomRoutingEndpointGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -235,22 +235,22 @@ export class TfCustomRoutingEndpointGroup extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       destination_configuration: {
-        value: cdktn.listMapperHcl(tfCustomRoutingEndpointGroupDestinationConfigurationPropertyToHclTerraform, true)(this._destinationConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsCustomRoutingEndpointGroupDestinationConfigurationPropertyToHclTerraform, true)(this._destinationConfiguration.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfCustomRoutingEndpointGroup.DestinationConfigurationPropertyList",
+        storageClassType: "AwsCustomRoutingEndpointGroup.DestinationConfigurationPropertyList",
       },
       endpoint_configuration: {
-        value: cdktn.listMapperHcl(tfCustomRoutingEndpointGroupEndpointConfigurationPropertyToHclTerraform, true)(this._endpointConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsCustomRoutingEndpointGroupEndpointConfigurationPropertyToHclTerraform, true)(this._endpointConfiguration.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfCustomRoutingEndpointGroup.EndpointConfigurationPropertyList",
+        storageClassType: "AwsCustomRoutingEndpointGroup.EndpointConfigurationPropertyList",
       },
       timeouts: {
-        value: tfCustomRoutingEndpointGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCustomRoutingEndpointGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCustomRoutingEndpointGroup.TimeoutsProperty",
+        storageClassType: "AwsCustomRoutingEndpointGroup.TimeoutsProperty",
       },
     };
 
@@ -259,7 +259,7 @@ export class TfCustomRoutingEndpointGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfCustomRoutingEndpointGroupDestinationConfigurationPropertyToTerraform(struct?: TfCustomRoutingEndpointGroup.DestinationConfigurationProperty | cdktn.IResolvable): any {
+export function awsCustomRoutingEndpointGroupDestinationConfigurationPropertyToTerraform(struct?: AwsCustomRoutingEndpointGroup.DestinationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -272,7 +272,7 @@ export function tfCustomRoutingEndpointGroupDestinationConfigurationPropertyToTe
 }
 
 
-export function tfCustomRoutingEndpointGroupDestinationConfigurationPropertyToHclTerraform(struct?: TfCustomRoutingEndpointGroup.DestinationConfigurationProperty | cdktn.IResolvable): any {
+export function awsCustomRoutingEndpointGroupDestinationConfigurationPropertyToHclTerraform(struct?: AwsCustomRoutingEndpointGroup.DestinationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -303,7 +303,7 @@ export function tfCustomRoutingEndpointGroupDestinationConfigurationPropertyToHc
 }
 
 
-export function tfCustomRoutingEndpointGroupEndpointConfigurationPropertyToTerraform(struct?: TfCustomRoutingEndpointGroup.EndpointConfigurationProperty | cdktn.IResolvable): any {
+export function awsCustomRoutingEndpointGroupEndpointConfigurationPropertyToTerraform(struct?: AwsCustomRoutingEndpointGroup.EndpointConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -314,7 +314,7 @@ export function tfCustomRoutingEndpointGroupEndpointConfigurationPropertyToTerra
 }
 
 
-export function tfCustomRoutingEndpointGroupEndpointConfigurationPropertyToHclTerraform(struct?: TfCustomRoutingEndpointGroup.EndpointConfigurationProperty | cdktn.IResolvable): any {
+export function awsCustomRoutingEndpointGroupEndpointConfigurationPropertyToHclTerraform(struct?: AwsCustomRoutingEndpointGroup.EndpointConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -333,7 +333,7 @@ export function tfCustomRoutingEndpointGroupEndpointConfigurationPropertyToHclTe
 }
 
 
-export function tfCustomRoutingEndpointGroupTimeoutsPropertyToTerraform(struct?: TfCustomRoutingEndpointGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCustomRoutingEndpointGroupTimeoutsPropertyToTerraform(struct?: AwsCustomRoutingEndpointGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,7 +345,7 @@ export function tfCustomRoutingEndpointGroupTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function tfCustomRoutingEndpointGroupTimeoutsPropertyToHclTerraform(struct?: TfCustomRoutingEndpointGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCustomRoutingEndpointGroupTimeoutsPropertyToHclTerraform(struct?: AwsCustomRoutingEndpointGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -370,18 +370,18 @@ export function tfCustomRoutingEndpointGroupTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace TfCustomRoutingEndpointGroup {
+export namespace AwsCustomRoutingEndpointGroup {
 export interface DestinationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#from_port TfCustomRoutingEndpointGroup#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#from_port AwsCustomRoutingEndpointGroup#from_port}
   */
   readonly fromPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#protocols TfCustomRoutingEndpointGroup#protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#protocols AwsCustomRoutingEndpointGroup#protocols}
   */
   readonly protocols: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#to_port TfCustomRoutingEndpointGroup#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#to_port AwsCustomRoutingEndpointGroup#to_port}
   */
   readonly toPort: number;
 }
@@ -502,7 +502,7 @@ export class DestinationConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface EndpointConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#endpoint_id TfCustomRoutingEndpointGroup#endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#endpoint_id AwsCustomRoutingEndpointGroup#endpoint_id}
   */
   readonly endpointId?: string;
 }
@@ -588,11 +588,11 @@ export class EndpointConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#create TfCustomRoutingEndpointGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#create AwsCustomRoutingEndpointGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#delete TfCustomRoutingEndpointGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/globalaccelerator_custom_routing_endpoint_group#delete AwsCustomRoutingEndpointGroup#delete}
   */
   readonly delete?: string;
 }

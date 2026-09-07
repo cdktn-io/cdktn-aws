@@ -6,7 +6,7 @@
 //
 //  1. `className`/`configStructName` are public and set by the caller (src/naming.ts derives them
 //     from the terraform type and the group's stripPrefixes — `aws_instance` in group `ec2` ->
-//     `TfInstance`/`TfInstanceConfig`), instead of by the parser's order-dependent cross-resource
+//     `AwsInstance`/`AwsInstanceConfig`), instead of by the parser's order-dependent cross-resource
 //     dedup.
 //  2. No `filePath`/`fileName`/`structsFolderPath`/`structsRequireSharding`: the grouped emitter
 //     writes one file per resource with every nested type inside the resource's merged namespace,

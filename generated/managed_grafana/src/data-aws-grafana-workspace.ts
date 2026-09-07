@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfWorkspaceConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsWorkspaceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/grafana_workspace#id DataTfWorkspace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/grafana_workspace#id DataAwsWorkspace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,15 +16,15 @@ export interface DataTfWorkspaceConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/grafana_workspace#region DataTfWorkspace#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/grafana_workspace#region DataAwsWorkspace#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/grafana_workspace#tags DataTfWorkspace#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/grafana_workspace#tags DataAwsWorkspace#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/grafana_workspace#workspace_id DataTfWorkspace#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/grafana_workspace#workspace_id DataAwsWorkspace#workspace_id}
   */
   readonly workspaceId: string;
 }
@@ -32,7 +32,7 @@ export interface DataTfWorkspaceConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/grafana_workspace aws_grafana_workspace}
 */
-export class DataTfWorkspace extends cdktn.TerraformDataSource {
+export class DataAwsWorkspace extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfWorkspace extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfWorkspace resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsWorkspace resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfWorkspace to import
-  * @param importFromId The id of the existing DataTfWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/grafana_workspace#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfWorkspace to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsWorkspace to import
+  * @param importFromId The id of the existing DataAwsWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/grafana_workspace#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsWorkspace to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_grafana_workspace", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfWorkspace extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfWorkspaceConfig
+  * @param options DataAwsWorkspaceConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfWorkspaceConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsWorkspaceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_grafana_workspace',
       terraformGeneratorMetadata: {

@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPackageConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPackageConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#engine_version TfPackage#engine_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#engine_version AwsPackage#engine_version}
   */
   readonly engineVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#id TfPackage#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#id AwsPackage#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#package_description TfPackage#package_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#package_description AwsPackage#package_description}
   */
   readonly packageDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#package_name TfPackage#package_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#package_name AwsPackage#package_name}
   */
   readonly packageName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#package_type TfPackage#package_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#package_type AwsPackage#package_type}
   */
   readonly packageType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#region TfPackage#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#region AwsPackage#region}
   */
   readonly region?: string;
   /**
   * package_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#package_source TfPackage#package_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#package_source AwsPackage#package_source}
   */
-  readonly packageSource: TfPackage.PackageSourceProperty;
+  readonly packageSource: AwsPackage.PackageSourceProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package aws_opensearch_package}
 */
-export class TfPackage extends cdktn.TerraformResource {
+export class AwsPackage extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfPackage extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPackage resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPackage resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPackage to import
-  * @param importFromId The id of the existing TfPackage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPackage to import is found
+  * @param importToId The construct id used in the generated config for the AwsPackage to import
+  * @param importFromId The id of the existing AwsPackage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPackage to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearch_package", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfPackage extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPackageConfig
+  * @param options AwsPackageConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPackageConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPackageConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearch_package',
       terraformGeneratorMetadata: {
@@ -208,11 +208,11 @@ export class TfPackage extends cdktn.TerraformResource {
   }
 
   // package_source - computed: false, optional: false, required: true
-  private _packageSource = new TfPackage.PackageSourcePropertyOutputReference(this, "package_source");
+  private _packageSource = new AwsPackage.PackageSourcePropertyOutputReference(this, "package_source");
   public get packageSource() {
     return this._packageSource;
   }
-  public putPackageSource(value: TfPackage.PackageSourceProperty) {
+  public putPackageSource(value: AwsPackage.PackageSourceProperty) {
     this._packageSource.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -232,7 +232,7 @@ export class TfPackage extends cdktn.TerraformResource {
       package_name: cdktn.stringToTerraform(this._packageName),
       package_type: cdktn.stringToTerraform(this._packageType),
       region: cdktn.stringToTerraform(this._region),
-      package_source: tfPackagePackageSourcePropertyToTerraform(this._packageSource.internalValue),
+      package_source: awsPackagePackageSourcePropertyToTerraform(this._packageSource.internalValue),
     };
   }
 
@@ -275,10 +275,10 @@ export class TfPackage extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       package_source: {
-        value: tfPackagePackageSourcePropertyToHclTerraform(this._packageSource.internalValue),
+        value: awsPackagePackageSourcePropertyToHclTerraform(this._packageSource.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPackage.PackageSourcePropertyList",
+        storageClassType: "AwsPackage.PackageSourcePropertyList",
       },
     };
 
@@ -287,7 +287,7 @@ export class TfPackage extends cdktn.TerraformResource {
   }
 }
 
-export function tfPackagePackageSourcePropertyToTerraform(struct?: TfPackage.PackageSourcePropertyOutputReference | TfPackage.PackageSourceProperty): any {
+export function awsPackagePackageSourcePropertyToTerraform(struct?: AwsPackage.PackageSourcePropertyOutputReference | AwsPackage.PackageSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,7 +299,7 @@ export function tfPackagePackageSourcePropertyToTerraform(struct?: TfPackage.Pac
 }
 
 
-export function tfPackagePackageSourcePropertyToHclTerraform(struct?: TfPackage.PackageSourcePropertyOutputReference | TfPackage.PackageSourceProperty): any {
+export function awsPackagePackageSourcePropertyToHclTerraform(struct?: AwsPackage.PackageSourcePropertyOutputReference | AwsPackage.PackageSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,14 +324,14 @@ export function tfPackagePackageSourcePropertyToHclTerraform(struct?: TfPackage.
 }
 
 
-export namespace TfPackage {
+export namespace AwsPackage {
 export interface PackageSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#s3_bucket_name TfPackage#s3_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#s3_bucket_name AwsPackage#s3_bucket_name}
   */
   readonly s3BucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#s3_key TfPackage#s3_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_package#s3_key AwsPackage#s3_key}
   */
   readonly s3Key: string;
 }

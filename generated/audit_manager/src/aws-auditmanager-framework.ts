@@ -5,41 +5,41 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFrameworkConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFrameworkConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#compliance_type TfFramework#compliance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#compliance_type AwsFramework#compliance_type}
   */
   readonly complianceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#description TfFramework#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#description AwsFramework#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#name TfFramework#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#name AwsFramework#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#region TfFramework#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#region AwsFramework#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#tags TfFramework#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#tags AwsFramework#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * control_sets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#control_sets TfFramework#control_sets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#control_sets AwsFramework#control_sets}
   */
-  readonly controlSets?: TfFramework.ControlSetsProperty[] | cdktn.IResolvable;
+  readonly controlSets?: AwsFramework.ControlSetsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework aws_auditmanager_framework}
 */
-export class TfFramework extends cdktn.TerraformResource {
+export class AwsFramework extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -50,11 +50,11 @@ export class TfFramework extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFramework resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFramework resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFramework to import
-  * @param importFromId The id of the existing TfFramework that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFramework to import is found
+  * @param importToId The construct id used in the generated config for the AwsFramework to import
+  * @param importFromId The id of the existing AwsFramework that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFramework to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_auditmanager_framework", importId: importFromId, provider });
@@ -69,9 +69,9 @@ export class TfFramework extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFrameworkConfig
+  * @param options AwsFrameworkConfig
   */
-  public constructor(scope: Construct, id: string, config: TfFrameworkConfig) {
+  public constructor(scope: Construct, id: string, config: AwsFrameworkConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_auditmanager_framework',
       terraformGeneratorMetadata: {
@@ -198,11 +198,11 @@ export class TfFramework extends cdktn.TerraformResource {
   }
 
   // control_sets - computed: false, optional: true, required: false
-  private _controlSets = new TfFramework.ControlSetsPropertyList(this, "control_sets", true);
+  private _controlSets = new AwsFramework.ControlSetsPropertyList(this, "control_sets", true);
   public get controlSets() {
     return this._controlSets;
   }
-  public putControlSets(value: TfFramework.ControlSetsProperty[] | cdktn.IResolvable) {
+  public putControlSets(value: AwsFramework.ControlSetsProperty[] | cdktn.IResolvable) {
     this._controlSets.internalValue = value;
   }
   public resetControlSets() {
@@ -224,7 +224,7 @@ export class TfFramework extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      control_sets: cdktn.listMapper(tfFrameworkControlSetsPropertyToTerraform, true)(this._controlSets.internalValue),
+      control_sets: cdktn.listMapper(awsFrameworkControlSetsPropertyToTerraform, true)(this._controlSets.internalValue),
     };
   }
 
@@ -261,10 +261,10 @@ export class TfFramework extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       control_sets: {
-        value: cdktn.listMapperHcl(tfFrameworkControlSetsPropertyToHclTerraform, true)(this._controlSets.internalValue),
+        value: cdktn.listMapperHcl(awsFrameworkControlSetsPropertyToHclTerraform, true)(this._controlSets.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfFramework.ControlSetsPropertyList",
+        storageClassType: "AwsFramework.ControlSetsPropertyList",
       },
     };
 
@@ -273,7 +273,7 @@ export class TfFramework extends cdktn.TerraformResource {
   }
 }
 
-export function tfFrameworkControlsPropertyToTerraform(struct?: TfFramework.ControlsProperty | cdktn.IResolvable): any {
+export function awsFrameworkControlsPropertyToTerraform(struct?: AwsFramework.ControlsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function tfFrameworkControlsPropertyToTerraform(struct?: TfFramework.Cont
 }
 
 
-export function tfFrameworkControlsPropertyToHclTerraform(struct?: TfFramework.ControlsProperty | cdktn.IResolvable): any {
+export function awsFrameworkControlsPropertyToHclTerraform(struct?: AwsFramework.ControlsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -303,19 +303,19 @@ export function tfFrameworkControlsPropertyToHclTerraform(struct?: TfFramework.C
 }
 
 
-export function tfFrameworkControlSetsPropertyToTerraform(struct?: TfFramework.ControlSetsProperty | cdktn.IResolvable): any {
+export function awsFrameworkControlSetsPropertyToTerraform(struct?: AwsFramework.ControlSetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    controls: cdktn.listMapper(tfFrameworkControlsPropertyToTerraform, true)(struct!.controls),
+    controls: cdktn.listMapper(awsFrameworkControlsPropertyToTerraform, true)(struct!.controls),
   }
 }
 
 
-export function tfFrameworkControlSetsPropertyToHclTerraform(struct?: TfFramework.ControlSetsProperty | cdktn.IResolvable): any {
+export function awsFrameworkControlSetsPropertyToHclTerraform(struct?: AwsFramework.ControlSetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function tfFrameworkControlSetsPropertyToHclTerraform(struct?: TfFramewor
       storageClassType: "string",
     },
     controls: {
-      value: cdktn.listMapperHcl(tfFrameworkControlsPropertyToHclTerraform, true)(struct!.controls),
+      value: cdktn.listMapperHcl(awsFrameworkControlsPropertyToHclTerraform, true)(struct!.controls),
       isBlock: true,
       type: "set",
       storageClassType: "ControlsPropertyList",
@@ -340,10 +340,10 @@ export function tfFrameworkControlSetsPropertyToHclTerraform(struct?: TfFramewor
 }
 
 
-export namespace TfFramework {
+export namespace AwsFramework {
 export interface ControlsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#id TfFramework#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#id AwsFramework#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -429,13 +429,13 @@ export class ControlsPropertyList extends cdktn.ComplexList {
 }
 export interface ControlSetsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#name TfFramework#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#name AwsFramework#name}
   */
   readonly name: string;
   /**
   * controls block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#controls TfFramework#controls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/auditmanager_framework#controls AwsFramework#controls}
   */
   readonly controls?: ControlsProperty[] | cdktn.IResolvable;
 }

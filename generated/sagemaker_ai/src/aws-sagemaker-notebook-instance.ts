@@ -5,92 +5,92 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfNotebookInstanceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsNotebookInstanceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#additional_code_repositories TfNotebookInstance#additional_code_repositories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#additional_code_repositories AwsNotebookInstance#additional_code_repositories}
   */
   readonly additionalCodeRepositories?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#default_code_repository TfNotebookInstance#default_code_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#default_code_repository AwsNotebookInstance#default_code_repository}
   */
   readonly defaultCodeRepository?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#direct_internet_access TfNotebookInstance#direct_internet_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#direct_internet_access AwsNotebookInstance#direct_internet_access}
   */
   readonly directInternetAccess?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#id TfNotebookInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#id AwsNotebookInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#instance_type TfNotebookInstance#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#instance_type AwsNotebookInstance#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#kms_key_id TfNotebookInstance#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#kms_key_id AwsNotebookInstance#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#lifecycle_config_name TfNotebookInstance#lifecycle_config_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#lifecycle_config_name AwsNotebookInstance#lifecycle_config_name}
   */
   readonly lifecycleConfigName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#name TfNotebookInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#name AwsNotebookInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#platform_identifier TfNotebookInstance#platform_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#platform_identifier AwsNotebookInstance#platform_identifier}
   */
   readonly platformIdentifier?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#region TfNotebookInstance#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#region AwsNotebookInstance#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#role_arn TfNotebookInstance#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#role_arn AwsNotebookInstance#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#root_access TfNotebookInstance#root_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#root_access AwsNotebookInstance#root_access}
   */
   readonly rootAccess?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#security_groups TfNotebookInstance#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#security_groups AwsNotebookInstance#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#subnet_id TfNotebookInstance#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#subnet_id AwsNotebookInstance#subnet_id}
   */
   readonly subnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#tags TfNotebookInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#tags AwsNotebookInstance#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#tags_all TfNotebookInstance#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#tags_all AwsNotebookInstance#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#volume_size TfNotebookInstance#volume_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#volume_size AwsNotebookInstance#volume_size}
   */
   readonly volumeSize?: number;
   /**
   * instance_metadata_service_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#instance_metadata_service_configuration TfNotebookInstance#instance_metadata_service_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#instance_metadata_service_configuration AwsNotebookInstance#instance_metadata_service_configuration}
   */
-  readonly instanceMetadataServiceConfiguration?: TfNotebookInstance.InstanceMetadataServiceConfigurationProperty;
+  readonly instanceMetadataServiceConfiguration?: AwsNotebookInstance.InstanceMetadataServiceConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance aws_sagemaker_notebook_instance}
 */
-export class TfNotebookInstance extends cdktn.TerraformResource {
+export class AwsNotebookInstance extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -101,11 +101,11 @@ export class TfNotebookInstance extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfNotebookInstance resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsNotebookInstance resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfNotebookInstance to import
-  * @param importFromId The id of the existing TfNotebookInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfNotebookInstance to import is found
+  * @param importToId The construct id used in the generated config for the AwsNotebookInstance to import
+  * @param importFromId The id of the existing AwsNotebookInstance that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsNotebookInstance to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_notebook_instance", importId: importFromId, provider });
@@ -120,9 +120,9 @@ export class TfNotebookInstance extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfNotebookInstanceConfig
+  * @param options AwsNotebookInstanceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfNotebookInstanceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsNotebookInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_notebook_instance',
       terraformGeneratorMetadata: {
@@ -441,11 +441,11 @@ export class TfNotebookInstance extends cdktn.TerraformResource {
   }
 
   // instance_metadata_service_configuration - computed: false, optional: true, required: false
-  private _instanceMetadataServiceConfiguration = new TfNotebookInstance.InstanceMetadataServiceConfigurationPropertyOutputReference(this, "instance_metadata_service_configuration");
+  private _instanceMetadataServiceConfiguration = new AwsNotebookInstance.InstanceMetadataServiceConfigurationPropertyOutputReference(this, "instance_metadata_service_configuration");
   public get instanceMetadataServiceConfiguration() {
     return this._instanceMetadataServiceConfiguration;
   }
-  public putInstanceMetadataServiceConfiguration(value: TfNotebookInstance.InstanceMetadataServiceConfigurationProperty) {
+  public putInstanceMetadataServiceConfiguration(value: AwsNotebookInstance.InstanceMetadataServiceConfigurationProperty) {
     this._instanceMetadataServiceConfiguration.internalValue = value;
   }
   public resetInstanceMetadataServiceConfiguration() {
@@ -479,7 +479,7 @@ export class TfNotebookInstance extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       volume_size: cdktn.numberToTerraform(this._volumeSize),
-      instance_metadata_service_configuration: tfNotebookInstanceInstanceMetadataServiceConfigurationPropertyToTerraform(this._instanceMetadataServiceConfiguration.internalValue),
+      instance_metadata_service_configuration: awsNotebookInstanceInstanceMetadataServiceConfigurationPropertyToTerraform(this._instanceMetadataServiceConfiguration.internalValue),
     };
   }
 
@@ -588,10 +588,10 @@ export class TfNotebookInstance extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       instance_metadata_service_configuration: {
-        value: tfNotebookInstanceInstanceMetadataServiceConfigurationPropertyToHclTerraform(this._instanceMetadataServiceConfiguration.internalValue),
+        value: awsNotebookInstanceInstanceMetadataServiceConfigurationPropertyToHclTerraform(this._instanceMetadataServiceConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfNotebookInstance.InstanceMetadataServiceConfigurationPropertyList",
+        storageClassType: "AwsNotebookInstance.InstanceMetadataServiceConfigurationPropertyList",
       },
     };
 
@@ -600,7 +600,7 @@ export class TfNotebookInstance extends cdktn.TerraformResource {
   }
 }
 
-export function tfNotebookInstanceInstanceMetadataServiceConfigurationPropertyToTerraform(struct?: TfNotebookInstance.InstanceMetadataServiceConfigurationPropertyOutputReference | TfNotebookInstance.InstanceMetadataServiceConfigurationProperty): any {
+export function awsNotebookInstanceInstanceMetadataServiceConfigurationPropertyToTerraform(struct?: AwsNotebookInstance.InstanceMetadataServiceConfigurationPropertyOutputReference | AwsNotebookInstance.InstanceMetadataServiceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -611,7 +611,7 @@ export function tfNotebookInstanceInstanceMetadataServiceConfigurationPropertyTo
 }
 
 
-export function tfNotebookInstanceInstanceMetadataServiceConfigurationPropertyToHclTerraform(struct?: TfNotebookInstance.InstanceMetadataServiceConfigurationPropertyOutputReference | TfNotebookInstance.InstanceMetadataServiceConfigurationProperty): any {
+export function awsNotebookInstanceInstanceMetadataServiceConfigurationPropertyToHclTerraform(struct?: AwsNotebookInstance.InstanceMetadataServiceConfigurationPropertyOutputReference | AwsNotebookInstance.InstanceMetadataServiceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -630,10 +630,10 @@ export function tfNotebookInstanceInstanceMetadataServiceConfigurationPropertyTo
 }
 
 
-export namespace TfNotebookInstance {
+export namespace AwsNotebookInstance {
 export interface InstanceMetadataServiceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#minimum_instance_metadata_service_version TfNotebookInstance#minimum_instance_metadata_service_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_notebook_instance#minimum_instance_metadata_service_version AwsNotebookInstance#minimum_instance_metadata_service_version}
   */
   readonly minimumInstanceMetadataServiceVersion?: string;
 }

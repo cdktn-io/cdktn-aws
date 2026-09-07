@@ -5,136 +5,136 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfObjectConfig extends cdktn.TerraformMetaArguments {
+export interface AwsObjectConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#acl TfObject#acl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#acl AwsObject#acl}
   */
   readonly acl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#bucket TfObject#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#bucket AwsObject#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#bucket_key_enabled TfObject#bucket_key_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#bucket_key_enabled AwsObject#bucket_key_enabled}
   */
   readonly bucketKeyEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#cache_control TfObject#cache_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#cache_control AwsObject#cache_control}
   */
   readonly cacheControl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#checksum_algorithm TfObject#checksum_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#checksum_algorithm AwsObject#checksum_algorithm}
   */
   readonly checksumAlgorithm?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#content TfObject#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#content AwsObject#content}
   */
   readonly content?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#content_base64 TfObject#content_base64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#content_base64 AwsObject#content_base64}
   */
   readonly contentBase64?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#content_disposition TfObject#content_disposition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#content_disposition AwsObject#content_disposition}
   */
   readonly contentDisposition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#content_encoding TfObject#content_encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#content_encoding AwsObject#content_encoding}
   */
   readonly contentEncoding?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#content_language TfObject#content_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#content_language AwsObject#content_language}
   */
   readonly contentLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#content_type TfObject#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#content_type AwsObject#content_type}
   */
   readonly contentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#etag TfObject#etag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#etag AwsObject#etag}
   */
   readonly etag?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#force_destroy TfObject#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#force_destroy AwsObject#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#id TfObject#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#id AwsObject#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#key TfObject#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#key AwsObject#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#kms_key_id TfObject#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#kms_key_id AwsObject#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#metadata TfObject#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#metadata AwsObject#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#object_lock_legal_hold_status TfObject#object_lock_legal_hold_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#object_lock_legal_hold_status AwsObject#object_lock_legal_hold_status}
   */
   readonly objectLockLegalHoldStatus?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#object_lock_mode TfObject#object_lock_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#object_lock_mode AwsObject#object_lock_mode}
   */
   readonly objectLockMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#object_lock_retain_until_date TfObject#object_lock_retain_until_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#object_lock_retain_until_date AwsObject#object_lock_retain_until_date}
   */
   readonly objectLockRetainUntilDate?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#region TfObject#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#region AwsObject#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#server_side_encryption TfObject#server_side_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#server_side_encryption AwsObject#server_side_encryption}
   */
   readonly serverSideEncryption?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#source TfObject#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#source AwsObject#source}
   */
   readonly source?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#source_hash TfObject#source_hash}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#source_hash AwsObject#source_hash}
   */
   readonly sourceHash?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#storage_class TfObject#storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#storage_class AwsObject#storage_class}
   */
   readonly storageClass?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#tags TfObject#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#tags AwsObject#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#tags_all TfObject#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#tags_all AwsObject#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#website_redirect TfObject#website_redirect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#website_redirect AwsObject#website_redirect}
   */
   readonly websiteRedirect?: string;
   /**
   * override_provider block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#override_provider TfObject#override_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#override_provider AwsObject#override_provider}
   */
-  readonly overrideProvider?: TfObject.OverrideProviderProperty;
+  readonly overrideProvider?: AwsObject.OverrideProviderProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object aws_s3_object}
 */
-export class TfObject extends cdktn.TerraformResource {
+export class AwsObject extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -145,11 +145,11 @@ export class TfObject extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfObject resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsObject resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfObject to import
-  * @param importFromId The id of the existing TfObject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfObject to import is found
+  * @param importToId The construct id used in the generated config for the AwsObject to import
+  * @param importFromId The id of the existing AwsObject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsObject to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_object", importId: importFromId, provider });
@@ -164,9 +164,9 @@ export class TfObject extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfObjectConfig
+  * @param options AwsObjectConfig
   */
-  public constructor(scope: Construct, id: string, config: TfObjectConfig) {
+  public constructor(scope: Construct, id: string, config: AwsObjectConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_object',
       terraformGeneratorMetadata: {
@@ -695,11 +695,11 @@ export class TfObject extends cdktn.TerraformResource {
   }
 
   // override_provider - computed: false, optional: true, required: false
-  private _overrideProvider = new TfObject.OverrideProviderPropertyOutputReference(this, "override_provider");
+  private _overrideProvider = new AwsObject.OverrideProviderPropertyOutputReference(this, "override_provider");
   public get overrideProvider() {
     return this._overrideProvider;
   }
-  public putOverrideProvider(value: TfObject.OverrideProviderProperty) {
+  public putOverrideProvider(value: AwsObject.OverrideProviderProperty) {
     this._overrideProvider.internalValue = value;
   }
   public resetOverrideProvider() {
@@ -744,7 +744,7 @@ export class TfObject extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       website_redirect: cdktn.stringToTerraform(this._websiteRedirect),
-      override_provider: tfObjectOverrideProviderPropertyToTerraform(this._overrideProvider.internalValue),
+      override_provider: awsObjectOverrideProviderPropertyToTerraform(this._overrideProvider.internalValue),
     };
   }
 
@@ -919,10 +919,10 @@ export class TfObject extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       override_provider: {
-        value: tfObjectOverrideProviderPropertyToHclTerraform(this._overrideProvider.internalValue),
+        value: awsObjectOverrideProviderPropertyToHclTerraform(this._overrideProvider.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfObject.OverrideProviderPropertyList",
+        storageClassType: "AwsObject.OverrideProviderPropertyList",
       },
     };
 
@@ -931,7 +931,7 @@ export class TfObject extends cdktn.TerraformResource {
   }
 }
 
-export function tfObjectDefaultTagsPropertyToTerraform(struct?: TfObject.DefaultTagsPropertyOutputReference | TfObject.DefaultTagsProperty): any {
+export function awsObjectDefaultTagsPropertyToTerraform(struct?: AwsObject.DefaultTagsPropertyOutputReference | AwsObject.DefaultTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -942,7 +942,7 @@ export function tfObjectDefaultTagsPropertyToTerraform(struct?: TfObject.Default
 }
 
 
-export function tfObjectDefaultTagsPropertyToHclTerraform(struct?: TfObject.DefaultTagsPropertyOutputReference | TfObject.DefaultTagsProperty): any {
+export function awsObjectDefaultTagsPropertyToHclTerraform(struct?: AwsObject.DefaultTagsPropertyOutputReference | AwsObject.DefaultTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -961,25 +961,25 @@ export function tfObjectDefaultTagsPropertyToHclTerraform(struct?: TfObject.Defa
 }
 
 
-export function tfObjectOverrideProviderPropertyToTerraform(struct?: TfObject.OverrideProviderPropertyOutputReference | TfObject.OverrideProviderProperty): any {
+export function awsObjectOverrideProviderPropertyToTerraform(struct?: AwsObject.OverrideProviderPropertyOutputReference | AwsObject.OverrideProviderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    default_tags: tfObjectDefaultTagsPropertyToTerraform(struct!.defaultTags),
+    default_tags: awsObjectDefaultTagsPropertyToTerraform(struct!.defaultTags),
   }
 }
 
 
-export function tfObjectOverrideProviderPropertyToHclTerraform(struct?: TfObject.OverrideProviderPropertyOutputReference | TfObject.OverrideProviderProperty): any {
+export function awsObjectOverrideProviderPropertyToHclTerraform(struct?: AwsObject.OverrideProviderPropertyOutputReference | AwsObject.OverrideProviderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     default_tags: {
-      value: tfObjectDefaultTagsPropertyToHclTerraform(struct!.defaultTags),
+      value: awsObjectDefaultTagsPropertyToHclTerraform(struct!.defaultTags),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultTagsPropertyList",
@@ -991,10 +991,10 @@ export function tfObjectOverrideProviderPropertyToHclTerraform(struct?: TfObject
 }
 
 
-export namespace TfObject {
+export namespace AwsObject {
 export interface DefaultTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#tags TfObject#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#tags AwsObject#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -1050,7 +1050,7 @@ export interface OverrideProviderProperty {
   /**
   * default_tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#default_tags TfObject#default_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_object#default_tags AwsObject#default_tags}
   */
   readonly defaultTags?: DefaultTagsProperty;
 }

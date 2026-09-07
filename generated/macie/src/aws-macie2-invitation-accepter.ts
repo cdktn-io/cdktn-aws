@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfInvitationAccepterConfig extends cdktn.TerraformMetaArguments {
+export interface AwsInvitationAccepterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_invitation_accepter#administrator_account_id TfInvitationAccepter#administrator_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_invitation_accepter#administrator_account_id AwsInvitationAccepter#administrator_account_id}
   */
   readonly administratorAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_invitation_accepter#id TfInvitationAccepter#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_invitation_accepter#id AwsInvitationAccepter#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,21 +20,21 @@ export interface TfInvitationAccepterConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_invitation_accepter#region TfInvitationAccepter#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_invitation_accepter#region AwsInvitationAccepter#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_invitation_accepter#timeouts TfInvitationAccepter#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_invitation_accepter#timeouts AwsInvitationAccepter#timeouts}
   */
-  readonly timeouts?: TfInvitationAccepter.TimeoutsProperty;
+  readonly timeouts?: AwsInvitationAccepter.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_invitation_accepter aws_macie2_invitation_accepter}
 */
-export class TfInvitationAccepter extends cdktn.TerraformResource {
+export class AwsInvitationAccepter extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfInvitationAccepter extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfInvitationAccepter resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsInvitationAccepter resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfInvitationAccepter to import
-  * @param importFromId The id of the existing TfInvitationAccepter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_invitation_accepter#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfInvitationAccepter to import is found
+  * @param importToId The construct id used in the generated config for the AwsInvitationAccepter to import
+  * @param importFromId The id of the existing AwsInvitationAccepter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_invitation_accepter#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsInvitationAccepter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_macie2_invitation_accepter", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfInvitationAccepter extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfInvitationAccepterConfig
+  * @param options AwsInvitationAccepterConfig
   */
-  public constructor(scope: Construct, id: string, config: TfInvitationAccepterConfig) {
+  public constructor(scope: Construct, id: string, config: AwsInvitationAccepterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_macie2_invitation_accepter',
       terraformGeneratorMetadata: {
@@ -143,11 +143,11 @@ export class TfInvitationAccepter extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfInvitationAccepter.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsInvitationAccepter.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfInvitationAccepter.TimeoutsProperty) {
+  public putTimeouts(value: AwsInvitationAccepter.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -167,7 +167,7 @@ export class TfInvitationAccepter extends cdktn.TerraformResource {
       administrator_account_id: cdktn.stringToTerraform(this._administratorAccountId),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfInvitationAccepterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsInvitationAccepterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -192,10 +192,10 @@ export class TfInvitationAccepter extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfInvitationAccepterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsInvitationAccepterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfInvitationAccepter.TimeoutsProperty",
+        storageClassType: "AwsInvitationAccepter.TimeoutsProperty",
       },
     };
 
@@ -204,7 +204,7 @@ export class TfInvitationAccepter extends cdktn.TerraformResource {
   }
 }
 
-export function tfInvitationAccepterTimeoutsPropertyToTerraform(struct?: TfInvitationAccepter.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsInvitationAccepterTimeoutsPropertyToTerraform(struct?: AwsInvitationAccepter.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -215,7 +215,7 @@ export function tfInvitationAccepterTimeoutsPropertyToTerraform(struct?: TfInvit
 }
 
 
-export function tfInvitationAccepterTimeoutsPropertyToHclTerraform(struct?: TfInvitationAccepter.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsInvitationAccepterTimeoutsPropertyToHclTerraform(struct?: AwsInvitationAccepter.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -234,10 +234,10 @@ export function tfInvitationAccepterTimeoutsPropertyToHclTerraform(struct?: TfIn
 }
 
 
-export namespace TfInvitationAccepter {
+export namespace AwsInvitationAccepter {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_invitation_accepter#create TfInvitationAccepter#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_invitation_accepter#create AwsInvitationAccepter#create}
   */
   readonly create?: string;
 }

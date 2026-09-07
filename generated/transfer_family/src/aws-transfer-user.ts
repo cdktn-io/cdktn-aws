@@ -5,76 +5,76 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfUserConfig extends cdktn.TerraformMetaArguments {
+export interface AwsUserConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#home_directory TfUser#home_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#home_directory AwsUser#home_directory}
   */
   readonly homeDirectory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#home_directory_type TfUser#home_directory_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#home_directory_type AwsUser#home_directory_type}
   */
   readonly homeDirectoryType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#id TfUser#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#id AwsUser#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#policy TfUser#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#policy AwsUser#policy}
   */
   readonly policy?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#region TfUser#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#region AwsUser#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#role TfUser#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#role AwsUser#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#server_id TfUser#server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#server_id AwsUser#server_id}
   */
   readonly serverId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#tags TfUser#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#tags AwsUser#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#tags_all TfUser#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#tags_all AwsUser#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#user_name TfUser#user_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#user_name AwsUser#user_name}
   */
   readonly userName: string;
   /**
   * home_directory_mappings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#home_directory_mappings TfUser#home_directory_mappings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#home_directory_mappings AwsUser#home_directory_mappings}
   */
-  readonly homeDirectoryMappings?: TfUser.HomeDirectoryMappingsProperty[] | cdktn.IResolvable;
+  readonly homeDirectoryMappings?: AwsUser.HomeDirectoryMappingsProperty[] | cdktn.IResolvable;
   /**
   * posix_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#posix_profile TfUser#posix_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#posix_profile AwsUser#posix_profile}
   */
-  readonly posixProfile?: TfUser.PosixProfileProperty;
+  readonly posixProfile?: AwsUser.PosixProfileProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#timeouts TfUser#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#timeouts AwsUser#timeouts}
   */
-  readonly timeouts?: TfUser.TimeoutsProperty;
+  readonly timeouts?: AwsUser.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user aws_transfer_user}
 */
-export class TfUser extends cdktn.TerraformResource {
+export class AwsUser extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -85,11 +85,11 @@ export class TfUser extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfUser resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsUser resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfUser to import
-  * @param importFromId The id of the existing TfUser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfUser to import is found
+  * @param importToId The construct id used in the generated config for the AwsUser to import
+  * @param importFromId The id of the existing AwsUser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsUser to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_transfer_user", importId: importFromId, provider });
@@ -104,9 +104,9 @@ export class TfUser extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfUserConfig
+  * @param options AwsUserConfig
   */
-  public constructor(scope: Construct, id: string, config: TfUserConfig) {
+  public constructor(scope: Construct, id: string, config: AwsUserConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_transfer_user',
       terraformGeneratorMetadata: {
@@ -298,11 +298,11 @@ export class TfUser extends cdktn.TerraformResource {
   }
 
   // home_directory_mappings - computed: false, optional: true, required: false
-  private _homeDirectoryMappings = new TfUser.HomeDirectoryMappingsPropertyList(this, "home_directory_mappings", false);
+  private _homeDirectoryMappings = new AwsUser.HomeDirectoryMappingsPropertyList(this, "home_directory_mappings", false);
   public get homeDirectoryMappings() {
     return this._homeDirectoryMappings;
   }
-  public putHomeDirectoryMappings(value: TfUser.HomeDirectoryMappingsProperty[] | cdktn.IResolvable) {
+  public putHomeDirectoryMappings(value: AwsUser.HomeDirectoryMappingsProperty[] | cdktn.IResolvable) {
     this._homeDirectoryMappings.internalValue = value;
   }
   public resetHomeDirectoryMappings() {
@@ -314,11 +314,11 @@ export class TfUser extends cdktn.TerraformResource {
   }
 
   // posix_profile - computed: false, optional: true, required: false
-  private _posixProfile = new TfUser.PosixProfilePropertyOutputReference(this, "posix_profile");
+  private _posixProfile = new AwsUser.PosixProfilePropertyOutputReference(this, "posix_profile");
   public get posixProfile() {
     return this._posixProfile;
   }
-  public putPosixProfile(value: TfUser.PosixProfileProperty) {
+  public putPosixProfile(value: AwsUser.PosixProfileProperty) {
     this._posixProfile.internalValue = value;
   }
   public resetPosixProfile() {
@@ -330,11 +330,11 @@ export class TfUser extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfUser.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsUser.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfUser.TimeoutsProperty) {
+  public putTimeouts(value: AwsUser.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -361,9 +361,9 @@ export class TfUser extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       user_name: cdktn.stringToTerraform(this._userName),
-      home_directory_mappings: cdktn.listMapper(tfUserHomeDirectoryMappingsPropertyToTerraform, true)(this._homeDirectoryMappings.internalValue),
-      posix_profile: tfUserPosixProfilePropertyToTerraform(this._posixProfile.internalValue),
-      timeouts: tfUserTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      home_directory_mappings: cdktn.listMapper(awsUserHomeDirectoryMappingsPropertyToTerraform, true)(this._homeDirectoryMappings.internalValue),
+      posix_profile: awsUserPosixProfilePropertyToTerraform(this._posixProfile.internalValue),
+      timeouts: awsUserTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -430,22 +430,22 @@ export class TfUser extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       home_directory_mappings: {
-        value: cdktn.listMapperHcl(tfUserHomeDirectoryMappingsPropertyToHclTerraform, true)(this._homeDirectoryMappings.internalValue),
+        value: cdktn.listMapperHcl(awsUserHomeDirectoryMappingsPropertyToHclTerraform, true)(this._homeDirectoryMappings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUser.HomeDirectoryMappingsPropertyList",
+        storageClassType: "AwsUser.HomeDirectoryMappingsPropertyList",
       },
       posix_profile: {
-        value: tfUserPosixProfilePropertyToHclTerraform(this._posixProfile.internalValue),
+        value: awsUserPosixProfilePropertyToHclTerraform(this._posixProfile.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUser.PosixProfilePropertyList",
+        storageClassType: "AwsUser.PosixProfilePropertyList",
       },
       timeouts: {
-        value: tfUserTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsUserTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfUser.TimeoutsProperty",
+        storageClassType: "AwsUser.TimeoutsProperty",
       },
     };
 
@@ -454,7 +454,7 @@ export class TfUser extends cdktn.TerraformResource {
   }
 }
 
-export function tfUserHomeDirectoryMappingsPropertyToTerraform(struct?: TfUser.HomeDirectoryMappingsProperty | cdktn.IResolvable): any {
+export function awsUserHomeDirectoryMappingsPropertyToTerraform(struct?: AwsUser.HomeDirectoryMappingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,7 +466,7 @@ export function tfUserHomeDirectoryMappingsPropertyToTerraform(struct?: TfUser.H
 }
 
 
-export function tfUserHomeDirectoryMappingsPropertyToHclTerraform(struct?: TfUser.HomeDirectoryMappingsProperty | cdktn.IResolvable): any {
+export function awsUserHomeDirectoryMappingsPropertyToHclTerraform(struct?: AwsUser.HomeDirectoryMappingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -491,7 +491,7 @@ export function tfUserHomeDirectoryMappingsPropertyToHclTerraform(struct?: TfUse
 }
 
 
-export function tfUserPosixProfilePropertyToTerraform(struct?: TfUser.PosixProfilePropertyOutputReference | TfUser.PosixProfileProperty): any {
+export function awsUserPosixProfilePropertyToTerraform(struct?: AwsUser.PosixProfilePropertyOutputReference | AwsUser.PosixProfileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,7 +504,7 @@ export function tfUserPosixProfilePropertyToTerraform(struct?: TfUser.PosixProfi
 }
 
 
-export function tfUserPosixProfilePropertyToHclTerraform(struct?: TfUser.PosixProfilePropertyOutputReference | TfUser.PosixProfileProperty): any {
+export function awsUserPosixProfilePropertyToHclTerraform(struct?: AwsUser.PosixProfilePropertyOutputReference | AwsUser.PosixProfileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -535,7 +535,7 @@ export function tfUserPosixProfilePropertyToHclTerraform(struct?: TfUser.PosixPr
 }
 
 
-export function tfUserTimeoutsPropertyToTerraform(struct?: TfUser.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsUserTimeoutsPropertyToTerraform(struct?: AwsUser.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -546,7 +546,7 @@ export function tfUserTimeoutsPropertyToTerraform(struct?: TfUser.TimeoutsProper
 }
 
 
-export function tfUserTimeoutsPropertyToHclTerraform(struct?: TfUser.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsUserTimeoutsPropertyToHclTerraform(struct?: AwsUser.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -565,14 +565,14 @@ export function tfUserTimeoutsPropertyToHclTerraform(struct?: TfUser.TimeoutsPro
 }
 
 
-export namespace TfUser {
+export namespace AwsUser {
 export interface HomeDirectoryMappingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#entry TfUser#entry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#entry AwsUser#entry}
   */
   readonly entry: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#target TfUser#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#target AwsUser#target}
   */
   readonly target: string;
 }
@@ -674,15 +674,15 @@ export class HomeDirectoryMappingsPropertyList extends cdktn.ComplexList {
 }
 export interface PosixProfileProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#gid TfUser#gid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#gid AwsUser#gid}
   */
   readonly gid: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#secondary_gids TfUser#secondary_gids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#secondary_gids AwsUser#secondary_gids}
   */
   readonly secondaryGids?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#uid TfUser#uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#uid AwsUser#uid}
   */
   readonly uid: number;
 }
@@ -774,7 +774,7 @@ export class PosixProfilePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#delete TfUser#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_user#delete AwsUser#delete}
   */
   readonly delete?: string;
 }

@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfMaintenanceWindowTargetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsMaintenanceWindowTargetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#description TfMaintenanceWindowTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#description AwsMaintenanceWindowTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#id TfMaintenanceWindowTarget#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#id AwsMaintenanceWindowTarget#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#name TfMaintenanceWindowTarget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#name AwsMaintenanceWindowTarget#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#owner_information TfMaintenanceWindowTarget#owner_information}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#owner_information AwsMaintenanceWindowTarget#owner_information}
   */
   readonly ownerInformation?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#region TfMaintenanceWindowTarget#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#region AwsMaintenanceWindowTarget#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#resource_type TfMaintenanceWindowTarget#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#resource_type AwsMaintenanceWindowTarget#resource_type}
   */
   readonly resourceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#window_id TfMaintenanceWindowTarget#window_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#window_id AwsMaintenanceWindowTarget#window_id}
   */
   readonly windowId: string;
   /**
   * targets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#targets TfMaintenanceWindowTarget#targets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#targets AwsMaintenanceWindowTarget#targets}
   */
-  readonly targets: TfMaintenanceWindowTarget.TargetsProperty[] | cdktn.IResolvable;
+  readonly targets: AwsMaintenanceWindowTarget.TargetsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target aws_ssm_maintenance_window_target}
 */
-export class TfMaintenanceWindowTarget extends cdktn.TerraformResource {
+export class AwsMaintenanceWindowTarget extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfMaintenanceWindowTarget extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfMaintenanceWindowTarget resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsMaintenanceWindowTarget resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfMaintenanceWindowTarget to import
-  * @param importFromId The id of the existing TfMaintenanceWindowTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfMaintenanceWindowTarget to import is found
+  * @param importToId The construct id used in the generated config for the AwsMaintenanceWindowTarget to import
+  * @param importFromId The id of the existing AwsMaintenanceWindowTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMaintenanceWindowTarget to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssm_maintenance_window_target", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfMaintenanceWindowTarget extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfMaintenanceWindowTargetConfig
+  * @param options AwsMaintenanceWindowTargetConfig
   */
-  public constructor(scope: Construct, id: string, config: TfMaintenanceWindowTargetConfig) {
+  public constructor(scope: Construct, id: string, config: AwsMaintenanceWindowTargetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssm_maintenance_window_target',
       terraformGeneratorMetadata: {
@@ -219,11 +219,11 @@ export class TfMaintenanceWindowTarget extends cdktn.TerraformResource {
   }
 
   // targets - computed: false, optional: false, required: true
-  private _targets = new TfMaintenanceWindowTarget.TargetsPropertyList(this, "targets", false);
+  private _targets = new AwsMaintenanceWindowTarget.TargetsPropertyList(this, "targets", false);
   public get targets() {
     return this._targets;
   }
-  public putTargets(value: TfMaintenanceWindowTarget.TargetsProperty[] | cdktn.IResolvable) {
+  public putTargets(value: AwsMaintenanceWindowTarget.TargetsProperty[] | cdktn.IResolvable) {
     this._targets.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -244,7 +244,7 @@ export class TfMaintenanceWindowTarget extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       resource_type: cdktn.stringToTerraform(this._resourceType),
       window_id: cdktn.stringToTerraform(this._windowId),
-      targets: cdktn.listMapper(tfMaintenanceWindowTargetTargetsPropertyToTerraform, true)(this._targets.internalValue),
+      targets: cdktn.listMapper(awsMaintenanceWindowTargetTargetsPropertyToTerraform, true)(this._targets.internalValue),
     };
   }
 
@@ -293,10 +293,10 @@ export class TfMaintenanceWindowTarget extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       targets: {
-        value: cdktn.listMapperHcl(tfMaintenanceWindowTargetTargetsPropertyToHclTerraform, true)(this._targets.internalValue),
+        value: cdktn.listMapperHcl(awsMaintenanceWindowTargetTargetsPropertyToHclTerraform, true)(this._targets.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMaintenanceWindowTarget.TargetsPropertyList",
+        storageClassType: "AwsMaintenanceWindowTarget.TargetsPropertyList",
       },
     };
 
@@ -305,7 +305,7 @@ export class TfMaintenanceWindowTarget extends cdktn.TerraformResource {
   }
 }
 
-export function tfMaintenanceWindowTargetTargetsPropertyToTerraform(struct?: TfMaintenanceWindowTarget.TargetsProperty | cdktn.IResolvable): any {
+export function awsMaintenanceWindowTargetTargetsPropertyToTerraform(struct?: AwsMaintenanceWindowTarget.TargetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function tfMaintenanceWindowTargetTargetsPropertyToTerraform(struct?: TfM
 }
 
 
-export function tfMaintenanceWindowTargetTargetsPropertyToHclTerraform(struct?: TfMaintenanceWindowTarget.TargetsProperty | cdktn.IResolvable): any {
+export function awsMaintenanceWindowTargetTargetsPropertyToHclTerraform(struct?: AwsMaintenanceWindowTarget.TargetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -342,14 +342,14 @@ export function tfMaintenanceWindowTargetTargetsPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace TfMaintenanceWindowTarget {
+export namespace AwsMaintenanceWindowTarget {
 export interface TargetsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#key TfMaintenanceWindowTarget#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#key AwsMaintenanceWindowTarget#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#values TfMaintenanceWindowTarget#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_maintenance_window_target#values AwsMaintenanceWindowTarget#values}
   */
   readonly values: string[];
 }

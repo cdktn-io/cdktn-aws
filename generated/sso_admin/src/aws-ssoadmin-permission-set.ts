@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPermissionSetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPermissionSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#description TfPermissionSet#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#description AwsPermissionSet#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#id TfPermissionSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#id AwsPermissionSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#instance_arn TfPermissionSet#instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#instance_arn AwsPermissionSet#instance_arn}
   */
   readonly instanceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#name TfPermissionSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#name AwsPermissionSet#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#region TfPermissionSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#region AwsPermissionSet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#relay_state TfPermissionSet#relay_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#relay_state AwsPermissionSet#relay_state}
   */
   readonly relayState?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#session_duration TfPermissionSet#session_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#session_duration AwsPermissionSet#session_duration}
   */
   readonly sessionDuration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#tags TfPermissionSet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#tags AwsPermissionSet#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#tags_all TfPermissionSet#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#tags_all AwsPermissionSet#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#timeouts TfPermissionSet#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#timeouts AwsPermissionSet#timeouts}
   */
-  readonly timeouts?: TfPermissionSet.TimeoutsProperty;
+  readonly timeouts?: AwsPermissionSet.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set aws_ssoadmin_permission_set}
 */
-export class TfPermissionSet extends cdktn.TerraformResource {
+export class AwsPermissionSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfPermissionSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPermissionSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPermissionSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPermissionSet to import
-  * @param importFromId The id of the existing TfPermissionSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPermissionSet to import is found
+  * @param importToId The construct id used in the generated config for the AwsPermissionSet to import
+  * @param importFromId The id of the existing AwsPermissionSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPermissionSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_permission_set", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfPermissionSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPermissionSetConfig
+  * @param options AwsPermissionSetConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPermissionSetConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPermissionSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssoadmin_permission_set',
       terraformGeneratorMetadata: {
@@ -271,11 +271,11 @@ export class TfPermissionSet extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfPermissionSet.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsPermissionSet.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfPermissionSet.TimeoutsProperty) {
+  public putTimeouts(value: AwsPermissionSet.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -301,7 +301,7 @@ export class TfPermissionSet extends cdktn.TerraformResource {
       session_duration: cdktn.stringToTerraform(this._sessionDuration),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfPermissionSetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsPermissionSetTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -362,10 +362,10 @@ export class TfPermissionSet extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfPermissionSetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsPermissionSetTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfPermissionSet.TimeoutsProperty",
+        storageClassType: "AwsPermissionSet.TimeoutsProperty",
       },
     };
 
@@ -374,7 +374,7 @@ export class TfPermissionSet extends cdktn.TerraformResource {
   }
 }
 
-export function tfPermissionSetTimeoutsPropertyToTerraform(struct?: TfPermissionSet.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPermissionSetTimeoutsPropertyToTerraform(struct?: AwsPermissionSet.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function tfPermissionSetTimeoutsPropertyToTerraform(struct?: TfPermission
 }
 
 
-export function tfPermissionSetTimeoutsPropertyToHclTerraform(struct?: TfPermissionSet.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPermissionSetTimeoutsPropertyToHclTerraform(struct?: AwsPermissionSet.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -404,10 +404,10 @@ export function tfPermissionSetTimeoutsPropertyToHclTerraform(struct?: TfPermiss
 }
 
 
-export namespace TfPermissionSet {
+export namespace AwsPermissionSet {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#update TfPermissionSet#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set#update AwsPermissionSet#update}
   */
   readonly update?: string;
 }

@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfVpcEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface AwsVpcEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#domain_arn TfVpcEndpoint#domain_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#domain_arn AwsVpcEndpoint#domain_arn}
   */
   readonly domainArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#id TfVpcEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#id AwsVpcEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,27 +20,27 @@ export interface TfVpcEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#region TfVpcEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#region AwsVpcEndpoint#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#timeouts TfVpcEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#timeouts AwsVpcEndpoint#timeouts}
   */
-  readonly timeouts?: TfVpcEndpoint.TimeoutsProperty;
+  readonly timeouts?: AwsVpcEndpoint.TimeoutsProperty;
   /**
   * vpc_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#vpc_options TfVpcEndpoint#vpc_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#vpc_options AwsVpcEndpoint#vpc_options}
   */
-  readonly vpcOptions: TfVpcEndpoint.VpcOptionsProperty;
+  readonly vpcOptions: AwsVpcEndpoint.VpcOptionsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint aws_opensearch_vpc_endpoint}
 */
-export class TfVpcEndpoint extends cdktn.TerraformResource {
+export class AwsVpcEndpoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfVpcEndpoint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfVpcEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsVpcEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfVpcEndpoint to import
-  * @param importFromId The id of the existing TfVpcEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfVpcEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the AwsVpcEndpoint to import
+  * @param importFromId The id of the existing AwsVpcEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVpcEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearch_vpc_endpoint", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfVpcEndpoint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfVpcEndpointConfig
+  * @param options AwsVpcEndpointConfig
   */
-  public constructor(scope: Construct, id: string, config: TfVpcEndpointConfig) {
+  public constructor(scope: Construct, id: string, config: AwsVpcEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearch_vpc_endpoint',
       terraformGeneratorMetadata: {
@@ -150,11 +150,11 @@ export class TfVpcEndpoint extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfVpcEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsVpcEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfVpcEndpoint.TimeoutsProperty) {
+  public putTimeouts(value: AwsVpcEndpoint.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -166,11 +166,11 @@ export class TfVpcEndpoint extends cdktn.TerraformResource {
   }
 
   // vpc_options - computed: false, optional: false, required: true
-  private _vpcOptions = new TfVpcEndpoint.VpcOptionsPropertyOutputReference(this, "vpc_options");
+  private _vpcOptions = new AwsVpcEndpoint.VpcOptionsPropertyOutputReference(this, "vpc_options");
   public get vpcOptions() {
     return this._vpcOptions;
   }
-  public putVpcOptions(value: TfVpcEndpoint.VpcOptionsProperty) {
+  public putVpcOptions(value: AwsVpcEndpoint.VpcOptionsProperty) {
     this._vpcOptions.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -187,8 +187,8 @@ export class TfVpcEndpoint extends cdktn.TerraformResource {
       domain_arn: cdktn.stringToTerraform(this._domainArn),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfVpcEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_options: tfVpcEndpointVpcOptionsPropertyToTerraform(this._vpcOptions.internalValue),
+      timeouts: awsVpcEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_options: awsVpcEndpointVpcOptionsPropertyToTerraform(this._vpcOptions.internalValue),
     };
   }
 
@@ -213,16 +213,16 @@ export class TfVpcEndpoint extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfVpcEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsVpcEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfVpcEndpoint.TimeoutsProperty",
+        storageClassType: "AwsVpcEndpoint.TimeoutsProperty",
       },
       vpc_options: {
-        value: tfVpcEndpointVpcOptionsPropertyToHclTerraform(this._vpcOptions.internalValue),
+        value: awsVpcEndpointVpcOptionsPropertyToHclTerraform(this._vpcOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfVpcEndpoint.VpcOptionsPropertyList",
+        storageClassType: "AwsVpcEndpoint.VpcOptionsPropertyList",
       },
     };
 
@@ -231,7 +231,7 @@ export class TfVpcEndpoint extends cdktn.TerraformResource {
   }
 }
 
-export function tfVpcEndpointTimeoutsPropertyToTerraform(struct?: TfVpcEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsVpcEndpointTimeoutsPropertyToTerraform(struct?: AwsVpcEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,7 +244,7 @@ export function tfVpcEndpointTimeoutsPropertyToTerraform(struct?: TfVpcEndpoint.
 }
 
 
-export function tfVpcEndpointTimeoutsPropertyToHclTerraform(struct?: TfVpcEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsVpcEndpointTimeoutsPropertyToHclTerraform(struct?: AwsVpcEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function tfVpcEndpointTimeoutsPropertyToHclTerraform(struct?: TfVpcEndpoi
 }
 
 
-export function tfVpcEndpointVpcOptionsPropertyToTerraform(struct?: TfVpcEndpoint.VpcOptionsPropertyOutputReference | TfVpcEndpoint.VpcOptionsProperty): any {
+export function awsVpcEndpointVpcOptionsPropertyToTerraform(struct?: AwsVpcEndpoint.VpcOptionsPropertyOutputReference | AwsVpcEndpoint.VpcOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,7 +287,7 @@ export function tfVpcEndpointVpcOptionsPropertyToTerraform(struct?: TfVpcEndpoin
 }
 
 
-export function tfVpcEndpointVpcOptionsPropertyToHclTerraform(struct?: TfVpcEndpoint.VpcOptionsPropertyOutputReference | TfVpcEndpoint.VpcOptionsProperty): any {
+export function awsVpcEndpointVpcOptionsPropertyToHclTerraform(struct?: AwsVpcEndpoint.VpcOptionsPropertyOutputReference | AwsVpcEndpoint.VpcOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,18 +312,18 @@ export function tfVpcEndpointVpcOptionsPropertyToHclTerraform(struct?: TfVpcEndp
 }
 
 
-export namespace TfVpcEndpoint {
+export namespace AwsVpcEndpoint {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#create TfVpcEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#create AwsVpcEndpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#delete TfVpcEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#delete AwsVpcEndpoint#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#update TfVpcEndpoint#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#update AwsVpcEndpoint#update}
   */
   readonly update?: string;
 }
@@ -431,11 +431,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#security_group_ids TfVpcEndpoint#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#security_group_ids AwsVpcEndpoint#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#subnet_ids TfVpcEndpoint#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearch_vpc_endpoint#subnet_ids AwsVpcEndpoint#subnet_ids}
   */
   readonly subnetIds: string[];
 }

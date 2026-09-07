@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConnectAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConnectAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#core_network_id TfConnectAttachment#core_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#core_network_id AwsConnectAttachment#core_network_id}
   */
   readonly coreNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#edge_location TfConnectAttachment#edge_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#edge_location AwsConnectAttachment#edge_location}
   */
   readonly edgeLocation: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#id TfConnectAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#id AwsConnectAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#routing_policy_label TfConnectAttachment#routing_policy_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#routing_policy_label AwsConnectAttachment#routing_policy_label}
   */
   readonly routingPolicyLabel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#tags TfConnectAttachment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#tags AwsConnectAttachment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#tags_all TfConnectAttachment#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#tags_all AwsConnectAttachment#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#transport_attachment_id TfConnectAttachment#transport_attachment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#transport_attachment_id AwsConnectAttachment#transport_attachment_id}
   */
   readonly transportAttachmentId: string;
   /**
   * options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#options TfConnectAttachment#options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#options AwsConnectAttachment#options}
   */
-  readonly options: TfConnectAttachment.OptionsProperty;
+  readonly options: AwsConnectAttachment.OptionsProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#timeouts TfConnectAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#timeouts AwsConnectAttachment#timeouts}
   */
-  readonly timeouts?: TfConnectAttachment.TimeoutsProperty;
+  readonly timeouts?: AwsConnectAttachment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment aws_networkmanager_connect_attachment}
 */
-export class TfConnectAttachment extends cdktn.TerraformResource {
+export class AwsConnectAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfConnectAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConnectAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConnectAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConnectAttachment to import
-  * @param importFromId The id of the existing TfConnectAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConnectAttachment to import is found
+  * @param importToId The construct id used in the generated config for the AwsConnectAttachment to import
+  * @param importFromId The id of the existing AwsConnectAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConnectAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_connect_attachment", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfConnectAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConnectAttachmentConfig
+  * @param options AwsConnectAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConnectAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConnectAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_connect_attachment',
       terraformGeneratorMetadata: {
@@ -266,11 +266,11 @@ export class TfConnectAttachment extends cdktn.TerraformResource {
   }
 
   // options - computed: false, optional: false, required: true
-  private _options = new TfConnectAttachment.OptionsPropertyOutputReference(this, "options");
+  private _options = new AwsConnectAttachment.OptionsPropertyOutputReference(this, "options");
   public get options() {
     return this._options;
   }
-  public putOptions(value: TfConnectAttachment.OptionsProperty) {
+  public putOptions(value: AwsConnectAttachment.OptionsProperty) {
     this._options.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -279,11 +279,11 @@ export class TfConnectAttachment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfConnectAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsConnectAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfConnectAttachment.TimeoutsProperty) {
+  public putTimeouts(value: AwsConnectAttachment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -307,8 +307,8 @@ export class TfConnectAttachment extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       transport_attachment_id: cdktn.stringToTerraform(this._transportAttachmentId),
-      options: tfConnectAttachmentOptionsPropertyToTerraform(this._options.internalValue),
-      timeouts: tfConnectAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      options: awsConnectAttachmentOptionsPropertyToTerraform(this._options.internalValue),
+      timeouts: awsConnectAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -357,16 +357,16 @@ export class TfConnectAttachment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       options: {
-        value: tfConnectAttachmentOptionsPropertyToHclTerraform(this._options.internalValue),
+        value: awsConnectAttachmentOptionsPropertyToHclTerraform(this._options.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfConnectAttachment.OptionsPropertyList",
+        storageClassType: "AwsConnectAttachment.OptionsPropertyList",
       },
       timeouts: {
-        value: tfConnectAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsConnectAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfConnectAttachment.TimeoutsProperty",
+        storageClassType: "AwsConnectAttachment.TimeoutsProperty",
       },
     };
 
@@ -375,7 +375,7 @@ export class TfConnectAttachment extends cdktn.TerraformResource {
   }
 }
 
-export function tfConnectAttachmentOptionsPropertyToTerraform(struct?: TfConnectAttachment.OptionsPropertyOutputReference | TfConnectAttachment.OptionsProperty): any {
+export function awsConnectAttachmentOptionsPropertyToTerraform(struct?: AwsConnectAttachment.OptionsPropertyOutputReference | AwsConnectAttachment.OptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,7 +386,7 @@ export function tfConnectAttachmentOptionsPropertyToTerraform(struct?: TfConnect
 }
 
 
-export function tfConnectAttachmentOptionsPropertyToHclTerraform(struct?: TfConnectAttachment.OptionsPropertyOutputReference | TfConnectAttachment.OptionsProperty): any {
+export function awsConnectAttachmentOptionsPropertyToHclTerraform(struct?: AwsConnectAttachment.OptionsPropertyOutputReference | AwsConnectAttachment.OptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -405,7 +405,7 @@ export function tfConnectAttachmentOptionsPropertyToHclTerraform(struct?: TfConn
 }
 
 
-export function tfConnectAttachmentTimeoutsPropertyToTerraform(struct?: TfConnectAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsConnectAttachmentTimeoutsPropertyToTerraform(struct?: AwsConnectAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,7 +417,7 @@ export function tfConnectAttachmentTimeoutsPropertyToTerraform(struct?: TfConnec
 }
 
 
-export function tfConnectAttachmentTimeoutsPropertyToHclTerraform(struct?: TfConnectAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsConnectAttachmentTimeoutsPropertyToHclTerraform(struct?: AwsConnectAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,10 +442,10 @@ export function tfConnectAttachmentTimeoutsPropertyToHclTerraform(struct?: TfCon
 }
 
 
-export namespace TfConnectAttachment {
+export namespace AwsConnectAttachment {
 export interface OptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#protocol TfConnectAttachment#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#protocol AwsConnectAttachment#protocol}
   */
   readonly protocol?: string;
 }
@@ -499,11 +499,11 @@ export class OptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#create TfConnectAttachment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#create AwsConnectAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#delete TfConnectAttachment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_connect_attachment#delete AwsConnectAttachment#delete}
   */
   readonly delete?: string;
 }

@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfManagedPolicyAttachmentsExclusiveConfig extends cdktn.TerraformMetaArguments {
+export interface AwsManagedPolicyAttachmentsExclusiveConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive#instance_arn TfManagedPolicyAttachmentsExclusive#instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive#instance_arn AwsManagedPolicyAttachmentsExclusive#instance_arn}
   */
   readonly instanceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive#managed_policy_arns TfManagedPolicyAttachmentsExclusive#managed_policy_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive#managed_policy_arns AwsManagedPolicyAttachmentsExclusive#managed_policy_arns}
   */
   readonly managedPolicyArns: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive#permission_set_arn TfManagedPolicyAttachmentsExclusive#permission_set_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive#permission_set_arn AwsManagedPolicyAttachmentsExclusive#permission_set_arn}
   */
   readonly permissionSetArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive#region TfManagedPolicyAttachmentsExclusive#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive#region AwsManagedPolicyAttachmentsExclusive#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive#timeouts TfManagedPolicyAttachmentsExclusive#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive#timeouts AwsManagedPolicyAttachmentsExclusive#timeouts}
   */
-  readonly timeouts?: TfManagedPolicyAttachmentsExclusive.TimeoutsProperty;
+  readonly timeouts?: AwsManagedPolicyAttachmentsExclusive.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive aws_ssoadmin_managed_policy_attachments_exclusive}
 */
-export class TfManagedPolicyAttachmentsExclusive extends cdktn.TerraformResource {
+export class AwsManagedPolicyAttachmentsExclusive extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class TfManagedPolicyAttachmentsExclusive extends cdktn.TerraformResource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfManagedPolicyAttachmentsExclusive resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsManagedPolicyAttachmentsExclusive resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfManagedPolicyAttachmentsExclusive to import
-  * @param importFromId The id of the existing TfManagedPolicyAttachmentsExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfManagedPolicyAttachmentsExclusive to import is found
+  * @param importToId The construct id used in the generated config for the AwsManagedPolicyAttachmentsExclusive to import
+  * @param importFromId The id of the existing AwsManagedPolicyAttachmentsExclusive that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsManagedPolicyAttachmentsExclusive to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_managed_policy_attachments_exclusive", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class TfManagedPolicyAttachmentsExclusive extends cdktn.TerraformResource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfManagedPolicyAttachmentsExclusiveConfig
+  * @param options AwsManagedPolicyAttachmentsExclusiveConfig
   */
-  public constructor(scope: Construct, id: string, config: TfManagedPolicyAttachmentsExclusiveConfig) {
+  public constructor(scope: Construct, id: string, config: AwsManagedPolicyAttachmentsExclusiveConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssoadmin_managed_policy_attachments_exclusive',
       terraformGeneratorMetadata: {
@@ -150,11 +150,11 @@ export class TfManagedPolicyAttachmentsExclusive extends cdktn.TerraformResource
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfManagedPolicyAttachmentsExclusive.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsManagedPolicyAttachmentsExclusive.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfManagedPolicyAttachmentsExclusive.TimeoutsProperty) {
+  public putTimeouts(value: AwsManagedPolicyAttachmentsExclusive.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -175,7 +175,7 @@ export class TfManagedPolicyAttachmentsExclusive extends cdktn.TerraformResource
       managed_policy_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(this._managedPolicyArns),
       permission_set_arn: cdktn.stringToTerraform(this._permissionSetArn),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfManagedPolicyAttachmentsExclusiveTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsManagedPolicyAttachmentsExclusiveTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -206,10 +206,10 @@ export class TfManagedPolicyAttachmentsExclusive extends cdktn.TerraformResource
         storageClassType: "string",
       },
       timeouts: {
-        value: tfManagedPolicyAttachmentsExclusiveTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsManagedPolicyAttachmentsExclusiveTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfManagedPolicyAttachmentsExclusive.TimeoutsProperty",
+        storageClassType: "AwsManagedPolicyAttachmentsExclusive.TimeoutsProperty",
       },
     };
 
@@ -218,7 +218,7 @@ export class TfManagedPolicyAttachmentsExclusive extends cdktn.TerraformResource
   }
 }
 
-export function tfManagedPolicyAttachmentsExclusiveTimeoutsPropertyToTerraform(struct?: TfManagedPolicyAttachmentsExclusive.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsManagedPolicyAttachmentsExclusiveTimeoutsPropertyToTerraform(struct?: AwsManagedPolicyAttachmentsExclusive.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -230,7 +230,7 @@ export function tfManagedPolicyAttachmentsExclusiveTimeoutsPropertyToTerraform(s
 }
 
 
-export function tfManagedPolicyAttachmentsExclusiveTimeoutsPropertyToHclTerraform(struct?: TfManagedPolicyAttachmentsExclusive.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsManagedPolicyAttachmentsExclusiveTimeoutsPropertyToHclTerraform(struct?: AwsManagedPolicyAttachmentsExclusive.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -255,18 +255,18 @@ export function tfManagedPolicyAttachmentsExclusiveTimeoutsPropertyToHclTerrafor
 }
 
 
-export namespace TfManagedPolicyAttachmentsExclusive {
+export namespace AwsManagedPolicyAttachmentsExclusive {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive#create TfManagedPolicyAttachmentsExclusive#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive#create AwsManagedPolicyAttachmentsExclusive#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive#update TfManagedPolicyAttachmentsExclusive#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_managed_policy_attachments_exclusive#update AwsManagedPolicyAttachmentsExclusive#update}
   */
   readonly update?: string;
 }

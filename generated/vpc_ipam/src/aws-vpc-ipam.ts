@@ -5,66 +5,66 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfVpcIpamConfig extends cdktn.TerraformMetaArguments {
+export interface AwsVpcIpamConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#cascade TfVpcIpam#cascade}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#cascade AwsVpcIpam#cascade}
   */
   readonly cascade?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#description TfVpcIpam#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#description AwsVpcIpam#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#enable_private_gua TfVpcIpam#enable_private_gua}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#enable_private_gua AwsVpcIpam#enable_private_gua}
   */
   readonly enablePrivateGua?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#id TfVpcIpam#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#id AwsVpcIpam#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#metered_account TfVpcIpam#metered_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#metered_account AwsVpcIpam#metered_account}
   */
   readonly meteredAccount?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#region TfVpcIpam#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#region AwsVpcIpam#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#tags TfVpcIpam#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#tags AwsVpcIpam#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#tags_all TfVpcIpam#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#tags_all AwsVpcIpam#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#tier TfVpcIpam#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#tier AwsVpcIpam#tier}
   */
   readonly tier?: string;
   /**
   * operating_regions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#operating_regions TfVpcIpam#operating_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#operating_regions AwsVpcIpam#operating_regions}
   */
-  readonly operatingRegions: TfVpcIpam.OperatingRegionsProperty[] | cdktn.IResolvable;
+  readonly operatingRegions: AwsVpcIpam.OperatingRegionsProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#timeouts TfVpcIpam#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#timeouts AwsVpcIpam#timeouts}
   */
-  readonly timeouts?: TfVpcIpam.TimeoutsProperty;
+  readonly timeouts?: AwsVpcIpam.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam aws_vpc_ipam}
 */
-export class TfVpcIpam extends cdktn.TerraformResource {
+export class AwsVpcIpam extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class TfVpcIpam extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfVpcIpam resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsVpcIpam resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfVpcIpam to import
-  * @param importFromId The id of the existing TfVpcIpam that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfVpcIpam to import is found
+  * @param importToId The construct id used in the generated config for the AwsVpcIpam to import
+  * @param importFromId The id of the existing AwsVpcIpam that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVpcIpam to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_ipam", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class TfVpcIpam extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfVpcIpamConfig
+  * @param options AwsVpcIpamConfig
   */
-  public constructor(scope: Construct, id: string, config: TfVpcIpamConfig) {
+  public constructor(scope: Construct, id: string, config: AwsVpcIpamConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_ipam',
       terraformGeneratorMetadata: {
@@ -304,11 +304,11 @@ export class TfVpcIpam extends cdktn.TerraformResource {
   }
 
   // operating_regions - computed: false, optional: false, required: true
-  private _operatingRegions = new TfVpcIpam.OperatingRegionsPropertyList(this, "operating_regions", true);
+  private _operatingRegions = new AwsVpcIpam.OperatingRegionsPropertyList(this, "operating_regions", true);
   public get operatingRegions() {
     return this._operatingRegions;
   }
-  public putOperatingRegions(value: TfVpcIpam.OperatingRegionsProperty[] | cdktn.IResolvable) {
+  public putOperatingRegions(value: AwsVpcIpam.OperatingRegionsProperty[] | cdktn.IResolvable) {
     this._operatingRegions.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -317,11 +317,11 @@ export class TfVpcIpam extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfVpcIpam.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsVpcIpam.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfVpcIpam.TimeoutsProperty) {
+  public putTimeouts(value: AwsVpcIpam.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -347,8 +347,8 @@ export class TfVpcIpam extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       tier: cdktn.stringToTerraform(this._tier),
-      operating_regions: cdktn.listMapper(tfVpcIpamOperatingRegionsPropertyToTerraform, true)(this._operatingRegions.internalValue),
-      timeouts: tfVpcIpamTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      operating_regions: cdktn.listMapper(awsVpcIpamOperatingRegionsPropertyToTerraform, true)(this._operatingRegions.internalValue),
+      timeouts: awsVpcIpamTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -409,16 +409,16 @@ export class TfVpcIpam extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       operating_regions: {
-        value: cdktn.listMapperHcl(tfVpcIpamOperatingRegionsPropertyToHclTerraform, true)(this._operatingRegions.internalValue),
+        value: cdktn.listMapperHcl(awsVpcIpamOperatingRegionsPropertyToHclTerraform, true)(this._operatingRegions.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfVpcIpam.OperatingRegionsPropertyList",
+        storageClassType: "AwsVpcIpam.OperatingRegionsPropertyList",
       },
       timeouts: {
-        value: tfVpcIpamTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsVpcIpamTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfVpcIpam.TimeoutsProperty",
+        storageClassType: "AwsVpcIpam.TimeoutsProperty",
       },
     };
 
@@ -427,7 +427,7 @@ export class TfVpcIpam extends cdktn.TerraformResource {
   }
 }
 
-export function tfVpcIpamOperatingRegionsPropertyToTerraform(struct?: TfVpcIpam.OperatingRegionsProperty | cdktn.IResolvable): any {
+export function awsVpcIpamOperatingRegionsPropertyToTerraform(struct?: AwsVpcIpam.OperatingRegionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -438,7 +438,7 @@ export function tfVpcIpamOperatingRegionsPropertyToTerraform(struct?: TfVpcIpam.
 }
 
 
-export function tfVpcIpamOperatingRegionsPropertyToHclTerraform(struct?: TfVpcIpam.OperatingRegionsProperty | cdktn.IResolvable): any {
+export function awsVpcIpamOperatingRegionsPropertyToHclTerraform(struct?: AwsVpcIpam.OperatingRegionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -457,7 +457,7 @@ export function tfVpcIpamOperatingRegionsPropertyToHclTerraform(struct?: TfVpcIp
 }
 
 
-export function tfVpcIpamTimeoutsPropertyToTerraform(struct?: TfVpcIpam.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsVpcIpamTimeoutsPropertyToTerraform(struct?: AwsVpcIpam.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -470,7 +470,7 @@ export function tfVpcIpamTimeoutsPropertyToTerraform(struct?: TfVpcIpam.Timeouts
 }
 
 
-export function tfVpcIpamTimeoutsPropertyToHclTerraform(struct?: TfVpcIpam.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsVpcIpamTimeoutsPropertyToHclTerraform(struct?: AwsVpcIpam.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -501,10 +501,10 @@ export function tfVpcIpamTimeoutsPropertyToHclTerraform(struct?: TfVpcIpam.Timeo
 }
 
 
-export namespace TfVpcIpam {
+export namespace AwsVpcIpam {
 export interface OperatingRegionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#region_name TfVpcIpam#region_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#region_name AwsVpcIpam#region_name}
   */
   readonly regionName: string;
 }
@@ -587,15 +587,15 @@ export class OperatingRegionsPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#create TfVpcIpam#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#create AwsVpcIpam#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#delete TfVpcIpam#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#delete AwsVpcIpam#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#update TfVpcIpam#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam#update AwsVpcIpam#update}
   */
   readonly update?: string;
 }

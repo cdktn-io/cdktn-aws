@@ -5,58 +5,58 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDomainConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDomainConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#id TfDomain#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#id AwsDomain#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#multi_az TfDomain#multi_az}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#multi_az AwsDomain#multi_az}
   */
   readonly multiAz?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#name TfDomain#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#name AwsDomain#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#region TfDomain#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#region AwsDomain#region}
   */
   readonly region?: string;
   /**
   * endpoint_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#endpoint_options TfDomain#endpoint_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#endpoint_options AwsDomain#endpoint_options}
   */
-  readonly endpointOptions?: TfDomain.EndpointOptionsProperty;
+  readonly endpointOptions?: AwsDomain.EndpointOptionsProperty;
   /**
   * index_field block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#index_field TfDomain#index_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#index_field AwsDomain#index_field}
   */
-  readonly indexField?: TfDomain.IndexFieldProperty[] | cdktn.IResolvable;
+  readonly indexField?: AwsDomain.IndexFieldProperty[] | cdktn.IResolvable;
   /**
   * scaling_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#scaling_parameters TfDomain#scaling_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#scaling_parameters AwsDomain#scaling_parameters}
   */
-  readonly scalingParameters?: TfDomain.ScalingParametersProperty;
+  readonly scalingParameters?: AwsDomain.ScalingParametersProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#timeouts TfDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#timeouts AwsDomain#timeouts}
   */
-  readonly timeouts?: TfDomain.TimeoutsProperty;
+  readonly timeouts?: AwsDomain.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain aws_cloudsearch_domain}
 */
-export class TfDomain extends cdktn.TerraformResource {
+export class AwsDomain extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class TfDomain extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDomain resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDomain resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDomain to import
-  * @param importFromId The id of the existing TfDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDomain to import is found
+  * @param importToId The construct id used in the generated config for the AwsDomain to import
+  * @param importFromId The id of the existing AwsDomain that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDomain to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudsearch_domain", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class TfDomain extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDomainConfig
+  * @param options AwsDomainConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDomainConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDomainConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudsearch_domain',
       terraformGeneratorMetadata: {
@@ -200,11 +200,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // endpoint_options - computed: false, optional: true, required: false
-  private _endpointOptions = new TfDomain.EndpointOptionsPropertyOutputReference(this, "endpoint_options");
+  private _endpointOptions = new AwsDomain.EndpointOptionsPropertyOutputReference(this, "endpoint_options");
   public get endpointOptions() {
     return this._endpointOptions;
   }
-  public putEndpointOptions(value: TfDomain.EndpointOptionsProperty) {
+  public putEndpointOptions(value: AwsDomain.EndpointOptionsProperty) {
     this._endpointOptions.internalValue = value;
   }
   public resetEndpointOptions() {
@@ -216,11 +216,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // index_field - computed: false, optional: true, required: false
-  private _indexField = new TfDomain.IndexFieldPropertyList(this, "index_field", true);
+  private _indexField = new AwsDomain.IndexFieldPropertyList(this, "index_field", true);
   public get indexField() {
     return this._indexField;
   }
-  public putIndexField(value: TfDomain.IndexFieldProperty[] | cdktn.IResolvable) {
+  public putIndexField(value: AwsDomain.IndexFieldProperty[] | cdktn.IResolvable) {
     this._indexField.internalValue = value;
   }
   public resetIndexField() {
@@ -232,11 +232,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // scaling_parameters - computed: false, optional: true, required: false
-  private _scalingParameters = new TfDomain.ScalingParametersPropertyOutputReference(this, "scaling_parameters");
+  private _scalingParameters = new AwsDomain.ScalingParametersPropertyOutputReference(this, "scaling_parameters");
   public get scalingParameters() {
     return this._scalingParameters;
   }
-  public putScalingParameters(value: TfDomain.ScalingParametersProperty) {
+  public putScalingParameters(value: AwsDomain.ScalingParametersProperty) {
     this._scalingParameters.internalValue = value;
   }
   public resetScalingParameters() {
@@ -248,11 +248,11 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDomain.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsDomain.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDomain.TimeoutsProperty) {
+  public putTimeouts(value: AwsDomain.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -273,10 +273,10 @@ export class TfDomain extends cdktn.TerraformResource {
       multi_az: cdktn.booleanToTerraform(this._multiAz),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      endpoint_options: tfDomainEndpointOptionsPropertyToTerraform(this._endpointOptions.internalValue),
-      index_field: cdktn.listMapper(tfDomainIndexFieldPropertyToTerraform, true)(this._indexField.internalValue),
-      scaling_parameters: tfDomainScalingParametersPropertyToTerraform(this._scalingParameters.internalValue),
-      timeouts: tfDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      endpoint_options: awsDomainEndpointOptionsPropertyToTerraform(this._endpointOptions.internalValue),
+      index_field: cdktn.listMapper(awsDomainIndexFieldPropertyToTerraform, true)(this._indexField.internalValue),
+      scaling_parameters: awsDomainScalingParametersPropertyToTerraform(this._scalingParameters.internalValue),
+      timeouts: awsDomainTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -307,28 +307,28 @@ export class TfDomain extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       endpoint_options: {
-        value: tfDomainEndpointOptionsPropertyToHclTerraform(this._endpointOptions.internalValue),
+        value: awsDomainEndpointOptionsPropertyToHclTerraform(this._endpointOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.EndpointOptionsPropertyList",
+        storageClassType: "AwsDomain.EndpointOptionsPropertyList",
       },
       index_field: {
-        value: cdktn.listMapperHcl(tfDomainIndexFieldPropertyToHclTerraform, true)(this._indexField.internalValue),
+        value: cdktn.listMapperHcl(awsDomainIndexFieldPropertyToHclTerraform, true)(this._indexField.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDomain.IndexFieldPropertyList",
+        storageClassType: "AwsDomain.IndexFieldPropertyList",
       },
       scaling_parameters: {
-        value: tfDomainScalingParametersPropertyToHclTerraform(this._scalingParameters.internalValue),
+        value: awsDomainScalingParametersPropertyToHclTerraform(this._scalingParameters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDomain.ScalingParametersPropertyList",
+        storageClassType: "AwsDomain.ScalingParametersPropertyList",
       },
       timeouts: {
-        value: tfDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsDomainTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDomain.TimeoutsProperty",
+        storageClassType: "AwsDomain.TimeoutsProperty",
       },
     };
 
@@ -337,7 +337,7 @@ export class TfDomain extends cdktn.TerraformResource {
   }
 }
 
-export function tfDomainEndpointOptionsPropertyToTerraform(struct?: TfDomain.EndpointOptionsPropertyOutputReference | TfDomain.EndpointOptionsProperty): any {
+export function awsDomainEndpointOptionsPropertyToTerraform(struct?: AwsDomain.EndpointOptionsPropertyOutputReference | AwsDomain.EndpointOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function tfDomainEndpointOptionsPropertyToTerraform(struct?: TfDomain.End
 }
 
 
-export function tfDomainEndpointOptionsPropertyToHclTerraform(struct?: TfDomain.EndpointOptionsPropertyOutputReference | TfDomain.EndpointOptionsProperty): any {
+export function awsDomainEndpointOptionsPropertyToHclTerraform(struct?: AwsDomain.EndpointOptionsPropertyOutputReference | AwsDomain.EndpointOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,7 +374,7 @@ export function tfDomainEndpointOptionsPropertyToHclTerraform(struct?: TfDomain.
 }
 
 
-export function tfDomainIndexFieldPropertyToTerraform(struct?: TfDomain.IndexFieldProperty | cdktn.IResolvable): any {
+export function awsDomainIndexFieldPropertyToTerraform(struct?: AwsDomain.IndexFieldProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -394,7 +394,7 @@ export function tfDomainIndexFieldPropertyToTerraform(struct?: TfDomain.IndexFie
 }
 
 
-export function tfDomainIndexFieldPropertyToHclTerraform(struct?: TfDomain.IndexFieldProperty | cdktn.IResolvable): any {
+export function awsDomainIndexFieldPropertyToHclTerraform(struct?: AwsDomain.IndexFieldProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -467,7 +467,7 @@ export function tfDomainIndexFieldPropertyToHclTerraform(struct?: TfDomain.Index
 }
 
 
-export function tfDomainScalingParametersPropertyToTerraform(struct?: TfDomain.ScalingParametersPropertyOutputReference | TfDomain.ScalingParametersProperty): any {
+export function awsDomainScalingParametersPropertyToTerraform(struct?: AwsDomain.ScalingParametersPropertyOutputReference | AwsDomain.ScalingParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -480,7 +480,7 @@ export function tfDomainScalingParametersPropertyToTerraform(struct?: TfDomain.S
 }
 
 
-export function tfDomainScalingParametersPropertyToHclTerraform(struct?: TfDomain.ScalingParametersPropertyOutputReference | TfDomain.ScalingParametersProperty): any {
+export function awsDomainScalingParametersPropertyToHclTerraform(struct?: AwsDomain.ScalingParametersPropertyOutputReference | AwsDomain.ScalingParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -511,7 +511,7 @@ export function tfDomainScalingParametersPropertyToHclTerraform(struct?: TfDomai
 }
 
 
-export function tfDomainTimeoutsPropertyToTerraform(struct?: TfDomain.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDomainTimeoutsPropertyToTerraform(struct?: AwsDomain.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -524,7 +524,7 @@ export function tfDomainTimeoutsPropertyToTerraform(struct?: TfDomain.TimeoutsPr
 }
 
 
-export function tfDomainTimeoutsPropertyToHclTerraform(struct?: TfDomain.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDomainTimeoutsPropertyToHclTerraform(struct?: AwsDomain.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -555,14 +555,14 @@ export function tfDomainTimeoutsPropertyToHclTerraform(struct?: TfDomain.Timeout
 }
 
 
-export namespace TfDomain {
+export namespace AwsDomain {
 export interface EndpointOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#enforce_https TfDomain#enforce_https}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#enforce_https AwsDomain#enforce_https}
   */
   readonly enforceHttps?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#tls_security_policy TfDomain#tls_security_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#tls_security_policy AwsDomain#tls_security_policy}
   */
   readonly tlsSecurityPolicy?: string;
 }
@@ -638,43 +638,43 @@ export class EndpointOptionsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface IndexFieldProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#analysis_scheme TfDomain#analysis_scheme}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#analysis_scheme AwsDomain#analysis_scheme}
   */
   readonly analysisScheme?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#default_value TfDomain#default_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#default_value AwsDomain#default_value}
   */
   readonly defaultValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#facet TfDomain#facet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#facet AwsDomain#facet}
   */
   readonly facet?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#highlight TfDomain#highlight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#highlight AwsDomain#highlight}
   */
   readonly highlight?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#name TfDomain#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#name AwsDomain#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#return TfDomain#return}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#return AwsDomain#return}
   */
   readonly return?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#search TfDomain#search}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#search AwsDomain#search}
   */
   readonly search?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#sort TfDomain#sort}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#sort AwsDomain#sort}
   */
   readonly sort?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#source_fields TfDomain#source_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#source_fields AwsDomain#source_fields}
   */
   readonly sourceFields?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#type TfDomain#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#type AwsDomain#type}
   */
   readonly type: string;
 }
@@ -952,15 +952,15 @@ export class IndexFieldPropertyList extends cdktn.ComplexList {
 }
 export interface ScalingParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#desired_instance_type TfDomain#desired_instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#desired_instance_type AwsDomain#desired_instance_type}
   */
   readonly desiredInstanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#desired_partition_count TfDomain#desired_partition_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#desired_partition_count AwsDomain#desired_partition_count}
   */
   readonly desiredPartitionCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#desired_replication_count TfDomain#desired_replication_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#desired_replication_count AwsDomain#desired_replication_count}
   */
   readonly desiredReplicationCount?: number;
 }
@@ -1058,15 +1058,15 @@ export class ScalingParametersPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#create TfDomain#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#create AwsDomain#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#delete TfDomain#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#delete AwsDomain#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#update TfDomain#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudsearch_domain#update AwsDomain#update}
   */
   readonly update?: string;
 }

@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSharedDirectoryConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSharedDirectoryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#directory_id TfSharedDirectory#directory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#directory_id AwsSharedDirectory#directory_id}
   */
   readonly directoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#id TfSharedDirectory#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#id AwsSharedDirectory#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#method TfSharedDirectory#method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#method AwsSharedDirectory#method}
   */
   readonly method?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#notes TfSharedDirectory#notes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#notes AwsSharedDirectory#notes}
   */
   readonly notes?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#region TfSharedDirectory#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#region AwsSharedDirectory#region}
   */
   readonly region?: string;
   /**
   * target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#target TfSharedDirectory#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#target AwsSharedDirectory#target}
   */
-  readonly target: TfSharedDirectory.TargetProperty;
+  readonly target: AwsSharedDirectory.TargetProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#timeouts TfSharedDirectory#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#timeouts AwsSharedDirectory#timeouts}
   */
-  readonly timeouts?: TfSharedDirectory.TimeoutsProperty;
+  readonly timeouts?: AwsSharedDirectory.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory aws_directory_service_shared_directory}
 */
-export class TfSharedDirectory extends cdktn.TerraformResource {
+export class AwsSharedDirectory extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfSharedDirectory extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSharedDirectory resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSharedDirectory resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSharedDirectory to import
-  * @param importFromId The id of the existing TfSharedDirectory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSharedDirectory to import is found
+  * @param importToId The construct id used in the generated config for the AwsSharedDirectory to import
+  * @param importFromId The id of the existing AwsSharedDirectory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSharedDirectory to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_directory_service_shared_directory", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfSharedDirectory extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSharedDirectoryConfig
+  * @param options AwsSharedDirectoryConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSharedDirectoryConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSharedDirectoryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_directory_service_shared_directory',
       terraformGeneratorMetadata: {
@@ -192,11 +192,11 @@ export class TfSharedDirectory extends cdktn.TerraformResource {
   }
 
   // target - computed: false, optional: false, required: true
-  private _target = new TfSharedDirectory.TargetPropertyOutputReference(this, "target");
+  private _target = new AwsSharedDirectory.TargetPropertyOutputReference(this, "target");
   public get target() {
     return this._target;
   }
-  public putTarget(value: TfSharedDirectory.TargetProperty) {
+  public putTarget(value: AwsSharedDirectory.TargetProperty) {
     this._target.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -205,11 +205,11 @@ export class TfSharedDirectory extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfSharedDirectory.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsSharedDirectory.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfSharedDirectory.TimeoutsProperty) {
+  public putTimeouts(value: AwsSharedDirectory.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -231,8 +231,8 @@ export class TfSharedDirectory extends cdktn.TerraformResource {
       method: cdktn.stringToTerraform(this._method),
       notes: cdktn.stringToTerraform(this._notes),
       region: cdktn.stringToTerraform(this._region),
-      target: tfSharedDirectoryTargetPropertyToTerraform(this._target.internalValue),
-      timeouts: tfSharedDirectoryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      target: awsSharedDirectoryTargetPropertyToTerraform(this._target.internalValue),
+      timeouts: awsSharedDirectoryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -269,16 +269,16 @@ export class TfSharedDirectory extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       target: {
-        value: tfSharedDirectoryTargetPropertyToHclTerraform(this._target.internalValue),
+        value: awsSharedDirectoryTargetPropertyToHclTerraform(this._target.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSharedDirectory.TargetPropertyList",
+        storageClassType: "AwsSharedDirectory.TargetPropertyList",
       },
       timeouts: {
-        value: tfSharedDirectoryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsSharedDirectoryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfSharedDirectory.TimeoutsProperty",
+        storageClassType: "AwsSharedDirectory.TimeoutsProperty",
       },
     };
 
@@ -287,7 +287,7 @@ export class TfSharedDirectory extends cdktn.TerraformResource {
   }
 }
 
-export function tfSharedDirectoryTargetPropertyToTerraform(struct?: TfSharedDirectory.TargetPropertyOutputReference | TfSharedDirectory.TargetProperty): any {
+export function awsSharedDirectoryTargetPropertyToTerraform(struct?: AwsSharedDirectory.TargetPropertyOutputReference | AwsSharedDirectory.TargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -299,7 +299,7 @@ export function tfSharedDirectoryTargetPropertyToTerraform(struct?: TfSharedDire
 }
 
 
-export function tfSharedDirectoryTargetPropertyToHclTerraform(struct?: TfSharedDirectory.TargetPropertyOutputReference | TfSharedDirectory.TargetProperty): any {
+export function awsSharedDirectoryTargetPropertyToHclTerraform(struct?: AwsSharedDirectory.TargetPropertyOutputReference | AwsSharedDirectory.TargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,7 +324,7 @@ export function tfSharedDirectoryTargetPropertyToHclTerraform(struct?: TfSharedD
 }
 
 
-export function tfSharedDirectoryTimeoutsPropertyToTerraform(struct?: TfSharedDirectory.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSharedDirectoryTimeoutsPropertyToTerraform(struct?: AwsSharedDirectory.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -335,7 +335,7 @@ export function tfSharedDirectoryTimeoutsPropertyToTerraform(struct?: TfSharedDi
 }
 
 
-export function tfSharedDirectoryTimeoutsPropertyToHclTerraform(struct?: TfSharedDirectory.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSharedDirectoryTimeoutsPropertyToHclTerraform(struct?: AwsSharedDirectory.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,17 +354,17 @@ export function tfSharedDirectoryTimeoutsPropertyToHclTerraform(struct?: TfShare
 }
 
 
-export namespace TfSharedDirectory {
+export namespace AwsSharedDirectory {
 export interface TargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#id TfSharedDirectory#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#id AwsSharedDirectory#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#type TfSharedDirectory#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#type AwsSharedDirectory#type}
   */
   readonly type?: string;
 }
@@ -437,7 +437,7 @@ export class TargetPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#delete TfSharedDirectory#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_shared_directory#delete AwsSharedDirectory#delete}
   */
   readonly delete?: string;
 }

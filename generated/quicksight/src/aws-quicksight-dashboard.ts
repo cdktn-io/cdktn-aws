@@ -5,90 +5,90 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDashboardConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDashboardConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#aws_account_id TfDashboard#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#aws_account_id AwsDashboard#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#dashboard_id TfDashboard#dashboard_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#dashboard_id AwsDashboard#dashboard_id}
   */
   readonly dashboardId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#id TfDashboard#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#id AwsDashboard#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#name TfDashboard#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#name AwsDashboard#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#region TfDashboard#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#region AwsDashboard#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#tags TfDashboard#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#tags AwsDashboard#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#tags_all TfDashboard#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#tags_all AwsDashboard#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#theme_arn TfDashboard#theme_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#theme_arn AwsDashboard#theme_arn}
   */
   readonly themeArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#version_description TfDashboard#version_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#version_description AwsDashboard#version_description}
   */
   readonly versionDescription: string;
   /**
   * dashboard_publish_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#dashboard_publish_options TfDashboard#dashboard_publish_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#dashboard_publish_options AwsDashboard#dashboard_publish_options}
   */
-  readonly dashboardPublishOptions?: TfDashboard.DashboardPublishOptionsProperty;
+  readonly dashboardPublishOptions?: AwsDashboard.DashboardPublishOptionsProperty;
   /**
   * definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#definition TfDashboard#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#definition AwsDashboard#definition}
   */
   readonly definition?: any;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#parameters TfDashboard#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#parameters AwsDashboard#parameters}
   */
-  readonly parameters?: TfDashboard.ParametersProperty;
+  readonly parameters?: AwsDashboard.ParametersProperty;
   /**
   * permissions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#permissions TfDashboard#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#permissions AwsDashboard#permissions}
   */
-  readonly permissions?: TfDashboard.PermissionsProperty[] | cdktn.IResolvable;
+  readonly permissions?: AwsDashboard.PermissionsProperty[] | cdktn.IResolvable;
   /**
   * source_entity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#source_entity TfDashboard#source_entity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#source_entity AwsDashboard#source_entity}
   */
-  readonly sourceEntity?: TfDashboard.SourceEntityProperty;
+  readonly sourceEntity?: AwsDashboard.SourceEntityProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#timeouts TfDashboard#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#timeouts AwsDashboard#timeouts}
   */
-  readonly timeouts?: TfDashboard.TimeoutsProperty;
+  readonly timeouts?: AwsDashboard.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard aws_quicksight_dashboard}
 */
-export class TfDashboard extends cdktn.TerraformResource {
+export class AwsDashboard extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -99,11 +99,11 @@ export class TfDashboard extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDashboard resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDashboard resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDashboard to import
-  * @param importFromId The id of the existing TfDashboard that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDashboard to import is found
+  * @param importToId The construct id used in the generated config for the AwsDashboard to import
+  * @param importFromId The id of the existing AwsDashboard that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDashboard to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_dashboard", importId: importFromId, provider });
@@ -118,9 +118,9 @@ export class TfDashboard extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDashboardConfig
+  * @param options AwsDashboardConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDashboardConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDashboardConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_dashboard',
       terraformGeneratorMetadata: {
@@ -328,11 +328,11 @@ export class TfDashboard extends cdktn.TerraformResource {
   }
 
   // dashboard_publish_options - computed: false, optional: true, required: false
-  private _dashboardPublishOptions = new TfDashboard.DashboardPublishOptionsPropertyOutputReference(this, "dashboard_publish_options");
+  private _dashboardPublishOptions = new AwsDashboard.DashboardPublishOptionsPropertyOutputReference(this, "dashboard_publish_options");
   public get dashboardPublishOptions() {
     return this._dashboardPublishOptions;
   }
-  public putDashboardPublishOptions(value: TfDashboard.DashboardPublishOptionsProperty) {
+  public putDashboardPublishOptions(value: AwsDashboard.DashboardPublishOptionsProperty) {
     this._dashboardPublishOptions.internalValue = value;
   }
   public resetDashboardPublishOptions() {
@@ -360,11 +360,11 @@ export class TfDashboard extends cdktn.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters = new TfDashboard.ParametersPropertyOutputReference(this, "parameters");
+  private _parameters = new AwsDashboard.ParametersPropertyOutputReference(this, "parameters");
   public get parameters() {
     return this._parameters;
   }
-  public putParameters(value: TfDashboard.ParametersProperty) {
+  public putParameters(value: AwsDashboard.ParametersProperty) {
     this._parameters.internalValue = value;
   }
   public resetParameters() {
@@ -376,11 +376,11 @@ export class TfDashboard extends cdktn.TerraformResource {
   }
 
   // permissions - computed: false, optional: true, required: false
-  private _permissions = new TfDashboard.PermissionsPropertyList(this, "permissions", true);
+  private _permissions = new AwsDashboard.PermissionsPropertyList(this, "permissions", true);
   public get permissions() {
     return this._permissions;
   }
-  public putPermissions(value: TfDashboard.PermissionsProperty[] | cdktn.IResolvable) {
+  public putPermissions(value: AwsDashboard.PermissionsProperty[] | cdktn.IResolvable) {
     this._permissions.internalValue = value;
   }
   public resetPermissions() {
@@ -392,11 +392,11 @@ export class TfDashboard extends cdktn.TerraformResource {
   }
 
   // source_entity - computed: false, optional: true, required: false
-  private _sourceEntity = new TfDashboard.SourceEntityPropertyOutputReference(this, "source_entity");
+  private _sourceEntity = new AwsDashboard.SourceEntityPropertyOutputReference(this, "source_entity");
   public get sourceEntity() {
     return this._sourceEntity;
   }
-  public putSourceEntity(value: TfDashboard.SourceEntityProperty) {
+  public putSourceEntity(value: AwsDashboard.SourceEntityProperty) {
     this._sourceEntity.internalValue = value;
   }
   public resetSourceEntity() {
@@ -408,11 +408,11 @@ export class TfDashboard extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDashboard.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsDashboard.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDashboard.TimeoutsProperty) {
+  public putTimeouts(value: AwsDashboard.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -438,12 +438,12 @@ export class TfDashboard extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       theme_arn: cdktn.stringToTerraform(this._themeArn),
       version_description: cdktn.stringToTerraform(this._versionDescription),
-      dashboard_publish_options: tfDashboardDashboardPublishOptionsPropertyToTerraform(this._dashboardPublishOptions.internalValue),
+      dashboard_publish_options: awsDashboardDashboardPublishOptionsPropertyToTerraform(this._dashboardPublishOptions.internalValue),
       definition: cdktn.anyToTerraform(this._definition),
-      parameters: tfDashboardParametersPropertyToTerraform(this._parameters.internalValue),
-      permissions: cdktn.listMapper(tfDashboardPermissionsPropertyToTerraform, true)(this._permissions.internalValue),
-      source_entity: tfDashboardSourceEntityPropertyToTerraform(this._sourceEntity.internalValue),
-      timeouts: tfDashboardTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      parameters: awsDashboardParametersPropertyToTerraform(this._parameters.internalValue),
+      permissions: cdktn.listMapper(awsDashboardPermissionsPropertyToTerraform, true)(this._permissions.internalValue),
+      source_entity: awsDashboardSourceEntityPropertyToTerraform(this._sourceEntity.internalValue),
+      timeouts: awsDashboardTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -504,10 +504,10 @@ export class TfDashboard extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       dashboard_publish_options: {
-        value: tfDashboardDashboardPublishOptionsPropertyToHclTerraform(this._dashboardPublishOptions.internalValue),
+        value: awsDashboardDashboardPublishOptionsPropertyToHclTerraform(this._dashboardPublishOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDashboard.DashboardPublishOptionsPropertyList",
+        storageClassType: "AwsDashboard.DashboardPublishOptionsPropertyList",
       },
       definition: {
         value: cdktn.anyToHclTerraform(this._definition),
@@ -516,28 +516,28 @@ export class TfDashboard extends cdktn.TerraformResource {
         storageClassType: "any",
       },
       parameters: {
-        value: tfDashboardParametersPropertyToHclTerraform(this._parameters.internalValue),
+        value: awsDashboardParametersPropertyToHclTerraform(this._parameters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDashboard.ParametersPropertyList",
+        storageClassType: "AwsDashboard.ParametersPropertyList",
       },
       permissions: {
-        value: cdktn.listMapperHcl(tfDashboardPermissionsPropertyToHclTerraform, true)(this._permissions.internalValue),
+        value: cdktn.listMapperHcl(awsDashboardPermissionsPropertyToHclTerraform, true)(this._permissions.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDashboard.PermissionsPropertyList",
+        storageClassType: "AwsDashboard.PermissionsPropertyList",
       },
       source_entity: {
-        value: tfDashboardSourceEntityPropertyToHclTerraform(this._sourceEntity.internalValue),
+        value: awsDashboardSourceEntityPropertyToHclTerraform(this._sourceEntity.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDashboard.SourceEntityPropertyList",
+        storageClassType: "AwsDashboard.SourceEntityPropertyList",
       },
       timeouts: {
-        value: tfDashboardTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsDashboardTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDashboard.TimeoutsProperty",
+        storageClassType: "AwsDashboard.TimeoutsProperty",
       },
     };
 
@@ -546,7 +546,7 @@ export class TfDashboard extends cdktn.TerraformResource {
   }
 }
 
-export function tfDashboardAdHocFilteringOptionPropertyToTerraform(struct?: TfDashboard.AdHocFilteringOptionPropertyOutputReference | TfDashboard.AdHocFilteringOptionProperty): any {
+export function awsDashboardAdHocFilteringOptionPropertyToTerraform(struct?: AwsDashboard.AdHocFilteringOptionPropertyOutputReference | AwsDashboard.AdHocFilteringOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -557,7 +557,7 @@ export function tfDashboardAdHocFilteringOptionPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDashboardAdHocFilteringOptionPropertyToHclTerraform(struct?: TfDashboard.AdHocFilteringOptionPropertyOutputReference | TfDashboard.AdHocFilteringOptionProperty): any {
+export function awsDashboardAdHocFilteringOptionPropertyToHclTerraform(struct?: AwsDashboard.AdHocFilteringOptionPropertyOutputReference | AwsDashboard.AdHocFilteringOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -576,7 +576,7 @@ export function tfDashboardAdHocFilteringOptionPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDashboardDataPointDrillUpDownOptionPropertyToTerraform(struct?: TfDashboard.DataPointDrillUpDownOptionPropertyOutputReference | TfDashboard.DataPointDrillUpDownOptionProperty): any {
+export function awsDashboardDataPointDrillUpDownOptionPropertyToTerraform(struct?: AwsDashboard.DataPointDrillUpDownOptionPropertyOutputReference | AwsDashboard.DataPointDrillUpDownOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -587,7 +587,7 @@ export function tfDashboardDataPointDrillUpDownOptionPropertyToTerraform(struct?
 }
 
 
-export function tfDashboardDataPointDrillUpDownOptionPropertyToHclTerraform(struct?: TfDashboard.DataPointDrillUpDownOptionPropertyOutputReference | TfDashboard.DataPointDrillUpDownOptionProperty): any {
+export function awsDashboardDataPointDrillUpDownOptionPropertyToHclTerraform(struct?: AwsDashboard.DataPointDrillUpDownOptionPropertyOutputReference | AwsDashboard.DataPointDrillUpDownOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -606,7 +606,7 @@ export function tfDashboardDataPointDrillUpDownOptionPropertyToHclTerraform(stru
 }
 
 
-export function tfDashboardDataPointMenuLabelOptionPropertyToTerraform(struct?: TfDashboard.DataPointMenuLabelOptionPropertyOutputReference | TfDashboard.DataPointMenuLabelOptionProperty): any {
+export function awsDashboardDataPointMenuLabelOptionPropertyToTerraform(struct?: AwsDashboard.DataPointMenuLabelOptionPropertyOutputReference | AwsDashboard.DataPointMenuLabelOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -617,7 +617,7 @@ export function tfDashboardDataPointMenuLabelOptionPropertyToTerraform(struct?: 
 }
 
 
-export function tfDashboardDataPointMenuLabelOptionPropertyToHclTerraform(struct?: TfDashboard.DataPointMenuLabelOptionPropertyOutputReference | TfDashboard.DataPointMenuLabelOptionProperty): any {
+export function awsDashboardDataPointMenuLabelOptionPropertyToHclTerraform(struct?: AwsDashboard.DataPointMenuLabelOptionPropertyOutputReference | AwsDashboard.DataPointMenuLabelOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -636,7 +636,7 @@ export function tfDashboardDataPointMenuLabelOptionPropertyToHclTerraform(struct
 }
 
 
-export function tfDashboardDataPointTooltipOptionPropertyToTerraform(struct?: TfDashboard.DataPointTooltipOptionPropertyOutputReference | TfDashboard.DataPointTooltipOptionProperty): any {
+export function awsDashboardDataPointTooltipOptionPropertyToTerraform(struct?: AwsDashboard.DataPointTooltipOptionPropertyOutputReference | AwsDashboard.DataPointTooltipOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -647,7 +647,7 @@ export function tfDashboardDataPointTooltipOptionPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfDashboardDataPointTooltipOptionPropertyToHclTerraform(struct?: TfDashboard.DataPointTooltipOptionPropertyOutputReference | TfDashboard.DataPointTooltipOptionProperty): any {
+export function awsDashboardDataPointTooltipOptionPropertyToHclTerraform(struct?: AwsDashboard.DataPointTooltipOptionPropertyOutputReference | AwsDashboard.DataPointTooltipOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -666,7 +666,7 @@ export function tfDashboardDataPointTooltipOptionPropertyToHclTerraform(struct?:
 }
 
 
-export function tfDashboardExportToCsvOptionPropertyToTerraform(struct?: TfDashboard.ExportToCsvOptionPropertyOutputReference | TfDashboard.ExportToCsvOptionProperty): any {
+export function awsDashboardExportToCsvOptionPropertyToTerraform(struct?: AwsDashboard.ExportToCsvOptionPropertyOutputReference | AwsDashboard.ExportToCsvOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -677,7 +677,7 @@ export function tfDashboardExportToCsvOptionPropertyToTerraform(struct?: TfDashb
 }
 
 
-export function tfDashboardExportToCsvOptionPropertyToHclTerraform(struct?: TfDashboard.ExportToCsvOptionPropertyOutputReference | TfDashboard.ExportToCsvOptionProperty): any {
+export function awsDashboardExportToCsvOptionPropertyToHclTerraform(struct?: AwsDashboard.ExportToCsvOptionPropertyOutputReference | AwsDashboard.ExportToCsvOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -696,7 +696,7 @@ export function tfDashboardExportToCsvOptionPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export function tfDashboardExportWithHiddenFieldsOptionPropertyToTerraform(struct?: TfDashboard.ExportWithHiddenFieldsOptionPropertyOutputReference | TfDashboard.ExportWithHiddenFieldsOptionProperty): any {
+export function awsDashboardExportWithHiddenFieldsOptionPropertyToTerraform(struct?: AwsDashboard.ExportWithHiddenFieldsOptionPropertyOutputReference | AwsDashboard.ExportWithHiddenFieldsOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -707,7 +707,7 @@ export function tfDashboardExportWithHiddenFieldsOptionPropertyToTerraform(struc
 }
 
 
-export function tfDashboardExportWithHiddenFieldsOptionPropertyToHclTerraform(struct?: TfDashboard.ExportWithHiddenFieldsOptionPropertyOutputReference | TfDashboard.ExportWithHiddenFieldsOptionProperty): any {
+export function awsDashboardExportWithHiddenFieldsOptionPropertyToHclTerraform(struct?: AwsDashboard.ExportWithHiddenFieldsOptionPropertyOutputReference | AwsDashboard.ExportWithHiddenFieldsOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -726,7 +726,7 @@ export function tfDashboardExportWithHiddenFieldsOptionPropertyToHclTerraform(st
 }
 
 
-export function tfDashboardSheetControlsOptionPropertyToTerraform(struct?: TfDashboard.SheetControlsOptionPropertyOutputReference | TfDashboard.SheetControlsOptionProperty): any {
+export function awsDashboardSheetControlsOptionPropertyToTerraform(struct?: AwsDashboard.SheetControlsOptionPropertyOutputReference | AwsDashboard.SheetControlsOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -737,7 +737,7 @@ export function tfDashboardSheetControlsOptionPropertyToTerraform(struct?: TfDas
 }
 
 
-export function tfDashboardSheetControlsOptionPropertyToHclTerraform(struct?: TfDashboard.SheetControlsOptionPropertyOutputReference | TfDashboard.SheetControlsOptionProperty): any {
+export function awsDashboardSheetControlsOptionPropertyToHclTerraform(struct?: AwsDashboard.SheetControlsOptionPropertyOutputReference | AwsDashboard.SheetControlsOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -756,7 +756,7 @@ export function tfDashboardSheetControlsOptionPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDashboardSheetLayoutElementMaximizationOptionPropertyToTerraform(struct?: TfDashboard.SheetLayoutElementMaximizationOptionPropertyOutputReference | TfDashboard.SheetLayoutElementMaximizationOptionProperty): any {
+export function awsDashboardSheetLayoutElementMaximizationOptionPropertyToTerraform(struct?: AwsDashboard.SheetLayoutElementMaximizationOptionPropertyOutputReference | AwsDashboard.SheetLayoutElementMaximizationOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -767,7 +767,7 @@ export function tfDashboardSheetLayoutElementMaximizationOptionPropertyToTerrafo
 }
 
 
-export function tfDashboardSheetLayoutElementMaximizationOptionPropertyToHclTerraform(struct?: TfDashboard.SheetLayoutElementMaximizationOptionPropertyOutputReference | TfDashboard.SheetLayoutElementMaximizationOptionProperty): any {
+export function awsDashboardSheetLayoutElementMaximizationOptionPropertyToHclTerraform(struct?: AwsDashboard.SheetLayoutElementMaximizationOptionPropertyOutputReference | AwsDashboard.SheetLayoutElementMaximizationOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -786,7 +786,7 @@ export function tfDashboardSheetLayoutElementMaximizationOptionPropertyToHclTerr
 }
 
 
-export function tfDashboardVisualAxisSortOptionPropertyToTerraform(struct?: TfDashboard.VisualAxisSortOptionPropertyOutputReference | TfDashboard.VisualAxisSortOptionProperty): any {
+export function awsDashboardVisualAxisSortOptionPropertyToTerraform(struct?: AwsDashboard.VisualAxisSortOptionPropertyOutputReference | AwsDashboard.VisualAxisSortOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -797,7 +797,7 @@ export function tfDashboardVisualAxisSortOptionPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDashboardVisualAxisSortOptionPropertyToHclTerraform(struct?: TfDashboard.VisualAxisSortOptionPropertyOutputReference | TfDashboard.VisualAxisSortOptionProperty): any {
+export function awsDashboardVisualAxisSortOptionPropertyToHclTerraform(struct?: AwsDashboard.VisualAxisSortOptionPropertyOutputReference | AwsDashboard.VisualAxisSortOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -816,7 +816,7 @@ export function tfDashboardVisualAxisSortOptionPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDashboardVisualMenuOptionPropertyToTerraform(struct?: TfDashboard.VisualMenuOptionPropertyOutputReference | TfDashboard.VisualMenuOptionProperty): any {
+export function awsDashboardVisualMenuOptionPropertyToTerraform(struct?: AwsDashboard.VisualMenuOptionPropertyOutputReference | AwsDashboard.VisualMenuOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -827,7 +827,7 @@ export function tfDashboardVisualMenuOptionPropertyToTerraform(struct?: TfDashbo
 }
 
 
-export function tfDashboardVisualMenuOptionPropertyToHclTerraform(struct?: TfDashboard.VisualMenuOptionPropertyOutputReference | TfDashboard.VisualMenuOptionProperty): any {
+export function awsDashboardVisualMenuOptionPropertyToHclTerraform(struct?: AwsDashboard.VisualMenuOptionPropertyOutputReference | AwsDashboard.VisualMenuOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -846,88 +846,88 @@ export function tfDashboardVisualMenuOptionPropertyToHclTerraform(struct?: TfDas
 }
 
 
-export function tfDashboardDashboardPublishOptionsPropertyToTerraform(struct?: TfDashboard.DashboardPublishOptionsPropertyOutputReference | TfDashboard.DashboardPublishOptionsProperty): any {
+export function awsDashboardDashboardPublishOptionsPropertyToTerraform(struct?: AwsDashboard.DashboardPublishOptionsPropertyOutputReference | AwsDashboard.DashboardPublishOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    ad_hoc_filtering_option: tfDashboardAdHocFilteringOptionPropertyToTerraform(struct!.adHocFilteringOption),
-    data_point_drill_up_down_option: tfDashboardDataPointDrillUpDownOptionPropertyToTerraform(struct!.dataPointDrillUpDownOption),
-    data_point_menu_label_option: tfDashboardDataPointMenuLabelOptionPropertyToTerraform(struct!.dataPointMenuLabelOption),
-    data_point_tooltip_option: tfDashboardDataPointTooltipOptionPropertyToTerraform(struct!.dataPointTooltipOption),
-    export_to_csv_option: tfDashboardExportToCsvOptionPropertyToTerraform(struct!.exportToCsvOption),
-    export_with_hidden_fields_option: tfDashboardExportWithHiddenFieldsOptionPropertyToTerraform(struct!.exportWithHiddenFieldsOption),
-    sheet_controls_option: tfDashboardSheetControlsOptionPropertyToTerraform(struct!.sheetControlsOption),
-    sheet_layout_element_maximization_option: tfDashboardSheetLayoutElementMaximizationOptionPropertyToTerraform(struct!.sheetLayoutElementMaximizationOption),
-    visual_axis_sort_option: tfDashboardVisualAxisSortOptionPropertyToTerraform(struct!.visualAxisSortOption),
-    visual_menu_option: tfDashboardVisualMenuOptionPropertyToTerraform(struct!.visualMenuOption),
+    ad_hoc_filtering_option: awsDashboardAdHocFilteringOptionPropertyToTerraform(struct!.adHocFilteringOption),
+    data_point_drill_up_down_option: awsDashboardDataPointDrillUpDownOptionPropertyToTerraform(struct!.dataPointDrillUpDownOption),
+    data_point_menu_label_option: awsDashboardDataPointMenuLabelOptionPropertyToTerraform(struct!.dataPointMenuLabelOption),
+    data_point_tooltip_option: awsDashboardDataPointTooltipOptionPropertyToTerraform(struct!.dataPointTooltipOption),
+    export_to_csv_option: awsDashboardExportToCsvOptionPropertyToTerraform(struct!.exportToCsvOption),
+    export_with_hidden_fields_option: awsDashboardExportWithHiddenFieldsOptionPropertyToTerraform(struct!.exportWithHiddenFieldsOption),
+    sheet_controls_option: awsDashboardSheetControlsOptionPropertyToTerraform(struct!.sheetControlsOption),
+    sheet_layout_element_maximization_option: awsDashboardSheetLayoutElementMaximizationOptionPropertyToTerraform(struct!.sheetLayoutElementMaximizationOption),
+    visual_axis_sort_option: awsDashboardVisualAxisSortOptionPropertyToTerraform(struct!.visualAxisSortOption),
+    visual_menu_option: awsDashboardVisualMenuOptionPropertyToTerraform(struct!.visualMenuOption),
   }
 }
 
 
-export function tfDashboardDashboardPublishOptionsPropertyToHclTerraform(struct?: TfDashboard.DashboardPublishOptionsPropertyOutputReference | TfDashboard.DashboardPublishOptionsProperty): any {
+export function awsDashboardDashboardPublishOptionsPropertyToHclTerraform(struct?: AwsDashboard.DashboardPublishOptionsPropertyOutputReference | AwsDashboard.DashboardPublishOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     ad_hoc_filtering_option: {
-      value: tfDashboardAdHocFilteringOptionPropertyToHclTerraform(struct!.adHocFilteringOption),
+      value: awsDashboardAdHocFilteringOptionPropertyToHclTerraform(struct!.adHocFilteringOption),
       isBlock: true,
       type: "list",
       storageClassType: "AdHocFilteringOptionPropertyList",
     },
     data_point_drill_up_down_option: {
-      value: tfDashboardDataPointDrillUpDownOptionPropertyToHclTerraform(struct!.dataPointDrillUpDownOption),
+      value: awsDashboardDataPointDrillUpDownOptionPropertyToHclTerraform(struct!.dataPointDrillUpDownOption),
       isBlock: true,
       type: "list",
       storageClassType: "DataPointDrillUpDownOptionPropertyList",
     },
     data_point_menu_label_option: {
-      value: tfDashboardDataPointMenuLabelOptionPropertyToHclTerraform(struct!.dataPointMenuLabelOption),
+      value: awsDashboardDataPointMenuLabelOptionPropertyToHclTerraform(struct!.dataPointMenuLabelOption),
       isBlock: true,
       type: "list",
       storageClassType: "DataPointMenuLabelOptionPropertyList",
     },
     data_point_tooltip_option: {
-      value: tfDashboardDataPointTooltipOptionPropertyToHclTerraform(struct!.dataPointTooltipOption),
+      value: awsDashboardDataPointTooltipOptionPropertyToHclTerraform(struct!.dataPointTooltipOption),
       isBlock: true,
       type: "list",
       storageClassType: "DataPointTooltipOptionPropertyList",
     },
     export_to_csv_option: {
-      value: tfDashboardExportToCsvOptionPropertyToHclTerraform(struct!.exportToCsvOption),
+      value: awsDashboardExportToCsvOptionPropertyToHclTerraform(struct!.exportToCsvOption),
       isBlock: true,
       type: "list",
       storageClassType: "ExportToCsvOptionPropertyList",
     },
     export_with_hidden_fields_option: {
-      value: tfDashboardExportWithHiddenFieldsOptionPropertyToHclTerraform(struct!.exportWithHiddenFieldsOption),
+      value: awsDashboardExportWithHiddenFieldsOptionPropertyToHclTerraform(struct!.exportWithHiddenFieldsOption),
       isBlock: true,
       type: "list",
       storageClassType: "ExportWithHiddenFieldsOptionPropertyList",
     },
     sheet_controls_option: {
-      value: tfDashboardSheetControlsOptionPropertyToHclTerraform(struct!.sheetControlsOption),
+      value: awsDashboardSheetControlsOptionPropertyToHclTerraform(struct!.sheetControlsOption),
       isBlock: true,
       type: "list",
       storageClassType: "SheetControlsOptionPropertyList",
     },
     sheet_layout_element_maximization_option: {
-      value: tfDashboardSheetLayoutElementMaximizationOptionPropertyToHclTerraform(struct!.sheetLayoutElementMaximizationOption),
+      value: awsDashboardSheetLayoutElementMaximizationOptionPropertyToHclTerraform(struct!.sheetLayoutElementMaximizationOption),
       isBlock: true,
       type: "list",
       storageClassType: "SheetLayoutElementMaximizationOptionPropertyList",
     },
     visual_axis_sort_option: {
-      value: tfDashboardVisualAxisSortOptionPropertyToHclTerraform(struct!.visualAxisSortOption),
+      value: awsDashboardVisualAxisSortOptionPropertyToHclTerraform(struct!.visualAxisSortOption),
       isBlock: true,
       type: "list",
       storageClassType: "VisualAxisSortOptionPropertyList",
     },
     visual_menu_option: {
-      value: tfDashboardVisualMenuOptionPropertyToHclTerraform(struct!.visualMenuOption),
+      value: awsDashboardVisualMenuOptionPropertyToHclTerraform(struct!.visualMenuOption),
       isBlock: true,
       type: "list",
       storageClassType: "VisualMenuOptionPropertyList",
@@ -939,7 +939,7 @@ export function tfDashboardDashboardPublishOptionsPropertyToHclTerraform(struct?
 }
 
 
-export function tfDashboardDateTimeParametersPropertyToTerraform(struct?: TfDashboard.DateTimeParametersProperty | cdktn.IResolvable): any {
+export function awsDashboardDateTimeParametersPropertyToTerraform(struct?: AwsDashboard.DateTimeParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -951,7 +951,7 @@ export function tfDashboardDateTimeParametersPropertyToTerraform(struct?: TfDash
 }
 
 
-export function tfDashboardDateTimeParametersPropertyToHclTerraform(struct?: TfDashboard.DateTimeParametersProperty | cdktn.IResolvable): any {
+export function awsDashboardDateTimeParametersPropertyToHclTerraform(struct?: AwsDashboard.DateTimeParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -976,7 +976,7 @@ export function tfDashboardDateTimeParametersPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDashboardDecimalParametersPropertyToTerraform(struct?: TfDashboard.DecimalParametersProperty | cdktn.IResolvable): any {
+export function awsDashboardDecimalParametersPropertyToTerraform(struct?: AwsDashboard.DecimalParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -988,7 +988,7 @@ export function tfDashboardDecimalParametersPropertyToTerraform(struct?: TfDashb
 }
 
 
-export function tfDashboardDecimalParametersPropertyToHclTerraform(struct?: TfDashboard.DecimalParametersProperty | cdktn.IResolvable): any {
+export function awsDashboardDecimalParametersPropertyToHclTerraform(struct?: AwsDashboard.DecimalParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1013,7 +1013,7 @@ export function tfDashboardDecimalParametersPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export function tfDashboardIntegerParametersPropertyToTerraform(struct?: TfDashboard.IntegerParametersProperty | cdktn.IResolvable): any {
+export function awsDashboardIntegerParametersPropertyToTerraform(struct?: AwsDashboard.IntegerParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1025,7 +1025,7 @@ export function tfDashboardIntegerParametersPropertyToTerraform(struct?: TfDashb
 }
 
 
-export function tfDashboardIntegerParametersPropertyToHclTerraform(struct?: TfDashboard.IntegerParametersProperty | cdktn.IResolvable): any {
+export function awsDashboardIntegerParametersPropertyToHclTerraform(struct?: AwsDashboard.IntegerParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1050,7 +1050,7 @@ export function tfDashboardIntegerParametersPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export function tfDashboardStringParametersPropertyToTerraform(struct?: TfDashboard.StringParametersProperty | cdktn.IResolvable): any {
+export function awsDashboardStringParametersPropertyToTerraform(struct?: AwsDashboard.StringParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1062,7 +1062,7 @@ export function tfDashboardStringParametersPropertyToTerraform(struct?: TfDashbo
 }
 
 
-export function tfDashboardStringParametersPropertyToHclTerraform(struct?: TfDashboard.StringParametersProperty | cdktn.IResolvable): any {
+export function awsDashboardStringParametersPropertyToHclTerraform(struct?: AwsDashboard.StringParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1087,46 +1087,46 @@ export function tfDashboardStringParametersPropertyToHclTerraform(struct?: TfDas
 }
 
 
-export function tfDashboardParametersPropertyToTerraform(struct?: TfDashboard.ParametersPropertyOutputReference | TfDashboard.ParametersProperty): any {
+export function awsDashboardParametersPropertyToTerraform(struct?: AwsDashboard.ParametersPropertyOutputReference | AwsDashboard.ParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    date_time_parameters: cdktn.listMapper(tfDashboardDateTimeParametersPropertyToTerraform, true)(struct!.dateTimeParameters),
-    decimal_parameters: cdktn.listMapper(tfDashboardDecimalParametersPropertyToTerraform, true)(struct!.decimalParameters),
-    integer_parameters: cdktn.listMapper(tfDashboardIntegerParametersPropertyToTerraform, true)(struct!.integerParameters),
-    string_parameters: cdktn.listMapper(tfDashboardStringParametersPropertyToTerraform, true)(struct!.stringParameters),
+    date_time_parameters: cdktn.listMapper(awsDashboardDateTimeParametersPropertyToTerraform, true)(struct!.dateTimeParameters),
+    decimal_parameters: cdktn.listMapper(awsDashboardDecimalParametersPropertyToTerraform, true)(struct!.decimalParameters),
+    integer_parameters: cdktn.listMapper(awsDashboardIntegerParametersPropertyToTerraform, true)(struct!.integerParameters),
+    string_parameters: cdktn.listMapper(awsDashboardStringParametersPropertyToTerraform, true)(struct!.stringParameters),
   }
 }
 
 
-export function tfDashboardParametersPropertyToHclTerraform(struct?: TfDashboard.ParametersPropertyOutputReference | TfDashboard.ParametersProperty): any {
+export function awsDashboardParametersPropertyToHclTerraform(struct?: AwsDashboard.ParametersPropertyOutputReference | AwsDashboard.ParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     date_time_parameters: {
-      value: cdktn.listMapperHcl(tfDashboardDateTimeParametersPropertyToHclTerraform, true)(struct!.dateTimeParameters),
+      value: cdktn.listMapperHcl(awsDashboardDateTimeParametersPropertyToHclTerraform, true)(struct!.dateTimeParameters),
       isBlock: true,
       type: "list",
       storageClassType: "DateTimeParametersPropertyList",
     },
     decimal_parameters: {
-      value: cdktn.listMapperHcl(tfDashboardDecimalParametersPropertyToHclTerraform, true)(struct!.decimalParameters),
+      value: cdktn.listMapperHcl(awsDashboardDecimalParametersPropertyToHclTerraform, true)(struct!.decimalParameters),
       isBlock: true,
       type: "list",
       storageClassType: "DecimalParametersPropertyList",
     },
     integer_parameters: {
-      value: cdktn.listMapperHcl(tfDashboardIntegerParametersPropertyToHclTerraform, true)(struct!.integerParameters),
+      value: cdktn.listMapperHcl(awsDashboardIntegerParametersPropertyToHclTerraform, true)(struct!.integerParameters),
       isBlock: true,
       type: "list",
       storageClassType: "IntegerParametersPropertyList",
     },
     string_parameters: {
-      value: cdktn.listMapperHcl(tfDashboardStringParametersPropertyToHclTerraform, true)(struct!.stringParameters),
+      value: cdktn.listMapperHcl(awsDashboardStringParametersPropertyToHclTerraform, true)(struct!.stringParameters),
       isBlock: true,
       type: "list",
       storageClassType: "StringParametersPropertyList",
@@ -1138,7 +1138,7 @@ export function tfDashboardParametersPropertyToHclTerraform(struct?: TfDashboard
 }
 
 
-export function tfDashboardPermissionsPropertyToTerraform(struct?: TfDashboard.PermissionsProperty | cdktn.IResolvable): any {
+export function awsDashboardPermissionsPropertyToTerraform(struct?: AwsDashboard.PermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1150,7 +1150,7 @@ export function tfDashboardPermissionsPropertyToTerraform(struct?: TfDashboard.P
 }
 
 
-export function tfDashboardPermissionsPropertyToHclTerraform(struct?: TfDashboard.PermissionsProperty | cdktn.IResolvable): any {
+export function awsDashboardPermissionsPropertyToHclTerraform(struct?: AwsDashboard.PermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1175,7 +1175,7 @@ export function tfDashboardPermissionsPropertyToHclTerraform(struct?: TfDashboar
 }
 
 
-export function tfDashboardDataSetReferencesPropertyToTerraform(struct?: TfDashboard.DataSetReferencesProperty | cdktn.IResolvable): any {
+export function awsDashboardDataSetReferencesPropertyToTerraform(struct?: AwsDashboard.DataSetReferencesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1187,7 +1187,7 @@ export function tfDashboardDataSetReferencesPropertyToTerraform(struct?: TfDashb
 }
 
 
-export function tfDashboardDataSetReferencesPropertyToHclTerraform(struct?: TfDashboard.DataSetReferencesProperty | cdktn.IResolvable): any {
+export function awsDashboardDataSetReferencesPropertyToHclTerraform(struct?: AwsDashboard.DataSetReferencesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1212,19 +1212,19 @@ export function tfDashboardDataSetReferencesPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export function tfDashboardSourceTemplatePropertyToTerraform(struct?: TfDashboard.SourceTemplatePropertyOutputReference | TfDashboard.SourceTemplateProperty): any {
+export function awsDashboardSourceTemplatePropertyToTerraform(struct?: AwsDashboard.SourceTemplatePropertyOutputReference | AwsDashboard.SourceTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     arn: cdktn.stringToTerraform(struct!.arn),
-    data_set_references: cdktn.listMapper(tfDashboardDataSetReferencesPropertyToTerraform, true)(struct!.dataSetReferences),
+    data_set_references: cdktn.listMapper(awsDashboardDataSetReferencesPropertyToTerraform, true)(struct!.dataSetReferences),
   }
 }
 
 
-export function tfDashboardSourceTemplatePropertyToHclTerraform(struct?: TfDashboard.SourceTemplatePropertyOutputReference | TfDashboard.SourceTemplateProperty): any {
+export function awsDashboardSourceTemplatePropertyToHclTerraform(struct?: AwsDashboard.SourceTemplatePropertyOutputReference | AwsDashboard.SourceTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1237,7 +1237,7 @@ export function tfDashboardSourceTemplatePropertyToHclTerraform(struct?: TfDashb
       storageClassType: "string",
     },
     data_set_references: {
-      value: cdktn.listMapperHcl(tfDashboardDataSetReferencesPropertyToHclTerraform, true)(struct!.dataSetReferences),
+      value: cdktn.listMapperHcl(awsDashboardDataSetReferencesPropertyToHclTerraform, true)(struct!.dataSetReferences),
       isBlock: true,
       type: "list",
       storageClassType: "DataSetReferencesPropertyList",
@@ -1249,25 +1249,25 @@ export function tfDashboardSourceTemplatePropertyToHclTerraform(struct?: TfDashb
 }
 
 
-export function tfDashboardSourceEntityPropertyToTerraform(struct?: TfDashboard.SourceEntityPropertyOutputReference | TfDashboard.SourceEntityProperty): any {
+export function awsDashboardSourceEntityPropertyToTerraform(struct?: AwsDashboard.SourceEntityPropertyOutputReference | AwsDashboard.SourceEntityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    source_template: tfDashboardSourceTemplatePropertyToTerraform(struct!.sourceTemplate),
+    source_template: awsDashboardSourceTemplatePropertyToTerraform(struct!.sourceTemplate),
   }
 }
 
 
-export function tfDashboardSourceEntityPropertyToHclTerraform(struct?: TfDashboard.SourceEntityPropertyOutputReference | TfDashboard.SourceEntityProperty): any {
+export function awsDashboardSourceEntityPropertyToHclTerraform(struct?: AwsDashboard.SourceEntityPropertyOutputReference | AwsDashboard.SourceEntityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     source_template: {
-      value: tfDashboardSourceTemplatePropertyToHclTerraform(struct!.sourceTemplate),
+      value: awsDashboardSourceTemplatePropertyToHclTerraform(struct!.sourceTemplate),
       isBlock: true,
       type: "list",
       storageClassType: "SourceTemplatePropertyList",
@@ -1279,7 +1279,7 @@ export function tfDashboardSourceEntityPropertyToHclTerraform(struct?: TfDashboa
 }
 
 
-export function tfDashboardTimeoutsPropertyToTerraform(struct?: TfDashboard.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDashboardTimeoutsPropertyToTerraform(struct?: AwsDashboard.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1292,7 +1292,7 @@ export function tfDashboardTimeoutsPropertyToTerraform(struct?: TfDashboard.Time
 }
 
 
-export function tfDashboardTimeoutsPropertyToHclTerraform(struct?: TfDashboard.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDashboardTimeoutsPropertyToHclTerraform(struct?: AwsDashboard.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1323,10 +1323,10 @@ export function tfDashboardTimeoutsPropertyToHclTerraform(struct?: TfDashboard.T
 }
 
 
-export namespace TfDashboard {
+export namespace AwsDashboard {
 export interface AdHocFilteringOptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status TfDashboard#availability_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status AwsDashboard#availability_status}
   */
   readonly availabilityStatus?: string;
 }
@@ -1380,7 +1380,7 @@ export class AdHocFilteringOptionPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface DataPointDrillUpDownOptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status TfDashboard#availability_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status AwsDashboard#availability_status}
   */
   readonly availabilityStatus?: string;
 }
@@ -1434,7 +1434,7 @@ export class DataPointDrillUpDownOptionPropertyOutputReference extends cdktn.Com
 }
 export interface DataPointMenuLabelOptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status TfDashboard#availability_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status AwsDashboard#availability_status}
   */
   readonly availabilityStatus?: string;
 }
@@ -1488,7 +1488,7 @@ export class DataPointMenuLabelOptionPropertyOutputReference extends cdktn.Compl
 }
 export interface DataPointTooltipOptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status TfDashboard#availability_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status AwsDashboard#availability_status}
   */
   readonly availabilityStatus?: string;
 }
@@ -1542,7 +1542,7 @@ export class DataPointTooltipOptionPropertyOutputReference extends cdktn.Complex
 }
 export interface ExportToCsvOptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status TfDashboard#availability_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status AwsDashboard#availability_status}
   */
   readonly availabilityStatus?: string;
 }
@@ -1596,7 +1596,7 @@ export class ExportToCsvOptionPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface ExportWithHiddenFieldsOptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status TfDashboard#availability_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status AwsDashboard#availability_status}
   */
   readonly availabilityStatus?: string;
 }
@@ -1650,7 +1650,7 @@ export class ExportWithHiddenFieldsOptionPropertyOutputReference extends cdktn.C
 }
 export interface SheetControlsOptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#visibility_state TfDashboard#visibility_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#visibility_state AwsDashboard#visibility_state}
   */
   readonly visibilityState?: string;
 }
@@ -1704,7 +1704,7 @@ export class SheetControlsOptionPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface SheetLayoutElementMaximizationOptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status TfDashboard#availability_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status AwsDashboard#availability_status}
   */
   readonly availabilityStatus?: string;
 }
@@ -1758,7 +1758,7 @@ export class SheetLayoutElementMaximizationOptionPropertyOutputReference extends
 }
 export interface VisualAxisSortOptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status TfDashboard#availability_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status AwsDashboard#availability_status}
   */
   readonly availabilityStatus?: string;
 }
@@ -1812,7 +1812,7 @@ export class VisualAxisSortOptionPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface VisualMenuOptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status TfDashboard#availability_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#availability_status AwsDashboard#availability_status}
   */
   readonly availabilityStatus?: string;
 }
@@ -1868,61 +1868,61 @@ export interface DashboardPublishOptionsProperty {
   /**
   * ad_hoc_filtering_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#ad_hoc_filtering_option TfDashboard#ad_hoc_filtering_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#ad_hoc_filtering_option AwsDashboard#ad_hoc_filtering_option}
   */
   readonly adHocFilteringOption?: AdHocFilteringOptionProperty;
   /**
   * data_point_drill_up_down_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#data_point_drill_up_down_option TfDashboard#data_point_drill_up_down_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#data_point_drill_up_down_option AwsDashboard#data_point_drill_up_down_option}
   */
   readonly dataPointDrillUpDownOption?: DataPointDrillUpDownOptionProperty;
   /**
   * data_point_menu_label_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#data_point_menu_label_option TfDashboard#data_point_menu_label_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#data_point_menu_label_option AwsDashboard#data_point_menu_label_option}
   */
   readonly dataPointMenuLabelOption?: DataPointMenuLabelOptionProperty;
   /**
   * data_point_tooltip_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#data_point_tooltip_option TfDashboard#data_point_tooltip_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#data_point_tooltip_option AwsDashboard#data_point_tooltip_option}
   */
   readonly dataPointTooltipOption?: DataPointTooltipOptionProperty;
   /**
   * export_to_csv_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#export_to_csv_option TfDashboard#export_to_csv_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#export_to_csv_option AwsDashboard#export_to_csv_option}
   */
   readonly exportToCsvOption?: ExportToCsvOptionProperty;
   /**
   * export_with_hidden_fields_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#export_with_hidden_fields_option TfDashboard#export_with_hidden_fields_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#export_with_hidden_fields_option AwsDashboard#export_with_hidden_fields_option}
   */
   readonly exportWithHiddenFieldsOption?: ExportWithHiddenFieldsOptionProperty;
   /**
   * sheet_controls_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#sheet_controls_option TfDashboard#sheet_controls_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#sheet_controls_option AwsDashboard#sheet_controls_option}
   */
   readonly sheetControlsOption?: SheetControlsOptionProperty;
   /**
   * sheet_layout_element_maximization_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#sheet_layout_element_maximization_option TfDashboard#sheet_layout_element_maximization_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#sheet_layout_element_maximization_option AwsDashboard#sheet_layout_element_maximization_option}
   */
   readonly sheetLayoutElementMaximizationOption?: SheetLayoutElementMaximizationOptionProperty;
   /**
   * visual_axis_sort_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#visual_axis_sort_option TfDashboard#visual_axis_sort_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#visual_axis_sort_option AwsDashboard#visual_axis_sort_option}
   */
   readonly visualAxisSortOption?: VisualAxisSortOptionProperty;
   /**
   * visual_menu_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#visual_menu_option TfDashboard#visual_menu_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#visual_menu_option AwsDashboard#visual_menu_option}
   */
   readonly visualMenuOption?: VisualMenuOptionProperty;
 }
@@ -2174,11 +2174,11 @@ export class DashboardPublishOptionsPropertyOutputReference extends cdktn.Comple
 }
 export interface DateTimeParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#name TfDashboard#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#name AwsDashboard#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#values TfDashboard#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#values AwsDashboard#values}
   */
   readonly values: string[];
 }
@@ -2280,11 +2280,11 @@ export class DateTimeParametersPropertyList extends cdktn.ComplexList {
 }
 export interface DecimalParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#name TfDashboard#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#name AwsDashboard#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#values TfDashboard#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#values AwsDashboard#values}
   */
   readonly values: number[];
 }
@@ -2386,11 +2386,11 @@ export class DecimalParametersPropertyList extends cdktn.ComplexList {
 }
 export interface IntegerParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#name TfDashboard#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#name AwsDashboard#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#values TfDashboard#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#values AwsDashboard#values}
   */
   readonly values: number[];
 }
@@ -2492,11 +2492,11 @@ export class IntegerParametersPropertyList extends cdktn.ComplexList {
 }
 export interface StringParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#name TfDashboard#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#name AwsDashboard#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#values TfDashboard#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#values AwsDashboard#values}
   */
   readonly values: string[];
 }
@@ -2600,25 +2600,25 @@ export interface ParametersProperty {
   /**
   * date_time_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#date_time_parameters TfDashboard#date_time_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#date_time_parameters AwsDashboard#date_time_parameters}
   */
   readonly dateTimeParameters?: DateTimeParametersProperty[] | cdktn.IResolvable;
   /**
   * decimal_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#decimal_parameters TfDashboard#decimal_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#decimal_parameters AwsDashboard#decimal_parameters}
   */
   readonly decimalParameters?: DecimalParametersProperty[] | cdktn.IResolvable;
   /**
   * integer_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#integer_parameters TfDashboard#integer_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#integer_parameters AwsDashboard#integer_parameters}
   */
   readonly integerParameters?: IntegerParametersProperty[] | cdktn.IResolvable;
   /**
   * string_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#string_parameters TfDashboard#string_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#string_parameters AwsDashboard#string_parameters}
   */
   readonly stringParameters?: StringParametersProperty[] | cdktn.IResolvable;
 }
@@ -2738,11 +2738,11 @@ export class ParametersPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PermissionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#actions TfDashboard#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#actions AwsDashboard#actions}
   */
   readonly actions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#principal TfDashboard#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#principal AwsDashboard#principal}
   */
   readonly principal: string;
 }
@@ -2844,11 +2844,11 @@ export class PermissionsPropertyList extends cdktn.ComplexList {
 }
 export interface DataSetReferencesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#data_set_arn TfDashboard#data_set_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#data_set_arn AwsDashboard#data_set_arn}
   */
   readonly dataSetArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#data_set_placeholder TfDashboard#data_set_placeholder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#data_set_placeholder AwsDashboard#data_set_placeholder}
   */
   readonly dataSetPlaceholder: string;
 }
@@ -2950,13 +2950,13 @@ export class DataSetReferencesPropertyList extends cdktn.ComplexList {
 }
 export interface SourceTemplateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#arn TfDashboard#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#arn AwsDashboard#arn}
   */
   readonly arn: string;
   /**
   * data_set_references block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#data_set_references TfDashboard#data_set_references}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#data_set_references AwsDashboard#data_set_references}
   */
   readonly dataSetReferences: DataSetReferencesProperty[] | cdktn.IResolvable;
 }
@@ -3028,7 +3028,7 @@ export interface SourceEntityProperty {
   /**
   * source_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#source_template TfDashboard#source_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#source_template AwsDashboard#source_template}
   */
   readonly sourceTemplate?: SourceTemplateProperty;
 }
@@ -3082,15 +3082,15 @@ export class SourceEntityPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#create TfDashboard#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#create AwsDashboard#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#delete TfDashboard#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#delete AwsDashboard#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#update TfDashboard#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_dashboard#update AwsDashboard#update}
   */
   readonly update?: string;
 }

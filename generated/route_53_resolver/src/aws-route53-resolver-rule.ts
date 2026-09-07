@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfResolverRuleConfig extends cdktn.TerraformMetaArguments {
+export interface AwsResolverRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#domain_name TfResolverRule#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#domain_name AwsResolverRule#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#id TfResolverRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#id AwsResolverRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#name TfResolverRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#name AwsResolverRule#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#region TfResolverRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#region AwsResolverRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#resolver_endpoint_id TfResolverRule#resolver_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#resolver_endpoint_id AwsResolverRule#resolver_endpoint_id}
   */
   readonly resolverEndpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#rule_type TfResolverRule#rule_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#rule_type AwsResolverRule#rule_type}
   */
   readonly ruleType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#tags TfResolverRule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#tags AwsResolverRule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#tags_all TfResolverRule#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#tags_all AwsResolverRule#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * target_ip block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#target_ip TfResolverRule#target_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#target_ip AwsResolverRule#target_ip}
   */
-  readonly targetIp?: TfResolverRule.TargetIpProperty[] | cdktn.IResolvable;
+  readonly targetIp?: AwsResolverRule.TargetIpProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#timeouts TfResolverRule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#timeouts AwsResolverRule#timeouts}
   */
-  readonly timeouts?: TfResolverRule.TimeoutsProperty;
+  readonly timeouts?: AwsResolverRule.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule aws_route53_resolver_rule}
 */
-export class TfResolverRule extends cdktn.TerraformResource {
+export class AwsResolverRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class TfResolverRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfResolverRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsResolverRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfResolverRule to import
-  * @param importFromId The id of the existing TfResolverRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfResolverRule to import is found
+  * @param importToId The construct id used in the generated config for the AwsResolverRule to import
+  * @param importFromId The id of the existing AwsResolverRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsResolverRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_resolver_rule", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class TfResolverRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfResolverRuleConfig
+  * @param options AwsResolverRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: TfResolverRuleConfig) {
+  public constructor(scope: Construct, id: string, config: AwsResolverRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_resolver_rule',
       terraformGeneratorMetadata: {
@@ -262,11 +262,11 @@ export class TfResolverRule extends cdktn.TerraformResource {
   }
 
   // target_ip - computed: false, optional: true, required: false
-  private _targetIp = new TfResolverRule.TargetIpPropertyList(this, "target_ip", true);
+  private _targetIp = new AwsResolverRule.TargetIpPropertyList(this, "target_ip", true);
   public get targetIp() {
     return this._targetIp;
   }
-  public putTargetIp(value: TfResolverRule.TargetIpProperty[] | cdktn.IResolvable) {
+  public putTargetIp(value: AwsResolverRule.TargetIpProperty[] | cdktn.IResolvable) {
     this._targetIp.internalValue = value;
   }
   public resetTargetIp() {
@@ -278,11 +278,11 @@ export class TfResolverRule extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfResolverRule.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsResolverRule.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfResolverRule.TimeoutsProperty) {
+  public putTimeouts(value: AwsResolverRule.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -307,8 +307,8 @@ export class TfResolverRule extends cdktn.TerraformResource {
       rule_type: cdktn.stringToTerraform(this._ruleType),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      target_ip: cdktn.listMapper(tfResolverRuleTargetIpPropertyToTerraform, true)(this._targetIp.internalValue),
-      timeouts: tfResolverRuleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      target_ip: cdktn.listMapper(awsResolverRuleTargetIpPropertyToTerraform, true)(this._targetIp.internalValue),
+      timeouts: awsResolverRuleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -363,16 +363,16 @@ export class TfResolverRule extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       target_ip: {
-        value: cdktn.listMapperHcl(tfResolverRuleTargetIpPropertyToHclTerraform, true)(this._targetIp.internalValue),
+        value: cdktn.listMapperHcl(awsResolverRuleTargetIpPropertyToHclTerraform, true)(this._targetIp.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfResolverRule.TargetIpPropertyList",
+        storageClassType: "AwsResolverRule.TargetIpPropertyList",
       },
       timeouts: {
-        value: tfResolverRuleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsResolverRuleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfResolverRule.TimeoutsProperty",
+        storageClassType: "AwsResolverRule.TimeoutsProperty",
       },
     };
 
@@ -381,7 +381,7 @@ export class TfResolverRule extends cdktn.TerraformResource {
   }
 }
 
-export function tfResolverRuleTargetIpPropertyToTerraform(struct?: TfResolverRule.TargetIpProperty | cdktn.IResolvable): any {
+export function awsResolverRuleTargetIpPropertyToTerraform(struct?: AwsResolverRule.TargetIpProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -395,7 +395,7 @@ export function tfResolverRuleTargetIpPropertyToTerraform(struct?: TfResolverRul
 }
 
 
-export function tfResolverRuleTargetIpPropertyToHclTerraform(struct?: TfResolverRule.TargetIpProperty | cdktn.IResolvable): any {
+export function awsResolverRuleTargetIpPropertyToHclTerraform(struct?: AwsResolverRule.TargetIpProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -432,7 +432,7 @@ export function tfResolverRuleTargetIpPropertyToHclTerraform(struct?: TfResolver
 }
 
 
-export function tfResolverRuleTimeoutsPropertyToTerraform(struct?: TfResolverRule.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsResolverRuleTimeoutsPropertyToTerraform(struct?: AwsResolverRule.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -445,7 +445,7 @@ export function tfResolverRuleTimeoutsPropertyToTerraform(struct?: TfResolverRul
 }
 
 
-export function tfResolverRuleTimeoutsPropertyToHclTerraform(struct?: TfResolverRule.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsResolverRuleTimeoutsPropertyToHclTerraform(struct?: AwsResolverRule.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,22 +476,22 @@ export function tfResolverRuleTimeoutsPropertyToHclTerraform(struct?: TfResolver
 }
 
 
-export namespace TfResolverRule {
+export namespace AwsResolverRule {
 export interface TargetIpProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#ip TfResolverRule#ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#ip AwsResolverRule#ip}
   */
   readonly ip?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#ipv6 TfResolverRule#ipv6}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#ipv6 AwsResolverRule#ipv6}
   */
   readonly ipv6?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#port TfResolverRule#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#port AwsResolverRule#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#protocol TfResolverRule#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#protocol AwsResolverRule#protocol}
   */
   readonly protocol?: string;
 }
@@ -643,15 +643,15 @@ export class TargetIpPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#create TfResolverRule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#create AwsResolverRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#delete TfResolverRule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#delete AwsResolverRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#update TfResolverRule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_rule#update AwsResolverRule#update}
   */
   readonly update?: string;
 }

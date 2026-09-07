@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfClusterActivityStreamConfig extends cdktn.TerraformMetaArguments {
+export interface AwsClusterActivityStreamConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_activity_stream#engine_native_audit_fields_included TfClusterActivityStream#engine_native_audit_fields_included}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_activity_stream#engine_native_audit_fields_included AwsClusterActivityStream#engine_native_audit_fields_included}
   */
   readonly engineNativeAuditFieldsIncluded?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_activity_stream#id TfClusterActivityStream#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_activity_stream#id AwsClusterActivityStream#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_activity_stream#kms_key_id TfClusterActivityStream#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_activity_stream#kms_key_id AwsClusterActivityStream#kms_key_id}
   */
   readonly kmsKeyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_activity_stream#mode TfClusterActivityStream#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_activity_stream#mode AwsClusterActivityStream#mode}
   */
   readonly mode: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_activity_stream#region TfClusterActivityStream#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_activity_stream#region AwsClusterActivityStream#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_activity_stream#resource_arn TfClusterActivityStream#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_activity_stream#resource_arn AwsClusterActivityStream#resource_arn}
   */
   readonly resourceArn: string;
 }
@@ -40,7 +40,7 @@ export interface TfClusterActivityStreamConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_activity_stream aws_rds_cluster_activity_stream}
 */
-export class TfClusterActivityStream extends cdktn.TerraformResource {
+export class AwsClusterActivityStream extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfClusterActivityStream extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfClusterActivityStream resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsClusterActivityStream resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfClusterActivityStream to import
-  * @param importFromId The id of the existing TfClusterActivityStream that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_activity_stream#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfClusterActivityStream to import is found
+  * @param importToId The construct id used in the generated config for the AwsClusterActivityStream to import
+  * @param importFromId The id of the existing AwsClusterActivityStream that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_cluster_activity_stream#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsClusterActivityStream to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_rds_cluster_activity_stream", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfClusterActivityStream extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfClusterActivityStreamConfig
+  * @param options AwsClusterActivityStreamConfig
   */
-  public constructor(scope: Construct, id: string, config: TfClusterActivityStreamConfig) {
+  public constructor(scope: Construct, id: string, config: AwsClusterActivityStreamConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_rds_cluster_activity_stream',
       terraformGeneratorMetadata: {

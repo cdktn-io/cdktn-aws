@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfHostKeyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsHostKeyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_host_key#description TfHostKey#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_host_key#description AwsHostKey#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_host_key#host_key_body TfHostKey#host_key_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_host_key#host_key_body AwsHostKey#host_key_body}
   */
   readonly hostKeyBody?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_host_key#host_key_body_wo TfHostKey#host_key_body_wo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_host_key#host_key_body_wo AwsHostKey#host_key_body_wo}
   */
   readonly hostKeyBodyWo?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_host_key#region TfHostKey#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_host_key#region AwsHostKey#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_host_key#server_id TfHostKey#server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_host_key#server_id AwsHostKey#server_id}
   */
   readonly serverId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_host_key#tags TfHostKey#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_host_key#tags AwsHostKey#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -37,7 +37,7 @@ export interface TfHostKeyConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_host_key aws_transfer_host_key}
 */
-export class TfHostKey extends cdktn.TerraformResource {
+export class AwsHostKey extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class TfHostKey extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfHostKey resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsHostKey resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfHostKey to import
-  * @param importFromId The id of the existing TfHostKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_host_key#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfHostKey to import is found
+  * @param importToId The construct id used in the generated config for the AwsHostKey to import
+  * @param importFromId The id of the existing AwsHostKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_host_key#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsHostKey to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_transfer_host_key", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class TfHostKey extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfHostKeyConfig
+  * @param options AwsHostKeyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfHostKeyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsHostKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_transfer_host_key',
       terraformGeneratorMetadata: {

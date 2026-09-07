@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#client_vpn_endpoint_id DataTfEndpoint#client_vpn_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#client_vpn_endpoint_id DataAwsEndpoint#client_vpn_endpoint_id}
   */
   readonly clientVpnEndpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#id DataTfEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#id DataAwsEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,31 +20,31 @@ export interface DataTfEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#region DataTfEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#region DataAwsEndpoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#tags DataTfEndpoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#tags DataAwsEndpoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#filter DataTfEndpoint#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#filter DataAwsEndpoint#filter}
   */
-  readonly filter?: DataTfEndpoint.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsEndpoint.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#timeouts DataTfEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#timeouts DataAwsEndpoint#timeouts}
   */
-  readonly timeouts?: DataTfEndpoint.TimeoutsProperty;
+  readonly timeouts?: DataAwsEndpoint.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint aws_ec2_client_vpn_endpoint}
 */
-export class DataTfEndpoint extends cdktn.TerraformDataSource {
+export class DataAwsEndpoint extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class DataTfEndpoint extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfEndpoint to import
-  * @param importFromId The id of the existing DataTfEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsEndpoint to import
+  * @param importFromId The id of the existing DataAwsEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_client_vpn_endpoint", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class DataTfEndpoint extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfEndpointConfig = {}
+  * @param options DataAwsEndpointConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfEndpointConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsEndpointConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_client_vpn_endpoint',
       terraformGeneratorMetadata: {
@@ -110,7 +110,7 @@ export class DataTfEndpoint extends cdktn.TerraformDataSource {
   }
 
   // authentication_options - computed: true, optional: false, required: false
-  private _authenticationOptions = new DataTfEndpoint.AuthenticationOptionsPropertyList(this, "authentication_options", false);
+  private _authenticationOptions = new DataAwsEndpoint.AuthenticationOptionsPropertyList(this, "authentication_options", false);
   public get authenticationOptions() {
     return this._authenticationOptions;
   }
@@ -121,19 +121,19 @@ export class DataTfEndpoint extends cdktn.TerraformDataSource {
   }
 
   // client_connect_options - computed: true, optional: false, required: false
-  private _clientConnectOptions = new DataTfEndpoint.ClientConnectOptionsPropertyList(this, "client_connect_options", false);
+  private _clientConnectOptions = new DataAwsEndpoint.ClientConnectOptionsPropertyList(this, "client_connect_options", false);
   public get clientConnectOptions() {
     return this._clientConnectOptions;
   }
 
   // client_login_banner_options - computed: true, optional: false, required: false
-  private _clientLoginBannerOptions = new DataTfEndpoint.ClientLoginBannerOptionsPropertyList(this, "client_login_banner_options", false);
+  private _clientLoginBannerOptions = new DataAwsEndpoint.ClientLoginBannerOptionsPropertyList(this, "client_login_banner_options", false);
   public get clientLoginBannerOptions() {
     return this._clientLoginBannerOptions;
   }
 
   // client_route_enforcement_options - computed: true, optional: false, required: false
-  private _clientRouteEnforcementOptions = new DataTfEndpoint.ClientRouteEnforcementOptionsPropertyList(this, "client_route_enforcement_options", false);
+  private _clientRouteEnforcementOptions = new DataAwsEndpoint.ClientRouteEnforcementOptionsPropertyList(this, "client_route_enforcement_options", false);
   public get clientRouteEnforcementOptions() {
     return this._clientRouteEnforcementOptions;
   }
@@ -155,7 +155,7 @@ export class DataTfEndpoint extends cdktn.TerraformDataSource {
   }
 
   // connection_log_options - computed: true, optional: false, required: false
-  private _connectionLogOptions = new DataTfEndpoint.ConnectionLogOptionsPropertyList(this, "connection_log_options", false);
+  private _connectionLogOptions = new DataAwsEndpoint.ConnectionLogOptionsPropertyList(this, "connection_log_options", false);
   public get connectionLogOptions() {
     return this._connectionLogOptions;
   }
@@ -264,7 +264,7 @@ export class DataTfEndpoint extends cdktn.TerraformDataSource {
   }
 
   // transit_gateway_configuration - computed: true, optional: false, required: false
-  private _transitGatewayConfiguration = new DataTfEndpoint.TransitGatewayConfigurationPropertyList(this, "transit_gateway_configuration", false);
+  private _transitGatewayConfiguration = new DataAwsEndpoint.TransitGatewayConfigurationPropertyList(this, "transit_gateway_configuration", false);
   public get transitGatewayConfiguration() {
     return this._transitGatewayConfiguration;
   }
@@ -285,11 +285,11 @@ export class DataTfEndpoint extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfEndpoint.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsEndpoint.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfEndpoint.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsEndpoint.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -301,11 +301,11 @@ export class DataTfEndpoint extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataTfEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataAwsEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataTfEndpoint.TimeoutsProperty) {
+  public putTimeouts(value: DataAwsEndpoint.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -326,8 +326,8 @@ export class DataTfEndpoint extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataTfEndpointFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataTfEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataAwsEndpointFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataAwsEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -358,16 +358,16 @@ export class DataTfEndpoint extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfEndpointFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsEndpointFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfEndpoint.FilterPropertyList",
+        storageClassType: "DataAwsEndpoint.FilterPropertyList",
       },
       timeouts: {
-        value: dataTfEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataAwsEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataTfEndpoint.TimeoutsProperty",
+        storageClassType: "DataAwsEndpoint.TimeoutsProperty",
       },
     };
 
@@ -376,7 +376,7 @@ export class DataTfEndpoint extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfEndpointAuthenticationOptionsPropertyToTerraform(struct?: DataTfEndpoint.AuthenticationOptionsProperty): any {
+export function dataAwsEndpointAuthenticationOptionsPropertyToTerraform(struct?: DataAwsEndpoint.AuthenticationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,7 +386,7 @@ export function dataTfEndpointAuthenticationOptionsPropertyToTerraform(struct?: 
 }
 
 
-export function dataTfEndpointAuthenticationOptionsPropertyToHclTerraform(struct?: DataTfEndpoint.AuthenticationOptionsProperty): any {
+export function dataAwsEndpointAuthenticationOptionsPropertyToHclTerraform(struct?: DataAwsEndpoint.AuthenticationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -397,7 +397,7 @@ export function dataTfEndpointAuthenticationOptionsPropertyToHclTerraform(struct
 }
 
 
-export function dataTfEndpointClientConnectOptionsPropertyToTerraform(struct?: DataTfEndpoint.ClientConnectOptionsProperty): any {
+export function dataAwsEndpointClientConnectOptionsPropertyToTerraform(struct?: DataAwsEndpoint.ClientConnectOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -407,7 +407,7 @@ export function dataTfEndpointClientConnectOptionsPropertyToTerraform(struct?: D
 }
 
 
-export function dataTfEndpointClientConnectOptionsPropertyToHclTerraform(struct?: DataTfEndpoint.ClientConnectOptionsProperty): any {
+export function dataAwsEndpointClientConnectOptionsPropertyToHclTerraform(struct?: DataAwsEndpoint.ClientConnectOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -418,7 +418,7 @@ export function dataTfEndpointClientConnectOptionsPropertyToHclTerraform(struct?
 }
 
 
-export function dataTfEndpointClientLoginBannerOptionsPropertyToTerraform(struct?: DataTfEndpoint.ClientLoginBannerOptionsProperty): any {
+export function dataAwsEndpointClientLoginBannerOptionsPropertyToTerraform(struct?: DataAwsEndpoint.ClientLoginBannerOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -428,7 +428,7 @@ export function dataTfEndpointClientLoginBannerOptionsPropertyToTerraform(struct
 }
 
 
-export function dataTfEndpointClientLoginBannerOptionsPropertyToHclTerraform(struct?: DataTfEndpoint.ClientLoginBannerOptionsProperty): any {
+export function dataAwsEndpointClientLoginBannerOptionsPropertyToHclTerraform(struct?: DataAwsEndpoint.ClientLoginBannerOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,7 +439,7 @@ export function dataTfEndpointClientLoginBannerOptionsPropertyToHclTerraform(str
 }
 
 
-export function dataTfEndpointClientRouteEnforcementOptionsPropertyToTerraform(struct?: DataTfEndpoint.ClientRouteEnforcementOptionsProperty): any {
+export function dataAwsEndpointClientRouteEnforcementOptionsPropertyToTerraform(struct?: DataAwsEndpoint.ClientRouteEnforcementOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -449,7 +449,7 @@ export function dataTfEndpointClientRouteEnforcementOptionsPropertyToTerraform(s
 }
 
 
-export function dataTfEndpointClientRouteEnforcementOptionsPropertyToHclTerraform(struct?: DataTfEndpoint.ClientRouteEnforcementOptionsProperty): any {
+export function dataAwsEndpointClientRouteEnforcementOptionsPropertyToHclTerraform(struct?: DataAwsEndpoint.ClientRouteEnforcementOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -460,7 +460,7 @@ export function dataTfEndpointClientRouteEnforcementOptionsPropertyToHclTerrafor
 }
 
 
-export function dataTfEndpointConnectionLogOptionsPropertyToTerraform(struct?: DataTfEndpoint.ConnectionLogOptionsProperty): any {
+export function dataAwsEndpointConnectionLogOptionsPropertyToTerraform(struct?: DataAwsEndpoint.ConnectionLogOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -470,7 +470,7 @@ export function dataTfEndpointConnectionLogOptionsPropertyToTerraform(struct?: D
 }
 
 
-export function dataTfEndpointConnectionLogOptionsPropertyToHclTerraform(struct?: DataTfEndpoint.ConnectionLogOptionsProperty): any {
+export function dataAwsEndpointConnectionLogOptionsPropertyToHclTerraform(struct?: DataAwsEndpoint.ConnectionLogOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -481,7 +481,7 @@ export function dataTfEndpointConnectionLogOptionsPropertyToHclTerraform(struct?
 }
 
 
-export function dataTfEndpointTransitGatewayConfigurationPropertyToTerraform(struct?: DataTfEndpoint.TransitGatewayConfigurationProperty): any {
+export function dataAwsEndpointTransitGatewayConfigurationPropertyToTerraform(struct?: DataAwsEndpoint.TransitGatewayConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -491,7 +491,7 @@ export function dataTfEndpointTransitGatewayConfigurationPropertyToTerraform(str
 }
 
 
-export function dataTfEndpointTransitGatewayConfigurationPropertyToHclTerraform(struct?: DataTfEndpoint.TransitGatewayConfigurationProperty): any {
+export function dataAwsEndpointTransitGatewayConfigurationPropertyToHclTerraform(struct?: DataAwsEndpoint.TransitGatewayConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -502,7 +502,7 @@ export function dataTfEndpointTransitGatewayConfigurationPropertyToHclTerraform(
 }
 
 
-export function dataTfEndpointFilterPropertyToTerraform(struct?: DataTfEndpoint.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsEndpointFilterPropertyToTerraform(struct?: DataAwsEndpoint.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -514,7 +514,7 @@ export function dataTfEndpointFilterPropertyToTerraform(struct?: DataTfEndpoint.
 }
 
 
-export function dataTfEndpointFilterPropertyToHclTerraform(struct?: DataTfEndpoint.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsEndpointFilterPropertyToHclTerraform(struct?: DataAwsEndpoint.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -539,7 +539,7 @@ export function dataTfEndpointFilterPropertyToHclTerraform(struct?: DataTfEndpoi
 }
 
 
-export function dataTfEndpointTimeoutsPropertyToTerraform(struct?: DataTfEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsEndpointTimeoutsPropertyToTerraform(struct?: DataAwsEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -550,7 +550,7 @@ export function dataTfEndpointTimeoutsPropertyToTerraform(struct?: DataTfEndpoin
 }
 
 
-export function dataTfEndpointTimeoutsPropertyToHclTerraform(struct?: DataTfEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsEndpointTimeoutsPropertyToHclTerraform(struct?: DataAwsEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -569,7 +569,7 @@ export function dataTfEndpointTimeoutsPropertyToHclTerraform(struct?: DataTfEndp
 }
 
 
-export namespace DataTfEndpoint {
+export namespace DataAwsEndpoint {
 export interface AuthenticationOptionsProperty {
 }
 export class AuthenticationOptionsPropertyOutputReference extends cdktn.ComplexObject {
@@ -951,11 +951,11 @@ export class TransitGatewayConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#name DataTfEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#name DataAwsEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#values DataTfEndpoint#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#values DataAwsEndpoint#values}
   */
   readonly values: string[];
 }
@@ -1057,7 +1057,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#read DataTfEndpoint#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_client_vpn_endpoint#read DataAwsEndpoint#read}
   */
   readonly read?: string;
 }

@@ -5,47 +5,47 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfClusterConfig extends cdktn.TerraformMetaArguments {
+export interface AwsClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#deletion_protection_enabled TfCluster#deletion_protection_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#deletion_protection_enabled AwsCluster#deletion_protection_enabled}
   */
   readonly deletionProtectionEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#force_destroy TfCluster#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#force_destroy AwsCluster#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#kms_encryption_key TfCluster#kms_encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#kms_encryption_key AwsCluster#kms_encryption_key}
   */
   readonly kmsEncryptionKey?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#region TfCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#region AwsCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#tags TfCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#tags AwsCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * multi_region_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#multi_region_properties TfCluster#multi_region_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#multi_region_properties AwsCluster#multi_region_properties}
   */
-  readonly multiRegionProperties?: TfCluster.MultiRegionPropertiesProperty[] | cdktn.IResolvable;
+  readonly multiRegionProperties?: AwsCluster.MultiRegionPropertiesProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#timeouts TfCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#timeouts AwsCluster#timeouts}
   */
-  readonly timeouts?: TfCluster.TimeoutsProperty;
+  readonly timeouts?: AwsCluster.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster aws_dsql_cluster}
 */
-export class TfCluster extends cdktn.TerraformResource {
+export class AwsCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class TfCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCluster to import
-  * @param importFromId The id of the existing TfCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCluster to import is found
+  * @param importToId The construct id used in the generated config for the AwsCluster to import
+  * @param importFromId The id of the existing AwsCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dsql_cluster", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class TfCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfClusterConfig = {}
+  * @param options AwsClusterConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfClusterConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsClusterConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_dsql_cluster',
       terraformGeneratorMetadata: {
@@ -128,7 +128,7 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 
   // encryption_details - computed: true, optional: false, required: false
-  private _encryptionDetails = new TfCluster.EncryptionDetailsPropertyList(this, "encryption_details", false);
+  private _encryptionDetails = new AwsCluster.EncryptionDetailsPropertyList(this, "encryption_details", false);
   public get encryptionDetails() {
     return this._encryptionDetails;
   }
@@ -214,11 +214,11 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 
   // multi_region_properties - computed: false, optional: true, required: false
-  private _multiRegionProperties = new TfCluster.MultiRegionPropertiesPropertyList(this, "multi_region_properties", false);
+  private _multiRegionProperties = new AwsCluster.MultiRegionPropertiesPropertyList(this, "multi_region_properties", false);
   public get multiRegionProperties() {
     return this._multiRegionProperties;
   }
-  public putMultiRegionProperties(value: TfCluster.MultiRegionPropertiesProperty[] | cdktn.IResolvable) {
+  public putMultiRegionProperties(value: AwsCluster.MultiRegionPropertiesProperty[] | cdktn.IResolvable) {
     this._multiRegionProperties.internalValue = value;
   }
   public resetMultiRegionProperties() {
@@ -230,11 +230,11 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCluster.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCluster.TimeoutsProperty) {
+  public putTimeouts(value: AwsCluster.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -256,8 +256,8 @@ export class TfCluster extends cdktn.TerraformResource {
       kms_encryption_key: cdktn.stringToTerraform(this._kmsEncryptionKey),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      multi_region_properties: cdktn.listMapper(tfClusterMultiRegionPropertiesPropertyToTerraform, true)(this._multiRegionProperties.internalValue),
-      timeouts: tfClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      multi_region_properties: cdktn.listMapper(awsClusterMultiRegionPropertiesPropertyToTerraform, true)(this._multiRegionProperties.internalValue),
+      timeouts: awsClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -294,16 +294,16 @@ export class TfCluster extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       multi_region_properties: {
-        value: cdktn.listMapperHcl(tfClusterMultiRegionPropertiesPropertyToHclTerraform, true)(this._multiRegionProperties.internalValue),
+        value: cdktn.listMapperHcl(awsClusterMultiRegionPropertiesPropertyToHclTerraform, true)(this._multiRegionProperties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCluster.MultiRegionPropertiesPropertyList",
+        storageClassType: "AwsCluster.MultiRegionPropertiesPropertyList",
       },
       timeouts: {
-        value: tfClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCluster.TimeoutsProperty",
+        storageClassType: "AwsCluster.TimeoutsProperty",
       },
     };
 
@@ -312,7 +312,7 @@ export class TfCluster extends cdktn.TerraformResource {
   }
 }
 
-export function tfClusterEncryptionDetailsPropertyToTerraform(struct?: TfCluster.EncryptionDetailsProperty): any {
+export function awsClusterEncryptionDetailsPropertyToTerraform(struct?: AwsCluster.EncryptionDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function tfClusterEncryptionDetailsPropertyToTerraform(struct?: TfCluster
 }
 
 
-export function tfClusterEncryptionDetailsPropertyToHclTerraform(struct?: TfCluster.EncryptionDetailsProperty): any {
+export function awsClusterEncryptionDetailsPropertyToHclTerraform(struct?: AwsCluster.EncryptionDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -333,7 +333,7 @@ export function tfClusterEncryptionDetailsPropertyToHclTerraform(struct?: TfClus
 }
 
 
-export function tfClusterMultiRegionPropertiesPropertyToTerraform(struct?: TfCluster.MultiRegionPropertiesProperty | cdktn.IResolvable): any {
+export function awsClusterMultiRegionPropertiesPropertyToTerraform(struct?: AwsCluster.MultiRegionPropertiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,7 +345,7 @@ export function tfClusterMultiRegionPropertiesPropertyToTerraform(struct?: TfClu
 }
 
 
-export function tfClusterMultiRegionPropertiesPropertyToHclTerraform(struct?: TfCluster.MultiRegionPropertiesProperty | cdktn.IResolvable): any {
+export function awsClusterMultiRegionPropertiesPropertyToHclTerraform(struct?: AwsCluster.MultiRegionPropertiesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -370,7 +370,7 @@ export function tfClusterMultiRegionPropertiesPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfClusterTimeoutsPropertyToTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsClusterTimeoutsPropertyToTerraform(struct?: AwsCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -383,7 +383,7 @@ export function tfClusterTimeoutsPropertyToTerraform(struct?: TfCluster.Timeouts
 }
 
 
-export function tfClusterTimeoutsPropertyToHclTerraform(struct?: TfCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsClusterTimeoutsPropertyToHclTerraform(struct?: AwsCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,7 +414,7 @@ export function tfClusterTimeoutsPropertyToHclTerraform(struct?: TfCluster.Timeo
 }
 
 
-export namespace TfCluster {
+export namespace AwsCluster {
 export interface EncryptionDetailsProperty {
 }
 export class EncryptionDetailsPropertyOutputReference extends cdktn.ComplexObject {
@@ -476,11 +476,11 @@ export class EncryptionDetailsPropertyList extends cdktn.ComplexList {
 }
 export interface MultiRegionPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#clusters TfCluster#clusters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#clusters AwsCluster#clusters}
   */
   readonly clusters?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#witness_region TfCluster#witness_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#witness_region AwsCluster#witness_region}
   */
   readonly witnessRegion?: string;
 }
@@ -590,19 +590,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#create TfCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#create AwsCluster#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#delete TfCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#delete AwsCluster#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#update TfCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dsql_cluster#update AwsCluster#update}
   */
   readonly update?: string;
 }

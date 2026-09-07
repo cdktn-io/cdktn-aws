@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAwsLogSourceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAwsLogSourceConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_aws_log_source#region TfAwsLogSource#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_aws_log_source#region AwsAwsLogSource#region}
   */
   readonly region?: string;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_aws_log_source#source TfAwsLogSource#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_aws_log_source#source AwsAwsLogSource#source}
   */
-  readonly source?: TfAwsLogSource.SourceProperty[] | cdktn.IResolvable;
+  readonly source?: AwsAwsLogSource.SourceProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_aws_log_source aws_securitylake_aws_log_source}
 */
-export class TfAwsLogSource extends cdktn.TerraformResource {
+export class AwsAwsLogSource extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class TfAwsLogSource extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAwsLogSource resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAwsLogSource resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAwsLogSource to import
-  * @param importFromId The id of the existing TfAwsLogSource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_aws_log_source#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAwsLogSource to import is found
+  * @param importToId The construct id used in the generated config for the AwsAwsLogSource to import
+  * @param importFromId The id of the existing AwsAwsLogSource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_aws_log_source#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAwsLogSource to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securitylake_aws_log_source", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class TfAwsLogSource extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAwsLogSourceConfig = {}
+  * @param options AwsAwsLogSourceConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfAwsLogSourceConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsAwsLogSourceConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_securitylake_aws_log_source',
       terraformGeneratorMetadata: {
@@ -101,11 +101,11 @@ export class TfAwsLogSource extends cdktn.TerraformResource {
   }
 
   // source - computed: false, optional: true, required: false
-  private _source = new TfAwsLogSource.SourcePropertyList(this, "source", false);
+  private _source = new AwsAwsLogSource.SourcePropertyList(this, "source", false);
   public get source() {
     return this._source;
   }
-  public putSource(value: TfAwsLogSource.SourceProperty[] | cdktn.IResolvable) {
+  public putSource(value: AwsAwsLogSource.SourceProperty[] | cdktn.IResolvable) {
     this._source.internalValue = value;
   }
   public resetSource() {
@@ -123,7 +123,7 @@ export class TfAwsLogSource extends cdktn.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       region: cdktn.stringToTerraform(this._region),
-      source: cdktn.listMapper(tfAwsLogSourceSourcePropertyToTerraform, true)(this._source.internalValue),
+      source: cdktn.listMapper(awsAwsLogSourceSourcePropertyToTerraform, true)(this._source.internalValue),
     };
   }
 
@@ -136,10 +136,10 @@ export class TfAwsLogSource extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       source: {
-        value: cdktn.listMapperHcl(tfAwsLogSourceSourcePropertyToHclTerraform, true)(this._source.internalValue),
+        value: cdktn.listMapperHcl(awsAwsLogSourceSourcePropertyToHclTerraform, true)(this._source.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAwsLogSource.SourcePropertyList",
+        storageClassType: "AwsAwsLogSource.SourcePropertyList",
       },
     };
 
@@ -148,7 +148,7 @@ export class TfAwsLogSource extends cdktn.TerraformResource {
   }
 }
 
-export function tfAwsLogSourceSourcePropertyToTerraform(struct?: TfAwsLogSource.SourceProperty | cdktn.IResolvable): any {
+export function awsAwsLogSourceSourcePropertyToTerraform(struct?: AwsAwsLogSource.SourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -162,7 +162,7 @@ export function tfAwsLogSourceSourcePropertyToTerraform(struct?: TfAwsLogSource.
 }
 
 
-export function tfAwsLogSourceSourcePropertyToHclTerraform(struct?: TfAwsLogSource.SourceProperty | cdktn.IResolvable): any {
+export function awsAwsLogSourceSourcePropertyToHclTerraform(struct?: AwsAwsLogSource.SourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -199,22 +199,22 @@ export function tfAwsLogSourceSourcePropertyToHclTerraform(struct?: TfAwsLogSour
 }
 
 
-export namespace TfAwsLogSource {
+export namespace AwsAwsLogSource {
 export interface SourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_aws_log_source#accounts TfAwsLogSource#accounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_aws_log_source#accounts AwsAwsLogSource#accounts}
   */
   readonly accounts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_aws_log_source#regions TfAwsLogSource#regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_aws_log_source#regions AwsAwsLogSource#regions}
   */
   readonly regions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_aws_log_source#source_name TfAwsLogSource#source_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_aws_log_source#source_name AwsAwsLogSource#source_name}
   */
   readonly sourceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_aws_log_source#source_version TfAwsLogSource#source_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_aws_log_source#source_version AwsAwsLogSource#source_version}
   */
   readonly sourceVersion?: string;
 }

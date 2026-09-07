@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTrustedTokenIssuerConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTrustedTokenIssuerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#client_token TfTrustedTokenIssuer#client_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#client_token AwsTrustedTokenIssuer#client_token}
   */
   readonly clientToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#instance_arn TfTrustedTokenIssuer#instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#instance_arn AwsTrustedTokenIssuer#instance_arn}
   */
   readonly instanceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#name TfTrustedTokenIssuer#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#name AwsTrustedTokenIssuer#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#region TfTrustedTokenIssuer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#region AwsTrustedTokenIssuer#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#tags TfTrustedTokenIssuer#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#tags AwsTrustedTokenIssuer#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#trusted_token_issuer_type TfTrustedTokenIssuer#trusted_token_issuer_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#trusted_token_issuer_type AwsTrustedTokenIssuer#trusted_token_issuer_type}
   */
   readonly trustedTokenIssuerType: string;
   /**
   * trusted_token_issuer_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#trusted_token_issuer_configuration TfTrustedTokenIssuer#trusted_token_issuer_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#trusted_token_issuer_configuration AwsTrustedTokenIssuer#trusted_token_issuer_configuration}
   */
-  readonly trustedTokenIssuerConfiguration?: TfTrustedTokenIssuer.TrustedTokenIssuerConfigurationProperty[] | cdktn.IResolvable;
+  readonly trustedTokenIssuerConfiguration?: AwsTrustedTokenIssuer.TrustedTokenIssuerConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer aws_ssoadmin_trusted_token_issuer}
 */
-export class TfTrustedTokenIssuer extends cdktn.TerraformResource {
+export class AwsTrustedTokenIssuer extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class TfTrustedTokenIssuer extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTrustedTokenIssuer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTrustedTokenIssuer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTrustedTokenIssuer to import
-  * @param importFromId The id of the existing TfTrustedTokenIssuer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTrustedTokenIssuer to import is found
+  * @param importToId The construct id used in the generated config for the AwsTrustedTokenIssuer to import
+  * @param importFromId The id of the existing AwsTrustedTokenIssuer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTrustedTokenIssuer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_trusted_token_issuer", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class TfTrustedTokenIssuer extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTrustedTokenIssuerConfig
+  * @param options AwsTrustedTokenIssuerConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTrustedTokenIssuerConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTrustedTokenIssuerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssoadmin_trusted_token_issuer',
       terraformGeneratorMetadata: {
@@ -208,11 +208,11 @@ export class TfTrustedTokenIssuer extends cdktn.TerraformResource {
   }
 
   // trusted_token_issuer_configuration - computed: false, optional: true, required: false
-  private _trustedTokenIssuerConfiguration = new TfTrustedTokenIssuer.TrustedTokenIssuerConfigurationPropertyList(this, "trusted_token_issuer_configuration", false);
+  private _trustedTokenIssuerConfiguration = new AwsTrustedTokenIssuer.TrustedTokenIssuerConfigurationPropertyList(this, "trusted_token_issuer_configuration", false);
   public get trustedTokenIssuerConfiguration() {
     return this._trustedTokenIssuerConfiguration;
   }
-  public putTrustedTokenIssuerConfiguration(value: TfTrustedTokenIssuer.TrustedTokenIssuerConfigurationProperty[] | cdktn.IResolvable) {
+  public putTrustedTokenIssuerConfiguration(value: AwsTrustedTokenIssuer.TrustedTokenIssuerConfigurationProperty[] | cdktn.IResolvable) {
     this._trustedTokenIssuerConfiguration.internalValue = value;
   }
   public resetTrustedTokenIssuerConfiguration() {
@@ -235,7 +235,7 @@ export class TfTrustedTokenIssuer extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       trusted_token_issuer_type: cdktn.stringToTerraform(this._trustedTokenIssuerType),
-      trusted_token_issuer_configuration: cdktn.listMapper(tfTrustedTokenIssuerTrustedTokenIssuerConfigurationPropertyToTerraform, true)(this._trustedTokenIssuerConfiguration.internalValue),
+      trusted_token_issuer_configuration: cdktn.listMapper(awsTrustedTokenIssuerTrustedTokenIssuerConfigurationPropertyToTerraform, true)(this._trustedTokenIssuerConfiguration.internalValue),
     };
   }
 
@@ -278,10 +278,10 @@ export class TfTrustedTokenIssuer extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       trusted_token_issuer_configuration: {
-        value: cdktn.listMapperHcl(tfTrustedTokenIssuerTrustedTokenIssuerConfigurationPropertyToHclTerraform, true)(this._trustedTokenIssuerConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsTrustedTokenIssuerTrustedTokenIssuerConfigurationPropertyToHclTerraform, true)(this._trustedTokenIssuerConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrustedTokenIssuer.TrustedTokenIssuerConfigurationPropertyList",
+        storageClassType: "AwsTrustedTokenIssuer.TrustedTokenIssuerConfigurationPropertyList",
       },
     };
 
@@ -290,7 +290,7 @@ export class TfTrustedTokenIssuer extends cdktn.TerraformResource {
   }
 }
 
-export function tfTrustedTokenIssuerOidcJwtConfigurationPropertyToTerraform(struct?: TfTrustedTokenIssuer.OidcJwtConfigurationProperty | cdktn.IResolvable): any {
+export function awsTrustedTokenIssuerOidcJwtConfigurationPropertyToTerraform(struct?: AwsTrustedTokenIssuer.OidcJwtConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function tfTrustedTokenIssuerOidcJwtConfigurationPropertyToTerraform(stru
 }
 
 
-export function tfTrustedTokenIssuerOidcJwtConfigurationPropertyToHclTerraform(struct?: TfTrustedTokenIssuer.OidcJwtConfigurationProperty | cdktn.IResolvable): any {
+export function awsTrustedTokenIssuerOidcJwtConfigurationPropertyToHclTerraform(struct?: AwsTrustedTokenIssuer.OidcJwtConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,25 +341,25 @@ export function tfTrustedTokenIssuerOidcJwtConfigurationPropertyToHclTerraform(s
 }
 
 
-export function tfTrustedTokenIssuerTrustedTokenIssuerConfigurationPropertyToTerraform(struct?: TfTrustedTokenIssuer.TrustedTokenIssuerConfigurationProperty | cdktn.IResolvable): any {
+export function awsTrustedTokenIssuerTrustedTokenIssuerConfigurationPropertyToTerraform(struct?: AwsTrustedTokenIssuer.TrustedTokenIssuerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    oidc_jwt_configuration: cdktn.listMapper(tfTrustedTokenIssuerOidcJwtConfigurationPropertyToTerraform, true)(struct!.oidcJwtConfiguration),
+    oidc_jwt_configuration: cdktn.listMapper(awsTrustedTokenIssuerOidcJwtConfigurationPropertyToTerraform, true)(struct!.oidcJwtConfiguration),
   }
 }
 
 
-export function tfTrustedTokenIssuerTrustedTokenIssuerConfigurationPropertyToHclTerraform(struct?: TfTrustedTokenIssuer.TrustedTokenIssuerConfigurationProperty | cdktn.IResolvable): any {
+export function awsTrustedTokenIssuerTrustedTokenIssuerConfigurationPropertyToHclTerraform(struct?: AwsTrustedTokenIssuer.TrustedTokenIssuerConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     oidc_jwt_configuration: {
-      value: cdktn.listMapperHcl(tfTrustedTokenIssuerOidcJwtConfigurationPropertyToHclTerraform, true)(struct!.oidcJwtConfiguration),
+      value: cdktn.listMapperHcl(awsTrustedTokenIssuerOidcJwtConfigurationPropertyToHclTerraform, true)(struct!.oidcJwtConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "OidcJwtConfigurationPropertyList",
@@ -371,22 +371,22 @@ export function tfTrustedTokenIssuerTrustedTokenIssuerConfigurationPropertyToHcl
 }
 
 
-export namespace TfTrustedTokenIssuer {
+export namespace AwsTrustedTokenIssuer {
 export interface OidcJwtConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#claim_attribute_path TfTrustedTokenIssuer#claim_attribute_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#claim_attribute_path AwsTrustedTokenIssuer#claim_attribute_path}
   */
   readonly claimAttributePath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#identity_store_attribute_path TfTrustedTokenIssuer#identity_store_attribute_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#identity_store_attribute_path AwsTrustedTokenIssuer#identity_store_attribute_path}
   */
   readonly identityStoreAttributePath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#issuer_url TfTrustedTokenIssuer#issuer_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#issuer_url AwsTrustedTokenIssuer#issuer_url}
   */
   readonly issuerUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#jwks_retrieval_option TfTrustedTokenIssuer#jwks_retrieval_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#jwks_retrieval_option AwsTrustedTokenIssuer#jwks_retrieval_option}
   */
   readonly jwksRetrievalOption: string;
 }
@@ -528,7 +528,7 @@ export interface TrustedTokenIssuerConfigurationProperty {
   /**
   * oidc_jwt_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#oidc_jwt_configuration TfTrustedTokenIssuer#oidc_jwt_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_trusted_token_issuer#oidc_jwt_configuration AwsTrustedTokenIssuer#oidc_jwt_configuration}
   */
   readonly oidcJwtConfiguration?: OidcJwtConfigurationProperty[] | cdktn.IResolvable;
 }

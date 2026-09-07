@@ -329,3 +329,20 @@ interface. It is false for one entry in 2,401: the config struct is drawn from t
 migration tool had no row for the one symbol a consumer of that resource's config type holds. Each
 entry now carries `classic.configClassName`, read off the same parser models the class names are,
 and the rule is gone. `classic-naming.test.ts` asserts all 2,401 against `../ref-provider-aws`.
+
+### The marker is respelled `Aws`, and the Go packages drop it, 2026-09-07 (0.3.0)
+
+Community feedback on 0.2.0 rejected `Tf` as a marker that marks nothing — "actively confusing" in
+a library where every type is terraform-shaped — and asked for the prefix that names the provider
+instead, as `Cc` does in `cdktn-awscc`. The same round objected to `awss3` in Go against `s3` in
+TypeScript and Python. Both were taken: an L1 class is now `Aws<Stem>` / `DataAws<Stem>` /
+`EphemeralAws<Stem>`, and a Go package is the slug with no `aws` prefix (`s3`, `acmpca`,
+`provider`), with tags to match (`s3/v0.3.0`).
+
+Everything this document decided *below* the marker survives it unchanged: the stem algorithm, the
+curated `stripPrefixes` lists, the empty-stem back-off, the position-0 surface marker, the file
+names keyed on the terraform type, the nested mount and its `Property` suffix, the `Mapper`
+disambiguator, and the provider's three exports. The regeneration was verified to be a pure rename
+of this tree, the same way this tree was verified against 0.1.x. The decision and the before/after
+table for all three languages are in [`docs/v030-naming.md`](./v030-naming.md); the "Go, before and
+after" section above is 0.2.0's spelling and is kept as the record of it.

@@ -3,1294 +3,1294 @@
   "pinnedProviderVersion": "6.62.0",
   "groups": {
     "account_management": {
-      "hash": "055a8edbc2f5cb439eeb86bb6cfdea508026cc5f4c0888e9ca8fa403a4382007",
+      "hash": "99e66d5f2be57d28f2347b25b34cca6a07ad66dd5e0d3edd81359134d6e76fd3",
       "files": 9,
-      "bytes": 62588
+      "bytes": 62685
     },
     "acm": {
-      "hash": "8992edf7563ba9937f1ec0b6cef8b90dc02159cf948623143105f4c10f52fc87",
+      "hash": "6ef2084d9fc69c79d51a39ffd498b16854125c27acf95e4a09c7633a8be75bcc",
       "files": 7,
-      "bytes": 67639
+      "bytes": 67736
     },
     "acm_pca": {
-      "hash": "8cea3e7240e4d21749bcc22e0244b0c8b29f764440c446b70bb8ff34e6a81b4e",
+      "hash": "c5dca2cbfdfe00d7317889097ab9c89cdd15d8417212b5c8b1c0f116547944a4",
       "files": 11,
-      "bytes": 134995
+      "bytes": 135203
     },
     "amazon_q_business": {
-      "hash": "35dde2121f1d8dff686d25ab6d4606289f3796565b134d24c036137bed66864e",
+      "hash": "fac9de28986938d77810000963db35f9b3ce88e60cc02a852f86c5640a2d3c40",
       "files": 5,
-      "bytes": 33043
+      "bytes": 33090
     },
     "amp": {
-      "hash": "c6d60241557daea1725fa49a429fe9e5997223e91b573a4572ee00472a29a109",
+      "hash": "5b5f04066eeaaad97a2121b4c9ea6d5aa424fd7840bba30f97b20a33ae0b331b",
       "files": 16,
-      "bytes": 273881
+      "bytes": 274331
     },
     "amplify": {
-      "hash": "5f91178d55f97c35bf1b6107b082246c655ddbbdb41d01c0cc29a1e8725ef811",
+      "hash": "499bd28cd89b5325888d82026af73520cc71f1778dd94a7d7ddb635d88c1acdd",
       "files": 9,
-      "bytes": 131495
+      "bytes": 131689
     },
     "api_gateway": {
-      "hash": "4191432cb07cb0e9dc31e04c9aef54a23243baf9441d770f9848313651afd34b",
+      "hash": "58bd9b9c39a1f6f70a9e79dc0e9ce9b3b1be677df6f29b5aa8b8efc33b20d15e",
       "files": 40,
-      "bytes": 512300
+      "bytes": 513094
     },
     "api_gateway_v2": {
-      "hash": "0315c8331251c730eb806a6f7ce144a4b9d0d1bb56fd3192f8ce95ebf23174d0",
+      "hash": "020457c965442145f58e44e79c9eda1ce0447136779121c97489db8f678e42e1",
       "files": 21,
-      "bytes": 332586
+      "bytes": 333107
     },
     "app_mesh": {
-      "hash": "cee57757a67addfffe99b6912580249a0da422adb8062a706969c43e90acf567",
+      "hash": "089b04372414ac7af3a9abc595ec81c4e9f0f0b1c7939aa179e41326522ef1b3",
       "files": 18,
-      "bytes": 1840130
+      "bytes": 1843232
     },
     "app_runner": {
-      "hash": "2284a39a8de2514a9bbc0287a371ddcdb69201a9c8a137aa064b49c400c8b64b",
+      "hash": "1e5dd69b4d08a010bce8847cfa123707fe2e6ea6f1c2e4622361250e30109c0a",
       "files": 14,
-      "bytes": 207000
+      "bytes": 207368
     },
     "appconfig": {
-      "hash": "edc127756aae14e079f1a881a9e5c4a50a1d66dd418d690c13ed762af7740328",
+      "hash": "f00cb52fca2af589cec0b9c3e340e555f72795026c675e60f64dff9d24a10caf",
       "files": 17,
-      "bytes": 174978
+      "bytes": 175235
     },
     "appfabric": {
-      "hash": "7aa8622d6385742d777aba814ed40498da5d22d9e8fd2c85d764d4cdf7415b95",
+      "hash": "3a396a77aa345b9da71a8de77d98f0b0009756f08894495ba2f0d4221f780b0e",
       "files": 9,
-      "bytes": 138623
+      "bytes": 138842
     },
     "appflow": {
-      "hash": "df2d3deaf984db75ecbb44eaf177c95924a364d6486b895f0ed532909eeba9f0",
+      "hash": "3e33f5ffb3ca8f8d678d2bf0e5666940d8aeab77e714aa0376f33680c470c3e9",
       "files": 6,
-      "bytes": 753105
+      "bytes": 754430
     },
     "appintegrations": {
-      "hash": "7f27cbb90d26791d97c9a02aafeb15281f6ae1881687b00d9555e4b167d33609",
+      "hash": "41e812b9ae0c6e17041258be985a5a414e3c699b8c1858fc1948658697c4aba0",
       "files": 7,
-      "bytes": 46252
+      "bytes": 46327
     },
     "application_auto_scaling": {
-      "hash": "461f3c487d3e4acb719216e29de451167dbe99d25cc254e810617aa574593ead",
+      "hash": "be4d9b860ac07b18d9b1d5c3ddb8111917e71a7f7ecb9cdccbf1921a53396389",
       "files": 7,
-      "bytes": 281499
+      "bytes": 281908
     },
     "appstream_2_0": {
-      "hash": "481c69670e44ea1cf1ba07292176db953a35c8963461a0661fc1eaf13d8614fe",
+      "hash": "806a40ee68f2e88038be89d92137512fe8fb94e95e63207c9045133e472b6912",
       "files": 12,
-      "bytes": 198713
+      "bytes": 199051
     },
     "appsync": {
-      "hash": "4e4b97c4f1d5f77d76a018f9bb0da5b588ec00e607695681f83e8acde0bed8e8",
+      "hash": "487fcea6aebc780be0e6f6cf98bf45c1620a7a3faa7ae90431f40ceda58faf49",
       "files": 16,
-      "bytes": 434751
+      "bytes": 435515
     },
     "arc_region_switch": {
-      "hash": "ee92f3c921e988f284d599aefd51cfe912e4d6e25148338534b6af7ec0ffa54f",
+      "hash": "00d7b51acb81a1e7516d25dacff0e358f9c9c847fa07eb650533745198003767",
       "files": 7,
-      "bytes": 750280
+      "bytes": 751134
     },
     "arc_zonal_shift": {
-      "hash": "4f27d1261d786349516068bed2e0013d25e4133fe9f96dc2722b97bae9d731b7",
+      "hash": "5e91fc87d44b8b9f4e235dbbc0b811fad5560aa10988fc603b81f6e0013e2396",
       "files": 6,
-      "bytes": 33802
+      "bytes": 33847
     },
     "athena": {
-      "hash": "0a30b7788e91dfa2f3de025a843299da9fe5ebbb32628dfec0d898ac3a1ff17a",
+      "hash": "24d510295b75e6376ed34d0e6c0dcfd047d4064aced99e9c2ca5f5e66fa72b06",
       "files": 11,
-      "bytes": 192167
+      "bytes": 192491
     },
     "audit_manager": {
-      "hash": "7b10e9c922ea9d7d7b6f864a8da85bc39882adc6ebfe149e616a2d6e0fcb23f1",
+      "hash": "f991f9321aab2a5e5df0343e7c9cf9b570e27f7304d2ac5327d2be5e0d2c21aa",
       "files": 14,
-      "bytes": 163928
+      "bytes": 164173
     },
     "auto_scaling": {
-      "hash": "6334ab70525a6ce2b38a6e3d9ae182ba0b3e4791ec8d7c9bc4b2adc19b8afae4",
+      "hash": "460aa769865a23b07477a8c9e27e18bfd18f5e1cb6a8b3498629621387af1788",
       "files": 16,
-      "bytes": 759810
+      "bytes": 760987
     },
     "auto_scaling_plans": {
-      "hash": "3895b5bafcf7632e96d5e52a6c06119fe2d7128958701bf6f2f876c5feaa8e1f",
+      "hash": "90fefab43d14303e1d201a2568594be28c006482896ca24aa03b26b9737b365b",
       "files": 5,
-      "bytes": 85016
+      "bytes": 85129
     },
     "backup": {
-      "hash": "b5f66b74d8e398c8252ef0a91253b59326478aea7b3034f56b4e04455c0b27c4",
+      "hash": "4e16db9f14fa58a98ff7c48b345c13b76ef7344f6de7acdf59162682d2732f32",
       "files": 22,
-      "bytes": 381380
+      "bytes": 381970
     },
     "batch": {
-      "hash": "7d9f68f09ed636429fe837dafcdd2c9456b4a0aafb5401493c346d85570340d1",
+      "hash": "a7b17ee6b27f5895274a57ae8acacd7621237a9d89da270b3aeb4fb81e08f9e6",
       "files": 12,
-      "bytes": 485293
+      "bytes": 485989
     },
     "bcm_data_exports": {
-      "hash": "eab7b992fd9a8b6da18f4faa4c78994058b7a4642b7a6148804cf160aea7998c",
+      "hash": "d979f35b9943246c184b73268b488e69b7f61a6a55dde51ed75931701eae4e42",
       "files": 5,
-      "bytes": 55668
+      "bytes": 55743
     },
     "bedrock": {
-      "hash": "2a9c662e580b390bc70b37f0d244013d17eea1aa2766aaeda8cb6fe652d0aa20",
+      "hash": "5829c6130a0d1e99c99d94d8b16fa88d62507fb814b0ee000aafbf192a2346bc",
       "files": 21,
-      "bytes": 676893
+      "bytes": 677870
     },
     "bedrock_agentcore": {
-      "hash": "1e0bcfb6d5bbd25f9388bba42bed7de3d84b0edaf044211157c0746c6d97204b",
+      "hash": "58a97f0faed6bb5eaf66dc77a8bc38231f22ff4ef870331733581d00575c7c3e",
       "files": 25,
-      "bytes": 2274756
+      "bytes": 2277795
     },
     "bedrock_agents": {
-      "hash": "f14ed4cb09d33cb2d8bd7c624002d21bd0baada62a83c2642c14101e05f439bd",
+      "hash": "eb2378d11ad864bc6745f83e72e47ba8072c4fde596c8a8aad420058a7256817",
       "files": 14,
-      "bytes": 1542631
+      "bytes": 1544602
     },
     "billing": {
-      "hash": "d10c27dc9893acf22ace2c062af2c08437d59c0ccc2cca49136049fa9c3be21b",
+      "hash": "7d2f9f12fbb74a0f3f3546a82d5259edf1ee021c14ab8a3f64865c3d4a498ce2",
       "files": 7,
-      "bytes": 55699
+      "bytes": 55782
     },
     "ce": {
-      "hash": "1ffd43e156363ad755d5806365ec12dae7747cdd9f3c1ac80f4fc57bf48076d8",
+      "hash": "f6169a29dae4cc0ee1d09cb3d09c7e8d944039ecc23b67f5e0adbf4ec5dd4422",
       "files": 10,
-      "bytes": 797535
+      "bytes": 798854
     },
     "chatbot": {
-      "hash": "33b9218ff095dc737da63324d8058f57aeb6ff1515d058f35a6c18a8a8d5d95f",
+      "hash": "1fa71e7674f08cd8e4a8d055e905f09d23a1c20f68f51c121c7efeb2a6bae126",
       "files": 7,
-      "bytes": 54920
+      "bytes": 54993
     },
     "chime": {
-      "hash": "e3dea83dbce767a2a415c9f0386fcd717b5ae0db81dddebd376b4ba2786d01d0",
+      "hash": "99d9264c2e89fdd19008d203f2cbe19eae19c90d0c0f9822725d21b001eada86",
       "files": 11,
-      "bytes": 95166
+      "bytes": 95313
     },
     "chime_sdk_media_pipelines": {
-      "hash": "1aa65faa56efb92a3da5d0cc0aea0bda451eb4128dd14f624c8242044a12a46b",
+      "hash": "32d5e2f83da655eb42f5dc8810aba9aad3e5b161ecd9ffd34b62d91285b7d399",
       "files": 5,
-      "bytes": 144447
+      "bytes": 144653
     },
     "chime_sdk_voice": {
-      "hash": "762f5e7efeaa7173b0fea2cd42e0acffca2ed06b66bb2956038a044439dcad54",
+      "hash": "27e9be72bf20f9a2b2bc24d7acc404abac8e9189ca236d9c5858590e32f4a067",
       "files": 8,
-      "bytes": 62522
+      "bytes": 62640
     },
     "clean_rooms": {
-      "hash": "43b345ffff103e8b51c757573fc7f25cd91dd136dcd7fe59946ee9d09645d596",
+      "hash": "7e9ddf57b97732f268ec5da80fd07b17d4aa4a7b3f9135400f89c20133e65d54",
       "files": 7,
-      "bytes": 101827
+      "bytes": 101991
     },
     "cloud9": {
-      "hash": "77c7b16c3aa92e6d9d5098aa0513cd1dfc070fa2337e946e38fab737492e2bcd",
+      "hash": "ee7763ee5bd608d60a411f8ec83310c85c96956494b6feac2d2681b8e61b0af7",
       "files": 6,
-      "bytes": 26107
+      "bytes": 26134
     },
     "cloud_control_api": {
-      "hash": "5d80fca304c93d20ff44ec685f478dbc454fabd7bc91e411b7a34623ba711670",
+      "hash": "f4eb59c4014b07b495a74cc0eea4cafb87089192d664156fcfe8b1bab93ad411",
       "files": 6,
-      "bytes": 28347
+      "bytes": 28385
     },
     "cloud_map": {
-      "hash": "beb008a5b974096a942332ea54f5001f5bf4bd943cfa89c8df90a1c1804d66c9",
+      "hash": "fd35cf4987a42fd43a2f185efd9d3bcd57bba340ad399883982827a644c117c1",
       "files": 12,
-      "bytes": 114781
+      "bytes": 114961
     },
     "cloudformation": {
-      "hash": "7eb410d586c23939de57eea16e02938e5efefe6eb585fa79601803822cd7cb76",
+      "hash": "4b85b9e715a97d4fb85db31a07a03f8134948229f732fd1388d0cfb0ebb01910",
       "files": 12,
-      "bytes": 207823
+      "bytes": 208159
     },
     "cloudfront": {
-      "hash": "521c84c25300e3940589dd6668e644637f2508485d7d01a91d75d41eb665deb8",
+      "hash": "6c38e742c41794b9c608972e38c791cfa7b40d53093ae12242565ecb0e69af87",
       "files": 38,
-      "bytes": 1297374
+      "bytes": 1299468
     },
     "cloudfront_keyvaluestore": {
-      "hash": "104f09ab0f132e893edd5acd1aa873133026e2bb3993b19111ce49f6381521fd",
+      "hash": "a8d9fe78b5df2b7b3443c4a7df5f8732fb36feaf4f3fb94ab2a318d0db4090e2",
       "files": 6,
-      "bytes": 21554
+      "bytes": 21583
     },
     "cloudhsm": {
-      "hash": "ae8d5d7b23f5f856619117eb88fa16b0ebb89e47da9cfb94b3fc6083d17e471b",
+      "hash": "1cc0e1b95190a9fb98a19af0daddf2fb5a10ed3092068fe355dff60205a9db19",
       "files": 7,
-      "bytes": 51216
+      "bytes": 51292
     },
     "cloudsearch": {
-      "hash": "c500b079f6d4394524bc1569a8b4831bb579bcf0fef2840a69f1870bb2b9a082",
+      "hash": "e7c4dd08e6af042410c961a54551be02bac995fb158adf9c020fcf1566d430c2",
       "files": 6,
-      "bytes": 58493
+      "bytes": 58592
     },
     "cloudtrail": {
-      "hash": "1f17bcab001da18014dd238ac554e34c739e0b2addc591c6651bf683327056a5",
+      "hash": "90c342f4c71118bfba977931f1674098e87cf79dc783c1aba09250d9ba0e75b0",
       "files": 8,
-      "bytes": 116177
+      "bytes": 116337
     },
     "cloudwatch": {
-      "hash": "1052396d2a6163dd9bd6f60c3a830e27771cbf5debd7a29d98af977376681de0",
+      "hash": "da01831eea3ea7db2a1e3188b1f1dbd04f2c311d9ee94f72839593a93b57bba1",
       "files": 13,
-      "bytes": 208832
+      "bytes": 209162
     },
     "cloudwatch_application_insights": {
-      "hash": "f159c7cf81031e6acb773384d2590231b463046ff5ef5fec44e44e25f0db0a42",
+      "hash": "73730bc5f83be036a597bbaf6a568e742a445cf0f2b26e2b39812cae24a84f8a",
       "files": 5,
-      "bytes": 17764
+      "bytes": 17777
     },
     "cloudwatch_evidently": {
-      "hash": "187a3976e211e40d6899e34e21f646b16959611b9582f20830436dba423b54e5",
+      "hash": "3001a1e76040f7ea481667073d5ba5a4338d52e0d520968d4d198fe26cf9a6d3",
       "files": 8,
-      "bytes": 141115
+      "bytes": 141358
     },
     "cloudwatch_internet_monitor": {
-      "hash": "c67e7287f9510e537f758b693fd534d09bb266a83a13527d1eced37106dcbd36",
+      "hash": "a5c490ee0dd99b9c3a8ded7e104728c8e89b83a7d7cce23db10e9e116d56492b",
       "files": 5,
-      "bytes": 32229
+      "bytes": 32281
     },
     "cloudwatch_logs": {
-      "hash": "b2b6714cda40140c2fa4bd745fa620a5fca4da5abffd67bdeee8038f826e5bb3",
+      "hash": "65e16e0d29f5fae29ee397203f558c1110578d1b34cd1865ca5b4b345970a18e",
       "files": 26,
-      "bytes": 495814
+      "bytes": 496561
     },
     "cloudwatch_network_monitor": {
-      "hash": "f7a3616907a8b3d07089f21807f24d6454fd3355bbe03e536e8350954db8d711",
+      "hash": "2f18953b361af6e97832e5f731057cdb5c522972a122d4d88d0a24830ed01033",
       "files": 6,
-      "bytes": 21665
+      "bytes": 21687
     },
     "cloudwatch_networkflow_monitor": {
-      "hash": "240414d6b856343476e9aadf7a05ec667141698a5493f4a161acc2906df098b8",
+      "hash": "e9a5b8cc13a5e1192cdb6252a8f5e41435006ddcd9db65106a36d52740fff069",
       "files": 6,
-      "bytes": 60902
+      "bytes": 61002
     },
     "cloudwatch_observability_admin": {
-      "hash": "8595e74c82888974799442510d26f99246a6c73f57d8c78f84ccb44f152c0983",
+      "hash": "9dbb38140f6754b1a5ad51da1ec8f0c1dafae1c1af7cfe0c4125e6991780b81c",
       "files": 12,
-      "bytes": 474312
+      "bytes": 474954
     },
     "cloudwatch_rum": {
-      "hash": "e58d904d60a2005b09da0f0beb85b72255fae09cc2214c0df569ed5e1e38add8",
+      "hash": "11d686facaa90e8e1f28e02d18dea0179c54a7d5ea3896259e9b3caa168507e0",
       "files": 6,
-      "bytes": 42082
+      "bytes": 42143
     },
     "cloudwatch_synthetics": {
-      "hash": "4aa76303268090db033a9a0fe441b352d520a59a4a7812415d2c807fc190914f",
+      "hash": "3401a522f7c0e030427a7e2e4f8896b36ef599869696dce02cfba05b2e5bfd88",
       "files": 9,
-      "bytes": 93727
+      "bytes": 93887
     },
     "codeartifact": {
-      "hash": "ef7c8658974b94aaf2f4d1959f0521465cb0f19eaba2c3549b6271a132571889",
+      "hash": "43b79ba8bba82b20b3644f85250c1f50b67bb4137a290520faa1653b920ef4b6",
       "files": 10,
-      "bytes": 73734
+      "bytes": 73841
     },
     "codebuild": {
-      "hash": "8d64d20ae75d8b2b8b5d4ac2d17a85dd2046d0d84ab260bb7627b84164877025",
+      "hash": "a477808888e43228d39070822cfd245d994cc3c16008065227ac77d9599e13ab",
       "files": 11,
-      "bytes": 350267
+      "bytes": 350873
     },
     "codecatalyst": {
-      "hash": "00d0ed22cdad6b416b1f4e45b24bd324f15d1758df887b8bf6cc2ae53a935b82",
+      "hash": "52b7f568afc6c30ae00de381b7fba6c1c9be66be0d5f7690e382f9703e90e6a2",
       "files": 8,
-      "bytes": 89621
+      "bytes": 89782
     },
     "codecommit": {
-      "hash": "0445da418e0d7f16e61666066b9be80e1f9cef3ef3e75f6e22e073786c5945ee",
+      "hash": "56f11234f5cb6b832959340ba0036d33d3ef996ac40240fb46bbbf04e5694f84",
       "files": 10,
-      "bytes": 62673
+      "bytes": 62758
     },
     "codeconnections": {
-      "hash": "f646653d5fa0b79fae54a8c23b79e53d22a7c5a8a275fe23ae7d63d81ca28c7b",
+      "hash": "9d65f6d286fa0cd4220343b747a7a21ad8db4b0c43d3b163eba376b2857ba24d",
       "files": 6,
-      "bytes": 43254
+      "bytes": 43319
     },
     "codedeploy": {
-      "hash": "a4794419764d8cdff315b6f82ef7fcdfae3bddecc8ee6364ffd9c0a96e210548",
+      "hash": "f0235ff05982047c871d43024ebbc78731e092d5417a2aeb85dc0004999fe0c8",
       "files": 7,
-      "bytes": 188888
+      "bytes": 189241
     },
     "codeguru_profiler": {
-      "hash": "ecf637521906fec7da53a1d87d0a15cfbf30e5e2deb74c1853d55821a216715f",
+      "hash": "1e9e9d91bc2e15f332a15f500f0c4691770ea7adaa3c2630a7ce4c1f950c5313",
       "files": 6,
-      "bytes": 33622
+      "bytes": 33666
     },
     "codeguru_reviewer": {
-      "hash": "f875dd3f4692b73f3d7733bae460cc26b76860b25ad639c940d37ef58457b95e",
+      "hash": "868d29c6834758017f4929737a8f6d0c189ef2d945384d63477eb2e9f9013f26",
       "files": 5,
-      "bytes": 57100
+      "bytes": 57203
     },
     "codepipeline": {
-      "hash": "7284836694c53f5f55aabf5e6a0121af0bbc313feb6c3c3d520ebdff4deba626",
+      "hash": "02d9e7243feb689423deb55ba0a67c963472b9accf606a9922fca5d4e5c85bfe",
       "files": 7,
-      "bytes": 308228
+      "bytes": 308725
     },
     "codestar_connections": {
-      "hash": "2e59895d178bb990b015986fb73ea6dee058bcb7c152a8018978efeed12c765b",
+      "hash": "637db5dbdb3a6d82188fdab5af10be9e6ce8f4181f27403e4677d1fba14cf55e",
       "files": 7,
-      "bytes": 44152
+      "bytes": 44219
     },
     "codestar_notifications": {
-      "hash": "fe54f0325b0e4766d8d759117a37373ecb332b1656978528bb012f720da8e134",
+      "hash": "f2c15cb6b6fa52960e79cdfe049e7a28a1f90b766b9f7b42160689e34af543ff",
       "files": 5,
-      "bytes": 21511
+      "bytes": 21536
     },
     "cognito_identity": {
-      "hash": "8c19f9c764d504ca19e3d6db7cf940ccb3c7d0aa5bef8862e64b834aae6634a1",
+      "hash": "fae3fc38c6118bda47f1cb2c36a544c95a21fed7aa612799e1cf005e7db2aafe",
       "files": 9,
-      "bytes": 83923
+      "bytes": 84031
     },
     "cognito_idp": {
-      "hash": "25afb40070e7e6a952a5cb91796ff044eb1a44cea1e5520c2fc772397f38cf8c",
+      "hash": "25b80d880b444fa4651881d1d9bf15dc6f30290f1a39de3af362009715e5618b",
       "files": 24,
-      "bytes": 631012
+      "bytes": 632036
     },
     "comprehend": {
-      "hash": "fa5156c59e876c3727777ac5f0a8bcb594035106ff604651f1067fdc9a749b60",
+      "hash": "d28134196636f11a9a0f5b5e48b858ad1473f723c7f741f7ecb5d7fd35f6792b",
       "files": 6,
-      "bytes": 121359
+      "bytes": 121565
     },
     "compute_optimizer": {
-      "hash": "4fbd929d27537d7971b84353937a35e50df7d6278bc2ecc7757efdf520b55ed8",
+      "hash": "a8583b34ea8f2a6035a132c1eaa06c06fd1e9b0f87a27921bbc30c88702fe6ba",
       "files": 6,
-      "bytes": 61549
+      "bytes": 61643
     },
     "config": {
-      "hash": "2514423faf4ac067692cb9884f18df006c3efc03c842748a153f0ea4f2e335cc",
+      "hash": "a1c859e35393a3493420d438d9a2ae9a4ef2e06a8f9a48f6696e20b605ab314b",
       "files": 17,
-      "bytes": 302315
+      "bytes": 302815
     },
     "connect": {
-      "hash": "352189ecb646d40b678b2696955741249ff30e6cdf5d7b8adfe1b2733cd04296",
+      "hash": "7a80cb5be645901255b7512b5d1dbbc8a34e156d4ddf091a083900f63a68b06f",
       "files": 37,
-      "bytes": 648265
+      "bytes": 649300
     },
     "connect_customer_profiles": {
-      "hash": "7d7ae38c52c48bbde09628e5d585c0378e775556f71e21d413a0aafd5c9f0e80",
+      "hash": "a1bb9af5f642832716017ddded4f338754619097a6558064ea821345b485c9ba",
       "files": 6,
-      "bytes": 167603
+      "bytes": 167881
     },
     "control_tower": {
-      "hash": "aab6f9d444f7b984a905756012f8a13b4e0d72f6abdbd90618152739b2bcb5a9",
+      "hash": "0016407be1e88bb98302c61ae8d7cbc168732e7a280599cb5bf24187d2fea0c3",
       "files": 8,
-      "bytes": 72238
+      "bytes": 72359
     },
     "cost_and_usage_report": {
-      "hash": "448943c82dc6809dde6fcc2367ce223112509619eee0ae737fb626342084af9e",
+      "hash": "1dbfb59b8232c669523d9d86d1c9b1e64137de2f460ca7a17457ad604557a4c7",
       "files": 6,
-      "bytes": 27395
+      "bytes": 27422
     },
     "cost_optimization_hub": {
-      "hash": "af1c461197ccee0bb2e65893638d75233023aae371e6c118ed02ef241a1923f0",
+      "hash": "a424631e515d841e560af6787490bb0f7e46125c0ab290c8a76b3c2ecce6741e",
       "files": 6,
-      "bytes": 13374
+      "bytes": 13387
     },
     "data_exchange": {
-      "hash": "f218296ce43d33cfe43091ebf491a0e3433bd0cb434d2052047b77453c16f738",
+      "hash": "6a42ce06d646bb32a48ce360fcd85217136d16f600f56aaa39e9ffd800ce5dc2",
       "files": 8,
-      "bytes": 121358
+      "bytes": 121533
     },
     "data_pipeline": {
-      "hash": "9e9496090bdba48439d54687407f7d8ad4a32ba9b19e4186962b5c6b79c07cdd",
+      "hash": "a284db8d6e850060500f731ef6c42d7ec5d8e9f8c288fe2d40dbc45791c53a47",
       "files": 8,
-      "bytes": 86028
+      "bytes": 86158
     },
     "datasync": {
-      "hash": "592897f781c71b7ee5a038d896e1be47ae02afcbe0933f479dc52731a5e11a64",
+      "hash": "35fdb9c4dccce124909dbcfc01d2678247f05040f8a6c6ff43263ead8b9f27b8",
       "files": 17,
-      "bytes": 313712
+      "bytes": 314280
     },
     "datazone": {
-      "hash": "8c67197a221f97d39fb6b48e83a8e9effcefe8b6294b7de93030a85f5a707293",
+      "hash": "6dfcac19d7fa23af7fae66041de16af6dfcf1e1135b641e95ee84a2ff8afd5d6",
       "files": 16,
-      "bytes": 233972
+      "bytes": 234352
     },
     "dax": {
-      "hash": "1e39b6f224a3ceb888b95de8f1b52d1848a9c1e09984af3a44119bb092271790",
+      "hash": "29603ea17321cbeebb067a7ec28c605ca60c9f505b15434507efce5c460cf103",
       "files": 7,
-      "bytes": 59091
+      "bytes": 59182
     },
     "detective": {
-      "hash": "16bd6e2d454398802934f8ed78fb4e091fde028747b20b5db1f9ecb36a47a1f5",
+      "hash": "abe488b002b4efe03e229f44a5ff5bc0e6a64a5c11346d66e4b57a6052802a87",
       "files": 9,
-      "bytes": 41767
+      "bytes": 41822
     },
     "device_farm": {
-      "hash": "9e33bb168a32b6d8369cf0c199cc6e3e6aff74ac937fe020b48d1b7329bceb75",
+      "hash": "5799c53fc6e2252ed099649c32043db27da77d1b69c0dd59f15874faa1a077b9",
       "files": 10,
-      "bytes": 88578
+      "bytes": 88703
     },
     "devops_guru": {
-      "hash": "4e187860fc77775cdbe986fddcb8b44e6159b2cd9bad972fcc7c50d0e599f735",
+      "hash": "69dd0723e4276c68c44a9c34dbb7668b83a86c35fffaf3c68f7b409f8aaa48cf",
       "files": 10,
-      "bytes": 107157
+      "bytes": 107353
     },
     "direct_connect": {
-      "hash": "d364303eb74bb2b3d31da2c30433c32d8bdd44f79557d6b7b945ba0847287a01",
+      "hash": "bb3b06fd2e4e93b8a9301e0e9001cd8011cb04c1f4c68f6432db986994aebcc6",
       "files": 28,
-      "bytes": 351839
+      "bytes": 352384
     },
     "directory_service": {
-      "hash": "b3542a5b771d903e4772bbf7eb1d0bae1de8dc200ede9f068937a9b99df9bced",
+      "hash": "ad1d4a8beac4d8bf608dfc7668ba3602e0d33c2cbc2a366bb8e8b6b7bea92553",
       "files": 13,
-      "bytes": 165600
+      "bytes": 165878
     },
     "dlm": {
-      "hash": "8f5ecfa070b51d8c3fad36b581bea016649196e04a0b01783a7b25206555fb19",
+      "hash": "e4ce3eb95f366f4849acea97023acb8a2cb729052ac1ebb903f55101fd3cba46",
       "files": 5,
-      "bytes": 171939
+      "bytes": 172212
     },
     "dms": {
-      "hash": "9f6b653debe5b0074cb798e16f5c56216c2603d5d6b75f02ce113491756f4f16",
+      "hash": "4fc5d2a02f077d082a7d8c45d063bf3c62b3912e94d7405e25a68ef64a2532b0",
       "files": 17,
-      "bytes": 513390
+      "bytes": 514043
     },
     "documentdb": {
-      "hash": "b1e3718a92bbe782aa7f1a4598d7f3c7d509fd74c7a953ada8945c04955c724a",
+      "hash": "038ff21710ae4a11662c7f100d4f611354eb8b20e9761b9152fdc31294edb6bb",
       "files": 13,
-      "bytes": 212608
+      "bytes": 212911
     },
     "documentdb_elastic": {
-      "hash": "e7bbf480b8abc51d7173290ca9f03f39d6cba087d51e2942e9ceb26a8acac963",
+      "hash": "5fbc2b027ed9c24523b384e62a8a77d051533ffd6d44d96fdcefb778d43d6549",
       "files": 5,
-      "bytes": 28552
+      "bytes": 28584
     },
     "drs": {
-      "hash": "b04ece2ef611f3d007e517bf226356056ec19df613fe9b0a05241a17c684d843",
+      "hash": "8e61668d89c4054a8bc45a5feb127259fb73cf99a0a8624b45ac6a07f886c5ff",
       "files": 5,
-      "bytes": 41808
+      "bytes": 41856
     },
     "dsql": {
-      "hash": "03c8581c2b1c43faf8d8e2b41da6d8baf224762ef0742aeb3c165ccc1955f336",
+      "hash": "a707f5d876a5283837f42e327b43da3412cf4d50b1eb360f0d5c6d6c8390a75b",
       "files": 7,
-      "bytes": 56340
+      "bytes": 56432
     },
     "dynamodb": {
-      "hash": "9c0838f35d3c6d57aefdae710d75bd5cd51c2f648f2cb87b12723b4acb9c203f",
+      "hash": "8c2907913ad9121245964db807174aded90f33f88a854bf002c94cfe4719cb7e",
       "files": 18,
-      "bytes": 390070
+      "bytes": 390746
     },
     "ebs": {
-      "hash": "63a1d6e1f1edf5c2fe9e48d32b41a3c328ead00e28577b223189fb2adb452de4",
+      "hash": "b4746143adba8498f1535f7dab72a62df1fbd603506e676bebb0eaf6335585db",
       "files": 21,
-      "bytes": 291083
+      "bytes": 291604
     },
     "ec2": {
-      "hash": "6bd425274b794c09fb8593ce2a0e64607cb7a7da29200a29603a13cd45145939",
+      "hash": "dadaae79e5a9a210fb2447782809a3f3c54a6ada994ae425e2774e1bd61d9a6d",
       "files": 56,
-      "bytes": 2102944
+      "bytes": 2106362
     },
     "ec2_image_builder": {
-      "hash": "b5ca8b403624761f6150cd2a53d62debbf5c907a16d93f0542ebfcd1b7a5d8d0",
+      "hash": "240aa0c8475fc4329690b1d6fee0bbf8f871f07aaa4b22528543f29615f3479f",
       "files": 26,
-      "bytes": 759288
+      "bytes": 760466
     },
     "ecr": {
-      "hash": "bca2dbebdb52d441d25cddc261ad9fe1011dbf06424315d496966e1dc4e948cb",
+      "hash": "db27bf203045561fc82568c09f0a4f7dfd095b6fd4b1fed1890e129278900254",
       "files": 23,
-      "bytes": 269929
+      "bytes": 270354
     },
     "ecr_public": {
-      "hash": "2f464ea2d93f6eb9374e82a68bdee686ddc3582a73cbd940560d89281de9059f",
+      "hash": "c3f41484351608e9d0f3869a73d76ff92ddffe934c69ebf23317404bfcfc7c7d",
       "files": 9,
-      "bytes": 62452
+      "bytes": 62549
     },
     "ecs": {
-      "hash": "3ad370495840940eb50ad6aa4d643a901a1a66972935b5662663c00705a954fe",
+      "hash": "697a8dad32e920fbd980624a48b77b0d7da5797783ae70b3997ffa39dac499a9",
       "files": 21,
-      "bytes": 1132707
+      "bytes": 1134501
     },
     "efs": {
-      "hash": "225f06835711f50e35dbe8908a49d8491cf7b1a337b2f31075003f0b55c19df0",
+      "hash": "9d77e653fcbdf89e5edddcd3f2a56f519766b5a4c3837bc083500d7d979c1e3f",
       "files": 14,
-      "bytes": 171342
+      "bytes": 171631
     },
     "eks": {
-      "hash": "6b2bfb839ddac7b9a67ed9caae21ca64c9d28536fc2576b7122acf06f6fc8a18",
+      "hash": "a9404c2b37115f6a8cef568df4bf4c85a47ed5c01eff25186a3a8c175f26f020",
       "files": 24,
-      "bytes": 871061
+      "bytes": 872420
     },
     "elastic_beanstalk": {
-      "hash": "3c1c79ccc27d37021acba250369d405f95f5c1ddd0c810f105a4c0089851a4f7",
+      "hash": "c70b316b597757b39ebc9a740e2f0265098909828c4142f4c931974b6cf1e021",
       "files": 11,
-      "bytes": 109234
+      "bytes": 109393
     },
     "elastic_transcoder": {
-      "hash": "e5934198db837a972717211a219b1a9316c94857dbfb9e13949abddfca05d4a7",
+      "hash": "fc0684b284c859074db83405738f0d01daab706bd5374cc11a019ee62861a1f2",
       "files": 6,
-      "bytes": 119836
+      "bytes": 120040
     },
     "elasticache": {
-      "hash": "496fb354d71ccd57013a6e4198593948169e749fb5e5fe0ba2a9cfff55c332ff",
+      "hash": "0bb4fc72479fad141fc50bfa42584cc5c4c8db8c4cf9103a90d12c3571c5da5a",
       "files": 22,
-      "bytes": 434996
+      "bytes": 435617
     },
     "elasticsearch": {
-      "hash": "cb97177266452393c438420aeb290b9b18effd4f52fe288c2c253e8dc14107a7",
+      "hash": "122d91e2503df31c3c749110f9721f55f5e325f18eb76bf6e42cd60845bf4207",
       "files": 9,
-      "bytes": 250312
+      "bytes": 250767
     },
     "elb": {
-      "hash": "e5eb21a083b0c59bec202d4a35f2bc9c787af90d02dea15f1e10ff278afdf21f",
+      "hash": "9daf01d7deab3fd3913f4073a42af3dfcc3994da95e94bb07cf45a23b4b78bc8",
       "files": 28,
-      "bytes": 1364901
+      "bytes": 1367031
     },
     "elb_classic": {
-      "hash": "013f13f82d5cbf1a1f93ccf003966403a1940bafea97255478acc6e78f3d6c73",
+      "hash": "73c5196f101ff34325da857a61b607ee9781e16d89c4223283d263ef5bb3c4a4",
       "files": 16,
-      "bytes": 168905
+      "bytes": 169171
     },
     "elemental_mediaconvert": {
-      "hash": "bd1e32ee57d5385ee8ccd0ea8256710df1b70d787c5b6a08496902172080c03e",
+      "hash": "46d63e329c43e592ba11c4140bd10a7a3ad2350f79ae1f9e82718ff14a7cecf6",
       "files": 6,
-      "bytes": 27925
+      "bytes": 27964
     },
     "elemental_medialive": {
-      "hash": "6a9c644ba02671fb042d31a29410fd83186eae1e965816fbe2b042b5c39430f0",
+      "hash": "559cd99d17dda1c84ecfcfbd6c9118340959c6a93dfd5e5b7d034b45df8edbc2",
       "files": 10,
-      "bytes": 1450539
+      "bytes": 1452819
     },
     "elemental_mediapackage": {
-      "hash": "593ea42ea4da64733aea4cea6dcb760ab2d8d400f1a349586c48ae11e18b5f70",
+      "hash": "944aa2209137be0854edfb068cde1e513fd0f404d22e23481c5e207f5cc16895",
       "files": 5,
-      "bytes": 18234
+      "bytes": 18252
     },
     "elemental_mediapackage_version_2": {
-      "hash": "da377bb4a5a9bd9c36df6d0b6ceaa9282c77fb76445f4f886ade5200f17280fa",
+      "hash": "1315859cce2e426f10cc638e14268b9fba4331249f31c99862a6fad7f7da5ce2",
       "files": 5,
-      "bytes": 10112
+      "bytes": 10118
     },
     "elemental_mediastore": {
-      "hash": "e4349fe5a24f3bcf3488e2af0e3163f76e10a2dc43beea2573df3268b4c3f792",
+      "hash": "3f1ffeb85b9f245fab071ccfe5d86e2404a3b95935d51d2284c77531e40f558a",
       "files": 6,
-      "bytes": 18178
+      "bytes": 18197
     },
     "emr": {
-      "hash": "775e530371f2b60d2321accd9c70ec853f37667a9052bd242f4dd484df02ce23",
+      "hash": "42d932c7dca8659af6c200a08bad0ef347f34950d33b557ee27c4d2a51207a23",
       "files": 14,
-      "bytes": 420222
+      "bytes": 420830
     },
     "emr_containers": {
-      "hash": "c15db1d165a6adf54bd33ffad91e3345ff8515ef0d9934df07986851599a3305",
+      "hash": "b13c0f158c41d67cc3e079cbb9c4282a87a55b89459b117da8d81b67293e15a5",
       "files": 7,
-      "bytes": 118927
+      "bytes": 119140
     },
     "emr_serverless": {
-      "hash": "564d6ecc47aadf12e27c31a61139e0834f0705e19edcd3cf6e412a6537bdb2f6",
+      "hash": "4726b61d1d463eaac5c07a34535967e0ef5c10e1921f1eb96dbbb602ecf8a7d1",
       "files": 5,
-      "bytes": 121839
+      "bytes": 122082
     },
     "end_user_messaging": {
-      "hash": "437b8df5d6e1212253437308f5fde3a5f669defab4e090db091021095367e42a",
+      "hash": "0f3b4e9355073f490e93e670c09ac4026eee077c4161a47487f5234c5e1d439a",
       "files": 16,
-      "bytes": 171818
+      "bytes": 172076
     },
     "end_user_messaging_sms": {
-      "hash": "69625903f45863021c282999c5eec1ebd28511cbbaf39c6d351d174de43f5ffc",
+      "hash": "7954cfb9be689e466b5bd49cab8b8f998169913cde7d5a669f091ed849162ee0",
       "files": 12,
-      "bytes": 134339
+      "bytes": 134535
     },
     "eventbridge": {
-      "hash": "56dacd33ee9b16237f1c901882a9039563f94ad1d4e401508a4c53b444afbee8",
+      "hash": "90141dc12f803816ce38eda3f8badda71bcfca379eaf1fb6cd7a52d46cc9fa1b",
       "files": 17,
-      "bytes": 395613
+      "bytes": 396338
     },
     "eventbridge_pipes": {
-      "hash": "12de0ceb2756bdbb800c78e4004cf388ebec767e42ba0ef149e2f107dffa1ed4",
+      "hash": "16647a2509e20928e368677154029775f2f92cb8611859a21b96c8b1abad6c4e",
       "files": 5,
-      "bytes": 401706
+      "bytes": 402348
     },
     "eventbridge_scheduler": {
-      "hash": "62367a7f5e0ba3c7c62d3e6e4da9ee3d58ba0a3b3ad4e4268ca9b401ee857619",
+      "hash": "099adf71c2f0798ba59b0a2979d67400f90de5b868a9c70d1efdb5fd5127cf03",
       "files": 6,
-      "bytes": 127058
+      "bytes": 127262
     },
     "eventbridge_schemas": {
-      "hash": "ce2d4143ab5f431f7767dd86061c65ce104ac33bcd08c7c50b0c2207fc37f95c",
+      "hash": "45b6b47e7425bf9f42d36441ff767a4660d99dcae2971cc6c16f3343d24ba172",
       "files": 8,
-      "bytes": 40069
+      "bytes": 40120
     },
     "finspace": {
-      "hash": "1410badbd37450fcc8e15e8cd06c39c6b26ca670a1c1fd79855d10cf27353e26",
+      "hash": "7d7655832a87dcdccaac3f44fd4253f1c19e3ec2f1e0d76c621f71448ac7dc12",
       "files": 11,
-      "bytes": 265662
+      "bytes": 266124
     },
     "fis": {
-      "hash": "6ed8df4502f9526b0b6d45b6fb24080ba65a2a24ee6eebcc04e7dc84a362dbfa",
+      "hash": "ac39340a330a3c8f31ec7ac502e9d86b5c23883a8bb407d7818140752a59a992",
       "files": 7,
-      "bytes": 131595
+      "bytes": 131825
     },
     "fms": {
-      "hash": "d0821c321629bff3c515de0e5b80e16ff74a82ed3363a1d390c4f7ae1d611131",
+      "hash": "9afccad59053b8f8407da37654258638e8f3f569ac804a292a54c54fdc8602d2",
       "files": 7,
-      "bytes": 149877
+      "bytes": 150114
     },
     "fsx": {
-      "hash": "e6c72e9d2f26afb0f5a3e8d2d82f49f9d63f2d8a929158d8a3fdb927bdfd4ab4",
+      "hash": "239c906fb96dd2db9137ae343c8a6963f0d912a4ca304defec33649fb5a35f79",
       "files": 21,
-      "bytes": 716024
+      "bytes": 717178
     },
     "gamelift": {
-      "hash": "e6ec4ef738a34ac472add051b0365f86e7979fb4f872e05dc099ee10bf4c0cfc",
+      "hash": "fcb7113240ea20ae77b4be8eceac24afda2db0e53ea1c90e2db857e69b6c8b2b",
       "files": 10,
-      "bytes": 174594
+      "bytes": 174906
     },
     "global_accelerator": {
-      "hash": "909a9df843741c67455d9b37f7d50ec0cc49e82f182f1b5445e1d37795ab7c17",
+      "hash": "8121fab6a1b03655dd7e9af5f747c8119d863dfddda9d4248c377c4176490f9e",
       "files": 13,
-      "bytes": 204164
+      "bytes": 204517
     },
     "glue": {
-      "hash": "dc6fc7fec56f66438e67562407c7e63a6a0e4b78551857f79dbad3e2c223f3a1",
+      "hash": "d8fa2fcc818aee979b369a4706bd921787e933d1099d1a59acbbb3f077fc822e",
       "files": 31,
-      "bytes": 1139248
+      "bytes": 1141084
     },
     "guardduty": {
-      "hash": "99f4d7247c2dc64e58446fe850ea2acdb977e2773f6668c35713f9ad14856a09",
+      "hash": "c363025e110c47cac6325143a2baf3225f80c6efb48332ab4cc56edb274a55a4",
       "files": 19,
-      "bytes": 271274
+      "bytes": 271762
     },
     "iam": {
-      "hash": "fc2a60bae54c45b495f6b354378962a0020cadc1a1c717c0c493325173bef007",
+      "hash": "cee6972aff600470e548f4b8d4aaae82944a0b81f8e2b70bdddcd66f449d0378",
       "files": 59,
-      "bytes": 487692
+      "bytes": 488466
     },
     "iam_access_analyzer": {
-      "hash": "fce15137f6d368bfb0f0d6e7768b4d06f43645414ed941abd2b2f9214cc4ea5b",
+      "hash": "b18bbc5d1e4a6dec30d90679786ecbc0caf42c2f9fe64da52bc9ed4cedbf1516",
       "files": 6,
-      "bytes": 63291
+      "bytes": 63398
     },
     "inspector": {
-      "hash": "89290f48b816b2433c0197130328aa83eb5c11aacc4fbc09cb8e381005d657fb",
+      "hash": "86bd6804290f08d33c5f9553b4d2fe1e423783a169a2c749532a4369cda63564",
       "files": 9,
-      "bytes": 456551
+      "bytes": 457176
     },
     "inspector_classic": {
-      "hash": "6195a1439bb89f4595fa27589c8a0f65be316152bdf7395453b5fd81124b76bf",
+      "hash": "4d606d9f6d37b5684725682ba9494125521a7deb14d04b3b50a0dc93533bf278",
       "files": 8,
-      "bytes": 40636
+      "bytes": 40693
     },
     "invoicing": {
-      "hash": "48fdab90295f9ecdd8c61a417156e20dab0a3363b1cbf3090289159b50e663f7",
+      "hash": "e12c258fdc014a890c33bfe36ac2fb58bbff28756ab8b62807c96a85c86b8c7a",
       "files": 5,
-      "bytes": 25060
+      "bytes": 25095
     },
     "iot_core": {
-      "hash": "4340e4562000b55c46abfd4d14232632bbafe495558606e7653a2168d2799b0a",
+      "hash": "68437c86a05db5404171e41e1950b6c7061acc4c6171dcd9c3363aa4944c29ee",
       "files": 25,
-      "bytes": 687368
+      "bytes": 688542
     },
     "ivs": {
-      "hash": "f7983e5aec14a01008de84293742006ceb4c64e01b2941f53969c9b936c1a858",
+      "hash": "6fcb0f56c0961badcba68e4c628cf2afcfc81dc377b4b4f78f4da6b50fde8bbc",
       "files": 8,
-      "bytes": 73603
+      "bytes": 73735
     },
     "ivs_chat": {
-      "hash": "a9869f8a1a1b80bc11f6c2e2c3803e067f921286e693a4bf846699cbe689386c",
+      "hash": "fe3066666b3d21bfb30d9595ca33af1f8553f15e9573303b032220e01dda545b",
       "files": 6,
-      "bytes": 58844
+      "bytes": 58955
     },
     "kendra": {
-      "hash": "6db4e3ed0735945886521fb1f18baf0e5c5903918aecac125947767be74e72ed",
+      "hash": "fd372f4cc916164d48b8863df962760286192454e28512799a1a6ab9aa718594",
       "files": 15,
-      "bytes": 489843
+      "bytes": 490673
     },
     "keyspaces": {
-      "hash": "62e24b5d01ae3e1bb979de9c12cc6a34b9ec0a3f6af9a7233399f1596d33362c",
+      "hash": "babcf82441fd801ef7ab33bcda63006e5d06b7393cfeb11a3c3960951dd349f6",
       "files": 6,
-      "bytes": 96367
+      "bytes": 96567
     },
     "kinesis": {
-      "hash": "ae76eab4bd9afd473b0dc5a68cb6307a86be70ae96490891a7ffbb03696c8815",
+      "hash": "bc8dab57c01b713eddfabb49eedf5aa814e3a8580b8079a129455cb2810f56e4",
       "files": 10,
-      "bytes": 82857
+      "bytes": 82986
     },
     "kinesis_analytics": {
-      "hash": "df87e8bc69a703961fc551aa6274bbd2a03deec68604326cb55f2952a8f871b7",
+      "hash": "098c66c6c35637a2328aef2b982d0dd0fde916f327165a91e588a7f0e8dee7fe",
       "files": 5,
-      "bytes": 157846
+      "bytes": 158145
     },
     "kinesis_analytics_v2": {
-      "hash": "78d7828c98407409eb3233dc0ca6609e88ac1307bfb5120e7818e2bff7f9c746",
+      "hash": "863baa2a3d755b5ac0f9dc9252c50a15a6c983bbaafdcdefe35fa0a4e43b7df6",
       "files": 6,
-      "bytes": 289179
+      "bytes": 289684
     },
     "kinesis_firehose": {
-      "hash": "f773e1bab1d711dc9e0e6400a5fa7ef6ae6222b0e7eb69515305c1c734578a8f",
+      "hash": "d7353e3f552bc41672f158c0f1ffc6c9711bfee113c6b3ba57607ecdaa6fb621",
       "files": 6,
-      "bytes": 815999
+      "bytes": 817210
     },
     "kinesis_video": {
-      "hash": "acdc9d83bd9e561aecf03bf4bc8c8f9f78e6fa743b862b5147cd1b799b196772",
+      "hash": "3e48aa2765fb4cf84f8a4d8347caf2ba9a6b7ed34a7cfbe75740e561752376b0",
       "files": 5,
-      "bytes": 21208
+      "bytes": 21234
     },
     "kms": {
-      "hash": "fd062a55c04d194d8cc1451b5741cabc69d031f5ab890d289af15d9be6e4d544",
+      "hash": "a13efdea3b39427b62cc93aa2f6422a5746581186476ad6928ea1c929f399f6f",
       "files": 21,
-      "bytes": 250975
+      "bytes": 251343
     },
     "lake_formation": {
-      "hash": "7070a49b70758d0ad7658f28a15ea54f50acbfdf3dff00028a9f411b4b0f3810",
+      "hash": "acab59d6cd3076e950397cc8b0527b41e68a3f03f878ff4ff8d29018bb69a0a6",
       "files": 17,
-      "bytes": 454824
+      "bytes": 455621
     },
     "lambda": {
-      "hash": "8509e3b86b2bcb76b31a9cd362427b7cfb287439a3e217d8fb98c211460f9d16",
+      "hash": "6cb391c7bd0090291f46b9da511cdccdd3aaba456a5b851c5e3e4b8bd7e40c43",
       "files": 27,
-      "bytes": 636643
+      "bytes": 637755
     },
     "lambda_core": {
-      "hash": "02d86222c0a8c872e374fbf07a1ab10d1b59c7e04a3bad49cc0a40c8cad46133",
+      "hash": "d533fa7a5d9e8c0c4f693d7ad5391e161d500070428467d03041af21092449dd",
       "files": 5,
-      "bytes": 31538
+      "bytes": 31580
     },
     "lambda_microvms": {
-      "hash": "0adf9b77aa1b595e5973b6f64702fa6409bace34b75566d4261c65c422ca2ff0",
+      "hash": "e7a04803d6237a7e7b52ccefaf450398bc1c710106d558e850daccb51c973086",
       "files": 5,
-      "bytes": 36036
+      "bytes": 36087
     },
     "lex_model_building": {
-      "hash": "43a25ea4851c7c997388fe1ebbeaf441f57e8e6d6815443e50cca38750554105",
+      "hash": "f2ee190d780c2cd2f1f3e63b303a64daf0e0108dedc6f5bf57a64cba2f8c2ac6",
       "files": 12,
-      "bytes": 275161
+      "bytes": 275640
     },
     "lex_v2_models": {
-      "hash": "71df24244799bef8ff05dc13bd3f507a2f86608ff4a18707e55176e769d6e7f2",
+      "hash": "a3dae01b9e7047f457d759197889fe88e0a9c537fa41b053649cbd927dabc7fe",
       "files": 10,
-      "bytes": 8378090
+      "bytes": 8387330
     },
     "license_manager": {
-      "hash": "933e1d938ab208b0edc4e73544a7173fa66cbde29b31325cdcb22b24e9380a23",
+      "hash": "fa6aa28fe8e151c90d161a1bb40a5cab974a834e17edaf2d4ff5b83d3613353f",
       "files": 11,
-      "bytes": 102597
+      "bytes": 102744
     },
     "lightsail": {
-      "hash": "3629261431e40a3d4c04aa0fa5e759714f988ed16d24f87fc30889641b97f40a",
+      "hash": "070a2571b4643eeb67f2a255bca7c3d174fab78c79808386f5f1de5be1316360",
       "files": 27,
-      "bytes": 369954
+      "bytes": 370553
     },
     "location": {
-      "hash": "8fbef79f2189f2825b4518512da0dd512130a2854b2fc765b1f4b092fff5feb3",
+      "hash": "0aff2a7f2cf9adc5bfa1d23f1cd1979ba525b1f39c38d214714631a4ef063e9c",
       "files": 17,
-      "bytes": 152947
+      "bytes": 153198
     },
     "macie": {
-      "hash": "ea3b71fb6826c273792a0a19f858fe7df3ee7d78da954876b047df0ad03eb6fd",
+      "hash": "9c35adb778778af1e2b82cc49bef31fcefc6dedf7373a8a0d4848542b44e8c4f",
       "files": 13,
-      "bytes": 288286
+      "bytes": 288773
     },
     "mainframe_modernization": {
-      "hash": "69632f21c299806ed678a923400e83ab296bd29fc2a173f2082d7ecdae033a47",
+      "hash": "20b05b1c8bfdcea38ed26e420ead74fc195b1891ba793ec445fe8a191edf2106",
       "files": 7,
-      "bytes": 93790
+      "bytes": 93934
     },
     "managed_grafana": {
-      "hash": "57420d28965b28a085565223ee7ea66aa01aec3f58b49ad6f30c74ac3e7058e5",
+      "hash": "fa8475905a6716e0722d31807f59d6c9dde8cdc18360b2059473b0d9be1aa166",
       "files": 12,
-      "bytes": 132359
+      "bytes": 132566
     },
     "memorydb": {
-      "hash": "39285039e95b489d83ff1d5cdbf9c9b7f151d07998a3b55f0fde6cd9f9414e8e",
+      "hash": "428cc225a5d5127aed2bc7a36e58d12fe77f02030b372f379bdc3d1d6f43a60c",
       "files": 17,
-      "bytes": 230389
+      "bytes": 230724
     },
     "meta_data_sources": {
-      "hash": "fa9980eed93fe893f47be217d88d5a62e0ad71bcc1d224df531acc3a2a6c8688",
+      "hash": "02220ad2e3006a1bb30ae7850979ca3b5fd90cafeae5fd14338839718316a68d",
       "files": 12,
-      "bytes": 58894
+      "bytes": 58988
     },
     "mq": {
-      "hash": "a5153626bf8756dfa55c6b7c67197e6603c3879a78dd83adc0bd79936993b05e",
+      "hash": "96fe02990205363d30d496dfbf3ac2acf1ebcf901d22aa98ed00d279e30654ac",
       "files": 9,
-      "bytes": 172017
+      "bytes": 172281
     },
     "msk": {
-      "hash": "86db936dc60b740f0d6d58dc39efac7a08a1e9c2112890c3808de94977357b21",
+      "hash": "856c40313df87edc9ef8b931bb4b9f92e69aff61d2b99ec0a87f07367d7094e0",
       "files": 20,
-      "bytes": 422227
+      "bytes": 423006
     },
     "mskconnect": {
-      "hash": "7b941ef1c1706cdb9da60a7ef463957bec71e8ea062ee682f68a34875fea2b7e",
+      "hash": "c4ea1603ff636f2dd5d0255aca8c01308de253f472ac195bf64fe8dbb0aebc2f",
       "files": 10,
-      "bytes": 172972
+      "bytes": 173327
     },
     "mwaa": {
-      "hash": "a1f5f532680f43f78042ff8d2d067b9051e578aa352976e818532cdce554a6f7",
+      "hash": "189c9951449ba2f427b91bef3ab96316fa10c3de32b84359ae6b87d25472432c",
       "files": 5,
-      "bytes": 86415
+      "bytes": 86551
     },
     "neptune": {
-      "hash": "2911497216dabc959d449bde2a5f98802921a0046b679649e3c7d683bfb15516",
+      "hash": "c5fb4d91e73327e1b89892ea34c3fbb8107e6d236f15408466a6152feb328cf5",
       "files": 15,
-      "bytes": 242610
+      "bytes": 242944
     },
     "neptune_analytics": {
-      "hash": "e49d021a22eac2c7079c889d5f07a1c9da58ef2d733ac822c7a04229f77e83bf",
+      "hash": "2491afb23bc7f231424a6c775ac3053a4e1c444597653a5197f6e2e2d5d208e0",
       "files": 6,
-      "bytes": 46080
+      "bytes": 46145
     },
     "network_firewall": {
-      "hash": "2f1fd813cb31de7ed18b0f3411a6b8539412c24abab99d841b95c325f2814632",
+      "hash": "8585b0e5ce53bfa10f3c67fb1d457bafa7757f544b606a969b01719f683fe5b6",
       "files": 16,
-      "bytes": 617819
+      "bytes": 618798
     },
     "network_manager": {
-      "hash": "c95ef2b602eebd31d2645c37b25dec83e964ed9b7f6dc704ab83fa07e8022c8d",
+      "hash": "c3bfc2f45a8e5f0d8fa11140bc838fec30061d481ae8965ced334aebfc3a642b",
       "files": 37,
-      "bytes": 654268
+      "bytes": 655372
     },
     "oam": {
-      "hash": "0851dac842c181bc99adfc13643760ffffb56b3fceac5c31c60310b5384e55ff",
+      "hash": "4df2cf86b1c8dfc2742fc894e9e26eb94a32cde8beee693bd385352cf429cf44",
       "files": 11,
-      "bytes": 96459
+      "bytes": 96629
     },
     "opensearch": {
-      "hash": "14ca685a8614b4767f8c471b2c6d0ba5fbdb92c2d98a3017729849d04eafe239",
+      "hash": "ae1e773ed3e9ae2fb95a25c6c0394b7e5341076f5b401dad773ed3fb40eba115",
       "files": 15,
-      "bytes": 484432
+      "bytes": 485334
     },
     "opensearch_serverless": {
-      "hash": "a39b18b3b6c3ce6e8efceeb645e97e0934f733075fd2596fd7bc584685842aae",
+      "hash": "f47c5cf9c5663234780fbf06482240872238c685768e6a25f7ffc80d471f46bd",
       "files": 19,
-      "bytes": 215349
+      "bytes": 215685
     },
     "oracle_database_aws": {
-      "hash": "1f143922429447352059e4a5972a9d47157604f732adc1d0af07c0f41f5a6bcc",
+      "hash": "65ae38c7f27b2739adb1941e8240ce64e3754442d2b20e2c1202ee2b1140701f",
       "files": 27,
-      "bytes": 528349
+      "bytes": 529016
     },
     "organizations": {
-      "hash": "ba06dafa77252cabab65e000f852c96b31a1a5b629f43f710a8f20a13b5ee278",
+      "hash": "f27ca2cf675b63cd34114ff48b8ac1dafcffdef6a026c25052ba46c7a10bec9d",
       "files": 27,
-      "bytes": 225841
+      "bytes": 226191
     },
     "osis": {
-      "hash": "0bbc93c445bdb8f859bd8b039a1ebb5fa6e1bbe987da97fdbef4be1115ac18bd",
+      "hash": "e37d1a77e3f81fb2a00a63f8a50ca18623afb1dd75acd6dce322145c0dcdeaff",
       "files": 7,
-      "bytes": 78956
+      "bytes": 79086
     },
     "outposts": {
-      "hash": "7da832d1423834af2bcace03f2d473a01cad022ff08cb559bb56a91b71c2a244",
+      "hash": "7ea78e5ccd366dda79e14cd2154fb12b30ab78302cac0b5ba9d5b4ca328ea413",
       "files": 13,
-      "bytes": 94133
+      "bytes": 94277
     },
     "outposts_ec2": {
-      "hash": "1e13c87bcc7878e258689522f3744b91f5024ca34e9f4c7633f2f7e8d28feae6",
+      "hash": "670a38bb8d39e254f5ff3ea63750a27818217612c2a934893c4da73ad71506b0",
       "files": 19,
-      "bytes": 246078
+      "bytes": 246526
     },
     "payment_cryptography_control_plane": {
-      "hash": "3284496edd268457864c7f26407517cc9ecb535e2fa5c2757715d2281b0074b7",
+      "hash": "1489005027a7875d915160526f0f481aef5f36c5b09e550154391d76f0c44382",
       "files": 6,
-      "bytes": 48935
+      "bytes": 48999
     },
     "polly": {
-      "hash": "8e263adf59800df6dc5ded14faad37a4673b20b4e9db15933f2b916ab07c63ae",
+      "hash": "f7cfaf7d31ee60e838df1f4e32230f1a799f8c35e5ccd5e37ca5c92b1a7af788",
       "files": 5,
-      "bytes": 15508
+      "bytes": 15526
     },
     "pricing_calculator": {
-      "hash": "96312da45f1a32e81c21965d3cedc8b5a9aec2261ea0e425fcfdaad677e7c2fb",
+      "hash": "f63e063df81480477579ae67f20046144ecede64bdf78d6de7c688bc056a78e8",
       "files": 5,
-      "bytes": 14133
+      "bytes": 14151
     },
     "provider": {
-      "hash": "c1cbcc5a027dd4232107dbb09c37b17111698904be52aa6048580cff12d0f54d",
+      "hash": "c32ed6fa635162dfd5859bdd7439b6db1232c57400c3229f2d65eb6d1d579361",
       "files": 6,
-      "bytes": 217819
+      "bytes": 217813
     },
     "qldb": {
-      "hash": "cb80eeb5026d4dd8534185141899f358f4244796af125f75369a0eebc22ea4d0",
+      "hash": "c8994408d05bd96286cabda31b2bb1f18a9fc0e5ddba97ba04fb67d55aadaab8",
       "files": 7,
-      "bytes": 49541
+      "bytes": 49623
     },
     "quicksight": {
-      "hash": "5239e9a183cd197db42d7d2edfa4615bcbd7d7ab534e3b951dd3cf76089b117b",
+      "hash": "36d560391b4e80285100e1edf1d9dc3be96760ad69168d573d9ad19ed4f77f0d",
       "files": 34,
-      "bytes": 1248531
+      "bytes": 1250656
     },
     "ram": {
-      "hash": "fdd89437e71d95d3fa4b349fcb61dd10634a1d8303f2230880387322ccdb19b1",
+      "hash": "2000140d3951214d2ea18803dbf1698e79089b21c12c755fb5c9ac5cd81143e2",
       "files": 12,
-      "bytes": 95821
+      "bytes": 95983
     },
     "rds": {
-      "hash": "8246bb448f710a23b43ba22208790fb71b16f6a61f0edc76aedf0513fa1a73b2",
+      "hash": "d55413722c82783bd060ec50cf1c4c15fe19fc827f3135cceb9be0b4c8774ef2",
       "files": 50,
-      "bytes": 1027118
+      "bytes": 1028595
     },
     "recycle_bin": {
-      "hash": "87a6dda23421005b2c3b8da9757201d05712280589542de4da386b79a7e2f061",
+      "hash": "7437656c4b9eb8276c09bd2ba21191543bf664b5cf04b0659ab827af1a13c307",
       "files": 5,
-      "bytes": 46192
+      "bytes": 46279
     },
     "redshift": {
-      "hash": "28a46481bb175170ce5a7f90f52cd9c83697f8db204e83a1672f3c6fde46eb5e",
+      "hash": "9915be6bdffc7dfe3d1c17cf7b61f9caebcf4c57f9a81b1c7e3e7bd74496e248",
       "files": 35,
-      "bytes": 481830
+      "bytes": 482527
     },
     "redshift_data": {
-      "hash": "b9ee2dde2e02efd2c01388e21c7ac8338f8dd5658df67ec1aacae467d6c5b1d3",
+      "hash": "0f00d1921c8777704926e498ceba364537bc52bdf04d85753b24d66a2f4e6622",
       "files": 5,
-      "bytes": 26291
+      "bytes": 26329
     },
     "redshift_serverless": {
-      "hash": "6c0ecc47073665db739b959e8bd0327c050f450f682474e75c723aef603e988e",
+      "hash": "e2cd66115521ab4c937c9c2e1fd469407a44d69c75514e09ddcb49e45a81b3a3",
       "files": 14,
-      "bytes": 159700
+      "bytes": 159922
     },
     "rekognition": {
-      "hash": "0fb95324516c36fc0251ce3a7aaac7693ff5f9910662425852088e2fa829fcbe",
+      "hash": "04cf2dce9224294ec45797ef3432f35a5c4e624ef45363d6648d819656a7adc0",
       "files": 7,
-      "bytes": 126561
+      "bytes": 126765
     },
     "resilience_hub": {
-      "hash": "6ee8969725f74b1411a6ff7936f7fd8920b442cfda1d001c07ea9f64af6dcf44",
+      "hash": "f085cea2ce7110804badfcd5d8518bcd8dca59c6225f2e697a5c840987d5f440",
       "files": 5,
-      "bytes": 51113
+      "bytes": 51183
     },
     "resilience_hub_v2": {
-      "hash": "070e98c81571298c60f96825226d1f594ddebb615b0f4b32556a470262e124bc",
+      "hash": "64a98629a4e6d299424ac2aa530b12b4da21278edbf4b15eb49ff0e70884033e",
       "files": 14,
-      "bytes": 173209
+      "bytes": 173480
     },
     "resource_explorer": {
-      "hash": "716c3c261be826f8e690e4417c3d9ddd09dbd06fbd1a5d9e71e940fd0a547210",
+      "hash": "57cb217ccaf0e7dfde8c3843786239b731274eab9a8d0675abb110e946636e2b",
       "files": 7,
-      "bytes": 52902
+      "bytes": 52986
     },
     "resource_groups": {
-      "hash": "aee2e4f3ba5bc7d20961a685057618a09fccc27e619fb5b982e098760bc7f30a",
+      "hash": "ab93ff26df76de184d028f7ee2501ff85fa32c36cd6291f0b0cc65e694744474",
       "files": 6,
-      "bytes": 47223
+      "bytes": 47307
     },
     "resource_groups_tagging": {
-      "hash": "9ecad4b03e9f2e64b569ecd5b9a30fcdec167a5365925eec8cad91e4161b70e8",
+      "hash": "bfd5f2573b74d2a193cf3b30ec0ab50b7f2cf847f4356de11e7138f400f5b0cd",
       "files": 6,
-      "bytes": 35460
+      "bytes": 35506
     },
     "roles_anywhere": {
-      "hash": "c694bcd0d796e32f0c98a312eef80711d8e5e5b54000b9a6894a4b4db1eafa7c",
+      "hash": "0b4fcb9e5daa1a37a0b038e0e00cd1acdebf6d7c55387b8c1085e22c473b558f",
       "files": 6,
-      "bytes": 44490
+      "bytes": 44557
     },
     "route_53": {
-      "hash": "c222823bbc06a8bb5e0c085f4d650c37eee0ec3bb07cba86b2ab5e18df8cb561",
+      "hash": "260c82923935324edf35b69fa0041e883d11590f67ea8b18340c28cb2da443b3",
       "files": 23,
-      "bytes": 419066
+      "bytes": 419748
     },
     "route_53_domains": {
-      "hash": "d348e95bbfff98c6176bad5b17e48c7ced30b223b001f939426252e806dca8cc",
+      "hash": "260612dacbaca18a138dc0594c1b827c1e9b144ab8714679256d9367dfe75d62",
       "files": 7,
-      "bytes": 255231
+      "bytes": 255592
     },
     "route_53_profiles": {
-      "hash": "7193288a158faaa8cc1441e0eb809a7b24c5396a0a700c9b73eda18d00d6f990",
+      "hash": "f2b7bfee497b6bced1a612db7386c109dca16d4d844a9555fa70ad2d3e36e06c",
       "files": 9,
-      "bytes": 64706
+      "bytes": 64808
     },
     "route_53_recovery_control_config": {
-      "hash": "d64d5057f5fb74d492054148729b77840dd9cab9231dbf34b46d21471168144a",
+      "hash": "baabd2fc8067d52e0a060e4860f894faf98f804552e7e28cd6c80c6961ffb0d6",
       "files": 8,
-      "bytes": 49788
+      "bytes": 49860
     },
     "route_53_recovery_readiness": {
-      "hash": "66f275859cf23110f2fa7c049fdb71f2ffa9c80785675d077f9bbbcedc4cadce",
+      "hash": "74760a251ddd7f02026a7e4112cae9b8e07ba00abe84802c786636f0374675b9",
       "files": 8,
-      "bytes": 83461
+      "bytes": 83615
     },
     "route_53_resolver": {
-      "hash": "3a147429f9cd0e2ab170dedc017dcd052459b6fe0d29b8659c46f50c97c575de",
+      "hash": "60fcafc5ac3497ae5a8b47a52792e2b3003b771c125d8eb636add758effbc7f2",
       "files": 25,
-      "bytes": 269527
+      "bytes": 269922
     },
     "s3": {
-      "hash": "50a7e277bfa044047b7898ec4a53a5376d4ae0fff7e8fdcc87f489d6aeae04a0",
+      "hash": "6a65037bebdf2713f41afdd06ee838d76181abd23b28fb7eb5783de3e428b62b",
       "files": 42,
-      "bytes": 1144088
+      "bytes": 1146035
     },
     "s3_control": {
-      "hash": "564738c7ba53ca2372a7cdb10fa114d4dc62619245356f90ea97ffbe5ca16bc6",
+      "hash": "bb1a089b24f78e2e48671a31721dbdeb50474d4096ab4012ab92033bb654cefe",
       "files": 26,
-      "bytes": 552324
+      "bytes": 553268
     },
     "s3_files": {
-      "hash": "db3b06f83015503a0410f123139990690079258ebfc16dee545fcdfb1370854e",
+      "hash": "c1c1f435eedc26ca549265825be7f67ff3176c2be758f927fd7f829cfef8e9aa",
       "files": 13,
-      "bytes": 148288
+      "bytes": 148532
     },
     "s3_glacier": {
-      "hash": "35ab33fb32fec6cff36cb380c48beafc44e4eab897cdbf6199a62ebb9cea851d",
+      "hash": "8e26479c023f458b26aee248d4aa6a82d57007e9564c001f03f0f542d2ff6ffe",
       "files": 6,
-      "bytes": 26002
+      "bytes": 26040
     },
     "s3_on_outposts": {
-      "hash": "a3e47af1fd2f481d05914546f997e3b9f9a7b733e96a1e6ad6968debf25d38fb",
+      "hash": "41764bc2a8c5a15bb8a630e92fe7892401463bcc005dfc89a15bd9a3b84f55ca",
       "files": 5,
-      "bytes": 16343
+      "bytes": 16358
     },
     "s3_tables": {
-      "hash": "a9f226aa1bc66bf7f712b179ecf2902a93eec74f2da9f696cad817a717e8049c",
+      "hash": "4ac84c92f83a585b03ab25a6ab58cc0c8f52aab3f3e5139eed8b986f1f835cd6",
       "files": 11,
-      "bytes": 152275
+      "bytes": 152528
     },
     "s3_vectors": {
-      "hash": "8433c04414dcd2b8c1a8adc711a2ac5be5d7e2c3c605067862417f74edd096cf",
+      "hash": "b55887612ccb3c973ca5206902568b1faf899716117bda1e8d6bc8cd01390f47",
       "files": 7,
-      "bytes": 47824
+      "bytes": 47896
     },
     "sagemaker_ai": {
-      "hash": "657bca6c34a09eba19ac7096f73faf00146545beacffcbed06e3a92e7f602f2c",
+      "hash": "b4c760dd7f04868911c7967117e5c9506f4186c5ac3884224a4aad86c2cc639f",
       "files": 43,
-      "bytes": 3633318
+      "bytes": 3638805
     },
     "savings_plans": {
-      "hash": "6f5bad9df3ff923fbdf7f9f84ee749a49432c42e73cb55194c254a37afcf75f5",
+      "hash": "f6d1ffc84ee7c62045b23727b560f4e402c0c5011bd6b49c53c6dad785f3188d",
       "files": 7,
-      "bytes": 55209
+      "bytes": 55280
     },
     "secrets_manager": {
-      "hash": "50c34bc9fc4054433a149a7d879f6eec0644736281bd3f7a6bff4f72b89f0ef6",
+      "hash": "dfbcfc14bbd4f471f27965e61a47ad6e7d96fb14f34542e51194c5f0b473682a",
       "files": 17,
-      "bytes": 170075
+      "bytes": 170318
     },
     "security_hub": {
-      "hash": "8223b287db4c9b15585813a2989344b69c5371c8ca8c049d9aeb88dc300a1e10",
+      "hash": "67b44d429a2153c4f49b8ed71339064d8f842ee743fff32f0adbd930c6f1d28c",
       "files": 27,
-      "bytes": 1423646
+      "bytes": 1425638
     },
     "security_lake": {
-      "hash": "28c01d65bc6672fa33fbc0e27e8d020921b4d9f5ee7b2969bece02d4d352a865",
+      "hash": "6162ac55c13e5a1be64b833890b2e4f88c7adf6c93b7c553737aaa4e8b14bd40",
       "files": 9,
-      "bytes": 180277
+      "bytes": 180545
     },
     "serverlessrepo": {
-      "hash": "a56bd3f5013aca6dff06251a6eb093eba2e8e4ca6822e337a5cb59328a7a1e02",
+      "hash": "dcb1fe2abbd98accda0f0951e4c2b78a64be17ab4a6de871678677e0a71c19e8",
       "files": 6,
-      "bytes": 30760
+      "bytes": 30798
     },
     "service_catalog": {
-      "hash": "5a87fdce3acaea101943da27c5eb6b7e9cc2d2fcab1df0e8c01ac375596ce10b",
+      "hash": "ed9d786a690f58e65d3f34c3687a5cd2baaa47e274022c48277a5733d5bfb955",
       "files": 23,
-      "bytes": 374791
+      "bytes": 375431
     },
     "service_catalog_appregistry": {
-      "hash": "5cb16df1d847e1257e041d37e2ae8792aa2a569d1cbc8e296a622f78eefc6861",
+      "hash": "2c1a0e0790ab478a234cf64877a4abf3468c15ab7acede19f46bcd711c177cfc",
       "files": 10,
-      "bytes": 47629
+      "bytes": 47692
     },
     "service_quotas": {
-      "hash": "b473bee103aff81f8628a81351c89acbbeb345b03cb1b203ad6212f2e18b30dc",
+      "hash": "837744c0df1f7d49dedb85973877e669217452949249ddf208a5ae9a5ab7e478",
       "files": 11,
-      "bytes": 74323
+      "bytes": 74426
     },
     "ses": {
-      "hash": "ca801f2352bfc843536e0d2b30aa318dd3e7f1f00b94c249cb64e7a518437dad",
+      "hash": "0b2fbb41ddbd62723722669dad1fe746bd3fa8915f60466cd5553c235e5e72d0",
       "files": 21,
-      "bytes": 228977
+      "bytes": 229372
     },
     "ses_mail_manager": {
-      "hash": "b64ad7b1bfedbb4a95517574a91da4a12c0daa6e254769935195280a4cd989a1",
+      "hash": "3fe9f5eaa4ced6a679260768f48b4c5683889a4d2a83dc343fa377791e001a14",
       "files": 8,
-      "bytes": 529079
+      "bytes": 529767
     },
     "sesv2": {
-      "hash": "5e8bbaed373a73dd4f55fd29101d6e6914c0284d1cf53da520cbf541ac421d38",
+      "hash": "16c98bded4d8863f57de847f8dce23750732747472bbe5007f830ff3a0ca4f74",
       "files": 22,
-      "bytes": 315560
+      "bytes": 316120
     },
     "sfn": {
-      "hash": "30efc7b52c9c8c3c79b6b11c46043d437eebeb0b368618b4d112aa6ca7b07e5a",
+      "hash": "12b1be870bc453dd7044a63e4659e4f6725b65ab9fadf1ee3d92569ee0487cda",
       "files": 11,
-      "bytes": 111030
+      "bytes": 111226
     },
     "shield": {
-      "hash": "3dc4b400d8724790d56abe12d047c7ed78865f4042998804762ca77af0c6efb3",
+      "hash": "9f73c55fc847b249e161df218bccc98ca8aac1351b4e48005c229042c1c832b5",
       "files": 13,
-      "bytes": 89533
+      "bytes": 89684
     },
     "signer": {
-      "hash": "d48f765236811a9b36d208442bae3502cff2ccfb84e20bd9f70be47b4f36cc50",
+      "hash": "3499d263b1bd22286512da9fc8c560f581d49a5b766161f8951e234243f097a9",
       "files": 9,
-      "bytes": 119489
+      "bytes": 119689
     },
     "sns": {
-      "hash": "81e469045a57242989bfbd6369372bdaa11c9f02537689d6c0a6093818f063fa",
+      "hash": "cde8cefa252106194cc6bdbe8e58442344c3d090d290b3ccbc43193b21c03d45",
       "files": 11,
-      "bytes": 114997
+      "bytes": 115127
     },
     "sqs": {
-      "hash": "cc2c1a46c245f9f92c56f0a5bbfff4f67a32d64ac8b5ec8d8301eedb366bb543",
+      "hash": "62ae58cc2caa19d790ca1c28b548e67ee0bf66e43691637ad6ba02ff1a37b20b",
       "files": 10,
-      "bytes": 70113
+      "bytes": 70210
     },
     "ssm": {
-      "hash": "0c52b48329117c4e6ef436bbe355dc0d1faaaf6d83d085684930b93a518d3b26",
+      "hash": "ea531b88b3e5c77ed172cf4a41f6f517184dceaad9bfe7e7701522644054fae7",
       "files": 24,
-      "bytes": 405873
+      "bytes": 406498
     },
     "ssm_contacts": {
-      "hash": "c7c771019b45aa43c732d1248811550db4ee868953a45fbab602652cf2bc2bad",
+      "hash": "be9a46d2e4501d89de495299bea439b3cc6e936d9ea3ddfc29a7e9d906c0aa80",
       "files": 12,
-      "bytes": 204490
+      "bytes": 204794
     },
     "ssm_incident_manager_incidents": {
-      "hash": "fb72e66797b46404909aae643033a3aa2e1f88ceb2a19ad50f09133e27809cba",
+      "hash": "3ddb51a3bcb18a3bd9b137d67d5695291e7e777c4a98e29c5892fad072fed59e",
       "files": 8,
-      "bytes": 133492
+      "bytes": 133703
     },
     "ssm_quick_setup": {
-      "hash": "1e8a1333ff8be76b0bd37db7f49d79bd213795b2d207337a895ee9d7eaebbdaa",
+      "hash": "20bebe0b15979c2479e04acdf904e0761c3ae2c1f4f9195f2aae9f563ac85db5",
       "files": 5,
-      "bytes": 33246
+      "bytes": 33288
     },
     "sso_admin": {
-      "hash": "1cbc94c569f2c9c3b61c082a3aac3be93c8cc0e23e7cc6e84a32bbc2937384d2",
+      "hash": "3001bd5bed2b15117b271b714ce9ddd3d7b914283a6561d155076631192fd9f4",
       "files": 26,
-      "bytes": 318248
+      "bytes": 318792
     },
     "sso_identity_store": {
-      "hash": "c54cadc8239fd4c4bc3f6db4def7137ed700ed1b931952c0441288047da57431",
+      "hash": "42b9611d5948413e4b43814ac4836669eb1f8983a290dc684eacbf045d6babd8",
       "files": 12,
-      "bytes": 193495
+      "bytes": 193822
     },
     "storage_gateway": {
-      "hash": "3f45deafd2b45911b89148cf954fd514e44c55c594369bab623ef42a71a346cd",
+      "hash": "f8311b1827b0d2039834aa12bda572d293325c8a9a14cc1de37ffea603491400",
       "files": 15,
-      "bytes": 241192
+      "bytes": 241557
     },
     "sts": {
-      "hash": "cbf814cbc1cef29946f4190c0b606319d93b2a80b7bfd6eb9dbef8bbe2f5f9f8",
+      "hash": "dbcbd7cfb17c6096f383ff121469506e045fc4241108718c187397bcbec55b44",
       "files": 6,
-      "bytes": 14127
+      "bytes": 14138
     },
     "swf": {
-      "hash": "4154c07d24dcf69936fbcdd8fa1ad6a05c33bb37d5143ee1d0cdc8f834eff952",
+      "hash": "92a453d603b096727033746c986a5b4ba00aaea7ed6cf460e5f059226c4e546e",
       "files": 5,
-      "bytes": 13702
+      "bytes": 13712
     },
     "timestream_for_influxdb": {
-      "hash": "9f178e49f9382ea287325eea07bd2a39cae79c0910c62ccd8d34b2eba415bffd",
+      "hash": "f9a3d25f5ead6baa66f55c6e0f6d257bc5c8ce38e4e42cacb49a8ae259a159d8",
       "files": 6,
-      "bytes": 107863
+      "bytes": 108004
     },
     "timestream_query": {
-      "hash": "11b54cfef1ee11d65c42743fe8f48dc5bd006bb550ba7ab7f28f44accd701e0a",
+      "hash": "21f41e61f0abb6e3897a4ffefa26e77270931e43dd8eccea0474c99f103e8a38",
       "files": 5,
-      "bytes": 218015
+      "bytes": 218294
     },
     "timestream_write": {
-      "hash": "6af42635872e0ab60075b6841a0f0576a5033a280d63d9c1c0be69f027f0ce41",
+      "hash": "14a4353c82f50d6b5bd114f6b2927986d095439dc4f4e634915a41c45a3f9468",
       "files": 8,
-      "bytes": 88779
+      "bytes": 88927
     },
     "transcribe": {
-      "hash": "fdf529b893021482f7a971051f088e6e715eb7eb4b5afe27a6846ab79c0540ff",
+      "hash": "d11c17a088e6ce6eacc0cbea8b55030ad309d720a5e869eb6768feac125a3631",
       "files": 8,
-      "bytes": 71249
+      "bytes": 71364
     },
     "transfer_family": {
-      "hash": "fde57b23779001153f16b818002a7046763bc6493fae87d52e413a513f1d1e2e",
+      "hash": "771bc0ae6464c1d009c540ad7e6529a11dfe924c57080a4a7b16ea47c6c568d8",
       "files": 19,
-      "bytes": 475122
+      "bytes": 475939
     },
     "transit_gateway": {
-      "hash": "ed982483fd18831238254d77da1b1a64b5fac8787f42b3bb861c1bb04530b912",
+      "hash": "3a7f8c8b4d7be94ef7222bdabe5c39f5e872c3b7c203990adae0a68904dd4384",
       "files": 43,
-      "bytes": 643668
+      "bytes": 644762
     },
     "user_experience_customization": {
-      "hash": "18c9c6ad2c2f3112a478d08724dcc6a32b853aad50849491b98515228c7e7231",
+      "hash": "68c9c21f095fadd2be9ed499d9a21780d16c3973491bc9cc664d0b06d2200e45",
       "files": 6,
-      "bytes": 12252
+      "bytes": 12265
     },
     "user_notifications": {
-      "hash": "4dbf5bbb6ca393fcd7d61364134d984d3a5b79e79ce975b2f5160fab62ef8a79",
+      "hash": "70f86cc6f5058001eb0ca357e99111a69f9f410c9df8941694b726c4d2f80612",
       "files": 12,
-      "bytes": 64315
+      "bytes": 64421
     },
     "user_notifications_contacts": {
-      "hash": "0401ced3f9b5c173718653fb2208b125f1a24cac481a3443b25b196fc8154f38",
+      "hash": "7d3e6135848ae4fff05bbea6be10524639c984baa0ad4f930a2d5ee17f212698",
       "files": 5,
-      "bytes": 8799
+      "bytes": 8804
     },
     "verified_access": {
-      "hash": "17d6342818080a983d82f606ea413248fa2106cfbbf123c24e44905d2939acff",
+      "hash": "a1244b3e9e004ee511632e6416f028ebd3140c36e0ed3d105f72a429ae4f5a74",
       "files": 10,
-      "bytes": 214194
+      "bytes": 214563
     },
     "verified_permissions": {
-      "hash": "5d79f3b7eaf803195a9c7c756b767b126762e84e0880377a87b306ba84fef52e",
+      "hash": "997a5fa150a94640211f88e15ce6e5fb03f78ace9c429204c4465b79a2af0f0e",
       "files": 10,
-      "bytes": 145317
+      "bytes": 145527
     },
     "vpc": {
-      "hash": "8f4fea0bd8267ed3d5146281c772b8d61f2297e6d30f2cdba50ff3823e78e3ac",
+      "hash": "c16286bc3fa7e7f6b5c25541af42f4834a9ae829f1e5dd988a194e58a838facc",
       "files": 100,
-      "bytes": 2726577
+      "bytes": 2730638
     },
     "vpc_ipam": {
-      "hash": "e3cdbe8f7163ed17956f62e7c2fa578ad11c3a7c8627347a7245cc905f2f358d",
+      "hash": "8695ac778bbf2fec095f57f2a4eeb30784c8756aa3d6bc909399f45d033460ea",
       "files": 19,
-      "bytes": 283303
+      "bytes": 283781
     },
     "vpc_lattice": {
-      "hash": "bd1110bd0c44bb772e0ddc757e45387a00c1761701319edd9238491409eac64f",
+      "hash": "4eb43f1ad4189af39e04d25a4dfff122344f01185c5dfc4ec4d8eef5281d0b01",
       "files": 25,
-      "bytes": 452215
+      "bytes": 452971
     },
     "vpn_client": {
-      "hash": "c57a638763736e5a66682722b860a2df8f9dcf83c51ffec271ad0dd967025773",
+      "hash": "9a7a4d8fcd529511ba6c8a03f4190dae2e4d921b8d4b202502055df527a91fac",
       "files": 9,
-      "bytes": 157531
+      "bytes": 157795
     },
     "vpn_site_to_site": {
-      "hash": "2be59999175c162e78b0b31f2dfe5a3cf2e03f6d4269814f4fa351bef1b3cc45",
+      "hash": "ffe82503a3f78d06977299fd90884a691fe2ada593b6bf63cfb53a8f21e03318",
       "files": 14,
-      "bytes": 236238
+      "bytes": 236572
     },
     "waf": {
-      "hash": "74b0d68d74a58a8af34db9b04ee774dffb55d930c9445631b8d0e1dac440516e",
+      "hash": "79dee134e0482b55d9d99e7142211649a5e5af7bdc01604058ae705466f1d31f",
       "files": 18,
-      "bytes": 5043541
+      "bytes": 5049676
     },
     "waf_classic": {
-      "hash": "0510c7e95df36d0d819ba80bdf4651c0ff9ece485b25d114fc5750ac5a7dc131",
+      "hash": "13c29f30b07f8a656cd6992886951a7cc80fad8368362deb9fde1a85ca784ff7",
       "files": 21,
-      "bytes": 242887
+      "bytes": 243356
     },
     "waf_classic_regional": {
-      "hash": "7d919662fd17d949f3e88d3460166e6cbd8d1b49fdda9e44bca1ef9d76d15578",
+      "hash": "b658841e1c3391979e3a21b14185d43b06ebd673edfc4f4f55213b73a577b975",
       "files": 22,
-      "bytes": 275844
+      "bytes": 276355
     },
     "wavelength": {
-      "hash": "e06c5386275ba432e9d4fe3304b98c489e47dbf56eebc19f7d52d4ef59841156",
+      "hash": "be31c478ba6b38f803d6c03ef90dac320b593ed048cc13d8e12c8e71d16c4a63",
       "files": 5,
-      "bytes": 10824
+      "bytes": 10831
     },
     "web_services_budgets": {
-      "hash": "9e4c6b4e52c3bc33813600becadfd1e95d57a695c91674961fd7b7dc54ab4ed7",
+      "hash": "a8d4cea804eab301c60b0c9869aa9c28d062bfc3b42c5fef4f4512746dbeabb3",
       "files": 7,
-      "bytes": 484591
+      "bytes": 485439
     },
     "workmail": {
-      "hash": "6bc16e0be43659fde8704ab3e307d50340d62898556b6c8609e0e55a0be7df71",
+      "hash": "5af9a4e1dd1ac090821c9c36c65e7d8d08dee1c353b3ffce1f7d55e689c0d92f",
       "files": 9,
-      "bytes": 71613
+      "bytes": 71707
     },
     "workspaces": {
-      "hash": "09fc86ae767cf30dd043cbe8227eec849698bdcc1985d6b45cd488a3a26a226e",
+      "hash": "e4bba47c2732eb5295e77efaf792854f17095eee6881242a6bb71fda1da3f230",
       "files": 13,
-      "bytes": 262291
+      "bytes": 262709
     },
     "workspaces_web": {
-      "hash": "01d96e34b0f4693402d15865ee36700c5b4bcefed1243e3b94d12565cc66244e",
+      "hash": "df63c56555c7568235efbe3ff4c1fa3934d6ba91b95911b85bda7712a810c3c3",
       "files": 22,
-      "bytes": 275731
+      "bytes": 276130
     },
     "x_ray": {
-      "hash": "4a27412a486ba5c5fb771f7a93d8b9610834575ff2267574a7600da3ba2739ac",
+      "hash": "3c6b6e62735e01cfea8772f84dcaae44f3c210dc765a65ea1bb699cfb443586a",
       "files": 10,
-      "bytes": 79415
+      "bytes": 79542
     }
   }
 }

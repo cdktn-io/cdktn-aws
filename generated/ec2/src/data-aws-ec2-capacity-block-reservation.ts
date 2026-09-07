@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfCapacityBlockReservationConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsCapacityBlockReservationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_reservation#id DataTfCapacityBlockReservation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_reservation#id DataAwsCapacityBlockReservation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface DataTfCapacityBlockReservationConfig extends cdktn.TerraformMet
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_reservation#region DataTfCapacityBlockReservation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_reservation#region DataAwsCapacityBlockReservation#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_reservation#filter DataTfCapacityBlockReservation#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_reservation#filter DataAwsCapacityBlockReservation#filter}
   */
-  readonly filter?: DataTfCapacityBlockReservation.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsCapacityBlockReservation.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_reservation aws_ec2_capacity_block_reservation}
 */
-export class DataTfCapacityBlockReservation extends cdktn.TerraformDataSource {
+export class DataAwsCapacityBlockReservation extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class DataTfCapacityBlockReservation extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfCapacityBlockReservation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsCapacityBlockReservation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfCapacityBlockReservation to import
-  * @param importFromId The id of the existing DataTfCapacityBlockReservation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_reservation#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfCapacityBlockReservation to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsCapacityBlockReservation to import
+  * @param importFromId The id of the existing DataAwsCapacityBlockReservation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_reservation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsCapacityBlockReservation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_capacity_block_reservation", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class DataTfCapacityBlockReservation extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfCapacityBlockReservationConfig = {}
+  * @param options DataAwsCapacityBlockReservationConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfCapacityBlockReservationConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsCapacityBlockReservationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_capacity_block_reservation',
       terraformGeneratorMetadata: {
@@ -113,7 +113,7 @@ export class DataTfCapacityBlockReservation extends cdktn.TerraformDataSource {
   }
 
   // commitment_info - computed: true, optional: false, required: false
-  private _commitmentInfo = new DataTfCapacityBlockReservation.CommitmentInfoPropertyOutputReference(this, "commitment_info");
+  private _commitmentInfo = new DataAwsCapacityBlockReservation.CommitmentInfoPropertyOutputReference(this, "commitment_info");
   public get commitmentInfo() {
     return this._commitmentInfo;
   }
@@ -180,13 +180,13 @@ export class DataTfCapacityBlockReservation extends cdktn.TerraformDataSource {
   }
 
   // interruptible_capacity_allocation - computed: true, optional: false, required: false
-  private _interruptibleCapacityAllocation = new DataTfCapacityBlockReservation.InterruptibleCapacityAllocationPropertyOutputReference(this, "interruptible_capacity_allocation");
+  private _interruptibleCapacityAllocation = new DataAwsCapacityBlockReservation.InterruptibleCapacityAllocationPropertyOutputReference(this, "interruptible_capacity_allocation");
   public get interruptibleCapacityAllocation() {
     return this._interruptibleCapacityAllocation;
   }
 
   // interruption_info - computed: true, optional: false, required: false
-  private _interruptionInfo = new DataTfCapacityBlockReservation.InterruptionInfoPropertyOutputReference(this, "interruption_info");
+  private _interruptionInfo = new DataAwsCapacityBlockReservation.InterruptionInfoPropertyOutputReference(this, "interruption_info");
   public get interruptionInfo() {
     return this._interruptionInfo;
   }
@@ -249,11 +249,11 @@ export class DataTfCapacityBlockReservation extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfCapacityBlockReservation.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsCapacityBlockReservation.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfCapacityBlockReservation.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsCapacityBlockReservation.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -272,7 +272,7 @@ export class DataTfCapacityBlockReservation extends cdktn.TerraformDataSource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(dataTfCapacityBlockReservationFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataAwsCapacityBlockReservationFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -291,10 +291,10 @@ export class DataTfCapacityBlockReservation extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfCapacityBlockReservationFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsCapacityBlockReservationFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfCapacityBlockReservation.FilterPropertyList",
+        storageClassType: "DataAwsCapacityBlockReservation.FilterPropertyList",
       },
     };
 
@@ -303,7 +303,7 @@ export class DataTfCapacityBlockReservation extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfCapacityBlockReservationCommitmentInfoPropertyToTerraform(struct?: DataTfCapacityBlockReservation.CommitmentInfoProperty): any {
+export function dataAwsCapacityBlockReservationCommitmentInfoPropertyToTerraform(struct?: DataAwsCapacityBlockReservation.CommitmentInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function dataTfCapacityBlockReservationCommitmentInfoPropertyToTerraform(
 }
 
 
-export function dataTfCapacityBlockReservationCommitmentInfoPropertyToHclTerraform(struct?: DataTfCapacityBlockReservation.CommitmentInfoProperty): any {
+export function dataAwsCapacityBlockReservationCommitmentInfoPropertyToHclTerraform(struct?: DataAwsCapacityBlockReservation.CommitmentInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,7 +324,7 @@ export function dataTfCapacityBlockReservationCommitmentInfoPropertyToHclTerrafo
 }
 
 
-export function dataTfCapacityBlockReservationInterruptibleCapacityAllocationPropertyToTerraform(struct?: DataTfCapacityBlockReservation.InterruptibleCapacityAllocationProperty): any {
+export function dataAwsCapacityBlockReservationInterruptibleCapacityAllocationPropertyToTerraform(struct?: DataAwsCapacityBlockReservation.InterruptibleCapacityAllocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,7 +334,7 @@ export function dataTfCapacityBlockReservationInterruptibleCapacityAllocationPro
 }
 
 
-export function dataTfCapacityBlockReservationInterruptibleCapacityAllocationPropertyToHclTerraform(struct?: DataTfCapacityBlockReservation.InterruptibleCapacityAllocationProperty): any {
+export function dataAwsCapacityBlockReservationInterruptibleCapacityAllocationPropertyToHclTerraform(struct?: DataAwsCapacityBlockReservation.InterruptibleCapacityAllocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,7 +345,7 @@ export function dataTfCapacityBlockReservationInterruptibleCapacityAllocationPro
 }
 
 
-export function dataTfCapacityBlockReservationInterruptionInfoPropertyToTerraform(struct?: DataTfCapacityBlockReservation.InterruptionInfoProperty): any {
+export function dataAwsCapacityBlockReservationInterruptionInfoPropertyToTerraform(struct?: DataAwsCapacityBlockReservation.InterruptionInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,7 +355,7 @@ export function dataTfCapacityBlockReservationInterruptionInfoPropertyToTerrafor
 }
 
 
-export function dataTfCapacityBlockReservationInterruptionInfoPropertyToHclTerraform(struct?: DataTfCapacityBlockReservation.InterruptionInfoProperty): any {
+export function dataAwsCapacityBlockReservationInterruptionInfoPropertyToHclTerraform(struct?: DataAwsCapacityBlockReservation.InterruptionInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function dataTfCapacityBlockReservationInterruptionInfoPropertyToHclTerra
 }
 
 
-export function dataTfCapacityBlockReservationFilterPropertyToTerraform(struct?: DataTfCapacityBlockReservation.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsCapacityBlockReservationFilterPropertyToTerraform(struct?: DataAwsCapacityBlockReservation.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function dataTfCapacityBlockReservationFilterPropertyToTerraform(struct?:
 }
 
 
-export function dataTfCapacityBlockReservationFilterPropertyToHclTerraform(struct?: DataTfCapacityBlockReservation.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsCapacityBlockReservationFilterPropertyToHclTerraform(struct?: DataAwsCapacityBlockReservation.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,7 +403,7 @@ export function dataTfCapacityBlockReservationFilterPropertyToHclTerraform(struc
 }
 
 
-export namespace DataTfCapacityBlockReservation {
+export namespace DataAwsCapacityBlockReservation {
 export interface CommitmentInfoProperty {
 }
 export class CommitmentInfoPropertyOutputReference extends cdktn.ComplexObject {
@@ -535,11 +535,11 @@ export class InterruptionInfoPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_reservation#name DataTfCapacityBlockReservation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_reservation#name DataAwsCapacityBlockReservation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_reservation#values DataTfCapacityBlockReservation#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_capacity_block_reservation#values DataAwsCapacityBlockReservation#values}
   */
   readonly values: string[];
 }

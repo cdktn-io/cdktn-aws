@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfServiceNetworkServiceAssociationsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsServiceNetworkServiceAssociationsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network_service_associations#region DataTfServiceNetworkServiceAssociations#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network_service_associations#region DataAwsServiceNetworkServiceAssociations#region}
   */
   readonly region?: string;
   /**
   * ID or ARN of the Service.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network_service_associations#service_identifier DataTfServiceNetworkServiceAssociations#service_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network_service_associations#service_identifier DataAwsServiceNetworkServiceAssociations#service_identifier}
   */
   readonly serviceIdentifier?: string;
   /**
   * ID or ARN of the Service Network.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network_service_associations#service_network_identifier DataTfServiceNetworkServiceAssociations#service_network_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network_service_associations#service_network_identifier DataAwsServiceNetworkServiceAssociations#service_network_identifier}
   */
   readonly serviceNetworkIdentifier?: string;
 }
@@ -29,7 +29,7 @@ export interface DataTfServiceNetworkServiceAssociationsConfig extends cdktn.Ter
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network_service_associations aws_vpclattice_service_network_service_associations}
 */
-export class DataTfServiceNetworkServiceAssociations extends cdktn.TerraformDataSource {
+export class DataAwsServiceNetworkServiceAssociations extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class DataTfServiceNetworkServiceAssociations extends cdktn.TerraformData
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfServiceNetworkServiceAssociations resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsServiceNetworkServiceAssociations resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfServiceNetworkServiceAssociations to import
-  * @param importFromId The id of the existing DataTfServiceNetworkServiceAssociations that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network_service_associations#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfServiceNetworkServiceAssociations to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsServiceNetworkServiceAssociations to import
+  * @param importFromId The id of the existing DataAwsServiceNetworkServiceAssociations that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/vpclattice_service_network_service_associations#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsServiceNetworkServiceAssociations to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_service_network_service_associations", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class DataTfServiceNetworkServiceAssociations extends cdktn.TerraformData
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfServiceNetworkServiceAssociationsConfig = {}
+  * @param options DataAwsServiceNetworkServiceAssociationsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfServiceNetworkServiceAssociationsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsServiceNetworkServiceAssociationsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_vpclattice_service_network_service_associations',
       terraformGeneratorMetadata: {
@@ -87,7 +87,7 @@ export class DataTfServiceNetworkServiceAssociations extends cdktn.TerraformData
   // ==========
 
   // items - computed: true, optional: false, required: false
-  private _items = new DataTfServiceNetworkServiceAssociations.ItemsPropertyList(this, "items", false);
+  private _items = new DataAwsServiceNetworkServiceAssociations.ItemsPropertyList(this, "items", false);
   public get items() {
     return this._items;
   }
@@ -179,7 +179,7 @@ export class DataTfServiceNetworkServiceAssociations extends cdktn.TerraformData
   }
 }
 
-export function dataTfServiceNetworkServiceAssociationsDnsEntryPropertyToTerraform(struct?: DataTfServiceNetworkServiceAssociations.DnsEntryProperty): any {
+export function dataAwsServiceNetworkServiceAssociationsDnsEntryPropertyToTerraform(struct?: DataAwsServiceNetworkServiceAssociations.DnsEntryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -189,7 +189,7 @@ export function dataTfServiceNetworkServiceAssociationsDnsEntryPropertyToTerrafo
 }
 
 
-export function dataTfServiceNetworkServiceAssociationsDnsEntryPropertyToHclTerraform(struct?: DataTfServiceNetworkServiceAssociations.DnsEntryProperty): any {
+export function dataAwsServiceNetworkServiceAssociationsDnsEntryPropertyToHclTerraform(struct?: DataAwsServiceNetworkServiceAssociations.DnsEntryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -200,7 +200,7 @@ export function dataTfServiceNetworkServiceAssociationsDnsEntryPropertyToHclTerr
 }
 
 
-export function dataTfServiceNetworkServiceAssociationsItemsPropertyToTerraform(struct?: DataTfServiceNetworkServiceAssociations.ItemsProperty): any {
+export function dataAwsServiceNetworkServiceAssociationsItemsPropertyToTerraform(struct?: DataAwsServiceNetworkServiceAssociations.ItemsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -210,7 +210,7 @@ export function dataTfServiceNetworkServiceAssociationsItemsPropertyToTerraform(
 }
 
 
-export function dataTfServiceNetworkServiceAssociationsItemsPropertyToHclTerraform(struct?: DataTfServiceNetworkServiceAssociations.ItemsProperty): any {
+export function dataAwsServiceNetworkServiceAssociationsItemsPropertyToHclTerraform(struct?: DataAwsServiceNetworkServiceAssociations.ItemsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -221,7 +221,7 @@ export function dataTfServiceNetworkServiceAssociationsItemsPropertyToHclTerrafo
 }
 
 
-export namespace DataTfServiceNetworkServiceAssociations {
+export namespace DataAwsServiceNetworkServiceAssociations {
 export interface DnsEntryProperty {
 }
 export class DnsEntryPropertyOutputReference extends cdktn.ComplexObject {

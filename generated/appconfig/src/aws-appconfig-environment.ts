@@ -5,41 +5,41 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEnvironmentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEnvironmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#application_id TfEnvironment#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#application_id AwsEnvironment#application_id}
   */
   readonly applicationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#description TfEnvironment#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#description AwsEnvironment#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#name TfEnvironment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#name AwsEnvironment#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#region TfEnvironment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#region AwsEnvironment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#tags TfEnvironment#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#tags AwsEnvironment#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * monitor block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#monitor TfEnvironment#monitor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#monitor AwsEnvironment#monitor}
   */
-  readonly monitor?: TfEnvironment.MonitorProperty[] | cdktn.IResolvable;
+  readonly monitor?: AwsEnvironment.MonitorProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment aws_appconfig_environment}
 */
-export class TfEnvironment extends cdktn.TerraformResource {
+export class AwsEnvironment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -50,11 +50,11 @@ export class TfEnvironment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEnvironment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEnvironment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEnvironment to import
-  * @param importFromId The id of the existing TfEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEnvironment to import is found
+  * @param importToId The construct id used in the generated config for the AwsEnvironment to import
+  * @param importFromId The id of the existing AwsEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appconfig_environment", importId: importFromId, provider });
@@ -69,9 +69,9 @@ export class TfEnvironment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEnvironmentConfig
+  * @param options AwsEnvironmentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEnvironmentConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appconfig_environment',
       terraformGeneratorMetadata: {
@@ -200,11 +200,11 @@ export class TfEnvironment extends cdktn.TerraformResource {
   }
 
   // monitor - computed: false, optional: true, required: false
-  private _monitor = new TfEnvironment.MonitorPropertyList(this, "monitor", true);
+  private _monitor = new AwsEnvironment.MonitorPropertyList(this, "monitor", true);
   public get monitor() {
     return this._monitor;
   }
-  public putMonitor(value: TfEnvironment.MonitorProperty[] | cdktn.IResolvable) {
+  public putMonitor(value: AwsEnvironment.MonitorProperty[] | cdktn.IResolvable) {
     this._monitor.internalValue = value;
   }
   public resetMonitor() {
@@ -226,7 +226,7 @@ export class TfEnvironment extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      monitor: cdktn.listMapper(tfEnvironmentMonitorPropertyToTerraform, true)(this._monitor.internalValue),
+      monitor: cdktn.listMapper(awsEnvironmentMonitorPropertyToTerraform, true)(this._monitor.internalValue),
     };
   }
 
@@ -263,10 +263,10 @@ export class TfEnvironment extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       monitor: {
-        value: cdktn.listMapperHcl(tfEnvironmentMonitorPropertyToHclTerraform, true)(this._monitor.internalValue),
+        value: cdktn.listMapperHcl(awsEnvironmentMonitorPropertyToHclTerraform, true)(this._monitor.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfEnvironment.MonitorPropertyList",
+        storageClassType: "AwsEnvironment.MonitorPropertyList",
       },
     };
 
@@ -275,7 +275,7 @@ export class TfEnvironment extends cdktn.TerraformResource {
   }
 }
 
-export function tfEnvironmentMonitorPropertyToTerraform(struct?: TfEnvironment.MonitorProperty | cdktn.IResolvable): any {
+export function awsEnvironmentMonitorPropertyToTerraform(struct?: AwsEnvironment.MonitorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,7 +287,7 @@ export function tfEnvironmentMonitorPropertyToTerraform(struct?: TfEnvironment.M
 }
 
 
-export function tfEnvironmentMonitorPropertyToHclTerraform(struct?: TfEnvironment.MonitorProperty | cdktn.IResolvable): any {
+export function awsEnvironmentMonitorPropertyToHclTerraform(struct?: AwsEnvironment.MonitorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,14 +312,14 @@ export function tfEnvironmentMonitorPropertyToHclTerraform(struct?: TfEnvironmen
 }
 
 
-export namespace TfEnvironment {
+export namespace AwsEnvironment {
 export interface MonitorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#alarm_arn TfEnvironment#alarm_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#alarm_arn AwsEnvironment#alarm_arn}
   */
   readonly alarmArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#alarm_role_arn TfEnvironment#alarm_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_environment#alarm_role_arn AwsEnvironment#alarm_role_arn}
   */
   readonly alarmRoleArn?: string;
 }

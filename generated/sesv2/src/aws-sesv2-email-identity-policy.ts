@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEmailIdentityPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEmailIdentityPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_policy#email_identity TfEmailIdentityPolicy#email_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_policy#email_identity AwsEmailIdentityPolicy#email_identity}
   */
   readonly emailIdentity: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_policy#id TfEmailIdentityPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_policy#id AwsEmailIdentityPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_policy#policy TfEmailIdentityPolicy#policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_policy#policy AwsEmailIdentityPolicy#policy}
   */
   readonly policy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_policy#policy_name TfEmailIdentityPolicy#policy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_policy#policy_name AwsEmailIdentityPolicy#policy_name}
   */
   readonly policyName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_policy#region TfEmailIdentityPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_policy#region AwsEmailIdentityPolicy#region}
   */
   readonly region?: string;
 }
@@ -36,7 +36,7 @@ export interface TfEmailIdentityPolicyConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_policy aws_sesv2_email_identity_policy}
 */
-export class TfEmailIdentityPolicy extends cdktn.TerraformResource {
+export class AwsEmailIdentityPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfEmailIdentityPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEmailIdentityPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEmailIdentityPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEmailIdentityPolicy to import
-  * @param importFromId The id of the existing TfEmailIdentityPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEmailIdentityPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsEmailIdentityPolicy to import
+  * @param importFromId The id of the existing AwsEmailIdentityPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_email_identity_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEmailIdentityPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sesv2_email_identity_policy", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfEmailIdentityPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEmailIdentityPolicyConfig
+  * @param options AwsEmailIdentityPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEmailIdentityPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEmailIdentityPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sesv2_email_identity_policy',
       terraformGeneratorMetadata: {

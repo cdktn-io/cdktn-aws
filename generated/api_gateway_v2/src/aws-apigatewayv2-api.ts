@@ -5,92 +5,92 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfApiConfig extends cdktn.TerraformMetaArguments {
+export interface AwsApiConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#api_key_selection_expression TfApi#api_key_selection_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#api_key_selection_expression AwsApi#api_key_selection_expression}
   */
   readonly apiKeySelectionExpression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#body TfApi#body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#body AwsApi#body}
   */
   readonly body?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#credentials_arn TfApi#credentials_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#credentials_arn AwsApi#credentials_arn}
   */
   readonly credentialsArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#description TfApi#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#description AwsApi#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#disable_execute_api_endpoint TfApi#disable_execute_api_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#disable_execute_api_endpoint AwsApi#disable_execute_api_endpoint}
   */
   readonly disableExecuteApiEndpoint?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#fail_on_warnings TfApi#fail_on_warnings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#fail_on_warnings AwsApi#fail_on_warnings}
   */
   readonly failOnWarnings?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#id TfApi#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#id AwsApi#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#ip_address_type TfApi#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#ip_address_type AwsApi#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#name TfApi#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#name AwsApi#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#protocol_type TfApi#protocol_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#protocol_type AwsApi#protocol_type}
   */
   readonly protocolType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#region TfApi#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#region AwsApi#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#route_key TfApi#route_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#route_key AwsApi#route_key}
   */
   readonly routeKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#route_selection_expression TfApi#route_selection_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#route_selection_expression AwsApi#route_selection_expression}
   */
   readonly routeSelectionExpression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#tags TfApi#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#tags AwsApi#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#tags_all TfApi#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#tags_all AwsApi#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#target TfApi#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#target AwsApi#target}
   */
   readonly target?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#version TfApi#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#version AwsApi#version}
   */
   readonly version?: string;
   /**
   * cors_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#cors_configuration TfApi#cors_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#cors_configuration AwsApi#cors_configuration}
   */
-  readonly corsConfiguration?: TfApi.CorsConfigurationProperty;
+  readonly corsConfiguration?: AwsApi.CorsConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api aws_apigatewayv2_api}
 */
-export class TfApi extends cdktn.TerraformResource {
+export class AwsApi extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -101,11 +101,11 @@ export class TfApi extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfApi resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsApi resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfApi to import
-  * @param importFromId The id of the existing TfApi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfApi to import is found
+  * @param importToId The construct id used in the generated config for the AwsApi to import
+  * @param importFromId The id of the existing AwsApi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsApi to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apigatewayv2_api", importId: importFromId, provider });
@@ -120,9 +120,9 @@ export class TfApi extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfApiConfig
+  * @param options AwsApiConfig
   */
-  public constructor(scope: Construct, id: string, config: TfApiConfig) {
+  public constructor(scope: Construct, id: string, config: AwsApiConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apigatewayv2_api',
       terraformGeneratorMetadata: {
@@ -444,11 +444,11 @@ export class TfApi extends cdktn.TerraformResource {
   }
 
   // cors_configuration - computed: false, optional: true, required: false
-  private _corsConfiguration = new TfApi.CorsConfigurationPropertyOutputReference(this, "cors_configuration");
+  private _corsConfiguration = new AwsApi.CorsConfigurationPropertyOutputReference(this, "cors_configuration");
   public get corsConfiguration() {
     return this._corsConfiguration;
   }
-  public putCorsConfiguration(value: TfApi.CorsConfigurationProperty) {
+  public putCorsConfiguration(value: AwsApi.CorsConfigurationProperty) {
     this._corsConfiguration.internalValue = value;
   }
   public resetCorsConfiguration() {
@@ -482,7 +482,7 @@ export class TfApi extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       target: cdktn.stringToTerraform(this._target),
       version: cdktn.stringToTerraform(this._version),
-      cors_configuration: tfApiCorsConfigurationPropertyToTerraform(this._corsConfiguration.internalValue),
+      cors_configuration: awsApiCorsConfigurationPropertyToTerraform(this._corsConfiguration.internalValue),
     };
   }
 
@@ -591,10 +591,10 @@ export class TfApi extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       cors_configuration: {
-        value: tfApiCorsConfigurationPropertyToHclTerraform(this._corsConfiguration.internalValue),
+        value: awsApiCorsConfigurationPropertyToHclTerraform(this._corsConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfApi.CorsConfigurationPropertyList",
+        storageClassType: "AwsApi.CorsConfigurationPropertyList",
       },
     };
 
@@ -603,7 +603,7 @@ export class TfApi extends cdktn.TerraformResource {
   }
 }
 
-export function tfApiCorsConfigurationPropertyToTerraform(struct?: TfApi.CorsConfigurationPropertyOutputReference | TfApi.CorsConfigurationProperty): any {
+export function awsApiCorsConfigurationPropertyToTerraform(struct?: AwsApi.CorsConfigurationPropertyOutputReference | AwsApi.CorsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -619,7 +619,7 @@ export function tfApiCorsConfigurationPropertyToTerraform(struct?: TfApi.CorsCon
 }
 
 
-export function tfApiCorsConfigurationPropertyToHclTerraform(struct?: TfApi.CorsConfigurationPropertyOutputReference | TfApi.CorsConfigurationProperty): any {
+export function awsApiCorsConfigurationPropertyToHclTerraform(struct?: AwsApi.CorsConfigurationPropertyOutputReference | AwsApi.CorsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -668,30 +668,30 @@ export function tfApiCorsConfigurationPropertyToHclTerraform(struct?: TfApi.Cors
 }
 
 
-export namespace TfApi {
+export namespace AwsApi {
 export interface CorsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#allow_credentials TfApi#allow_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#allow_credentials AwsApi#allow_credentials}
   */
   readonly allowCredentials?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#allow_headers TfApi#allow_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#allow_headers AwsApi#allow_headers}
   */
   readonly allowHeaders?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#allow_methods TfApi#allow_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#allow_methods AwsApi#allow_methods}
   */
   readonly allowMethods?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#allow_origins TfApi#allow_origins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#allow_origins AwsApi#allow_origins}
   */
   readonly allowOrigins?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#expose_headers TfApi#expose_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#expose_headers AwsApi#expose_headers}
   */
   readonly exposeHeaders?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#max_age TfApi#max_age}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_api#max_age AwsApi#max_age}
   */
   readonly maxAge?: number;
 }

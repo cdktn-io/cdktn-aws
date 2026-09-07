@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfReleaseLabelsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsReleaseLabelsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emr_release_labels#id DataTfReleaseLabels#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emr_release_labels#id DataAwsReleaseLabels#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface DataTfReleaseLabelsConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emr_release_labels#region DataTfReleaseLabels#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emr_release_labels#region DataAwsReleaseLabels#region}
   */
   readonly region?: string;
   /**
   * filters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emr_release_labels#filters DataTfReleaseLabels#filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emr_release_labels#filters DataAwsReleaseLabels#filters}
   */
-  readonly filters?: DataTfReleaseLabels.FiltersProperty;
+  readonly filters?: DataAwsReleaseLabels.FiltersProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emr_release_labels aws_emr_release_labels}
 */
-export class DataTfReleaseLabels extends cdktn.TerraformDataSource {
+export class DataAwsReleaseLabels extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class DataTfReleaseLabels extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfReleaseLabels resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsReleaseLabels resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfReleaseLabels to import
-  * @param importFromId The id of the existing DataTfReleaseLabels that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emr_release_labels#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfReleaseLabels to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsReleaseLabels to import
+  * @param importFromId The id of the existing DataAwsReleaseLabels that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emr_release_labels#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsReleaseLabels to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_emr_release_labels", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class DataTfReleaseLabels extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfReleaseLabelsConfig = {}
+  * @param options DataAwsReleaseLabelsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfReleaseLabelsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsReleaseLabelsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_emr_release_labels',
       terraformGeneratorMetadata: {
@@ -125,11 +125,11 @@ export class DataTfReleaseLabels extends cdktn.TerraformDataSource {
   }
 
   // filters - computed: false, optional: true, required: false
-  private _filters = new DataTfReleaseLabels.FiltersPropertyOutputReference(this, "filters");
+  private _filters = new DataAwsReleaseLabels.FiltersPropertyOutputReference(this, "filters");
   public get filters() {
     return this._filters;
   }
-  public putFilters(value: DataTfReleaseLabels.FiltersProperty) {
+  public putFilters(value: DataAwsReleaseLabels.FiltersProperty) {
     this._filters.internalValue = value;
   }
   public resetFilters() {
@@ -148,7 +148,7 @@ export class DataTfReleaseLabels extends cdktn.TerraformDataSource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      filters: dataTfReleaseLabelsFiltersPropertyToTerraform(this._filters.internalValue),
+      filters: dataAwsReleaseLabelsFiltersPropertyToTerraform(this._filters.internalValue),
     };
   }
 
@@ -167,10 +167,10 @@ export class DataTfReleaseLabels extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filters: {
-        value: dataTfReleaseLabelsFiltersPropertyToHclTerraform(this._filters.internalValue),
+        value: dataAwsReleaseLabelsFiltersPropertyToHclTerraform(this._filters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataTfReleaseLabels.FiltersPropertyList",
+        storageClassType: "DataAwsReleaseLabels.FiltersPropertyList",
       },
     };
 
@@ -179,7 +179,7 @@ export class DataTfReleaseLabels extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfReleaseLabelsFiltersPropertyToTerraform(struct?: DataTfReleaseLabels.FiltersPropertyOutputReference | DataTfReleaseLabels.FiltersProperty): any {
+export function dataAwsReleaseLabelsFiltersPropertyToTerraform(struct?: DataAwsReleaseLabels.FiltersPropertyOutputReference | DataAwsReleaseLabels.FiltersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -191,7 +191,7 @@ export function dataTfReleaseLabelsFiltersPropertyToTerraform(struct?: DataTfRel
 }
 
 
-export function dataTfReleaseLabelsFiltersPropertyToHclTerraform(struct?: DataTfReleaseLabels.FiltersPropertyOutputReference | DataTfReleaseLabels.FiltersProperty): any {
+export function dataAwsReleaseLabelsFiltersPropertyToHclTerraform(struct?: DataAwsReleaseLabels.FiltersPropertyOutputReference | DataAwsReleaseLabels.FiltersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,14 +216,14 @@ export function dataTfReleaseLabelsFiltersPropertyToHclTerraform(struct?: DataTf
 }
 
 
-export namespace DataTfReleaseLabels {
+export namespace DataAwsReleaseLabels {
 export interface FiltersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emr_release_labels#application DataTfReleaseLabels#application}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emr_release_labels#application DataAwsReleaseLabels#application}
   */
   readonly application?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emr_release_labels#prefix DataTfReleaseLabels#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emr_release_labels#prefix DataAwsReleaseLabels#prefix}
   */
   readonly prefix?: string;
 }

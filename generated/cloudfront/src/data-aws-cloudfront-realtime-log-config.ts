@@ -5,16 +5,16 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfRealtimeLogConfigConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsRealtimeLogConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_realtime_log_config#id DataTfRealtimeLogConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_realtime_log_config#id DataAwsRealtimeLogConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_realtime_log_config#name DataTfRealtimeLogConfig#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_realtime_log_config#name DataAwsRealtimeLogConfig#name}
   */
   readonly name: string;
 }
@@ -22,7 +22,7 @@ export interface DataTfRealtimeLogConfigConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_realtime_log_config aws_cloudfront_realtime_log_config}
 */
-export class DataTfRealtimeLogConfig extends cdktn.TerraformDataSource {
+export class DataAwsRealtimeLogConfig extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -33,11 +33,11 @@ export class DataTfRealtimeLogConfig extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfRealtimeLogConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsRealtimeLogConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfRealtimeLogConfig to import
-  * @param importFromId The id of the existing DataTfRealtimeLogConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_realtime_log_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfRealtimeLogConfig to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsRealtimeLogConfig to import
+  * @param importFromId The id of the existing DataAwsRealtimeLogConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudfront_realtime_log_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsRealtimeLogConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_realtime_log_config", importId: importFromId, provider });
@@ -52,9 +52,9 @@ export class DataTfRealtimeLogConfig extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfRealtimeLogConfigConfig
+  * @param options DataAwsRealtimeLogConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfRealtimeLogConfigConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsRealtimeLogConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_realtime_log_config',
       terraformGeneratorMetadata: {
@@ -84,7 +84,7 @@ export class DataTfRealtimeLogConfig extends cdktn.TerraformDataSource {
   }
 
   // endpoint - computed: true, optional: false, required: false
-  private _endpoint = new DataTfRealtimeLogConfig.EndpointPropertyList(this, "endpoint", false);
+  private _endpoint = new DataAwsRealtimeLogConfig.EndpointPropertyList(this, "endpoint", false);
   public get endpoint() {
     return this._endpoint;
   }
@@ -160,7 +160,7 @@ export class DataTfRealtimeLogConfig extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfRealtimeLogConfigKinesisStreamConfigPropertyToTerraform(struct?: DataTfRealtimeLogConfig.KinesisStreamConfigProperty): any {
+export function dataAwsRealtimeLogConfigKinesisStreamConfigPropertyToTerraform(struct?: DataAwsRealtimeLogConfig.KinesisStreamConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -170,7 +170,7 @@ export function dataTfRealtimeLogConfigKinesisStreamConfigPropertyToTerraform(st
 }
 
 
-export function dataTfRealtimeLogConfigKinesisStreamConfigPropertyToHclTerraform(struct?: DataTfRealtimeLogConfig.KinesisStreamConfigProperty): any {
+export function dataAwsRealtimeLogConfigKinesisStreamConfigPropertyToHclTerraform(struct?: DataAwsRealtimeLogConfig.KinesisStreamConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -181,7 +181,7 @@ export function dataTfRealtimeLogConfigKinesisStreamConfigPropertyToHclTerraform
 }
 
 
-export function dataTfRealtimeLogConfigEndpointPropertyToTerraform(struct?: DataTfRealtimeLogConfig.EndpointProperty): any {
+export function dataAwsRealtimeLogConfigEndpointPropertyToTerraform(struct?: DataAwsRealtimeLogConfig.EndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -191,7 +191,7 @@ export function dataTfRealtimeLogConfigEndpointPropertyToTerraform(struct?: Data
 }
 
 
-export function dataTfRealtimeLogConfigEndpointPropertyToHclTerraform(struct?: DataTfRealtimeLogConfig.EndpointProperty): any {
+export function dataAwsRealtimeLogConfigEndpointPropertyToHclTerraform(struct?: DataAwsRealtimeLogConfig.EndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -202,7 +202,7 @@ export function dataTfRealtimeLogConfigEndpointPropertyToHclTerraform(struct?: D
 }
 
 
-export namespace DataTfRealtimeLogConfig {
+export namespace DataAwsRealtimeLogConfig {
 export interface KinesisStreamConfigProperty {
 }
 export class KinesisStreamConfigPropertyOutputReference extends cdktn.ComplexObject {

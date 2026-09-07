@@ -29,11 +29,11 @@ restates a naming decision.
 | `import * as s3Bucket from '@cdktn/provider-aws/lib/s3-bucket'` | same, merged into one declaration |
 | `import { s3Bucket } from '@cdktn/provider-aws'` | same |
 | `import * as aws from '@cdktn/provider-aws'` | `import * as aws from '@cdktn/aws'`, kept as one |
-| `S3Bucket` / `S3BucketConfig` | `s3.TfBucket` / `s3.TfBucketConfig` |
-| `S3BucketCorsRule` | `s3.TfBucket.CorsRuleProperty` |
-| `S3BucketCorsRuleOutputReference` / `…List` | `s3.TfBucket.CorsRulePropertyOutputReference` / `…PropertyList` |
-| `s3BucketCorsRuleToTerraform` | `s3.tfBucketMapperCorsRulePropertyToTerraform` |
-| `@cdktn/provider-aws` in `package.json` | `@cdktn/aws@^0.2.0` |
+| `S3Bucket` / `S3BucketConfig` | `s3.AwsBucket` / `s3.AwsBucketConfig` |
+| `S3BucketCorsRule` | `s3.AwsBucket.CorsRuleProperty` |
+| `S3BucketCorsRuleOutputReference` / `…List` | `s3.AwsBucket.CorsRulePropertyOutputReference` / `…PropertyList` |
+| `s3BucketCorsRuleToTerraform` | `s3.awsBucketMapperCorsRulePropertyToTerraform` |
+| `@cdktn/provider-aws` in `package.json` | `@cdktn/aws@^0.3.0` |
 
 The `require()` forms of every import shape are handled too, and every occurrence is resolved
 through the TypeScript symbol rather than by matching text — so a local `const S3Bucket = …`, a

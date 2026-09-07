@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfInferenceProfilesConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsInferenceProfilesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_inference_profiles#region DataTfInferenceProfiles#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_inference_profiles#region DataAwsInferenceProfiles#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_inference_profiles#type DataTfInferenceProfiles#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_inference_profiles#type DataAwsInferenceProfiles#type}
   */
   readonly type?: string;
 }
@@ -21,7 +21,7 @@ export interface DataTfInferenceProfilesConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_inference_profiles aws_bedrock_inference_profiles}
 */
-export class DataTfInferenceProfiles extends cdktn.TerraformDataSource {
+export class DataAwsInferenceProfiles extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataTfInferenceProfiles extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfInferenceProfiles resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsInferenceProfiles resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfInferenceProfiles to import
-  * @param importFromId The id of the existing DataTfInferenceProfiles that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_inference_profiles#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfInferenceProfiles to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsInferenceProfiles to import
+  * @param importFromId The id of the existing DataAwsInferenceProfiles that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_inference_profiles#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsInferenceProfiles to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrock_inference_profiles", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataTfInferenceProfiles extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfInferenceProfilesConfig = {}
+  * @param options DataAwsInferenceProfilesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfInferenceProfilesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsInferenceProfilesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrock_inference_profiles',
       terraformGeneratorMetadata: {
@@ -78,7 +78,7 @@ export class DataTfInferenceProfiles extends cdktn.TerraformDataSource {
   // ==========
 
   // inference_profile_summaries - computed: true, optional: false, required: false
-  private _inferenceProfileSummaries = new DataTfInferenceProfiles.InferenceProfileSummariesPropertyList(this, "inference_profile_summaries", false);
+  private _inferenceProfileSummaries = new DataAwsInferenceProfiles.InferenceProfileSummariesPropertyList(this, "inference_profile_summaries", false);
   public get inferenceProfileSummaries() {
     return this._inferenceProfileSummaries;
   }
@@ -147,7 +147,7 @@ export class DataTfInferenceProfiles extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfInferenceProfilesModelsPropertyToTerraform(struct?: DataTfInferenceProfiles.ModelsProperty): any {
+export function dataAwsInferenceProfilesModelsPropertyToTerraform(struct?: DataAwsInferenceProfiles.ModelsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -157,7 +157,7 @@ export function dataTfInferenceProfilesModelsPropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfInferenceProfilesModelsPropertyToHclTerraform(struct?: DataTfInferenceProfiles.ModelsProperty): any {
+export function dataAwsInferenceProfilesModelsPropertyToHclTerraform(struct?: DataAwsInferenceProfiles.ModelsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -168,7 +168,7 @@ export function dataTfInferenceProfilesModelsPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataTfInferenceProfilesInferenceProfileSummariesPropertyToTerraform(struct?: DataTfInferenceProfiles.InferenceProfileSummariesProperty): any {
+export function dataAwsInferenceProfilesInferenceProfileSummariesPropertyToTerraform(struct?: DataAwsInferenceProfiles.InferenceProfileSummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -178,7 +178,7 @@ export function dataTfInferenceProfilesInferenceProfileSummariesPropertyToTerraf
 }
 
 
-export function dataTfInferenceProfilesInferenceProfileSummariesPropertyToHclTerraform(struct?: DataTfInferenceProfiles.InferenceProfileSummariesProperty): any {
+export function dataAwsInferenceProfilesInferenceProfileSummariesPropertyToHclTerraform(struct?: DataAwsInferenceProfiles.InferenceProfileSummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -189,7 +189,7 @@ export function dataTfInferenceProfilesInferenceProfileSummariesPropertyToHclTer
 }
 
 
-export namespace DataTfInferenceProfiles {
+export namespace DataAwsInferenceProfiles {
 export interface ModelsProperty {
 }
 export class ModelsPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTemplateConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTemplateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template#aws_region TfTemplate#aws_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template#aws_region AwsTemplate#aws_region}
   */
   readonly awsRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template#quota_code TfTemplate#quota_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template#quota_code AwsTemplate#quota_code}
   */
   readonly quotaCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template#region TfTemplate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template#region AwsTemplate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template#service_code TfTemplate#service_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template#service_code AwsTemplate#service_code}
   */
   readonly serviceCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template#value TfTemplate#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template#value AwsTemplate#value}
   */
   readonly value: number;
 }
@@ -31,7 +31,7 @@ export interface TfTemplateConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template aws_servicequotas_template}
 */
-export class TfTemplate extends cdktn.TerraformResource {
+export class AwsTemplate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class TfTemplate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTemplate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTemplate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTemplate to import
-  * @param importFromId The id of the existing TfTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTemplate to import is found
+  * @param importToId The construct id used in the generated config for the AwsTemplate to import
+  * @param importFromId The id of the existing AwsTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicequotas_template#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicequotas_template", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class TfTemplate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTemplateConfig
+  * @param options AwsTemplateConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTemplateConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTemplateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicequotas_template',
       terraformGeneratorMetadata: {

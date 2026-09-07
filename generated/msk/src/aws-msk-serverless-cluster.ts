@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfServerlessClusterConfig extends cdktn.TerraformMetaArguments {
+export interface AwsServerlessClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#cluster_name TfServerlessCluster#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#cluster_name AwsServerlessCluster#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#id TfServerlessCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#id AwsServerlessCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,41 +20,41 @@ export interface TfServerlessClusterConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#region TfServerlessCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#region AwsServerlessCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#tags TfServerlessCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#tags AwsServerlessCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#tags_all TfServerlessCluster#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#tags_all AwsServerlessCluster#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * client_authentication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#client_authentication TfServerlessCluster#client_authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#client_authentication AwsServerlessCluster#client_authentication}
   */
-  readonly clientAuthentication: TfServerlessCluster.ClientAuthenticationProperty;
+  readonly clientAuthentication: AwsServerlessCluster.ClientAuthenticationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#timeouts TfServerlessCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#timeouts AwsServerlessCluster#timeouts}
   */
-  readonly timeouts?: TfServerlessCluster.TimeoutsProperty;
+  readonly timeouts?: AwsServerlessCluster.TimeoutsProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#vpc_config TfServerlessCluster#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#vpc_config AwsServerlessCluster#vpc_config}
   */
-  readonly vpcConfig: TfServerlessCluster.VpcConfigProperty[] | cdktn.IResolvable;
+  readonly vpcConfig: AwsServerlessCluster.VpcConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster aws_msk_serverless_cluster}
 */
-export class TfServerlessCluster extends cdktn.TerraformResource {
+export class AwsServerlessCluster extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfServerlessCluster extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfServerlessCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsServerlessCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfServerlessCluster to import
-  * @param importFromId The id of the existing TfServerlessCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfServerlessCluster to import is found
+  * @param importToId The construct id used in the generated config for the AwsServerlessCluster to import
+  * @param importFromId The id of the existing AwsServerlessCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsServerlessCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_msk_serverless_cluster", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfServerlessCluster extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfServerlessClusterConfig
+  * @param options AwsServerlessClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: TfServerlessClusterConfig) {
+  public constructor(scope: Construct, id: string, config: AwsServerlessClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_msk_serverless_cluster',
       terraformGeneratorMetadata: {
@@ -209,11 +209,11 @@ export class TfServerlessCluster extends cdktn.TerraformResource {
   }
 
   // client_authentication - computed: false, optional: false, required: true
-  private _clientAuthentication = new TfServerlessCluster.ClientAuthenticationPropertyOutputReference(this, "client_authentication");
+  private _clientAuthentication = new AwsServerlessCluster.ClientAuthenticationPropertyOutputReference(this, "client_authentication");
   public get clientAuthentication() {
     return this._clientAuthentication;
   }
-  public putClientAuthentication(value: TfServerlessCluster.ClientAuthenticationProperty) {
+  public putClientAuthentication(value: AwsServerlessCluster.ClientAuthenticationProperty) {
     this._clientAuthentication.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -222,11 +222,11 @@ export class TfServerlessCluster extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfServerlessCluster.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsServerlessCluster.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfServerlessCluster.TimeoutsProperty) {
+  public putTimeouts(value: AwsServerlessCluster.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -238,11 +238,11 @@ export class TfServerlessCluster extends cdktn.TerraformResource {
   }
 
   // vpc_config - computed: false, optional: false, required: true
-  private _vpcConfig = new TfServerlessCluster.VpcConfigPropertyList(this, "vpc_config", false);
+  private _vpcConfig = new AwsServerlessCluster.VpcConfigPropertyList(this, "vpc_config", false);
   public get vpcConfig() {
     return this._vpcConfig;
   }
-  public putVpcConfig(value: TfServerlessCluster.VpcConfigProperty[] | cdktn.IResolvable) {
+  public putVpcConfig(value: AwsServerlessCluster.VpcConfigProperty[] | cdktn.IResolvable) {
     this._vpcConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -261,9 +261,9 @@ export class TfServerlessCluster extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      client_authentication: tfServerlessClusterClientAuthenticationPropertyToTerraform(this._clientAuthentication.internalValue),
-      timeouts: tfServerlessClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_config: cdktn.listMapper(tfServerlessClusterVpcConfigPropertyToTerraform, true)(this._vpcConfig.internalValue),
+      client_authentication: awsServerlessClusterClientAuthenticationPropertyToTerraform(this._clientAuthentication.internalValue),
+      timeouts: awsServerlessClusterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_config: cdktn.listMapper(awsServerlessClusterVpcConfigPropertyToTerraform, true)(this._vpcConfig.internalValue),
     };
   }
 
@@ -300,22 +300,22 @@ export class TfServerlessCluster extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       client_authentication: {
-        value: tfServerlessClusterClientAuthenticationPropertyToHclTerraform(this._clientAuthentication.internalValue),
+        value: awsServerlessClusterClientAuthenticationPropertyToHclTerraform(this._clientAuthentication.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfServerlessCluster.ClientAuthenticationPropertyList",
+        storageClassType: "AwsServerlessCluster.ClientAuthenticationPropertyList",
       },
       timeouts: {
-        value: tfServerlessClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsServerlessClusterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfServerlessCluster.TimeoutsProperty",
+        storageClassType: "AwsServerlessCluster.TimeoutsProperty",
       },
       vpc_config: {
-        value: cdktn.listMapperHcl(tfServerlessClusterVpcConfigPropertyToHclTerraform, true)(this._vpcConfig.internalValue),
+        value: cdktn.listMapperHcl(awsServerlessClusterVpcConfigPropertyToHclTerraform, true)(this._vpcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfServerlessCluster.VpcConfigPropertyList",
+        storageClassType: "AwsServerlessCluster.VpcConfigPropertyList",
       },
     };
 
@@ -324,7 +324,7 @@ export class TfServerlessCluster extends cdktn.TerraformResource {
   }
 }
 
-export function tfServerlessClusterIamPropertyToTerraform(struct?: TfServerlessCluster.IamPropertyOutputReference | TfServerlessCluster.IamProperty): any {
+export function awsServerlessClusterIamPropertyToTerraform(struct?: AwsServerlessCluster.IamPropertyOutputReference | AwsServerlessCluster.IamProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -335,7 +335,7 @@ export function tfServerlessClusterIamPropertyToTerraform(struct?: TfServerlessC
 }
 
 
-export function tfServerlessClusterIamPropertyToHclTerraform(struct?: TfServerlessCluster.IamPropertyOutputReference | TfServerlessCluster.IamProperty): any {
+export function awsServerlessClusterIamPropertyToHclTerraform(struct?: AwsServerlessCluster.IamPropertyOutputReference | AwsServerlessCluster.IamProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,25 +354,25 @@ export function tfServerlessClusterIamPropertyToHclTerraform(struct?: TfServerle
 }
 
 
-export function tfServerlessClusterSaslPropertyToTerraform(struct?: TfServerlessCluster.SaslPropertyOutputReference | TfServerlessCluster.SaslProperty): any {
+export function awsServerlessClusterSaslPropertyToTerraform(struct?: AwsServerlessCluster.SaslPropertyOutputReference | AwsServerlessCluster.SaslProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    iam: tfServerlessClusterIamPropertyToTerraform(struct!.iam),
+    iam: awsServerlessClusterIamPropertyToTerraform(struct!.iam),
   }
 }
 
 
-export function tfServerlessClusterSaslPropertyToHclTerraform(struct?: TfServerlessCluster.SaslPropertyOutputReference | TfServerlessCluster.SaslProperty): any {
+export function awsServerlessClusterSaslPropertyToHclTerraform(struct?: AwsServerlessCluster.SaslPropertyOutputReference | AwsServerlessCluster.SaslProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     iam: {
-      value: tfServerlessClusterIamPropertyToHclTerraform(struct!.iam),
+      value: awsServerlessClusterIamPropertyToHclTerraform(struct!.iam),
       isBlock: true,
       type: "list",
       storageClassType: "IamPropertyList",
@@ -384,25 +384,25 @@ export function tfServerlessClusterSaslPropertyToHclTerraform(struct?: TfServerl
 }
 
 
-export function tfServerlessClusterClientAuthenticationPropertyToTerraform(struct?: TfServerlessCluster.ClientAuthenticationPropertyOutputReference | TfServerlessCluster.ClientAuthenticationProperty): any {
+export function awsServerlessClusterClientAuthenticationPropertyToTerraform(struct?: AwsServerlessCluster.ClientAuthenticationPropertyOutputReference | AwsServerlessCluster.ClientAuthenticationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    sasl: tfServerlessClusterSaslPropertyToTerraform(struct!.sasl),
+    sasl: awsServerlessClusterSaslPropertyToTerraform(struct!.sasl),
   }
 }
 
 
-export function tfServerlessClusterClientAuthenticationPropertyToHclTerraform(struct?: TfServerlessCluster.ClientAuthenticationPropertyOutputReference | TfServerlessCluster.ClientAuthenticationProperty): any {
+export function awsServerlessClusterClientAuthenticationPropertyToHclTerraform(struct?: AwsServerlessCluster.ClientAuthenticationPropertyOutputReference | AwsServerlessCluster.ClientAuthenticationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     sasl: {
-      value: tfServerlessClusterSaslPropertyToHclTerraform(struct!.sasl),
+      value: awsServerlessClusterSaslPropertyToHclTerraform(struct!.sasl),
       isBlock: true,
       type: "list",
       storageClassType: "SaslPropertyList",
@@ -414,7 +414,7 @@ export function tfServerlessClusterClientAuthenticationPropertyToHclTerraform(st
 }
 
 
-export function tfServerlessClusterTimeoutsPropertyToTerraform(struct?: TfServerlessCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsServerlessClusterTimeoutsPropertyToTerraform(struct?: AwsServerlessCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -426,7 +426,7 @@ export function tfServerlessClusterTimeoutsPropertyToTerraform(struct?: TfServer
 }
 
 
-export function tfServerlessClusterTimeoutsPropertyToHclTerraform(struct?: TfServerlessCluster.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsServerlessClusterTimeoutsPropertyToHclTerraform(struct?: AwsServerlessCluster.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function tfServerlessClusterTimeoutsPropertyToHclTerraform(struct?: TfSer
 }
 
 
-export function tfServerlessClusterVpcConfigPropertyToTerraform(struct?: TfServerlessCluster.VpcConfigProperty | cdktn.IResolvable): any {
+export function awsServerlessClusterVpcConfigPropertyToTerraform(struct?: AwsServerlessCluster.VpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -463,7 +463,7 @@ export function tfServerlessClusterVpcConfigPropertyToTerraform(struct?: TfServe
 }
 
 
-export function tfServerlessClusterVpcConfigPropertyToHclTerraform(struct?: TfServerlessCluster.VpcConfigProperty | cdktn.IResolvable): any {
+export function awsServerlessClusterVpcConfigPropertyToHclTerraform(struct?: AwsServerlessCluster.VpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -488,10 +488,10 @@ export function tfServerlessClusterVpcConfigPropertyToHclTerraform(struct?: TfSe
 }
 
 
-export namespace TfServerlessCluster {
+export namespace AwsServerlessCluster {
 export interface IamProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#enabled TfServerlessCluster#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#enabled AwsServerlessCluster#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
 }
@@ -544,7 +544,7 @@ export interface SaslProperty {
   /**
   * iam block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#iam TfServerlessCluster#iam}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#iam AwsServerlessCluster#iam}
   */
   readonly iam: IamProperty;
 }
@@ -597,7 +597,7 @@ export interface ClientAuthenticationProperty {
   /**
   * sasl block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#sasl TfServerlessCluster#sasl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#sasl AwsServerlessCluster#sasl}
   */
   readonly sasl: SaslProperty;
 }
@@ -648,11 +648,11 @@ export class ClientAuthenticationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#create TfServerlessCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#create AwsServerlessCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#delete TfServerlessCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#delete AwsServerlessCluster#delete}
   */
   readonly delete?: string;
 }
@@ -738,11 +738,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#security_group_ids TfServerlessCluster#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#security_group_ids AwsServerlessCluster#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#subnet_ids TfServerlessCluster#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_serverless_cluster#subnet_ids AwsServerlessCluster#subnet_ids}
   */
   readonly subnetIds: string[];
 }

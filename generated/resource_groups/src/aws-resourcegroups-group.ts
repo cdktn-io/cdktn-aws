@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#description TfGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#description AwsGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#id TfGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#id AwsGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#name TfGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#name AwsGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#region TfGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#region AwsGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#tags TfGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#tags AwsGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#tags_all TfGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#tags_all AwsGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#configuration TfGroup#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#configuration AwsGroup#configuration}
   */
-  readonly configuration?: TfGroup.ConfigurationProperty[] | cdktn.IResolvable;
+  readonly configuration?: AwsGroup.ConfigurationProperty[] | cdktn.IResolvable;
   /**
   * resource_query block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#resource_query TfGroup#resource_query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#resource_query AwsGroup#resource_query}
   */
-  readonly resourceQuery?: TfGroup.ResourceQueryProperty;
+  readonly resourceQuery?: AwsGroup.ResourceQueryProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#timeouts TfGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#timeouts AwsGroup#timeouts}
   */
-  readonly timeouts?: TfGroup.TimeoutsProperty;
+  readonly timeouts?: AwsGroup.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group aws_resourcegroups_group}
 */
-export class TfGroup extends cdktn.TerraformResource {
+export class AwsGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfGroup to import
-  * @param importFromId The id of the existing TfGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsGroup to import
+  * @param importFromId The id of the existing AwsGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_resourcegroups_group", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfGroupConfig
+  * @param options AwsGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_resourcegroups_group',
       terraformGeneratorMetadata: {
@@ -220,11 +220,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new TfGroup.ConfigurationPropertyList(this, "configuration", true);
+  private _configuration = new AwsGroup.ConfigurationPropertyList(this, "configuration", true);
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: TfGroup.ConfigurationProperty[] | cdktn.IResolvable) {
+  public putConfiguration(value: AwsGroup.ConfigurationProperty[] | cdktn.IResolvable) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -236,11 +236,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // resource_query - computed: false, optional: true, required: false
-  private _resourceQuery = new TfGroup.ResourceQueryPropertyOutputReference(this, "resource_query");
+  private _resourceQuery = new AwsGroup.ResourceQueryPropertyOutputReference(this, "resource_query");
   public get resourceQuery() {
     return this._resourceQuery;
   }
-  public putResourceQuery(value: TfGroup.ResourceQueryProperty) {
+  public putResourceQuery(value: AwsGroup.ResourceQueryProperty) {
     this._resourceQuery.internalValue = value;
   }
   public resetResourceQuery() {
@@ -252,11 +252,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsGroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfGroup.TimeoutsProperty) {
+  public putTimeouts(value: AwsGroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -279,9 +279,9 @@ export class TfGroup extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      configuration: cdktn.listMapper(tfGroupConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
-      resource_query: tfGroupResourceQueryPropertyToTerraform(this._resourceQuery.internalValue),
-      timeouts: tfGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      configuration: cdktn.listMapper(awsGroupConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
+      resource_query: awsGroupResourceQueryPropertyToTerraform(this._resourceQuery.internalValue),
+      timeouts: awsGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -324,22 +324,22 @@ export class TfGroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       configuration: {
-        value: cdktn.listMapperHcl(tfGroupConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
+        value: cdktn.listMapperHcl(awsGroupConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfGroup.ConfigurationPropertyList",
+        storageClassType: "AwsGroup.ConfigurationPropertyList",
       },
       resource_query: {
-        value: tfGroupResourceQueryPropertyToHclTerraform(this._resourceQuery.internalValue),
+        value: awsGroupResourceQueryPropertyToHclTerraform(this._resourceQuery.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGroup.ResourceQueryPropertyList",
+        storageClassType: "AwsGroup.ResourceQueryPropertyList",
       },
       timeouts: {
-        value: tfGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfGroup.TimeoutsProperty",
+        storageClassType: "AwsGroup.TimeoutsProperty",
       },
     };
 
@@ -348,7 +348,7 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfGroupParametersPropertyToTerraform(struct?: TfGroup.ParametersProperty | cdktn.IResolvable): any {
+export function awsGroupParametersPropertyToTerraform(struct?: AwsGroup.ParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function tfGroupParametersPropertyToTerraform(struct?: TfGroup.Parameters
 }
 
 
-export function tfGroupParametersPropertyToHclTerraform(struct?: TfGroup.ParametersProperty | cdktn.IResolvable): any {
+export function awsGroupParametersPropertyToHclTerraform(struct?: AwsGroup.ParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,19 +385,19 @@ export function tfGroupParametersPropertyToHclTerraform(struct?: TfGroup.Paramet
 }
 
 
-export function tfGroupConfigurationPropertyToTerraform(struct?: TfGroup.ConfigurationProperty | cdktn.IResolvable): any {
+export function awsGroupConfigurationPropertyToTerraform(struct?: AwsGroup.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    parameters: cdktn.listMapper(tfGroupParametersPropertyToTerraform, true)(struct!.parameters),
+    parameters: cdktn.listMapper(awsGroupParametersPropertyToTerraform, true)(struct!.parameters),
   }
 }
 
 
-export function tfGroupConfigurationPropertyToHclTerraform(struct?: TfGroup.ConfigurationProperty | cdktn.IResolvable): any {
+export function awsGroupConfigurationPropertyToHclTerraform(struct?: AwsGroup.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,7 +410,7 @@ export function tfGroupConfigurationPropertyToHclTerraform(struct?: TfGroup.Conf
       storageClassType: "string",
     },
     parameters: {
-      value: cdktn.listMapperHcl(tfGroupParametersPropertyToHclTerraform, true)(struct!.parameters),
+      value: cdktn.listMapperHcl(awsGroupParametersPropertyToHclTerraform, true)(struct!.parameters),
       isBlock: true,
       type: "set",
       storageClassType: "ParametersPropertyList",
@@ -422,7 +422,7 @@ export function tfGroupConfigurationPropertyToHclTerraform(struct?: TfGroup.Conf
 }
 
 
-export function tfGroupResourceQueryPropertyToTerraform(struct?: TfGroup.ResourceQueryPropertyOutputReference | TfGroup.ResourceQueryProperty): any {
+export function awsGroupResourceQueryPropertyToTerraform(struct?: AwsGroup.ResourceQueryPropertyOutputReference | AwsGroup.ResourceQueryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -434,7 +434,7 @@ export function tfGroupResourceQueryPropertyToTerraform(struct?: TfGroup.Resourc
 }
 
 
-export function tfGroupResourceQueryPropertyToHclTerraform(struct?: TfGroup.ResourceQueryPropertyOutputReference | TfGroup.ResourceQueryProperty): any {
+export function awsGroupResourceQueryPropertyToHclTerraform(struct?: AwsGroup.ResourceQueryPropertyOutputReference | AwsGroup.ResourceQueryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -459,7 +459,7 @@ export function tfGroupResourceQueryPropertyToHclTerraform(struct?: TfGroup.Reso
 }
 
 
-export function tfGroupTimeoutsPropertyToTerraform(struct?: TfGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsGroupTimeoutsPropertyToTerraform(struct?: AwsGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -471,7 +471,7 @@ export function tfGroupTimeoutsPropertyToTerraform(struct?: TfGroup.TimeoutsProp
 }
 
 
-export function tfGroupTimeoutsPropertyToHclTerraform(struct?: TfGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsGroupTimeoutsPropertyToHclTerraform(struct?: AwsGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,14 +496,14 @@ export function tfGroupTimeoutsPropertyToHclTerraform(struct?: TfGroup.TimeoutsP
 }
 
 
-export namespace TfGroup {
+export namespace AwsGroup {
 export interface ParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#name TfGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#name AwsGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#values TfGroup#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#values AwsGroup#values}
   */
   readonly values: string[];
 }
@@ -605,13 +605,13 @@ export class ParametersPropertyList extends cdktn.ComplexList {
 }
 export interface ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#type TfGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#type AwsGroup#type}
   */
   readonly type: string;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#parameters TfGroup#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#parameters AwsGroup#parameters}
   */
   readonly parameters?: ParametersProperty[] | cdktn.IResolvable;
 }
@@ -716,11 +716,11 @@ export class ConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceQueryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#query TfGroup#query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#query AwsGroup#query}
   */
   readonly query: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#type TfGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#type AwsGroup#type}
   */
   readonly type?: string;
 }
@@ -793,11 +793,11 @@ export class ResourceQueryPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#create TfGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#create AwsGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#update TfGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/resourcegroups_group#update AwsGroup#update}
   */
   readonly update?: string;
 }

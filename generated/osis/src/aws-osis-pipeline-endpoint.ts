@@ -5,35 +5,35 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPipelineEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPipelineEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#pipeline_arn TfPipelineEndpoint#pipeline_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#pipeline_arn AwsPipelineEndpoint#pipeline_arn}
   */
   readonly pipelineArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#region TfPipelineEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#region AwsPipelineEndpoint#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#timeouts TfPipelineEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#timeouts AwsPipelineEndpoint#timeouts}
   */
-  readonly timeouts?: TfPipelineEndpoint.TimeoutsProperty;
+  readonly timeouts?: AwsPipelineEndpoint.TimeoutsProperty;
   /**
   * vpc_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#vpc_options TfPipelineEndpoint#vpc_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#vpc_options AwsPipelineEndpoint#vpc_options}
   */
-  readonly vpcOptions?: TfPipelineEndpoint.VpcOptionsProperty[] | cdktn.IResolvable;
+  readonly vpcOptions?: AwsPipelineEndpoint.VpcOptionsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint aws_osis_pipeline_endpoint}
 */
-export class TfPipelineEndpoint extends cdktn.TerraformResource {
+export class AwsPipelineEndpoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class TfPipelineEndpoint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPipelineEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPipelineEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPipelineEndpoint to import
-  * @param importFromId The id of the existing TfPipelineEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPipelineEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the AwsPipelineEndpoint to import
+  * @param importFromId The id of the existing AwsPipelineEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPipelineEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_osis_pipeline_endpoint", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class TfPipelineEndpoint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPipelineEndpointConfig
+  * @param options AwsPipelineEndpointConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPipelineEndpointConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPipelineEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_osis_pipeline_endpoint',
       terraformGeneratorMetadata: {
@@ -136,11 +136,11 @@ export class TfPipelineEndpoint extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfPipelineEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsPipelineEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfPipelineEndpoint.TimeoutsProperty) {
+  public putTimeouts(value: AwsPipelineEndpoint.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -152,11 +152,11 @@ export class TfPipelineEndpoint extends cdktn.TerraformResource {
   }
 
   // vpc_options - computed: false, optional: true, required: false
-  private _vpcOptions = new TfPipelineEndpoint.VpcOptionsPropertyList(this, "vpc_options", false);
+  private _vpcOptions = new AwsPipelineEndpoint.VpcOptionsPropertyList(this, "vpc_options", false);
   public get vpcOptions() {
     return this._vpcOptions;
   }
-  public putVpcOptions(value: TfPipelineEndpoint.VpcOptionsProperty[] | cdktn.IResolvable) {
+  public putVpcOptions(value: AwsPipelineEndpoint.VpcOptionsProperty[] | cdktn.IResolvable) {
     this._vpcOptions.internalValue = value;
   }
   public resetVpcOptions() {
@@ -175,8 +175,8 @@ export class TfPipelineEndpoint extends cdktn.TerraformResource {
     return {
       pipeline_arn: cdktn.stringToTerraform(this._pipelineArn),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfPipelineEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_options: cdktn.listMapper(tfPipelineEndpointVpcOptionsPropertyToTerraform, true)(this._vpcOptions.internalValue),
+      timeouts: awsPipelineEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_options: cdktn.listMapper(awsPipelineEndpointVpcOptionsPropertyToTerraform, true)(this._vpcOptions.internalValue),
     };
   }
 
@@ -195,16 +195,16 @@ export class TfPipelineEndpoint extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfPipelineEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsPipelineEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfPipelineEndpoint.TimeoutsProperty",
+        storageClassType: "AwsPipelineEndpoint.TimeoutsProperty",
       },
       vpc_options: {
-        value: cdktn.listMapperHcl(tfPipelineEndpointVpcOptionsPropertyToHclTerraform, true)(this._vpcOptions.internalValue),
+        value: cdktn.listMapperHcl(awsPipelineEndpointVpcOptionsPropertyToHclTerraform, true)(this._vpcOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPipelineEndpoint.VpcOptionsPropertyList",
+        storageClassType: "AwsPipelineEndpoint.VpcOptionsPropertyList",
       },
     };
 
@@ -213,7 +213,7 @@ export class TfPipelineEndpoint extends cdktn.TerraformResource {
   }
 }
 
-export function tfPipelineEndpointTimeoutsPropertyToTerraform(struct?: TfPipelineEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPipelineEndpointTimeoutsPropertyToTerraform(struct?: AwsPipelineEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -225,7 +225,7 @@ export function tfPipelineEndpointTimeoutsPropertyToTerraform(struct?: TfPipelin
 }
 
 
-export function tfPipelineEndpointTimeoutsPropertyToHclTerraform(struct?: TfPipelineEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPipelineEndpointTimeoutsPropertyToHclTerraform(struct?: AwsPipelineEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -250,7 +250,7 @@ export function tfPipelineEndpointTimeoutsPropertyToHclTerraform(struct?: TfPipe
 }
 
 
-export function tfPipelineEndpointVpcOptionsPropertyToTerraform(struct?: TfPipelineEndpoint.VpcOptionsProperty | cdktn.IResolvable): any {
+export function awsPipelineEndpointVpcOptionsPropertyToTerraform(struct?: AwsPipelineEndpoint.VpcOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -262,7 +262,7 @@ export function tfPipelineEndpointVpcOptionsPropertyToTerraform(struct?: TfPipel
 }
 
 
-export function tfPipelineEndpointVpcOptionsPropertyToHclTerraform(struct?: TfPipelineEndpoint.VpcOptionsProperty | cdktn.IResolvable): any {
+export function awsPipelineEndpointVpcOptionsPropertyToHclTerraform(struct?: AwsPipelineEndpoint.VpcOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -287,18 +287,18 @@ export function tfPipelineEndpointVpcOptionsPropertyToHclTerraform(struct?: TfPi
 }
 
 
-export namespace TfPipelineEndpoint {
+export namespace AwsPipelineEndpoint {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#create TfPipelineEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#create AwsPipelineEndpoint#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#delete TfPipelineEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#delete AwsPipelineEndpoint#delete}
   */
   readonly delete?: string;
 }
@@ -384,11 +384,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#security_group_ids TfPipelineEndpoint#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#security_group_ids AwsPipelineEndpoint#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#subnet_ids TfPipelineEndpoint#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline_endpoint#subnet_ids AwsPipelineEndpoint#subnet_ids}
   */
   readonly subnetIds: string[];
 }

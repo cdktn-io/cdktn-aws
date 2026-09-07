@@ -5,84 +5,84 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAmiCopyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAmiCopyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#deprecation_time TfAmiCopy#deprecation_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#deprecation_time AwsAmiCopy#deprecation_time}
   */
   readonly deprecationTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#description TfAmiCopy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#description AwsAmiCopy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#destination_outpost_arn TfAmiCopy#destination_outpost_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#destination_outpost_arn AwsAmiCopy#destination_outpost_arn}
   */
   readonly destinationOutpostArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#encrypted TfAmiCopy#encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#encrypted AwsAmiCopy#encrypted}
   */
   readonly encrypted?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#id TfAmiCopy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#id AwsAmiCopy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#kms_key_id TfAmiCopy#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#kms_key_id AwsAmiCopy#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#name TfAmiCopy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#name AwsAmiCopy#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#region TfAmiCopy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#region AwsAmiCopy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#source_ami_id TfAmiCopy#source_ami_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#source_ami_id AwsAmiCopy#source_ami_id}
   */
   readonly sourceAmiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#source_ami_region TfAmiCopy#source_ami_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#source_ami_region AwsAmiCopy#source_ami_region}
   */
   readonly sourceAmiRegion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#tags TfAmiCopy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#tags AwsAmiCopy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#tags_all TfAmiCopy#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#tags_all AwsAmiCopy#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * ebs_block_device block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#ebs_block_device TfAmiCopy#ebs_block_device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#ebs_block_device AwsAmiCopy#ebs_block_device}
   */
-  readonly ebsBlockDevice?: TfAmiCopy.EbsBlockDeviceProperty[] | cdktn.IResolvable;
+  readonly ebsBlockDevice?: AwsAmiCopy.EbsBlockDeviceProperty[] | cdktn.IResolvable;
   /**
   * ephemeral_block_device block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#ephemeral_block_device TfAmiCopy#ephemeral_block_device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#ephemeral_block_device AwsAmiCopy#ephemeral_block_device}
   */
-  readonly ephemeralBlockDevice?: TfAmiCopy.EphemeralBlockDeviceProperty[] | cdktn.IResolvable;
+  readonly ephemeralBlockDevice?: AwsAmiCopy.EphemeralBlockDeviceProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#timeouts TfAmiCopy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#timeouts AwsAmiCopy#timeouts}
   */
-  readonly timeouts?: TfAmiCopy.TimeoutsProperty;
+  readonly timeouts?: AwsAmiCopy.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy aws_ami_copy}
 */
-export class TfAmiCopy extends cdktn.TerraformResource {
+export class AwsAmiCopy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -93,11 +93,11 @@ export class TfAmiCopy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAmiCopy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAmiCopy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAmiCopy to import
-  * @param importFromId The id of the existing TfAmiCopy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAmiCopy to import is found
+  * @param importToId The construct id used in the generated config for the AwsAmiCopy to import
+  * @param importFromId The id of the existing AwsAmiCopy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAmiCopy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ami_copy", importId: importFromId, provider });
@@ -112,9 +112,9 @@ export class TfAmiCopy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAmiCopyConfig
+  * @param options AwsAmiCopyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAmiCopyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAmiCopyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ami_copy',
       terraformGeneratorMetadata: {
@@ -455,11 +455,11 @@ export class TfAmiCopy extends cdktn.TerraformResource {
   }
 
   // ebs_block_device - computed: false, optional: true, required: false
-  private _ebsBlockDevice = new TfAmiCopy.EbsBlockDevicePropertyList(this, "ebs_block_device", true);
+  private _ebsBlockDevice = new AwsAmiCopy.EbsBlockDevicePropertyList(this, "ebs_block_device", true);
   public get ebsBlockDevice() {
     return this._ebsBlockDevice;
   }
-  public putEbsBlockDevice(value: TfAmiCopy.EbsBlockDeviceProperty[] | cdktn.IResolvable) {
+  public putEbsBlockDevice(value: AwsAmiCopy.EbsBlockDeviceProperty[] | cdktn.IResolvable) {
     this._ebsBlockDevice.internalValue = value;
   }
   public resetEbsBlockDevice() {
@@ -471,11 +471,11 @@ export class TfAmiCopy extends cdktn.TerraformResource {
   }
 
   // ephemeral_block_device - computed: false, optional: true, required: false
-  private _ephemeralBlockDevice = new TfAmiCopy.EphemeralBlockDevicePropertyList(this, "ephemeral_block_device", true);
+  private _ephemeralBlockDevice = new AwsAmiCopy.EphemeralBlockDevicePropertyList(this, "ephemeral_block_device", true);
   public get ephemeralBlockDevice() {
     return this._ephemeralBlockDevice;
   }
-  public putEphemeralBlockDevice(value: TfAmiCopy.EphemeralBlockDeviceProperty[] | cdktn.IResolvable) {
+  public putEphemeralBlockDevice(value: AwsAmiCopy.EphemeralBlockDeviceProperty[] | cdktn.IResolvable) {
     this._ephemeralBlockDevice.internalValue = value;
   }
   public resetEphemeralBlockDevice() {
@@ -487,11 +487,11 @@ export class TfAmiCopy extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfAmiCopy.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsAmiCopy.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfAmiCopy.TimeoutsProperty) {
+  public putTimeouts(value: AwsAmiCopy.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -520,9 +520,9 @@ export class TfAmiCopy extends cdktn.TerraformResource {
       source_ami_region: cdktn.stringToTerraform(this._sourceAmiRegion),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      ebs_block_device: cdktn.listMapper(tfAmiCopyEbsBlockDevicePropertyToTerraform, true)(this._ebsBlockDevice.internalValue),
-      ephemeral_block_device: cdktn.listMapper(tfAmiCopyEphemeralBlockDevicePropertyToTerraform, true)(this._ephemeralBlockDevice.internalValue),
-      timeouts: tfAmiCopyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      ebs_block_device: cdktn.listMapper(awsAmiCopyEbsBlockDevicePropertyToTerraform, true)(this._ebsBlockDevice.internalValue),
+      ephemeral_block_device: cdktn.listMapper(awsAmiCopyEphemeralBlockDevicePropertyToTerraform, true)(this._ephemeralBlockDevice.internalValue),
+      timeouts: awsAmiCopyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -601,22 +601,22 @@ export class TfAmiCopy extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       ebs_block_device: {
-        value: cdktn.listMapperHcl(tfAmiCopyEbsBlockDevicePropertyToHclTerraform, true)(this._ebsBlockDevice.internalValue),
+        value: cdktn.listMapperHcl(awsAmiCopyEbsBlockDevicePropertyToHclTerraform, true)(this._ebsBlockDevice.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfAmiCopy.EbsBlockDevicePropertyList",
+        storageClassType: "AwsAmiCopy.EbsBlockDevicePropertyList",
       },
       ephemeral_block_device: {
-        value: cdktn.listMapperHcl(tfAmiCopyEphemeralBlockDevicePropertyToHclTerraform, true)(this._ephemeralBlockDevice.internalValue),
+        value: cdktn.listMapperHcl(awsAmiCopyEphemeralBlockDevicePropertyToHclTerraform, true)(this._ephemeralBlockDevice.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfAmiCopy.EphemeralBlockDevicePropertyList",
+        storageClassType: "AwsAmiCopy.EphemeralBlockDevicePropertyList",
       },
       timeouts: {
-        value: tfAmiCopyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsAmiCopyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfAmiCopy.TimeoutsProperty",
+        storageClassType: "AwsAmiCopy.TimeoutsProperty",
       },
     };
 
@@ -625,7 +625,7 @@ export class TfAmiCopy extends cdktn.TerraformResource {
   }
 }
 
-export function tfAmiCopyEbsBlockDevicePropertyToTerraform(struct?: TfAmiCopy.EbsBlockDeviceProperty | cdktn.IResolvable): any {
+export function awsAmiCopyEbsBlockDevicePropertyToTerraform(struct?: AwsAmiCopy.EbsBlockDeviceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -635,7 +635,7 @@ export function tfAmiCopyEbsBlockDevicePropertyToTerraform(struct?: TfAmiCopy.Eb
 }
 
 
-export function tfAmiCopyEbsBlockDevicePropertyToHclTerraform(struct?: TfAmiCopy.EbsBlockDeviceProperty | cdktn.IResolvable): any {
+export function awsAmiCopyEbsBlockDevicePropertyToHclTerraform(struct?: AwsAmiCopy.EbsBlockDeviceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -646,7 +646,7 @@ export function tfAmiCopyEbsBlockDevicePropertyToHclTerraform(struct?: TfAmiCopy
 }
 
 
-export function tfAmiCopyEphemeralBlockDevicePropertyToTerraform(struct?: TfAmiCopy.EphemeralBlockDeviceProperty | cdktn.IResolvable): any {
+export function awsAmiCopyEphemeralBlockDevicePropertyToTerraform(struct?: AwsAmiCopy.EphemeralBlockDeviceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -656,7 +656,7 @@ export function tfAmiCopyEphemeralBlockDevicePropertyToTerraform(struct?: TfAmiC
 }
 
 
-export function tfAmiCopyEphemeralBlockDevicePropertyToHclTerraform(struct?: TfAmiCopy.EphemeralBlockDeviceProperty | cdktn.IResolvable): any {
+export function awsAmiCopyEphemeralBlockDevicePropertyToHclTerraform(struct?: AwsAmiCopy.EphemeralBlockDeviceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -667,7 +667,7 @@ export function tfAmiCopyEphemeralBlockDevicePropertyToHclTerraform(struct?: TfA
 }
 
 
-export function tfAmiCopyTimeoutsPropertyToTerraform(struct?: TfAmiCopy.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAmiCopyTimeoutsPropertyToTerraform(struct?: AwsAmiCopy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -680,7 +680,7 @@ export function tfAmiCopyTimeoutsPropertyToTerraform(struct?: TfAmiCopy.Timeouts
 }
 
 
-export function tfAmiCopyTimeoutsPropertyToHclTerraform(struct?: TfAmiCopy.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAmiCopyTimeoutsPropertyToHclTerraform(struct?: AwsAmiCopy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -711,7 +711,7 @@ export function tfAmiCopyTimeoutsPropertyToHclTerraform(struct?: TfAmiCopy.Timeo
 }
 
 
-export namespace TfAmiCopy {
+export namespace AwsAmiCopy {
 export interface EbsBlockDeviceProperty {
 }
 export class EbsBlockDevicePropertyOutputReference extends cdktn.ComplexObject {
@@ -889,15 +889,15 @@ export class EphemeralBlockDevicePropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#create TfAmiCopy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#create AwsAmiCopy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#delete TfAmiCopy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#delete AwsAmiCopy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#update TfAmiCopy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ami_copy#update AwsAmiCopy#update}
   */
   readonly update?: string;
 }

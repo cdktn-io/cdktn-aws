@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfPublicIpv4PoolsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsPublicIpv4PoolsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_public_ipv4_pools#id DataTfPublicIpv4Pools#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_public_ipv4_pools#id DataAwsPublicIpv4Pools#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,25 +16,25 @@ export interface DataTfPublicIpv4PoolsConfig extends cdktn.TerraformMetaArgument
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_public_ipv4_pools#region DataTfPublicIpv4Pools#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_public_ipv4_pools#region DataAwsPublicIpv4Pools#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_public_ipv4_pools#tags DataTfPublicIpv4Pools#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_public_ipv4_pools#tags DataAwsPublicIpv4Pools#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_public_ipv4_pools#filter DataTfPublicIpv4Pools#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_public_ipv4_pools#filter DataAwsPublicIpv4Pools#filter}
   */
-  readonly filter?: DataTfPublicIpv4Pools.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsPublicIpv4Pools.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_public_ipv4_pools aws_ec2_public_ipv4_pools}
 */
-export class DataTfPublicIpv4Pools extends cdktn.TerraformDataSource {
+export class DataAwsPublicIpv4Pools extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class DataTfPublicIpv4Pools extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfPublicIpv4Pools resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsPublicIpv4Pools resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfPublicIpv4Pools to import
-  * @param importFromId The id of the existing DataTfPublicIpv4Pools that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_public_ipv4_pools#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfPublicIpv4Pools to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsPublicIpv4Pools to import
+  * @param importFromId The id of the existing DataAwsPublicIpv4Pools that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_public_ipv4_pools#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsPublicIpv4Pools to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_public_ipv4_pools", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class DataTfPublicIpv4Pools extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfPublicIpv4PoolsConfig = {}
+  * @param options DataAwsPublicIpv4PoolsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfPublicIpv4PoolsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsPublicIpv4PoolsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_public_ipv4_pools',
       terraformGeneratorMetadata: {
@@ -146,11 +146,11 @@ export class DataTfPublicIpv4Pools extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfPublicIpv4Pools.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsPublicIpv4Pools.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfPublicIpv4Pools.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsPublicIpv4Pools.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -170,7 +170,7 @@ export class DataTfPublicIpv4Pools extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataTfPublicIpv4PoolsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataAwsPublicIpv4PoolsFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -195,10 +195,10 @@ export class DataTfPublicIpv4Pools extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfPublicIpv4PoolsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsPublicIpv4PoolsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfPublicIpv4Pools.FilterPropertyList",
+        storageClassType: "DataAwsPublicIpv4Pools.FilterPropertyList",
       },
     };
 
@@ -207,7 +207,7 @@ export class DataTfPublicIpv4Pools extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfPublicIpv4PoolsFilterPropertyToTerraform(struct?: DataTfPublicIpv4Pools.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsPublicIpv4PoolsFilterPropertyToTerraform(struct?: DataAwsPublicIpv4Pools.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -219,7 +219,7 @@ export function dataTfPublicIpv4PoolsFilterPropertyToTerraform(struct?: DataTfPu
 }
 
 
-export function dataTfPublicIpv4PoolsFilterPropertyToHclTerraform(struct?: DataTfPublicIpv4Pools.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsPublicIpv4PoolsFilterPropertyToHclTerraform(struct?: DataAwsPublicIpv4Pools.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,14 +244,14 @@ export function dataTfPublicIpv4PoolsFilterPropertyToHclTerraform(struct?: DataT
 }
 
 
-export namespace DataTfPublicIpv4Pools {
+export namespace DataAwsPublicIpv4Pools {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_public_ipv4_pools#name DataTfPublicIpv4Pools#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_public_ipv4_pools#name DataAwsPublicIpv4Pools#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_public_ipv4_pools#values DataTfPublicIpv4Pools#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_public_ipv4_pools#values DataAwsPublicIpv4Pools#values}
   */
   readonly values: string[];
 }

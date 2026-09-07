@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfNetworkSettingsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsNetworkSettingsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_network_settings#region TfNetworkSettings#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_network_settings#region AwsNetworkSettings#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_network_settings#security_group_ids TfNetworkSettings#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_network_settings#security_group_ids AwsNetworkSettings#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_network_settings#subnet_ids TfNetworkSettings#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_network_settings#subnet_ids AwsNetworkSettings#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_network_settings#tags TfNetworkSettings#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_network_settings#tags AwsNetworkSettings#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_network_settings#vpc_id TfNetworkSettings#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_network_settings#vpc_id AwsNetworkSettings#vpc_id}
   */
   readonly vpcId: string;
 }
@@ -33,7 +33,7 @@ export interface TfNetworkSettingsConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_network_settings aws_workspacesweb_network_settings}
 */
-export class TfNetworkSettings extends cdktn.TerraformResource {
+export class AwsNetworkSettings extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class TfNetworkSettings extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfNetworkSettings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsNetworkSettings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfNetworkSettings to import
-  * @param importFromId The id of the existing TfNetworkSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_network_settings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfNetworkSettings to import is found
+  * @param importToId The construct id used in the generated config for the AwsNetworkSettings to import
+  * @param importFromId The id of the existing AwsNetworkSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_network_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsNetworkSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspacesweb_network_settings", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class TfNetworkSettings extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfNetworkSettingsConfig
+  * @param options AwsNetworkSettingsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfNetworkSettingsConfig) {
+  public constructor(scope: Construct, id: string, config: AwsNetworkSettingsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workspacesweb_network_settings',
       terraformGeneratorMetadata: {

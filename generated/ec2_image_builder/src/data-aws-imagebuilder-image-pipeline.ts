@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfImagePipelineConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsImagePipelineConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipeline#arn DataTfImagePipeline#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipeline#arn DataAwsImagePipeline#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipeline#id DataTfImagePipeline#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipeline#id DataAwsImagePipeline#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface DataTfImagePipelineConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipeline#region DataTfImagePipeline#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipeline#region DataAwsImagePipeline#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipeline#tags DataTfImagePipeline#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipeline#tags DataAwsImagePipeline#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataTfImagePipelineConfig extends cdktn.TerraformMetaArguments 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipeline aws_imagebuilder_image_pipeline}
 */
-export class DataTfImagePipeline extends cdktn.TerraformDataSource {
+export class DataAwsImagePipeline extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfImagePipeline extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfImagePipeline resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsImagePipeline resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfImagePipeline to import
-  * @param importFromId The id of the existing DataTfImagePipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipeline#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfImagePipeline to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsImagePipeline to import
+  * @param importFromId The id of the existing DataAwsImagePipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipeline#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsImagePipeline to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_imagebuilder_image_pipeline", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfImagePipeline extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfImagePipelineConfig
+  * @param options DataAwsImagePipelineConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfImagePipelineConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsImagePipelineConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_imagebuilder_image_pipeline',
       terraformGeneratorMetadata: {
@@ -165,13 +165,13 @@ export class DataTfImagePipeline extends cdktn.TerraformDataSource {
   }
 
   // image_scanning_configuration - computed: true, optional: false, required: false
-  private _imageScanningConfiguration = new DataTfImagePipeline.ImageScanningConfigurationPropertyList(this, "image_scanning_configuration", false);
+  private _imageScanningConfiguration = new DataAwsImagePipeline.ImageScanningConfigurationPropertyList(this, "image_scanning_configuration", false);
   public get imageScanningConfiguration() {
     return this._imageScanningConfiguration;
   }
 
   // image_tests_configuration - computed: true, optional: false, required: false
-  private _imageTestsConfiguration = new DataTfImagePipeline.ImageTestsConfigurationPropertyList(this, "image_tests_configuration", false);
+  private _imageTestsConfiguration = new DataAwsImagePipeline.ImageTestsConfigurationPropertyList(this, "image_tests_configuration", false);
   public get imageTestsConfiguration() {
     return this._imageTestsConfiguration;
   }
@@ -208,7 +208,7 @@ export class DataTfImagePipeline extends cdktn.TerraformDataSource {
   }
 
   // schedule - computed: true, optional: false, required: false
-  private _schedule = new DataTfImagePipeline.SchedulePropertyList(this, "schedule", false);
+  private _schedule = new DataAwsImagePipeline.SchedulePropertyList(this, "schedule", false);
   public get schedule() {
     return this._schedule;
   }
@@ -280,7 +280,7 @@ export class DataTfImagePipeline extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfImagePipelineEcrConfigurationPropertyToTerraform(struct?: DataTfImagePipeline.EcrConfigurationProperty): any {
+export function dataAwsImagePipelineEcrConfigurationPropertyToTerraform(struct?: DataAwsImagePipeline.EcrConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function dataTfImagePipelineEcrConfigurationPropertyToTerraform(struct?: 
 }
 
 
-export function dataTfImagePipelineEcrConfigurationPropertyToHclTerraform(struct?: DataTfImagePipeline.EcrConfigurationProperty): any {
+export function dataAwsImagePipelineEcrConfigurationPropertyToHclTerraform(struct?: DataAwsImagePipeline.EcrConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function dataTfImagePipelineEcrConfigurationPropertyToHclTerraform(struct
 }
 
 
-export function dataTfImagePipelineImageScanningConfigurationPropertyToTerraform(struct?: DataTfImagePipeline.ImageScanningConfigurationProperty): any {
+export function dataAwsImagePipelineImageScanningConfigurationPropertyToTerraform(struct?: DataAwsImagePipeline.ImageScanningConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -311,7 +311,7 @@ export function dataTfImagePipelineImageScanningConfigurationPropertyToTerraform
 }
 
 
-export function dataTfImagePipelineImageScanningConfigurationPropertyToHclTerraform(struct?: DataTfImagePipeline.ImageScanningConfigurationProperty): any {
+export function dataAwsImagePipelineImageScanningConfigurationPropertyToHclTerraform(struct?: DataAwsImagePipeline.ImageScanningConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function dataTfImagePipelineImageScanningConfigurationPropertyToHclTerraf
 }
 
 
-export function dataTfImagePipelineImageTestsConfigurationPropertyToTerraform(struct?: DataTfImagePipeline.ImageTestsConfigurationProperty): any {
+export function dataAwsImagePipelineImageTestsConfigurationPropertyToTerraform(struct?: DataAwsImagePipeline.ImageTestsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function dataTfImagePipelineImageTestsConfigurationPropertyToTerraform(st
 }
 
 
-export function dataTfImagePipelineImageTestsConfigurationPropertyToHclTerraform(struct?: DataTfImagePipeline.ImageTestsConfigurationProperty): any {
+export function dataAwsImagePipelineImageTestsConfigurationPropertyToHclTerraform(struct?: DataAwsImagePipeline.ImageTestsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,7 +343,7 @@ export function dataTfImagePipelineImageTestsConfigurationPropertyToHclTerraform
 }
 
 
-export function dataTfImagePipelineSchedulePropertyToTerraform(struct?: DataTfImagePipeline.ScheduleProperty): any {
+export function dataAwsImagePipelineSchedulePropertyToTerraform(struct?: DataAwsImagePipeline.ScheduleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function dataTfImagePipelineSchedulePropertyToTerraform(struct?: DataTfIm
 }
 
 
-export function dataTfImagePipelineSchedulePropertyToHclTerraform(struct?: DataTfImagePipeline.ScheduleProperty): any {
+export function dataAwsImagePipelineSchedulePropertyToHclTerraform(struct?: DataAwsImagePipeline.ScheduleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,7 +364,7 @@ export function dataTfImagePipelineSchedulePropertyToHclTerraform(struct?: DataT
 }
 
 
-export namespace DataTfImagePipeline {
+export namespace DataAwsImagePipeline {
 export interface EcrConfigurationProperty {
 }
 export class EcrConfigurationPropertyOutputReference extends cdktn.ComplexObject {

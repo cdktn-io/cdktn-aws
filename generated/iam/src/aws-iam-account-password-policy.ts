@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAccountPasswordPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAccountPasswordPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#allow_users_to_change_password TfAccountPasswordPolicy#allow_users_to_change_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#allow_users_to_change_password AwsAccountPasswordPolicy#allow_users_to_change_password}
   */
   readonly allowUsersToChangePassword?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#hard_expiry TfAccountPasswordPolicy#hard_expiry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#hard_expiry AwsAccountPasswordPolicy#hard_expiry}
   */
   readonly hardExpiry?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#id TfAccountPasswordPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#id AwsAccountPasswordPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#max_password_age TfAccountPasswordPolicy#max_password_age}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#max_password_age AwsAccountPasswordPolicy#max_password_age}
   */
   readonly maxPasswordAge?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#minimum_password_length TfAccountPasswordPolicy#minimum_password_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#minimum_password_length AwsAccountPasswordPolicy#minimum_password_length}
   */
   readonly minimumPasswordLength?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#password_reuse_prevention TfAccountPasswordPolicy#password_reuse_prevention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#password_reuse_prevention AwsAccountPasswordPolicy#password_reuse_prevention}
   */
   readonly passwordReusePrevention?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#require_lowercase_characters TfAccountPasswordPolicy#require_lowercase_characters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#require_lowercase_characters AwsAccountPasswordPolicy#require_lowercase_characters}
   */
   readonly requireLowercaseCharacters?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#require_numbers TfAccountPasswordPolicy#require_numbers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#require_numbers AwsAccountPasswordPolicy#require_numbers}
   */
   readonly requireNumbers?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#require_symbols TfAccountPasswordPolicy#require_symbols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#require_symbols AwsAccountPasswordPolicy#require_symbols}
   */
   readonly requireSymbols?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#require_uppercase_characters TfAccountPasswordPolicy#require_uppercase_characters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#require_uppercase_characters AwsAccountPasswordPolicy#require_uppercase_characters}
   */
   readonly requireUppercaseCharacters?: boolean | cdktn.IResolvable;
 }
@@ -54,7 +54,7 @@ export interface TfAccountPasswordPolicyConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy aws_iam_account_password_policy}
 */
-export class TfAccountPasswordPolicy extends cdktn.TerraformResource {
+export class AwsAccountPasswordPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfAccountPasswordPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAccountPasswordPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAccountPasswordPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAccountPasswordPolicy to import
-  * @param importFromId The id of the existing TfAccountPasswordPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAccountPasswordPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsAccountPasswordPolicy to import
+  * @param importFromId The id of the existing AwsAccountPasswordPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iam_account_password_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAccountPasswordPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iam_account_password_policy", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfAccountPasswordPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAccountPasswordPolicyConfig = {}
+  * @param options AwsAccountPasswordPolicyConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfAccountPasswordPolicyConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsAccountPasswordPolicyConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_iam_account_password_policy',
       terraformGeneratorMetadata: {

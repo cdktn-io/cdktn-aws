@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfIngestionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsIngestionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#app TfIngestion#app}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#app AwsIngestion#app}
   */
   readonly app: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#app_bundle_arn TfIngestion#app_bundle_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#app_bundle_arn AwsIngestion#app_bundle_arn}
   */
   readonly appBundleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#ingestion_type TfIngestion#ingestion_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#ingestion_type AwsIngestion#ingestion_type}
   */
   readonly ingestionType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#region TfIngestion#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#region AwsIngestion#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#tags TfIngestion#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#tags AwsIngestion#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#tenant_id TfIngestion#tenant_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#tenant_id AwsIngestion#tenant_id}
   */
   readonly tenantId: string;
 }
@@ -37,7 +37,7 @@ export interface TfIngestionConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion aws_appfabric_ingestion}
 */
-export class TfIngestion extends cdktn.TerraformResource {
+export class AwsIngestion extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class TfIngestion extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfIngestion resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsIngestion resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfIngestion to import
-  * @param importFromId The id of the existing TfIngestion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfIngestion to import is found
+  * @param importToId The construct id used in the generated config for the AwsIngestion to import
+  * @param importFromId The id of the existing AwsIngestion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_ingestion#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsIngestion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appfabric_ingestion", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class TfIngestion extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfIngestionConfig
+  * @param options AwsIngestionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfIngestionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsIngestionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appfabric_ingestion',
       terraformGeneratorMetadata: {

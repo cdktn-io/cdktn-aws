@@ -5,73 +5,73 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfImageConfig extends cdktn.TerraformMetaArguments {
+export interface AwsImageConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#additional_os_capabilities TfImage#additional_os_capabilities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#additional_os_capabilities AwsImage#additional_os_capabilities}
   */
   readonly additionalOsCapabilities?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#base_image_arn TfImage#base_image_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#base_image_arn AwsImage#base_image_arn}
   */
   readonly baseImageArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#base_image_version TfImage#base_image_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#base_image_version AwsImage#base_image_version}
   */
   readonly baseImageVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#build_role_arn TfImage#build_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#build_role_arn AwsImage#build_role_arn}
   */
   readonly buildRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#description TfImage#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#description AwsImage#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#egress_network_connectors TfImage#egress_network_connectors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#egress_network_connectors AwsImage#egress_network_connectors}
   */
   readonly egressNetworkConnectors?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#environment_variables TfImage#environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#environment_variables AwsImage#environment_variables}
   */
   readonly environmentVariables?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#name TfImage#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#name AwsImage#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#region TfImage#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#region AwsImage#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#tags TfImage#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#tags AwsImage#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * code_artifact block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#code_artifact TfImage#code_artifact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#code_artifact AwsImage#code_artifact}
   */
-  readonly codeArtifact?: TfImage.CodeArtifactProperty[] | cdktn.IResolvable;
+  readonly codeArtifact?: AwsImage.CodeArtifactProperty[] | cdktn.IResolvable;
   /**
   * cpu_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#cpu_configuration TfImage#cpu_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#cpu_configuration AwsImage#cpu_configuration}
   */
-  readonly cpuConfiguration?: TfImage.CpuConfigurationProperty[] | cdktn.IResolvable;
+  readonly cpuConfiguration?: AwsImage.CpuConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#timeouts TfImage#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#timeouts AwsImage#timeouts}
   */
-  readonly timeouts?: TfImage.TimeoutsProperty;
+  readonly timeouts?: AwsImage.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image aws_lambdamicrovms_image}
 */
-export class TfImage extends cdktn.TerraformResource {
+export class AwsImage extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -82,11 +82,11 @@ export class TfImage extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfImage resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsImage resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfImage to import
-  * @param importFromId The id of the existing TfImage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfImage to import is found
+  * @param importToId The construct id used in the generated config for the AwsImage to import
+  * @param importFromId The id of the existing AwsImage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsImage to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambdamicrovms_image", importId: importFromId, provider });
@@ -101,9 +101,9 @@ export class TfImage extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfImageConfig
+  * @param options AwsImageConfig
   */
-  public constructor(scope: Construct, id: string, config: TfImageConfig) {
+  public constructor(scope: Construct, id: string, config: AwsImageConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambdamicrovms_image',
       terraformGeneratorMetadata: {
@@ -331,11 +331,11 @@ export class TfImage extends cdktn.TerraformResource {
   }
 
   // code_artifact - computed: false, optional: true, required: false
-  private _codeArtifact = new TfImage.CodeArtifactPropertyList(this, "code_artifact", false);
+  private _codeArtifact = new AwsImage.CodeArtifactPropertyList(this, "code_artifact", false);
   public get codeArtifact() {
     return this._codeArtifact;
   }
-  public putCodeArtifact(value: TfImage.CodeArtifactProperty[] | cdktn.IResolvable) {
+  public putCodeArtifact(value: AwsImage.CodeArtifactProperty[] | cdktn.IResolvable) {
     this._codeArtifact.internalValue = value;
   }
   public resetCodeArtifact() {
@@ -347,11 +347,11 @@ export class TfImage extends cdktn.TerraformResource {
   }
 
   // cpu_configuration - computed: false, optional: true, required: false
-  private _cpuConfiguration = new TfImage.CpuConfigurationPropertyList(this, "cpu_configuration", false);
+  private _cpuConfiguration = new AwsImage.CpuConfigurationPropertyList(this, "cpu_configuration", false);
   public get cpuConfiguration() {
     return this._cpuConfiguration;
   }
-  public putCpuConfiguration(value: TfImage.CpuConfigurationProperty[] | cdktn.IResolvable) {
+  public putCpuConfiguration(value: AwsImage.CpuConfigurationProperty[] | cdktn.IResolvable) {
     this._cpuConfiguration.internalValue = value;
   }
   public resetCpuConfiguration() {
@@ -363,11 +363,11 @@ export class TfImage extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfImage.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsImage.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfImage.TimeoutsProperty) {
+  public putTimeouts(value: AwsImage.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -394,9 +394,9 @@ export class TfImage extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      code_artifact: cdktn.listMapper(tfImageCodeArtifactPropertyToTerraform, true)(this._codeArtifact.internalValue),
-      cpu_configuration: cdktn.listMapper(tfImageCpuConfigurationPropertyToTerraform, true)(this._cpuConfiguration.internalValue),
-      timeouts: tfImageTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      code_artifact: cdktn.listMapper(awsImageCodeArtifactPropertyToTerraform, true)(this._codeArtifact.internalValue),
+      cpu_configuration: cdktn.listMapper(awsImageCpuConfigurationPropertyToTerraform, true)(this._cpuConfiguration.internalValue),
+      timeouts: awsImageTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -463,22 +463,22 @@ export class TfImage extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       code_artifact: {
-        value: cdktn.listMapperHcl(tfImageCodeArtifactPropertyToHclTerraform, true)(this._codeArtifact.internalValue),
+        value: cdktn.listMapperHcl(awsImageCodeArtifactPropertyToHclTerraform, true)(this._codeArtifact.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfImage.CodeArtifactPropertyList",
+        storageClassType: "AwsImage.CodeArtifactPropertyList",
       },
       cpu_configuration: {
-        value: cdktn.listMapperHcl(tfImageCpuConfigurationPropertyToHclTerraform, true)(this._cpuConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsImageCpuConfigurationPropertyToHclTerraform, true)(this._cpuConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfImage.CpuConfigurationPropertyList",
+        storageClassType: "AwsImage.CpuConfigurationPropertyList",
       },
       timeouts: {
-        value: tfImageTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsImageTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfImage.TimeoutsProperty",
+        storageClassType: "AwsImage.TimeoutsProperty",
       },
     };
 
@@ -487,7 +487,7 @@ export class TfImage extends cdktn.TerraformResource {
   }
 }
 
-export function tfImageCodeArtifactPropertyToTerraform(struct?: TfImage.CodeArtifactProperty | cdktn.IResolvable): any {
+export function awsImageCodeArtifactPropertyToTerraform(struct?: AwsImage.CodeArtifactProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -498,7 +498,7 @@ export function tfImageCodeArtifactPropertyToTerraform(struct?: TfImage.CodeArti
 }
 
 
-export function tfImageCodeArtifactPropertyToHclTerraform(struct?: TfImage.CodeArtifactProperty | cdktn.IResolvable): any {
+export function awsImageCodeArtifactPropertyToHclTerraform(struct?: AwsImage.CodeArtifactProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -517,7 +517,7 @@ export function tfImageCodeArtifactPropertyToHclTerraform(struct?: TfImage.CodeA
 }
 
 
-export function tfImageCpuConfigurationPropertyToTerraform(struct?: TfImage.CpuConfigurationProperty | cdktn.IResolvable): any {
+export function awsImageCpuConfigurationPropertyToTerraform(struct?: AwsImage.CpuConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -528,7 +528,7 @@ export function tfImageCpuConfigurationPropertyToTerraform(struct?: TfImage.CpuC
 }
 
 
-export function tfImageCpuConfigurationPropertyToHclTerraform(struct?: TfImage.CpuConfigurationProperty | cdktn.IResolvable): any {
+export function awsImageCpuConfigurationPropertyToHclTerraform(struct?: AwsImage.CpuConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -547,7 +547,7 @@ export function tfImageCpuConfigurationPropertyToHclTerraform(struct?: TfImage.C
 }
 
 
-export function tfImageTimeoutsPropertyToTerraform(struct?: TfImage.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsImageTimeoutsPropertyToTerraform(struct?: AwsImage.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -560,7 +560,7 @@ export function tfImageTimeoutsPropertyToTerraform(struct?: TfImage.TimeoutsProp
 }
 
 
-export function tfImageTimeoutsPropertyToHclTerraform(struct?: TfImage.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsImageTimeoutsPropertyToHclTerraform(struct?: AwsImage.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -591,10 +591,10 @@ export function tfImageTimeoutsPropertyToHclTerraform(struct?: TfImage.TimeoutsP
 }
 
 
-export namespace TfImage {
+export namespace AwsImage {
 export interface CodeArtifactProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#uri TfImage#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#uri AwsImage#uri}
   */
   readonly uri: string;
 }
@@ -677,7 +677,7 @@ export class CodeArtifactPropertyList extends cdktn.ComplexList {
 }
 export interface CpuConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#architecture TfImage#architecture}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#architecture AwsImage#architecture}
   */
   readonly architecture: string;
 }
@@ -762,19 +762,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#create TfImage#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#create AwsImage#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#delete TfImage#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#delete AwsImage#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#update TfImage#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdamicrovms_image#update AwsImage#update}
   */
   readonly update?: string;
 }

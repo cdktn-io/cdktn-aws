@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTransitGatewayConnectPeerAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTransitGatewayConnectPeerAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#device_id TfTransitGatewayConnectPeerAssociation#device_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#device_id AwsTransitGatewayConnectPeerAssociation#device_id}
   */
   readonly deviceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#global_network_id TfTransitGatewayConnectPeerAssociation#global_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#global_network_id AwsTransitGatewayConnectPeerAssociation#global_network_id}
   */
   readonly globalNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#id TfTransitGatewayConnectPeerAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#id AwsTransitGatewayConnectPeerAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#link_id TfTransitGatewayConnectPeerAssociation#link_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#link_id AwsTransitGatewayConnectPeerAssociation#link_id}
   */
   readonly linkId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#transit_gateway_connect_peer_arn TfTransitGatewayConnectPeerAssociation#transit_gateway_connect_peer_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#transit_gateway_connect_peer_arn AwsTransitGatewayConnectPeerAssociation#transit_gateway_connect_peer_arn}
   */
   readonly transitGatewayConnectPeerArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#timeouts TfTransitGatewayConnectPeerAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#timeouts AwsTransitGatewayConnectPeerAssociation#timeouts}
   */
-  readonly timeouts?: TfTransitGatewayConnectPeerAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsTransitGatewayConnectPeerAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association aws_networkmanager_transit_gateway_connect_peer_association}
 */
-export class TfTransitGatewayConnectPeerAssociation extends cdktn.TerraformResource {
+export class AwsTransitGatewayConnectPeerAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfTransitGatewayConnectPeerAssociation extends cdktn.TerraformResou
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTransitGatewayConnectPeerAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTransitGatewayConnectPeerAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTransitGatewayConnectPeerAssociation to import
-  * @param importFromId The id of the existing TfTransitGatewayConnectPeerAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTransitGatewayConnectPeerAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsTransitGatewayConnectPeerAssociation to import
+  * @param importFromId The id of the existing AwsTransitGatewayConnectPeerAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTransitGatewayConnectPeerAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_transit_gateway_connect_peer_association", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfTransitGatewayConnectPeerAssociation extends cdktn.TerraformResou
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTransitGatewayConnectPeerAssociationConfig
+  * @param options AwsTransitGatewayConnectPeerAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTransitGatewayConnectPeerAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTransitGatewayConnectPeerAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_transit_gateway_connect_peer_association',
       terraformGeneratorMetadata: {
@@ -172,11 +172,11 @@ export class TfTransitGatewayConnectPeerAssociation extends cdktn.TerraformResou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTransitGatewayConnectPeerAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTransitGatewayConnectPeerAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTransitGatewayConnectPeerAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsTransitGatewayConnectPeerAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -198,7 +198,7 @@ export class TfTransitGatewayConnectPeerAssociation extends cdktn.TerraformResou
       id: cdktn.stringToTerraform(this._id),
       link_id: cdktn.stringToTerraform(this._linkId),
       transit_gateway_connect_peer_arn: cdktn.stringToTerraform(this._transitGatewayConnectPeerArn),
-      timeouts: tfTransitGatewayConnectPeerAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsTransitGatewayConnectPeerAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -235,10 +235,10 @@ export class TfTransitGatewayConnectPeerAssociation extends cdktn.TerraformResou
         storageClassType: "string",
       },
       timeouts: {
-        value: tfTransitGatewayConnectPeerAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTransitGatewayConnectPeerAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTransitGatewayConnectPeerAssociation.TimeoutsProperty",
+        storageClassType: "AwsTransitGatewayConnectPeerAssociation.TimeoutsProperty",
       },
     };
 
@@ -247,7 +247,7 @@ export class TfTransitGatewayConnectPeerAssociation extends cdktn.TerraformResou
   }
 }
 
-export function tfTransitGatewayConnectPeerAssociationTimeoutsPropertyToTerraform(struct?: TfTransitGatewayConnectPeerAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTransitGatewayConnectPeerAssociationTimeoutsPropertyToTerraform(struct?: AwsTransitGatewayConnectPeerAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -259,7 +259,7 @@ export function tfTransitGatewayConnectPeerAssociationTimeoutsPropertyToTerrafor
 }
 
 
-export function tfTransitGatewayConnectPeerAssociationTimeoutsPropertyToHclTerraform(struct?: TfTransitGatewayConnectPeerAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTransitGatewayConnectPeerAssociationTimeoutsPropertyToHclTerraform(struct?: AwsTransitGatewayConnectPeerAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,14 +284,14 @@ export function tfTransitGatewayConnectPeerAssociationTimeoutsPropertyToHclTerra
 }
 
 
-export namespace TfTransitGatewayConnectPeerAssociation {
+export namespace AwsTransitGatewayConnectPeerAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#create TfTransitGatewayConnectPeerAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#create AwsTransitGatewayConnectPeerAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#delete TfTransitGatewayConnectPeerAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_transit_gateway_connect_peer_association#delete AwsTransitGatewayConnectPeerAssociation#delete}
   */
   readonly delete?: string;
 }

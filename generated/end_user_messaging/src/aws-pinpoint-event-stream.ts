@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEventStreamConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEventStreamConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_event_stream#application_id TfEventStream#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_event_stream#application_id AwsEventStream#application_id}
   */
   readonly applicationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_event_stream#destination_stream_arn TfEventStream#destination_stream_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_event_stream#destination_stream_arn AwsEventStream#destination_stream_arn}
   */
   readonly destinationStreamArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_event_stream#id TfEventStream#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_event_stream#id AwsEventStream#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface TfEventStreamConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_event_stream#region TfEventStream#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_event_stream#region AwsEventStream#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_event_stream#role_arn TfEventStream#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_event_stream#role_arn AwsEventStream#role_arn}
   */
   readonly roleArn: string;
 }
@@ -36,7 +36,7 @@ export interface TfEventStreamConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_event_stream aws_pinpoint_event_stream}
 */
-export class TfEventStream extends cdktn.TerraformResource {
+export class AwsEventStream extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfEventStream extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEventStream resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEventStream resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEventStream to import
-  * @param importFromId The id of the existing TfEventStream that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_event_stream#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEventStream to import is found
+  * @param importToId The construct id used in the generated config for the AwsEventStream to import
+  * @param importFromId The id of the existing AwsEventStream that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_event_stream#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEventStream to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_pinpoint_event_stream", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfEventStream extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEventStreamConfig
+  * @param options AwsEventStreamConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEventStreamConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEventStreamConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_pinpoint_event_stream',
       terraformGeneratorMetadata: {

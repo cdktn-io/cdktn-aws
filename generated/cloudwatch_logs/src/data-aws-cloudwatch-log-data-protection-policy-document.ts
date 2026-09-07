@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfDataProtectionPolicyDocumentConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsDataProtectionPolicyDocumentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#description DataTfDataProtectionPolicyDocument#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#description DataAwsDataProtectionPolicyDocument#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#id DataTfDataProtectionPolicyDocument#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#id DataAwsDataProtectionPolicyDocument#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#name DataTfDataProtectionPolicyDocument#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#name DataAwsDataProtectionPolicyDocument#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#version DataTfDataProtectionPolicyDocument#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#version DataAwsDataProtectionPolicyDocument#version}
   */
   readonly version?: string;
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#configuration DataTfDataProtectionPolicyDocument#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#configuration DataAwsDataProtectionPolicyDocument#configuration}
   */
-  readonly configuration?: DataTfDataProtectionPolicyDocument.ConfigurationProperty;
+  readonly configuration?: DataAwsDataProtectionPolicyDocument.ConfigurationProperty;
   /**
   * statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#statement DataTfDataProtectionPolicyDocument#statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#statement DataAwsDataProtectionPolicyDocument#statement}
   */
-  readonly statement: DataTfDataProtectionPolicyDocument.StatementProperty[] | cdktn.IResolvable;
+  readonly statement: DataAwsDataProtectionPolicyDocument.StatementProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document aws_cloudwatch_log_data_protection_policy_document}
 */
-export class DataTfDataProtectionPolicyDocument extends cdktn.TerraformDataSource {
+export class DataAwsDataProtectionPolicyDocument extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class DataTfDataProtectionPolicyDocument extends cdktn.TerraformDataSourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfDataProtectionPolicyDocument resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsDataProtectionPolicyDocument resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfDataProtectionPolicyDocument to import
-  * @param importFromId The id of the existing DataTfDataProtectionPolicyDocument that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfDataProtectionPolicyDocument to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsDataProtectionPolicyDocument to import
+  * @param importFromId The id of the existing DataAwsDataProtectionPolicyDocument that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsDataProtectionPolicyDocument to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_log_data_protection_policy_document", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class DataTfDataProtectionPolicyDocument extends cdktn.TerraformDataSourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfDataProtectionPolicyDocumentConfig
+  * @param options DataAwsDataProtectionPolicyDocumentConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfDataProtectionPolicyDocumentConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsDataProtectionPolicyDocumentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_log_data_protection_policy_document',
       terraformGeneratorMetadata: {
@@ -169,11 +169,11 @@ export class DataTfDataProtectionPolicyDocument extends cdktn.TerraformDataSourc
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new DataTfDataProtectionPolicyDocument.ConfigurationPropertyOutputReference(this, "configuration");
+  private _configuration = new DataAwsDataProtectionPolicyDocument.ConfigurationPropertyOutputReference(this, "configuration");
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: DataTfDataProtectionPolicyDocument.ConfigurationProperty) {
+  public putConfiguration(value: DataAwsDataProtectionPolicyDocument.ConfigurationProperty) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -185,11 +185,11 @@ export class DataTfDataProtectionPolicyDocument extends cdktn.TerraformDataSourc
   }
 
   // statement - computed: false, optional: false, required: true
-  private _statement = new DataTfDataProtectionPolicyDocument.StatementPropertyList(this, "statement", false);
+  private _statement = new DataAwsDataProtectionPolicyDocument.StatementPropertyList(this, "statement", false);
   public get statement() {
     return this._statement;
   }
-  public putStatement(value: DataTfDataProtectionPolicyDocument.StatementProperty[] | cdktn.IResolvable) {
+  public putStatement(value: DataAwsDataProtectionPolicyDocument.StatementProperty[] | cdktn.IResolvable) {
     this._statement.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -207,8 +207,8 @@ export class DataTfDataProtectionPolicyDocument extends cdktn.TerraformDataSourc
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       version: cdktn.stringToTerraform(this._version),
-      configuration: dataTfDataProtectionPolicyDocumentConfigurationPropertyToTerraform(this._configuration.internalValue),
-      statement: cdktn.listMapper(dataTfDataProtectionPolicyDocumentStatementPropertyToTerraform, true)(this._statement.internalValue),
+      configuration: dataAwsDataProtectionPolicyDocumentConfigurationPropertyToTerraform(this._configuration.internalValue),
+      statement: cdktn.listMapper(dataAwsDataProtectionPolicyDocumentStatementPropertyToTerraform, true)(this._statement.internalValue),
     };
   }
 
@@ -239,16 +239,16 @@ export class DataTfDataProtectionPolicyDocument extends cdktn.TerraformDataSourc
         storageClassType: "string",
       },
       configuration: {
-        value: dataTfDataProtectionPolicyDocumentConfigurationPropertyToHclTerraform(this._configuration.internalValue),
+        value: dataAwsDataProtectionPolicyDocumentConfigurationPropertyToHclTerraform(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataTfDataProtectionPolicyDocument.ConfigurationPropertyList",
+        storageClassType: "DataAwsDataProtectionPolicyDocument.ConfigurationPropertyList",
       },
       statement: {
-        value: cdktn.listMapperHcl(dataTfDataProtectionPolicyDocumentStatementPropertyToHclTerraform, true)(this._statement.internalValue),
+        value: cdktn.listMapperHcl(dataAwsDataProtectionPolicyDocumentStatementPropertyToHclTerraform, true)(this._statement.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataTfDataProtectionPolicyDocument.StatementPropertyList",
+        storageClassType: "DataAwsDataProtectionPolicyDocument.StatementPropertyList",
       },
     };
 
@@ -257,7 +257,7 @@ export class DataTfDataProtectionPolicyDocument extends cdktn.TerraformDataSourc
   }
 }
 
-export function dataTfDataProtectionPolicyDocumentCustomDataIdentifierPropertyToTerraform(struct?: DataTfDataProtectionPolicyDocument.CustomDataIdentifierProperty | cdktn.IResolvable): any {
+export function dataAwsDataProtectionPolicyDocumentCustomDataIdentifierPropertyToTerraform(struct?: DataAwsDataProtectionPolicyDocument.CustomDataIdentifierProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -269,7 +269,7 @@ export function dataTfDataProtectionPolicyDocumentCustomDataIdentifierPropertyTo
 }
 
 
-export function dataTfDataProtectionPolicyDocumentCustomDataIdentifierPropertyToHclTerraform(struct?: DataTfDataProtectionPolicyDocument.CustomDataIdentifierProperty | cdktn.IResolvable): any {
+export function dataAwsDataProtectionPolicyDocumentCustomDataIdentifierPropertyToHclTerraform(struct?: DataAwsDataProtectionPolicyDocument.CustomDataIdentifierProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -294,25 +294,25 @@ export function dataTfDataProtectionPolicyDocumentCustomDataIdentifierPropertyTo
 }
 
 
-export function dataTfDataProtectionPolicyDocumentConfigurationPropertyToTerraform(struct?: DataTfDataProtectionPolicyDocument.ConfigurationPropertyOutputReference | DataTfDataProtectionPolicyDocument.ConfigurationProperty): any {
+export function dataAwsDataProtectionPolicyDocumentConfigurationPropertyToTerraform(struct?: DataAwsDataProtectionPolicyDocument.ConfigurationPropertyOutputReference | DataAwsDataProtectionPolicyDocument.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    custom_data_identifier: cdktn.listMapper(dataTfDataProtectionPolicyDocumentCustomDataIdentifierPropertyToTerraform, true)(struct!.customDataIdentifier),
+    custom_data_identifier: cdktn.listMapper(dataAwsDataProtectionPolicyDocumentCustomDataIdentifierPropertyToTerraform, true)(struct!.customDataIdentifier),
   }
 }
 
 
-export function dataTfDataProtectionPolicyDocumentConfigurationPropertyToHclTerraform(struct?: DataTfDataProtectionPolicyDocument.ConfigurationPropertyOutputReference | DataTfDataProtectionPolicyDocument.ConfigurationProperty): any {
+export function dataAwsDataProtectionPolicyDocumentConfigurationPropertyToHclTerraform(struct?: DataAwsDataProtectionPolicyDocument.ConfigurationPropertyOutputReference | DataAwsDataProtectionPolicyDocument.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     custom_data_identifier: {
-      value: cdktn.listMapperHcl(dataTfDataProtectionPolicyDocumentCustomDataIdentifierPropertyToHclTerraform, true)(struct!.customDataIdentifier),
+      value: cdktn.listMapperHcl(dataAwsDataProtectionPolicyDocumentCustomDataIdentifierPropertyToHclTerraform, true)(struct!.customDataIdentifier),
       isBlock: true,
       type: "list",
       storageClassType: "CustomDataIdentifierPropertyList",
@@ -324,7 +324,7 @@ export function dataTfDataProtectionPolicyDocumentConfigurationPropertyToHclTerr
 }
 
 
-export function dataTfDataProtectionPolicyDocumentCloudwatchLogsPropertyToTerraform(struct?: DataTfDataProtectionPolicyDocument.CloudwatchLogsPropertyOutputReference | DataTfDataProtectionPolicyDocument.CloudwatchLogsProperty): any {
+export function dataAwsDataProtectionPolicyDocumentCloudwatchLogsPropertyToTerraform(struct?: DataAwsDataProtectionPolicyDocument.CloudwatchLogsPropertyOutputReference | DataAwsDataProtectionPolicyDocument.CloudwatchLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -335,7 +335,7 @@ export function dataTfDataProtectionPolicyDocumentCloudwatchLogsPropertyToTerraf
 }
 
 
-export function dataTfDataProtectionPolicyDocumentCloudwatchLogsPropertyToHclTerraform(struct?: DataTfDataProtectionPolicyDocument.CloudwatchLogsPropertyOutputReference | DataTfDataProtectionPolicyDocument.CloudwatchLogsProperty): any {
+export function dataAwsDataProtectionPolicyDocumentCloudwatchLogsPropertyToHclTerraform(struct?: DataAwsDataProtectionPolicyDocument.CloudwatchLogsPropertyOutputReference | DataAwsDataProtectionPolicyDocument.CloudwatchLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,7 +354,7 @@ export function dataTfDataProtectionPolicyDocumentCloudwatchLogsPropertyToHclTer
 }
 
 
-export function dataTfDataProtectionPolicyDocumentFirehosePropertyToTerraform(struct?: DataTfDataProtectionPolicyDocument.FirehosePropertyOutputReference | DataTfDataProtectionPolicyDocument.FirehoseProperty): any {
+export function dataAwsDataProtectionPolicyDocumentFirehosePropertyToTerraform(struct?: DataAwsDataProtectionPolicyDocument.FirehosePropertyOutputReference | DataAwsDataProtectionPolicyDocument.FirehoseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -365,7 +365,7 @@ export function dataTfDataProtectionPolicyDocumentFirehosePropertyToTerraform(st
 }
 
 
-export function dataTfDataProtectionPolicyDocumentFirehosePropertyToHclTerraform(struct?: DataTfDataProtectionPolicyDocument.FirehosePropertyOutputReference | DataTfDataProtectionPolicyDocument.FirehoseProperty): any {
+export function dataAwsDataProtectionPolicyDocumentFirehosePropertyToHclTerraform(struct?: DataAwsDataProtectionPolicyDocument.FirehosePropertyOutputReference | DataAwsDataProtectionPolicyDocument.FirehoseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -384,7 +384,7 @@ export function dataTfDataProtectionPolicyDocumentFirehosePropertyToHclTerraform
 }
 
 
-export function dataTfDataProtectionPolicyDocumentS3PropertyToTerraform(struct?: DataTfDataProtectionPolicyDocument.S3PropertyOutputReference | DataTfDataProtectionPolicyDocument.S3Property): any {
+export function dataAwsDataProtectionPolicyDocumentS3PropertyToTerraform(struct?: DataAwsDataProtectionPolicyDocument.S3PropertyOutputReference | DataAwsDataProtectionPolicyDocument.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -395,7 +395,7 @@ export function dataTfDataProtectionPolicyDocumentS3PropertyToTerraform(struct?:
 }
 
 
-export function dataTfDataProtectionPolicyDocumentS3PropertyToHclTerraform(struct?: DataTfDataProtectionPolicyDocument.S3PropertyOutputReference | DataTfDataProtectionPolicyDocument.S3Property): any {
+export function dataAwsDataProtectionPolicyDocumentS3PropertyToHclTerraform(struct?: DataAwsDataProtectionPolicyDocument.S3PropertyOutputReference | DataAwsDataProtectionPolicyDocument.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,39 +414,39 @@ export function dataTfDataProtectionPolicyDocumentS3PropertyToHclTerraform(struc
 }
 
 
-export function dataTfDataProtectionPolicyDocumentFindingsDestinationPropertyToTerraform(struct?: DataTfDataProtectionPolicyDocument.FindingsDestinationPropertyOutputReference | DataTfDataProtectionPolicyDocument.FindingsDestinationProperty): any {
+export function dataAwsDataProtectionPolicyDocumentFindingsDestinationPropertyToTerraform(struct?: DataAwsDataProtectionPolicyDocument.FindingsDestinationPropertyOutputReference | DataAwsDataProtectionPolicyDocument.FindingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cloudwatch_logs: dataTfDataProtectionPolicyDocumentCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
-    firehose: dataTfDataProtectionPolicyDocumentFirehosePropertyToTerraform(struct!.firehose),
-    s3: dataTfDataProtectionPolicyDocumentS3PropertyToTerraform(struct!.s3),
+    cloudwatch_logs: dataAwsDataProtectionPolicyDocumentCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
+    firehose: dataAwsDataProtectionPolicyDocumentFirehosePropertyToTerraform(struct!.firehose),
+    s3: dataAwsDataProtectionPolicyDocumentS3PropertyToTerraform(struct!.s3),
   }
 }
 
 
-export function dataTfDataProtectionPolicyDocumentFindingsDestinationPropertyToHclTerraform(struct?: DataTfDataProtectionPolicyDocument.FindingsDestinationPropertyOutputReference | DataTfDataProtectionPolicyDocument.FindingsDestinationProperty): any {
+export function dataAwsDataProtectionPolicyDocumentFindingsDestinationPropertyToHclTerraform(struct?: DataAwsDataProtectionPolicyDocument.FindingsDestinationPropertyOutputReference | DataAwsDataProtectionPolicyDocument.FindingsDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cloudwatch_logs: {
-      value: dataTfDataProtectionPolicyDocumentCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
+      value: dataAwsDataProtectionPolicyDocumentCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchLogsPropertyList",
     },
     firehose: {
-      value: dataTfDataProtectionPolicyDocumentFirehosePropertyToHclTerraform(struct!.firehose),
+      value: dataAwsDataProtectionPolicyDocumentFirehosePropertyToHclTerraform(struct!.firehose),
       isBlock: true,
       type: "list",
       storageClassType: "FirehosePropertyList",
     },
     s3: {
-      value: dataTfDataProtectionPolicyDocumentS3PropertyToHclTerraform(struct!.s3),
+      value: dataAwsDataProtectionPolicyDocumentS3PropertyToHclTerraform(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "S3PropertyList",
@@ -458,25 +458,25 @@ export function dataTfDataProtectionPolicyDocumentFindingsDestinationPropertyToH
 }
 
 
-export function dataTfDataProtectionPolicyDocumentAuditPropertyToTerraform(struct?: DataTfDataProtectionPolicyDocument.AuditPropertyOutputReference | DataTfDataProtectionPolicyDocument.AuditProperty): any {
+export function dataAwsDataProtectionPolicyDocumentAuditPropertyToTerraform(struct?: DataAwsDataProtectionPolicyDocument.AuditPropertyOutputReference | DataAwsDataProtectionPolicyDocument.AuditProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    findings_destination: dataTfDataProtectionPolicyDocumentFindingsDestinationPropertyToTerraform(struct!.findingsDestination),
+    findings_destination: dataAwsDataProtectionPolicyDocumentFindingsDestinationPropertyToTerraform(struct!.findingsDestination),
   }
 }
 
 
-export function dataTfDataProtectionPolicyDocumentAuditPropertyToHclTerraform(struct?: DataTfDataProtectionPolicyDocument.AuditPropertyOutputReference | DataTfDataProtectionPolicyDocument.AuditProperty): any {
+export function dataAwsDataProtectionPolicyDocumentAuditPropertyToHclTerraform(struct?: DataAwsDataProtectionPolicyDocument.AuditPropertyOutputReference | DataAwsDataProtectionPolicyDocument.AuditProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     findings_destination: {
-      value: dataTfDataProtectionPolicyDocumentFindingsDestinationPropertyToHclTerraform(struct!.findingsDestination),
+      value: dataAwsDataProtectionPolicyDocumentFindingsDestinationPropertyToHclTerraform(struct!.findingsDestination),
       isBlock: true,
       type: "list",
       storageClassType: "FindingsDestinationPropertyList",
@@ -488,7 +488,7 @@ export function dataTfDataProtectionPolicyDocumentAuditPropertyToHclTerraform(st
 }
 
 
-export function dataTfDataProtectionPolicyDocumentMaskConfigPropertyToTerraform(struct?: DataTfDataProtectionPolicyDocument.MaskConfigPropertyOutputReference | DataTfDataProtectionPolicyDocument.MaskConfigProperty): any {
+export function dataAwsDataProtectionPolicyDocumentMaskConfigPropertyToTerraform(struct?: DataAwsDataProtectionPolicyDocument.MaskConfigPropertyOutputReference | DataAwsDataProtectionPolicyDocument.MaskConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -498,7 +498,7 @@ export function dataTfDataProtectionPolicyDocumentMaskConfigPropertyToTerraform(
 }
 
 
-export function dataTfDataProtectionPolicyDocumentMaskConfigPropertyToHclTerraform(struct?: DataTfDataProtectionPolicyDocument.MaskConfigPropertyOutputReference | DataTfDataProtectionPolicyDocument.MaskConfigProperty): any {
+export function dataAwsDataProtectionPolicyDocumentMaskConfigPropertyToHclTerraform(struct?: DataAwsDataProtectionPolicyDocument.MaskConfigPropertyOutputReference | DataAwsDataProtectionPolicyDocument.MaskConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -509,25 +509,25 @@ export function dataTfDataProtectionPolicyDocumentMaskConfigPropertyToHclTerrafo
 }
 
 
-export function dataTfDataProtectionPolicyDocumentDeidentifyPropertyToTerraform(struct?: DataTfDataProtectionPolicyDocument.DeidentifyPropertyOutputReference | DataTfDataProtectionPolicyDocument.DeidentifyProperty): any {
+export function dataAwsDataProtectionPolicyDocumentDeidentifyPropertyToTerraform(struct?: DataAwsDataProtectionPolicyDocument.DeidentifyPropertyOutputReference | DataAwsDataProtectionPolicyDocument.DeidentifyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    mask_config: dataTfDataProtectionPolicyDocumentMaskConfigPropertyToTerraform(struct!.maskConfig),
+    mask_config: dataAwsDataProtectionPolicyDocumentMaskConfigPropertyToTerraform(struct!.maskConfig),
   }
 }
 
 
-export function dataTfDataProtectionPolicyDocumentDeidentifyPropertyToHclTerraform(struct?: DataTfDataProtectionPolicyDocument.DeidentifyPropertyOutputReference | DataTfDataProtectionPolicyDocument.DeidentifyProperty): any {
+export function dataAwsDataProtectionPolicyDocumentDeidentifyPropertyToHclTerraform(struct?: DataAwsDataProtectionPolicyDocument.DeidentifyPropertyOutputReference | DataAwsDataProtectionPolicyDocument.DeidentifyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     mask_config: {
-      value: dataTfDataProtectionPolicyDocumentMaskConfigPropertyToHclTerraform(struct!.maskConfig),
+      value: dataAwsDataProtectionPolicyDocumentMaskConfigPropertyToHclTerraform(struct!.maskConfig),
       isBlock: true,
       type: "list",
       storageClassType: "MaskConfigPropertyList",
@@ -539,32 +539,32 @@ export function dataTfDataProtectionPolicyDocumentDeidentifyPropertyToHclTerrafo
 }
 
 
-export function dataTfDataProtectionPolicyDocumentOperationPropertyToTerraform(struct?: DataTfDataProtectionPolicyDocument.OperationPropertyOutputReference | DataTfDataProtectionPolicyDocument.OperationProperty): any {
+export function dataAwsDataProtectionPolicyDocumentOperationPropertyToTerraform(struct?: DataAwsDataProtectionPolicyDocument.OperationPropertyOutputReference | DataAwsDataProtectionPolicyDocument.OperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    audit: dataTfDataProtectionPolicyDocumentAuditPropertyToTerraform(struct!.audit),
-    deidentify: dataTfDataProtectionPolicyDocumentDeidentifyPropertyToTerraform(struct!.deidentify),
+    audit: dataAwsDataProtectionPolicyDocumentAuditPropertyToTerraform(struct!.audit),
+    deidentify: dataAwsDataProtectionPolicyDocumentDeidentifyPropertyToTerraform(struct!.deidentify),
   }
 }
 
 
-export function dataTfDataProtectionPolicyDocumentOperationPropertyToHclTerraform(struct?: DataTfDataProtectionPolicyDocument.OperationPropertyOutputReference | DataTfDataProtectionPolicyDocument.OperationProperty): any {
+export function dataAwsDataProtectionPolicyDocumentOperationPropertyToHclTerraform(struct?: DataAwsDataProtectionPolicyDocument.OperationPropertyOutputReference | DataAwsDataProtectionPolicyDocument.OperationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     audit: {
-      value: dataTfDataProtectionPolicyDocumentAuditPropertyToHclTerraform(struct!.audit),
+      value: dataAwsDataProtectionPolicyDocumentAuditPropertyToHclTerraform(struct!.audit),
       isBlock: true,
       type: "list",
       storageClassType: "AuditPropertyList",
     },
     deidentify: {
-      value: dataTfDataProtectionPolicyDocumentDeidentifyPropertyToHclTerraform(struct!.deidentify),
+      value: dataAwsDataProtectionPolicyDocumentDeidentifyPropertyToHclTerraform(struct!.deidentify),
       isBlock: true,
       type: "list",
       storageClassType: "DeidentifyPropertyList",
@@ -576,7 +576,7 @@ export function dataTfDataProtectionPolicyDocumentOperationPropertyToHclTerrafor
 }
 
 
-export function dataTfDataProtectionPolicyDocumentStatementPropertyToTerraform(struct?: DataTfDataProtectionPolicyDocument.StatementProperty | cdktn.IResolvable): any {
+export function dataAwsDataProtectionPolicyDocumentStatementPropertyToTerraform(struct?: DataAwsDataProtectionPolicyDocument.StatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -584,12 +584,12 @@ export function dataTfDataProtectionPolicyDocumentStatementPropertyToTerraform(s
   return {
     data_identifiers: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.dataIdentifiers),
     sid: cdktn.stringToTerraform(struct!.sid),
-    operation: dataTfDataProtectionPolicyDocumentOperationPropertyToTerraform(struct!.operation),
+    operation: dataAwsDataProtectionPolicyDocumentOperationPropertyToTerraform(struct!.operation),
   }
 }
 
 
-export function dataTfDataProtectionPolicyDocumentStatementPropertyToHclTerraform(struct?: DataTfDataProtectionPolicyDocument.StatementProperty | cdktn.IResolvable): any {
+export function dataAwsDataProtectionPolicyDocumentStatementPropertyToHclTerraform(struct?: DataAwsDataProtectionPolicyDocument.StatementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -608,7 +608,7 @@ export function dataTfDataProtectionPolicyDocumentStatementPropertyToHclTerrafor
       storageClassType: "string",
     },
     operation: {
-      value: dataTfDataProtectionPolicyDocumentOperationPropertyToHclTerraform(struct!.operation),
+      value: dataAwsDataProtectionPolicyDocumentOperationPropertyToHclTerraform(struct!.operation),
       isBlock: true,
       type: "list",
       storageClassType: "OperationPropertyList",
@@ -620,14 +620,14 @@ export function dataTfDataProtectionPolicyDocumentStatementPropertyToHclTerrafor
 }
 
 
-export namespace DataTfDataProtectionPolicyDocument {
+export namespace DataAwsDataProtectionPolicyDocument {
 export interface CustomDataIdentifierProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#name DataTfDataProtectionPolicyDocument#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#name DataAwsDataProtectionPolicyDocument#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#regex DataTfDataProtectionPolicyDocument#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#regex DataAwsDataProtectionPolicyDocument#regex}
   */
   readonly regex: string;
 }
@@ -731,7 +731,7 @@ export interface ConfigurationProperty {
   /**
   * custom_data_identifier block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#custom_data_identifier DataTfDataProtectionPolicyDocument#custom_data_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#custom_data_identifier DataAwsDataProtectionPolicyDocument#custom_data_identifier}
   */
   readonly customDataIdentifier?: CustomDataIdentifierProperty[] | cdktn.IResolvable;
 }
@@ -785,7 +785,7 @@ export class ConfigurationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CloudwatchLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#log_group DataTfDataProtectionPolicyDocument#log_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#log_group DataAwsDataProtectionPolicyDocument#log_group}
   */
   readonly logGroup: string;
 }
@@ -836,7 +836,7 @@ export class CloudwatchLogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FirehoseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#delivery_stream DataTfDataProtectionPolicyDocument#delivery_stream}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#delivery_stream DataAwsDataProtectionPolicyDocument#delivery_stream}
   */
   readonly deliveryStream: string;
 }
@@ -887,7 +887,7 @@ export class FirehosePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface S3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#bucket DataTfDataProtectionPolicyDocument#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#bucket DataAwsDataProtectionPolicyDocument#bucket}
   */
   readonly bucket: string;
 }
@@ -940,19 +940,19 @@ export interface FindingsDestinationProperty {
   /**
   * cloudwatch_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#cloudwatch_logs DataTfDataProtectionPolicyDocument#cloudwatch_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#cloudwatch_logs DataAwsDataProtectionPolicyDocument#cloudwatch_logs}
   */
   readonly cloudwatchLogs?: CloudwatchLogsProperty;
   /**
   * firehose block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#firehose DataTfDataProtectionPolicyDocument#firehose}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#firehose DataAwsDataProtectionPolicyDocument#firehose}
   */
   readonly firehose?: FirehoseProperty;
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#s3 DataTfDataProtectionPolicyDocument#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#s3 DataAwsDataProtectionPolicyDocument#s3}
   */
   readonly s3?: S3Property;
 }
@@ -1052,7 +1052,7 @@ export interface AuditProperty {
   /**
   * findings_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#findings_destination DataTfDataProtectionPolicyDocument#findings_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#findings_destination DataAwsDataProtectionPolicyDocument#findings_destination}
   */
   readonly findingsDestination: FindingsDestinationProperty;
 }
@@ -1133,7 +1133,7 @@ export interface DeidentifyProperty {
   /**
   * mask_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#mask_config DataTfDataProtectionPolicyDocument#mask_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#mask_config DataAwsDataProtectionPolicyDocument#mask_config}
   */
   readonly maskConfig: MaskConfigProperty;
 }
@@ -1186,13 +1186,13 @@ export interface OperationProperty {
   /**
   * audit block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#audit DataTfDataProtectionPolicyDocument#audit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#audit DataAwsDataProtectionPolicyDocument#audit}
   */
   readonly audit?: AuditProperty;
   /**
   * deidentify block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#deidentify DataTfDataProtectionPolicyDocument#deidentify}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#deidentify DataAwsDataProtectionPolicyDocument#deidentify}
   */
   readonly deidentify?: DeidentifyProperty;
 }
@@ -1268,17 +1268,17 @@ export class OperationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StatementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#data_identifiers DataTfDataProtectionPolicyDocument#data_identifiers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#data_identifiers DataAwsDataProtectionPolicyDocument#data_identifiers}
   */
   readonly dataIdentifiers: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#sid DataTfDataProtectionPolicyDocument#sid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#sid DataAwsDataProtectionPolicyDocument#sid}
   */
   readonly sid?: string;
   /**
   * operation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#operation DataTfDataProtectionPolicyDocument#operation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cloudwatch_log_data_protection_policy_document#operation DataAwsDataProtectionPolicyDocument#operation}
   */
   readonly operation: OperationProperty;
 }

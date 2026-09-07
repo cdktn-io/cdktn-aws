@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTargetGroupAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTargetGroupAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#id TfTargetGroupAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#id AwsTargetGroupAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,31 +16,31 @@ export interface TfTargetGroupAttachmentConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#region TfTargetGroupAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#region AwsTargetGroupAttachment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#target_group_identifier TfTargetGroupAttachment#target_group_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#target_group_identifier AwsTargetGroupAttachment#target_group_identifier}
   */
   readonly targetGroupIdentifier: string;
   /**
   * target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#target TfTargetGroupAttachment#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#target AwsTargetGroupAttachment#target}
   */
-  readonly target: TfTargetGroupAttachment.TargetProperty;
+  readonly target: AwsTargetGroupAttachment.TargetProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#timeouts TfTargetGroupAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#timeouts AwsTargetGroupAttachment#timeouts}
   */
-  readonly timeouts?: TfTargetGroupAttachment.TimeoutsProperty;
+  readonly timeouts?: AwsTargetGroupAttachment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment aws_vpclattice_target_group_attachment}
 */
-export class TfTargetGroupAttachment extends cdktn.TerraformResource {
+export class AwsTargetGroupAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfTargetGroupAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTargetGroupAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTargetGroupAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTargetGroupAttachment to import
-  * @param importFromId The id of the existing TfTargetGroupAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTargetGroupAttachment to import is found
+  * @param importToId The construct id used in the generated config for the AwsTargetGroupAttachment to import
+  * @param importFromId The id of the existing AwsTargetGroupAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTargetGroupAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_target_group_attachment", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfTargetGroupAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTargetGroupAttachmentConfig
+  * @param options AwsTargetGroupAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTargetGroupAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTargetGroupAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpclattice_target_group_attachment',
       terraformGeneratorMetadata: {
@@ -145,11 +145,11 @@ export class TfTargetGroupAttachment extends cdktn.TerraformResource {
   }
 
   // target - computed: false, optional: false, required: true
-  private _target = new TfTargetGroupAttachment.TargetPropertyOutputReference(this, "target");
+  private _target = new AwsTargetGroupAttachment.TargetPropertyOutputReference(this, "target");
   public get target() {
     return this._target;
   }
-  public putTarget(value: TfTargetGroupAttachment.TargetProperty) {
+  public putTarget(value: AwsTargetGroupAttachment.TargetProperty) {
     this._target.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -158,11 +158,11 @@ export class TfTargetGroupAttachment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTargetGroupAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTargetGroupAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTargetGroupAttachment.TimeoutsProperty) {
+  public putTimeouts(value: AwsTargetGroupAttachment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -182,8 +182,8 @@ export class TfTargetGroupAttachment extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       target_group_identifier: cdktn.stringToTerraform(this._targetGroupIdentifier),
-      target: tfTargetGroupAttachmentTargetPropertyToTerraform(this._target.internalValue),
-      timeouts: tfTargetGroupAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      target: awsTargetGroupAttachmentTargetPropertyToTerraform(this._target.internalValue),
+      timeouts: awsTargetGroupAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -208,16 +208,16 @@ export class TfTargetGroupAttachment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       target: {
-        value: tfTargetGroupAttachmentTargetPropertyToHclTerraform(this._target.internalValue),
+        value: awsTargetGroupAttachmentTargetPropertyToHclTerraform(this._target.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTargetGroupAttachment.TargetPropertyList",
+        storageClassType: "AwsTargetGroupAttachment.TargetPropertyList",
       },
       timeouts: {
-        value: tfTargetGroupAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTargetGroupAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTargetGroupAttachment.TimeoutsProperty",
+        storageClassType: "AwsTargetGroupAttachment.TimeoutsProperty",
       },
     };
 
@@ -226,7 +226,7 @@ export class TfTargetGroupAttachment extends cdktn.TerraformResource {
   }
 }
 
-export function tfTargetGroupAttachmentTargetPropertyToTerraform(struct?: TfTargetGroupAttachment.TargetPropertyOutputReference | TfTargetGroupAttachment.TargetProperty): any {
+export function awsTargetGroupAttachmentTargetPropertyToTerraform(struct?: AwsTargetGroupAttachment.TargetPropertyOutputReference | AwsTargetGroupAttachment.TargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -238,7 +238,7 @@ export function tfTargetGroupAttachmentTargetPropertyToTerraform(struct?: TfTarg
 }
 
 
-export function tfTargetGroupAttachmentTargetPropertyToHclTerraform(struct?: TfTargetGroupAttachment.TargetPropertyOutputReference | TfTargetGroupAttachment.TargetProperty): any {
+export function awsTargetGroupAttachmentTargetPropertyToHclTerraform(struct?: AwsTargetGroupAttachment.TargetPropertyOutputReference | AwsTargetGroupAttachment.TargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -263,7 +263,7 @@ export function tfTargetGroupAttachmentTargetPropertyToHclTerraform(struct?: TfT
 }
 
 
-export function tfTargetGroupAttachmentTimeoutsPropertyToTerraform(struct?: TfTargetGroupAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTargetGroupAttachmentTimeoutsPropertyToTerraform(struct?: AwsTargetGroupAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function tfTargetGroupAttachmentTimeoutsPropertyToTerraform(struct?: TfTa
 }
 
 
-export function tfTargetGroupAttachmentTimeoutsPropertyToHclTerraform(struct?: TfTargetGroupAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTargetGroupAttachmentTimeoutsPropertyToHclTerraform(struct?: AwsTargetGroupAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -300,17 +300,17 @@ export function tfTargetGroupAttachmentTimeoutsPropertyToHclTerraform(struct?: T
 }
 
 
-export namespace TfTargetGroupAttachment {
+export namespace AwsTargetGroupAttachment {
 export interface TargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#id TfTargetGroupAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#id AwsTargetGroupAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#port TfTargetGroupAttachment#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#port AwsTargetGroupAttachment#port}
   */
   readonly port?: number;
 }
@@ -383,11 +383,11 @@ export class TargetPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#create TfTargetGroupAttachment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#create AwsTargetGroupAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#delete TfTargetGroupAttachment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_target_group_attachment#delete AwsTargetGroupAttachment#delete}
   */
   readonly delete?: string;
 }

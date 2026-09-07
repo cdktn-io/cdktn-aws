@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfDataCatalogEncryptionSettingsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsDataCatalogEncryptionSettingsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_data_catalog_encryption_settings#catalog_id DataTfDataCatalogEncryptionSettings#catalog_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_data_catalog_encryption_settings#catalog_id DataAwsDataCatalogEncryptionSettings#catalog_id}
   */
   readonly catalogId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_data_catalog_encryption_settings#id DataTfDataCatalogEncryptionSettings#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_data_catalog_encryption_settings#id DataAwsDataCatalogEncryptionSettings#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface DataTfDataCatalogEncryptionSettingsConfig extends cdktn.Terrafo
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_data_catalog_encryption_settings#region DataTfDataCatalogEncryptionSettings#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_data_catalog_encryption_settings#region DataAwsDataCatalogEncryptionSettings#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataTfDataCatalogEncryptionSettingsConfig extends cdktn.Terrafo
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_data_catalog_encryption_settings aws_glue_data_catalog_encryption_settings}
 */
-export class DataTfDataCatalogEncryptionSettings extends cdktn.TerraformDataSource {
+export class DataAwsDataCatalogEncryptionSettings extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataTfDataCatalogEncryptionSettings extends cdktn.TerraformDataSour
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfDataCatalogEncryptionSettings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsDataCatalogEncryptionSettings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfDataCatalogEncryptionSettings to import
-  * @param importFromId The id of the existing DataTfDataCatalogEncryptionSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_data_catalog_encryption_settings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfDataCatalogEncryptionSettings to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsDataCatalogEncryptionSettings to import
+  * @param importFromId The id of the existing DataAwsDataCatalogEncryptionSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_data_catalog_encryption_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsDataCatalogEncryptionSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_data_catalog_encryption_settings", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataTfDataCatalogEncryptionSettings extends cdktn.TerraformDataSour
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfDataCatalogEncryptionSettingsConfig
+  * @param options DataAwsDataCatalogEncryptionSettingsConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfDataCatalogEncryptionSettingsConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsDataCatalogEncryptionSettingsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_data_catalog_encryption_settings',
       terraformGeneratorMetadata: {
@@ -99,7 +99,7 @@ export class DataTfDataCatalogEncryptionSettings extends cdktn.TerraformDataSour
   }
 
   // data_catalog_encryption_settings - computed: true, optional: false, required: false
-  private _dataCatalogEncryptionSettings = new DataTfDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsPropertyList(this, "data_catalog_encryption_settings", false);
+  private _dataCatalogEncryptionSettings = new DataAwsDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsPropertyList(this, "data_catalog_encryption_settings", false);
   public get dataCatalogEncryptionSettings() {
     return this._dataCatalogEncryptionSettings;
   }
@@ -175,7 +175,7 @@ export class DataTfDataCatalogEncryptionSettings extends cdktn.TerraformDataSour
   }
 }
 
-export function dataTfDataCatalogEncryptionSettingsConnectionPasswordEncryptionPropertyToTerraform(struct?: DataTfDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty): any {
+export function dataAwsDataCatalogEncryptionSettingsConnectionPasswordEncryptionPropertyToTerraform(struct?: DataAwsDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -185,7 +185,7 @@ export function dataTfDataCatalogEncryptionSettingsConnectionPasswordEncryptionP
 }
 
 
-export function dataTfDataCatalogEncryptionSettingsConnectionPasswordEncryptionPropertyToHclTerraform(struct?: DataTfDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty): any {
+export function dataAwsDataCatalogEncryptionSettingsConnectionPasswordEncryptionPropertyToHclTerraform(struct?: DataAwsDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -196,7 +196,7 @@ export function dataTfDataCatalogEncryptionSettingsConnectionPasswordEncryptionP
 }
 
 
-export function dataTfDataCatalogEncryptionSettingsEncryptionAtRestPropertyToTerraform(struct?: DataTfDataCatalogEncryptionSettings.EncryptionAtRestProperty): any {
+export function dataAwsDataCatalogEncryptionSettingsEncryptionAtRestPropertyToTerraform(struct?: DataAwsDataCatalogEncryptionSettings.EncryptionAtRestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -206,7 +206,7 @@ export function dataTfDataCatalogEncryptionSettingsEncryptionAtRestPropertyToTer
 }
 
 
-export function dataTfDataCatalogEncryptionSettingsEncryptionAtRestPropertyToHclTerraform(struct?: DataTfDataCatalogEncryptionSettings.EncryptionAtRestProperty): any {
+export function dataAwsDataCatalogEncryptionSettingsEncryptionAtRestPropertyToHclTerraform(struct?: DataAwsDataCatalogEncryptionSettings.EncryptionAtRestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -217,7 +217,7 @@ export function dataTfDataCatalogEncryptionSettingsEncryptionAtRestPropertyToHcl
 }
 
 
-export function dataTfDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyToTerraform(struct?: DataTfDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty): any {
+export function dataAwsDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyToTerraform(struct?: DataAwsDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -227,7 +227,7 @@ export function dataTfDataCatalogEncryptionSettingsDataCatalogEncryptionSettings
 }
 
 
-export function dataTfDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyToHclTerraform(struct?: DataTfDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty): any {
+export function dataAwsDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyToHclTerraform(struct?: DataAwsDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -238,7 +238,7 @@ export function dataTfDataCatalogEncryptionSettingsDataCatalogEncryptionSettings
 }
 
 
-export namespace DataTfDataCatalogEncryptionSettings {
+export namespace DataAwsDataCatalogEncryptionSettings {
 export interface ConnectionPasswordEncryptionProperty {
 }
 export class ConnectionPasswordEncryptionPropertyOutputReference extends cdktn.ComplexObject {

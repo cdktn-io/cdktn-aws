@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfVoiceConnectorGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsVoiceConnectorGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_group#id TfVoiceConnectorGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_group#id AwsVoiceConnectorGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_group#name TfVoiceConnectorGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_group#name AwsVoiceConnectorGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_group#region TfVoiceConnectorGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_group#region AwsVoiceConnectorGroup#region}
   */
   readonly region?: string;
   /**
   * connector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_group#connector TfVoiceConnectorGroup#connector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_group#connector AwsVoiceConnectorGroup#connector}
   */
-  readonly connector?: TfVoiceConnectorGroup.ConnectorProperty[] | cdktn.IResolvable;
+  readonly connector?: AwsVoiceConnectorGroup.ConnectorProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_group aws_chime_voice_connector_group}
 */
-export class TfVoiceConnectorGroup extends cdktn.TerraformResource {
+export class AwsVoiceConnectorGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfVoiceConnectorGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfVoiceConnectorGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsVoiceConnectorGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfVoiceConnectorGroup to import
-  * @param importFromId The id of the existing TfVoiceConnectorGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfVoiceConnectorGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsVoiceConnectorGroup to import
+  * @param importFromId The id of the existing AwsVoiceConnectorGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVoiceConnectorGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_chime_voice_connector_group", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfVoiceConnectorGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfVoiceConnectorGroupConfig
+  * @param options AwsVoiceConnectorGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfVoiceConnectorGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsVoiceConnectorGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_chime_voice_connector_group',
       terraformGeneratorMetadata: {
@@ -138,11 +138,11 @@ export class TfVoiceConnectorGroup extends cdktn.TerraformResource {
   }
 
   // connector - computed: false, optional: true, required: false
-  private _connector = new TfVoiceConnectorGroup.ConnectorPropertyList(this, "connector", true);
+  private _connector = new AwsVoiceConnectorGroup.ConnectorPropertyList(this, "connector", true);
   public get connector() {
     return this._connector;
   }
-  public putConnector(value: TfVoiceConnectorGroup.ConnectorProperty[] | cdktn.IResolvable) {
+  public putConnector(value: AwsVoiceConnectorGroup.ConnectorProperty[] | cdktn.IResolvable) {
     this._connector.internalValue = value;
   }
   public resetConnector() {
@@ -162,7 +162,7 @@ export class TfVoiceConnectorGroup extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      connector: cdktn.listMapper(tfVoiceConnectorGroupConnectorPropertyToTerraform, true)(this._connector.internalValue),
+      connector: cdktn.listMapper(awsVoiceConnectorGroupConnectorPropertyToTerraform, true)(this._connector.internalValue),
     };
   }
 
@@ -187,10 +187,10 @@ export class TfVoiceConnectorGroup extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       connector: {
-        value: cdktn.listMapperHcl(tfVoiceConnectorGroupConnectorPropertyToHclTerraform, true)(this._connector.internalValue),
+        value: cdktn.listMapperHcl(awsVoiceConnectorGroupConnectorPropertyToHclTerraform, true)(this._connector.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfVoiceConnectorGroup.ConnectorPropertyList",
+        storageClassType: "AwsVoiceConnectorGroup.ConnectorPropertyList",
       },
     };
 
@@ -199,7 +199,7 @@ export class TfVoiceConnectorGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfVoiceConnectorGroupConnectorPropertyToTerraform(struct?: TfVoiceConnectorGroup.ConnectorProperty | cdktn.IResolvable): any {
+export function awsVoiceConnectorGroupConnectorPropertyToTerraform(struct?: AwsVoiceConnectorGroup.ConnectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -211,7 +211,7 @@ export function tfVoiceConnectorGroupConnectorPropertyToTerraform(struct?: TfVoi
 }
 
 
-export function tfVoiceConnectorGroupConnectorPropertyToHclTerraform(struct?: TfVoiceConnectorGroup.ConnectorProperty | cdktn.IResolvable): any {
+export function awsVoiceConnectorGroupConnectorPropertyToHclTerraform(struct?: AwsVoiceConnectorGroup.ConnectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,14 +236,14 @@ export function tfVoiceConnectorGroupConnectorPropertyToHclTerraform(struct?: Tf
 }
 
 
-export namespace TfVoiceConnectorGroup {
+export namespace AwsVoiceConnectorGroup {
 export interface ConnectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_group#priority TfVoiceConnectorGroup#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_group#priority AwsVoiceConnectorGroup#priority}
   */
   readonly priority: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_group#voice_connector_id TfVoiceConnectorGroup#voice_connector_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_group#voice_connector_id AwsVoiceConnectorGroup#voice_connector_id}
   */
   readonly voiceConnectorId: string;
 }

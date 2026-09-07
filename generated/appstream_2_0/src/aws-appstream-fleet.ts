@@ -5,108 +5,108 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFleetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFleetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#description TfFleet#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#description AwsFleet#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#disconnect_timeout_in_seconds TfFleet#disconnect_timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#disconnect_timeout_in_seconds AwsFleet#disconnect_timeout_in_seconds}
   */
   readonly disconnectTimeoutInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#display_name TfFleet#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#display_name AwsFleet#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#enable_default_internet_access TfFleet#enable_default_internet_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#enable_default_internet_access AwsFleet#enable_default_internet_access}
   */
   readonly enableDefaultInternetAccess?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#fleet_type TfFleet#fleet_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#fleet_type AwsFleet#fleet_type}
   */
   readonly fleetType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#iam_role_arn TfFleet#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#iam_role_arn AwsFleet#iam_role_arn}
   */
   readonly iamRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#id TfFleet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#id AwsFleet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#idle_disconnect_timeout_in_seconds TfFleet#idle_disconnect_timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#idle_disconnect_timeout_in_seconds AwsFleet#idle_disconnect_timeout_in_seconds}
   */
   readonly idleDisconnectTimeoutInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#image_arn TfFleet#image_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#image_arn AwsFleet#image_arn}
   */
   readonly imageArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#image_name TfFleet#image_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#image_name AwsFleet#image_name}
   */
   readonly imageName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#instance_type TfFleet#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#instance_type AwsFleet#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#max_sessions_per_instance TfFleet#max_sessions_per_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#max_sessions_per_instance AwsFleet#max_sessions_per_instance}
   */
   readonly maxSessionsPerInstance?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#max_user_duration_in_seconds TfFleet#max_user_duration_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#max_user_duration_in_seconds AwsFleet#max_user_duration_in_seconds}
   */
   readonly maxUserDurationInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#name TfFleet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#name AwsFleet#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#region TfFleet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#region AwsFleet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#stream_view TfFleet#stream_view}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#stream_view AwsFleet#stream_view}
   */
   readonly streamView?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#tags TfFleet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#tags AwsFleet#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#tags_all TfFleet#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#tags_all AwsFleet#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * compute_capacity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#compute_capacity TfFleet#compute_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#compute_capacity AwsFleet#compute_capacity}
   */
-  readonly computeCapacity: TfFleet.ComputeCapacityProperty;
+  readonly computeCapacity: AwsFleet.ComputeCapacityProperty;
   /**
   * domain_join_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#domain_join_info TfFleet#domain_join_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#domain_join_info AwsFleet#domain_join_info}
   */
-  readonly domainJoinInfo?: TfFleet.DomainJoinInfoProperty;
+  readonly domainJoinInfo?: AwsFleet.DomainJoinInfoProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#vpc_config TfFleet#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#vpc_config AwsFleet#vpc_config}
   */
-  readonly vpcConfig?: TfFleet.VpcConfigProperty;
+  readonly vpcConfig?: AwsFleet.VpcConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet aws_appstream_fleet}
 */
-export class TfFleet extends cdktn.TerraformResource {
+export class AwsFleet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -117,11 +117,11 @@ export class TfFleet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFleet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFleet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFleet to import
-  * @param importFromId The id of the existing TfFleet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFleet to import is found
+  * @param importToId The construct id used in the generated config for the AwsFleet to import
+  * @param importFromId The id of the existing AwsFleet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFleet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appstream_fleet", importId: importFromId, provider });
@@ -136,9 +136,9 @@ export class TfFleet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFleetConfig
+  * @param options AwsFleetConfig
   */
-  public constructor(scope: Construct, id: string, config: TfFleetConfig) {
+  public constructor(scope: Construct, id: string, config: AwsFleetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appstream_fleet',
       terraformGeneratorMetadata: {
@@ -479,11 +479,11 @@ export class TfFleet extends cdktn.TerraformResource {
   }
 
   // compute_capacity - computed: false, optional: false, required: true
-  private _computeCapacity = new TfFleet.ComputeCapacityPropertyOutputReference(this, "compute_capacity");
+  private _computeCapacity = new AwsFleet.ComputeCapacityPropertyOutputReference(this, "compute_capacity");
   public get computeCapacity() {
     return this._computeCapacity;
   }
-  public putComputeCapacity(value: TfFleet.ComputeCapacityProperty) {
+  public putComputeCapacity(value: AwsFleet.ComputeCapacityProperty) {
     this._computeCapacity.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -492,11 +492,11 @@ export class TfFleet extends cdktn.TerraformResource {
   }
 
   // domain_join_info - computed: false, optional: true, required: false
-  private _domainJoinInfo = new TfFleet.DomainJoinInfoPropertyOutputReference(this, "domain_join_info");
+  private _domainJoinInfo = new AwsFleet.DomainJoinInfoPropertyOutputReference(this, "domain_join_info");
   public get domainJoinInfo() {
     return this._domainJoinInfo;
   }
-  public putDomainJoinInfo(value: TfFleet.DomainJoinInfoProperty) {
+  public putDomainJoinInfo(value: AwsFleet.DomainJoinInfoProperty) {
     this._domainJoinInfo.internalValue = value;
   }
   public resetDomainJoinInfo() {
@@ -508,11 +508,11 @@ export class TfFleet extends cdktn.TerraformResource {
   }
 
   // vpc_config - computed: false, optional: true, required: false
-  private _vpcConfig = new TfFleet.VpcConfigPropertyOutputReference(this, "vpc_config");
+  private _vpcConfig = new AwsFleet.VpcConfigPropertyOutputReference(this, "vpc_config");
   public get vpcConfig() {
     return this._vpcConfig;
   }
-  public putVpcConfig(value: TfFleet.VpcConfigProperty) {
+  public putVpcConfig(value: AwsFleet.VpcConfigProperty) {
     this._vpcConfig.internalValue = value;
   }
   public resetVpcConfig() {
@@ -547,9 +547,9 @@ export class TfFleet extends cdktn.TerraformResource {
       stream_view: cdktn.stringToTerraform(this._streamView),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      compute_capacity: tfFleetComputeCapacityPropertyToTerraform(this._computeCapacity.internalValue),
-      domain_join_info: tfFleetDomainJoinInfoPropertyToTerraform(this._domainJoinInfo.internalValue),
-      vpc_config: tfFleetVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
+      compute_capacity: awsFleetComputeCapacityPropertyToTerraform(this._computeCapacity.internalValue),
+      domain_join_info: awsFleetDomainJoinInfoPropertyToTerraform(this._domainJoinInfo.internalValue),
+      vpc_config: awsFleetVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
     };
   }
 
@@ -664,22 +664,22 @@ export class TfFleet extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       compute_capacity: {
-        value: tfFleetComputeCapacityPropertyToHclTerraform(this._computeCapacity.internalValue),
+        value: awsFleetComputeCapacityPropertyToHclTerraform(this._computeCapacity.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFleet.ComputeCapacityPropertyList",
+        storageClassType: "AwsFleet.ComputeCapacityPropertyList",
       },
       domain_join_info: {
-        value: tfFleetDomainJoinInfoPropertyToHclTerraform(this._domainJoinInfo.internalValue),
+        value: awsFleetDomainJoinInfoPropertyToHclTerraform(this._domainJoinInfo.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFleet.DomainJoinInfoPropertyList",
+        storageClassType: "AwsFleet.DomainJoinInfoPropertyList",
       },
       vpc_config: {
-        value: tfFleetVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
+        value: awsFleetVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFleet.VpcConfigPropertyList",
+        storageClassType: "AwsFleet.VpcConfigPropertyList",
       },
     };
 
@@ -688,7 +688,7 @@ export class TfFleet extends cdktn.TerraformResource {
   }
 }
 
-export function tfFleetComputeCapacityPropertyToTerraform(struct?: TfFleet.ComputeCapacityPropertyOutputReference | TfFleet.ComputeCapacityProperty): any {
+export function awsFleetComputeCapacityPropertyToTerraform(struct?: AwsFleet.ComputeCapacityPropertyOutputReference | AwsFleet.ComputeCapacityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -700,7 +700,7 @@ export function tfFleetComputeCapacityPropertyToTerraform(struct?: TfFleet.Compu
 }
 
 
-export function tfFleetComputeCapacityPropertyToHclTerraform(struct?: TfFleet.ComputeCapacityPropertyOutputReference | TfFleet.ComputeCapacityProperty): any {
+export function awsFleetComputeCapacityPropertyToHclTerraform(struct?: AwsFleet.ComputeCapacityPropertyOutputReference | AwsFleet.ComputeCapacityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -725,7 +725,7 @@ export function tfFleetComputeCapacityPropertyToHclTerraform(struct?: TfFleet.Co
 }
 
 
-export function tfFleetDomainJoinInfoPropertyToTerraform(struct?: TfFleet.DomainJoinInfoPropertyOutputReference | TfFleet.DomainJoinInfoProperty): any {
+export function awsFleetDomainJoinInfoPropertyToTerraform(struct?: AwsFleet.DomainJoinInfoPropertyOutputReference | AwsFleet.DomainJoinInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -737,7 +737,7 @@ export function tfFleetDomainJoinInfoPropertyToTerraform(struct?: TfFleet.Domain
 }
 
 
-export function tfFleetDomainJoinInfoPropertyToHclTerraform(struct?: TfFleet.DomainJoinInfoPropertyOutputReference | TfFleet.DomainJoinInfoProperty): any {
+export function awsFleetDomainJoinInfoPropertyToHclTerraform(struct?: AwsFleet.DomainJoinInfoPropertyOutputReference | AwsFleet.DomainJoinInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -762,7 +762,7 @@ export function tfFleetDomainJoinInfoPropertyToHclTerraform(struct?: TfFleet.Dom
 }
 
 
-export function tfFleetVpcConfigPropertyToTerraform(struct?: TfFleet.VpcConfigPropertyOutputReference | TfFleet.VpcConfigProperty): any {
+export function awsFleetVpcConfigPropertyToTerraform(struct?: AwsFleet.VpcConfigPropertyOutputReference | AwsFleet.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -774,7 +774,7 @@ export function tfFleetVpcConfigPropertyToTerraform(struct?: TfFleet.VpcConfigPr
 }
 
 
-export function tfFleetVpcConfigPropertyToHclTerraform(struct?: TfFleet.VpcConfigPropertyOutputReference | TfFleet.VpcConfigProperty): any {
+export function awsFleetVpcConfigPropertyToHclTerraform(struct?: AwsFleet.VpcConfigPropertyOutputReference | AwsFleet.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -799,14 +799,14 @@ export function tfFleetVpcConfigPropertyToHclTerraform(struct?: TfFleet.VpcConfi
 }
 
 
-export namespace TfFleet {
+export namespace AwsFleet {
 export interface ComputeCapacityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#desired_instances TfFleet#desired_instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#desired_instances AwsFleet#desired_instances}
   */
   readonly desiredInstances?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#desired_sessions TfFleet#desired_sessions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#desired_sessions AwsFleet#desired_sessions}
   */
   readonly desiredSessions?: number;
 }
@@ -897,11 +897,11 @@ export class ComputeCapacityPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface DomainJoinInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#directory_name TfFleet#directory_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#directory_name AwsFleet#directory_name}
   */
   readonly directoryName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#organizational_unit_distinguished_name TfFleet#organizational_unit_distinguished_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#organizational_unit_distinguished_name AwsFleet#organizational_unit_distinguished_name}
   */
   readonly organizationalUnitDistinguishedName?: string;
 }
@@ -977,11 +977,11 @@ export class DomainJoinInfoPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#security_group_ids TfFleet#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#security_group_ids AwsFleet#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#subnet_ids TfFleet#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet#subnet_ids AwsFleet#subnet_ids}
   */
   readonly subnetIds?: string[];
 }

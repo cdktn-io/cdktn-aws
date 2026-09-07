@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfImagesConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsImagesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#region DataTfImages#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#region DataAwsImages#region}
   */
   readonly region?: string;
   /**
   * AWS account ID associated with the public registry that contains the repository. If not specified, the default public registry is assumed.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#registry_id DataTfImages#registry_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#registry_id DataAwsImages#registry_id}
   */
   readonly registryId?: string;
   /**
   * Name of the public repository.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#repository_name DataTfImages#repository_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#repository_name DataAwsImages#repository_name}
   */
   readonly repositoryName: string;
   /**
   * image_ids block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#image_ids DataTfImages#image_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#image_ids DataAwsImages#image_ids}
   */
-  readonly imageIds?: DataTfImages.ImageIdsProperty[] | cdktn.IResolvable;
+  readonly imageIds?: DataAwsImages.ImageIdsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images aws_ecrpublic_images}
 */
-export class DataTfImages extends cdktn.TerraformDataSource {
+export class DataAwsImages extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class DataTfImages extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfImages resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsImages resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfImages to import
-  * @param importFromId The id of the existing DataTfImages that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfImages to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsImages to import
+  * @param importFromId The id of the existing DataAwsImages that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsImages to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecrpublic_images", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class DataTfImages extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfImagesConfig
+  * @param options DataAwsImagesConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfImagesConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsImagesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecrpublic_images',
       terraformGeneratorMetadata: {
@@ -94,7 +94,7 @@ export class DataTfImages extends cdktn.TerraformDataSource {
   // ==========
 
   // images - computed: true, optional: false, required: false
-  private _images = new DataTfImages.ImagesPropertyList(this, "images", false);
+  private _images = new DataAwsImages.ImagesPropertyList(this, "images", false);
   public get images() {
     return this._images;
   }
@@ -145,11 +145,11 @@ export class DataTfImages extends cdktn.TerraformDataSource {
   }
 
   // image_ids - computed: false, optional: true, required: false
-  private _imageIds = new DataTfImages.ImageIdsPropertyList(this, "image_ids", false);
+  private _imageIds = new DataAwsImages.ImageIdsPropertyList(this, "image_ids", false);
   public get imageIds() {
     return this._imageIds;
   }
-  public putImageIds(value: DataTfImages.ImageIdsProperty[] | cdktn.IResolvable) {
+  public putImageIds(value: DataAwsImages.ImageIdsProperty[] | cdktn.IResolvable) {
     this._imageIds.internalValue = value;
   }
   public resetImageIds() {
@@ -169,7 +169,7 @@ export class DataTfImages extends cdktn.TerraformDataSource {
       region: cdktn.stringToTerraform(this._region),
       registry_id: cdktn.stringToTerraform(this._registryId),
       repository_name: cdktn.stringToTerraform(this._repositoryName),
-      image_ids: cdktn.listMapper(dataTfImagesImageIdsPropertyToTerraform, true)(this._imageIds.internalValue),
+      image_ids: cdktn.listMapper(dataAwsImagesImageIdsPropertyToTerraform, true)(this._imageIds.internalValue),
     };
   }
 
@@ -194,10 +194,10 @@ export class DataTfImages extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       image_ids: {
-        value: cdktn.listMapperHcl(dataTfImagesImageIdsPropertyToHclTerraform, true)(this._imageIds.internalValue),
+        value: cdktn.listMapperHcl(dataAwsImagesImageIdsPropertyToHclTerraform, true)(this._imageIds.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataTfImages.ImageIdsPropertyList",
+        storageClassType: "DataAwsImages.ImageIdsPropertyList",
       },
     };
 
@@ -206,7 +206,7 @@ export class DataTfImages extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfImagesImagesPropertyToTerraform(struct?: DataTfImages.ImagesProperty): any {
+export function dataAwsImagesImagesPropertyToTerraform(struct?: DataAwsImages.ImagesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,7 +216,7 @@ export function dataTfImagesImagesPropertyToTerraform(struct?: DataTfImages.Imag
 }
 
 
-export function dataTfImagesImagesPropertyToHclTerraform(struct?: DataTfImages.ImagesProperty): any {
+export function dataAwsImagesImagesPropertyToHclTerraform(struct?: DataAwsImages.ImagesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -227,7 +227,7 @@ export function dataTfImagesImagesPropertyToHclTerraform(struct?: DataTfImages.I
 }
 
 
-export function dataTfImagesImageIdsPropertyToTerraform(struct?: DataTfImages.ImageIdsProperty | cdktn.IResolvable): any {
+export function dataAwsImagesImageIdsPropertyToTerraform(struct?: DataAwsImages.ImageIdsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -239,7 +239,7 @@ export function dataTfImagesImageIdsPropertyToTerraform(struct?: DataTfImages.Im
 }
 
 
-export function dataTfImagesImageIdsPropertyToHclTerraform(struct?: DataTfImages.ImageIdsProperty | cdktn.IResolvable): any {
+export function dataAwsImagesImageIdsPropertyToHclTerraform(struct?: DataAwsImages.ImageIdsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -264,7 +264,7 @@ export function dataTfImagesImageIdsPropertyToHclTerraform(struct?: DataTfImages
 }
 
 
-export namespace DataTfImages {
+export namespace DataAwsImages {
 export interface ImagesProperty {
 }
 export class ImagesPropertyOutputReference extends cdktn.ComplexObject {
@@ -358,13 +358,13 @@ export interface ImageIdsProperty {
   /**
   * Image digest.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#image_digest DataTfImages#image_digest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#image_digest DataAwsImages#image_digest}
   */
   readonly imageDigest?: string;
   /**
   * Image tag.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#image_tag DataTfImages#image_tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecrpublic_images#image_tag DataAwsImages#image_tag}
   */
   readonly imageTag?: string;
 }

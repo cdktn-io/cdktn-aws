@@ -5,84 +5,84 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAddonConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAddonConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#addon_name TfAddon#addon_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#addon_name AwsAddon#addon_name}
   */
   readonly addonName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#addon_version TfAddon#addon_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#addon_version AwsAddon#addon_version}
   */
   readonly addonVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#cluster_name TfAddon#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#cluster_name AwsAddon#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#configuration_values TfAddon#configuration_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#configuration_values AwsAddon#configuration_values}
   */
   readonly configurationValues?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#id TfAddon#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#id AwsAddon#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#preserve TfAddon#preserve}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#preserve AwsAddon#preserve}
   */
   readonly preserve?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#region TfAddon#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#region AwsAddon#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#resolve_conflicts_on_create TfAddon#resolve_conflicts_on_create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#resolve_conflicts_on_create AwsAddon#resolve_conflicts_on_create}
   */
   readonly resolveConflictsOnCreate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#resolve_conflicts_on_update TfAddon#resolve_conflicts_on_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#resolve_conflicts_on_update AwsAddon#resolve_conflicts_on_update}
   */
   readonly resolveConflictsOnUpdate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#service_account_role_arn TfAddon#service_account_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#service_account_role_arn AwsAddon#service_account_role_arn}
   */
   readonly serviceAccountRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#tags TfAddon#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#tags AwsAddon#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#tags_all TfAddon#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#tags_all AwsAddon#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * namespace_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#namespace_config TfAddon#namespace_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#namespace_config AwsAddon#namespace_config}
   */
-  readonly namespaceConfig?: TfAddon.NamespaceConfigProperty;
+  readonly namespaceConfig?: AwsAddon.NamespaceConfigProperty;
   /**
   * pod_identity_association block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#pod_identity_association TfAddon#pod_identity_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#pod_identity_association AwsAddon#pod_identity_association}
   */
-  readonly podIdentityAssociation?: TfAddon.PodIdentityAssociationProperty[] | cdktn.IResolvable;
+  readonly podIdentityAssociation?: AwsAddon.PodIdentityAssociationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#timeouts TfAddon#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#timeouts AwsAddon#timeouts}
   */
-  readonly timeouts?: TfAddon.TimeoutsProperty;
+  readonly timeouts?: AwsAddon.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon aws_eks_addon}
 */
-export class TfAddon extends cdktn.TerraformResource {
+export class AwsAddon extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -93,11 +93,11 @@ export class TfAddon extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAddon resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAddon resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAddon to import
-  * @param importFromId The id of the existing TfAddon that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAddon to import is found
+  * @param importToId The construct id used in the generated config for the AwsAddon to import
+  * @param importFromId The id of the existing AwsAddon that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAddon to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eks_addon", importId: importFromId, provider });
@@ -112,9 +112,9 @@ export class TfAddon extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAddonConfig
+  * @param options AwsAddonConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAddonConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAddonConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_eks_addon',
       terraformGeneratorMetadata: {
@@ -353,11 +353,11 @@ export class TfAddon extends cdktn.TerraformResource {
   }
 
   // namespace_config - computed: false, optional: true, required: false
-  private _namespaceConfig = new TfAddon.NamespaceConfigPropertyOutputReference(this, "namespace_config");
+  private _namespaceConfig = new AwsAddon.NamespaceConfigPropertyOutputReference(this, "namespace_config");
   public get namespaceConfig() {
     return this._namespaceConfig;
   }
-  public putNamespaceConfig(value: TfAddon.NamespaceConfigProperty) {
+  public putNamespaceConfig(value: AwsAddon.NamespaceConfigProperty) {
     this._namespaceConfig.internalValue = value;
   }
   public resetNamespaceConfig() {
@@ -369,11 +369,11 @@ export class TfAddon extends cdktn.TerraformResource {
   }
 
   // pod_identity_association - computed: false, optional: true, required: false
-  private _podIdentityAssociation = new TfAddon.PodIdentityAssociationPropertyList(this, "pod_identity_association", true);
+  private _podIdentityAssociation = new AwsAddon.PodIdentityAssociationPropertyList(this, "pod_identity_association", true);
   public get podIdentityAssociation() {
     return this._podIdentityAssociation;
   }
-  public putPodIdentityAssociation(value: TfAddon.PodIdentityAssociationProperty[] | cdktn.IResolvable) {
+  public putPodIdentityAssociation(value: AwsAddon.PodIdentityAssociationProperty[] | cdktn.IResolvable) {
     this._podIdentityAssociation.internalValue = value;
   }
   public resetPodIdentityAssociation() {
@@ -385,11 +385,11 @@ export class TfAddon extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfAddon.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsAddon.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfAddon.TimeoutsProperty) {
+  public putTimeouts(value: AwsAddon.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -418,9 +418,9 @@ export class TfAddon extends cdktn.TerraformResource {
       service_account_role_arn: cdktn.stringToTerraform(this._serviceAccountRoleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      namespace_config: tfAddonNamespaceConfigPropertyToTerraform(this._namespaceConfig.internalValue),
-      pod_identity_association: cdktn.listMapper(tfAddonPodIdentityAssociationPropertyToTerraform, true)(this._podIdentityAssociation.internalValue),
-      timeouts: tfAddonTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      namespace_config: awsAddonNamespaceConfigPropertyToTerraform(this._namespaceConfig.internalValue),
+      pod_identity_association: cdktn.listMapper(awsAddonPodIdentityAssociationPropertyToTerraform, true)(this._podIdentityAssociation.internalValue),
+      timeouts: awsAddonTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -499,22 +499,22 @@ export class TfAddon extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       namespace_config: {
-        value: tfAddonNamespaceConfigPropertyToHclTerraform(this._namespaceConfig.internalValue),
+        value: awsAddonNamespaceConfigPropertyToHclTerraform(this._namespaceConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAddon.NamespaceConfigPropertyList",
+        storageClassType: "AwsAddon.NamespaceConfigPropertyList",
       },
       pod_identity_association: {
-        value: cdktn.listMapperHcl(tfAddonPodIdentityAssociationPropertyToHclTerraform, true)(this._podIdentityAssociation.internalValue),
+        value: cdktn.listMapperHcl(awsAddonPodIdentityAssociationPropertyToHclTerraform, true)(this._podIdentityAssociation.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfAddon.PodIdentityAssociationPropertyList",
+        storageClassType: "AwsAddon.PodIdentityAssociationPropertyList",
       },
       timeouts: {
-        value: tfAddonTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsAddonTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfAddon.TimeoutsProperty",
+        storageClassType: "AwsAddon.TimeoutsProperty",
       },
     };
 
@@ -523,7 +523,7 @@ export class TfAddon extends cdktn.TerraformResource {
   }
 }
 
-export function tfAddonNamespaceConfigPropertyToTerraform(struct?: TfAddon.NamespaceConfigPropertyOutputReference | TfAddon.NamespaceConfigProperty): any {
+export function awsAddonNamespaceConfigPropertyToTerraform(struct?: AwsAddon.NamespaceConfigPropertyOutputReference | AwsAddon.NamespaceConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -534,7 +534,7 @@ export function tfAddonNamespaceConfigPropertyToTerraform(struct?: TfAddon.Names
 }
 
 
-export function tfAddonNamespaceConfigPropertyToHclTerraform(struct?: TfAddon.NamespaceConfigPropertyOutputReference | TfAddon.NamespaceConfigProperty): any {
+export function awsAddonNamespaceConfigPropertyToHclTerraform(struct?: AwsAddon.NamespaceConfigPropertyOutputReference | AwsAddon.NamespaceConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -553,7 +553,7 @@ export function tfAddonNamespaceConfigPropertyToHclTerraform(struct?: TfAddon.Na
 }
 
 
-export function tfAddonPodIdentityAssociationPropertyToTerraform(struct?: TfAddon.PodIdentityAssociationProperty | cdktn.IResolvable): any {
+export function awsAddonPodIdentityAssociationPropertyToTerraform(struct?: AwsAddon.PodIdentityAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -565,7 +565,7 @@ export function tfAddonPodIdentityAssociationPropertyToTerraform(struct?: TfAddo
 }
 
 
-export function tfAddonPodIdentityAssociationPropertyToHclTerraform(struct?: TfAddon.PodIdentityAssociationProperty | cdktn.IResolvable): any {
+export function awsAddonPodIdentityAssociationPropertyToHclTerraform(struct?: AwsAddon.PodIdentityAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -590,7 +590,7 @@ export function tfAddonPodIdentityAssociationPropertyToHclTerraform(struct?: TfA
 }
 
 
-export function tfAddonTimeoutsPropertyToTerraform(struct?: TfAddon.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAddonTimeoutsPropertyToTerraform(struct?: AwsAddon.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -603,7 +603,7 @@ export function tfAddonTimeoutsPropertyToTerraform(struct?: TfAddon.TimeoutsProp
 }
 
 
-export function tfAddonTimeoutsPropertyToHclTerraform(struct?: TfAddon.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAddonTimeoutsPropertyToHclTerraform(struct?: AwsAddon.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -634,10 +634,10 @@ export function tfAddonTimeoutsPropertyToHclTerraform(struct?: TfAddon.TimeoutsP
 }
 
 
-export namespace TfAddon {
+export namespace AwsAddon {
 export interface NamespaceConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#namespace TfAddon#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#namespace AwsAddon#namespace}
   */
   readonly namespace?: string;
 }
@@ -691,11 +691,11 @@ export class NamespaceConfigPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface PodIdentityAssociationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#role_arn TfAddon#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#role_arn AwsAddon#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#service_account TfAddon#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#service_account AwsAddon#service_account}
   */
   readonly serviceAccount: string;
 }
@@ -797,15 +797,15 @@ export class PodIdentityAssociationPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#create TfAddon#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#create AwsAddon#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#delete TfAddon#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#delete AwsAddon#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#update TfAddon#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_addon#update AwsAddon#update}
   */
   readonly update?: string;
 }

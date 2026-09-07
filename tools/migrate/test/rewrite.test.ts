@@ -25,10 +25,10 @@ describe("type positions", () => {
       [
         "import { s3 } from '@cdktn/aws';",
         "",
-        "type Ctor = typeof s3.TfBucket;",
-        "declare const buckets: Array<s3.TfBucket>;",
-        "const config = { bucket: 'x' } satisfies s3.TfBucketConfig;",
-        "export class Wrapper extends s3.TfBucket {}",
+        "type Ctor = typeof s3.AwsBucket;",
+        "declare const buckets: Array<s3.AwsBucket>;",
+        "const config = { bucket: 'x' } satisfies s3.AwsBucketConfig;",
+        "export class Wrapper extends s3.AwsBucket {}",
       ].join("\n"),
     );
   });
@@ -48,7 +48,7 @@ describe("aliasing", () => {
       [
         "import { s3 as s3_ } from '@cdktn/aws';",
         "const s3 = new AWS.S3();",
-        "export const b = new s3_.TfBucket(this, 'b', { bucket: s3.name });",
+        "export const b = new s3_.AwsBucket(this, 'b', { bucket: s3.name });",
       ].join("\n"),
     );
   });
@@ -66,7 +66,7 @@ describe("aliasing", () => {
       [
         "import { readFileSync as s3 } from 'node:fs';",
         "import { s3 as s3_ } from '@cdktn/aws';",
-        "export const a = (scope: any) => { s3('x'); return new s3_.TfBucket(scope, 'x', {}); };",
+        "export const a = (scope: any) => { s3('x'); return new s3_.AwsBucket(scope, 'x', {}); };",
       ].join("\n"),
     );
   });
@@ -97,7 +97,7 @@ describe("aliasing", () => {
     expect(result.after).toContain(
       "import { S3BucketInvented as s3 } from '@cdktn/provider-aws/lib/s3-bucket';",
     );
-    expect(result.after).toContain("new s3_.TfBucket(scope, 'b', {});");
+    expect(result.after).toContain("new s3_.AwsBucket(scope, 'b', {});");
   });
 
   it("leaves a same-named local alone — the rewrite resolves symbols, not text", () => {
@@ -113,7 +113,7 @@ describe("aliasing", () => {
     const after = migrated(source);
     expect(after).toContain("  const S3Bucket = 'a local that shadows the import';");
     expect(after).toContain("  return S3Bucket;");
-    expect(after).toContain("export const real = new s3.TfBucket(this, 'b', {});");
+    expect(after).toContain("export const real = new s3.AwsBucket(this, 'b', {});");
   });
 });
 
@@ -138,11 +138,11 @@ describe("what it refuses to guess", () => {
     expect(result.after).toContain(
       "import { S3BucketInvented } from '@cdktn/provider-aws/lib/s3-bucket';",
     );
-    expect(result.after).toContain("new s3.TfBucket(this, 'b', {});");
+    expect(result.after).toContain("new s3.AwsBucket(this, 'b', {});");
     expect(result.after).toContain("new S3BucketInvented(this, 'x', {});");
   });
 
-  it("reports a re-exported binding rather than emitting `export { s3.TfBucket }`", () => {
+  it("reports a re-exported binding rather than emitting `export { s3.AwsBucket }`", () => {
     // An export clause takes names, not qualified names: rewriting there produces text that does
     // not parse, which is the one failure a migration tool must never ship.
     const result = migrate(
@@ -232,8 +232,8 @@ describe("type-only imports", () => {
     ).toBe(
       [
         "import type { iam, s3 } from '@cdktn/aws';",
-        "export const bucket: s3.TfBucketConfig = { bucket: 'x' };",
-        "export const role: iam.TfRoleConfig = { assumeRolePolicy: '{}' };",
+        "export const bucket: s3.AwsBucketConfig = { bucket: 'x' };",
+        "export const role: iam.AwsRoleConfig = { assumeRolePolicy: '{}' };",
       ].join("\n"),
     );
   });
@@ -336,7 +336,7 @@ describe("the structural backstop", () => {
   });
 
   it("refuses text that does not parse", () => {
-    expect(() => assertRewriteSound("src/a.ts", "const a = 1;\n", "export { s3.TfBucket };\n")).toThrow(
+    expect(() => assertRewriteSound("src/a.ts", "const a = 1;\n", "export { s3.AwsBucket };\n")).toThrow(
       /src\/a\.ts: .*does not parse at line 1/s,
     );
   });

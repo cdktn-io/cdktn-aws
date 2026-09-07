@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfApnsVoipChannelConfig extends cdktn.TerraformMetaArguments {
+export interface AwsApnsVoipChannelConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#application_id TfApnsVoipChannel#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#application_id AwsApnsVoipChannel#application_id}
   */
   readonly applicationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#bundle_id TfApnsVoipChannel#bundle_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#bundle_id AwsApnsVoipChannel#bundle_id}
   */
   readonly bundleId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#certificate TfApnsVoipChannel#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#certificate AwsApnsVoipChannel#certificate}
   */
   readonly certificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#default_authentication_method TfApnsVoipChannel#default_authentication_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#default_authentication_method AwsApnsVoipChannel#default_authentication_method}
   */
   readonly defaultAuthenticationMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#enabled TfApnsVoipChannel#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#enabled AwsApnsVoipChannel#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#id TfApnsVoipChannel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#id AwsApnsVoipChannel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#private_key TfApnsVoipChannel#private_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#private_key AwsApnsVoipChannel#private_key}
   */
   readonly privateKey?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#region TfApnsVoipChannel#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#region AwsApnsVoipChannel#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#team_id TfApnsVoipChannel#team_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#team_id AwsApnsVoipChannel#team_id}
   */
   readonly teamId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#token_key TfApnsVoipChannel#token_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#token_key AwsApnsVoipChannel#token_key}
   */
   readonly tokenKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#token_key_id TfApnsVoipChannel#token_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#token_key_id AwsApnsVoipChannel#token_key_id}
   */
   readonly tokenKeyId?: string;
 }
@@ -60,7 +60,7 @@ export interface TfApnsVoipChannelConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel aws_pinpoint_apns_voip_channel}
 */
-export class TfApnsVoipChannel extends cdktn.TerraformResource {
+export class AwsApnsVoipChannel extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class TfApnsVoipChannel extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfApnsVoipChannel resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsApnsVoipChannel resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfApnsVoipChannel to import
-  * @param importFromId The id of the existing TfApnsVoipChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfApnsVoipChannel to import is found
+  * @param importToId The construct id used in the generated config for the AwsApnsVoipChannel to import
+  * @param importFromId The id of the existing AwsApnsVoipChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_voip_channel#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsApnsVoipChannel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_pinpoint_apns_voip_channel", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class TfApnsVoipChannel extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfApnsVoipChannelConfig
+  * @param options AwsApnsVoipChannelConfig
   */
-  public constructor(scope: Construct, id: string, config: TfApnsVoipChannelConfig) {
+  public constructor(scope: Construct, id: string, config: AwsApnsVoipChannelConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_pinpoint_apns_voip_channel',
       terraformGeneratorMetadata: {

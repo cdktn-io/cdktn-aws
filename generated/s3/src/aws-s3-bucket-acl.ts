@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBucketAclConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBucketAclConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#acl TfBucketAcl#acl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#acl AwsBucketAcl#acl}
   */
   readonly acl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#bucket TfBucketAcl#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#bucket AwsBucketAcl#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#expected_bucket_owner TfBucketAcl#expected_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#expected_bucket_owner AwsBucketAcl#expected_bucket_owner}
   */
   readonly expectedBucketOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#id TfBucketAcl#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#id AwsBucketAcl#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,21 +28,21 @@ export interface TfBucketAclConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#region TfBucketAcl#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#region AwsBucketAcl#region}
   */
   readonly region?: string;
   /**
   * access_control_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#access_control_policy TfBucketAcl#access_control_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#access_control_policy AwsBucketAcl#access_control_policy}
   */
-  readonly accessControlPolicy?: TfBucketAcl.AccessControlPolicyProperty;
+  readonly accessControlPolicy?: AwsBucketAcl.AccessControlPolicyProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl aws_s3_bucket_acl}
 */
-export class TfBucketAcl extends cdktn.TerraformResource {
+export class AwsBucketAcl extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class TfBucketAcl extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBucketAcl resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBucketAcl resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBucketAcl to import
-  * @param importFromId The id of the existing TfBucketAcl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBucketAcl to import is found
+  * @param importToId The construct id used in the generated config for the AwsBucketAcl to import
+  * @param importFromId The id of the existing AwsBucketAcl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBucketAcl to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_acl", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class TfBucketAcl extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBucketAclConfig
+  * @param options AwsBucketAclConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBucketAclConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBucketAclConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_acl',
       terraformGeneratorMetadata: {
@@ -180,11 +180,11 @@ export class TfBucketAcl extends cdktn.TerraformResource {
   }
 
   // access_control_policy - computed: false, optional: true, required: false
-  private _accessControlPolicy = new TfBucketAcl.AccessControlPolicyPropertyOutputReference(this, "access_control_policy");
+  private _accessControlPolicy = new AwsBucketAcl.AccessControlPolicyPropertyOutputReference(this, "access_control_policy");
   public get accessControlPolicy() {
     return this._accessControlPolicy;
   }
-  public putAccessControlPolicy(value: TfBucketAcl.AccessControlPolicyProperty) {
+  public putAccessControlPolicy(value: AwsBucketAcl.AccessControlPolicyProperty) {
     this._accessControlPolicy.internalValue = value;
   }
   public resetAccessControlPolicy() {
@@ -206,7 +206,7 @@ export class TfBucketAcl extends cdktn.TerraformResource {
       expected_bucket_owner: cdktn.stringToTerraform(this._expectedBucketOwner),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      access_control_policy: tfBucketAclAccessControlPolicyPropertyToTerraform(this._accessControlPolicy.internalValue),
+      access_control_policy: awsBucketAclAccessControlPolicyPropertyToTerraform(this._accessControlPolicy.internalValue),
     };
   }
 
@@ -243,10 +243,10 @@ export class TfBucketAcl extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       access_control_policy: {
-        value: tfBucketAclAccessControlPolicyPropertyToHclTerraform(this._accessControlPolicy.internalValue),
+        value: awsBucketAclAccessControlPolicyPropertyToHclTerraform(this._accessControlPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBucketAcl.AccessControlPolicyPropertyList",
+        storageClassType: "AwsBucketAcl.AccessControlPolicyPropertyList",
       },
     };
 
@@ -255,7 +255,7 @@ export class TfBucketAcl extends cdktn.TerraformResource {
   }
 }
 
-export function tfBucketAclGranteePropertyToTerraform(struct?: TfBucketAcl.GranteePropertyOutputReference | TfBucketAcl.GranteeProperty): any {
+export function awsBucketAclGranteePropertyToTerraform(struct?: AwsBucketAcl.GranteePropertyOutputReference | AwsBucketAcl.GranteeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -269,7 +269,7 @@ export function tfBucketAclGranteePropertyToTerraform(struct?: TfBucketAcl.Grant
 }
 
 
-export function tfBucketAclGranteePropertyToHclTerraform(struct?: TfBucketAcl.GranteePropertyOutputReference | TfBucketAcl.GranteeProperty): any {
+export function awsBucketAclGranteePropertyToHclTerraform(struct?: AwsBucketAcl.GranteePropertyOutputReference | AwsBucketAcl.GranteeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -306,19 +306,19 @@ export function tfBucketAclGranteePropertyToHclTerraform(struct?: TfBucketAcl.Gr
 }
 
 
-export function tfBucketAclGrantPropertyToTerraform(struct?: TfBucketAcl.GrantProperty | cdktn.IResolvable): any {
+export function awsBucketAclGrantPropertyToTerraform(struct?: AwsBucketAcl.GrantProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     permission: cdktn.stringToTerraform(struct!.permission),
-    grantee: tfBucketAclGranteePropertyToTerraform(struct!.grantee),
+    grantee: awsBucketAclGranteePropertyToTerraform(struct!.grantee),
   }
 }
 
 
-export function tfBucketAclGrantPropertyToHclTerraform(struct?: TfBucketAcl.GrantProperty | cdktn.IResolvable): any {
+export function awsBucketAclGrantPropertyToHclTerraform(struct?: AwsBucketAcl.GrantProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -331,7 +331,7 @@ export function tfBucketAclGrantPropertyToHclTerraform(struct?: TfBucketAcl.Gran
       storageClassType: "string",
     },
     grantee: {
-      value: tfBucketAclGranteePropertyToHclTerraform(struct!.grantee),
+      value: awsBucketAclGranteePropertyToHclTerraform(struct!.grantee),
       isBlock: true,
       type: "list",
       storageClassType: "GranteePropertyList",
@@ -343,7 +343,7 @@ export function tfBucketAclGrantPropertyToHclTerraform(struct?: TfBucketAcl.Gran
 }
 
 
-export function tfBucketAclOwnerPropertyToTerraform(struct?: TfBucketAcl.OwnerPropertyOutputReference | TfBucketAcl.OwnerProperty): any {
+export function awsBucketAclOwnerPropertyToTerraform(struct?: AwsBucketAcl.OwnerPropertyOutputReference | AwsBucketAcl.OwnerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,7 +355,7 @@ export function tfBucketAclOwnerPropertyToTerraform(struct?: TfBucketAcl.OwnerPr
 }
 
 
-export function tfBucketAclOwnerPropertyToHclTerraform(struct?: TfBucketAcl.OwnerPropertyOutputReference | TfBucketAcl.OwnerProperty): any {
+export function awsBucketAclOwnerPropertyToHclTerraform(struct?: AwsBucketAcl.OwnerPropertyOutputReference | AwsBucketAcl.OwnerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,32 +380,32 @@ export function tfBucketAclOwnerPropertyToHclTerraform(struct?: TfBucketAcl.Owne
 }
 
 
-export function tfBucketAclAccessControlPolicyPropertyToTerraform(struct?: TfBucketAcl.AccessControlPolicyPropertyOutputReference | TfBucketAcl.AccessControlPolicyProperty): any {
+export function awsBucketAclAccessControlPolicyPropertyToTerraform(struct?: AwsBucketAcl.AccessControlPolicyPropertyOutputReference | AwsBucketAcl.AccessControlPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    grant: cdktn.listMapper(tfBucketAclGrantPropertyToTerraform, true)(struct!.grant),
-    owner: tfBucketAclOwnerPropertyToTerraform(struct!.owner),
+    grant: cdktn.listMapper(awsBucketAclGrantPropertyToTerraform, true)(struct!.grant),
+    owner: awsBucketAclOwnerPropertyToTerraform(struct!.owner),
   }
 }
 
 
-export function tfBucketAclAccessControlPolicyPropertyToHclTerraform(struct?: TfBucketAcl.AccessControlPolicyPropertyOutputReference | TfBucketAcl.AccessControlPolicyProperty): any {
+export function awsBucketAclAccessControlPolicyPropertyToHclTerraform(struct?: AwsBucketAcl.AccessControlPolicyPropertyOutputReference | AwsBucketAcl.AccessControlPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     grant: {
-      value: cdktn.listMapperHcl(tfBucketAclGrantPropertyToHclTerraform, true)(struct!.grant),
+      value: cdktn.listMapperHcl(awsBucketAclGrantPropertyToHclTerraform, true)(struct!.grant),
       isBlock: true,
       type: "set",
       storageClassType: "GrantPropertyList",
     },
     owner: {
-      value: tfBucketAclOwnerPropertyToHclTerraform(struct!.owner),
+      value: awsBucketAclOwnerPropertyToHclTerraform(struct!.owner),
       isBlock: true,
       type: "list",
       storageClassType: "OwnerPropertyList",
@@ -417,25 +417,25 @@ export function tfBucketAclAccessControlPolicyPropertyToHclTerraform(struct?: Tf
 }
 
 
-export namespace TfBucketAcl {
+export namespace AwsBucketAcl {
 export interface GranteeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#email_address TfBucketAcl#email_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#email_address AwsBucketAcl#email_address}
   */
   readonly emailAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#id TfBucketAcl#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#id AwsBucketAcl#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#type TfBucketAcl#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#type AwsBucketAcl#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#uri TfBucketAcl#uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#uri AwsBucketAcl#uri}
   */
   readonly uri?: string;
 }
@@ -557,13 +557,13 @@ export class GranteePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface GrantProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#permission TfBucketAcl#permission}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#permission AwsBucketAcl#permission}
   */
   readonly permission: string;
   /**
   * grantee block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#grantee TfBucketAcl#grantee}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#grantee AwsBucketAcl#grantee}
   */
   readonly grantee?: GranteeProperty;
 }
@@ -668,11 +668,11 @@ export class GrantPropertyList extends cdktn.ComplexList {
 }
 export interface OwnerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#display_name TfBucketAcl#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#display_name AwsBucketAcl#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#id TfBucketAcl#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#id AwsBucketAcl#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -750,13 +750,13 @@ export interface AccessControlPolicyProperty {
   /**
   * grant block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#grant TfBucketAcl#grant}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#grant AwsBucketAcl#grant}
   */
   readonly grant?: GrantProperty[] | cdktn.IResolvable;
   /**
   * owner block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#owner TfBucketAcl#owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_acl#owner AwsBucketAcl#owner}
   */
   readonly owner: OwnerProperty;
 }

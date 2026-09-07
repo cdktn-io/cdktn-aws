@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfApplicationAssignmentsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsApplicationAssignmentsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application_assignments#application_arn DataTfApplicationAssignments#application_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application_assignments#application_arn DataAwsApplicationAssignments#application_arn}
   */
   readonly applicationArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application_assignments#region DataTfApplicationAssignments#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application_assignments#region DataAwsApplicationAssignments#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataTfApplicationAssignmentsConfig extends cdktn.TerraformMetaA
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application_assignments aws_ssoadmin_application_assignments}
 */
-export class DataTfApplicationAssignments extends cdktn.TerraformDataSource {
+export class DataAwsApplicationAssignments extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataTfApplicationAssignments extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfApplicationAssignments resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsApplicationAssignments resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfApplicationAssignments to import
-  * @param importFromId The id of the existing DataTfApplicationAssignments that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application_assignments#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfApplicationAssignments to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsApplicationAssignments to import
+  * @param importFromId The id of the existing DataAwsApplicationAssignments that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssoadmin_application_assignments#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsApplicationAssignments to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_application_assignments", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataTfApplicationAssignments extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfApplicationAssignmentsConfig
+  * @param options DataAwsApplicationAssignmentsConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfApplicationAssignmentsConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsApplicationAssignmentsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssoadmin_application_assignments',
       terraformGeneratorMetadata: {
@@ -91,7 +91,7 @@ export class DataTfApplicationAssignments extends cdktn.TerraformDataSource {
   }
 
   // application_assignments - computed: true, optional: false, required: false
-  private _applicationAssignments = new DataTfApplicationAssignments.ApplicationAssignmentsPropertyList(this, "application_assignments", false);
+  private _applicationAssignments = new DataAwsApplicationAssignments.ApplicationAssignmentsPropertyList(this, "application_assignments", false);
   public get applicationAssignments() {
     return this._applicationAssignments;
   }
@@ -149,7 +149,7 @@ export class DataTfApplicationAssignments extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfApplicationAssignmentsApplicationAssignmentsPropertyToTerraform(struct?: DataTfApplicationAssignments.ApplicationAssignmentsProperty): any {
+export function dataAwsApplicationAssignmentsApplicationAssignmentsPropertyToTerraform(struct?: DataAwsApplicationAssignments.ApplicationAssignmentsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -159,7 +159,7 @@ export function dataTfApplicationAssignmentsApplicationAssignmentsPropertyToTerr
 }
 
 
-export function dataTfApplicationAssignmentsApplicationAssignmentsPropertyToHclTerraform(struct?: DataTfApplicationAssignments.ApplicationAssignmentsProperty): any {
+export function dataAwsApplicationAssignmentsApplicationAssignmentsPropertyToHclTerraform(struct?: DataAwsApplicationAssignments.ApplicationAssignmentsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -170,7 +170,7 @@ export function dataTfApplicationAssignmentsApplicationAssignmentsPropertyToHclT
 }
 
 
-export namespace DataTfApplicationAssignments {
+export namespace DataAwsApplicationAssignments {
 export interface ApplicationAssignmentsProperty {
 }
 export class ApplicationAssignmentsPropertyOutputReference extends cdktn.ComplexObject {

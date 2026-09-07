@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPortfolioShareConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPortfolioShareConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#accept_language TfPortfolioShare#accept_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#accept_language AwsPortfolioShare#accept_language}
   */
   readonly acceptLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#id TfPortfolioShare#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#id AwsPortfolioShare#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#portfolio_id TfPortfolioShare#portfolio_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#portfolio_id AwsPortfolioShare#portfolio_id}
   */
   readonly portfolioId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#principal_id TfPortfolioShare#principal_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#principal_id AwsPortfolioShare#principal_id}
   */
   readonly principalId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#region TfPortfolioShare#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#region AwsPortfolioShare#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#share_principals TfPortfolioShare#share_principals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#share_principals AwsPortfolioShare#share_principals}
   */
   readonly sharePrincipals?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#share_tag_options TfPortfolioShare#share_tag_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#share_tag_options AwsPortfolioShare#share_tag_options}
   */
   readonly shareTagOptions?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#type TfPortfolioShare#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#type AwsPortfolioShare#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#wait_for_acceptance TfPortfolioShare#wait_for_acceptance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#wait_for_acceptance AwsPortfolioShare#wait_for_acceptance}
   */
   readonly waitForAcceptance?: boolean | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#timeouts TfPortfolioShare#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#timeouts AwsPortfolioShare#timeouts}
   */
-  readonly timeouts?: TfPortfolioShare.TimeoutsProperty;
+  readonly timeouts?: AwsPortfolioShare.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share aws_servicecatalog_portfolio_share}
 */
-export class TfPortfolioShare extends cdktn.TerraformResource {
+export class AwsPortfolioShare extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfPortfolioShare extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPortfolioShare resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPortfolioShare resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPortfolioShare to import
-  * @param importFromId The id of the existing TfPortfolioShare that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPortfolioShare to import is found
+  * @param importToId The construct id used in the generated config for the AwsPortfolioShare to import
+  * @param importFromId The id of the existing AwsPortfolioShare that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPortfolioShare to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_portfolio_share", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfPortfolioShare extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPortfolioShareConfig
+  * @param options AwsPortfolioShareConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPortfolioShareConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPortfolioShareConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_portfolio_share',
       terraformGeneratorMetadata: {
@@ -263,11 +263,11 @@ export class TfPortfolioShare extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfPortfolioShare.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsPortfolioShare.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfPortfolioShare.TimeoutsProperty) {
+  public putTimeouts(value: AwsPortfolioShare.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -293,7 +293,7 @@ export class TfPortfolioShare extends cdktn.TerraformResource {
       share_tag_options: cdktn.booleanToTerraform(this._shareTagOptions),
       type: cdktn.stringToTerraform(this._type),
       wait_for_acceptance: cdktn.booleanToTerraform(this._waitForAcceptance),
-      timeouts: tfPortfolioShareTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsPortfolioShareTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -354,10 +354,10 @@ export class TfPortfolioShare extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       timeouts: {
-        value: tfPortfolioShareTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsPortfolioShareTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfPortfolioShare.TimeoutsProperty",
+        storageClassType: "AwsPortfolioShare.TimeoutsProperty",
       },
     };
 
@@ -366,7 +366,7 @@ export class TfPortfolioShare extends cdktn.TerraformResource {
   }
 }
 
-export function tfPortfolioShareTimeoutsPropertyToTerraform(struct?: TfPortfolioShare.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPortfolioShareTimeoutsPropertyToTerraform(struct?: AwsPortfolioShare.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,7 +380,7 @@ export function tfPortfolioShareTimeoutsPropertyToTerraform(struct?: TfPortfolio
 }
 
 
-export function tfPortfolioShareTimeoutsPropertyToHclTerraform(struct?: TfPortfolioShare.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPortfolioShareTimeoutsPropertyToHclTerraform(struct?: AwsPortfolioShare.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,22 +417,22 @@ export function tfPortfolioShareTimeoutsPropertyToHclTerraform(struct?: TfPortfo
 }
 
 
-export namespace TfPortfolioShare {
+export namespace AwsPortfolioShare {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#create TfPortfolioShare#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#create AwsPortfolioShare#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#delete TfPortfolioShare#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#delete AwsPortfolioShare#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#read TfPortfolioShare#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#read AwsPortfolioShare#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#update TfPortfolioShare#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_portfolio_share#update AwsPortfolioShare#update}
   */
   readonly update?: string;
 }

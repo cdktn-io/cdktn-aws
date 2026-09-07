@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfIndexConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsIndexConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_index#id DataTfIndex#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_index#id DataAwsIndex#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,11 +16,11 @@ export interface DataTfIndexConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_index#region DataTfIndex#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_index#region DataAwsIndex#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_index#tags DataTfIndex#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_index#tags DataAwsIndex#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -28,7 +28,7 @@ export interface DataTfIndexConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_index aws_kendra_index}
 */
-export class DataTfIndex extends cdktn.TerraformDataSource {
+export class DataAwsIndex extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataTfIndex extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfIndex resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsIndex resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfIndex to import
-  * @param importFromId The id of the existing DataTfIndex that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_index#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfIndex to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsIndex to import
+  * @param importFromId The id of the existing DataAwsIndex that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kendra_index#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsIndex to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kendra_index", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataTfIndex extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfIndexConfig
+  * @param options DataAwsIndexConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfIndexConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsIndexConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kendra_index',
       terraformGeneratorMetadata: {
@@ -91,7 +91,7 @@ export class DataTfIndex extends cdktn.TerraformDataSource {
   }
 
   // capacity_units - computed: true, optional: false, required: false
-  private _capacityUnits = new DataTfIndex.CapacityUnitsPropertyList(this, "capacity_units", false);
+  private _capacityUnits = new DataAwsIndex.CapacityUnitsPropertyList(this, "capacity_units", false);
   public get capacityUnits() {
     return this._capacityUnits;
   }
@@ -107,7 +107,7 @@ export class DataTfIndex extends cdktn.TerraformDataSource {
   }
 
   // document_metadata_configuration_updates - computed: true, optional: false, required: false
-  private _documentMetadataConfigurationUpdates = new DataTfIndex.DocumentMetadataConfigurationUpdatesPropertyList(this, "document_metadata_configuration_updates", true);
+  private _documentMetadataConfigurationUpdates = new DataAwsIndex.DocumentMetadataConfigurationUpdatesPropertyList(this, "document_metadata_configuration_updates", true);
   public get documentMetadataConfigurationUpdates() {
     return this._documentMetadataConfigurationUpdates;
   }
@@ -136,7 +136,7 @@ export class DataTfIndex extends cdktn.TerraformDataSource {
   }
 
   // index_statistics - computed: true, optional: false, required: false
-  private _indexStatistics = new DataTfIndex.IndexStatisticsPropertyList(this, "index_statistics", false);
+  private _indexStatistics = new DataAwsIndex.IndexStatisticsPropertyList(this, "index_statistics", false);
   public get indexStatistics() {
     return this._indexStatistics;
   }
@@ -168,7 +168,7 @@ export class DataTfIndex extends cdktn.TerraformDataSource {
   }
 
   // server_side_encryption_configuration - computed: true, optional: false, required: false
-  private _serverSideEncryptionConfiguration = new DataTfIndex.ServerSideEncryptionConfigurationPropertyList(this, "server_side_encryption_configuration", false);
+  private _serverSideEncryptionConfiguration = new DataAwsIndex.ServerSideEncryptionConfigurationPropertyList(this, "server_side_encryption_configuration", false);
   public get serverSideEncryptionConfiguration() {
     return this._serverSideEncryptionConfiguration;
   }
@@ -205,13 +205,13 @@ export class DataTfIndex extends cdktn.TerraformDataSource {
   }
 
   // user_group_resolution_configuration - computed: true, optional: false, required: false
-  private _userGroupResolutionConfiguration = new DataTfIndex.UserGroupResolutionConfigurationPropertyList(this, "user_group_resolution_configuration", false);
+  private _userGroupResolutionConfiguration = new DataAwsIndex.UserGroupResolutionConfigurationPropertyList(this, "user_group_resolution_configuration", false);
   public get userGroupResolutionConfiguration() {
     return this._userGroupResolutionConfiguration;
   }
 
   // user_token_configurations - computed: true, optional: false, required: false
-  private _userTokenConfigurations = new DataTfIndex.UserTokenConfigurationsPropertyList(this, "user_token_configurations", false);
+  private _userTokenConfigurations = new DataAwsIndex.UserTokenConfigurationsPropertyList(this, "user_token_configurations", false);
   public get userTokenConfigurations() {
     return this._userTokenConfigurations;
   }
@@ -255,7 +255,7 @@ export class DataTfIndex extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfIndexCapacityUnitsPropertyToTerraform(struct?: DataTfIndex.CapacityUnitsProperty): any {
+export function dataAwsIndexCapacityUnitsPropertyToTerraform(struct?: DataAwsIndex.CapacityUnitsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,7 +265,7 @@ export function dataTfIndexCapacityUnitsPropertyToTerraform(struct?: DataTfIndex
 }
 
 
-export function dataTfIndexCapacityUnitsPropertyToHclTerraform(struct?: DataTfIndex.CapacityUnitsProperty): any {
+export function dataAwsIndexCapacityUnitsPropertyToHclTerraform(struct?: DataAwsIndex.CapacityUnitsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -276,7 +276,7 @@ export function dataTfIndexCapacityUnitsPropertyToHclTerraform(struct?: DataTfIn
 }
 
 
-export function dataTfIndexRelevancePropertyToTerraform(struct?: DataTfIndex.RelevanceProperty): any {
+export function dataAwsIndexRelevancePropertyToTerraform(struct?: DataAwsIndex.RelevanceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,7 +286,7 @@ export function dataTfIndexRelevancePropertyToTerraform(struct?: DataTfIndex.Rel
 }
 
 
-export function dataTfIndexRelevancePropertyToHclTerraform(struct?: DataTfIndex.RelevanceProperty): any {
+export function dataAwsIndexRelevancePropertyToHclTerraform(struct?: DataAwsIndex.RelevanceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -297,7 +297,7 @@ export function dataTfIndexRelevancePropertyToHclTerraform(struct?: DataTfIndex.
 }
 
 
-export function dataTfIndexSearchPropertyToTerraform(struct?: DataTfIndex.SearchProperty): any {
+export function dataAwsIndexSearchPropertyToTerraform(struct?: DataAwsIndex.SearchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function dataTfIndexSearchPropertyToTerraform(struct?: DataTfIndex.Search
 }
 
 
-export function dataTfIndexSearchPropertyToHclTerraform(struct?: DataTfIndex.SearchProperty): any {
+export function dataAwsIndexSearchPropertyToHclTerraform(struct?: DataAwsIndex.SearchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -318,7 +318,7 @@ export function dataTfIndexSearchPropertyToHclTerraform(struct?: DataTfIndex.Sea
 }
 
 
-export function dataTfIndexDocumentMetadataConfigurationUpdatesPropertyToTerraform(struct?: DataTfIndex.DocumentMetadataConfigurationUpdatesProperty): any {
+export function dataAwsIndexDocumentMetadataConfigurationUpdatesPropertyToTerraform(struct?: DataAwsIndex.DocumentMetadataConfigurationUpdatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function dataTfIndexDocumentMetadataConfigurationUpdatesPropertyToTerrafo
 }
 
 
-export function dataTfIndexDocumentMetadataConfigurationUpdatesPropertyToHclTerraform(struct?: DataTfIndex.DocumentMetadataConfigurationUpdatesProperty): any {
+export function dataAwsIndexDocumentMetadataConfigurationUpdatesPropertyToHclTerraform(struct?: DataAwsIndex.DocumentMetadataConfigurationUpdatesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function dataTfIndexDocumentMetadataConfigurationUpdatesPropertyToHclTerr
 }
 
 
-export function dataTfIndexFaqStatisticsPropertyToTerraform(struct?: DataTfIndex.FaqStatisticsProperty): any {
+export function dataAwsIndexFaqStatisticsPropertyToTerraform(struct?: DataAwsIndex.FaqStatisticsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function dataTfIndexFaqStatisticsPropertyToTerraform(struct?: DataTfIndex
 }
 
 
-export function dataTfIndexFaqStatisticsPropertyToHclTerraform(struct?: DataTfIndex.FaqStatisticsProperty): any {
+export function dataAwsIndexFaqStatisticsPropertyToHclTerraform(struct?: DataAwsIndex.FaqStatisticsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function dataTfIndexFaqStatisticsPropertyToHclTerraform(struct?: DataTfIn
 }
 
 
-export function dataTfIndexTextDocumentStatisticsPropertyToTerraform(struct?: DataTfIndex.TextDocumentStatisticsProperty): any {
+export function dataAwsIndexTextDocumentStatisticsPropertyToTerraform(struct?: DataAwsIndex.TextDocumentStatisticsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -370,7 +370,7 @@ export function dataTfIndexTextDocumentStatisticsPropertyToTerraform(struct?: Da
 }
 
 
-export function dataTfIndexTextDocumentStatisticsPropertyToHclTerraform(struct?: DataTfIndex.TextDocumentStatisticsProperty): any {
+export function dataAwsIndexTextDocumentStatisticsPropertyToHclTerraform(struct?: DataAwsIndex.TextDocumentStatisticsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -381,7 +381,7 @@ export function dataTfIndexTextDocumentStatisticsPropertyToHclTerraform(struct?:
 }
 
 
-export function dataTfIndexIndexStatisticsPropertyToTerraform(struct?: DataTfIndex.IndexStatisticsProperty): any {
+export function dataAwsIndexIndexStatisticsPropertyToTerraform(struct?: DataAwsIndex.IndexStatisticsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,7 +391,7 @@ export function dataTfIndexIndexStatisticsPropertyToTerraform(struct?: DataTfInd
 }
 
 
-export function dataTfIndexIndexStatisticsPropertyToHclTerraform(struct?: DataTfIndex.IndexStatisticsProperty): any {
+export function dataAwsIndexIndexStatisticsPropertyToHclTerraform(struct?: DataAwsIndex.IndexStatisticsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -402,7 +402,7 @@ export function dataTfIndexIndexStatisticsPropertyToHclTerraform(struct?: DataTf
 }
 
 
-export function dataTfIndexServerSideEncryptionConfigurationPropertyToTerraform(struct?: DataTfIndex.ServerSideEncryptionConfigurationProperty): any {
+export function dataAwsIndexServerSideEncryptionConfigurationPropertyToTerraform(struct?: DataAwsIndex.ServerSideEncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,7 +412,7 @@ export function dataTfIndexServerSideEncryptionConfigurationPropertyToTerraform(
 }
 
 
-export function dataTfIndexServerSideEncryptionConfigurationPropertyToHclTerraform(struct?: DataTfIndex.ServerSideEncryptionConfigurationProperty): any {
+export function dataAwsIndexServerSideEncryptionConfigurationPropertyToHclTerraform(struct?: DataAwsIndex.ServerSideEncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,7 +423,7 @@ export function dataTfIndexServerSideEncryptionConfigurationPropertyToHclTerrafo
 }
 
 
-export function dataTfIndexUserGroupResolutionConfigurationPropertyToTerraform(struct?: DataTfIndex.UserGroupResolutionConfigurationProperty): any {
+export function dataAwsIndexUserGroupResolutionConfigurationPropertyToTerraform(struct?: DataAwsIndex.UserGroupResolutionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -433,7 +433,7 @@ export function dataTfIndexUserGroupResolutionConfigurationPropertyToTerraform(s
 }
 
 
-export function dataTfIndexUserGroupResolutionConfigurationPropertyToHclTerraform(struct?: DataTfIndex.UserGroupResolutionConfigurationProperty): any {
+export function dataAwsIndexUserGroupResolutionConfigurationPropertyToHclTerraform(struct?: DataAwsIndex.UserGroupResolutionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -444,7 +444,7 @@ export function dataTfIndexUserGroupResolutionConfigurationPropertyToHclTerrafor
 }
 
 
-export function dataTfIndexJsonTokenTypeConfigurationPropertyToTerraform(struct?: DataTfIndex.JsonTokenTypeConfigurationProperty): any {
+export function dataAwsIndexJsonTokenTypeConfigurationPropertyToTerraform(struct?: DataAwsIndex.JsonTokenTypeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -454,7 +454,7 @@ export function dataTfIndexJsonTokenTypeConfigurationPropertyToTerraform(struct?
 }
 
 
-export function dataTfIndexJsonTokenTypeConfigurationPropertyToHclTerraform(struct?: DataTfIndex.JsonTokenTypeConfigurationProperty): any {
+export function dataAwsIndexJsonTokenTypeConfigurationPropertyToHclTerraform(struct?: DataAwsIndex.JsonTokenTypeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -465,7 +465,7 @@ export function dataTfIndexJsonTokenTypeConfigurationPropertyToHclTerraform(stru
 }
 
 
-export function dataTfIndexJwtTokenTypeConfigurationPropertyToTerraform(struct?: DataTfIndex.JwtTokenTypeConfigurationProperty): any {
+export function dataAwsIndexJwtTokenTypeConfigurationPropertyToTerraform(struct?: DataAwsIndex.JwtTokenTypeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -475,7 +475,7 @@ export function dataTfIndexJwtTokenTypeConfigurationPropertyToTerraform(struct?:
 }
 
 
-export function dataTfIndexJwtTokenTypeConfigurationPropertyToHclTerraform(struct?: DataTfIndex.JwtTokenTypeConfigurationProperty): any {
+export function dataAwsIndexJwtTokenTypeConfigurationPropertyToHclTerraform(struct?: DataAwsIndex.JwtTokenTypeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -486,7 +486,7 @@ export function dataTfIndexJwtTokenTypeConfigurationPropertyToHclTerraform(struc
 }
 
 
-export function dataTfIndexUserTokenConfigurationsPropertyToTerraform(struct?: DataTfIndex.UserTokenConfigurationsProperty): any {
+export function dataAwsIndexUserTokenConfigurationsPropertyToTerraform(struct?: DataAwsIndex.UserTokenConfigurationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,7 +496,7 @@ export function dataTfIndexUserTokenConfigurationsPropertyToTerraform(struct?: D
 }
 
 
-export function dataTfIndexUserTokenConfigurationsPropertyToHclTerraform(struct?: DataTfIndex.UserTokenConfigurationsProperty): any {
+export function dataAwsIndexUserTokenConfigurationsPropertyToHclTerraform(struct?: DataAwsIndex.UserTokenConfigurationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -507,7 +507,7 @@ export function dataTfIndexUserTokenConfigurationsPropertyToHclTerraform(struct?
 }
 
 
-export namespace DataTfIndex {
+export namespace DataAwsIndex {
 export interface CapacityUnitsProperty {
 }
 export class CapacityUnitsPropertyOutputReference extends cdktn.ComplexObject {

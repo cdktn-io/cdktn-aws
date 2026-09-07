@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBackupPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBackupPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_backup_policy#file_system_id TfBackupPolicy#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_backup_policy#file_system_id AwsBackupPolicy#file_system_id}
   */
   readonly fileSystemId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_backup_policy#id TfBackupPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_backup_policy#id AwsBackupPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,21 +20,21 @@ export interface TfBackupPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_backup_policy#region TfBackupPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_backup_policy#region AwsBackupPolicy#region}
   */
   readonly region?: string;
   /**
   * backup_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_backup_policy#backup_policy TfBackupPolicy#backup_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_backup_policy#backup_policy AwsBackupPolicy#backup_policy}
   */
-  readonly backupPolicy: TfBackupPolicy.BackupPolicyProperty;
+  readonly backupPolicy: AwsBackupPolicy.BackupPolicyProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_backup_policy aws_efs_backup_policy}
 */
-export class TfBackupPolicy extends cdktn.TerraformResource {
+export class AwsBackupPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfBackupPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBackupPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBackupPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBackupPolicy to import
-  * @param importFromId The id of the existing TfBackupPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_backup_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBackupPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsBackupPolicy to import
+  * @param importFromId The id of the existing AwsBackupPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_backup_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBackupPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_efs_backup_policy", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfBackupPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBackupPolicyConfig
+  * @param options AwsBackupPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBackupPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBackupPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_efs_backup_policy',
       terraformGeneratorMetadata: {
@@ -138,11 +138,11 @@ export class TfBackupPolicy extends cdktn.TerraformResource {
   }
 
   // backup_policy - computed: false, optional: false, required: true
-  private _backupPolicy = new TfBackupPolicy.BackupPolicyPropertyOutputReference(this, "backup_policy");
+  private _backupPolicy = new AwsBackupPolicy.BackupPolicyPropertyOutputReference(this, "backup_policy");
   public get backupPolicy() {
     return this._backupPolicy;
   }
-  public putBackupPolicy(value: TfBackupPolicy.BackupPolicyProperty) {
+  public putBackupPolicy(value: AwsBackupPolicy.BackupPolicyProperty) {
     this._backupPolicy.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -159,7 +159,7 @@ export class TfBackupPolicy extends cdktn.TerraformResource {
       file_system_id: cdktn.stringToTerraform(this._fileSystemId),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      backup_policy: tfBackupPolicyBackupPolicyPropertyToTerraform(this._backupPolicy.internalValue),
+      backup_policy: awsBackupPolicyBackupPolicyPropertyToTerraform(this._backupPolicy.internalValue),
     };
   }
 
@@ -184,10 +184,10 @@ export class TfBackupPolicy extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       backup_policy: {
-        value: tfBackupPolicyBackupPolicyPropertyToHclTerraform(this._backupPolicy.internalValue),
+        value: awsBackupPolicyBackupPolicyPropertyToHclTerraform(this._backupPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBackupPolicy.BackupPolicyPropertyList",
+        storageClassType: "AwsBackupPolicy.BackupPolicyPropertyList",
       },
     };
 
@@ -196,7 +196,7 @@ export class TfBackupPolicy extends cdktn.TerraformResource {
   }
 }
 
-export function tfBackupPolicyBackupPolicyPropertyToTerraform(struct?: TfBackupPolicy.BackupPolicyPropertyOutputReference | TfBackupPolicy.BackupPolicyProperty): any {
+export function awsBackupPolicyBackupPolicyPropertyToTerraform(struct?: AwsBackupPolicy.BackupPolicyPropertyOutputReference | AwsBackupPolicy.BackupPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -207,7 +207,7 @@ export function tfBackupPolicyBackupPolicyPropertyToTerraform(struct?: TfBackupP
 }
 
 
-export function tfBackupPolicyBackupPolicyPropertyToHclTerraform(struct?: TfBackupPolicy.BackupPolicyPropertyOutputReference | TfBackupPolicy.BackupPolicyProperty): any {
+export function awsBackupPolicyBackupPolicyPropertyToHclTerraform(struct?: AwsBackupPolicy.BackupPolicyPropertyOutputReference | AwsBackupPolicy.BackupPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -226,10 +226,10 @@ export function tfBackupPolicyBackupPolicyPropertyToHclTerraform(struct?: TfBack
 }
 
 
-export namespace TfBackupPolicy {
+export namespace AwsBackupPolicy {
 export interface BackupPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_backup_policy#status TfBackupPolicy#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/efs_backup_policy#status AwsBackupPolicy#status}
   */
   readonly status: string;
 }

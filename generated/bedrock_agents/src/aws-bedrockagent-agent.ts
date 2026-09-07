@@ -5,81 +5,81 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAgentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAgentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#agent_collaboration TfAgent#agent_collaboration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#agent_collaboration AwsAgent#agent_collaboration}
   */
   readonly agentCollaboration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#agent_name TfAgent#agent_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#agent_name AwsAgent#agent_name}
   */
   readonly agentName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#agent_resource_role_arn TfAgent#agent_resource_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#agent_resource_role_arn AwsAgent#agent_resource_role_arn}
   */
   readonly agentResourceRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#customer_encryption_key_arn TfAgent#customer_encryption_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#customer_encryption_key_arn AwsAgent#customer_encryption_key_arn}
   */
   readonly customerEncryptionKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#description TfAgent#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#description AwsAgent#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#foundation_model TfAgent#foundation_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#foundation_model AwsAgent#foundation_model}
   */
   readonly foundationModel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#guardrail_configuration TfAgent#guardrail_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#guardrail_configuration AwsAgent#guardrail_configuration}
   */
-  readonly guardrailConfiguration?: TfAgent.GuardrailConfigurationProperty[] | cdktn.IResolvable;
+  readonly guardrailConfiguration?: AwsAgent.GuardrailConfigurationProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#idle_session_ttl_in_seconds TfAgent#idle_session_ttl_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#idle_session_ttl_in_seconds AwsAgent#idle_session_ttl_in_seconds}
   */
   readonly idleSessionTtlInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#instruction TfAgent#instruction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#instruction AwsAgent#instruction}
   */
   readonly instruction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#memory_configuration TfAgent#memory_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#memory_configuration AwsAgent#memory_configuration}
   */
-  readonly memoryConfiguration?: TfAgent.MemoryConfigurationProperty[] | cdktn.IResolvable;
+  readonly memoryConfiguration?: AwsAgent.MemoryConfigurationProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#prepare_agent TfAgent#prepare_agent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#prepare_agent AwsAgent#prepare_agent}
   */
   readonly prepareAgent?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#prompt_override_configuration TfAgent#prompt_override_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#prompt_override_configuration AwsAgent#prompt_override_configuration}
   */
-  readonly promptOverrideConfiguration?: TfAgent.PromptOverrideConfigurationProperty[] | cdktn.IResolvable;
+  readonly promptOverrideConfiguration?: AwsAgent.PromptOverrideConfigurationProperty[] | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#region TfAgent#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#region AwsAgent#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#skip_resource_in_use_check TfAgent#skip_resource_in_use_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#skip_resource_in_use_check AwsAgent#skip_resource_in_use_check}
   */
   readonly skipResourceInUseCheck?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#tags TfAgent#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#tags AwsAgent#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#timeouts TfAgent#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#timeouts AwsAgent#timeouts}
   */
-  readonly timeouts?: TfAgent.TimeoutsProperty;
+  readonly timeouts?: AwsAgent.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent aws_bedrockagent_agent}
 */
-export class TfAgent extends cdktn.TerraformResource {
+export class AwsAgent extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -90,11 +90,11 @@ export class TfAgent extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAgent resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAgent resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAgent to import
-  * @param importFromId The id of the existing TfAgent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAgent to import is found
+  * @param importToId The construct id used in the generated config for the AwsAgent to import
+  * @param importFromId The id of the existing AwsAgent that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAgent to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagent_agent", importId: importFromId, provider });
@@ -109,9 +109,9 @@ export class TfAgent extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAgentConfig
+  * @param options AwsAgentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAgentConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAgentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagent_agent',
       terraformGeneratorMetadata: {
@@ -252,11 +252,11 @@ export class TfAgent extends cdktn.TerraformResource {
   }
 
   // guardrail_configuration - computed: false, optional: true, required: false
-  private _guardrailConfiguration = new TfAgent.GuardrailConfigurationPropertyList(this, "guardrail_configuration", false);
+  private _guardrailConfiguration = new AwsAgent.GuardrailConfigurationPropertyList(this, "guardrail_configuration", false);
   public get guardrailConfiguration() {
     return this._guardrailConfiguration;
   }
-  public putGuardrailConfiguration(value: TfAgent.GuardrailConfigurationProperty[] | cdktn.IResolvable) {
+  public putGuardrailConfiguration(value: AwsAgent.GuardrailConfigurationProperty[] | cdktn.IResolvable) {
     this._guardrailConfiguration.internalValue = value;
   }
   public resetGuardrailConfiguration() {
@@ -305,11 +305,11 @@ export class TfAgent extends cdktn.TerraformResource {
   }
 
   // memory_configuration - computed: true, optional: true, required: false
-  private _memoryConfiguration = new TfAgent.MemoryConfigurationPropertyList(this, "memory_configuration", false);
+  private _memoryConfiguration = new AwsAgent.MemoryConfigurationPropertyList(this, "memory_configuration", false);
   public get memoryConfiguration() {
     return this._memoryConfiguration;
   }
-  public putMemoryConfiguration(value: TfAgent.MemoryConfigurationProperty[] | cdktn.IResolvable) {
+  public putMemoryConfiguration(value: AwsAgent.MemoryConfigurationProperty[] | cdktn.IResolvable) {
     this._memoryConfiguration.internalValue = value;
   }
   public resetMemoryConfiguration() {
@@ -342,11 +342,11 @@ export class TfAgent extends cdktn.TerraformResource {
   }
 
   // prompt_override_configuration - computed: true, optional: true, required: false
-  private _promptOverrideConfiguration = new TfAgent.PromptOverrideConfigurationPropertyList(this, "prompt_override_configuration", false);
+  private _promptOverrideConfiguration = new AwsAgent.PromptOverrideConfigurationPropertyList(this, "prompt_override_configuration", false);
   public get promptOverrideConfiguration() {
     return this._promptOverrideConfiguration;
   }
-  public putPromptOverrideConfiguration(value: TfAgent.PromptOverrideConfigurationProperty[] | cdktn.IResolvable) {
+  public putPromptOverrideConfiguration(value: AwsAgent.PromptOverrideConfigurationProperty[] | cdktn.IResolvable) {
     this._promptOverrideConfiguration.internalValue = value;
   }
   public resetPromptOverrideConfiguration() {
@@ -412,11 +412,11 @@ export class TfAgent extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfAgent.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsAgent.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfAgent.TimeoutsProperty) {
+  public putTimeouts(value: AwsAgent.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -439,16 +439,16 @@ export class TfAgent extends cdktn.TerraformResource {
       customer_encryption_key_arn: cdktn.stringToTerraform(this._customerEncryptionKeyArn),
       description: cdktn.stringToTerraform(this._description),
       foundation_model: cdktn.stringToTerraform(this._foundationModel),
-      guardrail_configuration: cdktn.listMapper(tfAgentGuardrailConfigurationPropertyToTerraform, false)(this._guardrailConfiguration.internalValue),
+      guardrail_configuration: cdktn.listMapper(awsAgentGuardrailConfigurationPropertyToTerraform, false)(this._guardrailConfiguration.internalValue),
       idle_session_ttl_in_seconds: cdktn.numberToTerraform(this._idleSessionTtlInSeconds),
       instruction: cdktn.stringToTerraform(this._instruction),
-      memory_configuration: cdktn.listMapper(tfAgentMemoryConfigurationPropertyToTerraform, false)(this._memoryConfiguration.internalValue),
+      memory_configuration: cdktn.listMapper(awsAgentMemoryConfigurationPropertyToTerraform, false)(this._memoryConfiguration.internalValue),
       prepare_agent: cdktn.booleanToTerraform(this._prepareAgent),
-      prompt_override_configuration: cdktn.listMapper(tfAgentPromptOverrideConfigurationPropertyToTerraform, false)(this._promptOverrideConfiguration.internalValue),
+      prompt_override_configuration: cdktn.listMapper(awsAgentPromptOverrideConfigurationPropertyToTerraform, false)(this._promptOverrideConfiguration.internalValue),
       region: cdktn.stringToTerraform(this._region),
       skip_resource_in_use_check: cdktn.booleanToTerraform(this._skipResourceInUseCheck),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: tfAgentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsAgentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -491,10 +491,10 @@ export class TfAgent extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       guardrail_configuration: {
-        value: cdktn.listMapperHcl(tfAgentGuardrailConfigurationPropertyToHclTerraform, false)(this._guardrailConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsAgentGuardrailConfigurationPropertyToHclTerraform, false)(this._guardrailConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAgent.GuardrailConfigurationPropertyList",
+        storageClassType: "AwsAgent.GuardrailConfigurationPropertyList",
       },
       idle_session_ttl_in_seconds: {
         value: cdktn.numberToHclTerraform(this._idleSessionTtlInSeconds),
@@ -509,10 +509,10 @@ export class TfAgent extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       memory_configuration: {
-        value: cdktn.listMapperHcl(tfAgentMemoryConfigurationPropertyToHclTerraform, false)(this._memoryConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsAgentMemoryConfigurationPropertyToHclTerraform, false)(this._memoryConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAgent.MemoryConfigurationPropertyList",
+        storageClassType: "AwsAgent.MemoryConfigurationPropertyList",
       },
       prepare_agent: {
         value: cdktn.booleanToHclTerraform(this._prepareAgent),
@@ -521,10 +521,10 @@ export class TfAgent extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       prompt_override_configuration: {
-        value: cdktn.listMapperHcl(tfAgentPromptOverrideConfigurationPropertyToHclTerraform, false)(this._promptOverrideConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsAgentPromptOverrideConfigurationPropertyToHclTerraform, false)(this._promptOverrideConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAgent.PromptOverrideConfigurationPropertyList",
+        storageClassType: "AwsAgent.PromptOverrideConfigurationPropertyList",
       },
       region: {
         value: cdktn.stringToHclTerraform(this._region),
@@ -545,10 +545,10 @@ export class TfAgent extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfAgentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsAgentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfAgent.TimeoutsProperty",
+        storageClassType: "AwsAgent.TimeoutsProperty",
       },
     };
 
@@ -557,7 +557,7 @@ export class TfAgent extends cdktn.TerraformResource {
   }
 }
 
-export function tfAgentGuardrailConfigurationPropertyToTerraform(struct?: TfAgent.GuardrailConfigurationProperty | cdktn.IResolvable): any {
+export function awsAgentGuardrailConfigurationPropertyToTerraform(struct?: AwsAgent.GuardrailConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -569,7 +569,7 @@ export function tfAgentGuardrailConfigurationPropertyToTerraform(struct?: TfAgen
 }
 
 
-export function tfAgentGuardrailConfigurationPropertyToHclTerraform(struct?: TfAgent.GuardrailConfigurationProperty | cdktn.IResolvable): any {
+export function awsAgentGuardrailConfigurationPropertyToHclTerraform(struct?: AwsAgent.GuardrailConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -594,7 +594,7 @@ export function tfAgentGuardrailConfigurationPropertyToHclTerraform(struct?: TfA
 }
 
 
-export function tfAgentSessionSummaryConfigurationPropertyToTerraform(struct?: TfAgent.SessionSummaryConfigurationProperty | cdktn.IResolvable): any {
+export function awsAgentSessionSummaryConfigurationPropertyToTerraform(struct?: AwsAgent.SessionSummaryConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -605,7 +605,7 @@ export function tfAgentSessionSummaryConfigurationPropertyToTerraform(struct?: T
 }
 
 
-export function tfAgentSessionSummaryConfigurationPropertyToHclTerraform(struct?: TfAgent.SessionSummaryConfigurationProperty | cdktn.IResolvable): any {
+export function awsAgentSessionSummaryConfigurationPropertyToHclTerraform(struct?: AwsAgent.SessionSummaryConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -624,20 +624,20 @@ export function tfAgentSessionSummaryConfigurationPropertyToHclTerraform(struct?
 }
 
 
-export function tfAgentMemoryConfigurationPropertyToTerraform(struct?: TfAgent.MemoryConfigurationProperty | cdktn.IResolvable): any {
+export function awsAgentMemoryConfigurationPropertyToTerraform(struct?: AwsAgent.MemoryConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enabled_memory_types: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.enabledMemoryTypes),
-    session_summary_configuration: cdktn.listMapper(tfAgentSessionSummaryConfigurationPropertyToTerraform, false)(struct!.sessionSummaryConfiguration),
+    session_summary_configuration: cdktn.listMapper(awsAgentSessionSummaryConfigurationPropertyToTerraform, false)(struct!.sessionSummaryConfiguration),
     storage_days: cdktn.numberToTerraform(struct!.storageDays),
   }
 }
 
 
-export function tfAgentMemoryConfigurationPropertyToHclTerraform(struct?: TfAgent.MemoryConfigurationProperty | cdktn.IResolvable): any {
+export function awsAgentMemoryConfigurationPropertyToHclTerraform(struct?: AwsAgent.MemoryConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -650,7 +650,7 @@ export function tfAgentMemoryConfigurationPropertyToHclTerraform(struct?: TfAgen
       storageClassType: "stringList",
     },
     session_summary_configuration: {
-      value: cdktn.listMapperHcl(tfAgentSessionSummaryConfigurationPropertyToHclTerraform, false)(struct!.sessionSummaryConfiguration),
+      value: cdktn.listMapperHcl(awsAgentSessionSummaryConfigurationPropertyToHclTerraform, false)(struct!.sessionSummaryConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SessionSummaryConfigurationPropertyList",
@@ -668,7 +668,7 @@ export function tfAgentMemoryConfigurationPropertyToHclTerraform(struct?: TfAgen
 }
 
 
-export function tfAgentInferenceConfigurationPropertyToTerraform(struct?: TfAgent.InferenceConfigurationProperty | cdktn.IResolvable): any {
+export function awsAgentInferenceConfigurationPropertyToTerraform(struct?: AwsAgent.InferenceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -683,7 +683,7 @@ export function tfAgentInferenceConfigurationPropertyToTerraform(struct?: TfAgen
 }
 
 
-export function tfAgentInferenceConfigurationPropertyToHclTerraform(struct?: TfAgent.InferenceConfigurationProperty | cdktn.IResolvable): any {
+export function awsAgentInferenceConfigurationPropertyToHclTerraform(struct?: AwsAgent.InferenceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -726,14 +726,14 @@ export function tfAgentInferenceConfigurationPropertyToHclTerraform(struct?: TfA
 }
 
 
-export function tfAgentPromptConfigurationsPropertyToTerraform(struct?: TfAgent.PromptConfigurationsProperty | cdktn.IResolvable): any {
+export function awsAgentPromptConfigurationsPropertyToTerraform(struct?: AwsAgent.PromptConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     base_prompt_template: cdktn.stringToTerraform(struct!.basePromptTemplate),
-    inference_configuration: cdktn.listMapper(tfAgentInferenceConfigurationPropertyToTerraform, false)(struct!.inferenceConfiguration),
+    inference_configuration: cdktn.listMapper(awsAgentInferenceConfigurationPropertyToTerraform, false)(struct!.inferenceConfiguration),
     parser_mode: cdktn.stringToTerraform(struct!.parserMode),
     prompt_creation_mode: cdktn.stringToTerraform(struct!.promptCreationMode),
     prompt_state: cdktn.stringToTerraform(struct!.promptState),
@@ -742,7 +742,7 @@ export function tfAgentPromptConfigurationsPropertyToTerraform(struct?: TfAgent.
 }
 
 
-export function tfAgentPromptConfigurationsPropertyToHclTerraform(struct?: TfAgent.PromptConfigurationsProperty | cdktn.IResolvable): any {
+export function awsAgentPromptConfigurationsPropertyToHclTerraform(struct?: AwsAgent.PromptConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -755,7 +755,7 @@ export function tfAgentPromptConfigurationsPropertyToHclTerraform(struct?: TfAge
       storageClassType: "string",
     },
     inference_configuration: {
-      value: cdktn.listMapperHcl(tfAgentInferenceConfigurationPropertyToHclTerraform, false)(struct!.inferenceConfiguration),
+      value: cdktn.listMapperHcl(awsAgentInferenceConfigurationPropertyToHclTerraform, false)(struct!.inferenceConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "InferenceConfigurationPropertyList",
@@ -791,19 +791,19 @@ export function tfAgentPromptConfigurationsPropertyToHclTerraform(struct?: TfAge
 }
 
 
-export function tfAgentPromptOverrideConfigurationPropertyToTerraform(struct?: TfAgent.PromptOverrideConfigurationProperty | cdktn.IResolvable): any {
+export function awsAgentPromptOverrideConfigurationPropertyToTerraform(struct?: AwsAgent.PromptOverrideConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     override_lambda: cdktn.stringToTerraform(struct!.overrideLambda),
-    prompt_configurations: cdktn.listMapper(tfAgentPromptConfigurationsPropertyToTerraform, false)(struct!.promptConfigurations),
+    prompt_configurations: cdktn.listMapper(awsAgentPromptConfigurationsPropertyToTerraform, false)(struct!.promptConfigurations),
   }
 }
 
 
-export function tfAgentPromptOverrideConfigurationPropertyToHclTerraform(struct?: TfAgent.PromptOverrideConfigurationProperty | cdktn.IResolvable): any {
+export function awsAgentPromptOverrideConfigurationPropertyToHclTerraform(struct?: AwsAgent.PromptOverrideConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -816,7 +816,7 @@ export function tfAgentPromptOverrideConfigurationPropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     prompt_configurations: {
-      value: cdktn.listMapperHcl(tfAgentPromptConfigurationsPropertyToHclTerraform, false)(struct!.promptConfigurations),
+      value: cdktn.listMapperHcl(awsAgentPromptConfigurationsPropertyToHclTerraform, false)(struct!.promptConfigurations),
       isBlock: true,
       type: "set",
       storageClassType: "PromptConfigurationsPropertyList",
@@ -828,7 +828,7 @@ export function tfAgentPromptOverrideConfigurationPropertyToHclTerraform(struct?
 }
 
 
-export function tfAgentTimeoutsPropertyToTerraform(struct?: TfAgent.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAgentTimeoutsPropertyToTerraform(struct?: AwsAgent.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -841,7 +841,7 @@ export function tfAgentTimeoutsPropertyToTerraform(struct?: TfAgent.TimeoutsProp
 }
 
 
-export function tfAgentTimeoutsPropertyToHclTerraform(struct?: TfAgent.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAgentTimeoutsPropertyToHclTerraform(struct?: AwsAgent.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -872,14 +872,14 @@ export function tfAgentTimeoutsPropertyToHclTerraform(struct?: TfAgent.TimeoutsP
 }
 
 
-export namespace TfAgent {
+export namespace AwsAgent {
 export interface GuardrailConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#guardrail_identifier TfAgent#guardrail_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#guardrail_identifier AwsAgent#guardrail_identifier}
   */
   readonly guardrailIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#guardrail_version TfAgent#guardrail_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#guardrail_version AwsAgent#guardrail_version}
   */
   readonly guardrailVersion?: string;
 }
@@ -987,7 +987,7 @@ export class GuardrailConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface SessionSummaryConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#max_recent_sessions TfAgent#max_recent_sessions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#max_recent_sessions AwsAgent#max_recent_sessions}
   */
   readonly maxRecentSessions?: number;
 }
@@ -1073,15 +1073,15 @@ export class SessionSummaryConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface MemoryConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#enabled_memory_types TfAgent#enabled_memory_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#enabled_memory_types AwsAgent#enabled_memory_types}
   */
   readonly enabledMemoryTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#session_summary_configuration TfAgent#session_summary_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#session_summary_configuration AwsAgent#session_summary_configuration}
   */
   readonly sessionSummaryConfiguration?: SessionSummaryConfigurationProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#storage_days TfAgent#storage_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#storage_days AwsAgent#storage_days}
   */
   readonly storageDays?: number;
 }
@@ -1211,23 +1211,23 @@ export class MemoryConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface InferenceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#max_length TfAgent#max_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#max_length AwsAgent#max_length}
   */
   readonly maxLength?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#stop_sequences TfAgent#stop_sequences}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#stop_sequences AwsAgent#stop_sequences}
   */
   readonly stopSequences?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#temperature TfAgent#temperature}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#temperature AwsAgent#temperature}
   */
   readonly temperature?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#top_k TfAgent#top_k}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#top_k AwsAgent#top_k}
   */
   readonly topK?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#top_p TfAgent#top_p}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#top_p AwsAgent#top_p}
   */
   readonly topP?: number;
 }
@@ -1401,27 +1401,27 @@ export class InferenceConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface PromptConfigurationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#base_prompt_template TfAgent#base_prompt_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#base_prompt_template AwsAgent#base_prompt_template}
   */
   readonly basePromptTemplate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#inference_configuration TfAgent#inference_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#inference_configuration AwsAgent#inference_configuration}
   */
   readonly inferenceConfiguration?: InferenceConfigurationProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#parser_mode TfAgent#parser_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#parser_mode AwsAgent#parser_mode}
   */
   readonly parserMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#prompt_creation_mode TfAgent#prompt_creation_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#prompt_creation_mode AwsAgent#prompt_creation_mode}
   */
   readonly promptCreationMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#prompt_state TfAgent#prompt_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#prompt_state AwsAgent#prompt_state}
   */
   readonly promptState?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#prompt_type TfAgent#prompt_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#prompt_type AwsAgent#prompt_type}
   */
   readonly promptType?: string;
 }
@@ -1617,11 +1617,11 @@ export class PromptConfigurationsPropertyList extends cdktn.ComplexList {
 }
 export interface PromptOverrideConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#override_lambda TfAgent#override_lambda}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#override_lambda AwsAgent#override_lambda}
   */
   readonly overrideLambda?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#prompt_configurations TfAgent#prompt_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#prompt_configurations AwsAgent#prompt_configurations}
   */
   readonly promptConfigurations?: PromptConfigurationsProperty[] | cdktn.IResolvable;
 }
@@ -1731,19 +1731,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#create TfAgent#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#create AwsAgent#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#delete TfAgent#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#delete AwsAgent#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#update TfAgent#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagent_agent#update AwsAgent#update}
   */
   readonly update?: string;
 }

@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfControlConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsControlConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_control#name DataTfControl#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_control#name DataAwsControl#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_control#region DataTfControl#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_control#region DataAwsControl#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_control#type DataTfControl#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_control#type DataAwsControl#type}
   */
   readonly type: string;
 }
@@ -25,7 +25,7 @@ export interface DataTfControlConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_control aws_auditmanager_control}
 */
-export class DataTfControl extends cdktn.TerraformDataSource {
+export class DataAwsControl extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class DataTfControl extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfControl resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsControl resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfControl to import
-  * @param importFromId The id of the existing DataTfControl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_control#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfControl to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsControl to import
+  * @param importFromId The id of the existing DataAwsControl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/auditmanager_control#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsControl to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_auditmanager_control", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class DataTfControl extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfControlConfig
+  * @param options DataAwsControlConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfControlConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsControlConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_auditmanager_control',
       terraformGeneratorMetadata: {
@@ -98,7 +98,7 @@ export class DataTfControl extends cdktn.TerraformDataSource {
   }
 
   // control_mapping_sources - computed: true, optional: false, required: false
-  private _controlMappingSources = new DataTfControl.ControlMappingSourcesPropertyList(this, "control_mapping_sources", false);
+  private _controlMappingSources = new DataAwsControl.ControlMappingSourcesPropertyList(this, "control_mapping_sources", false);
   public get controlMappingSources() {
     return this._controlMappingSources;
   }
@@ -205,7 +205,7 @@ export class DataTfControl extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfControlSourceKeywordPropertyToTerraform(struct?: DataTfControl.SourceKeywordProperty): any {
+export function dataAwsControlSourceKeywordPropertyToTerraform(struct?: DataAwsControl.SourceKeywordProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -215,7 +215,7 @@ export function dataTfControlSourceKeywordPropertyToTerraform(struct?: DataTfCon
 }
 
 
-export function dataTfControlSourceKeywordPropertyToHclTerraform(struct?: DataTfControl.SourceKeywordProperty): any {
+export function dataAwsControlSourceKeywordPropertyToHclTerraform(struct?: DataAwsControl.SourceKeywordProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -226,7 +226,7 @@ export function dataTfControlSourceKeywordPropertyToHclTerraform(struct?: DataTf
 }
 
 
-export function dataTfControlControlMappingSourcesPropertyToTerraform(struct?: DataTfControl.ControlMappingSourcesProperty): any {
+export function dataAwsControlControlMappingSourcesPropertyToTerraform(struct?: DataAwsControl.ControlMappingSourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function dataTfControlControlMappingSourcesPropertyToTerraform(struct?: D
 }
 
 
-export function dataTfControlControlMappingSourcesPropertyToHclTerraform(struct?: DataTfControl.ControlMappingSourcesProperty): any {
+export function dataAwsControlControlMappingSourcesPropertyToHclTerraform(struct?: DataAwsControl.ControlMappingSourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -247,7 +247,7 @@ export function dataTfControlControlMappingSourcesPropertyToHclTerraform(struct?
 }
 
 
-export namespace DataTfControl {
+export namespace DataAwsControl {
 export interface SourceKeywordProperty {
 }
 export class SourceKeywordPropertyOutputReference extends cdktn.ComplexObject {

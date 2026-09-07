@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfKxDatabaseConfig extends cdktn.TerraformMetaArguments {
+export interface AwsKxDatabaseConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#description TfKxDatabase#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#description AwsKxDatabase#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#environment_id TfKxDatabase#environment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#environment_id AwsKxDatabase#environment_id}
   */
   readonly environmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#id TfKxDatabase#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#id AwsKxDatabase#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#name TfKxDatabase#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#name AwsKxDatabase#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#region TfKxDatabase#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#region AwsKxDatabase#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#tags TfKxDatabase#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#tags AwsKxDatabase#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#tags_all TfKxDatabase#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#tags_all AwsKxDatabase#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#timeouts TfKxDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#timeouts AwsKxDatabase#timeouts}
   */
-  readonly timeouts?: TfKxDatabase.TimeoutsProperty;
+  readonly timeouts?: AwsKxDatabase.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database aws_finspace_kx_database}
 */
-export class TfKxDatabase extends cdktn.TerraformResource {
+export class AwsKxDatabase extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfKxDatabase extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfKxDatabase resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsKxDatabase resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfKxDatabase to import
-  * @param importFromId The id of the existing TfKxDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfKxDatabase to import is found
+  * @param importToId The construct id used in the generated config for the AwsKxDatabase to import
+  * @param importFromId The id of the existing AwsKxDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsKxDatabase to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_finspace_kx_database", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfKxDatabase extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfKxDatabaseConfig
+  * @param options AwsKxDatabaseConfig
   */
-  public constructor(scope: Construct, id: string, config: TfKxDatabaseConfig) {
+  public constructor(scope: Construct, id: string, config: AwsKxDatabaseConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_finspace_kx_database',
       terraformGeneratorMetadata: {
@@ -234,11 +234,11 @@ export class TfKxDatabase extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfKxDatabase.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsKxDatabase.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfKxDatabase.TimeoutsProperty) {
+  public putTimeouts(value: AwsKxDatabase.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -262,7 +262,7 @@ export class TfKxDatabase extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfKxDatabaseTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsKxDatabaseTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -311,10 +311,10 @@ export class TfKxDatabase extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfKxDatabaseTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsKxDatabaseTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfKxDatabase.TimeoutsProperty",
+        storageClassType: "AwsKxDatabase.TimeoutsProperty",
       },
     };
 
@@ -323,7 +323,7 @@ export class TfKxDatabase extends cdktn.TerraformResource {
   }
 }
 
-export function tfKxDatabaseTimeoutsPropertyToTerraform(struct?: TfKxDatabase.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsKxDatabaseTimeoutsPropertyToTerraform(struct?: AwsKxDatabase.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function tfKxDatabaseTimeoutsPropertyToTerraform(struct?: TfKxDatabase.Ti
 }
 
 
-export function tfKxDatabaseTimeoutsPropertyToHclTerraform(struct?: TfKxDatabase.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsKxDatabaseTimeoutsPropertyToHclTerraform(struct?: AwsKxDatabase.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,18 +367,18 @@ export function tfKxDatabaseTimeoutsPropertyToHclTerraform(struct?: TfKxDatabase
 }
 
 
-export namespace TfKxDatabase {
+export namespace AwsKxDatabase {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#create TfKxDatabase#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#create AwsKxDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#delete TfKxDatabase#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#delete AwsKxDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#update TfKxDatabase#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_database#update AwsKxDatabase#update}
   */
   readonly update?: string;
 }

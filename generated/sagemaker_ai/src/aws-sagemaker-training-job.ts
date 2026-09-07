@@ -5,189 +5,189 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTrainingJobConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTrainingJobConfig extends cdktn.TerraformMetaArguments {
   /**
   * Whether to delete model packages in the configured model package group when destroying the training job.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#delete_model_packages_on_destroy TfTrainingJob#delete_model_packages_on_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#delete_model_packages_on_destroy AwsTrainingJob#delete_model_packages_on_destroy}
   */
   readonly deleteModelPackagesOnDestroy?: boolean | cdktn.IResolvable;
   /**
   * Whether to delete detached VPC ENIs that SageMaker may leave behind when destroying the training job.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#delete_vpc_enis_on_destroy TfTrainingJob#delete_vpc_enis_on_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#delete_vpc_enis_on_destroy AwsTrainingJob#delete_vpc_enis_on_destroy}
   */
   readonly deleteVpcEnisOnDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#enable_inter_container_traffic_encryption TfTrainingJob#enable_inter_container_traffic_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#enable_inter_container_traffic_encryption AwsTrainingJob#enable_inter_container_traffic_encryption}
   */
   readonly enableInterContainerTrafficEncryption?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#enable_managed_spot_training TfTrainingJob#enable_managed_spot_training}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#enable_managed_spot_training AwsTrainingJob#enable_managed_spot_training}
   */
   readonly enableManagedSpotTraining?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#enable_network_isolation TfTrainingJob#enable_network_isolation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#enable_network_isolation AwsTrainingJob#enable_network_isolation}
   */
   readonly enableNetworkIsolation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#environment TfTrainingJob#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#environment AwsTrainingJob#environment}
   */
   readonly environment?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#hyper_parameters TfTrainingJob#hyper_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#hyper_parameters AwsTrainingJob#hyper_parameters}
   */
   readonly hyperParameters?: { [key: string]: string };
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#region TfTrainingJob#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#region AwsTrainingJob#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#role_arn TfTrainingJob#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#role_arn AwsTrainingJob#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#tags TfTrainingJob#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#tags AwsTrainingJob#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#training_job_name TfTrainingJob#training_job_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#training_job_name AwsTrainingJob#training_job_name}
   */
   readonly trainingJobName: string;
   /**
   * algorithm_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#algorithm_specification TfTrainingJob#algorithm_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#algorithm_specification AwsTrainingJob#algorithm_specification}
   */
-  readonly algorithmSpecification?: TfTrainingJob.AlgorithmSpecificationProperty[] | cdktn.IResolvable;
+  readonly algorithmSpecification?: AwsTrainingJob.AlgorithmSpecificationProperty[] | cdktn.IResolvable;
   /**
   * checkpoint_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#checkpoint_config TfTrainingJob#checkpoint_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#checkpoint_config AwsTrainingJob#checkpoint_config}
   */
-  readonly checkpointConfig?: TfTrainingJob.CheckpointConfigProperty[] | cdktn.IResolvable;
+  readonly checkpointConfig?: AwsTrainingJob.CheckpointConfigProperty[] | cdktn.IResolvable;
   /**
   * debug_hook_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#debug_hook_config TfTrainingJob#debug_hook_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#debug_hook_config AwsTrainingJob#debug_hook_config}
   */
-  readonly debugHookConfig?: TfTrainingJob.DebugHookConfigProperty[] | cdktn.IResolvable;
+  readonly debugHookConfig?: AwsTrainingJob.DebugHookConfigProperty[] | cdktn.IResolvable;
   /**
   * debug_rule_configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#debug_rule_configurations TfTrainingJob#debug_rule_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#debug_rule_configurations AwsTrainingJob#debug_rule_configurations}
   */
-  readonly debugRuleConfigurations?: TfTrainingJob.DebugRuleConfigurationsProperty[] | cdktn.IResolvable;
+  readonly debugRuleConfigurations?: AwsTrainingJob.DebugRuleConfigurationsProperty[] | cdktn.IResolvable;
   /**
   * experiment_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#experiment_config TfTrainingJob#experiment_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#experiment_config AwsTrainingJob#experiment_config}
   */
-  readonly experimentConfig?: TfTrainingJob.ExperimentConfigProperty[] | cdktn.IResolvable;
+  readonly experimentConfig?: AwsTrainingJob.ExperimentConfigProperty[] | cdktn.IResolvable;
   /**
   * infra_check_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#infra_check_config TfTrainingJob#infra_check_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#infra_check_config AwsTrainingJob#infra_check_config}
   */
-  readonly infraCheckConfig?: TfTrainingJob.InfraCheckConfigProperty[] | cdktn.IResolvable;
+  readonly infraCheckConfig?: AwsTrainingJob.InfraCheckConfigProperty[] | cdktn.IResolvable;
   /**
   * input_data_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#input_data_config TfTrainingJob#input_data_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#input_data_config AwsTrainingJob#input_data_config}
   */
-  readonly inputDataConfig?: TfTrainingJob.InputDataConfigProperty[] | cdktn.IResolvable;
+  readonly inputDataConfig?: AwsTrainingJob.InputDataConfigProperty[] | cdktn.IResolvable;
   /**
   * mlflow_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#mlflow_config TfTrainingJob#mlflow_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#mlflow_config AwsTrainingJob#mlflow_config}
   */
-  readonly mlflowConfig?: TfTrainingJob.MlflowConfigProperty[] | cdktn.IResolvable;
+  readonly mlflowConfig?: AwsTrainingJob.MlflowConfigProperty[] | cdktn.IResolvable;
   /**
   * model_package_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#model_package_config TfTrainingJob#model_package_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#model_package_config AwsTrainingJob#model_package_config}
   */
-  readonly modelPackageConfig?: TfTrainingJob.ModelPackageConfigProperty[] | cdktn.IResolvable;
+  readonly modelPackageConfig?: AwsTrainingJob.ModelPackageConfigProperty[] | cdktn.IResolvable;
   /**
   * output_data_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#output_data_config TfTrainingJob#output_data_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#output_data_config AwsTrainingJob#output_data_config}
   */
-  readonly outputDataConfig?: TfTrainingJob.OutputDataConfigProperty[] | cdktn.IResolvable;
+  readonly outputDataConfig?: AwsTrainingJob.OutputDataConfigProperty[] | cdktn.IResolvable;
   /**
   * profiler_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#profiler_config TfTrainingJob#profiler_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#profiler_config AwsTrainingJob#profiler_config}
   */
-  readonly profilerConfig?: TfTrainingJob.ProfilerConfigProperty[] | cdktn.IResolvable;
+  readonly profilerConfig?: AwsTrainingJob.ProfilerConfigProperty[] | cdktn.IResolvable;
   /**
   * profiler_rule_configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#profiler_rule_configurations TfTrainingJob#profiler_rule_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#profiler_rule_configurations AwsTrainingJob#profiler_rule_configurations}
   */
-  readonly profilerRuleConfigurations?: TfTrainingJob.ProfilerRuleConfigurationsProperty[] | cdktn.IResolvable;
+  readonly profilerRuleConfigurations?: AwsTrainingJob.ProfilerRuleConfigurationsProperty[] | cdktn.IResolvable;
   /**
   * remote_debug_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#remote_debug_config TfTrainingJob#remote_debug_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#remote_debug_config AwsTrainingJob#remote_debug_config}
   */
-  readonly remoteDebugConfig?: TfTrainingJob.RemoteDebugConfigProperty[] | cdktn.IResolvable;
+  readonly remoteDebugConfig?: AwsTrainingJob.RemoteDebugConfigProperty[] | cdktn.IResolvable;
   /**
   * resource_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#resource_config TfTrainingJob#resource_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#resource_config AwsTrainingJob#resource_config}
   */
-  readonly resourceConfig?: TfTrainingJob.ResourceConfigProperty[] | cdktn.IResolvable;
+  readonly resourceConfig?: AwsTrainingJob.ResourceConfigProperty[] | cdktn.IResolvable;
   /**
   * retry_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#retry_strategy TfTrainingJob#retry_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#retry_strategy AwsTrainingJob#retry_strategy}
   */
-  readonly retryStrategy?: TfTrainingJob.RetryStrategyProperty[] | cdktn.IResolvable;
+  readonly retryStrategy?: AwsTrainingJob.RetryStrategyProperty[] | cdktn.IResolvable;
   /**
   * serverless_job_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#serverless_job_config TfTrainingJob#serverless_job_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#serverless_job_config AwsTrainingJob#serverless_job_config}
   */
-  readonly serverlessJobConfig?: TfTrainingJob.ServerlessJobConfigProperty[] | cdktn.IResolvable;
+  readonly serverlessJobConfig?: AwsTrainingJob.ServerlessJobConfigProperty[] | cdktn.IResolvable;
   /**
   * session_chaining_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#session_chaining_config TfTrainingJob#session_chaining_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#session_chaining_config AwsTrainingJob#session_chaining_config}
   */
-  readonly sessionChainingConfig?: TfTrainingJob.SessionChainingConfigProperty[] | cdktn.IResolvable;
+  readonly sessionChainingConfig?: AwsTrainingJob.SessionChainingConfigProperty[] | cdktn.IResolvable;
   /**
   * stopping_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#stopping_condition TfTrainingJob#stopping_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#stopping_condition AwsTrainingJob#stopping_condition}
   */
-  readonly stoppingCondition?: TfTrainingJob.StoppingConditionProperty[] | cdktn.IResolvable;
+  readonly stoppingCondition?: AwsTrainingJob.StoppingConditionProperty[] | cdktn.IResolvable;
   /**
   * tensor_board_output_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#tensor_board_output_config TfTrainingJob#tensor_board_output_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#tensor_board_output_config AwsTrainingJob#tensor_board_output_config}
   */
-  readonly tensorBoardOutputConfig?: TfTrainingJob.TensorBoardOutputConfigProperty[] | cdktn.IResolvable;
+  readonly tensorBoardOutputConfig?: AwsTrainingJob.TensorBoardOutputConfigProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#timeouts TfTrainingJob#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#timeouts AwsTrainingJob#timeouts}
   */
-  readonly timeouts?: TfTrainingJob.TimeoutsProperty;
+  readonly timeouts?: AwsTrainingJob.TimeoutsProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#vpc_config TfTrainingJob#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#vpc_config AwsTrainingJob#vpc_config}
   */
-  readonly vpcConfig?: TfTrainingJob.VpcConfigProperty[] | cdktn.IResolvable;
+  readonly vpcConfig?: AwsTrainingJob.VpcConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job aws_sagemaker_training_job}
 */
-export class TfTrainingJob extends cdktn.TerraformResource {
+export class AwsTrainingJob extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -198,11 +198,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTrainingJob resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTrainingJob resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTrainingJob to import
-  * @param importFromId The id of the existing TfTrainingJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTrainingJob to import is found
+  * @param importToId The construct id used in the generated config for the AwsTrainingJob to import
+  * @param importFromId The id of the existing AwsTrainingJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTrainingJob to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_training_job", importId: importFromId, provider });
@@ -217,9 +217,9 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTrainingJobConfig
+  * @param options AwsTrainingJobConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTrainingJobConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTrainingJobConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_training_job',
       terraformGeneratorMetadata: {
@@ -455,11 +455,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // algorithm_specification - computed: false, optional: true, required: false
-  private _algorithmSpecification = new TfTrainingJob.AlgorithmSpecificationPropertyList(this, "algorithm_specification", false);
+  private _algorithmSpecification = new AwsTrainingJob.AlgorithmSpecificationPropertyList(this, "algorithm_specification", false);
   public get algorithmSpecification() {
     return this._algorithmSpecification;
   }
-  public putAlgorithmSpecification(value: TfTrainingJob.AlgorithmSpecificationProperty[] | cdktn.IResolvable) {
+  public putAlgorithmSpecification(value: AwsTrainingJob.AlgorithmSpecificationProperty[] | cdktn.IResolvable) {
     this._algorithmSpecification.internalValue = value;
   }
   public resetAlgorithmSpecification() {
@@ -471,11 +471,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // checkpoint_config - computed: false, optional: true, required: false
-  private _checkpointConfig = new TfTrainingJob.CheckpointConfigPropertyList(this, "checkpoint_config", false);
+  private _checkpointConfig = new AwsTrainingJob.CheckpointConfigPropertyList(this, "checkpoint_config", false);
   public get checkpointConfig() {
     return this._checkpointConfig;
   }
-  public putCheckpointConfig(value: TfTrainingJob.CheckpointConfigProperty[] | cdktn.IResolvable) {
+  public putCheckpointConfig(value: AwsTrainingJob.CheckpointConfigProperty[] | cdktn.IResolvable) {
     this._checkpointConfig.internalValue = value;
   }
   public resetCheckpointConfig() {
@@ -487,11 +487,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // debug_hook_config - computed: false, optional: true, required: false
-  private _debugHookConfig = new TfTrainingJob.DebugHookConfigPropertyList(this, "debug_hook_config", false);
+  private _debugHookConfig = new AwsTrainingJob.DebugHookConfigPropertyList(this, "debug_hook_config", false);
   public get debugHookConfig() {
     return this._debugHookConfig;
   }
-  public putDebugHookConfig(value: TfTrainingJob.DebugHookConfigProperty[] | cdktn.IResolvable) {
+  public putDebugHookConfig(value: AwsTrainingJob.DebugHookConfigProperty[] | cdktn.IResolvable) {
     this._debugHookConfig.internalValue = value;
   }
   public resetDebugHookConfig() {
@@ -503,11 +503,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // debug_rule_configurations - computed: false, optional: true, required: false
-  private _debugRuleConfigurations = new TfTrainingJob.DebugRuleConfigurationsPropertyList(this, "debug_rule_configurations", false);
+  private _debugRuleConfigurations = new AwsTrainingJob.DebugRuleConfigurationsPropertyList(this, "debug_rule_configurations", false);
   public get debugRuleConfigurations() {
     return this._debugRuleConfigurations;
   }
-  public putDebugRuleConfigurations(value: TfTrainingJob.DebugRuleConfigurationsProperty[] | cdktn.IResolvable) {
+  public putDebugRuleConfigurations(value: AwsTrainingJob.DebugRuleConfigurationsProperty[] | cdktn.IResolvable) {
     this._debugRuleConfigurations.internalValue = value;
   }
   public resetDebugRuleConfigurations() {
@@ -519,11 +519,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // experiment_config - computed: false, optional: true, required: false
-  private _experimentConfig = new TfTrainingJob.ExperimentConfigPropertyList(this, "experiment_config", false);
+  private _experimentConfig = new AwsTrainingJob.ExperimentConfigPropertyList(this, "experiment_config", false);
   public get experimentConfig() {
     return this._experimentConfig;
   }
-  public putExperimentConfig(value: TfTrainingJob.ExperimentConfigProperty[] | cdktn.IResolvable) {
+  public putExperimentConfig(value: AwsTrainingJob.ExperimentConfigProperty[] | cdktn.IResolvable) {
     this._experimentConfig.internalValue = value;
   }
   public resetExperimentConfig() {
@@ -535,11 +535,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // infra_check_config - computed: false, optional: true, required: false
-  private _infraCheckConfig = new TfTrainingJob.InfraCheckConfigPropertyList(this, "infra_check_config", false);
+  private _infraCheckConfig = new AwsTrainingJob.InfraCheckConfigPropertyList(this, "infra_check_config", false);
   public get infraCheckConfig() {
     return this._infraCheckConfig;
   }
-  public putInfraCheckConfig(value: TfTrainingJob.InfraCheckConfigProperty[] | cdktn.IResolvable) {
+  public putInfraCheckConfig(value: AwsTrainingJob.InfraCheckConfigProperty[] | cdktn.IResolvable) {
     this._infraCheckConfig.internalValue = value;
   }
   public resetInfraCheckConfig() {
@@ -551,11 +551,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // input_data_config - computed: false, optional: true, required: false
-  private _inputDataConfig = new TfTrainingJob.InputDataConfigPropertyList(this, "input_data_config", false);
+  private _inputDataConfig = new AwsTrainingJob.InputDataConfigPropertyList(this, "input_data_config", false);
   public get inputDataConfig() {
     return this._inputDataConfig;
   }
-  public putInputDataConfig(value: TfTrainingJob.InputDataConfigProperty[] | cdktn.IResolvable) {
+  public putInputDataConfig(value: AwsTrainingJob.InputDataConfigProperty[] | cdktn.IResolvable) {
     this._inputDataConfig.internalValue = value;
   }
   public resetInputDataConfig() {
@@ -567,11 +567,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // mlflow_config - computed: false, optional: true, required: false
-  private _mlflowConfig = new TfTrainingJob.MlflowConfigPropertyList(this, "mlflow_config", false);
+  private _mlflowConfig = new AwsTrainingJob.MlflowConfigPropertyList(this, "mlflow_config", false);
   public get mlflowConfig() {
     return this._mlflowConfig;
   }
-  public putMlflowConfig(value: TfTrainingJob.MlflowConfigProperty[] | cdktn.IResolvable) {
+  public putMlflowConfig(value: AwsTrainingJob.MlflowConfigProperty[] | cdktn.IResolvable) {
     this._mlflowConfig.internalValue = value;
   }
   public resetMlflowConfig() {
@@ -583,11 +583,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // model_package_config - computed: false, optional: true, required: false
-  private _modelPackageConfig = new TfTrainingJob.ModelPackageConfigPropertyList(this, "model_package_config", false);
+  private _modelPackageConfig = new AwsTrainingJob.ModelPackageConfigPropertyList(this, "model_package_config", false);
   public get modelPackageConfig() {
     return this._modelPackageConfig;
   }
-  public putModelPackageConfig(value: TfTrainingJob.ModelPackageConfigProperty[] | cdktn.IResolvable) {
+  public putModelPackageConfig(value: AwsTrainingJob.ModelPackageConfigProperty[] | cdktn.IResolvable) {
     this._modelPackageConfig.internalValue = value;
   }
   public resetModelPackageConfig() {
@@ -599,11 +599,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // output_data_config - computed: false, optional: true, required: false
-  private _outputDataConfig = new TfTrainingJob.OutputDataConfigPropertyList(this, "output_data_config", false);
+  private _outputDataConfig = new AwsTrainingJob.OutputDataConfigPropertyList(this, "output_data_config", false);
   public get outputDataConfig() {
     return this._outputDataConfig;
   }
-  public putOutputDataConfig(value: TfTrainingJob.OutputDataConfigProperty[] | cdktn.IResolvable) {
+  public putOutputDataConfig(value: AwsTrainingJob.OutputDataConfigProperty[] | cdktn.IResolvable) {
     this._outputDataConfig.internalValue = value;
   }
   public resetOutputDataConfig() {
@@ -615,11 +615,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // profiler_config - computed: false, optional: true, required: false
-  private _profilerConfig = new TfTrainingJob.ProfilerConfigPropertyList(this, "profiler_config", false);
+  private _profilerConfig = new AwsTrainingJob.ProfilerConfigPropertyList(this, "profiler_config", false);
   public get profilerConfig() {
     return this._profilerConfig;
   }
-  public putProfilerConfig(value: TfTrainingJob.ProfilerConfigProperty[] | cdktn.IResolvable) {
+  public putProfilerConfig(value: AwsTrainingJob.ProfilerConfigProperty[] | cdktn.IResolvable) {
     this._profilerConfig.internalValue = value;
   }
   public resetProfilerConfig() {
@@ -631,11 +631,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // profiler_rule_configurations - computed: false, optional: true, required: false
-  private _profilerRuleConfigurations = new TfTrainingJob.ProfilerRuleConfigurationsPropertyList(this, "profiler_rule_configurations", false);
+  private _profilerRuleConfigurations = new AwsTrainingJob.ProfilerRuleConfigurationsPropertyList(this, "profiler_rule_configurations", false);
   public get profilerRuleConfigurations() {
     return this._profilerRuleConfigurations;
   }
-  public putProfilerRuleConfigurations(value: TfTrainingJob.ProfilerRuleConfigurationsProperty[] | cdktn.IResolvable) {
+  public putProfilerRuleConfigurations(value: AwsTrainingJob.ProfilerRuleConfigurationsProperty[] | cdktn.IResolvable) {
     this._profilerRuleConfigurations.internalValue = value;
   }
   public resetProfilerRuleConfigurations() {
@@ -647,11 +647,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // remote_debug_config - computed: false, optional: true, required: false
-  private _remoteDebugConfig = new TfTrainingJob.RemoteDebugConfigPropertyList(this, "remote_debug_config", false);
+  private _remoteDebugConfig = new AwsTrainingJob.RemoteDebugConfigPropertyList(this, "remote_debug_config", false);
   public get remoteDebugConfig() {
     return this._remoteDebugConfig;
   }
-  public putRemoteDebugConfig(value: TfTrainingJob.RemoteDebugConfigProperty[] | cdktn.IResolvable) {
+  public putRemoteDebugConfig(value: AwsTrainingJob.RemoteDebugConfigProperty[] | cdktn.IResolvable) {
     this._remoteDebugConfig.internalValue = value;
   }
   public resetRemoteDebugConfig() {
@@ -663,11 +663,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // resource_config - computed: false, optional: true, required: false
-  private _resourceConfig = new TfTrainingJob.ResourceConfigPropertyList(this, "resource_config", false);
+  private _resourceConfig = new AwsTrainingJob.ResourceConfigPropertyList(this, "resource_config", false);
   public get resourceConfig() {
     return this._resourceConfig;
   }
-  public putResourceConfig(value: TfTrainingJob.ResourceConfigProperty[] | cdktn.IResolvable) {
+  public putResourceConfig(value: AwsTrainingJob.ResourceConfigProperty[] | cdktn.IResolvable) {
     this._resourceConfig.internalValue = value;
   }
   public resetResourceConfig() {
@@ -679,11 +679,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // retry_strategy - computed: false, optional: true, required: false
-  private _retryStrategy = new TfTrainingJob.RetryStrategyPropertyList(this, "retry_strategy", false);
+  private _retryStrategy = new AwsTrainingJob.RetryStrategyPropertyList(this, "retry_strategy", false);
   public get retryStrategy() {
     return this._retryStrategy;
   }
-  public putRetryStrategy(value: TfTrainingJob.RetryStrategyProperty[] | cdktn.IResolvable) {
+  public putRetryStrategy(value: AwsTrainingJob.RetryStrategyProperty[] | cdktn.IResolvable) {
     this._retryStrategy.internalValue = value;
   }
   public resetRetryStrategy() {
@@ -695,11 +695,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // serverless_job_config - computed: false, optional: true, required: false
-  private _serverlessJobConfig = new TfTrainingJob.ServerlessJobConfigPropertyList(this, "serverless_job_config", false);
+  private _serverlessJobConfig = new AwsTrainingJob.ServerlessJobConfigPropertyList(this, "serverless_job_config", false);
   public get serverlessJobConfig() {
     return this._serverlessJobConfig;
   }
-  public putServerlessJobConfig(value: TfTrainingJob.ServerlessJobConfigProperty[] | cdktn.IResolvable) {
+  public putServerlessJobConfig(value: AwsTrainingJob.ServerlessJobConfigProperty[] | cdktn.IResolvable) {
     this._serverlessJobConfig.internalValue = value;
   }
   public resetServerlessJobConfig() {
@@ -711,11 +711,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // session_chaining_config - computed: false, optional: true, required: false
-  private _sessionChainingConfig = new TfTrainingJob.SessionChainingConfigPropertyList(this, "session_chaining_config", false);
+  private _sessionChainingConfig = new AwsTrainingJob.SessionChainingConfigPropertyList(this, "session_chaining_config", false);
   public get sessionChainingConfig() {
     return this._sessionChainingConfig;
   }
-  public putSessionChainingConfig(value: TfTrainingJob.SessionChainingConfigProperty[] | cdktn.IResolvable) {
+  public putSessionChainingConfig(value: AwsTrainingJob.SessionChainingConfigProperty[] | cdktn.IResolvable) {
     this._sessionChainingConfig.internalValue = value;
   }
   public resetSessionChainingConfig() {
@@ -727,11 +727,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // stopping_condition - computed: false, optional: true, required: false
-  private _stoppingCondition = new TfTrainingJob.StoppingConditionPropertyList(this, "stopping_condition", false);
+  private _stoppingCondition = new AwsTrainingJob.StoppingConditionPropertyList(this, "stopping_condition", false);
   public get stoppingCondition() {
     return this._stoppingCondition;
   }
-  public putStoppingCondition(value: TfTrainingJob.StoppingConditionProperty[] | cdktn.IResolvable) {
+  public putStoppingCondition(value: AwsTrainingJob.StoppingConditionProperty[] | cdktn.IResolvable) {
     this._stoppingCondition.internalValue = value;
   }
   public resetStoppingCondition() {
@@ -743,11 +743,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // tensor_board_output_config - computed: false, optional: true, required: false
-  private _tensorBoardOutputConfig = new TfTrainingJob.TensorBoardOutputConfigPropertyList(this, "tensor_board_output_config", false);
+  private _tensorBoardOutputConfig = new AwsTrainingJob.TensorBoardOutputConfigPropertyList(this, "tensor_board_output_config", false);
   public get tensorBoardOutputConfig() {
     return this._tensorBoardOutputConfig;
   }
-  public putTensorBoardOutputConfig(value: TfTrainingJob.TensorBoardOutputConfigProperty[] | cdktn.IResolvable) {
+  public putTensorBoardOutputConfig(value: AwsTrainingJob.TensorBoardOutputConfigProperty[] | cdktn.IResolvable) {
     this._tensorBoardOutputConfig.internalValue = value;
   }
   public resetTensorBoardOutputConfig() {
@@ -759,11 +759,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTrainingJob.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTrainingJob.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTrainingJob.TimeoutsProperty) {
+  public putTimeouts(value: AwsTrainingJob.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -775,11 +775,11 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 
   // vpc_config - computed: false, optional: true, required: false
-  private _vpcConfig = new TfTrainingJob.VpcConfigPropertyList(this, "vpc_config", false);
+  private _vpcConfig = new AwsTrainingJob.VpcConfigPropertyList(this, "vpc_config", false);
   public get vpcConfig() {
     return this._vpcConfig;
   }
-  public putVpcConfig(value: TfTrainingJob.VpcConfigProperty[] | cdktn.IResolvable) {
+  public putVpcConfig(value: AwsTrainingJob.VpcConfigProperty[] | cdktn.IResolvable) {
     this._vpcConfig.internalValue = value;
   }
   public resetVpcConfig() {
@@ -807,27 +807,27 @@ export class TfTrainingJob extends cdktn.TerraformResource {
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       training_job_name: cdktn.stringToTerraform(this._trainingJobName),
-      algorithm_specification: cdktn.listMapper(tfTrainingJobAlgorithmSpecificationPropertyToTerraform, true)(this._algorithmSpecification.internalValue),
-      checkpoint_config: cdktn.listMapper(tfTrainingJobCheckpointConfigPropertyToTerraform, true)(this._checkpointConfig.internalValue),
-      debug_hook_config: cdktn.listMapper(tfTrainingJobDebugHookConfigPropertyToTerraform, true)(this._debugHookConfig.internalValue),
-      debug_rule_configurations: cdktn.listMapper(tfTrainingJobDebugRuleConfigurationsPropertyToTerraform, true)(this._debugRuleConfigurations.internalValue),
-      experiment_config: cdktn.listMapper(tfTrainingJobExperimentConfigPropertyToTerraform, true)(this._experimentConfig.internalValue),
-      infra_check_config: cdktn.listMapper(tfTrainingJobInfraCheckConfigPropertyToTerraform, true)(this._infraCheckConfig.internalValue),
-      input_data_config: cdktn.listMapper(tfTrainingJobInputDataConfigPropertyToTerraform, true)(this._inputDataConfig.internalValue),
-      mlflow_config: cdktn.listMapper(tfTrainingJobMlflowConfigPropertyToTerraform, true)(this._mlflowConfig.internalValue),
-      model_package_config: cdktn.listMapper(tfTrainingJobModelPackageConfigPropertyToTerraform, true)(this._modelPackageConfig.internalValue),
-      output_data_config: cdktn.listMapper(tfTrainingJobOutputDataConfigPropertyToTerraform, true)(this._outputDataConfig.internalValue),
-      profiler_config: cdktn.listMapper(tfTrainingJobProfilerConfigPropertyToTerraform, true)(this._profilerConfig.internalValue),
-      profiler_rule_configurations: cdktn.listMapper(tfTrainingJobProfilerRuleConfigurationsPropertyToTerraform, true)(this._profilerRuleConfigurations.internalValue),
-      remote_debug_config: cdktn.listMapper(tfTrainingJobRemoteDebugConfigPropertyToTerraform, true)(this._remoteDebugConfig.internalValue),
-      resource_config: cdktn.listMapper(tfTrainingJobResourceConfigPropertyToTerraform, true)(this._resourceConfig.internalValue),
-      retry_strategy: cdktn.listMapper(tfTrainingJobRetryStrategyPropertyToTerraform, true)(this._retryStrategy.internalValue),
-      serverless_job_config: cdktn.listMapper(tfTrainingJobServerlessJobConfigPropertyToTerraform, true)(this._serverlessJobConfig.internalValue),
-      session_chaining_config: cdktn.listMapper(tfTrainingJobSessionChainingConfigPropertyToTerraform, true)(this._sessionChainingConfig.internalValue),
-      stopping_condition: cdktn.listMapper(tfTrainingJobStoppingConditionPropertyToTerraform, true)(this._stoppingCondition.internalValue),
-      tensor_board_output_config: cdktn.listMapper(tfTrainingJobTensorBoardOutputConfigPropertyToTerraform, true)(this._tensorBoardOutputConfig.internalValue),
-      timeouts: tfTrainingJobTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_config: cdktn.listMapper(tfTrainingJobVpcConfigPropertyToTerraform, true)(this._vpcConfig.internalValue),
+      algorithm_specification: cdktn.listMapper(awsTrainingJobAlgorithmSpecificationPropertyToTerraform, true)(this._algorithmSpecification.internalValue),
+      checkpoint_config: cdktn.listMapper(awsTrainingJobCheckpointConfigPropertyToTerraform, true)(this._checkpointConfig.internalValue),
+      debug_hook_config: cdktn.listMapper(awsTrainingJobDebugHookConfigPropertyToTerraform, true)(this._debugHookConfig.internalValue),
+      debug_rule_configurations: cdktn.listMapper(awsTrainingJobDebugRuleConfigurationsPropertyToTerraform, true)(this._debugRuleConfigurations.internalValue),
+      experiment_config: cdktn.listMapper(awsTrainingJobExperimentConfigPropertyToTerraform, true)(this._experimentConfig.internalValue),
+      infra_check_config: cdktn.listMapper(awsTrainingJobInfraCheckConfigPropertyToTerraform, true)(this._infraCheckConfig.internalValue),
+      input_data_config: cdktn.listMapper(awsTrainingJobInputDataConfigPropertyToTerraform, true)(this._inputDataConfig.internalValue),
+      mlflow_config: cdktn.listMapper(awsTrainingJobMlflowConfigPropertyToTerraform, true)(this._mlflowConfig.internalValue),
+      model_package_config: cdktn.listMapper(awsTrainingJobModelPackageConfigPropertyToTerraform, true)(this._modelPackageConfig.internalValue),
+      output_data_config: cdktn.listMapper(awsTrainingJobOutputDataConfigPropertyToTerraform, true)(this._outputDataConfig.internalValue),
+      profiler_config: cdktn.listMapper(awsTrainingJobProfilerConfigPropertyToTerraform, true)(this._profilerConfig.internalValue),
+      profiler_rule_configurations: cdktn.listMapper(awsTrainingJobProfilerRuleConfigurationsPropertyToTerraform, true)(this._profilerRuleConfigurations.internalValue),
+      remote_debug_config: cdktn.listMapper(awsTrainingJobRemoteDebugConfigPropertyToTerraform, true)(this._remoteDebugConfig.internalValue),
+      resource_config: cdktn.listMapper(awsTrainingJobResourceConfigPropertyToTerraform, true)(this._resourceConfig.internalValue),
+      retry_strategy: cdktn.listMapper(awsTrainingJobRetryStrategyPropertyToTerraform, true)(this._retryStrategy.internalValue),
+      serverless_job_config: cdktn.listMapper(awsTrainingJobServerlessJobConfigPropertyToTerraform, true)(this._serverlessJobConfig.internalValue),
+      session_chaining_config: cdktn.listMapper(awsTrainingJobSessionChainingConfigPropertyToTerraform, true)(this._sessionChainingConfig.internalValue),
+      stopping_condition: cdktn.listMapper(awsTrainingJobStoppingConditionPropertyToTerraform, true)(this._stoppingCondition.internalValue),
+      tensor_board_output_config: cdktn.listMapper(awsTrainingJobTensorBoardOutputConfigPropertyToTerraform, true)(this._tensorBoardOutputConfig.internalValue),
+      timeouts: awsTrainingJobTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_config: cdktn.listMapper(awsTrainingJobVpcConfigPropertyToTerraform, true)(this._vpcConfig.internalValue),
     };
   }
 
@@ -900,130 +900,130 @@ export class TfTrainingJob extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       algorithm_specification: {
-        value: cdktn.listMapperHcl(tfTrainingJobAlgorithmSpecificationPropertyToHclTerraform, true)(this._algorithmSpecification.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobAlgorithmSpecificationPropertyToHclTerraform, true)(this._algorithmSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.AlgorithmSpecificationPropertyList",
+        storageClassType: "AwsTrainingJob.AlgorithmSpecificationPropertyList",
       },
       checkpoint_config: {
-        value: cdktn.listMapperHcl(tfTrainingJobCheckpointConfigPropertyToHclTerraform, true)(this._checkpointConfig.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobCheckpointConfigPropertyToHclTerraform, true)(this._checkpointConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.CheckpointConfigPropertyList",
+        storageClassType: "AwsTrainingJob.CheckpointConfigPropertyList",
       },
       debug_hook_config: {
-        value: cdktn.listMapperHcl(tfTrainingJobDebugHookConfigPropertyToHclTerraform, true)(this._debugHookConfig.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobDebugHookConfigPropertyToHclTerraform, true)(this._debugHookConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.DebugHookConfigPropertyList",
+        storageClassType: "AwsTrainingJob.DebugHookConfigPropertyList",
       },
       debug_rule_configurations: {
-        value: cdktn.listMapperHcl(tfTrainingJobDebugRuleConfigurationsPropertyToHclTerraform, true)(this._debugRuleConfigurations.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobDebugRuleConfigurationsPropertyToHclTerraform, true)(this._debugRuleConfigurations.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.DebugRuleConfigurationsPropertyList",
+        storageClassType: "AwsTrainingJob.DebugRuleConfigurationsPropertyList",
       },
       experiment_config: {
-        value: cdktn.listMapperHcl(tfTrainingJobExperimentConfigPropertyToHclTerraform, true)(this._experimentConfig.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobExperimentConfigPropertyToHclTerraform, true)(this._experimentConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.ExperimentConfigPropertyList",
+        storageClassType: "AwsTrainingJob.ExperimentConfigPropertyList",
       },
       infra_check_config: {
-        value: cdktn.listMapperHcl(tfTrainingJobInfraCheckConfigPropertyToHclTerraform, true)(this._infraCheckConfig.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobInfraCheckConfigPropertyToHclTerraform, true)(this._infraCheckConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.InfraCheckConfigPropertyList",
+        storageClassType: "AwsTrainingJob.InfraCheckConfigPropertyList",
       },
       input_data_config: {
-        value: cdktn.listMapperHcl(tfTrainingJobInputDataConfigPropertyToHclTerraform, true)(this._inputDataConfig.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobInputDataConfigPropertyToHclTerraform, true)(this._inputDataConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.InputDataConfigPropertyList",
+        storageClassType: "AwsTrainingJob.InputDataConfigPropertyList",
       },
       mlflow_config: {
-        value: cdktn.listMapperHcl(tfTrainingJobMlflowConfigPropertyToHclTerraform, true)(this._mlflowConfig.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobMlflowConfigPropertyToHclTerraform, true)(this._mlflowConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.MlflowConfigPropertyList",
+        storageClassType: "AwsTrainingJob.MlflowConfigPropertyList",
       },
       model_package_config: {
-        value: cdktn.listMapperHcl(tfTrainingJobModelPackageConfigPropertyToHclTerraform, true)(this._modelPackageConfig.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobModelPackageConfigPropertyToHclTerraform, true)(this._modelPackageConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.ModelPackageConfigPropertyList",
+        storageClassType: "AwsTrainingJob.ModelPackageConfigPropertyList",
       },
       output_data_config: {
-        value: cdktn.listMapperHcl(tfTrainingJobOutputDataConfigPropertyToHclTerraform, true)(this._outputDataConfig.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobOutputDataConfigPropertyToHclTerraform, true)(this._outputDataConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.OutputDataConfigPropertyList",
+        storageClassType: "AwsTrainingJob.OutputDataConfigPropertyList",
       },
       profiler_config: {
-        value: cdktn.listMapperHcl(tfTrainingJobProfilerConfigPropertyToHclTerraform, true)(this._profilerConfig.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobProfilerConfigPropertyToHclTerraform, true)(this._profilerConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.ProfilerConfigPropertyList",
+        storageClassType: "AwsTrainingJob.ProfilerConfigPropertyList",
       },
       profiler_rule_configurations: {
-        value: cdktn.listMapperHcl(tfTrainingJobProfilerRuleConfigurationsPropertyToHclTerraform, true)(this._profilerRuleConfigurations.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobProfilerRuleConfigurationsPropertyToHclTerraform, true)(this._profilerRuleConfigurations.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.ProfilerRuleConfigurationsPropertyList",
+        storageClassType: "AwsTrainingJob.ProfilerRuleConfigurationsPropertyList",
       },
       remote_debug_config: {
-        value: cdktn.listMapperHcl(tfTrainingJobRemoteDebugConfigPropertyToHclTerraform, true)(this._remoteDebugConfig.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobRemoteDebugConfigPropertyToHclTerraform, true)(this._remoteDebugConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.RemoteDebugConfigPropertyList",
+        storageClassType: "AwsTrainingJob.RemoteDebugConfigPropertyList",
       },
       resource_config: {
-        value: cdktn.listMapperHcl(tfTrainingJobResourceConfigPropertyToHclTerraform, true)(this._resourceConfig.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobResourceConfigPropertyToHclTerraform, true)(this._resourceConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.ResourceConfigPropertyList",
+        storageClassType: "AwsTrainingJob.ResourceConfigPropertyList",
       },
       retry_strategy: {
-        value: cdktn.listMapperHcl(tfTrainingJobRetryStrategyPropertyToHclTerraform, true)(this._retryStrategy.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobRetryStrategyPropertyToHclTerraform, true)(this._retryStrategy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.RetryStrategyPropertyList",
+        storageClassType: "AwsTrainingJob.RetryStrategyPropertyList",
       },
       serverless_job_config: {
-        value: cdktn.listMapperHcl(tfTrainingJobServerlessJobConfigPropertyToHclTerraform, true)(this._serverlessJobConfig.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobServerlessJobConfigPropertyToHclTerraform, true)(this._serverlessJobConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.ServerlessJobConfigPropertyList",
+        storageClassType: "AwsTrainingJob.ServerlessJobConfigPropertyList",
       },
       session_chaining_config: {
-        value: cdktn.listMapperHcl(tfTrainingJobSessionChainingConfigPropertyToHclTerraform, true)(this._sessionChainingConfig.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobSessionChainingConfigPropertyToHclTerraform, true)(this._sessionChainingConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.SessionChainingConfigPropertyList",
+        storageClassType: "AwsTrainingJob.SessionChainingConfigPropertyList",
       },
       stopping_condition: {
-        value: cdktn.listMapperHcl(tfTrainingJobStoppingConditionPropertyToHclTerraform, true)(this._stoppingCondition.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobStoppingConditionPropertyToHclTerraform, true)(this._stoppingCondition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.StoppingConditionPropertyList",
+        storageClassType: "AwsTrainingJob.StoppingConditionPropertyList",
       },
       tensor_board_output_config: {
-        value: cdktn.listMapperHcl(tfTrainingJobTensorBoardOutputConfigPropertyToHclTerraform, true)(this._tensorBoardOutputConfig.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobTensorBoardOutputConfigPropertyToHclTerraform, true)(this._tensorBoardOutputConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.TensorBoardOutputConfigPropertyList",
+        storageClassType: "AwsTrainingJob.TensorBoardOutputConfigPropertyList",
       },
       timeouts: {
-        value: tfTrainingJobTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTrainingJobTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTrainingJob.TimeoutsProperty",
+        storageClassType: "AwsTrainingJob.TimeoutsProperty",
       },
       vpc_config: {
-        value: cdktn.listMapperHcl(tfTrainingJobVpcConfigPropertyToHclTerraform, true)(this._vpcConfig.internalValue),
+        value: cdktn.listMapperHcl(awsTrainingJobVpcConfigPropertyToHclTerraform, true)(this._vpcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTrainingJob.VpcConfigPropertyList",
+        storageClassType: "AwsTrainingJob.VpcConfigPropertyList",
       },
     };
 
@@ -1032,7 +1032,7 @@ export class TfTrainingJob extends cdktn.TerraformResource {
   }
 }
 
-export function tfTrainingJobMetricDefinitionsPropertyToTerraform(struct?: TfTrainingJob.MetricDefinitionsProperty | cdktn.IResolvable): any {
+export function awsTrainingJobMetricDefinitionsPropertyToTerraform(struct?: AwsTrainingJob.MetricDefinitionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1044,7 +1044,7 @@ export function tfTrainingJobMetricDefinitionsPropertyToTerraform(struct?: TfTra
 }
 
 
-export function tfTrainingJobMetricDefinitionsPropertyToHclTerraform(struct?: TfTrainingJob.MetricDefinitionsProperty | cdktn.IResolvable): any {
+export function awsTrainingJobMetricDefinitionsPropertyToHclTerraform(struct?: AwsTrainingJob.MetricDefinitionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1069,7 +1069,7 @@ export function tfTrainingJobMetricDefinitionsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfTrainingJobTrainingRepositoryAuthConfigPropertyToTerraform(struct?: TfTrainingJob.TrainingRepositoryAuthConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobTrainingRepositoryAuthConfigPropertyToTerraform(struct?: AwsTrainingJob.TrainingRepositoryAuthConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1080,7 +1080,7 @@ export function tfTrainingJobTrainingRepositoryAuthConfigPropertyToTerraform(str
 }
 
 
-export function tfTrainingJobTrainingRepositoryAuthConfigPropertyToHclTerraform(struct?: TfTrainingJob.TrainingRepositoryAuthConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobTrainingRepositoryAuthConfigPropertyToHclTerraform(struct?: AwsTrainingJob.TrainingRepositoryAuthConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1099,19 +1099,19 @@ export function tfTrainingJobTrainingRepositoryAuthConfigPropertyToHclTerraform(
 }
 
 
-export function tfTrainingJobTrainingImageConfigPropertyToTerraform(struct?: TfTrainingJob.TrainingImageConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobTrainingImageConfigPropertyToTerraform(struct?: AwsTrainingJob.TrainingImageConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     training_repository_access_mode: cdktn.stringToTerraform(struct!.trainingRepositoryAccessMode),
-    training_repository_auth_config: cdktn.listMapper(tfTrainingJobTrainingRepositoryAuthConfigPropertyToTerraform, true)(struct!.trainingRepositoryAuthConfig),
+    training_repository_auth_config: cdktn.listMapper(awsTrainingJobTrainingRepositoryAuthConfigPropertyToTerraform, true)(struct!.trainingRepositoryAuthConfig),
   }
 }
 
 
-export function tfTrainingJobTrainingImageConfigPropertyToHclTerraform(struct?: TfTrainingJob.TrainingImageConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobTrainingImageConfigPropertyToHclTerraform(struct?: AwsTrainingJob.TrainingImageConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1124,7 +1124,7 @@ export function tfTrainingJobTrainingImageConfigPropertyToHclTerraform(struct?: 
       storageClassType: "string",
     },
     training_repository_auth_config: {
-      value: cdktn.listMapperHcl(tfTrainingJobTrainingRepositoryAuthConfigPropertyToHclTerraform, true)(struct!.trainingRepositoryAuthConfig),
+      value: cdktn.listMapperHcl(awsTrainingJobTrainingRepositoryAuthConfigPropertyToHclTerraform, true)(struct!.trainingRepositoryAuthConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingRepositoryAuthConfigPropertyList",
@@ -1136,7 +1136,7 @@ export function tfTrainingJobTrainingImageConfigPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfTrainingJobAlgorithmSpecificationPropertyToTerraform(struct?: TfTrainingJob.AlgorithmSpecificationProperty | cdktn.IResolvable): any {
+export function awsTrainingJobAlgorithmSpecificationPropertyToTerraform(struct?: AwsTrainingJob.AlgorithmSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1148,13 +1148,13 @@ export function tfTrainingJobAlgorithmSpecificationPropertyToTerraform(struct?: 
     enable_sagemaker_metrics_time_series: cdktn.booleanToTerraform(struct!.enableSagemakerMetricsTimeSeries),
     training_image: cdktn.stringToTerraform(struct!.trainingImage),
     training_input_mode: cdktn.stringToTerraform(struct!.trainingInputMode),
-    metric_definitions: cdktn.listMapper(tfTrainingJobMetricDefinitionsPropertyToTerraform, true)(struct!.metricDefinitions),
-    training_image_config: cdktn.listMapper(tfTrainingJobTrainingImageConfigPropertyToTerraform, true)(struct!.trainingImageConfig),
+    metric_definitions: cdktn.listMapper(awsTrainingJobMetricDefinitionsPropertyToTerraform, true)(struct!.metricDefinitions),
+    training_image_config: cdktn.listMapper(awsTrainingJobTrainingImageConfigPropertyToTerraform, true)(struct!.trainingImageConfig),
   }
 }
 
 
-export function tfTrainingJobAlgorithmSpecificationPropertyToHclTerraform(struct?: TfTrainingJob.AlgorithmSpecificationProperty | cdktn.IResolvable): any {
+export function awsTrainingJobAlgorithmSpecificationPropertyToHclTerraform(struct?: AwsTrainingJob.AlgorithmSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1197,13 +1197,13 @@ export function tfTrainingJobAlgorithmSpecificationPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     metric_definitions: {
-      value: cdktn.listMapperHcl(tfTrainingJobMetricDefinitionsPropertyToHclTerraform, true)(struct!.metricDefinitions),
+      value: cdktn.listMapperHcl(awsTrainingJobMetricDefinitionsPropertyToHclTerraform, true)(struct!.metricDefinitions),
       isBlock: true,
       type: "list",
       storageClassType: "MetricDefinitionsPropertyList",
     },
     training_image_config: {
-      value: cdktn.listMapperHcl(tfTrainingJobTrainingImageConfigPropertyToHclTerraform, true)(struct!.trainingImageConfig),
+      value: cdktn.listMapperHcl(awsTrainingJobTrainingImageConfigPropertyToHclTerraform, true)(struct!.trainingImageConfig),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingImageConfigPropertyList",
@@ -1215,7 +1215,7 @@ export function tfTrainingJobAlgorithmSpecificationPropertyToHclTerraform(struct
 }
 
 
-export function tfTrainingJobCheckpointConfigPropertyToTerraform(struct?: TfTrainingJob.CheckpointConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobCheckpointConfigPropertyToTerraform(struct?: AwsTrainingJob.CheckpointConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1227,7 +1227,7 @@ export function tfTrainingJobCheckpointConfigPropertyToTerraform(struct?: TfTrai
 }
 
 
-export function tfTrainingJobCheckpointConfigPropertyToHclTerraform(struct?: TfTrainingJob.CheckpointConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobCheckpointConfigPropertyToHclTerraform(struct?: AwsTrainingJob.CheckpointConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1252,7 +1252,7 @@ export function tfTrainingJobCheckpointConfigPropertyToHclTerraform(struct?: TfT
 }
 
 
-export function tfTrainingJobCollectionConfigurationsPropertyToTerraform(struct?: TfTrainingJob.CollectionConfigurationsProperty | cdktn.IResolvable): any {
+export function awsTrainingJobCollectionConfigurationsPropertyToTerraform(struct?: AwsTrainingJob.CollectionConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1264,7 +1264,7 @@ export function tfTrainingJobCollectionConfigurationsPropertyToTerraform(struct?
 }
 
 
-export function tfTrainingJobCollectionConfigurationsPropertyToHclTerraform(struct?: TfTrainingJob.CollectionConfigurationsProperty | cdktn.IResolvable): any {
+export function awsTrainingJobCollectionConfigurationsPropertyToHclTerraform(struct?: AwsTrainingJob.CollectionConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1289,7 +1289,7 @@ export function tfTrainingJobCollectionConfigurationsPropertyToHclTerraform(stru
 }
 
 
-export function tfTrainingJobDebugHookConfigPropertyToTerraform(struct?: TfTrainingJob.DebugHookConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobDebugHookConfigPropertyToTerraform(struct?: AwsTrainingJob.DebugHookConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1298,12 +1298,12 @@ export function tfTrainingJobDebugHookConfigPropertyToTerraform(struct?: TfTrain
     hook_parameters: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.hookParameters),
     local_path: cdktn.stringToTerraform(struct!.localPath),
     s3_output_path: cdktn.stringToTerraform(struct!.s3OutputPath),
-    collection_configurations: cdktn.listMapper(tfTrainingJobCollectionConfigurationsPropertyToTerraform, true)(struct!.collectionConfigurations),
+    collection_configurations: cdktn.listMapper(awsTrainingJobCollectionConfigurationsPropertyToTerraform, true)(struct!.collectionConfigurations),
   }
 }
 
 
-export function tfTrainingJobDebugHookConfigPropertyToHclTerraform(struct?: TfTrainingJob.DebugHookConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobDebugHookConfigPropertyToHclTerraform(struct?: AwsTrainingJob.DebugHookConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1328,7 +1328,7 @@ export function tfTrainingJobDebugHookConfigPropertyToHclTerraform(struct?: TfTr
       storageClassType: "string",
     },
     collection_configurations: {
-      value: cdktn.listMapperHcl(tfTrainingJobCollectionConfigurationsPropertyToHclTerraform, true)(struct!.collectionConfigurations),
+      value: cdktn.listMapperHcl(awsTrainingJobCollectionConfigurationsPropertyToHclTerraform, true)(struct!.collectionConfigurations),
       isBlock: true,
       type: "list",
       storageClassType: "CollectionConfigurationsPropertyList",
@@ -1340,7 +1340,7 @@ export function tfTrainingJobDebugHookConfigPropertyToHclTerraform(struct?: TfTr
 }
 
 
-export function tfTrainingJobDebugRuleConfigurationsPropertyToTerraform(struct?: TfTrainingJob.DebugRuleConfigurationsProperty | cdktn.IResolvable): any {
+export function awsTrainingJobDebugRuleConfigurationsPropertyToTerraform(struct?: AwsTrainingJob.DebugRuleConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1357,7 +1357,7 @@ export function tfTrainingJobDebugRuleConfigurationsPropertyToTerraform(struct?:
 }
 
 
-export function tfTrainingJobDebugRuleConfigurationsPropertyToHclTerraform(struct?: TfTrainingJob.DebugRuleConfigurationsProperty | cdktn.IResolvable): any {
+export function awsTrainingJobDebugRuleConfigurationsPropertyToHclTerraform(struct?: AwsTrainingJob.DebugRuleConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1412,7 +1412,7 @@ export function tfTrainingJobDebugRuleConfigurationsPropertyToHclTerraform(struc
 }
 
 
-export function tfTrainingJobExperimentConfigPropertyToTerraform(struct?: TfTrainingJob.ExperimentConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobExperimentConfigPropertyToTerraform(struct?: AwsTrainingJob.ExperimentConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1426,7 +1426,7 @@ export function tfTrainingJobExperimentConfigPropertyToTerraform(struct?: TfTrai
 }
 
 
-export function tfTrainingJobExperimentConfigPropertyToHclTerraform(struct?: TfTrainingJob.ExperimentConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobExperimentConfigPropertyToHclTerraform(struct?: AwsTrainingJob.ExperimentConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1463,7 +1463,7 @@ export function tfTrainingJobExperimentConfigPropertyToHclTerraform(struct?: TfT
 }
 
 
-export function tfTrainingJobInfraCheckConfigPropertyToTerraform(struct?: TfTrainingJob.InfraCheckConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobInfraCheckConfigPropertyToTerraform(struct?: AwsTrainingJob.InfraCheckConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1474,7 +1474,7 @@ export function tfTrainingJobInfraCheckConfigPropertyToTerraform(struct?: TfTrai
 }
 
 
-export function tfTrainingJobInfraCheckConfigPropertyToHclTerraform(struct?: TfTrainingJob.InfraCheckConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobInfraCheckConfigPropertyToHclTerraform(struct?: AwsTrainingJob.InfraCheckConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1493,7 +1493,7 @@ export function tfTrainingJobInfraCheckConfigPropertyToHclTerraform(struct?: TfT
 }
 
 
-export function tfTrainingJobFileSystemDataSourcePropertyToTerraform(struct?: TfTrainingJob.FileSystemDataSourceProperty | cdktn.IResolvable): any {
+export function awsTrainingJobFileSystemDataSourcePropertyToTerraform(struct?: AwsTrainingJob.FileSystemDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1507,7 +1507,7 @@ export function tfTrainingJobFileSystemDataSourcePropertyToTerraform(struct?: Tf
 }
 
 
-export function tfTrainingJobFileSystemDataSourcePropertyToHclTerraform(struct?: TfTrainingJob.FileSystemDataSourceProperty | cdktn.IResolvable): any {
+export function awsTrainingJobFileSystemDataSourcePropertyToHclTerraform(struct?: AwsTrainingJob.FileSystemDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1544,7 +1544,7 @@ export function tfTrainingJobFileSystemDataSourcePropertyToHclTerraform(struct?:
 }
 
 
-export function tfTrainingJobHubAccessConfigPropertyToTerraform(struct?: TfTrainingJob.HubAccessConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobHubAccessConfigPropertyToTerraform(struct?: AwsTrainingJob.HubAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1555,7 +1555,7 @@ export function tfTrainingJobHubAccessConfigPropertyToTerraform(struct?: TfTrain
 }
 
 
-export function tfTrainingJobHubAccessConfigPropertyToHclTerraform(struct?: TfTrainingJob.HubAccessConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobHubAccessConfigPropertyToHclTerraform(struct?: AwsTrainingJob.HubAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1574,7 +1574,7 @@ export function tfTrainingJobHubAccessConfigPropertyToHclTerraform(struct?: TfTr
 }
 
 
-export function tfTrainingJobModelAccessConfigPropertyToTerraform(struct?: TfTrainingJob.ModelAccessConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobModelAccessConfigPropertyToTerraform(struct?: AwsTrainingJob.ModelAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1585,7 +1585,7 @@ export function tfTrainingJobModelAccessConfigPropertyToTerraform(struct?: TfTra
 }
 
 
-export function tfTrainingJobModelAccessConfigPropertyToHclTerraform(struct?: TfTrainingJob.ModelAccessConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobModelAccessConfigPropertyToHclTerraform(struct?: AwsTrainingJob.ModelAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1604,7 +1604,7 @@ export function tfTrainingJobModelAccessConfigPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfTrainingJobS3DataSourcePropertyToTerraform(struct?: TfTrainingJob.S3DataSourceProperty | cdktn.IResolvable): any {
+export function awsTrainingJobS3DataSourcePropertyToTerraform(struct?: AwsTrainingJob.S3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1615,13 +1615,13 @@ export function tfTrainingJobS3DataSourcePropertyToTerraform(struct?: TfTraining
     s3_data_distribution_type: cdktn.stringToTerraform(struct!.s3DataDistributionType),
     s3_data_type: cdktn.stringToTerraform(struct!.s3DataType),
     s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
-    hub_access_config: cdktn.listMapper(tfTrainingJobHubAccessConfigPropertyToTerraform, true)(struct!.hubAccessConfig),
-    model_access_config: cdktn.listMapper(tfTrainingJobModelAccessConfigPropertyToTerraform, true)(struct!.modelAccessConfig),
+    hub_access_config: cdktn.listMapper(awsTrainingJobHubAccessConfigPropertyToTerraform, true)(struct!.hubAccessConfig),
+    model_access_config: cdktn.listMapper(awsTrainingJobModelAccessConfigPropertyToTerraform, true)(struct!.modelAccessConfig),
   }
 }
 
 
-export function tfTrainingJobS3DataSourcePropertyToHclTerraform(struct?: TfTrainingJob.S3DataSourceProperty | cdktn.IResolvable): any {
+export function awsTrainingJobS3DataSourcePropertyToHclTerraform(struct?: AwsTrainingJob.S3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1658,13 +1658,13 @@ export function tfTrainingJobS3DataSourcePropertyToHclTerraform(struct?: TfTrain
       storageClassType: "string",
     },
     hub_access_config: {
-      value: cdktn.listMapperHcl(tfTrainingJobHubAccessConfigPropertyToHclTerraform, true)(struct!.hubAccessConfig),
+      value: cdktn.listMapperHcl(awsTrainingJobHubAccessConfigPropertyToHclTerraform, true)(struct!.hubAccessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "HubAccessConfigPropertyList",
     },
     model_access_config: {
-      value: cdktn.listMapperHcl(tfTrainingJobModelAccessConfigPropertyToHclTerraform, true)(struct!.modelAccessConfig),
+      value: cdktn.listMapperHcl(awsTrainingJobModelAccessConfigPropertyToHclTerraform, true)(struct!.modelAccessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ModelAccessConfigPropertyList",
@@ -1676,32 +1676,32 @@ export function tfTrainingJobS3DataSourcePropertyToHclTerraform(struct?: TfTrain
 }
 
 
-export function tfTrainingJobDataSourcePropertyToTerraform(struct?: TfTrainingJob.DataSourceProperty | cdktn.IResolvable): any {
+export function awsTrainingJobDataSourcePropertyToTerraform(struct?: AwsTrainingJob.DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    file_system_data_source: cdktn.listMapper(tfTrainingJobFileSystemDataSourcePropertyToTerraform, true)(struct!.fileSystemDataSource),
-    s3_data_source: cdktn.listMapper(tfTrainingJobS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
+    file_system_data_source: cdktn.listMapper(awsTrainingJobFileSystemDataSourcePropertyToTerraform, true)(struct!.fileSystemDataSource),
+    s3_data_source: cdktn.listMapper(awsTrainingJobS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
   }
 }
 
 
-export function tfTrainingJobDataSourcePropertyToHclTerraform(struct?: TfTrainingJob.DataSourceProperty | cdktn.IResolvable): any {
+export function awsTrainingJobDataSourcePropertyToHclTerraform(struct?: AwsTrainingJob.DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     file_system_data_source: {
-      value: cdktn.listMapperHcl(tfTrainingJobFileSystemDataSourcePropertyToHclTerraform, true)(struct!.fileSystemDataSource),
+      value: cdktn.listMapperHcl(awsTrainingJobFileSystemDataSourcePropertyToHclTerraform, true)(struct!.fileSystemDataSource),
       isBlock: true,
       type: "list",
       storageClassType: "FileSystemDataSourcePropertyList",
     },
     s3_data_source: {
-      value: cdktn.listMapperHcl(tfTrainingJobS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
+      value: cdktn.listMapperHcl(awsTrainingJobS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
       isBlock: true,
       type: "list",
       storageClassType: "S3DataSourcePropertyList",
@@ -1713,7 +1713,7 @@ export function tfTrainingJobDataSourcePropertyToHclTerraform(struct?: TfTrainin
 }
 
 
-export function tfTrainingJobShuffleConfigPropertyToTerraform(struct?: TfTrainingJob.ShuffleConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobShuffleConfigPropertyToTerraform(struct?: AwsTrainingJob.ShuffleConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1724,7 +1724,7 @@ export function tfTrainingJobShuffleConfigPropertyToTerraform(struct?: TfTrainin
 }
 
 
-export function tfTrainingJobShuffleConfigPropertyToHclTerraform(struct?: TfTrainingJob.ShuffleConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobShuffleConfigPropertyToHclTerraform(struct?: AwsTrainingJob.ShuffleConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1743,7 +1743,7 @@ export function tfTrainingJobShuffleConfigPropertyToHclTerraform(struct?: TfTrai
 }
 
 
-export function tfTrainingJobInputDataConfigPropertyToTerraform(struct?: TfTrainingJob.InputDataConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobInputDataConfigPropertyToTerraform(struct?: AwsTrainingJob.InputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1754,13 +1754,13 @@ export function tfTrainingJobInputDataConfigPropertyToTerraform(struct?: TfTrain
     content_type: cdktn.stringToTerraform(struct!.contentType),
     input_mode: cdktn.stringToTerraform(struct!.inputMode),
     record_wrapper_type: cdktn.stringToTerraform(struct!.recordWrapperType),
-    data_source: cdktn.listMapper(tfTrainingJobDataSourcePropertyToTerraform, true)(struct!.dataSource),
-    shuffle_config: cdktn.listMapper(tfTrainingJobShuffleConfigPropertyToTerraform, true)(struct!.shuffleConfig),
+    data_source: cdktn.listMapper(awsTrainingJobDataSourcePropertyToTerraform, true)(struct!.dataSource),
+    shuffle_config: cdktn.listMapper(awsTrainingJobShuffleConfigPropertyToTerraform, true)(struct!.shuffleConfig),
   }
 }
 
 
-export function tfTrainingJobInputDataConfigPropertyToHclTerraform(struct?: TfTrainingJob.InputDataConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobInputDataConfigPropertyToHclTerraform(struct?: AwsTrainingJob.InputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1797,13 +1797,13 @@ export function tfTrainingJobInputDataConfigPropertyToHclTerraform(struct?: TfTr
       storageClassType: "string",
     },
     data_source: {
-      value: cdktn.listMapperHcl(tfTrainingJobDataSourcePropertyToHclTerraform, true)(struct!.dataSource),
+      value: cdktn.listMapperHcl(awsTrainingJobDataSourcePropertyToHclTerraform, true)(struct!.dataSource),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourcePropertyList",
     },
     shuffle_config: {
-      value: cdktn.listMapperHcl(tfTrainingJobShuffleConfigPropertyToHclTerraform, true)(struct!.shuffleConfig),
+      value: cdktn.listMapperHcl(awsTrainingJobShuffleConfigPropertyToHclTerraform, true)(struct!.shuffleConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ShuffleConfigPropertyList",
@@ -1815,7 +1815,7 @@ export function tfTrainingJobInputDataConfigPropertyToHclTerraform(struct?: TfTr
 }
 
 
-export function tfTrainingJobMlflowConfigPropertyToTerraform(struct?: TfTrainingJob.MlflowConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobMlflowConfigPropertyToTerraform(struct?: AwsTrainingJob.MlflowConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1828,7 +1828,7 @@ export function tfTrainingJobMlflowConfigPropertyToTerraform(struct?: TfTraining
 }
 
 
-export function tfTrainingJobMlflowConfigPropertyToHclTerraform(struct?: TfTrainingJob.MlflowConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobMlflowConfigPropertyToHclTerraform(struct?: AwsTrainingJob.MlflowConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1859,7 +1859,7 @@ export function tfTrainingJobMlflowConfigPropertyToHclTerraform(struct?: TfTrain
 }
 
 
-export function tfTrainingJobModelPackageConfigPropertyToTerraform(struct?: TfTrainingJob.ModelPackageConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobModelPackageConfigPropertyToTerraform(struct?: AwsTrainingJob.ModelPackageConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1871,7 +1871,7 @@ export function tfTrainingJobModelPackageConfigPropertyToTerraform(struct?: TfTr
 }
 
 
-export function tfTrainingJobModelPackageConfigPropertyToHclTerraform(struct?: TfTrainingJob.ModelPackageConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobModelPackageConfigPropertyToHclTerraform(struct?: AwsTrainingJob.ModelPackageConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1896,7 +1896,7 @@ export function tfTrainingJobModelPackageConfigPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfTrainingJobOutputDataConfigPropertyToTerraform(struct?: TfTrainingJob.OutputDataConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobOutputDataConfigPropertyToTerraform(struct?: AwsTrainingJob.OutputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1909,7 +1909,7 @@ export function tfTrainingJobOutputDataConfigPropertyToTerraform(struct?: TfTrai
 }
 
 
-export function tfTrainingJobOutputDataConfigPropertyToHclTerraform(struct?: TfTrainingJob.OutputDataConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobOutputDataConfigPropertyToHclTerraform(struct?: AwsTrainingJob.OutputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1940,7 +1940,7 @@ export function tfTrainingJobOutputDataConfigPropertyToHclTerraform(struct?: TfT
 }
 
 
-export function tfTrainingJobProfilerConfigPropertyToTerraform(struct?: TfTrainingJob.ProfilerConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobProfilerConfigPropertyToTerraform(struct?: AwsTrainingJob.ProfilerConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1954,7 +1954,7 @@ export function tfTrainingJobProfilerConfigPropertyToTerraform(struct?: TfTraini
 }
 
 
-export function tfTrainingJobProfilerConfigPropertyToHclTerraform(struct?: TfTrainingJob.ProfilerConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobProfilerConfigPropertyToHclTerraform(struct?: AwsTrainingJob.ProfilerConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1991,7 +1991,7 @@ export function tfTrainingJobProfilerConfigPropertyToHclTerraform(struct?: TfTra
 }
 
 
-export function tfTrainingJobProfilerRuleConfigurationsPropertyToTerraform(struct?: TfTrainingJob.ProfilerRuleConfigurationsProperty | cdktn.IResolvable): any {
+export function awsTrainingJobProfilerRuleConfigurationsPropertyToTerraform(struct?: AwsTrainingJob.ProfilerRuleConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2008,7 +2008,7 @@ export function tfTrainingJobProfilerRuleConfigurationsPropertyToTerraform(struc
 }
 
 
-export function tfTrainingJobProfilerRuleConfigurationsPropertyToHclTerraform(struct?: TfTrainingJob.ProfilerRuleConfigurationsProperty | cdktn.IResolvable): any {
+export function awsTrainingJobProfilerRuleConfigurationsPropertyToHclTerraform(struct?: AwsTrainingJob.ProfilerRuleConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2063,7 +2063,7 @@ export function tfTrainingJobProfilerRuleConfigurationsPropertyToHclTerraform(st
 }
 
 
-export function tfTrainingJobRemoteDebugConfigPropertyToTerraform(struct?: TfTrainingJob.RemoteDebugConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobRemoteDebugConfigPropertyToTerraform(struct?: AwsTrainingJob.RemoteDebugConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2074,7 +2074,7 @@ export function tfTrainingJobRemoteDebugConfigPropertyToTerraform(struct?: TfTra
 }
 
 
-export function tfTrainingJobRemoteDebugConfigPropertyToHclTerraform(struct?: TfTrainingJob.RemoteDebugConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobRemoteDebugConfigPropertyToHclTerraform(struct?: AwsTrainingJob.RemoteDebugConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2093,7 +2093,7 @@ export function tfTrainingJobRemoteDebugConfigPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfTrainingJobInstanceGroupsPropertyToTerraform(struct?: TfTrainingJob.InstanceGroupsProperty | cdktn.IResolvable): any {
+export function awsTrainingJobInstanceGroupsPropertyToTerraform(struct?: AwsTrainingJob.InstanceGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2106,7 +2106,7 @@ export function tfTrainingJobInstanceGroupsPropertyToTerraform(struct?: TfTraini
 }
 
 
-export function tfTrainingJobInstanceGroupsPropertyToHclTerraform(struct?: TfTrainingJob.InstanceGroupsProperty | cdktn.IResolvable): any {
+export function awsTrainingJobInstanceGroupsPropertyToHclTerraform(struct?: AwsTrainingJob.InstanceGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2137,7 +2137,7 @@ export function tfTrainingJobInstanceGroupsPropertyToHclTerraform(struct?: TfTra
 }
 
 
-export function tfTrainingJobPlacementSpecificationsPropertyToTerraform(struct?: TfTrainingJob.PlacementSpecificationsProperty | cdktn.IResolvable): any {
+export function awsTrainingJobPlacementSpecificationsPropertyToTerraform(struct?: AwsTrainingJob.PlacementSpecificationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2149,7 +2149,7 @@ export function tfTrainingJobPlacementSpecificationsPropertyToTerraform(struct?:
 }
 
 
-export function tfTrainingJobPlacementSpecificationsPropertyToHclTerraform(struct?: TfTrainingJob.PlacementSpecificationsProperty | cdktn.IResolvable): any {
+export function awsTrainingJobPlacementSpecificationsPropertyToHclTerraform(struct?: AwsTrainingJob.PlacementSpecificationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2174,19 +2174,19 @@ export function tfTrainingJobPlacementSpecificationsPropertyToHclTerraform(struc
 }
 
 
-export function tfTrainingJobInstancePlacementConfigPropertyToTerraform(struct?: TfTrainingJob.InstancePlacementConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobInstancePlacementConfigPropertyToTerraform(struct?: AwsTrainingJob.InstancePlacementConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enable_multiple_jobs: cdktn.booleanToTerraform(struct!.enableMultipleJobs),
-    placement_specifications: cdktn.listMapper(tfTrainingJobPlacementSpecificationsPropertyToTerraform, true)(struct!.placementSpecifications),
+    placement_specifications: cdktn.listMapper(awsTrainingJobPlacementSpecificationsPropertyToTerraform, true)(struct!.placementSpecifications),
   }
 }
 
 
-export function tfTrainingJobInstancePlacementConfigPropertyToHclTerraform(struct?: TfTrainingJob.InstancePlacementConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobInstancePlacementConfigPropertyToHclTerraform(struct?: AwsTrainingJob.InstancePlacementConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2199,7 +2199,7 @@ export function tfTrainingJobInstancePlacementConfigPropertyToHclTerraform(struc
       storageClassType: "boolean",
     },
     placement_specifications: {
-      value: cdktn.listMapperHcl(tfTrainingJobPlacementSpecificationsPropertyToHclTerraform, true)(struct!.placementSpecifications),
+      value: cdktn.listMapperHcl(awsTrainingJobPlacementSpecificationsPropertyToHclTerraform, true)(struct!.placementSpecifications),
       isBlock: true,
       type: "list",
       storageClassType: "PlacementSpecificationsPropertyList",
@@ -2211,7 +2211,7 @@ export function tfTrainingJobInstancePlacementConfigPropertyToHclTerraform(struc
 }
 
 
-export function tfTrainingJobResourceConfigPropertyToTerraform(struct?: TfTrainingJob.ResourceConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobResourceConfigPropertyToTerraform(struct?: AwsTrainingJob.ResourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2223,13 +2223,13 @@ export function tfTrainingJobResourceConfigPropertyToTerraform(struct?: TfTraini
     training_plan_arn: cdktn.stringToTerraform(struct!.trainingPlanArn),
     volume_kms_key_id: cdktn.stringToTerraform(struct!.volumeKmsKeyId),
     volume_size_in_gb: cdktn.numberToTerraform(struct!.volumeSizeInGb),
-    instance_groups: cdktn.listMapper(tfTrainingJobInstanceGroupsPropertyToTerraform, true)(struct!.instanceGroups),
-    instance_placement_config: cdktn.listMapper(tfTrainingJobInstancePlacementConfigPropertyToTerraform, true)(struct!.instancePlacementConfig),
+    instance_groups: cdktn.listMapper(awsTrainingJobInstanceGroupsPropertyToTerraform, true)(struct!.instanceGroups),
+    instance_placement_config: cdktn.listMapper(awsTrainingJobInstancePlacementConfigPropertyToTerraform, true)(struct!.instancePlacementConfig),
   }
 }
 
 
-export function tfTrainingJobResourceConfigPropertyToHclTerraform(struct?: TfTrainingJob.ResourceConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobResourceConfigPropertyToHclTerraform(struct?: AwsTrainingJob.ResourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2272,13 +2272,13 @@ export function tfTrainingJobResourceConfigPropertyToHclTerraform(struct?: TfTra
       storageClassType: "number",
     },
     instance_groups: {
-      value: cdktn.listMapperHcl(tfTrainingJobInstanceGroupsPropertyToHclTerraform, true)(struct!.instanceGroups),
+      value: cdktn.listMapperHcl(awsTrainingJobInstanceGroupsPropertyToHclTerraform, true)(struct!.instanceGroups),
       isBlock: true,
       type: "list",
       storageClassType: "InstanceGroupsPropertyList",
     },
     instance_placement_config: {
-      value: cdktn.listMapperHcl(tfTrainingJobInstancePlacementConfigPropertyToHclTerraform, true)(struct!.instancePlacementConfig),
+      value: cdktn.listMapperHcl(awsTrainingJobInstancePlacementConfigPropertyToHclTerraform, true)(struct!.instancePlacementConfig),
       isBlock: true,
       type: "list",
       storageClassType: "InstancePlacementConfigPropertyList",
@@ -2290,7 +2290,7 @@ export function tfTrainingJobResourceConfigPropertyToHclTerraform(struct?: TfTra
 }
 
 
-export function tfTrainingJobRetryStrategyPropertyToTerraform(struct?: TfTrainingJob.RetryStrategyProperty | cdktn.IResolvable): any {
+export function awsTrainingJobRetryStrategyPropertyToTerraform(struct?: AwsTrainingJob.RetryStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2301,7 +2301,7 @@ export function tfTrainingJobRetryStrategyPropertyToTerraform(struct?: TfTrainin
 }
 
 
-export function tfTrainingJobRetryStrategyPropertyToHclTerraform(struct?: TfTrainingJob.RetryStrategyProperty | cdktn.IResolvable): any {
+export function awsTrainingJobRetryStrategyPropertyToHclTerraform(struct?: AwsTrainingJob.RetryStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2320,7 +2320,7 @@ export function tfTrainingJobRetryStrategyPropertyToHclTerraform(struct?: TfTrai
 }
 
 
-export function tfTrainingJobServerlessJobConfigPropertyToTerraform(struct?: TfTrainingJob.ServerlessJobConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobServerlessJobConfigPropertyToTerraform(struct?: AwsTrainingJob.ServerlessJobConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2337,7 +2337,7 @@ export function tfTrainingJobServerlessJobConfigPropertyToTerraform(struct?: TfT
 }
 
 
-export function tfTrainingJobServerlessJobConfigPropertyToHclTerraform(struct?: TfTrainingJob.ServerlessJobConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobServerlessJobConfigPropertyToHclTerraform(struct?: AwsTrainingJob.ServerlessJobConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2392,7 +2392,7 @@ export function tfTrainingJobServerlessJobConfigPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfTrainingJobSessionChainingConfigPropertyToTerraform(struct?: TfTrainingJob.SessionChainingConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobSessionChainingConfigPropertyToTerraform(struct?: AwsTrainingJob.SessionChainingConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2403,7 +2403,7 @@ export function tfTrainingJobSessionChainingConfigPropertyToTerraform(struct?: T
 }
 
 
-export function tfTrainingJobSessionChainingConfigPropertyToHclTerraform(struct?: TfTrainingJob.SessionChainingConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobSessionChainingConfigPropertyToHclTerraform(struct?: AwsTrainingJob.SessionChainingConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2422,7 +2422,7 @@ export function tfTrainingJobSessionChainingConfigPropertyToHclTerraform(struct?
 }
 
 
-export function tfTrainingJobStoppingConditionPropertyToTerraform(struct?: TfTrainingJob.StoppingConditionProperty | cdktn.IResolvable): any {
+export function awsTrainingJobStoppingConditionPropertyToTerraform(struct?: AwsTrainingJob.StoppingConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2435,7 +2435,7 @@ export function tfTrainingJobStoppingConditionPropertyToTerraform(struct?: TfTra
 }
 
 
-export function tfTrainingJobStoppingConditionPropertyToHclTerraform(struct?: TfTrainingJob.StoppingConditionProperty | cdktn.IResolvable): any {
+export function awsTrainingJobStoppingConditionPropertyToHclTerraform(struct?: AwsTrainingJob.StoppingConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2466,7 +2466,7 @@ export function tfTrainingJobStoppingConditionPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfTrainingJobTensorBoardOutputConfigPropertyToTerraform(struct?: TfTrainingJob.TensorBoardOutputConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobTensorBoardOutputConfigPropertyToTerraform(struct?: AwsTrainingJob.TensorBoardOutputConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2478,7 +2478,7 @@ export function tfTrainingJobTensorBoardOutputConfigPropertyToTerraform(struct?:
 }
 
 
-export function tfTrainingJobTensorBoardOutputConfigPropertyToHclTerraform(struct?: TfTrainingJob.TensorBoardOutputConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobTensorBoardOutputConfigPropertyToHclTerraform(struct?: AwsTrainingJob.TensorBoardOutputConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2503,7 +2503,7 @@ export function tfTrainingJobTensorBoardOutputConfigPropertyToHclTerraform(struc
 }
 
 
-export function tfTrainingJobTimeoutsPropertyToTerraform(struct?: TfTrainingJob.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTrainingJobTimeoutsPropertyToTerraform(struct?: AwsTrainingJob.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2516,7 +2516,7 @@ export function tfTrainingJobTimeoutsPropertyToTerraform(struct?: TfTrainingJob.
 }
 
 
-export function tfTrainingJobTimeoutsPropertyToHclTerraform(struct?: TfTrainingJob.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTrainingJobTimeoutsPropertyToHclTerraform(struct?: AwsTrainingJob.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2547,7 +2547,7 @@ export function tfTrainingJobTimeoutsPropertyToHclTerraform(struct?: TfTrainingJ
 }
 
 
-export function tfTrainingJobVpcConfigPropertyToTerraform(struct?: TfTrainingJob.VpcConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobVpcConfigPropertyToTerraform(struct?: AwsTrainingJob.VpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2559,7 +2559,7 @@ export function tfTrainingJobVpcConfigPropertyToTerraform(struct?: TfTrainingJob
 }
 
 
-export function tfTrainingJobVpcConfigPropertyToHclTerraform(struct?: TfTrainingJob.VpcConfigProperty | cdktn.IResolvable): any {
+export function awsTrainingJobVpcConfigPropertyToHclTerraform(struct?: AwsTrainingJob.VpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2584,14 +2584,14 @@ export function tfTrainingJobVpcConfigPropertyToHclTerraform(struct?: TfTraining
 }
 
 
-export namespace TfTrainingJob {
+export namespace AwsTrainingJob {
 export interface MetricDefinitionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#name TfTrainingJob#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#name AwsTrainingJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#regex TfTrainingJob#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#regex AwsTrainingJob#regex}
   */
   readonly regex: string;
 }
@@ -2693,7 +2693,7 @@ export class MetricDefinitionsPropertyList extends cdktn.ComplexList {
 }
 export interface TrainingRepositoryAuthConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#training_repository_credentials_provider_arn TfTrainingJob#training_repository_credentials_provider_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#training_repository_credentials_provider_arn AwsTrainingJob#training_repository_credentials_provider_arn}
   */
   readonly trainingRepositoryCredentialsProviderArn?: string;
 }
@@ -2779,13 +2779,13 @@ export class TrainingRepositoryAuthConfigPropertyList extends cdktn.ComplexList 
 }
 export interface TrainingImageConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#training_repository_access_mode TfTrainingJob#training_repository_access_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#training_repository_access_mode AwsTrainingJob#training_repository_access_mode}
   */
   readonly trainingRepositoryAccessMode?: string;
   /**
   * training_repository_auth_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#training_repository_auth_config TfTrainingJob#training_repository_auth_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#training_repository_auth_config AwsTrainingJob#training_repository_auth_config}
   */
   readonly trainingRepositoryAuthConfig?: TrainingRepositoryAuthConfigProperty[] | cdktn.IResolvable;
 }
@@ -2895,43 +2895,43 @@ export interface AlgorithmSpecificationProperty {
   /**
   * Name or ARN of a SageMaker algorithm resource. Exactly one of `algorithm_name` or `training_image` must be set.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#algorithm_name TfTrainingJob#algorithm_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#algorithm_name AwsTrainingJob#algorithm_name}
   */
   readonly algorithmName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#container_arguments TfTrainingJob#container_arguments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#container_arguments AwsTrainingJob#container_arguments}
   */
   readonly containerArguments?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#container_entrypoint TfTrainingJob#container_entrypoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#container_entrypoint AwsTrainingJob#container_entrypoint}
   */
   readonly containerEntrypoint?: string[];
   /**
   * Whether SageMaker AI should publish time-series metrics. SageMaker enables this automatically for built-in algorithms, supported prebuilt images, and jobs with explicit `metric_definitions`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#enable_sagemaker_metrics_time_series TfTrainingJob#enable_sagemaker_metrics_time_series}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#enable_sagemaker_metrics_time_series AwsTrainingJob#enable_sagemaker_metrics_time_series}
   */
   readonly enableSagemakerMetricsTimeSeries?: boolean | cdktn.IResolvable;
   /**
   * Registry path of the training image. Exactly one of `algorithm_name` or `training_image` must be set. Use `metric_definitions` only when you need to extract custom metrics from your own training container logs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#training_image TfTrainingJob#training_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#training_image AwsTrainingJob#training_image}
   */
   readonly trainingImage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#training_input_mode TfTrainingJob#training_input_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#training_input_mode AwsTrainingJob#training_input_mode}
   */
   readonly trainingInputMode?: string;
   /**
   * metric_definitions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#metric_definitions TfTrainingJob#metric_definitions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#metric_definitions AwsTrainingJob#metric_definitions}
   */
   readonly metricDefinitions?: MetricDefinitionsProperty[] | cdktn.IResolvable;
   /**
   * training_image_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#training_image_config TfTrainingJob#training_image_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#training_image_config AwsTrainingJob#training_image_config}
   */
   readonly trainingImageConfig?: TrainingImageConfigProperty[] | cdktn.IResolvable;
 }
@@ -3171,11 +3171,11 @@ export class AlgorithmSpecificationPropertyList extends cdktn.ComplexList {
 }
 export interface CheckpointConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#local_path TfTrainingJob#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#local_path AwsTrainingJob#local_path}
   */
   readonly localPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_uri TfTrainingJob#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_uri AwsTrainingJob#s3_uri}
   */
   readonly s3Uri: string;
 }
@@ -3280,11 +3280,11 @@ export class CheckpointConfigPropertyList extends cdktn.ComplexList {
 }
 export interface CollectionConfigurationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#collection_name TfTrainingJob#collection_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#collection_name AwsTrainingJob#collection_name}
   */
   readonly collectionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#collection_parameters TfTrainingJob#collection_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#collection_parameters AwsTrainingJob#collection_parameters}
   */
   readonly collectionParameters?: { [key: string]: string };
 }
@@ -3392,21 +3392,21 @@ export class CollectionConfigurationsPropertyList extends cdktn.ComplexList {
 }
 export interface DebugHookConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#hook_parameters TfTrainingJob#hook_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#hook_parameters AwsTrainingJob#hook_parameters}
   */
   readonly hookParameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#local_path TfTrainingJob#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#local_path AwsTrainingJob#local_path}
   */
   readonly localPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_output_path TfTrainingJob#s3_output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_output_path AwsTrainingJob#s3_output_path}
   */
   readonly s3OutputPath: string;
   /**
   * collection_configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#collection_configurations TfTrainingJob#collection_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#collection_configurations AwsTrainingJob#collection_configurations}
   */
   readonly collectionConfigurations?: CollectionConfigurationsProperty[] | cdktn.IResolvable;
 }
@@ -3555,31 +3555,31 @@ export class DebugHookConfigPropertyList extends cdktn.ComplexList {
 }
 export interface DebugRuleConfigurationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_type TfTrainingJob#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_type AwsTrainingJob#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#local_path TfTrainingJob#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#local_path AwsTrainingJob#local_path}
   */
   readonly localPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#rule_configuration_name TfTrainingJob#rule_configuration_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#rule_configuration_name AwsTrainingJob#rule_configuration_name}
   */
   readonly ruleConfigurationName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#rule_evaluator_image TfTrainingJob#rule_evaluator_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#rule_evaluator_image AwsTrainingJob#rule_evaluator_image}
   */
   readonly ruleEvaluatorImage: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#rule_parameters TfTrainingJob#rule_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#rule_parameters AwsTrainingJob#rule_parameters}
   */
   readonly ruleParameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_output_path TfTrainingJob#s3_output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_output_path AwsTrainingJob#s3_output_path}
   */
   readonly s3OutputPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#volume_size_in_gb TfTrainingJob#volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#volume_size_in_gb AwsTrainingJob#volume_size_in_gb}
   */
   readonly volumeSizeInGb?: number;
 }
@@ -3791,19 +3791,19 @@ export class DebugRuleConfigurationsPropertyList extends cdktn.ComplexList {
 }
 export interface ExperimentConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#experiment_name TfTrainingJob#experiment_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#experiment_name AwsTrainingJob#experiment_name}
   */
   readonly experimentName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#run_name TfTrainingJob#run_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#run_name AwsTrainingJob#run_name}
   */
   readonly runName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#trial_component_display_name TfTrainingJob#trial_component_display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#trial_component_display_name AwsTrainingJob#trial_component_display_name}
   */
   readonly trialComponentDisplayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#trial_name TfTrainingJob#trial_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#trial_name AwsTrainingJob#trial_name}
   */
   readonly trialName?: string;
 }
@@ -3955,7 +3955,7 @@ export class ExperimentConfigPropertyList extends cdktn.ComplexList {
 }
 export interface InfraCheckConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#enable_infra_check TfTrainingJob#enable_infra_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#enable_infra_check AwsTrainingJob#enable_infra_check}
   */
   readonly enableInfraCheck?: boolean | cdktn.IResolvable;
 }
@@ -4041,19 +4041,19 @@ export class InfraCheckConfigPropertyList extends cdktn.ComplexList {
 }
 export interface FileSystemDataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#directory_path TfTrainingJob#directory_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#directory_path AwsTrainingJob#directory_path}
   */
   readonly directoryPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#file_system_access_mode TfTrainingJob#file_system_access_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#file_system_access_mode AwsTrainingJob#file_system_access_mode}
   */
   readonly fileSystemAccessMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#file_system_id TfTrainingJob#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#file_system_id AwsTrainingJob#file_system_id}
   */
   readonly fileSystemId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#file_system_type TfTrainingJob#file_system_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#file_system_type AwsTrainingJob#file_system_type}
   */
   readonly fileSystemType: string;
 }
@@ -4193,7 +4193,7 @@ export class FileSystemDataSourcePropertyList extends cdktn.ComplexList {
 }
 export interface HubAccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#hub_content_arn TfTrainingJob#hub_content_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#hub_content_arn AwsTrainingJob#hub_content_arn}
   */
   readonly hubContentArn: string;
 }
@@ -4276,7 +4276,7 @@ export class HubAccessConfigPropertyList extends cdktn.ComplexList {
 }
 export interface ModelAccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#accept_eula TfTrainingJob#accept_eula}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#accept_eula AwsTrainingJob#accept_eula}
   */
   readonly acceptEula: boolean | cdktn.IResolvable;
 }
@@ -4359,35 +4359,35 @@ export class ModelAccessConfigPropertyList extends cdktn.ComplexList {
 }
 export interface S3DataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#attribute_names TfTrainingJob#attribute_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#attribute_names AwsTrainingJob#attribute_names}
   */
   readonly attributeNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_group_names TfTrainingJob#instance_group_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_group_names AwsTrainingJob#instance_group_names}
   */
   readonly instanceGroupNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_data_distribution_type TfTrainingJob#s3_data_distribution_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_data_distribution_type AwsTrainingJob#s3_data_distribution_type}
   */
   readonly s3DataDistributionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_data_type TfTrainingJob#s3_data_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_data_type AwsTrainingJob#s3_data_type}
   */
   readonly s3DataType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_uri TfTrainingJob#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_uri AwsTrainingJob#s3_uri}
   */
   readonly s3Uri: string;
   /**
   * hub_access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#hub_access_config TfTrainingJob#hub_access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#hub_access_config AwsTrainingJob#hub_access_config}
   */
   readonly hubAccessConfig?: HubAccessConfigProperty[] | cdktn.IResolvable;
   /**
   * model_access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#model_access_config TfTrainingJob#model_access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#model_access_config AwsTrainingJob#model_access_config}
   */
   readonly modelAccessConfig?: ModelAccessConfigProperty[] | cdktn.IResolvable;
 }
@@ -4601,13 +4601,13 @@ export interface DataSourceProperty {
   /**
   * file_system_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#file_system_data_source TfTrainingJob#file_system_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#file_system_data_source AwsTrainingJob#file_system_data_source}
   */
   readonly fileSystemDataSource?: FileSystemDataSourceProperty[] | cdktn.IResolvable;
   /**
   * s3_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_data_source TfTrainingJob#s3_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_data_source AwsTrainingJob#s3_data_source}
   */
   readonly s3DataSource?: S3DataSourceProperty[] | cdktn.IResolvable;
 }
@@ -4715,7 +4715,7 @@ export class DataSourcePropertyList extends cdktn.ComplexList {
 }
 export interface ShuffleConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#seed TfTrainingJob#seed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#seed AwsTrainingJob#seed}
   */
   readonly seed?: number;
 }
@@ -4801,35 +4801,35 @@ export class ShuffleConfigPropertyList extends cdktn.ComplexList {
 }
 export interface InputDataConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#channel_name TfTrainingJob#channel_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#channel_name AwsTrainingJob#channel_name}
   */
   readonly channelName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#compression_type TfTrainingJob#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#compression_type AwsTrainingJob#compression_type}
   */
   readonly compressionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#content_type TfTrainingJob#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#content_type AwsTrainingJob#content_type}
   */
   readonly contentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#input_mode TfTrainingJob#input_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#input_mode AwsTrainingJob#input_mode}
   */
   readonly inputMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#record_wrapper_type TfTrainingJob#record_wrapper_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#record_wrapper_type AwsTrainingJob#record_wrapper_type}
   */
   readonly recordWrapperType?: string;
   /**
   * data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#data_source TfTrainingJob#data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#data_source AwsTrainingJob#data_source}
   */
   readonly dataSource?: DataSourceProperty[] | cdktn.IResolvable;
   /**
   * shuffle_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#shuffle_config TfTrainingJob#shuffle_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#shuffle_config AwsTrainingJob#shuffle_config}
   */
   readonly shuffleConfig?: ShuffleConfigProperty[] | cdktn.IResolvable;
 }
@@ -5044,15 +5044,15 @@ export class InputDataConfigPropertyList extends cdktn.ComplexList {
 }
 export interface MlflowConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#mlflow_experiment_name TfTrainingJob#mlflow_experiment_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#mlflow_experiment_name AwsTrainingJob#mlflow_experiment_name}
   */
   readonly mlflowExperimentName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#mlflow_resource_arn TfTrainingJob#mlflow_resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#mlflow_resource_arn AwsTrainingJob#mlflow_resource_arn}
   */
   readonly mlflowResourceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#mlflow_run_name TfTrainingJob#mlflow_run_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#mlflow_run_name AwsTrainingJob#mlflow_run_name}
   */
   readonly mlflowRunName?: string;
 }
@@ -5179,11 +5179,11 @@ export class MlflowConfigPropertyList extends cdktn.ComplexList {
 }
 export interface ModelPackageConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#model_package_group_arn TfTrainingJob#model_package_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#model_package_group_arn AwsTrainingJob#model_package_group_arn}
   */
   readonly modelPackageGroupArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#source_model_package_arn TfTrainingJob#source_model_package_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#source_model_package_arn AwsTrainingJob#source_model_package_arn}
   */
   readonly sourceModelPackageArn?: string;
 }
@@ -5288,15 +5288,15 @@ export class ModelPackageConfigPropertyList extends cdktn.ComplexList {
 }
 export interface OutputDataConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#compression_type TfTrainingJob#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#compression_type AwsTrainingJob#compression_type}
   */
   readonly compressionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#kms_key_id TfTrainingJob#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#kms_key_id AwsTrainingJob#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_output_path TfTrainingJob#s3_output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_output_path AwsTrainingJob#s3_output_path}
   */
   readonly s3OutputPath: string;
 }
@@ -5423,19 +5423,19 @@ export class OutputDataConfigPropertyList extends cdktn.ComplexList {
 }
 export interface ProfilerConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#disable_profiler TfTrainingJob#disable_profiler}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#disable_profiler AwsTrainingJob#disable_profiler}
   */
   readonly disableProfiler?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#profiling_interval_in_milliseconds TfTrainingJob#profiling_interval_in_milliseconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#profiling_interval_in_milliseconds AwsTrainingJob#profiling_interval_in_milliseconds}
   */
   readonly profilingIntervalInMilliseconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#profiling_parameters TfTrainingJob#profiling_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#profiling_parameters AwsTrainingJob#profiling_parameters}
   */
   readonly profilingParameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_output_path TfTrainingJob#s3_output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_output_path AwsTrainingJob#s3_output_path}
   */
   readonly s3OutputPath?: string;
 }
@@ -5587,31 +5587,31 @@ export class ProfilerConfigPropertyList extends cdktn.ComplexList {
 }
 export interface ProfilerRuleConfigurationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_type TfTrainingJob#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_type AwsTrainingJob#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#local_path TfTrainingJob#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#local_path AwsTrainingJob#local_path}
   */
   readonly localPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#rule_configuration_name TfTrainingJob#rule_configuration_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#rule_configuration_name AwsTrainingJob#rule_configuration_name}
   */
   readonly ruleConfigurationName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#rule_evaluator_image TfTrainingJob#rule_evaluator_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#rule_evaluator_image AwsTrainingJob#rule_evaluator_image}
   */
   readonly ruleEvaluatorImage: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#rule_parameters TfTrainingJob#rule_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#rule_parameters AwsTrainingJob#rule_parameters}
   */
   readonly ruleParameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_output_path TfTrainingJob#s3_output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_output_path AwsTrainingJob#s3_output_path}
   */
   readonly s3OutputPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#volume_size_in_gb TfTrainingJob#volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#volume_size_in_gb AwsTrainingJob#volume_size_in_gb}
   */
   readonly volumeSizeInGb?: number;
 }
@@ -5823,7 +5823,7 @@ export class ProfilerRuleConfigurationsPropertyList extends cdktn.ComplexList {
 }
 export interface RemoteDebugConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#enable_remote_debug TfTrainingJob#enable_remote_debug}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#enable_remote_debug AwsTrainingJob#enable_remote_debug}
   */
   readonly enableRemoteDebug?: boolean | cdktn.IResolvable;
 }
@@ -5909,15 +5909,15 @@ export class RemoteDebugConfigPropertyList extends cdktn.ComplexList {
 }
 export interface InstanceGroupsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_count TfTrainingJob#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_count AwsTrainingJob#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_group_name TfTrainingJob#instance_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_group_name AwsTrainingJob#instance_group_name}
   */
   readonly instanceGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_type TfTrainingJob#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_type AwsTrainingJob#instance_type}
   */
   readonly instanceType?: string;
 }
@@ -6047,11 +6047,11 @@ export class InstanceGroupsPropertyList extends cdktn.ComplexList {
 }
 export interface PlacementSpecificationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_count TfTrainingJob#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_count AwsTrainingJob#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#ultra_server_id TfTrainingJob#ultra_server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#ultra_server_id AwsTrainingJob#ultra_server_id}
   */
   readonly ultraServerId?: string;
 }
@@ -6159,13 +6159,13 @@ export class PlacementSpecificationsPropertyList extends cdktn.ComplexList {
 }
 export interface InstancePlacementConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#enable_multiple_jobs TfTrainingJob#enable_multiple_jobs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#enable_multiple_jobs AwsTrainingJob#enable_multiple_jobs}
   */
   readonly enableMultipleJobs?: boolean | cdktn.IResolvable;
   /**
   * placement_specifications block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#placement_specifications TfTrainingJob#placement_specifications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#placement_specifications AwsTrainingJob#placement_specifications}
   */
   readonly placementSpecifications?: PlacementSpecificationsProperty[] | cdktn.IResolvable;
 }
@@ -6273,39 +6273,39 @@ export class InstancePlacementConfigPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_count TfTrainingJob#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_count AwsTrainingJob#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_type TfTrainingJob#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_type AwsTrainingJob#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#keep_alive_period_in_seconds TfTrainingJob#keep_alive_period_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#keep_alive_period_in_seconds AwsTrainingJob#keep_alive_period_in_seconds}
   */
   readonly keepAlivePeriodInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#training_plan_arn TfTrainingJob#training_plan_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#training_plan_arn AwsTrainingJob#training_plan_arn}
   */
   readonly trainingPlanArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#volume_kms_key_id TfTrainingJob#volume_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#volume_kms_key_id AwsTrainingJob#volume_kms_key_id}
   */
   readonly volumeKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#volume_size_in_gb TfTrainingJob#volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#volume_size_in_gb AwsTrainingJob#volume_size_in_gb}
   */
   readonly volumeSizeInGb?: number;
   /**
   * instance_groups block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_groups TfTrainingJob#instance_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_groups AwsTrainingJob#instance_groups}
   */
   readonly instanceGroups?: InstanceGroupsProperty[] | cdktn.IResolvable;
   /**
   * instance_placement_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_placement_config TfTrainingJob#instance_placement_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#instance_placement_config AwsTrainingJob#instance_placement_config}
   */
   readonly instancePlacementConfig?: InstancePlacementConfigProperty[] | cdktn.IResolvable;
 }
@@ -6545,7 +6545,7 @@ export class ResourceConfigPropertyList extends cdktn.ComplexList {
 }
 export interface RetryStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#maximum_retry_attempts TfTrainingJob#maximum_retry_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#maximum_retry_attempts AwsTrainingJob#maximum_retry_attempts}
   */
   readonly maximumRetryAttempts: number;
 }
@@ -6628,33 +6628,33 @@ export class RetryStrategyPropertyList extends cdktn.ComplexList {
 }
 export interface ServerlessJobConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#accept_eula TfTrainingJob#accept_eula}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#accept_eula AwsTrainingJob#accept_eula}
   */
   readonly acceptEula?: boolean | cdktn.IResolvable;
   /**
   * Base model ARN in SageMaker Public Hub. SageMaker always selects the latest version of the provided model.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#base_model_arn TfTrainingJob#base_model_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#base_model_arn AwsTrainingJob#base_model_arn}
   */
   readonly baseModelArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#customization_technique TfTrainingJob#customization_technique}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#customization_technique AwsTrainingJob#customization_technique}
   */
   readonly customizationTechnique?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#evaluation_type TfTrainingJob#evaluation_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#evaluation_type AwsTrainingJob#evaluation_type}
   */
   readonly evaluationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#evaluator_arn TfTrainingJob#evaluator_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#evaluator_arn AwsTrainingJob#evaluator_arn}
   */
   readonly evaluatorArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#job_type TfTrainingJob#job_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#job_type AwsTrainingJob#job_type}
   */
   readonly jobType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#peft TfTrainingJob#peft}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#peft AwsTrainingJob#peft}
   */
   readonly peft?: string;
 }
@@ -6866,7 +6866,7 @@ export class ServerlessJobConfigPropertyList extends cdktn.ComplexList {
 }
 export interface SessionChainingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#enable_session_tag_chaining TfTrainingJob#enable_session_tag_chaining}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#enable_session_tag_chaining AwsTrainingJob#enable_session_tag_chaining}
   */
   readonly enableSessionTagChaining?: boolean | cdktn.IResolvable;
 }
@@ -6952,15 +6952,15 @@ export class SessionChainingConfigPropertyList extends cdktn.ComplexList {
 }
 export interface StoppingConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#max_pending_time_in_seconds TfTrainingJob#max_pending_time_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#max_pending_time_in_seconds AwsTrainingJob#max_pending_time_in_seconds}
   */
   readonly maxPendingTimeInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#max_runtime_in_seconds TfTrainingJob#max_runtime_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#max_runtime_in_seconds AwsTrainingJob#max_runtime_in_seconds}
   */
   readonly maxRuntimeInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#max_wait_time_in_seconds TfTrainingJob#max_wait_time_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#max_wait_time_in_seconds AwsTrainingJob#max_wait_time_in_seconds}
   */
   readonly maxWaitTimeInSeconds?: number;
 }
@@ -7090,11 +7090,11 @@ export class StoppingConditionPropertyList extends cdktn.ComplexList {
 }
 export interface TensorBoardOutputConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#local_path TfTrainingJob#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#local_path AwsTrainingJob#local_path}
   */
   readonly localPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_output_path TfTrainingJob#s3_output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#s3_output_path AwsTrainingJob#s3_output_path}
   */
   readonly s3OutputPath: string;
 }
@@ -7201,19 +7201,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#create TfTrainingJob#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#create AwsTrainingJob#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#delete TfTrainingJob#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#delete AwsTrainingJob#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#update TfTrainingJob#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#update AwsTrainingJob#update}
   */
   readonly update?: string;
 }
@@ -7321,11 +7321,11 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#security_group_ids TfTrainingJob#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#security_group_ids AwsTrainingJob#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#subnets TfTrainingJob#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_training_job#subnets AwsTrainingJob#subnets}
   */
   readonly subnets: string[];
 }

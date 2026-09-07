@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFaqConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFaqConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#description TfFaq#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#description AwsFaq#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#file_format TfFaq#file_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#file_format AwsFaq#file_format}
   */
   readonly fileFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#id TfFaq#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#id AwsFaq#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#index_id TfFaq#index_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#index_id AwsFaq#index_id}
   */
   readonly indexId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#language_code TfFaq#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#language_code AwsFaq#language_code}
   */
   readonly languageCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#name TfFaq#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#name AwsFaq#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#region TfFaq#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#region AwsFaq#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#role_arn TfFaq#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#role_arn AwsFaq#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#tags TfFaq#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#tags AwsFaq#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#tags_all TfFaq#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#tags_all AwsFaq#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * s3_path block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#s3_path TfFaq#s3_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#s3_path AwsFaq#s3_path}
   */
-  readonly s3Path: TfFaq.S3PathProperty;
+  readonly s3Path: AwsFaq.S3PathProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#timeouts TfFaq#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#timeouts AwsFaq#timeouts}
   */
-  readonly timeouts?: TfFaq.TimeoutsProperty;
+  readonly timeouts?: AwsFaq.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq aws_kendra_faq}
 */
-export class TfFaq extends cdktn.TerraformResource {
+export class AwsFaq extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class TfFaq extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFaq resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFaq resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFaq to import
-  * @param importFromId The id of the existing TfFaq that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFaq to import is found
+  * @param importToId The construct id used in the generated config for the AwsFaq to import
+  * @param importFromId The id of the existing AwsFaq that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFaq to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kendra_faq", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class TfFaq extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFaqConfig
+  * @param options AwsFaqConfig
   */
-  public constructor(scope: Construct, id: string, config: TfFaqConfig) {
+  public constructor(scope: Construct, id: string, config: AwsFaqConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kendra_faq',
       terraformGeneratorMetadata: {
@@ -316,11 +316,11 @@ export class TfFaq extends cdktn.TerraformResource {
   }
 
   // s3_path - computed: false, optional: false, required: true
-  private _s3Path = new TfFaq.S3PathPropertyOutputReference(this, "s3_path");
+  private _s3Path = new AwsFaq.S3PathPropertyOutputReference(this, "s3_path");
   public get s3Path() {
     return this._s3Path;
   }
-  public putS3Path(value: TfFaq.S3PathProperty) {
+  public putS3Path(value: AwsFaq.S3PathProperty) {
     this._s3Path.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -329,11 +329,11 @@ export class TfFaq extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfFaq.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsFaq.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfFaq.TimeoutsProperty) {
+  public putTimeouts(value: AwsFaq.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -360,8 +360,8 @@ export class TfFaq extends cdktn.TerraformResource {
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      s3_path: tfFaqS3PathPropertyToTerraform(this._s3Path.internalValue),
-      timeouts: tfFaqTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      s3_path: awsFaqS3PathPropertyToTerraform(this._s3Path.internalValue),
+      timeouts: awsFaqTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -428,16 +428,16 @@ export class TfFaq extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       s3_path: {
-        value: tfFaqS3PathPropertyToHclTerraform(this._s3Path.internalValue),
+        value: awsFaqS3PathPropertyToHclTerraform(this._s3Path.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFaq.S3PathPropertyList",
+        storageClassType: "AwsFaq.S3PathPropertyList",
       },
       timeouts: {
-        value: tfFaqTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsFaqTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfFaq.TimeoutsProperty",
+        storageClassType: "AwsFaq.TimeoutsProperty",
       },
     };
 
@@ -446,7 +446,7 @@ export class TfFaq extends cdktn.TerraformResource {
   }
 }
 
-export function tfFaqS3PathPropertyToTerraform(struct?: TfFaq.S3PathPropertyOutputReference | TfFaq.S3PathProperty): any {
+export function awsFaqS3PathPropertyToTerraform(struct?: AwsFaq.S3PathPropertyOutputReference | AwsFaq.S3PathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -458,7 +458,7 @@ export function tfFaqS3PathPropertyToTerraform(struct?: TfFaq.S3PathPropertyOutp
 }
 
 
-export function tfFaqS3PathPropertyToHclTerraform(struct?: TfFaq.S3PathPropertyOutputReference | TfFaq.S3PathProperty): any {
+export function awsFaqS3PathPropertyToHclTerraform(struct?: AwsFaq.S3PathPropertyOutputReference | AwsFaq.S3PathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,7 +483,7 @@ export function tfFaqS3PathPropertyToHclTerraform(struct?: TfFaq.S3PathPropertyO
 }
 
 
-export function tfFaqTimeoutsPropertyToTerraform(struct?: TfFaq.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsFaqTimeoutsPropertyToTerraform(struct?: AwsFaq.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -495,7 +495,7 @@ export function tfFaqTimeoutsPropertyToTerraform(struct?: TfFaq.TimeoutsProperty
 }
 
 
-export function tfFaqTimeoutsPropertyToHclTerraform(struct?: TfFaq.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsFaqTimeoutsPropertyToHclTerraform(struct?: AwsFaq.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -520,14 +520,14 @@ export function tfFaqTimeoutsPropertyToHclTerraform(struct?: TfFaq.TimeoutsPrope
 }
 
 
-export namespace TfFaq {
+export namespace AwsFaq {
 export interface S3PathProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#bucket TfFaq#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#bucket AwsFaq#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#key TfFaq#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#key AwsFaq#key}
   */
   readonly key: string;
 }
@@ -597,11 +597,11 @@ export class S3PathPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#create TfFaq#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#create AwsFaq#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#delete TfFaq#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_faq#delete AwsFaq#delete}
   */
   readonly delete?: string;
 }

@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRecordingConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRecordingConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#id TfRecordingConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#id AwsRecordingConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#name TfRecordingConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#name AwsRecordingConfiguration#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#recording_reconnect_window_seconds TfRecordingConfiguration#recording_reconnect_window_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#recording_reconnect_window_seconds AwsRecordingConfiguration#recording_reconnect_window_seconds}
   */
   readonly recordingReconnectWindowSeconds?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#region TfRecordingConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#region AwsRecordingConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#tags TfRecordingConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#tags AwsRecordingConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#tags_all TfRecordingConfiguration#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#tags_all AwsRecordingConfiguration#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * destination_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#destination_configuration TfRecordingConfiguration#destination_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#destination_configuration AwsRecordingConfiguration#destination_configuration}
   */
-  readonly destinationConfiguration: TfRecordingConfiguration.DestinationConfigurationProperty;
+  readonly destinationConfiguration: AwsRecordingConfiguration.DestinationConfigurationProperty;
   /**
   * thumbnail_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#thumbnail_configuration TfRecordingConfiguration#thumbnail_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#thumbnail_configuration AwsRecordingConfiguration#thumbnail_configuration}
   */
-  readonly thumbnailConfiguration?: TfRecordingConfiguration.ThumbnailConfigurationProperty;
+  readonly thumbnailConfiguration?: AwsRecordingConfiguration.ThumbnailConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#timeouts TfRecordingConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#timeouts AwsRecordingConfiguration#timeouts}
   */
-  readonly timeouts?: TfRecordingConfiguration.TimeoutsProperty;
+  readonly timeouts?: AwsRecordingConfiguration.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration aws_ivs_recording_configuration}
 */
-export class TfRecordingConfiguration extends cdktn.TerraformResource {
+export class AwsRecordingConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfRecordingConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRecordingConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRecordingConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRecordingConfiguration to import
-  * @param importFromId The id of the existing TfRecordingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRecordingConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsRecordingConfiguration to import
+  * @param importFromId The id of the existing AwsRecordingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRecordingConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ivs_recording_configuration", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfRecordingConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRecordingConfigurationConfig
+  * @param options AwsRecordingConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRecordingConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRecordingConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ivs_recording_configuration',
       terraformGeneratorMetadata: {
@@ -228,11 +228,11 @@ export class TfRecordingConfiguration extends cdktn.TerraformResource {
   }
 
   // destination_configuration - computed: false, optional: false, required: true
-  private _destinationConfiguration = new TfRecordingConfiguration.DestinationConfigurationPropertyOutputReference(this, "destination_configuration");
+  private _destinationConfiguration = new AwsRecordingConfiguration.DestinationConfigurationPropertyOutputReference(this, "destination_configuration");
   public get destinationConfiguration() {
     return this._destinationConfiguration;
   }
-  public putDestinationConfiguration(value: TfRecordingConfiguration.DestinationConfigurationProperty) {
+  public putDestinationConfiguration(value: AwsRecordingConfiguration.DestinationConfigurationProperty) {
     this._destinationConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -241,11 +241,11 @@ export class TfRecordingConfiguration extends cdktn.TerraformResource {
   }
 
   // thumbnail_configuration - computed: false, optional: true, required: false
-  private _thumbnailConfiguration = new TfRecordingConfiguration.ThumbnailConfigurationPropertyOutputReference(this, "thumbnail_configuration");
+  private _thumbnailConfiguration = new AwsRecordingConfiguration.ThumbnailConfigurationPropertyOutputReference(this, "thumbnail_configuration");
   public get thumbnailConfiguration() {
     return this._thumbnailConfiguration;
   }
-  public putThumbnailConfiguration(value: TfRecordingConfiguration.ThumbnailConfigurationProperty) {
+  public putThumbnailConfiguration(value: AwsRecordingConfiguration.ThumbnailConfigurationProperty) {
     this._thumbnailConfiguration.internalValue = value;
   }
   public resetThumbnailConfiguration() {
@@ -257,11 +257,11 @@ export class TfRecordingConfiguration extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfRecordingConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsRecordingConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfRecordingConfiguration.TimeoutsProperty) {
+  public putTimeouts(value: AwsRecordingConfiguration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -284,9 +284,9 @@ export class TfRecordingConfiguration extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      destination_configuration: tfRecordingConfigurationDestinationConfigurationPropertyToTerraform(this._destinationConfiguration.internalValue),
-      thumbnail_configuration: tfRecordingConfigurationThumbnailConfigurationPropertyToTerraform(this._thumbnailConfiguration.internalValue),
-      timeouts: tfRecordingConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      destination_configuration: awsRecordingConfigurationDestinationConfigurationPropertyToTerraform(this._destinationConfiguration.internalValue),
+      thumbnail_configuration: awsRecordingConfigurationThumbnailConfigurationPropertyToTerraform(this._thumbnailConfiguration.internalValue),
+      timeouts: awsRecordingConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -329,22 +329,22 @@ export class TfRecordingConfiguration extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       destination_configuration: {
-        value: tfRecordingConfigurationDestinationConfigurationPropertyToHclTerraform(this._destinationConfiguration.internalValue),
+        value: awsRecordingConfigurationDestinationConfigurationPropertyToHclTerraform(this._destinationConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRecordingConfiguration.DestinationConfigurationPropertyList",
+        storageClassType: "AwsRecordingConfiguration.DestinationConfigurationPropertyList",
       },
       thumbnail_configuration: {
-        value: tfRecordingConfigurationThumbnailConfigurationPropertyToHclTerraform(this._thumbnailConfiguration.internalValue),
+        value: awsRecordingConfigurationThumbnailConfigurationPropertyToHclTerraform(this._thumbnailConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRecordingConfiguration.ThumbnailConfigurationPropertyList",
+        storageClassType: "AwsRecordingConfiguration.ThumbnailConfigurationPropertyList",
       },
       timeouts: {
-        value: tfRecordingConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsRecordingConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfRecordingConfiguration.TimeoutsProperty",
+        storageClassType: "AwsRecordingConfiguration.TimeoutsProperty",
       },
     };
 
@@ -353,7 +353,7 @@ export class TfRecordingConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfRecordingConfigurationS3PropertyToTerraform(struct?: TfRecordingConfiguration.S3PropertyOutputReference | TfRecordingConfiguration.S3Property): any {
+export function awsRecordingConfigurationS3PropertyToTerraform(struct?: AwsRecordingConfiguration.S3PropertyOutputReference | AwsRecordingConfiguration.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,7 +364,7 @@ export function tfRecordingConfigurationS3PropertyToTerraform(struct?: TfRecordi
 }
 
 
-export function tfRecordingConfigurationS3PropertyToHclTerraform(struct?: TfRecordingConfiguration.S3PropertyOutputReference | TfRecordingConfiguration.S3Property): any {
+export function awsRecordingConfigurationS3PropertyToHclTerraform(struct?: AwsRecordingConfiguration.S3PropertyOutputReference | AwsRecordingConfiguration.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -383,25 +383,25 @@ export function tfRecordingConfigurationS3PropertyToHclTerraform(struct?: TfReco
 }
 
 
-export function tfRecordingConfigurationDestinationConfigurationPropertyToTerraform(struct?: TfRecordingConfiguration.DestinationConfigurationPropertyOutputReference | TfRecordingConfiguration.DestinationConfigurationProperty): any {
+export function awsRecordingConfigurationDestinationConfigurationPropertyToTerraform(struct?: AwsRecordingConfiguration.DestinationConfigurationPropertyOutputReference | AwsRecordingConfiguration.DestinationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3: tfRecordingConfigurationS3PropertyToTerraform(struct!.s3),
+    s3: awsRecordingConfigurationS3PropertyToTerraform(struct!.s3),
   }
 }
 
 
-export function tfRecordingConfigurationDestinationConfigurationPropertyToHclTerraform(struct?: TfRecordingConfiguration.DestinationConfigurationPropertyOutputReference | TfRecordingConfiguration.DestinationConfigurationProperty): any {
+export function awsRecordingConfigurationDestinationConfigurationPropertyToHclTerraform(struct?: AwsRecordingConfiguration.DestinationConfigurationPropertyOutputReference | AwsRecordingConfiguration.DestinationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3: {
-      value: tfRecordingConfigurationS3PropertyToHclTerraform(struct!.s3),
+      value: awsRecordingConfigurationS3PropertyToHclTerraform(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "S3PropertyList",
@@ -413,7 +413,7 @@ export function tfRecordingConfigurationDestinationConfigurationPropertyToHclTer
 }
 
 
-export function tfRecordingConfigurationThumbnailConfigurationPropertyToTerraform(struct?: TfRecordingConfiguration.ThumbnailConfigurationPropertyOutputReference | TfRecordingConfiguration.ThumbnailConfigurationProperty): any {
+export function awsRecordingConfigurationThumbnailConfigurationPropertyToTerraform(struct?: AwsRecordingConfiguration.ThumbnailConfigurationPropertyOutputReference | AwsRecordingConfiguration.ThumbnailConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -425,7 +425,7 @@ export function tfRecordingConfigurationThumbnailConfigurationPropertyToTerrafor
 }
 
 
-export function tfRecordingConfigurationThumbnailConfigurationPropertyToHclTerraform(struct?: TfRecordingConfiguration.ThumbnailConfigurationPropertyOutputReference | TfRecordingConfiguration.ThumbnailConfigurationProperty): any {
+export function awsRecordingConfigurationThumbnailConfigurationPropertyToHclTerraform(struct?: AwsRecordingConfiguration.ThumbnailConfigurationPropertyOutputReference | AwsRecordingConfiguration.ThumbnailConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -450,7 +450,7 @@ export function tfRecordingConfigurationThumbnailConfigurationPropertyToHclTerra
 }
 
 
-export function tfRecordingConfigurationTimeoutsPropertyToTerraform(struct?: TfRecordingConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRecordingConfigurationTimeoutsPropertyToTerraform(struct?: AwsRecordingConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -462,7 +462,7 @@ export function tfRecordingConfigurationTimeoutsPropertyToTerraform(struct?: TfR
 }
 
 
-export function tfRecordingConfigurationTimeoutsPropertyToHclTerraform(struct?: TfRecordingConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRecordingConfigurationTimeoutsPropertyToHclTerraform(struct?: AwsRecordingConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -487,10 +487,10 @@ export function tfRecordingConfigurationTimeoutsPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace TfRecordingConfiguration {
+export namespace AwsRecordingConfiguration {
 export interface S3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#bucket_name TfRecordingConfiguration#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#bucket_name AwsRecordingConfiguration#bucket_name}
   */
   readonly bucketName: string;
 }
@@ -543,7 +543,7 @@ export interface DestinationConfigurationProperty {
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#s3 TfRecordingConfiguration#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#s3 AwsRecordingConfiguration#s3}
   */
   readonly s3: S3Property;
 }
@@ -594,11 +594,11 @@ export class DestinationConfigurationPropertyOutputReference extends cdktn.Compl
 }
 export interface ThumbnailConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#recording_mode TfRecordingConfiguration#recording_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#recording_mode AwsRecordingConfiguration#recording_mode}
   */
   readonly recordingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#target_interval_seconds TfRecordingConfiguration#target_interval_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#target_interval_seconds AwsRecordingConfiguration#target_interval_seconds}
   */
   readonly targetIntervalSeconds?: number;
 }
@@ -674,11 +674,11 @@ export class ThumbnailConfigurationPropertyOutputReference extends cdktn.Complex
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#create TfRecordingConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#create AwsRecordingConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#delete TfRecordingConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivs_recording_configuration#delete AwsRecordingConfiguration#delete}
   */
   readonly delete?: string;
 }

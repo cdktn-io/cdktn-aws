@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfDetectorConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsDetectorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/guardduty_detector#id DataTfDetector#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/guardduty_detector#id DataAwsDetector#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,11 +16,11 @@ export interface DataTfDetectorConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/guardduty_detector#region DataTfDetector#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/guardduty_detector#region DataAwsDetector#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/guardduty_detector#tags DataTfDetector#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/guardduty_detector#tags DataAwsDetector#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -28,7 +28,7 @@ export interface DataTfDetectorConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/guardduty_detector aws_guardduty_detector}
 */
-export class DataTfDetector extends cdktn.TerraformDataSource {
+export class DataAwsDetector extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataTfDetector extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfDetector resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsDetector resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfDetector to import
-  * @param importFromId The id of the existing DataTfDetector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/guardduty_detector#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfDetector to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsDetector to import
+  * @param importFromId The id of the existing DataAwsDetector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/guardduty_detector#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsDetector to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_guardduty_detector", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataTfDetector extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfDetectorConfig = {}
+  * @param options DataAwsDetectorConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfDetectorConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsDetectorConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_guardduty_detector',
       terraformGeneratorMetadata: {
@@ -91,7 +91,7 @@ export class DataTfDetector extends cdktn.TerraformDataSource {
   }
 
   // features - computed: true, optional: false, required: false
-  private _features = new DataTfDetector.FeaturesPropertyList(this, "features", false);
+  private _features = new DataAwsDetector.FeaturesPropertyList(this, "features", false);
   public get features() {
     return this._features;
   }
@@ -198,7 +198,7 @@ export class DataTfDetector extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfDetectorAdditionalConfigurationPropertyToTerraform(struct?: DataTfDetector.AdditionalConfigurationProperty): any {
+export function dataAwsDetectorAdditionalConfigurationPropertyToTerraform(struct?: DataAwsDetector.AdditionalConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -208,7 +208,7 @@ export function dataTfDetectorAdditionalConfigurationPropertyToTerraform(struct?
 }
 
 
-export function dataTfDetectorAdditionalConfigurationPropertyToHclTerraform(struct?: DataTfDetector.AdditionalConfigurationProperty): any {
+export function dataAwsDetectorAdditionalConfigurationPropertyToHclTerraform(struct?: DataAwsDetector.AdditionalConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -219,7 +219,7 @@ export function dataTfDetectorAdditionalConfigurationPropertyToHclTerraform(stru
 }
 
 
-export function dataTfDetectorFeaturesPropertyToTerraform(struct?: DataTfDetector.FeaturesProperty): any {
+export function dataAwsDetectorFeaturesPropertyToTerraform(struct?: DataAwsDetector.FeaturesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -229,7 +229,7 @@ export function dataTfDetectorFeaturesPropertyToTerraform(struct?: DataTfDetecto
 }
 
 
-export function dataTfDetectorFeaturesPropertyToHclTerraform(struct?: DataTfDetector.FeaturesProperty): any {
+export function dataAwsDetectorFeaturesPropertyToHclTerraform(struct?: DataAwsDetector.FeaturesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -240,7 +240,7 @@ export function dataTfDetectorFeaturesPropertyToHclTerraform(struct?: DataTfDete
 }
 
 
-export namespace DataTfDetector {
+export namespace DataAwsDetector {
 export interface AdditionalConfigurationProperty {
 }
 export class AdditionalConfigurationPropertyOutputReference extends cdktn.ComplexObject {

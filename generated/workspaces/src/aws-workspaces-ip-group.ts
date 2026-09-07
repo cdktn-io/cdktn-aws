@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfIpGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsIpGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#description TfIpGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#description AwsIpGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#id TfIpGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#id AwsIpGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#name TfIpGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#name AwsIpGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#region TfIpGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#region AwsIpGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#tags TfIpGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#tags AwsIpGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#tags_all TfIpGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#tags_all AwsIpGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#rules TfIpGroup#rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#rules AwsIpGroup#rules}
   */
-  readonly rules?: TfIpGroup.RulesProperty[] | cdktn.IResolvable;
+  readonly rules?: AwsIpGroup.RulesProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group aws_workspaces_ip_group}
 */
-export class TfIpGroup extends cdktn.TerraformResource {
+export class AwsIpGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfIpGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfIpGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsIpGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfIpGroup to import
-  * @param importFromId The id of the existing TfIpGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfIpGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsIpGroup to import
+  * @param importFromId The id of the existing AwsIpGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsIpGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspaces_ip_group", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfIpGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfIpGroupConfig
+  * @param options AwsIpGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfIpGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsIpGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workspaces_ip_group',
       terraformGeneratorMetadata: {
@@ -201,11 +201,11 @@ export class TfIpGroup extends cdktn.TerraformResource {
   }
 
   // rules - computed: false, optional: true, required: false
-  private _rules = new TfIpGroup.RulesPropertyList(this, "rules", true);
+  private _rules = new AwsIpGroup.RulesPropertyList(this, "rules", true);
   public get rules() {
     return this._rules;
   }
-  public putRules(value: TfIpGroup.RulesProperty[] | cdktn.IResolvable) {
+  public putRules(value: AwsIpGroup.RulesProperty[] | cdktn.IResolvable) {
     this._rules.internalValue = value;
   }
   public resetRules() {
@@ -228,7 +228,7 @@ export class TfIpGroup extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      rules: cdktn.listMapper(tfIpGroupRulesPropertyToTerraform, true)(this._rules.internalValue),
+      rules: cdktn.listMapper(awsIpGroupRulesPropertyToTerraform, true)(this._rules.internalValue),
     };
   }
 
@@ -271,10 +271,10 @@ export class TfIpGroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       rules: {
-        value: cdktn.listMapperHcl(tfIpGroupRulesPropertyToHclTerraform, true)(this._rules.internalValue),
+        value: cdktn.listMapperHcl(awsIpGroupRulesPropertyToHclTerraform, true)(this._rules.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfIpGroup.RulesPropertyList",
+        storageClassType: "AwsIpGroup.RulesPropertyList",
       },
     };
 
@@ -283,7 +283,7 @@ export class TfIpGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfIpGroupRulesPropertyToTerraform(struct?: TfIpGroup.RulesProperty | cdktn.IResolvable): any {
+export function awsIpGroupRulesPropertyToTerraform(struct?: AwsIpGroup.RulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -295,7 +295,7 @@ export function tfIpGroupRulesPropertyToTerraform(struct?: TfIpGroup.RulesProper
 }
 
 
-export function tfIpGroupRulesPropertyToHclTerraform(struct?: TfIpGroup.RulesProperty | cdktn.IResolvable): any {
+export function awsIpGroupRulesPropertyToHclTerraform(struct?: AwsIpGroup.RulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -320,14 +320,14 @@ export function tfIpGroupRulesPropertyToHclTerraform(struct?: TfIpGroup.RulesPro
 }
 
 
-export namespace TfIpGroup {
+export namespace AwsIpGroup {
 export interface RulesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#description TfIpGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#description AwsIpGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#source TfIpGroup#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_ip_group#source AwsIpGroup#source}
   */
   readonly source: string;
 }

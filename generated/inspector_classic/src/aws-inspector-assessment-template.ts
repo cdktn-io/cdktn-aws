@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAssessmentTemplateConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAssessmentTemplateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#duration TfAssessmentTemplate#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#duration AwsAssessmentTemplate#duration}
   */
   readonly duration: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#id TfAssessmentTemplate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#id AwsAssessmentTemplate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#name TfAssessmentTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#name AwsAssessmentTemplate#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#region TfAssessmentTemplate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#region AwsAssessmentTemplate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#rules_package_arns TfAssessmentTemplate#rules_package_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#rules_package_arns AwsAssessmentTemplate#rules_package_arns}
   */
   readonly rulesPackageArns: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#tags TfAssessmentTemplate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#tags AwsAssessmentTemplate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#tags_all TfAssessmentTemplate#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#tags_all AwsAssessmentTemplate#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#target_arn TfAssessmentTemplate#target_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#target_arn AwsAssessmentTemplate#target_arn}
   */
   readonly targetArn: string;
   /**
   * event_subscription block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#event_subscription TfAssessmentTemplate#event_subscription}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#event_subscription AwsAssessmentTemplate#event_subscription}
   */
-  readonly eventSubscription?: TfAssessmentTemplate.EventSubscriptionProperty[] | cdktn.IResolvable;
+  readonly eventSubscription?: AwsAssessmentTemplate.EventSubscriptionProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template aws_inspector_assessment_template}
 */
-export class TfAssessmentTemplate extends cdktn.TerraformResource {
+export class AwsAssessmentTemplate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfAssessmentTemplate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAssessmentTemplate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAssessmentTemplate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAssessmentTemplate to import
-  * @param importFromId The id of the existing TfAssessmentTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAssessmentTemplate to import is found
+  * @param importToId The construct id used in the generated config for the AwsAssessmentTemplate to import
+  * @param importFromId The id of the existing AwsAssessmentTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAssessmentTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_inspector_assessment_template", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfAssessmentTemplate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAssessmentTemplateConfig
+  * @param options AwsAssessmentTemplateConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAssessmentTemplateConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAssessmentTemplateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_inspector_assessment_template',
       terraformGeneratorMetadata: {
@@ -239,11 +239,11 @@ export class TfAssessmentTemplate extends cdktn.TerraformResource {
   }
 
   // event_subscription - computed: false, optional: true, required: false
-  private _eventSubscription = new TfAssessmentTemplate.EventSubscriptionPropertyList(this, "event_subscription", true);
+  private _eventSubscription = new AwsAssessmentTemplate.EventSubscriptionPropertyList(this, "event_subscription", true);
   public get eventSubscription() {
     return this._eventSubscription;
   }
-  public putEventSubscription(value: TfAssessmentTemplate.EventSubscriptionProperty[] | cdktn.IResolvable) {
+  public putEventSubscription(value: AwsAssessmentTemplate.EventSubscriptionProperty[] | cdktn.IResolvable) {
     this._eventSubscription.internalValue = value;
   }
   public resetEventSubscription() {
@@ -268,7 +268,7 @@ export class TfAssessmentTemplate extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       target_arn: cdktn.stringToTerraform(this._targetArn),
-      event_subscription: cdktn.listMapper(tfAssessmentTemplateEventSubscriptionPropertyToTerraform, true)(this._eventSubscription.internalValue),
+      event_subscription: cdktn.listMapper(awsAssessmentTemplateEventSubscriptionPropertyToTerraform, true)(this._eventSubscription.internalValue),
     };
   }
 
@@ -323,10 +323,10 @@ export class TfAssessmentTemplate extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       event_subscription: {
-        value: cdktn.listMapperHcl(tfAssessmentTemplateEventSubscriptionPropertyToHclTerraform, true)(this._eventSubscription.internalValue),
+        value: cdktn.listMapperHcl(awsAssessmentTemplateEventSubscriptionPropertyToHclTerraform, true)(this._eventSubscription.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfAssessmentTemplate.EventSubscriptionPropertyList",
+        storageClassType: "AwsAssessmentTemplate.EventSubscriptionPropertyList",
       },
     };
 
@@ -335,7 +335,7 @@ export class TfAssessmentTemplate extends cdktn.TerraformResource {
   }
 }
 
-export function tfAssessmentTemplateEventSubscriptionPropertyToTerraform(struct?: TfAssessmentTemplate.EventSubscriptionProperty | cdktn.IResolvable): any {
+export function awsAssessmentTemplateEventSubscriptionPropertyToTerraform(struct?: AwsAssessmentTemplate.EventSubscriptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function tfAssessmentTemplateEventSubscriptionPropertyToTerraform(struct?
 }
 
 
-export function tfAssessmentTemplateEventSubscriptionPropertyToHclTerraform(struct?: TfAssessmentTemplate.EventSubscriptionProperty | cdktn.IResolvable): any {
+export function awsAssessmentTemplateEventSubscriptionPropertyToHclTerraform(struct?: AwsAssessmentTemplate.EventSubscriptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -372,14 +372,14 @@ export function tfAssessmentTemplateEventSubscriptionPropertyToHclTerraform(stru
 }
 
 
-export namespace TfAssessmentTemplate {
+export namespace AwsAssessmentTemplate {
 export interface EventSubscriptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#event TfAssessmentTemplate#event}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#event AwsAssessmentTemplate#event}
   */
   readonly event: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#topic_arn TfAssessmentTemplate#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector_assessment_template#topic_arn AwsAssessmentTemplate#topic_arn}
   */
   readonly topicArn: string;
 }

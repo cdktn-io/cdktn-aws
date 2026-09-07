@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfUserConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsUserConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#id DataTfUser#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#id DataAwsUser#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#identity_store_id DataTfUser#identity_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#identity_store_id DataAwsUser#identity_store_id}
   */
   readonly identityStoreId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#region DataTfUser#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#region DataAwsUser#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#user_id DataTfUser#user_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#user_id DataAwsUser#user_id}
   */
   readonly userId?: string;
   /**
   * alternate_identifier block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#alternate_identifier DataTfUser#alternate_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#alternate_identifier DataAwsUser#alternate_identifier}
   */
-  readonly alternateIdentifier?: DataTfUser.AlternateIdentifierProperty;
+  readonly alternateIdentifier?: DataAwsUser.AlternateIdentifierProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user aws_identitystore_user}
 */
-export class DataTfUser extends cdktn.TerraformDataSource {
+export class DataAwsUser extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class DataTfUser extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfUser resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsUser resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfUser to import
-  * @param importFromId The id of the existing DataTfUser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfUser to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsUser to import
+  * @param importFromId The id of the existing DataAwsUser that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsUser to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_identitystore_user", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class DataTfUser extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfUserConfig
+  * @param options DataAwsUserConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfUserConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsUserConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_identitystore_user',
       terraformGeneratorMetadata: {
@@ -98,7 +98,7 @@ export class DataTfUser extends cdktn.TerraformDataSource {
   // ==========
 
   // addresses - computed: true, optional: false, required: false
-  private _addresses = new DataTfUser.AddressesPropertyList(this, "addresses", false);
+  private _addresses = new DataAwsUser.AddressesPropertyList(this, "addresses", false);
   public get addresses() {
     return this._addresses;
   }
@@ -109,13 +109,13 @@ export class DataTfUser extends cdktn.TerraformDataSource {
   }
 
   // emails - computed: true, optional: false, required: false
-  private _emails = new DataTfUser.EmailsPropertyList(this, "emails", false);
+  private _emails = new DataAwsUser.EmailsPropertyList(this, "emails", false);
   public get emails() {
     return this._emails;
   }
 
   // external_ids - computed: true, optional: false, required: false
-  private _externalIds = new DataTfUser.ExternalIdsPropertyList(this, "external_ids", false);
+  private _externalIds = new DataAwsUser.ExternalIdsPropertyList(this, "external_ids", false);
   public get externalIds() {
     return this._externalIds;
   }
@@ -155,7 +155,7 @@ export class DataTfUser extends cdktn.TerraformDataSource {
   }
 
   // name - computed: true, optional: false, required: false
-  private _name = new DataTfUser.NamePropertyList(this, "name", false);
+  private _name = new DataAwsUser.NamePropertyList(this, "name", false);
   public get name() {
     return this._name;
   }
@@ -166,7 +166,7 @@ export class DataTfUser extends cdktn.TerraformDataSource {
   }
 
   // phone_numbers - computed: true, optional: false, required: false
-  private _phoneNumbers = new DataTfUser.PhoneNumbersPropertyList(this, "phone_numbers", false);
+  private _phoneNumbers = new DataAwsUser.PhoneNumbersPropertyList(this, "phone_numbers", false);
   public get phoneNumbers() {
     return this._phoneNumbers;
   }
@@ -239,11 +239,11 @@ export class DataTfUser extends cdktn.TerraformDataSource {
   }
 
   // alternate_identifier - computed: false, optional: true, required: false
-  private _alternateIdentifier = new DataTfUser.AlternateIdentifierPropertyOutputReference(this, "alternate_identifier");
+  private _alternateIdentifier = new DataAwsUser.AlternateIdentifierPropertyOutputReference(this, "alternate_identifier");
   public get alternateIdentifier() {
     return this._alternateIdentifier;
   }
-  public putAlternateIdentifier(value: DataTfUser.AlternateIdentifierProperty) {
+  public putAlternateIdentifier(value: DataAwsUser.AlternateIdentifierProperty) {
     this._alternateIdentifier.internalValue = value;
   }
   public resetAlternateIdentifier() {
@@ -264,7 +264,7 @@ export class DataTfUser extends cdktn.TerraformDataSource {
       identity_store_id: cdktn.stringToTerraform(this._identityStoreId),
       region: cdktn.stringToTerraform(this._region),
       user_id: cdktn.stringToTerraform(this._userId),
-      alternate_identifier: dataTfUserAlternateIdentifierPropertyToTerraform(this._alternateIdentifier.internalValue),
+      alternate_identifier: dataAwsUserAlternateIdentifierPropertyToTerraform(this._alternateIdentifier.internalValue),
     };
   }
 
@@ -295,10 +295,10 @@ export class DataTfUser extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       alternate_identifier: {
-        value: dataTfUserAlternateIdentifierPropertyToHclTerraform(this._alternateIdentifier.internalValue),
+        value: dataAwsUserAlternateIdentifierPropertyToHclTerraform(this._alternateIdentifier.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataTfUser.AlternateIdentifierPropertyList",
+        storageClassType: "DataAwsUser.AlternateIdentifierPropertyList",
       },
     };
 
@@ -307,7 +307,7 @@ export class DataTfUser extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfUserAddressesPropertyToTerraform(struct?: DataTfUser.AddressesProperty): any {
+export function dataAwsUserAddressesPropertyToTerraform(struct?: DataAwsUser.AddressesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function dataTfUserAddressesPropertyToTerraform(struct?: DataTfUser.Addre
 }
 
 
-export function dataTfUserAddressesPropertyToHclTerraform(struct?: DataTfUser.AddressesProperty): any {
+export function dataAwsUserAddressesPropertyToHclTerraform(struct?: DataAwsUser.AddressesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function dataTfUserAddressesPropertyToHclTerraform(struct?: DataTfUser.Ad
 }
 
 
-export function dataTfUserEmailsPropertyToTerraform(struct?: DataTfUser.EmailsProperty): any {
+export function dataAwsUserEmailsPropertyToTerraform(struct?: DataAwsUser.EmailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -338,7 +338,7 @@ export function dataTfUserEmailsPropertyToTerraform(struct?: DataTfUser.EmailsPr
 }
 
 
-export function dataTfUserEmailsPropertyToHclTerraform(struct?: DataTfUser.EmailsProperty): any {
+export function dataAwsUserEmailsPropertyToHclTerraform(struct?: DataAwsUser.EmailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function dataTfUserEmailsPropertyToHclTerraform(struct?: DataTfUser.Email
 }
 
 
-export function dataTfUserExternalIdsPropertyToTerraform(struct?: DataTfUser.ExternalIdsProperty): any {
+export function dataAwsUserExternalIdsPropertyToTerraform(struct?: DataAwsUser.ExternalIdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -359,7 +359,7 @@ export function dataTfUserExternalIdsPropertyToTerraform(struct?: DataTfUser.Ext
 }
 
 
-export function dataTfUserExternalIdsPropertyToHclTerraform(struct?: DataTfUser.ExternalIdsProperty): any {
+export function dataAwsUserExternalIdsPropertyToHclTerraform(struct?: DataAwsUser.ExternalIdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -370,7 +370,7 @@ export function dataTfUserExternalIdsPropertyToHclTerraform(struct?: DataTfUser.
 }
 
 
-export function dataTfUserNamePropertyToTerraform(struct?: DataTfUser.NameProperty): any {
+export function dataAwsUserNamePropertyToTerraform(struct?: DataAwsUser.NameProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,7 +380,7 @@ export function dataTfUserNamePropertyToTerraform(struct?: DataTfUser.NameProper
 }
 
 
-export function dataTfUserNamePropertyToHclTerraform(struct?: DataTfUser.NameProperty): any {
+export function dataAwsUserNamePropertyToHclTerraform(struct?: DataAwsUser.NameProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,7 +391,7 @@ export function dataTfUserNamePropertyToHclTerraform(struct?: DataTfUser.NamePro
 }
 
 
-export function dataTfUserPhoneNumbersPropertyToTerraform(struct?: DataTfUser.PhoneNumbersProperty): any {
+export function dataAwsUserPhoneNumbersPropertyToTerraform(struct?: DataAwsUser.PhoneNumbersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -401,7 +401,7 @@ export function dataTfUserPhoneNumbersPropertyToTerraform(struct?: DataTfUser.Ph
 }
 
 
-export function dataTfUserPhoneNumbersPropertyToHclTerraform(struct?: DataTfUser.PhoneNumbersProperty): any {
+export function dataAwsUserPhoneNumbersPropertyToHclTerraform(struct?: DataAwsUser.PhoneNumbersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,7 +412,7 @@ export function dataTfUserPhoneNumbersPropertyToHclTerraform(struct?: DataTfUser
 }
 
 
-export function dataTfUserExternalIdPropertyToTerraform(struct?: DataTfUser.ExternalIdPropertyOutputReference | DataTfUser.ExternalIdProperty): any {
+export function dataAwsUserExternalIdPropertyToTerraform(struct?: DataAwsUser.ExternalIdPropertyOutputReference | DataAwsUser.ExternalIdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -424,7 +424,7 @@ export function dataTfUserExternalIdPropertyToTerraform(struct?: DataTfUser.Exte
 }
 
 
-export function dataTfUserExternalIdPropertyToHclTerraform(struct?: DataTfUser.ExternalIdPropertyOutputReference | DataTfUser.ExternalIdProperty): any {
+export function dataAwsUserExternalIdPropertyToHclTerraform(struct?: DataAwsUser.ExternalIdPropertyOutputReference | DataAwsUser.ExternalIdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -449,7 +449,7 @@ export function dataTfUserExternalIdPropertyToHclTerraform(struct?: DataTfUser.E
 }
 
 
-export function dataTfUserUniqueAttributePropertyToTerraform(struct?: DataTfUser.UniqueAttributePropertyOutputReference | DataTfUser.UniqueAttributeProperty): any {
+export function dataAwsUserUniqueAttributePropertyToTerraform(struct?: DataAwsUser.UniqueAttributePropertyOutputReference | DataAwsUser.UniqueAttributeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,7 +461,7 @@ export function dataTfUserUniqueAttributePropertyToTerraform(struct?: DataTfUser
 }
 
 
-export function dataTfUserUniqueAttributePropertyToHclTerraform(struct?: DataTfUser.UniqueAttributePropertyOutputReference | DataTfUser.UniqueAttributeProperty): any {
+export function dataAwsUserUniqueAttributePropertyToHclTerraform(struct?: DataAwsUser.UniqueAttributePropertyOutputReference | DataAwsUser.UniqueAttributeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -486,32 +486,32 @@ export function dataTfUserUniqueAttributePropertyToHclTerraform(struct?: DataTfU
 }
 
 
-export function dataTfUserAlternateIdentifierPropertyToTerraform(struct?: DataTfUser.AlternateIdentifierPropertyOutputReference | DataTfUser.AlternateIdentifierProperty): any {
+export function dataAwsUserAlternateIdentifierPropertyToTerraform(struct?: DataAwsUser.AlternateIdentifierPropertyOutputReference | DataAwsUser.AlternateIdentifierProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    external_id: dataTfUserExternalIdPropertyToTerraform(struct!.externalId),
-    unique_attribute: dataTfUserUniqueAttributePropertyToTerraform(struct!.uniqueAttribute),
+    external_id: dataAwsUserExternalIdPropertyToTerraform(struct!.externalId),
+    unique_attribute: dataAwsUserUniqueAttributePropertyToTerraform(struct!.uniqueAttribute),
   }
 }
 
 
-export function dataTfUserAlternateIdentifierPropertyToHclTerraform(struct?: DataTfUser.AlternateIdentifierPropertyOutputReference | DataTfUser.AlternateIdentifierProperty): any {
+export function dataAwsUserAlternateIdentifierPropertyToHclTerraform(struct?: DataAwsUser.AlternateIdentifierPropertyOutputReference | DataAwsUser.AlternateIdentifierProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     external_id: {
-      value: dataTfUserExternalIdPropertyToHclTerraform(struct!.externalId),
+      value: dataAwsUserExternalIdPropertyToHclTerraform(struct!.externalId),
       isBlock: true,
       type: "list",
       storageClassType: "ExternalIdPropertyList",
     },
     unique_attribute: {
-      value: dataTfUserUniqueAttributePropertyToHclTerraform(struct!.uniqueAttribute),
+      value: dataAwsUserUniqueAttributePropertyToHclTerraform(struct!.uniqueAttribute),
       isBlock: true,
       type: "list",
       storageClassType: "UniqueAttributePropertyList",
@@ -523,7 +523,7 @@ export function dataTfUserAlternateIdentifierPropertyToHclTerraform(struct?: Dat
 }
 
 
-export namespace DataTfUser {
+export namespace DataAwsUser {
 export interface AddressesProperty {
 }
 export class AddressesPropertyOutputReference extends cdktn.ComplexObject {
@@ -881,14 +881,14 @@ export class PhoneNumbersPropertyList extends cdktn.ComplexList {
 }
 export interface ExternalIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#id DataTfUser#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#id DataAwsUser#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#issuer DataTfUser#issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#issuer DataAwsUser#issuer}
   */
   readonly issuer: string;
 }
@@ -958,11 +958,11 @@ export class ExternalIdPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface UniqueAttributeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#attribute_path DataTfUser#attribute_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#attribute_path DataAwsUser#attribute_path}
   */
   readonly attributePath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#attribute_value DataTfUser#attribute_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#attribute_value DataAwsUser#attribute_value}
   */
   readonly attributeValue: string;
 }
@@ -1034,13 +1034,13 @@ export interface AlternateIdentifierProperty {
   /**
   * external_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#external_id DataTfUser#external_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#external_id DataAwsUser#external_id}
   */
   readonly externalId?: ExternalIdProperty;
   /**
   * unique_attribute block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#unique_attribute DataTfUser#unique_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/identitystore_user#unique_attribute DataAwsUser#unique_attribute}
   */
   readonly uniqueAttribute?: UniqueAttributeProperty;
 }

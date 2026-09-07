@@ -5,53 +5,53 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTableConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTableConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#encryption_configuration TfTable#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#encryption_configuration AwsTable#encryption_configuration}
   */
-  readonly encryptionConfiguration?: TfTable.EncryptionConfigurationProperty;
+  readonly encryptionConfiguration?: AwsTable.EncryptionConfigurationProperty;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#format TfTable#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#format AwsTable#format}
   */
   readonly format: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#maintenance_configuration TfTable#maintenance_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#maintenance_configuration AwsTable#maintenance_configuration}
   */
-  readonly maintenanceConfiguration?: TfTable.MaintenanceConfigurationProperty;
+  readonly maintenanceConfiguration?: AwsTable.MaintenanceConfigurationProperty;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#name TfTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#name AwsTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#namespace TfTable#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#namespace AwsTable#namespace}
   */
   readonly namespace: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#region TfTable#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#region AwsTable#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#table_bucket_arn TfTable#table_bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#table_bucket_arn AwsTable#table_bucket_arn}
   */
   readonly tableBucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#tags TfTable#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#tags AwsTable#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * metadata block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#metadata TfTable#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#metadata AwsTable#metadata}
   */
-  readonly metadata?: TfTable.MetadataProperty[] | cdktn.IResolvable;
+  readonly metadata?: AwsTable.MetadataProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table aws_s3tables_table}
 */
-export class TfTable extends cdktn.TerraformResource {
+export class AwsTable extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -62,11 +62,11 @@ export class TfTable extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTable resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTable resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTable to import
-  * @param importFromId The id of the existing TfTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTable to import is found
+  * @param importToId The construct id used in the generated config for the AwsTable to import
+  * @param importFromId The id of the existing AwsTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTable to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3tables_table", importId: importFromId, provider });
@@ -81,9 +81,9 @@ export class TfTable extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTableConfig
+  * @param options AwsTableConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTableConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTableConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3tables_table',
       terraformGeneratorMetadata: {
@@ -130,11 +130,11 @@ export class TfTable extends cdktn.TerraformResource {
   }
 
   // encryption_configuration - computed: true, optional: true, required: false
-  private _encryptionConfiguration = new TfTable.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
+  private _encryptionConfiguration = new AwsTable.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
-  public putEncryptionConfiguration(value: TfTable.EncryptionConfigurationProperty) {
+  public putEncryptionConfiguration(value: AwsTable.EncryptionConfigurationProperty) {
     this._encryptionConfiguration.internalValue = value;
   }
   public resetEncryptionConfiguration() {
@@ -159,11 +159,11 @@ export class TfTable extends cdktn.TerraformResource {
   }
 
   // maintenance_configuration - computed: true, optional: true, required: false
-  private _maintenanceConfiguration = new TfTable.MaintenanceConfigurationPropertyOutputReference(this, "maintenance_configuration");
+  private _maintenanceConfiguration = new AwsTable.MaintenanceConfigurationPropertyOutputReference(this, "maintenance_configuration");
   public get maintenanceConfiguration() {
     return this._maintenanceConfiguration;
   }
-  public putMaintenanceConfiguration(value: TfTable.MaintenanceConfigurationProperty) {
+  public putMaintenanceConfiguration(value: AwsTable.MaintenanceConfigurationProperty) {
     this._maintenanceConfiguration.internalValue = value;
   }
   public resetMaintenanceConfiguration() {
@@ -287,11 +287,11 @@ export class TfTable extends cdktn.TerraformResource {
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata = new TfTable.MetadataPropertyList(this, "metadata", false);
+  private _metadata = new AwsTable.MetadataPropertyList(this, "metadata", false);
   public get metadata() {
     return this._metadata;
   }
-  public putMetadata(value: TfTable.MetadataProperty[] | cdktn.IResolvable) {
+  public putMetadata(value: AwsTable.MetadataProperty[] | cdktn.IResolvable) {
     this._metadata.internalValue = value;
   }
   public resetMetadata() {
@@ -308,25 +308,25 @@ export class TfTable extends cdktn.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      encryption_configuration: tfTableEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
+      encryption_configuration: awsTableEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
       format: cdktn.stringToTerraform(this._format),
-      maintenance_configuration: tfTableMaintenanceConfigurationPropertyToTerraform(this._maintenanceConfiguration.internalValue),
+      maintenance_configuration: awsTableMaintenanceConfigurationPropertyToTerraform(this._maintenanceConfiguration.internalValue),
       name: cdktn.stringToTerraform(this._name),
       namespace: cdktn.stringToTerraform(this._namespace),
       region: cdktn.stringToTerraform(this._region),
       table_bucket_arn: cdktn.stringToTerraform(this._tableBucketArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      metadata: cdktn.listMapper(tfTableMetadataPropertyToTerraform, true)(this._metadata.internalValue),
+      metadata: cdktn.listMapper(awsTableMetadataPropertyToTerraform, true)(this._metadata.internalValue),
     };
   }
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
       encryption_configuration: {
-        value: tfTableEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
+        value: awsTableEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTable.EncryptionConfigurationProperty",
+        storageClassType: "AwsTable.EncryptionConfigurationProperty",
       },
       format: {
         value: cdktn.stringToHclTerraform(this._format),
@@ -335,10 +335,10 @@ export class TfTable extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       maintenance_configuration: {
-        value: tfTableMaintenanceConfigurationPropertyToHclTerraform(this._maintenanceConfiguration.internalValue),
+        value: awsTableMaintenanceConfigurationPropertyToHclTerraform(this._maintenanceConfiguration.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTable.MaintenanceConfigurationProperty",
+        storageClassType: "AwsTable.MaintenanceConfigurationProperty",
       },
       name: {
         value: cdktn.stringToHclTerraform(this._name),
@@ -371,10 +371,10 @@ export class TfTable extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       metadata: {
-        value: cdktn.listMapperHcl(tfTableMetadataPropertyToHclTerraform, true)(this._metadata.internalValue),
+        value: cdktn.listMapperHcl(awsTableMetadataPropertyToHclTerraform, true)(this._metadata.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTable.MetadataPropertyList",
+        storageClassType: "AwsTable.MetadataPropertyList",
       },
     };
 
@@ -383,7 +383,7 @@ export class TfTable extends cdktn.TerraformResource {
   }
 }
 
-export function tfTableEncryptionConfigurationPropertyToTerraform(struct?: TfTable.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function awsTableEncryptionConfigurationPropertyToTerraform(struct?: AwsTable.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -395,7 +395,7 @@ export function tfTableEncryptionConfigurationPropertyToTerraform(struct?: TfTab
 }
 
 
-export function tfTableEncryptionConfigurationPropertyToHclTerraform(struct?: TfTable.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function awsTableEncryptionConfigurationPropertyToHclTerraform(struct?: AwsTable.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,7 +420,7 @@ export function tfTableEncryptionConfigurationPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfTableMaintenanceConfigurationIcebergCompactionSettingsPropertyToTerraform(struct?: TfTable.MaintenanceConfigurationIcebergCompactionSettingsProperty | cdktn.IResolvable): any {
+export function awsTableMaintenanceConfigurationIcebergCompactionSettingsPropertyToTerraform(struct?: AwsTable.MaintenanceConfigurationIcebergCompactionSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,7 +431,7 @@ export function tfTableMaintenanceConfigurationIcebergCompactionSettingsProperty
 }
 
 
-export function tfTableMaintenanceConfigurationIcebergCompactionSettingsPropertyToHclTerraform(struct?: TfTable.MaintenanceConfigurationIcebergCompactionSettingsProperty | cdktn.IResolvable): any {
+export function awsTableMaintenanceConfigurationIcebergCompactionSettingsPropertyToHclTerraform(struct?: AwsTable.MaintenanceConfigurationIcebergCompactionSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -450,26 +450,26 @@ export function tfTableMaintenanceConfigurationIcebergCompactionSettingsProperty
 }
 
 
-export function tfTableIcebergCompactionPropertyToTerraform(struct?: TfTable.IcebergCompactionProperty | cdktn.IResolvable): any {
+export function awsTableIcebergCompactionPropertyToTerraform(struct?: AwsTable.IcebergCompactionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    settings: tfTableMaintenanceConfigurationIcebergCompactionSettingsPropertyToTerraform(struct!.settings),
+    settings: awsTableMaintenanceConfigurationIcebergCompactionSettingsPropertyToTerraform(struct!.settings),
     status: cdktn.stringToTerraform(struct!.status),
   }
 }
 
 
-export function tfTableIcebergCompactionPropertyToHclTerraform(struct?: TfTable.IcebergCompactionProperty | cdktn.IResolvable): any {
+export function awsTableIcebergCompactionPropertyToHclTerraform(struct?: AwsTable.IcebergCompactionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     settings: {
-      value: tfTableMaintenanceConfigurationIcebergCompactionSettingsPropertyToHclTerraform(struct!.settings),
+      value: awsTableMaintenanceConfigurationIcebergCompactionSettingsPropertyToHclTerraform(struct!.settings),
       isBlock: true,
       type: "struct",
       storageClassType: "MaintenanceConfigurationIcebergCompactionSettingsProperty",
@@ -487,7 +487,7 @@ export function tfTableIcebergCompactionPropertyToHclTerraform(struct?: TfTable.
 }
 
 
-export function tfTableMaintenanceConfigurationIcebergSnapshotManagementSettingsPropertyToTerraform(struct?: TfTable.MaintenanceConfigurationIcebergSnapshotManagementSettingsProperty | cdktn.IResolvable): any {
+export function awsTableMaintenanceConfigurationIcebergSnapshotManagementSettingsPropertyToTerraform(struct?: AwsTable.MaintenanceConfigurationIcebergSnapshotManagementSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -499,7 +499,7 @@ export function tfTableMaintenanceConfigurationIcebergSnapshotManagementSettings
 }
 
 
-export function tfTableMaintenanceConfigurationIcebergSnapshotManagementSettingsPropertyToHclTerraform(struct?: TfTable.MaintenanceConfigurationIcebergSnapshotManagementSettingsProperty | cdktn.IResolvable): any {
+export function awsTableMaintenanceConfigurationIcebergSnapshotManagementSettingsPropertyToHclTerraform(struct?: AwsTable.MaintenanceConfigurationIcebergSnapshotManagementSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -524,26 +524,26 @@ export function tfTableMaintenanceConfigurationIcebergSnapshotManagementSettings
 }
 
 
-export function tfTableIcebergSnapshotManagementPropertyToTerraform(struct?: TfTable.IcebergSnapshotManagementProperty | cdktn.IResolvable): any {
+export function awsTableIcebergSnapshotManagementPropertyToTerraform(struct?: AwsTable.IcebergSnapshotManagementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    settings: tfTableMaintenanceConfigurationIcebergSnapshotManagementSettingsPropertyToTerraform(struct!.settings),
+    settings: awsTableMaintenanceConfigurationIcebergSnapshotManagementSettingsPropertyToTerraform(struct!.settings),
     status: cdktn.stringToTerraform(struct!.status),
   }
 }
 
 
-export function tfTableIcebergSnapshotManagementPropertyToHclTerraform(struct?: TfTable.IcebergSnapshotManagementProperty | cdktn.IResolvable): any {
+export function awsTableIcebergSnapshotManagementPropertyToHclTerraform(struct?: AwsTable.IcebergSnapshotManagementProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     settings: {
-      value: tfTableMaintenanceConfigurationIcebergSnapshotManagementSettingsPropertyToHclTerraform(struct!.settings),
+      value: awsTableMaintenanceConfigurationIcebergSnapshotManagementSettingsPropertyToHclTerraform(struct!.settings),
       isBlock: true,
       type: "struct",
       storageClassType: "MaintenanceConfigurationIcebergSnapshotManagementSettingsProperty",
@@ -561,32 +561,32 @@ export function tfTableIcebergSnapshotManagementPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfTableMaintenanceConfigurationPropertyToTerraform(struct?: TfTable.MaintenanceConfigurationProperty | cdktn.IResolvable): any {
+export function awsTableMaintenanceConfigurationPropertyToTerraform(struct?: AwsTable.MaintenanceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    iceberg_compaction: tfTableIcebergCompactionPropertyToTerraform(struct!.icebergCompaction),
-    iceberg_snapshot_management: tfTableIcebergSnapshotManagementPropertyToTerraform(struct!.icebergSnapshotManagement),
+    iceberg_compaction: awsTableIcebergCompactionPropertyToTerraform(struct!.icebergCompaction),
+    iceberg_snapshot_management: awsTableIcebergSnapshotManagementPropertyToTerraform(struct!.icebergSnapshotManagement),
   }
 }
 
 
-export function tfTableMaintenanceConfigurationPropertyToHclTerraform(struct?: TfTable.MaintenanceConfigurationProperty | cdktn.IResolvable): any {
+export function awsTableMaintenanceConfigurationPropertyToHclTerraform(struct?: AwsTable.MaintenanceConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     iceberg_compaction: {
-      value: tfTableIcebergCompactionPropertyToHclTerraform(struct!.icebergCompaction),
+      value: awsTableIcebergCompactionPropertyToHclTerraform(struct!.icebergCompaction),
       isBlock: true,
       type: "struct",
       storageClassType: "IcebergCompactionProperty",
     },
     iceberg_snapshot_management: {
-      value: tfTableIcebergSnapshotManagementPropertyToHclTerraform(struct!.icebergSnapshotManagement),
+      value: awsTableIcebergSnapshotManagementPropertyToHclTerraform(struct!.icebergSnapshotManagement),
       isBlock: true,
       type: "struct",
       storageClassType: "IcebergSnapshotManagementProperty",
@@ -598,7 +598,7 @@ export function tfTableMaintenanceConfigurationPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfTableFieldPropertyToTerraform(struct?: TfTable.FieldProperty | cdktn.IResolvable): any {
+export function awsTableFieldPropertyToTerraform(struct?: AwsTable.FieldProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -611,7 +611,7 @@ export function tfTableFieldPropertyToTerraform(struct?: TfTable.FieldProperty |
 }
 
 
-export function tfTableFieldPropertyToHclTerraform(struct?: TfTable.FieldProperty | cdktn.IResolvable): any {
+export function awsTableFieldPropertyToHclTerraform(struct?: AwsTable.FieldProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -642,25 +642,25 @@ export function tfTableFieldPropertyToHclTerraform(struct?: TfTable.FieldPropert
 }
 
 
-export function tfTableSchemaPropertyToTerraform(struct?: TfTable.SchemaProperty | cdktn.IResolvable): any {
+export function awsTableSchemaPropertyToTerraform(struct?: AwsTable.SchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    field: cdktn.listMapper(tfTableFieldPropertyToTerraform, true)(struct!.field),
+    field: cdktn.listMapper(awsTableFieldPropertyToTerraform, true)(struct!.field),
   }
 }
 
 
-export function tfTableSchemaPropertyToHclTerraform(struct?: TfTable.SchemaProperty | cdktn.IResolvable): any {
+export function awsTableSchemaPropertyToHclTerraform(struct?: AwsTable.SchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     field: {
-      value: cdktn.listMapperHcl(tfTableFieldPropertyToHclTerraform, true)(struct!.field),
+      value: cdktn.listMapperHcl(awsTableFieldPropertyToHclTerraform, true)(struct!.field),
       isBlock: true,
       type: "list",
       storageClassType: "FieldPropertyList",
@@ -672,19 +672,19 @@ export function tfTableSchemaPropertyToHclTerraform(struct?: TfTable.SchemaPrope
 }
 
 
-export function tfTableIcebergPropertyToTerraform(struct?: TfTable.IcebergProperty | cdktn.IResolvable): any {
+export function awsTableIcebergPropertyToTerraform(struct?: AwsTable.IcebergProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     properties: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.properties),
-    schema: cdktn.listMapper(tfTableSchemaPropertyToTerraform, true)(struct!.schema),
+    schema: cdktn.listMapper(awsTableSchemaPropertyToTerraform, true)(struct!.schema),
   }
 }
 
 
-export function tfTableIcebergPropertyToHclTerraform(struct?: TfTable.IcebergProperty | cdktn.IResolvable): any {
+export function awsTableIcebergPropertyToHclTerraform(struct?: AwsTable.IcebergProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -697,7 +697,7 @@ export function tfTableIcebergPropertyToHclTerraform(struct?: TfTable.IcebergPro
       storageClassType: "stringMap",
     },
     schema: {
-      value: cdktn.listMapperHcl(tfTableSchemaPropertyToHclTerraform, true)(struct!.schema),
+      value: cdktn.listMapperHcl(awsTableSchemaPropertyToHclTerraform, true)(struct!.schema),
       isBlock: true,
       type: "list",
       storageClassType: "SchemaPropertyList",
@@ -709,25 +709,25 @@ export function tfTableIcebergPropertyToHclTerraform(struct?: TfTable.IcebergPro
 }
 
 
-export function tfTableMetadataPropertyToTerraform(struct?: TfTable.MetadataProperty | cdktn.IResolvable): any {
+export function awsTableMetadataPropertyToTerraform(struct?: AwsTable.MetadataProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    iceberg: cdktn.listMapper(tfTableIcebergPropertyToTerraform, true)(struct!.iceberg),
+    iceberg: cdktn.listMapper(awsTableIcebergPropertyToTerraform, true)(struct!.iceberg),
   }
 }
 
 
-export function tfTableMetadataPropertyToHclTerraform(struct?: TfTable.MetadataProperty | cdktn.IResolvable): any {
+export function awsTableMetadataPropertyToHclTerraform(struct?: AwsTable.MetadataProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     iceberg: {
-      value: cdktn.listMapperHcl(tfTableIcebergPropertyToHclTerraform, true)(struct!.iceberg),
+      value: cdktn.listMapperHcl(awsTableIcebergPropertyToHclTerraform, true)(struct!.iceberg),
       isBlock: true,
       type: "list",
       storageClassType: "IcebergPropertyList",
@@ -739,14 +739,14 @@ export function tfTableMetadataPropertyToHclTerraform(struct?: TfTable.MetadataP
 }
 
 
-export namespace TfTable {
+export namespace AwsTable {
 export interface EncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#kms_key_arn TfTable#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#kms_key_arn AwsTable#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#sse_algorithm TfTable#sse_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#sse_algorithm AwsTable#sse_algorithm}
   */
   readonly sseAlgorithm?: string;
 }
@@ -832,7 +832,7 @@ export class EncryptionConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface MaintenanceConfigurationIcebergCompactionSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#target_file_size_mb TfTable#target_file_size_mb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#target_file_size_mb AwsTable#target_file_size_mb}
   */
   readonly targetFileSizeMb?: number;
 }
@@ -896,11 +896,11 @@ export class MaintenanceConfigurationIcebergCompactionSettingsPropertyOutputRefe
 }
 export interface IcebergCompactionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#settings TfTable#settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#settings AwsTable#settings}
   */
   readonly settings?: MaintenanceConfigurationIcebergCompactionSettingsProperty;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#status TfTable#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#status AwsTable#status}
   */
   readonly status?: string;
 }
@@ -986,11 +986,11 @@ export class IcebergCompactionPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface MaintenanceConfigurationIcebergSnapshotManagementSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#max_snapshot_age_hours TfTable#max_snapshot_age_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#max_snapshot_age_hours AwsTable#max_snapshot_age_hours}
   */
   readonly maxSnapshotAgeHours?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#min_snapshots_to_keep TfTable#min_snapshots_to_keep}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#min_snapshots_to_keep AwsTable#min_snapshots_to_keep}
   */
   readonly minSnapshotsToKeep?: number;
 }
@@ -1076,11 +1076,11 @@ export class MaintenanceConfigurationIcebergSnapshotManagementSettingsPropertyOu
 }
 export interface IcebergSnapshotManagementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#settings TfTable#settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#settings AwsTable#settings}
   */
   readonly settings?: MaintenanceConfigurationIcebergSnapshotManagementSettingsProperty;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#status TfTable#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#status AwsTable#status}
   */
   readonly status?: string;
 }
@@ -1166,11 +1166,11 @@ export class IcebergSnapshotManagementPropertyOutputReference extends cdktn.Comp
 }
 export interface MaintenanceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#iceberg_compaction TfTable#iceberg_compaction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#iceberg_compaction AwsTable#iceberg_compaction}
   */
   readonly icebergCompaction?: IcebergCompactionProperty;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#iceberg_snapshot_management TfTable#iceberg_snapshot_management}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#iceberg_snapshot_management AwsTable#iceberg_snapshot_management}
   */
   readonly icebergSnapshotManagement?: IcebergSnapshotManagementProperty;
 }
@@ -1258,19 +1258,19 @@ export interface FieldProperty {
   /**
   * The name of the field.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#name TfTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#name AwsTable#name}
   */
   readonly name: string;
   /**
   * A Boolean value that specifies whether values are required for each row in this field. Default: false.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#required TfTable#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#required AwsTable#required}
   */
   readonly required?: boolean | cdktn.IResolvable;
   /**
   * The field type. S3 Tables supports all Apache Iceberg primitive types.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#type TfTable#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#type AwsTable#type}
   */
   readonly type: string;
 }
@@ -1396,7 +1396,7 @@ export interface SchemaProperty {
   /**
   * field block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#field TfTable#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#field AwsTable#field}
   */
   readonly field?: FieldProperty[] | cdktn.IResolvable;
 }
@@ -1484,13 +1484,13 @@ export interface IcebergProperty {
   /**
   * A map of configuration properties for the Iceberg table, for example `write.distribution-mode` and `write.sort-order`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#properties TfTable#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#properties AwsTable#properties}
   */
   readonly properties?: { [key: string]: string };
   /**
   * schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#schema TfTable#schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#schema AwsTable#schema}
   */
   readonly schema?: SchemaProperty[] | cdktn.IResolvable;
 }
@@ -1600,7 +1600,7 @@ export interface MetadataProperty {
   /**
   * iceberg block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#iceberg TfTable#iceberg}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table#iceberg AwsTable#iceberg}
   */
   readonly iceberg?: IcebergProperty[] | cdktn.IResolvable;
 }

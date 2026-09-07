@@ -5,74 +5,74 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDeviceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDeviceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#description TfDevice#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#description AwsDevice#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#global_network_id TfDevice#global_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#global_network_id AwsDevice#global_network_id}
   */
   readonly globalNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#id TfDevice#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#id AwsDevice#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#model TfDevice#model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#model AwsDevice#model}
   */
   readonly model?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#serial_number TfDevice#serial_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#serial_number AwsDevice#serial_number}
   */
   readonly serialNumber?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#site_id TfDevice#site_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#site_id AwsDevice#site_id}
   */
   readonly siteId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#tags TfDevice#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#tags AwsDevice#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#tags_all TfDevice#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#tags_all AwsDevice#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#type TfDevice#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#type AwsDevice#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#vendor TfDevice#vendor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#vendor AwsDevice#vendor}
   */
   readonly vendor?: string;
   /**
   * aws_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#aws_location TfDevice#aws_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#aws_location AwsDevice#aws_location}
   */
-  readonly awsLocation?: TfDevice.AwsLocationProperty;
+  readonly awsLocation?: AwsDevice.AwsLocationProperty;
   /**
   * location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#location TfDevice#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#location AwsDevice#location}
   */
-  readonly location?: TfDevice.LocationProperty;
+  readonly location?: AwsDevice.LocationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#timeouts TfDevice#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#timeouts AwsDevice#timeouts}
   */
-  readonly timeouts?: TfDevice.TimeoutsProperty;
+  readonly timeouts?: AwsDevice.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device aws_networkmanager_device}
 */
-export class TfDevice extends cdktn.TerraformResource {
+export class AwsDevice extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -83,11 +83,11 @@ export class TfDevice extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDevice resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDevice resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDevice to import
-  * @param importFromId The id of the existing TfDevice that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDevice to import is found
+  * @param importToId The construct id used in the generated config for the AwsDevice to import
+  * @param importFromId The id of the existing AwsDevice that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDevice to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_device", importId: importFromId, provider });
@@ -102,9 +102,9 @@ export class TfDevice extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDeviceConfig
+  * @param options AwsDeviceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDeviceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDeviceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_device',
       terraformGeneratorMetadata: {
@@ -302,11 +302,11 @@ export class TfDevice extends cdktn.TerraformResource {
   }
 
   // aws_location - computed: false, optional: true, required: false
-  private _awsLocation = new TfDevice.AwsLocationPropertyOutputReference(this, "aws_location");
+  private _awsLocation = new AwsDevice.AwsLocationPropertyOutputReference(this, "aws_location");
   public get awsLocation() {
     return this._awsLocation;
   }
-  public putAwsLocation(value: TfDevice.AwsLocationProperty) {
+  public putAwsLocation(value: AwsDevice.AwsLocationProperty) {
     this._awsLocation.internalValue = value;
   }
   public resetAwsLocation() {
@@ -318,11 +318,11 @@ export class TfDevice extends cdktn.TerraformResource {
   }
 
   // location - computed: false, optional: true, required: false
-  private _location = new TfDevice.LocationPropertyOutputReference(this, "location");
+  private _location = new AwsDevice.LocationPropertyOutputReference(this, "location");
   public get location() {
     return this._location;
   }
-  public putLocation(value: TfDevice.LocationProperty) {
+  public putLocation(value: AwsDevice.LocationProperty) {
     this._location.internalValue = value;
   }
   public resetLocation() {
@@ -334,11 +334,11 @@ export class TfDevice extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDevice.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsDevice.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDevice.TimeoutsProperty) {
+  public putTimeouts(value: AwsDevice.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -365,9 +365,9 @@ export class TfDevice extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
       vendor: cdktn.stringToTerraform(this._vendor),
-      aws_location: tfDeviceAwsLocationPropertyToTerraform(this._awsLocation.internalValue),
-      location: tfDeviceLocationPropertyToTerraform(this._location.internalValue),
-      timeouts: tfDeviceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      aws_location: awsDeviceAwsLocationPropertyToTerraform(this._awsLocation.internalValue),
+      location: awsDeviceLocationPropertyToTerraform(this._location.internalValue),
+      timeouts: awsDeviceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -434,22 +434,22 @@ export class TfDevice extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       aws_location: {
-        value: tfDeviceAwsLocationPropertyToHclTerraform(this._awsLocation.internalValue),
+        value: awsDeviceAwsLocationPropertyToHclTerraform(this._awsLocation.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDevice.AwsLocationPropertyList",
+        storageClassType: "AwsDevice.AwsLocationPropertyList",
       },
       location: {
-        value: tfDeviceLocationPropertyToHclTerraform(this._location.internalValue),
+        value: awsDeviceLocationPropertyToHclTerraform(this._location.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDevice.LocationPropertyList",
+        storageClassType: "AwsDevice.LocationPropertyList",
       },
       timeouts: {
-        value: tfDeviceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsDeviceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDevice.TimeoutsProperty",
+        storageClassType: "AwsDevice.TimeoutsProperty",
       },
     };
 
@@ -458,7 +458,7 @@ export class TfDevice extends cdktn.TerraformResource {
   }
 }
 
-export function tfDeviceAwsLocationPropertyToTerraform(struct?: TfDevice.AwsLocationPropertyOutputReference | TfDevice.AwsLocationProperty): any {
+export function awsDeviceAwsLocationPropertyToTerraform(struct?: AwsDevice.AwsLocationPropertyOutputReference | AwsDevice.AwsLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -470,7 +470,7 @@ export function tfDeviceAwsLocationPropertyToTerraform(struct?: TfDevice.AwsLoca
 }
 
 
-export function tfDeviceAwsLocationPropertyToHclTerraform(struct?: TfDevice.AwsLocationPropertyOutputReference | TfDevice.AwsLocationProperty): any {
+export function awsDeviceAwsLocationPropertyToHclTerraform(struct?: AwsDevice.AwsLocationPropertyOutputReference | AwsDevice.AwsLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -495,7 +495,7 @@ export function tfDeviceAwsLocationPropertyToHclTerraform(struct?: TfDevice.AwsL
 }
 
 
-export function tfDeviceLocationPropertyToTerraform(struct?: TfDevice.LocationPropertyOutputReference | TfDevice.LocationProperty): any {
+export function awsDeviceLocationPropertyToTerraform(struct?: AwsDevice.LocationPropertyOutputReference | AwsDevice.LocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -508,7 +508,7 @@ export function tfDeviceLocationPropertyToTerraform(struct?: TfDevice.LocationPr
 }
 
 
-export function tfDeviceLocationPropertyToHclTerraform(struct?: TfDevice.LocationPropertyOutputReference | TfDevice.LocationProperty): any {
+export function awsDeviceLocationPropertyToHclTerraform(struct?: AwsDevice.LocationPropertyOutputReference | AwsDevice.LocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -539,7 +539,7 @@ export function tfDeviceLocationPropertyToHclTerraform(struct?: TfDevice.Locatio
 }
 
 
-export function tfDeviceTimeoutsPropertyToTerraform(struct?: TfDevice.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDeviceTimeoutsPropertyToTerraform(struct?: AwsDevice.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -552,7 +552,7 @@ export function tfDeviceTimeoutsPropertyToTerraform(struct?: TfDevice.TimeoutsPr
 }
 
 
-export function tfDeviceTimeoutsPropertyToHclTerraform(struct?: TfDevice.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDeviceTimeoutsPropertyToHclTerraform(struct?: AwsDevice.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -583,14 +583,14 @@ export function tfDeviceTimeoutsPropertyToHclTerraform(struct?: TfDevice.Timeout
 }
 
 
-export namespace TfDevice {
+export namespace AwsDevice {
 export interface AwsLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#subnet_arn TfDevice#subnet_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#subnet_arn AwsDevice#subnet_arn}
   */
   readonly subnetArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#zone TfDevice#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#zone AwsDevice#zone}
   */
   readonly zone?: string;
 }
@@ -666,15 +666,15 @@ export class AwsLocationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#address TfDevice#address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#address AwsDevice#address}
   */
   readonly address?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#latitude TfDevice#latitude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#latitude AwsDevice#latitude}
   */
   readonly latitude?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#longitude TfDevice#longitude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#longitude AwsDevice#longitude}
   */
   readonly longitude?: string;
 }
@@ -772,15 +772,15 @@ export class LocationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#create TfDevice#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#create AwsDevice#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#delete TfDevice#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#delete AwsDevice#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#update TfDevice#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_device#update AwsDevice#update}
   */
   readonly update?: string;
 }

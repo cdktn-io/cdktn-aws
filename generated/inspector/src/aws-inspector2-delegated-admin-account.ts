@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDelegatedAdminAccountConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDelegatedAdminAccountConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_delegated_admin_account#account_id TfDelegatedAdminAccount#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_delegated_admin_account#account_id AwsDelegatedAdminAccount#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_delegated_admin_account#id TfDelegatedAdminAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_delegated_admin_account#id AwsDelegatedAdminAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,21 +20,21 @@ export interface TfDelegatedAdminAccountConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_delegated_admin_account#region TfDelegatedAdminAccount#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_delegated_admin_account#region AwsDelegatedAdminAccount#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_delegated_admin_account#timeouts TfDelegatedAdminAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_delegated_admin_account#timeouts AwsDelegatedAdminAccount#timeouts}
   */
-  readonly timeouts?: TfDelegatedAdminAccount.TimeoutsProperty;
+  readonly timeouts?: AwsDelegatedAdminAccount.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_delegated_admin_account aws_inspector2_delegated_admin_account}
 */
-export class TfDelegatedAdminAccount extends cdktn.TerraformResource {
+export class AwsDelegatedAdminAccount extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfDelegatedAdminAccount extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDelegatedAdminAccount resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDelegatedAdminAccount resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDelegatedAdminAccount to import
-  * @param importFromId The id of the existing TfDelegatedAdminAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_delegated_admin_account#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDelegatedAdminAccount to import is found
+  * @param importToId The construct id used in the generated config for the AwsDelegatedAdminAccount to import
+  * @param importFromId The id of the existing AwsDelegatedAdminAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_delegated_admin_account#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDelegatedAdminAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_inspector2_delegated_admin_account", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfDelegatedAdminAccount extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDelegatedAdminAccountConfig
+  * @param options AwsDelegatedAdminAccountConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDelegatedAdminAccountConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDelegatedAdminAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_inspector2_delegated_admin_account',
       terraformGeneratorMetadata: {
@@ -143,11 +143,11 @@ export class TfDelegatedAdminAccount extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDelegatedAdminAccount.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsDelegatedAdminAccount.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDelegatedAdminAccount.TimeoutsProperty) {
+  public putTimeouts(value: AwsDelegatedAdminAccount.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -167,7 +167,7 @@ export class TfDelegatedAdminAccount extends cdktn.TerraformResource {
       account_id: cdktn.stringToTerraform(this._accountId),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfDelegatedAdminAccountTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsDelegatedAdminAccountTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -192,10 +192,10 @@ export class TfDelegatedAdminAccount extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfDelegatedAdminAccountTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsDelegatedAdminAccountTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDelegatedAdminAccount.TimeoutsProperty",
+        storageClassType: "AwsDelegatedAdminAccount.TimeoutsProperty",
       },
     };
 
@@ -204,7 +204,7 @@ export class TfDelegatedAdminAccount extends cdktn.TerraformResource {
   }
 }
 
-export function tfDelegatedAdminAccountTimeoutsPropertyToTerraform(struct?: TfDelegatedAdminAccount.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDelegatedAdminAccountTimeoutsPropertyToTerraform(struct?: AwsDelegatedAdminAccount.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,7 +216,7 @@ export function tfDelegatedAdminAccountTimeoutsPropertyToTerraform(struct?: TfDe
 }
 
 
-export function tfDelegatedAdminAccountTimeoutsPropertyToHclTerraform(struct?: TfDelegatedAdminAccount.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDelegatedAdminAccountTimeoutsPropertyToHclTerraform(struct?: AwsDelegatedAdminAccount.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,14 +241,14 @@ export function tfDelegatedAdminAccountTimeoutsPropertyToHclTerraform(struct?: T
 }
 
 
-export namespace TfDelegatedAdminAccount {
+export namespace AwsDelegatedAdminAccount {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_delegated_admin_account#create TfDelegatedAdminAccount#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_delegated_admin_account#create AwsDelegatedAdminAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_delegated_admin_account#delete TfDelegatedAdminAccount#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/inspector2_delegated_admin_account#delete AwsDelegatedAdminAccount#delete}
   */
   readonly delete?: string;
 }

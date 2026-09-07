@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfDirectoryConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsDirectoryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/directory_service_directory#directory_id DataTfDirectory#directory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/directory_service_directory#directory_id DataAwsDirectory#directory_id}
   */
   readonly directoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/directory_service_directory#id DataTfDirectory#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/directory_service_directory#id DataAwsDirectory#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface DataTfDirectoryConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/directory_service_directory#region DataTfDirectory#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/directory_service_directory#region DataAwsDirectory#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/directory_service_directory#tags DataTfDirectory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/directory_service_directory#tags DataAwsDirectory#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataTfDirectoryConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/directory_service_directory aws_directory_service_directory}
 */
-export class DataTfDirectory extends cdktn.TerraformDataSource {
+export class DataAwsDirectory extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfDirectory extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfDirectory resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsDirectory resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfDirectory to import
-  * @param importFromId The id of the existing DataTfDirectory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/directory_service_directory#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfDirectory to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsDirectory to import
+  * @param importFromId The id of the existing DataAwsDirectory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/directory_service_directory#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsDirectory to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_directory_service_directory", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfDirectory extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfDirectoryConfig
+  * @param options DataAwsDirectoryConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfDirectoryConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsDirectoryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_directory_service_directory',
       terraformGeneratorMetadata: {
@@ -101,7 +101,7 @@ export class DataTfDirectory extends cdktn.TerraformDataSource {
   }
 
   // connect_settings - computed: true, optional: false, required: false
-  private _connectSettings = new DataTfDirectory.ConnectSettingsPropertyList(this, "connect_settings", false);
+  private _connectSettings = new DataAwsDirectory.ConnectSettingsPropertyList(this, "connect_settings", false);
   public get connectSettings() {
     return this._connectSettings;
   }
@@ -161,7 +161,7 @@ export class DataTfDirectory extends cdktn.TerraformDataSource {
   }
 
   // radius_settings - computed: true, optional: false, required: false
-  private _radiusSettings = new DataTfDirectory.RadiusSettingsPropertyList(this, "radius_settings", false);
+  private _radiusSettings = new DataAwsDirectory.RadiusSettingsPropertyList(this, "radius_settings", false);
   public get radiusSettings() {
     return this._radiusSettings;
   }
@@ -219,7 +219,7 @@ export class DataTfDirectory extends cdktn.TerraformDataSource {
   }
 
   // vpc_settings - computed: true, optional: false, required: false
-  private _vpcSettings = new DataTfDirectory.VpcSettingsPropertyList(this, "vpc_settings", false);
+  private _vpcSettings = new DataAwsDirectory.VpcSettingsPropertyList(this, "vpc_settings", false);
   public get vpcSettings() {
     return this._vpcSettings;
   }
@@ -270,7 +270,7 @@ export class DataTfDirectory extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfDirectoryConnectSettingsPropertyToTerraform(struct?: DataTfDirectory.ConnectSettingsProperty): any {
+export function dataAwsDirectoryConnectSettingsPropertyToTerraform(struct?: DataAwsDirectory.ConnectSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -280,7 +280,7 @@ export function dataTfDirectoryConnectSettingsPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfDirectoryConnectSettingsPropertyToHclTerraform(struct?: DataTfDirectory.ConnectSettingsProperty): any {
+export function dataAwsDirectoryConnectSettingsPropertyToHclTerraform(struct?: DataAwsDirectory.ConnectSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -291,7 +291,7 @@ export function dataTfDirectoryConnectSettingsPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfDirectoryRadiusSettingsPropertyToTerraform(struct?: DataTfDirectory.RadiusSettingsProperty): any {
+export function dataAwsDirectoryRadiusSettingsPropertyToTerraform(struct?: DataAwsDirectory.RadiusSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function dataTfDirectoryRadiusSettingsPropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfDirectoryRadiusSettingsPropertyToHclTerraform(struct?: DataTfDirectory.RadiusSettingsProperty): any {
+export function dataAwsDirectoryRadiusSettingsPropertyToHclTerraform(struct?: DataAwsDirectory.RadiusSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,7 +312,7 @@ export function dataTfDirectoryRadiusSettingsPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataTfDirectoryVpcSettingsPropertyToTerraform(struct?: DataTfDirectory.VpcSettingsProperty): any {
+export function dataAwsDirectoryVpcSettingsPropertyToTerraform(struct?: DataAwsDirectory.VpcSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function dataTfDirectoryVpcSettingsPropertyToTerraform(struct?: DataTfDir
 }
 
 
-export function dataTfDirectoryVpcSettingsPropertyToHclTerraform(struct?: DataTfDirectory.VpcSettingsProperty): any {
+export function dataAwsDirectoryVpcSettingsPropertyToHclTerraform(struct?: DataAwsDirectory.VpcSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -333,7 +333,7 @@ export function dataTfDirectoryVpcSettingsPropertyToHclTerraform(struct?: DataTf
 }
 
 
-export namespace DataTfDirectory {
+export namespace DataAwsDirectory {
 export interface ConnectSettingsProperty {
 }
 export class ConnectSettingsPropertyOutputReference extends cdktn.ComplexObject {

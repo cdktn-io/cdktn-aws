@@ -5,174 +5,174 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfUserPoolConfig extends cdktn.TerraformMetaArguments {
+export interface AwsUserPoolConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#alias_attributes TfUserPool#alias_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#alias_attributes AwsUserPool#alias_attributes}
   */
   readonly aliasAttributes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#auto_verified_attributes TfUserPool#auto_verified_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#auto_verified_attributes AwsUserPool#auto_verified_attributes}
   */
   readonly autoVerifiedAttributes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#deletion_protection TfUserPool#deletion_protection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#deletion_protection AwsUserPool#deletion_protection}
   */
   readonly deletionProtection?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_verification_message TfUserPool#email_verification_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_verification_message AwsUserPool#email_verification_message}
   */
   readonly emailVerificationMessage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_verification_subject TfUserPool#email_verification_subject}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_verification_subject AwsUserPool#email_verification_subject}
   */
   readonly emailVerificationSubject?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#id TfUserPool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#id AwsUserPool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#mfa_configuration TfUserPool#mfa_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#mfa_configuration AwsUserPool#mfa_configuration}
   */
   readonly mfaConfiguration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#name TfUserPool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#name AwsUserPool#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#region TfUserPool#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#region AwsUserPool#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#sms_authentication_message TfUserPool#sms_authentication_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#sms_authentication_message AwsUserPool#sms_authentication_message}
   */
   readonly smsAuthenticationMessage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#sms_verification_message TfUserPool#sms_verification_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#sms_verification_message AwsUserPool#sms_verification_message}
   */
   readonly smsVerificationMessage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#tags TfUserPool#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#tags AwsUserPool#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#tags_all TfUserPool#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#tags_all AwsUserPool#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#user_pool_tier TfUserPool#user_pool_tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#user_pool_tier AwsUserPool#user_pool_tier}
   */
   readonly userPoolTier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#username_attributes TfUserPool#username_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#username_attributes AwsUserPool#username_attributes}
   */
   readonly usernameAttributes?: string[];
   /**
   * account_recovery_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#account_recovery_setting TfUserPool#account_recovery_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#account_recovery_setting AwsUserPool#account_recovery_setting}
   */
-  readonly accountRecoverySetting?: TfUserPool.AccountRecoverySettingProperty;
+  readonly accountRecoverySetting?: AwsUserPool.AccountRecoverySettingProperty;
   /**
   * admin_create_user_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#admin_create_user_config TfUserPool#admin_create_user_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#admin_create_user_config AwsUserPool#admin_create_user_config}
   */
-  readonly adminCreateUserConfig?: TfUserPool.AdminCreateUserConfigProperty;
+  readonly adminCreateUserConfig?: AwsUserPool.AdminCreateUserConfigProperty;
   /**
   * device_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#device_configuration TfUserPool#device_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#device_configuration AwsUserPool#device_configuration}
   */
-  readonly deviceConfiguration?: TfUserPool.DeviceConfigurationProperty;
+  readonly deviceConfiguration?: AwsUserPool.DeviceConfigurationProperty;
   /**
   * email_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_configuration TfUserPool#email_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_configuration AwsUserPool#email_configuration}
   */
-  readonly emailConfiguration?: TfUserPool.EmailConfigurationProperty;
+  readonly emailConfiguration?: AwsUserPool.EmailConfigurationProperty;
   /**
   * email_mfa_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_mfa_configuration TfUserPool#email_mfa_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_mfa_configuration AwsUserPool#email_mfa_configuration}
   */
-  readonly emailMfaConfiguration?: TfUserPool.EmailMfaConfigurationProperty;
+  readonly emailMfaConfiguration?: AwsUserPool.EmailMfaConfigurationProperty;
   /**
   * lambda_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#lambda_config TfUserPool#lambda_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#lambda_config AwsUserPool#lambda_config}
   */
-  readonly lambdaConfig?: TfUserPool.LambdaConfigProperty;
+  readonly lambdaConfig?: AwsUserPool.LambdaConfigProperty;
   /**
   * password_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#password_policy TfUserPool#password_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#password_policy AwsUserPool#password_policy}
   */
-  readonly passwordPolicy?: TfUserPool.PasswordPolicyProperty;
+  readonly passwordPolicy?: AwsUserPool.PasswordPolicyProperty;
   /**
   * schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#schema TfUserPool#schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#schema AwsUserPool#schema}
   */
-  readonly schema?: TfUserPool.SchemaProperty[] | cdktn.IResolvable;
+  readonly schema?: AwsUserPool.SchemaProperty[] | cdktn.IResolvable;
   /**
   * sign_in_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#sign_in_policy TfUserPool#sign_in_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#sign_in_policy AwsUserPool#sign_in_policy}
   */
-  readonly signInPolicy?: TfUserPool.SignInPolicyProperty;
+  readonly signInPolicy?: AwsUserPool.SignInPolicyProperty;
   /**
   * sms_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#sms_configuration TfUserPool#sms_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#sms_configuration AwsUserPool#sms_configuration}
   */
-  readonly smsConfiguration?: TfUserPool.SmsConfigurationProperty;
+  readonly smsConfiguration?: AwsUserPool.SmsConfigurationProperty;
   /**
   * software_token_mfa_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#software_token_mfa_configuration TfUserPool#software_token_mfa_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#software_token_mfa_configuration AwsUserPool#software_token_mfa_configuration}
   */
-  readonly softwareTokenMfaConfiguration?: TfUserPool.SoftwareTokenMfaConfigurationProperty;
+  readonly softwareTokenMfaConfiguration?: AwsUserPool.SoftwareTokenMfaConfigurationProperty;
   /**
   * user_attribute_update_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#user_attribute_update_settings TfUserPool#user_attribute_update_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#user_attribute_update_settings AwsUserPool#user_attribute_update_settings}
   */
-  readonly userAttributeUpdateSettings?: TfUserPool.UserAttributeUpdateSettingsProperty;
+  readonly userAttributeUpdateSettings?: AwsUserPool.UserAttributeUpdateSettingsProperty;
   /**
   * user_pool_add_ons block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#user_pool_add_ons TfUserPool#user_pool_add_ons}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#user_pool_add_ons AwsUserPool#user_pool_add_ons}
   */
-  readonly userPoolAddOns?: TfUserPool.UserPoolAddOnsProperty;
+  readonly userPoolAddOns?: AwsUserPool.UserPoolAddOnsProperty;
   /**
   * username_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#username_configuration TfUserPool#username_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#username_configuration AwsUserPool#username_configuration}
   */
-  readonly usernameConfiguration?: TfUserPool.UsernameConfigurationProperty;
+  readonly usernameConfiguration?: AwsUserPool.UsernameConfigurationProperty;
   /**
   * verification_message_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#verification_message_template TfUserPool#verification_message_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#verification_message_template AwsUserPool#verification_message_template}
   */
-  readonly verificationMessageTemplate?: TfUserPool.VerificationMessageTemplateProperty;
+  readonly verificationMessageTemplate?: AwsUserPool.VerificationMessageTemplateProperty;
   /**
   * web_authn_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#web_authn_configuration TfUserPool#web_authn_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#web_authn_configuration AwsUserPool#web_authn_configuration}
   */
-  readonly webAuthnConfiguration?: TfUserPool.WebAuthnConfigurationProperty;
+  readonly webAuthnConfiguration?: AwsUserPool.WebAuthnConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool aws_cognito_user_pool}
 */
-export class TfUserPool extends cdktn.TerraformResource {
+export class AwsUserPool extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -183,11 +183,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfUserPool resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsUserPool resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfUserPool to import
-  * @param importFromId The id of the existing TfUserPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfUserPool to import is found
+  * @param importToId The construct id used in the generated config for the AwsUserPool to import
+  * @param importFromId The id of the existing AwsUserPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsUserPool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cognito_user_pool", importId: importFromId, provider });
@@ -202,9 +202,9 @@ export class TfUserPool extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfUserPoolConfig
+  * @param options AwsUserPoolConfig
   */
-  public constructor(scope: Construct, id: string, config: TfUserPoolConfig) {
+  public constructor(scope: Construct, id: string, config: AwsUserPoolConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_user_pool',
       terraformGeneratorMetadata: {
@@ -530,11 +530,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 
   // account_recovery_setting - computed: false, optional: true, required: false
-  private _accountRecoverySetting = new TfUserPool.AccountRecoverySettingPropertyOutputReference(this, "account_recovery_setting");
+  private _accountRecoverySetting = new AwsUserPool.AccountRecoverySettingPropertyOutputReference(this, "account_recovery_setting");
   public get accountRecoverySetting() {
     return this._accountRecoverySetting;
   }
-  public putAccountRecoverySetting(value: TfUserPool.AccountRecoverySettingProperty) {
+  public putAccountRecoverySetting(value: AwsUserPool.AccountRecoverySettingProperty) {
     this._accountRecoverySetting.internalValue = value;
   }
   public resetAccountRecoverySetting() {
@@ -546,11 +546,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 
   // admin_create_user_config - computed: false, optional: true, required: false
-  private _adminCreateUserConfig = new TfUserPool.AdminCreateUserConfigPropertyOutputReference(this, "admin_create_user_config");
+  private _adminCreateUserConfig = new AwsUserPool.AdminCreateUserConfigPropertyOutputReference(this, "admin_create_user_config");
   public get adminCreateUserConfig() {
     return this._adminCreateUserConfig;
   }
-  public putAdminCreateUserConfig(value: TfUserPool.AdminCreateUserConfigProperty) {
+  public putAdminCreateUserConfig(value: AwsUserPool.AdminCreateUserConfigProperty) {
     this._adminCreateUserConfig.internalValue = value;
   }
   public resetAdminCreateUserConfig() {
@@ -562,11 +562,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 
   // device_configuration - computed: false, optional: true, required: false
-  private _deviceConfiguration = new TfUserPool.DeviceConfigurationPropertyOutputReference(this, "device_configuration");
+  private _deviceConfiguration = new AwsUserPool.DeviceConfigurationPropertyOutputReference(this, "device_configuration");
   public get deviceConfiguration() {
     return this._deviceConfiguration;
   }
-  public putDeviceConfiguration(value: TfUserPool.DeviceConfigurationProperty) {
+  public putDeviceConfiguration(value: AwsUserPool.DeviceConfigurationProperty) {
     this._deviceConfiguration.internalValue = value;
   }
   public resetDeviceConfiguration() {
@@ -578,11 +578,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 
   // email_configuration - computed: false, optional: true, required: false
-  private _emailConfiguration = new TfUserPool.EmailConfigurationPropertyOutputReference(this, "email_configuration");
+  private _emailConfiguration = new AwsUserPool.EmailConfigurationPropertyOutputReference(this, "email_configuration");
   public get emailConfiguration() {
     return this._emailConfiguration;
   }
-  public putEmailConfiguration(value: TfUserPool.EmailConfigurationProperty) {
+  public putEmailConfiguration(value: AwsUserPool.EmailConfigurationProperty) {
     this._emailConfiguration.internalValue = value;
   }
   public resetEmailConfiguration() {
@@ -594,11 +594,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 
   // email_mfa_configuration - computed: false, optional: true, required: false
-  private _emailMfaConfiguration = new TfUserPool.EmailMfaConfigurationPropertyOutputReference(this, "email_mfa_configuration");
+  private _emailMfaConfiguration = new AwsUserPool.EmailMfaConfigurationPropertyOutputReference(this, "email_mfa_configuration");
   public get emailMfaConfiguration() {
     return this._emailMfaConfiguration;
   }
-  public putEmailMfaConfiguration(value: TfUserPool.EmailMfaConfigurationProperty) {
+  public putEmailMfaConfiguration(value: AwsUserPool.EmailMfaConfigurationProperty) {
     this._emailMfaConfiguration.internalValue = value;
   }
   public resetEmailMfaConfiguration() {
@@ -610,11 +610,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 
   // lambda_config - computed: false, optional: true, required: false
-  private _lambdaConfig = new TfUserPool.LambdaConfigPropertyOutputReference(this, "lambda_config");
+  private _lambdaConfig = new AwsUserPool.LambdaConfigPropertyOutputReference(this, "lambda_config");
   public get lambdaConfig() {
     return this._lambdaConfig;
   }
-  public putLambdaConfig(value: TfUserPool.LambdaConfigProperty) {
+  public putLambdaConfig(value: AwsUserPool.LambdaConfigProperty) {
     this._lambdaConfig.internalValue = value;
   }
   public resetLambdaConfig() {
@@ -626,11 +626,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 
   // password_policy - computed: false, optional: true, required: false
-  private _passwordPolicy = new TfUserPool.PasswordPolicyPropertyOutputReference(this, "password_policy");
+  private _passwordPolicy = new AwsUserPool.PasswordPolicyPropertyOutputReference(this, "password_policy");
   public get passwordPolicy() {
     return this._passwordPolicy;
   }
-  public putPasswordPolicy(value: TfUserPool.PasswordPolicyProperty) {
+  public putPasswordPolicy(value: AwsUserPool.PasswordPolicyProperty) {
     this._passwordPolicy.internalValue = value;
   }
   public resetPasswordPolicy() {
@@ -642,11 +642,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 
   // schema - computed: false, optional: true, required: false
-  private _schema = new TfUserPool.SchemaPropertyList(this, "schema", true);
+  private _schema = new AwsUserPool.SchemaPropertyList(this, "schema", true);
   public get schema() {
     return this._schema;
   }
-  public putSchema(value: TfUserPool.SchemaProperty[] | cdktn.IResolvable) {
+  public putSchema(value: AwsUserPool.SchemaProperty[] | cdktn.IResolvable) {
     this._schema.internalValue = value;
   }
   public resetSchema() {
@@ -658,11 +658,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 
   // sign_in_policy - computed: false, optional: true, required: false
-  private _signInPolicy = new TfUserPool.SignInPolicyPropertyOutputReference(this, "sign_in_policy");
+  private _signInPolicy = new AwsUserPool.SignInPolicyPropertyOutputReference(this, "sign_in_policy");
   public get signInPolicy() {
     return this._signInPolicy;
   }
-  public putSignInPolicy(value: TfUserPool.SignInPolicyProperty) {
+  public putSignInPolicy(value: AwsUserPool.SignInPolicyProperty) {
     this._signInPolicy.internalValue = value;
   }
   public resetSignInPolicy() {
@@ -674,11 +674,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 
   // sms_configuration - computed: false, optional: true, required: false
-  private _smsConfiguration = new TfUserPool.SmsConfigurationPropertyOutputReference(this, "sms_configuration");
+  private _smsConfiguration = new AwsUserPool.SmsConfigurationPropertyOutputReference(this, "sms_configuration");
   public get smsConfiguration() {
     return this._smsConfiguration;
   }
-  public putSmsConfiguration(value: TfUserPool.SmsConfigurationProperty) {
+  public putSmsConfiguration(value: AwsUserPool.SmsConfigurationProperty) {
     this._smsConfiguration.internalValue = value;
   }
   public resetSmsConfiguration() {
@@ -690,11 +690,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 
   // software_token_mfa_configuration - computed: false, optional: true, required: false
-  private _softwareTokenMfaConfiguration = new TfUserPool.SoftwareTokenMfaConfigurationPropertyOutputReference(this, "software_token_mfa_configuration");
+  private _softwareTokenMfaConfiguration = new AwsUserPool.SoftwareTokenMfaConfigurationPropertyOutputReference(this, "software_token_mfa_configuration");
   public get softwareTokenMfaConfiguration() {
     return this._softwareTokenMfaConfiguration;
   }
-  public putSoftwareTokenMfaConfiguration(value: TfUserPool.SoftwareTokenMfaConfigurationProperty) {
+  public putSoftwareTokenMfaConfiguration(value: AwsUserPool.SoftwareTokenMfaConfigurationProperty) {
     this._softwareTokenMfaConfiguration.internalValue = value;
   }
   public resetSoftwareTokenMfaConfiguration() {
@@ -706,11 +706,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 
   // user_attribute_update_settings - computed: false, optional: true, required: false
-  private _userAttributeUpdateSettings = new TfUserPool.UserAttributeUpdateSettingsPropertyOutputReference(this, "user_attribute_update_settings");
+  private _userAttributeUpdateSettings = new AwsUserPool.UserAttributeUpdateSettingsPropertyOutputReference(this, "user_attribute_update_settings");
   public get userAttributeUpdateSettings() {
     return this._userAttributeUpdateSettings;
   }
-  public putUserAttributeUpdateSettings(value: TfUserPool.UserAttributeUpdateSettingsProperty) {
+  public putUserAttributeUpdateSettings(value: AwsUserPool.UserAttributeUpdateSettingsProperty) {
     this._userAttributeUpdateSettings.internalValue = value;
   }
   public resetUserAttributeUpdateSettings() {
@@ -722,11 +722,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 
   // user_pool_add_ons - computed: false, optional: true, required: false
-  private _userPoolAddOns = new TfUserPool.UserPoolAddOnsPropertyOutputReference(this, "user_pool_add_ons");
+  private _userPoolAddOns = new AwsUserPool.UserPoolAddOnsPropertyOutputReference(this, "user_pool_add_ons");
   public get userPoolAddOns() {
     return this._userPoolAddOns;
   }
-  public putUserPoolAddOns(value: TfUserPool.UserPoolAddOnsProperty) {
+  public putUserPoolAddOns(value: AwsUserPool.UserPoolAddOnsProperty) {
     this._userPoolAddOns.internalValue = value;
   }
   public resetUserPoolAddOns() {
@@ -738,11 +738,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 
   // username_configuration - computed: false, optional: true, required: false
-  private _usernameConfiguration = new TfUserPool.UsernameConfigurationPropertyOutputReference(this, "username_configuration");
+  private _usernameConfiguration = new AwsUserPool.UsernameConfigurationPropertyOutputReference(this, "username_configuration");
   public get usernameConfiguration() {
     return this._usernameConfiguration;
   }
-  public putUsernameConfiguration(value: TfUserPool.UsernameConfigurationProperty) {
+  public putUsernameConfiguration(value: AwsUserPool.UsernameConfigurationProperty) {
     this._usernameConfiguration.internalValue = value;
   }
   public resetUsernameConfiguration() {
@@ -754,11 +754,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 
   // verification_message_template - computed: false, optional: true, required: false
-  private _verificationMessageTemplate = new TfUserPool.VerificationMessageTemplatePropertyOutputReference(this, "verification_message_template");
+  private _verificationMessageTemplate = new AwsUserPool.VerificationMessageTemplatePropertyOutputReference(this, "verification_message_template");
   public get verificationMessageTemplate() {
     return this._verificationMessageTemplate;
   }
-  public putVerificationMessageTemplate(value: TfUserPool.VerificationMessageTemplateProperty) {
+  public putVerificationMessageTemplate(value: AwsUserPool.VerificationMessageTemplateProperty) {
     this._verificationMessageTemplate.internalValue = value;
   }
   public resetVerificationMessageTemplate() {
@@ -770,11 +770,11 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 
   // web_authn_configuration - computed: false, optional: true, required: false
-  private _webAuthnConfiguration = new TfUserPool.WebAuthnConfigurationPropertyOutputReference(this, "web_authn_configuration");
+  private _webAuthnConfiguration = new AwsUserPool.WebAuthnConfigurationPropertyOutputReference(this, "web_authn_configuration");
   public get webAuthnConfiguration() {
     return this._webAuthnConfiguration;
   }
-  public putWebAuthnConfiguration(value: TfUserPool.WebAuthnConfigurationProperty) {
+  public putWebAuthnConfiguration(value: AwsUserPool.WebAuthnConfigurationProperty) {
     this._webAuthnConfiguration.internalValue = value;
   }
   public resetWebAuthnConfiguration() {
@@ -806,22 +806,22 @@ export class TfUserPool extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       user_pool_tier: cdktn.stringToTerraform(this._userPoolTier),
       username_attributes: cdktn.listMapper(cdktn.stringToTerraform, false)(this._usernameAttributes),
-      account_recovery_setting: tfUserPoolAccountRecoverySettingPropertyToTerraform(this._accountRecoverySetting.internalValue),
-      admin_create_user_config: tfUserPoolAdminCreateUserConfigPropertyToTerraform(this._adminCreateUserConfig.internalValue),
-      device_configuration: tfUserPoolDeviceConfigurationPropertyToTerraform(this._deviceConfiguration.internalValue),
-      email_configuration: tfUserPoolEmailConfigurationPropertyToTerraform(this._emailConfiguration.internalValue),
-      email_mfa_configuration: tfUserPoolEmailMfaConfigurationPropertyToTerraform(this._emailMfaConfiguration.internalValue),
-      lambda_config: tfUserPoolLambdaConfigPropertyToTerraform(this._lambdaConfig.internalValue),
-      password_policy: tfUserPoolPasswordPolicyPropertyToTerraform(this._passwordPolicy.internalValue),
-      schema: cdktn.listMapper(tfUserPoolSchemaPropertyToTerraform, true)(this._schema.internalValue),
-      sign_in_policy: tfUserPoolSignInPolicyPropertyToTerraform(this._signInPolicy.internalValue),
-      sms_configuration: tfUserPoolSmsConfigurationPropertyToTerraform(this._smsConfiguration.internalValue),
-      software_token_mfa_configuration: tfUserPoolSoftwareTokenMfaConfigurationPropertyToTerraform(this._softwareTokenMfaConfiguration.internalValue),
-      user_attribute_update_settings: tfUserPoolUserAttributeUpdateSettingsPropertyToTerraform(this._userAttributeUpdateSettings.internalValue),
-      user_pool_add_ons: tfUserPoolUserPoolAddOnsPropertyToTerraform(this._userPoolAddOns.internalValue),
-      username_configuration: tfUserPoolUsernameConfigurationPropertyToTerraform(this._usernameConfiguration.internalValue),
-      verification_message_template: tfUserPoolVerificationMessageTemplatePropertyToTerraform(this._verificationMessageTemplate.internalValue),
-      web_authn_configuration: tfUserPoolWebAuthnConfigurationPropertyToTerraform(this._webAuthnConfiguration.internalValue),
+      account_recovery_setting: awsUserPoolAccountRecoverySettingPropertyToTerraform(this._accountRecoverySetting.internalValue),
+      admin_create_user_config: awsUserPoolAdminCreateUserConfigPropertyToTerraform(this._adminCreateUserConfig.internalValue),
+      device_configuration: awsUserPoolDeviceConfigurationPropertyToTerraform(this._deviceConfiguration.internalValue),
+      email_configuration: awsUserPoolEmailConfigurationPropertyToTerraform(this._emailConfiguration.internalValue),
+      email_mfa_configuration: awsUserPoolEmailMfaConfigurationPropertyToTerraform(this._emailMfaConfiguration.internalValue),
+      lambda_config: awsUserPoolLambdaConfigPropertyToTerraform(this._lambdaConfig.internalValue),
+      password_policy: awsUserPoolPasswordPolicyPropertyToTerraform(this._passwordPolicy.internalValue),
+      schema: cdktn.listMapper(awsUserPoolSchemaPropertyToTerraform, true)(this._schema.internalValue),
+      sign_in_policy: awsUserPoolSignInPolicyPropertyToTerraform(this._signInPolicy.internalValue),
+      sms_configuration: awsUserPoolSmsConfigurationPropertyToTerraform(this._smsConfiguration.internalValue),
+      software_token_mfa_configuration: awsUserPoolSoftwareTokenMfaConfigurationPropertyToTerraform(this._softwareTokenMfaConfiguration.internalValue),
+      user_attribute_update_settings: awsUserPoolUserAttributeUpdateSettingsPropertyToTerraform(this._userAttributeUpdateSettings.internalValue),
+      user_pool_add_ons: awsUserPoolUserPoolAddOnsPropertyToTerraform(this._userPoolAddOns.internalValue),
+      username_configuration: awsUserPoolUsernameConfigurationPropertyToTerraform(this._usernameConfiguration.internalValue),
+      verification_message_template: awsUserPoolVerificationMessageTemplatePropertyToTerraform(this._verificationMessageTemplate.internalValue),
+      web_authn_configuration: awsUserPoolWebAuthnConfigurationPropertyToTerraform(this._webAuthnConfiguration.internalValue),
     };
   }
 
@@ -918,100 +918,100 @@ export class TfUserPool extends cdktn.TerraformResource {
         storageClassType: "stringList",
       },
       account_recovery_setting: {
-        value: tfUserPoolAccountRecoverySettingPropertyToHclTerraform(this._accountRecoverySetting.internalValue),
+        value: awsUserPoolAccountRecoverySettingPropertyToHclTerraform(this._accountRecoverySetting.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserPool.AccountRecoverySettingPropertyList",
+        storageClassType: "AwsUserPool.AccountRecoverySettingPropertyList",
       },
       admin_create_user_config: {
-        value: tfUserPoolAdminCreateUserConfigPropertyToHclTerraform(this._adminCreateUserConfig.internalValue),
+        value: awsUserPoolAdminCreateUserConfigPropertyToHclTerraform(this._adminCreateUserConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserPool.AdminCreateUserConfigPropertyList",
+        storageClassType: "AwsUserPool.AdminCreateUserConfigPropertyList",
       },
       device_configuration: {
-        value: tfUserPoolDeviceConfigurationPropertyToHclTerraform(this._deviceConfiguration.internalValue),
+        value: awsUserPoolDeviceConfigurationPropertyToHclTerraform(this._deviceConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserPool.DeviceConfigurationPropertyList",
+        storageClassType: "AwsUserPool.DeviceConfigurationPropertyList",
       },
       email_configuration: {
-        value: tfUserPoolEmailConfigurationPropertyToHclTerraform(this._emailConfiguration.internalValue),
+        value: awsUserPoolEmailConfigurationPropertyToHclTerraform(this._emailConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserPool.EmailConfigurationPropertyList",
+        storageClassType: "AwsUserPool.EmailConfigurationPropertyList",
       },
       email_mfa_configuration: {
-        value: tfUserPoolEmailMfaConfigurationPropertyToHclTerraform(this._emailMfaConfiguration.internalValue),
+        value: awsUserPoolEmailMfaConfigurationPropertyToHclTerraform(this._emailMfaConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserPool.EmailMfaConfigurationPropertyList",
+        storageClassType: "AwsUserPool.EmailMfaConfigurationPropertyList",
       },
       lambda_config: {
-        value: tfUserPoolLambdaConfigPropertyToHclTerraform(this._lambdaConfig.internalValue),
+        value: awsUserPoolLambdaConfigPropertyToHclTerraform(this._lambdaConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserPool.LambdaConfigPropertyList",
+        storageClassType: "AwsUserPool.LambdaConfigPropertyList",
       },
       password_policy: {
-        value: tfUserPoolPasswordPolicyPropertyToHclTerraform(this._passwordPolicy.internalValue),
+        value: awsUserPoolPasswordPolicyPropertyToHclTerraform(this._passwordPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserPool.PasswordPolicyPropertyList",
+        storageClassType: "AwsUserPool.PasswordPolicyPropertyList",
       },
       schema: {
-        value: cdktn.listMapperHcl(tfUserPoolSchemaPropertyToHclTerraform, true)(this._schema.internalValue),
+        value: cdktn.listMapperHcl(awsUserPoolSchemaPropertyToHclTerraform, true)(this._schema.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfUserPool.SchemaPropertyList",
+        storageClassType: "AwsUserPool.SchemaPropertyList",
       },
       sign_in_policy: {
-        value: tfUserPoolSignInPolicyPropertyToHclTerraform(this._signInPolicy.internalValue),
+        value: awsUserPoolSignInPolicyPropertyToHclTerraform(this._signInPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserPool.SignInPolicyPropertyList",
+        storageClassType: "AwsUserPool.SignInPolicyPropertyList",
       },
       sms_configuration: {
-        value: tfUserPoolSmsConfigurationPropertyToHclTerraform(this._smsConfiguration.internalValue),
+        value: awsUserPoolSmsConfigurationPropertyToHclTerraform(this._smsConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserPool.SmsConfigurationPropertyList",
+        storageClassType: "AwsUserPool.SmsConfigurationPropertyList",
       },
       software_token_mfa_configuration: {
-        value: tfUserPoolSoftwareTokenMfaConfigurationPropertyToHclTerraform(this._softwareTokenMfaConfiguration.internalValue),
+        value: awsUserPoolSoftwareTokenMfaConfigurationPropertyToHclTerraform(this._softwareTokenMfaConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserPool.SoftwareTokenMfaConfigurationPropertyList",
+        storageClassType: "AwsUserPool.SoftwareTokenMfaConfigurationPropertyList",
       },
       user_attribute_update_settings: {
-        value: tfUserPoolUserAttributeUpdateSettingsPropertyToHclTerraform(this._userAttributeUpdateSettings.internalValue),
+        value: awsUserPoolUserAttributeUpdateSettingsPropertyToHclTerraform(this._userAttributeUpdateSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserPool.UserAttributeUpdateSettingsPropertyList",
+        storageClassType: "AwsUserPool.UserAttributeUpdateSettingsPropertyList",
       },
       user_pool_add_ons: {
-        value: tfUserPoolUserPoolAddOnsPropertyToHclTerraform(this._userPoolAddOns.internalValue),
+        value: awsUserPoolUserPoolAddOnsPropertyToHclTerraform(this._userPoolAddOns.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserPool.UserPoolAddOnsPropertyList",
+        storageClassType: "AwsUserPool.UserPoolAddOnsPropertyList",
       },
       username_configuration: {
-        value: tfUserPoolUsernameConfigurationPropertyToHclTerraform(this._usernameConfiguration.internalValue),
+        value: awsUserPoolUsernameConfigurationPropertyToHclTerraform(this._usernameConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserPool.UsernameConfigurationPropertyList",
+        storageClassType: "AwsUserPool.UsernameConfigurationPropertyList",
       },
       verification_message_template: {
-        value: tfUserPoolVerificationMessageTemplatePropertyToHclTerraform(this._verificationMessageTemplate.internalValue),
+        value: awsUserPoolVerificationMessageTemplatePropertyToHclTerraform(this._verificationMessageTemplate.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserPool.VerificationMessageTemplatePropertyList",
+        storageClassType: "AwsUserPool.VerificationMessageTemplatePropertyList",
       },
       web_authn_configuration: {
-        value: tfUserPoolWebAuthnConfigurationPropertyToHclTerraform(this._webAuthnConfiguration.internalValue),
+        value: awsUserPoolWebAuthnConfigurationPropertyToHclTerraform(this._webAuthnConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserPool.WebAuthnConfigurationPropertyList",
+        storageClassType: "AwsUserPool.WebAuthnConfigurationPropertyList",
       },
     };
 
@@ -1020,7 +1020,7 @@ export class TfUserPool extends cdktn.TerraformResource {
   }
 }
 
-export function tfUserPoolRecoveryMechanismPropertyToTerraform(struct?: TfUserPool.RecoveryMechanismProperty | cdktn.IResolvable): any {
+export function awsUserPoolRecoveryMechanismPropertyToTerraform(struct?: AwsUserPool.RecoveryMechanismProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1032,7 +1032,7 @@ export function tfUserPoolRecoveryMechanismPropertyToTerraform(struct?: TfUserPo
 }
 
 
-export function tfUserPoolRecoveryMechanismPropertyToHclTerraform(struct?: TfUserPool.RecoveryMechanismProperty | cdktn.IResolvable): any {
+export function awsUserPoolRecoveryMechanismPropertyToHclTerraform(struct?: AwsUserPool.RecoveryMechanismProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1057,25 +1057,25 @@ export function tfUserPoolRecoveryMechanismPropertyToHclTerraform(struct?: TfUse
 }
 
 
-export function tfUserPoolAccountRecoverySettingPropertyToTerraform(struct?: TfUserPool.AccountRecoverySettingPropertyOutputReference | TfUserPool.AccountRecoverySettingProperty): any {
+export function awsUserPoolAccountRecoverySettingPropertyToTerraform(struct?: AwsUserPool.AccountRecoverySettingPropertyOutputReference | AwsUserPool.AccountRecoverySettingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    recovery_mechanism: cdktn.listMapper(tfUserPoolRecoveryMechanismPropertyToTerraform, true)(struct!.recoveryMechanism),
+    recovery_mechanism: cdktn.listMapper(awsUserPoolRecoveryMechanismPropertyToTerraform, true)(struct!.recoveryMechanism),
   }
 }
 
 
-export function tfUserPoolAccountRecoverySettingPropertyToHclTerraform(struct?: TfUserPool.AccountRecoverySettingPropertyOutputReference | TfUserPool.AccountRecoverySettingProperty): any {
+export function awsUserPoolAccountRecoverySettingPropertyToHclTerraform(struct?: AwsUserPool.AccountRecoverySettingPropertyOutputReference | AwsUserPool.AccountRecoverySettingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     recovery_mechanism: {
-      value: cdktn.listMapperHcl(tfUserPoolRecoveryMechanismPropertyToHclTerraform, true)(struct!.recoveryMechanism),
+      value: cdktn.listMapperHcl(awsUserPoolRecoveryMechanismPropertyToHclTerraform, true)(struct!.recoveryMechanism),
       isBlock: true,
       type: "set",
       storageClassType: "RecoveryMechanismPropertyList",
@@ -1087,7 +1087,7 @@ export function tfUserPoolAccountRecoverySettingPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfUserPoolInviteMessageTemplatePropertyToTerraform(struct?: TfUserPool.InviteMessageTemplatePropertyOutputReference | TfUserPool.InviteMessageTemplateProperty): any {
+export function awsUserPoolInviteMessageTemplatePropertyToTerraform(struct?: AwsUserPool.InviteMessageTemplatePropertyOutputReference | AwsUserPool.InviteMessageTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1100,7 +1100,7 @@ export function tfUserPoolInviteMessageTemplatePropertyToTerraform(struct?: TfUs
 }
 
 
-export function tfUserPoolInviteMessageTemplatePropertyToHclTerraform(struct?: TfUserPool.InviteMessageTemplatePropertyOutputReference | TfUserPool.InviteMessageTemplateProperty): any {
+export function awsUserPoolInviteMessageTemplatePropertyToHclTerraform(struct?: AwsUserPool.InviteMessageTemplatePropertyOutputReference | AwsUserPool.InviteMessageTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1131,19 +1131,19 @@ export function tfUserPoolInviteMessageTemplatePropertyToHclTerraform(struct?: T
 }
 
 
-export function tfUserPoolAdminCreateUserConfigPropertyToTerraform(struct?: TfUserPool.AdminCreateUserConfigPropertyOutputReference | TfUserPool.AdminCreateUserConfigProperty): any {
+export function awsUserPoolAdminCreateUserConfigPropertyToTerraform(struct?: AwsUserPool.AdminCreateUserConfigPropertyOutputReference | AwsUserPool.AdminCreateUserConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     allow_admin_create_user_only: cdktn.booleanToTerraform(struct!.allowAdminCreateUserOnly),
-    invite_message_template: tfUserPoolInviteMessageTemplatePropertyToTerraform(struct!.inviteMessageTemplate),
+    invite_message_template: awsUserPoolInviteMessageTemplatePropertyToTerraform(struct!.inviteMessageTemplate),
   }
 }
 
 
-export function tfUserPoolAdminCreateUserConfigPropertyToHclTerraform(struct?: TfUserPool.AdminCreateUserConfigPropertyOutputReference | TfUserPool.AdminCreateUserConfigProperty): any {
+export function awsUserPoolAdminCreateUserConfigPropertyToHclTerraform(struct?: AwsUserPool.AdminCreateUserConfigPropertyOutputReference | AwsUserPool.AdminCreateUserConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1156,7 +1156,7 @@ export function tfUserPoolAdminCreateUserConfigPropertyToHclTerraform(struct?: T
       storageClassType: "boolean",
     },
     invite_message_template: {
-      value: tfUserPoolInviteMessageTemplatePropertyToHclTerraform(struct!.inviteMessageTemplate),
+      value: awsUserPoolInviteMessageTemplatePropertyToHclTerraform(struct!.inviteMessageTemplate),
       isBlock: true,
       type: "list",
       storageClassType: "InviteMessageTemplatePropertyList",
@@ -1168,7 +1168,7 @@ export function tfUserPoolAdminCreateUserConfigPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfUserPoolDeviceConfigurationPropertyToTerraform(struct?: TfUserPool.DeviceConfigurationPropertyOutputReference | TfUserPool.DeviceConfigurationProperty): any {
+export function awsUserPoolDeviceConfigurationPropertyToTerraform(struct?: AwsUserPool.DeviceConfigurationPropertyOutputReference | AwsUserPool.DeviceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1180,7 +1180,7 @@ export function tfUserPoolDeviceConfigurationPropertyToTerraform(struct?: TfUser
 }
 
 
-export function tfUserPoolDeviceConfigurationPropertyToHclTerraform(struct?: TfUserPool.DeviceConfigurationPropertyOutputReference | TfUserPool.DeviceConfigurationProperty): any {
+export function awsUserPoolDeviceConfigurationPropertyToHclTerraform(struct?: AwsUserPool.DeviceConfigurationPropertyOutputReference | AwsUserPool.DeviceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1205,7 +1205,7 @@ export function tfUserPoolDeviceConfigurationPropertyToHclTerraform(struct?: TfU
 }
 
 
-export function tfUserPoolEmailConfigurationPropertyToTerraform(struct?: TfUserPool.EmailConfigurationPropertyOutputReference | TfUserPool.EmailConfigurationProperty): any {
+export function awsUserPoolEmailConfigurationPropertyToTerraform(struct?: AwsUserPool.EmailConfigurationPropertyOutputReference | AwsUserPool.EmailConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1220,7 +1220,7 @@ export function tfUserPoolEmailConfigurationPropertyToTerraform(struct?: TfUserP
 }
 
 
-export function tfUserPoolEmailConfigurationPropertyToHclTerraform(struct?: TfUserPool.EmailConfigurationPropertyOutputReference | TfUserPool.EmailConfigurationProperty): any {
+export function awsUserPoolEmailConfigurationPropertyToHclTerraform(struct?: AwsUserPool.EmailConfigurationPropertyOutputReference | AwsUserPool.EmailConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1263,7 +1263,7 @@ export function tfUserPoolEmailConfigurationPropertyToHclTerraform(struct?: TfUs
 }
 
 
-export function tfUserPoolEmailMfaConfigurationPropertyToTerraform(struct?: TfUserPool.EmailMfaConfigurationPropertyOutputReference | TfUserPool.EmailMfaConfigurationProperty): any {
+export function awsUserPoolEmailMfaConfigurationPropertyToTerraform(struct?: AwsUserPool.EmailMfaConfigurationPropertyOutputReference | AwsUserPool.EmailMfaConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1275,7 +1275,7 @@ export function tfUserPoolEmailMfaConfigurationPropertyToTerraform(struct?: TfUs
 }
 
 
-export function tfUserPoolEmailMfaConfigurationPropertyToHclTerraform(struct?: TfUserPool.EmailMfaConfigurationPropertyOutputReference | TfUserPool.EmailMfaConfigurationProperty): any {
+export function awsUserPoolEmailMfaConfigurationPropertyToHclTerraform(struct?: AwsUserPool.EmailMfaConfigurationPropertyOutputReference | AwsUserPool.EmailMfaConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1300,7 +1300,7 @@ export function tfUserPoolEmailMfaConfigurationPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfUserPoolCustomEmailSenderPropertyToTerraform(struct?: TfUserPool.CustomEmailSenderPropertyOutputReference | TfUserPool.CustomEmailSenderProperty): any {
+export function awsUserPoolCustomEmailSenderPropertyToTerraform(struct?: AwsUserPool.CustomEmailSenderPropertyOutputReference | AwsUserPool.CustomEmailSenderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1312,7 +1312,7 @@ export function tfUserPoolCustomEmailSenderPropertyToTerraform(struct?: TfUserPo
 }
 
 
-export function tfUserPoolCustomEmailSenderPropertyToHclTerraform(struct?: TfUserPool.CustomEmailSenderPropertyOutputReference | TfUserPool.CustomEmailSenderProperty): any {
+export function awsUserPoolCustomEmailSenderPropertyToHclTerraform(struct?: AwsUserPool.CustomEmailSenderPropertyOutputReference | AwsUserPool.CustomEmailSenderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1337,7 +1337,7 @@ export function tfUserPoolCustomEmailSenderPropertyToHclTerraform(struct?: TfUse
 }
 
 
-export function tfUserPoolCustomSmsSenderPropertyToTerraform(struct?: TfUserPool.CustomSmsSenderPropertyOutputReference | TfUserPool.CustomSmsSenderProperty): any {
+export function awsUserPoolCustomSmsSenderPropertyToTerraform(struct?: AwsUserPool.CustomSmsSenderPropertyOutputReference | AwsUserPool.CustomSmsSenderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1349,7 +1349,7 @@ export function tfUserPoolCustomSmsSenderPropertyToTerraform(struct?: TfUserPool
 }
 
 
-export function tfUserPoolCustomSmsSenderPropertyToHclTerraform(struct?: TfUserPool.CustomSmsSenderPropertyOutputReference | TfUserPool.CustomSmsSenderProperty): any {
+export function awsUserPoolCustomSmsSenderPropertyToHclTerraform(struct?: AwsUserPool.CustomSmsSenderPropertyOutputReference | AwsUserPool.CustomSmsSenderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1374,7 +1374,7 @@ export function tfUserPoolCustomSmsSenderPropertyToHclTerraform(struct?: TfUserP
 }
 
 
-export function tfUserPoolPreTokenGenerationConfigPropertyToTerraform(struct?: TfUserPool.PreTokenGenerationConfigPropertyOutputReference | TfUserPool.PreTokenGenerationConfigProperty): any {
+export function awsUserPoolPreTokenGenerationConfigPropertyToTerraform(struct?: AwsUserPool.PreTokenGenerationConfigPropertyOutputReference | AwsUserPool.PreTokenGenerationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1386,7 +1386,7 @@ export function tfUserPoolPreTokenGenerationConfigPropertyToTerraform(struct?: T
 }
 
 
-export function tfUserPoolPreTokenGenerationConfigPropertyToHclTerraform(struct?: TfUserPool.PreTokenGenerationConfigPropertyOutputReference | TfUserPool.PreTokenGenerationConfigProperty): any {
+export function awsUserPoolPreTokenGenerationConfigPropertyToHclTerraform(struct?: AwsUserPool.PreTokenGenerationConfigPropertyOutputReference | AwsUserPool.PreTokenGenerationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1411,7 +1411,7 @@ export function tfUserPoolPreTokenGenerationConfigPropertyToHclTerraform(struct?
 }
 
 
-export function tfUserPoolLambdaConfigPropertyToTerraform(struct?: TfUserPool.LambdaConfigPropertyOutputReference | TfUserPool.LambdaConfigProperty): any {
+export function awsUserPoolLambdaConfigPropertyToTerraform(struct?: AwsUserPool.LambdaConfigPropertyOutputReference | AwsUserPool.LambdaConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1428,14 +1428,14 @@ export function tfUserPoolLambdaConfigPropertyToTerraform(struct?: TfUserPool.La
     pre_token_generation: cdktn.stringToTerraform(struct!.preTokenGeneration),
     user_migration: cdktn.stringToTerraform(struct!.userMigration),
     verify_auth_challenge_response: cdktn.stringToTerraform(struct!.verifyAuthChallengeResponse),
-    custom_email_sender: tfUserPoolCustomEmailSenderPropertyToTerraform(struct!.customEmailSender),
-    custom_sms_sender: tfUserPoolCustomSmsSenderPropertyToTerraform(struct!.customSmsSender),
-    pre_token_generation_config: tfUserPoolPreTokenGenerationConfigPropertyToTerraform(struct!.preTokenGenerationConfig),
+    custom_email_sender: awsUserPoolCustomEmailSenderPropertyToTerraform(struct!.customEmailSender),
+    custom_sms_sender: awsUserPoolCustomSmsSenderPropertyToTerraform(struct!.customSmsSender),
+    pre_token_generation_config: awsUserPoolPreTokenGenerationConfigPropertyToTerraform(struct!.preTokenGenerationConfig),
   }
 }
 
 
-export function tfUserPoolLambdaConfigPropertyToHclTerraform(struct?: TfUserPool.LambdaConfigPropertyOutputReference | TfUserPool.LambdaConfigProperty): any {
+export function awsUserPoolLambdaConfigPropertyToHclTerraform(struct?: AwsUserPool.LambdaConfigPropertyOutputReference | AwsUserPool.LambdaConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1508,19 +1508,19 @@ export function tfUserPoolLambdaConfigPropertyToHclTerraform(struct?: TfUserPool
       storageClassType: "string",
     },
     custom_email_sender: {
-      value: tfUserPoolCustomEmailSenderPropertyToHclTerraform(struct!.customEmailSender),
+      value: awsUserPoolCustomEmailSenderPropertyToHclTerraform(struct!.customEmailSender),
       isBlock: true,
       type: "list",
       storageClassType: "CustomEmailSenderPropertyList",
     },
     custom_sms_sender: {
-      value: tfUserPoolCustomSmsSenderPropertyToHclTerraform(struct!.customSmsSender),
+      value: awsUserPoolCustomSmsSenderPropertyToHclTerraform(struct!.customSmsSender),
       isBlock: true,
       type: "list",
       storageClassType: "CustomSmsSenderPropertyList",
     },
     pre_token_generation_config: {
-      value: tfUserPoolPreTokenGenerationConfigPropertyToHclTerraform(struct!.preTokenGenerationConfig),
+      value: awsUserPoolPreTokenGenerationConfigPropertyToHclTerraform(struct!.preTokenGenerationConfig),
       isBlock: true,
       type: "list",
       storageClassType: "PreTokenGenerationConfigPropertyList",
@@ -1532,7 +1532,7 @@ export function tfUserPoolLambdaConfigPropertyToHclTerraform(struct?: TfUserPool
 }
 
 
-export function tfUserPoolPasswordPolicyPropertyToTerraform(struct?: TfUserPool.PasswordPolicyPropertyOutputReference | TfUserPool.PasswordPolicyProperty): any {
+export function awsUserPoolPasswordPolicyPropertyToTerraform(struct?: AwsUserPool.PasswordPolicyPropertyOutputReference | AwsUserPool.PasswordPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1549,7 +1549,7 @@ export function tfUserPoolPasswordPolicyPropertyToTerraform(struct?: TfUserPool.
 }
 
 
-export function tfUserPoolPasswordPolicyPropertyToHclTerraform(struct?: TfUserPool.PasswordPolicyPropertyOutputReference | TfUserPool.PasswordPolicyProperty): any {
+export function awsUserPoolPasswordPolicyPropertyToHclTerraform(struct?: AwsUserPool.PasswordPolicyPropertyOutputReference | AwsUserPool.PasswordPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1604,7 +1604,7 @@ export function tfUserPoolPasswordPolicyPropertyToHclTerraform(struct?: TfUserPo
 }
 
 
-export function tfUserPoolNumberAttributeConstraintsPropertyToTerraform(struct?: TfUserPool.NumberAttributeConstraintsPropertyOutputReference | TfUserPool.NumberAttributeConstraintsProperty): any {
+export function awsUserPoolNumberAttributeConstraintsPropertyToTerraform(struct?: AwsUserPool.NumberAttributeConstraintsPropertyOutputReference | AwsUserPool.NumberAttributeConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1616,7 +1616,7 @@ export function tfUserPoolNumberAttributeConstraintsPropertyToTerraform(struct?:
 }
 
 
-export function tfUserPoolNumberAttributeConstraintsPropertyToHclTerraform(struct?: TfUserPool.NumberAttributeConstraintsPropertyOutputReference | TfUserPool.NumberAttributeConstraintsProperty): any {
+export function awsUserPoolNumberAttributeConstraintsPropertyToHclTerraform(struct?: AwsUserPool.NumberAttributeConstraintsPropertyOutputReference | AwsUserPool.NumberAttributeConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1641,7 +1641,7 @@ export function tfUserPoolNumberAttributeConstraintsPropertyToHclTerraform(struc
 }
 
 
-export function tfUserPoolStringAttributeConstraintsPropertyToTerraform(struct?: TfUserPool.StringAttributeConstraintsPropertyOutputReference | TfUserPool.StringAttributeConstraintsProperty): any {
+export function awsUserPoolStringAttributeConstraintsPropertyToTerraform(struct?: AwsUserPool.StringAttributeConstraintsPropertyOutputReference | AwsUserPool.StringAttributeConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1653,7 +1653,7 @@ export function tfUserPoolStringAttributeConstraintsPropertyToTerraform(struct?:
 }
 
 
-export function tfUserPoolStringAttributeConstraintsPropertyToHclTerraform(struct?: TfUserPool.StringAttributeConstraintsPropertyOutputReference | TfUserPool.StringAttributeConstraintsProperty): any {
+export function awsUserPoolStringAttributeConstraintsPropertyToHclTerraform(struct?: AwsUserPool.StringAttributeConstraintsPropertyOutputReference | AwsUserPool.StringAttributeConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1678,7 +1678,7 @@ export function tfUserPoolStringAttributeConstraintsPropertyToHclTerraform(struc
 }
 
 
-export function tfUserPoolSchemaPropertyToTerraform(struct?: TfUserPool.SchemaProperty | cdktn.IResolvable): any {
+export function awsUserPoolSchemaPropertyToTerraform(struct?: AwsUserPool.SchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1689,13 +1689,13 @@ export function tfUserPoolSchemaPropertyToTerraform(struct?: TfUserPool.SchemaPr
     mutable: cdktn.booleanToTerraform(struct!.mutable),
     name: cdktn.stringToTerraform(struct!.name),
     required: cdktn.booleanToTerraform(struct!.required),
-    number_attribute_constraints: tfUserPoolNumberAttributeConstraintsPropertyToTerraform(struct!.numberAttributeConstraints),
-    string_attribute_constraints: tfUserPoolStringAttributeConstraintsPropertyToTerraform(struct!.stringAttributeConstraints),
+    number_attribute_constraints: awsUserPoolNumberAttributeConstraintsPropertyToTerraform(struct!.numberAttributeConstraints),
+    string_attribute_constraints: awsUserPoolStringAttributeConstraintsPropertyToTerraform(struct!.stringAttributeConstraints),
   }
 }
 
 
-export function tfUserPoolSchemaPropertyToHclTerraform(struct?: TfUserPool.SchemaProperty | cdktn.IResolvable): any {
+export function awsUserPoolSchemaPropertyToHclTerraform(struct?: AwsUserPool.SchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1732,13 +1732,13 @@ export function tfUserPoolSchemaPropertyToHclTerraform(struct?: TfUserPool.Schem
       storageClassType: "boolean",
     },
     number_attribute_constraints: {
-      value: tfUserPoolNumberAttributeConstraintsPropertyToHclTerraform(struct!.numberAttributeConstraints),
+      value: awsUserPoolNumberAttributeConstraintsPropertyToHclTerraform(struct!.numberAttributeConstraints),
       isBlock: true,
       type: "list",
       storageClassType: "NumberAttributeConstraintsPropertyList",
     },
     string_attribute_constraints: {
-      value: tfUserPoolStringAttributeConstraintsPropertyToHclTerraform(struct!.stringAttributeConstraints),
+      value: awsUserPoolStringAttributeConstraintsPropertyToHclTerraform(struct!.stringAttributeConstraints),
       isBlock: true,
       type: "list",
       storageClassType: "StringAttributeConstraintsPropertyList",
@@ -1750,7 +1750,7 @@ export function tfUserPoolSchemaPropertyToHclTerraform(struct?: TfUserPool.Schem
 }
 
 
-export function tfUserPoolSignInPolicyPropertyToTerraform(struct?: TfUserPool.SignInPolicyPropertyOutputReference | TfUserPool.SignInPolicyProperty): any {
+export function awsUserPoolSignInPolicyPropertyToTerraform(struct?: AwsUserPool.SignInPolicyPropertyOutputReference | AwsUserPool.SignInPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1761,7 +1761,7 @@ export function tfUserPoolSignInPolicyPropertyToTerraform(struct?: TfUserPool.Si
 }
 
 
-export function tfUserPoolSignInPolicyPropertyToHclTerraform(struct?: TfUserPool.SignInPolicyPropertyOutputReference | TfUserPool.SignInPolicyProperty): any {
+export function awsUserPoolSignInPolicyPropertyToHclTerraform(struct?: AwsUserPool.SignInPolicyPropertyOutputReference | AwsUserPool.SignInPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1780,7 +1780,7 @@ export function tfUserPoolSignInPolicyPropertyToHclTerraform(struct?: TfUserPool
 }
 
 
-export function tfUserPoolSmsConfigurationPropertyToTerraform(struct?: TfUserPool.SmsConfigurationPropertyOutputReference | TfUserPool.SmsConfigurationProperty): any {
+export function awsUserPoolSmsConfigurationPropertyToTerraform(struct?: AwsUserPool.SmsConfigurationPropertyOutputReference | AwsUserPool.SmsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1793,7 +1793,7 @@ export function tfUserPoolSmsConfigurationPropertyToTerraform(struct?: TfUserPoo
 }
 
 
-export function tfUserPoolSmsConfigurationPropertyToHclTerraform(struct?: TfUserPool.SmsConfigurationPropertyOutputReference | TfUserPool.SmsConfigurationProperty): any {
+export function awsUserPoolSmsConfigurationPropertyToHclTerraform(struct?: AwsUserPool.SmsConfigurationPropertyOutputReference | AwsUserPool.SmsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1824,7 +1824,7 @@ export function tfUserPoolSmsConfigurationPropertyToHclTerraform(struct?: TfUser
 }
 
 
-export function tfUserPoolSoftwareTokenMfaConfigurationPropertyToTerraform(struct?: TfUserPool.SoftwareTokenMfaConfigurationPropertyOutputReference | TfUserPool.SoftwareTokenMfaConfigurationProperty): any {
+export function awsUserPoolSoftwareTokenMfaConfigurationPropertyToTerraform(struct?: AwsUserPool.SoftwareTokenMfaConfigurationPropertyOutputReference | AwsUserPool.SoftwareTokenMfaConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1835,7 +1835,7 @@ export function tfUserPoolSoftwareTokenMfaConfigurationPropertyToTerraform(struc
 }
 
 
-export function tfUserPoolSoftwareTokenMfaConfigurationPropertyToHclTerraform(struct?: TfUserPool.SoftwareTokenMfaConfigurationPropertyOutputReference | TfUserPool.SoftwareTokenMfaConfigurationProperty): any {
+export function awsUserPoolSoftwareTokenMfaConfigurationPropertyToHclTerraform(struct?: AwsUserPool.SoftwareTokenMfaConfigurationPropertyOutputReference | AwsUserPool.SoftwareTokenMfaConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1854,7 +1854,7 @@ export function tfUserPoolSoftwareTokenMfaConfigurationPropertyToHclTerraform(st
 }
 
 
-export function tfUserPoolUserAttributeUpdateSettingsPropertyToTerraform(struct?: TfUserPool.UserAttributeUpdateSettingsPropertyOutputReference | TfUserPool.UserAttributeUpdateSettingsProperty): any {
+export function awsUserPoolUserAttributeUpdateSettingsPropertyToTerraform(struct?: AwsUserPool.UserAttributeUpdateSettingsPropertyOutputReference | AwsUserPool.UserAttributeUpdateSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1865,7 +1865,7 @@ export function tfUserPoolUserAttributeUpdateSettingsPropertyToTerraform(struct?
 }
 
 
-export function tfUserPoolUserAttributeUpdateSettingsPropertyToHclTerraform(struct?: TfUserPool.UserAttributeUpdateSettingsPropertyOutputReference | TfUserPool.UserAttributeUpdateSettingsProperty): any {
+export function awsUserPoolUserAttributeUpdateSettingsPropertyToHclTerraform(struct?: AwsUserPool.UserAttributeUpdateSettingsPropertyOutputReference | AwsUserPool.UserAttributeUpdateSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1884,7 +1884,7 @@ export function tfUserPoolUserAttributeUpdateSettingsPropertyToHclTerraform(stru
 }
 
 
-export function tfUserPoolAdvancedSecurityAdditionalFlowsPropertyToTerraform(struct?: TfUserPool.AdvancedSecurityAdditionalFlowsPropertyOutputReference | TfUserPool.AdvancedSecurityAdditionalFlowsProperty): any {
+export function awsUserPoolAdvancedSecurityAdditionalFlowsPropertyToTerraform(struct?: AwsUserPool.AdvancedSecurityAdditionalFlowsPropertyOutputReference | AwsUserPool.AdvancedSecurityAdditionalFlowsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1895,7 +1895,7 @@ export function tfUserPoolAdvancedSecurityAdditionalFlowsPropertyToTerraform(str
 }
 
 
-export function tfUserPoolAdvancedSecurityAdditionalFlowsPropertyToHclTerraform(struct?: TfUserPool.AdvancedSecurityAdditionalFlowsPropertyOutputReference | TfUserPool.AdvancedSecurityAdditionalFlowsProperty): any {
+export function awsUserPoolAdvancedSecurityAdditionalFlowsPropertyToHclTerraform(struct?: AwsUserPool.AdvancedSecurityAdditionalFlowsPropertyOutputReference | AwsUserPool.AdvancedSecurityAdditionalFlowsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1914,19 +1914,19 @@ export function tfUserPoolAdvancedSecurityAdditionalFlowsPropertyToHclTerraform(
 }
 
 
-export function tfUserPoolUserPoolAddOnsPropertyToTerraform(struct?: TfUserPool.UserPoolAddOnsPropertyOutputReference | TfUserPool.UserPoolAddOnsProperty): any {
+export function awsUserPoolUserPoolAddOnsPropertyToTerraform(struct?: AwsUserPool.UserPoolAddOnsPropertyOutputReference | AwsUserPool.UserPoolAddOnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     advanced_security_mode: cdktn.stringToTerraform(struct!.advancedSecurityMode),
-    advanced_security_additional_flows: tfUserPoolAdvancedSecurityAdditionalFlowsPropertyToTerraform(struct!.advancedSecurityAdditionalFlows),
+    advanced_security_additional_flows: awsUserPoolAdvancedSecurityAdditionalFlowsPropertyToTerraform(struct!.advancedSecurityAdditionalFlows),
   }
 }
 
 
-export function tfUserPoolUserPoolAddOnsPropertyToHclTerraform(struct?: TfUserPool.UserPoolAddOnsPropertyOutputReference | TfUserPool.UserPoolAddOnsProperty): any {
+export function awsUserPoolUserPoolAddOnsPropertyToHclTerraform(struct?: AwsUserPool.UserPoolAddOnsPropertyOutputReference | AwsUserPool.UserPoolAddOnsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1939,7 +1939,7 @@ export function tfUserPoolUserPoolAddOnsPropertyToHclTerraform(struct?: TfUserPo
       storageClassType: "string",
     },
     advanced_security_additional_flows: {
-      value: tfUserPoolAdvancedSecurityAdditionalFlowsPropertyToHclTerraform(struct!.advancedSecurityAdditionalFlows),
+      value: awsUserPoolAdvancedSecurityAdditionalFlowsPropertyToHclTerraform(struct!.advancedSecurityAdditionalFlows),
       isBlock: true,
       type: "list",
       storageClassType: "AdvancedSecurityAdditionalFlowsPropertyList",
@@ -1951,7 +1951,7 @@ export function tfUserPoolUserPoolAddOnsPropertyToHclTerraform(struct?: TfUserPo
 }
 
 
-export function tfUserPoolUsernameConfigurationPropertyToTerraform(struct?: TfUserPool.UsernameConfigurationPropertyOutputReference | TfUserPool.UsernameConfigurationProperty): any {
+export function awsUserPoolUsernameConfigurationPropertyToTerraform(struct?: AwsUserPool.UsernameConfigurationPropertyOutputReference | AwsUserPool.UsernameConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1962,7 +1962,7 @@ export function tfUserPoolUsernameConfigurationPropertyToTerraform(struct?: TfUs
 }
 
 
-export function tfUserPoolUsernameConfigurationPropertyToHclTerraform(struct?: TfUserPool.UsernameConfigurationPropertyOutputReference | TfUserPool.UsernameConfigurationProperty): any {
+export function awsUserPoolUsernameConfigurationPropertyToHclTerraform(struct?: AwsUserPool.UsernameConfigurationPropertyOutputReference | AwsUserPool.UsernameConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1981,7 +1981,7 @@ export function tfUserPoolUsernameConfigurationPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfUserPoolVerificationMessageTemplatePropertyToTerraform(struct?: TfUserPool.VerificationMessageTemplatePropertyOutputReference | TfUserPool.VerificationMessageTemplateProperty): any {
+export function awsUserPoolVerificationMessageTemplatePropertyToTerraform(struct?: AwsUserPool.VerificationMessageTemplatePropertyOutputReference | AwsUserPool.VerificationMessageTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1997,7 +1997,7 @@ export function tfUserPoolVerificationMessageTemplatePropertyToTerraform(struct?
 }
 
 
-export function tfUserPoolVerificationMessageTemplatePropertyToHclTerraform(struct?: TfUserPool.VerificationMessageTemplatePropertyOutputReference | TfUserPool.VerificationMessageTemplateProperty): any {
+export function awsUserPoolVerificationMessageTemplatePropertyToHclTerraform(struct?: AwsUserPool.VerificationMessageTemplatePropertyOutputReference | AwsUserPool.VerificationMessageTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2046,7 +2046,7 @@ export function tfUserPoolVerificationMessageTemplatePropertyToHclTerraform(stru
 }
 
 
-export function tfUserPoolWebAuthnConfigurationPropertyToTerraform(struct?: TfUserPool.WebAuthnConfigurationPropertyOutputReference | TfUserPool.WebAuthnConfigurationProperty): any {
+export function awsUserPoolWebAuthnConfigurationPropertyToTerraform(struct?: AwsUserPool.WebAuthnConfigurationPropertyOutputReference | AwsUserPool.WebAuthnConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2058,7 +2058,7 @@ export function tfUserPoolWebAuthnConfigurationPropertyToTerraform(struct?: TfUs
 }
 
 
-export function tfUserPoolWebAuthnConfigurationPropertyToHclTerraform(struct?: TfUserPool.WebAuthnConfigurationPropertyOutputReference | TfUserPool.WebAuthnConfigurationProperty): any {
+export function awsUserPoolWebAuthnConfigurationPropertyToHclTerraform(struct?: AwsUserPool.WebAuthnConfigurationPropertyOutputReference | AwsUserPool.WebAuthnConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2083,14 +2083,14 @@ export function tfUserPoolWebAuthnConfigurationPropertyToHclTerraform(struct?: T
 }
 
 
-export namespace TfUserPool {
+export namespace AwsUserPool {
 export interface RecoveryMechanismProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#name TfUserPool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#name AwsUserPool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#priority TfUserPool#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#priority AwsUserPool#priority}
   */
   readonly priority: number;
 }
@@ -2194,7 +2194,7 @@ export interface AccountRecoverySettingProperty {
   /**
   * recovery_mechanism block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#recovery_mechanism TfUserPool#recovery_mechanism}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#recovery_mechanism AwsUserPool#recovery_mechanism}
   */
   readonly recoveryMechanism?: RecoveryMechanismProperty[] | cdktn.IResolvable;
 }
@@ -2248,15 +2248,15 @@ export class AccountRecoverySettingPropertyOutputReference extends cdktn.Complex
 }
 export interface InviteMessageTemplateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_message TfUserPool#email_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_message AwsUserPool#email_message}
   */
   readonly emailMessage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_subject TfUserPool#email_subject}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_subject AwsUserPool#email_subject}
   */
   readonly emailSubject?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#sms_message TfUserPool#sms_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#sms_message AwsUserPool#sms_message}
   */
   readonly smsMessage?: string;
 }
@@ -2354,13 +2354,13 @@ export class InviteMessageTemplatePropertyOutputReference extends cdktn.ComplexO
 }
 export interface AdminCreateUserConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#allow_admin_create_user_only TfUserPool#allow_admin_create_user_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#allow_admin_create_user_only AwsUserPool#allow_admin_create_user_only}
   */
   readonly allowAdminCreateUserOnly?: boolean | cdktn.IResolvable;
   /**
   * invite_message_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#invite_message_template TfUserPool#invite_message_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#invite_message_template AwsUserPool#invite_message_template}
   */
   readonly inviteMessageTemplate?: InviteMessageTemplateProperty;
 }
@@ -2436,11 +2436,11 @@ export class AdminCreateUserConfigPropertyOutputReference extends cdktn.ComplexO
 }
 export interface DeviceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#challenge_required_on_new_device TfUserPool#challenge_required_on_new_device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#challenge_required_on_new_device AwsUserPool#challenge_required_on_new_device}
   */
   readonly challengeRequiredOnNewDevice?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#device_only_remembered_on_user_prompt TfUserPool#device_only_remembered_on_user_prompt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#device_only_remembered_on_user_prompt AwsUserPool#device_only_remembered_on_user_prompt}
   */
   readonly deviceOnlyRememberedOnUserPrompt?: boolean | cdktn.IResolvable;
 }
@@ -2516,23 +2516,23 @@ export class DeviceConfigurationPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface EmailConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#configuration_set TfUserPool#configuration_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#configuration_set AwsUserPool#configuration_set}
   */
   readonly configurationSet?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_sending_account TfUserPool#email_sending_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_sending_account AwsUserPool#email_sending_account}
   */
   readonly emailSendingAccount?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#from_email_address TfUserPool#from_email_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#from_email_address AwsUserPool#from_email_address}
   */
   readonly fromEmailAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#reply_to_email_address TfUserPool#reply_to_email_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#reply_to_email_address AwsUserPool#reply_to_email_address}
   */
   readonly replyToEmailAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#source_arn TfUserPool#source_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#source_arn AwsUserPool#source_arn}
   */
   readonly sourceArn?: string;
 }
@@ -2674,11 +2674,11 @@ export class EmailConfigurationPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface EmailMfaConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#message TfUserPool#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#message AwsUserPool#message}
   */
   readonly message?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#subject TfUserPool#subject}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#subject AwsUserPool#subject}
   */
   readonly subject?: string;
 }
@@ -2754,11 +2754,11 @@ export class EmailMfaConfigurationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface CustomEmailSenderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#lambda_arn TfUserPool#lambda_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#lambda_arn AwsUserPool#lambda_arn}
   */
   readonly lambdaArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#lambda_version TfUserPool#lambda_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#lambda_version AwsUserPool#lambda_version}
   */
   readonly lambdaVersion: string;
 }
@@ -2828,11 +2828,11 @@ export class CustomEmailSenderPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface CustomSmsSenderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#lambda_arn TfUserPool#lambda_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#lambda_arn AwsUserPool#lambda_arn}
   */
   readonly lambdaArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#lambda_version TfUserPool#lambda_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#lambda_version AwsUserPool#lambda_version}
   */
   readonly lambdaVersion: string;
 }
@@ -2902,11 +2902,11 @@ export class CustomSmsSenderPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface PreTokenGenerationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#lambda_arn TfUserPool#lambda_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#lambda_arn AwsUserPool#lambda_arn}
   */
   readonly lambdaArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#lambda_version TfUserPool#lambda_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#lambda_version AwsUserPool#lambda_version}
   */
   readonly lambdaVersion: string;
 }
@@ -2976,65 +2976,65 @@ export class PreTokenGenerationConfigPropertyOutputReference extends cdktn.Compl
 }
 export interface LambdaConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#create_auth_challenge TfUserPool#create_auth_challenge}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#create_auth_challenge AwsUserPool#create_auth_challenge}
   */
   readonly createAuthChallenge?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#custom_message TfUserPool#custom_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#custom_message AwsUserPool#custom_message}
   */
   readonly customMessage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#define_auth_challenge TfUserPool#define_auth_challenge}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#define_auth_challenge AwsUserPool#define_auth_challenge}
   */
   readonly defineAuthChallenge?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#kms_key_id TfUserPool#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#kms_key_id AwsUserPool#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#post_authentication TfUserPool#post_authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#post_authentication AwsUserPool#post_authentication}
   */
   readonly postAuthentication?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#post_confirmation TfUserPool#post_confirmation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#post_confirmation AwsUserPool#post_confirmation}
   */
   readonly postConfirmation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#pre_authentication TfUserPool#pre_authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#pre_authentication AwsUserPool#pre_authentication}
   */
   readonly preAuthentication?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#pre_sign_up TfUserPool#pre_sign_up}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#pre_sign_up AwsUserPool#pre_sign_up}
   */
   readonly preSignUp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#pre_token_generation TfUserPool#pre_token_generation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#pre_token_generation AwsUserPool#pre_token_generation}
   */
   readonly preTokenGeneration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#user_migration TfUserPool#user_migration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#user_migration AwsUserPool#user_migration}
   */
   readonly userMigration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#verify_auth_challenge_response TfUserPool#verify_auth_challenge_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#verify_auth_challenge_response AwsUserPool#verify_auth_challenge_response}
   */
   readonly verifyAuthChallengeResponse?: string;
   /**
   * custom_email_sender block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#custom_email_sender TfUserPool#custom_email_sender}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#custom_email_sender AwsUserPool#custom_email_sender}
   */
   readonly customEmailSender?: CustomEmailSenderProperty;
   /**
   * custom_sms_sender block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#custom_sms_sender TfUserPool#custom_sms_sender}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#custom_sms_sender AwsUserPool#custom_sms_sender}
   */
   readonly customSmsSender?: CustomSmsSenderProperty;
   /**
   * pre_token_generation_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#pre_token_generation_config TfUserPool#pre_token_generation_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#pre_token_generation_config AwsUserPool#pre_token_generation_config}
   */
   readonly preTokenGenerationConfig?: PreTokenGenerationConfigProperty;
 }
@@ -3374,31 +3374,31 @@ export class LambdaConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PasswordPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#minimum_length TfUserPool#minimum_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#minimum_length AwsUserPool#minimum_length}
   */
   readonly minimumLength?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#password_history_size TfUserPool#password_history_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#password_history_size AwsUserPool#password_history_size}
   */
   readonly passwordHistorySize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#require_lowercase TfUserPool#require_lowercase}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#require_lowercase AwsUserPool#require_lowercase}
   */
   readonly requireLowercase?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#require_numbers TfUserPool#require_numbers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#require_numbers AwsUserPool#require_numbers}
   */
   readonly requireNumbers?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#require_symbols TfUserPool#require_symbols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#require_symbols AwsUserPool#require_symbols}
   */
   readonly requireSymbols?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#require_uppercase TfUserPool#require_uppercase}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#require_uppercase AwsUserPool#require_uppercase}
   */
   readonly requireUppercase?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#temporary_password_validity_days TfUserPool#temporary_password_validity_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#temporary_password_validity_days AwsUserPool#temporary_password_validity_days}
   */
   readonly temporaryPasswordValidityDays?: number;
 }
@@ -3584,11 +3584,11 @@ export class PasswordPolicyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface NumberAttributeConstraintsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#max_value TfUserPool#max_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#max_value AwsUserPool#max_value}
   */
   readonly maxValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#min_value TfUserPool#min_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#min_value AwsUserPool#min_value}
   */
   readonly minValue?: string;
 }
@@ -3664,11 +3664,11 @@ export class NumberAttributeConstraintsPropertyOutputReference extends cdktn.Com
 }
 export interface StringAttributeConstraintsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#max_length TfUserPool#max_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#max_length AwsUserPool#max_length}
   */
   readonly maxLength?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#min_length TfUserPool#min_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#min_length AwsUserPool#min_length}
   */
   readonly minLength?: string;
 }
@@ -3744,35 +3744,35 @@ export class StringAttributeConstraintsPropertyOutputReference extends cdktn.Com
 }
 export interface SchemaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#attribute_data_type TfUserPool#attribute_data_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#attribute_data_type AwsUserPool#attribute_data_type}
   */
   readonly attributeDataType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#developer_only_attribute TfUserPool#developer_only_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#developer_only_attribute AwsUserPool#developer_only_attribute}
   */
   readonly developerOnlyAttribute?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#mutable TfUserPool#mutable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#mutable AwsUserPool#mutable}
   */
   readonly mutable?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#name TfUserPool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#name AwsUserPool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#required TfUserPool#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#required AwsUserPool#required}
   */
   readonly required?: boolean | cdktn.IResolvable;
   /**
   * number_attribute_constraints block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#number_attribute_constraints TfUserPool#number_attribute_constraints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#number_attribute_constraints AwsUserPool#number_attribute_constraints}
   */
   readonly numberAttributeConstraints?: NumberAttributeConstraintsProperty;
   /**
   * string_attribute_constraints block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#string_attribute_constraints TfUserPool#string_attribute_constraints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#string_attribute_constraints AwsUserPool#string_attribute_constraints}
   */
   readonly stringAttributeConstraints?: StringAttributeConstraintsProperty;
 }
@@ -3984,7 +3984,7 @@ export class SchemaPropertyList extends cdktn.ComplexList {
 }
 export interface SignInPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#allowed_first_auth_factors TfUserPool#allowed_first_auth_factors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#allowed_first_auth_factors AwsUserPool#allowed_first_auth_factors}
   */
   readonly allowedFirstAuthFactors?: string[];
 }
@@ -4038,15 +4038,15 @@ export class SignInPolicyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SmsConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#external_id TfUserPool#external_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#external_id AwsUserPool#external_id}
   */
   readonly externalId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#sns_caller_arn TfUserPool#sns_caller_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#sns_caller_arn AwsUserPool#sns_caller_arn}
   */
   readonly snsCallerArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#sns_region TfUserPool#sns_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#sns_region AwsUserPool#sns_region}
   */
   readonly snsRegion?: string;
 }
@@ -4138,7 +4138,7 @@ export class SmsConfigurationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface SoftwareTokenMfaConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#enabled TfUserPool#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#enabled AwsUserPool#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
 }
@@ -4189,7 +4189,7 @@ export class SoftwareTokenMfaConfigurationPropertyOutputReference extends cdktn.
 }
 export interface UserAttributeUpdateSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#attributes_require_verification_before_update TfUserPool#attributes_require_verification_before_update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#attributes_require_verification_before_update AwsUserPool#attributes_require_verification_before_update}
   */
   readonly attributesRequireVerificationBeforeUpdate: string[];
 }
@@ -4240,7 +4240,7 @@ export class UserAttributeUpdateSettingsPropertyOutputReference extends cdktn.Co
 }
 export interface AdvancedSecurityAdditionalFlowsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#custom_auth_mode TfUserPool#custom_auth_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#custom_auth_mode AwsUserPool#custom_auth_mode}
   */
   readonly customAuthMode?: string;
 }
@@ -4294,13 +4294,13 @@ export class AdvancedSecurityAdditionalFlowsPropertyOutputReference extends cdkt
 }
 export interface UserPoolAddOnsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#advanced_security_mode TfUserPool#advanced_security_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#advanced_security_mode AwsUserPool#advanced_security_mode}
   */
   readonly advancedSecurityMode: string;
   /**
   * advanced_security_additional_flows block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#advanced_security_additional_flows TfUserPool#advanced_security_additional_flows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#advanced_security_additional_flows AwsUserPool#advanced_security_additional_flows}
   */
   readonly advancedSecurityAdditionalFlows?: AdvancedSecurityAdditionalFlowsProperty;
 }
@@ -4373,7 +4373,7 @@ export class UserPoolAddOnsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface UsernameConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#case_sensitive TfUserPool#case_sensitive}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#case_sensitive AwsUserPool#case_sensitive}
   */
   readonly caseSensitive?: boolean | cdktn.IResolvable;
 }
@@ -4427,27 +4427,27 @@ export class UsernameConfigurationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface VerificationMessageTemplateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#default_email_option TfUserPool#default_email_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#default_email_option AwsUserPool#default_email_option}
   */
   readonly defaultEmailOption?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_message TfUserPool#email_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_message AwsUserPool#email_message}
   */
   readonly emailMessage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_message_by_link TfUserPool#email_message_by_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_message_by_link AwsUserPool#email_message_by_link}
   */
   readonly emailMessageByLink?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_subject TfUserPool#email_subject}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_subject AwsUserPool#email_subject}
   */
   readonly emailSubject?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_subject_by_link TfUserPool#email_subject_by_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#email_subject_by_link AwsUserPool#email_subject_by_link}
   */
   readonly emailSubjectByLink?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#sms_message TfUserPool#sms_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#sms_message AwsUserPool#sms_message}
   */
   readonly smsMessage?: string;
 }
@@ -4611,11 +4611,11 @@ export class VerificationMessageTemplatePropertyOutputReference extends cdktn.Co
 }
 export interface WebAuthnConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#relying_party_id TfUserPool#relying_party_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#relying_party_id AwsUserPool#relying_party_id}
   */
   readonly relyingPartyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#user_verification TfUserPool#user_verification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool#user_verification AwsUserPool#user_verification}
   */
   readonly userVerification?: string;
 }

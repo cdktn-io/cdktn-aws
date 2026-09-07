@@ -5,89 +5,89 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCloudExadataInfrastructureConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCloudExadataInfrastructureConfig extends cdktn.TerraformMetaArguments {
   /**
   * The name of the Availability Zone (AZ) where the Exadata infrastructure is located. Changing this will force terraform to create new resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#availability_zone TfCloudExadataInfrastructure#availability_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#availability_zone AwsCloudExadataInfrastructure#availability_zone}
   */
   readonly availabilityZone?: string;
   /**
   *  The AZ ID of the AZ where the Exadata infrastructure is located. Changing this will force terraform to create new resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#availability_zone_id TfCloudExadataInfrastructure#availability_zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#availability_zone_id AwsCloudExadataInfrastructure#availability_zone_id}
   */
   readonly availabilityZoneId: string;
   /**
   *  The number of compute instances that the Exadata infrastructure is located
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#compute_count TfCloudExadataInfrastructure#compute_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#compute_count AwsCloudExadataInfrastructure#compute_count}
   */
   readonly computeCount?: number;
   /**
   * The email addresses of contacts to receive notification from Oracle about maintenance updates for the Exadata infrastructure. Changing this will force terraform to create new resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#customer_contacts_to_send_to_oci TfCloudExadataInfrastructure#customer_contacts_to_send_to_oci}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#customer_contacts_to_send_to_oci AwsCloudExadataInfrastructure#customer_contacts_to_send_to_oci}
   */
-  readonly customerContactsToSendToOci?: TfCloudExadataInfrastructure.CustomerContactsToSendToOciProperty[] | cdktn.IResolvable;
+  readonly customerContactsToSendToOci?: AwsCloudExadataInfrastructure.CustomerContactsToSendToOciProperty[] | cdktn.IResolvable;
   /**
   * The database server model type of the Exadata infrastructure. For the list of valid model names, use the ListDbSystemShapes operation
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#database_server_type TfCloudExadataInfrastructure#database_server_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#database_server_type AwsCloudExadataInfrastructure#database_server_type}
   */
   readonly databaseServerType?: string;
   /**
   * The user-friendly name for the Exadata infrastructure. Changing this will force terraform to create a new resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#display_name TfCloudExadataInfrastructure#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#display_name AwsCloudExadataInfrastructure#display_name}
   */
   readonly displayName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#region TfCloudExadataInfrastructure#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#region AwsCloudExadataInfrastructure#region}
   */
   readonly region?: string;
   /**
   * The model name of the Exadata infrastructure. Changing this will force terraform to create new resource
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#shape TfCloudExadataInfrastructure#shape}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#shape AwsCloudExadataInfrastructure#shape}
   */
   readonly shape: string;
   /**
   * TThe number of storage servers that are activated for the Exadata infrastructure
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#storage_count TfCloudExadataInfrastructure#storage_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#storage_count AwsCloudExadataInfrastructure#storage_count}
   */
   readonly storageCount?: number;
   /**
   * The storage server model type of the Exadata infrastructure. For the list of valid model names, use the ListDbSystemShapes operation
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#storage_server_type TfCloudExadataInfrastructure#storage_server_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#storage_server_type AwsCloudExadataInfrastructure#storage_server_type}
   */
   readonly storageServerType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#tags TfCloudExadataInfrastructure#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#tags AwsCloudExadataInfrastructure#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * maintenance_window block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#maintenance_window TfCloudExadataInfrastructure#maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#maintenance_window AwsCloudExadataInfrastructure#maintenance_window}
   */
-  readonly maintenanceWindow?: TfCloudExadataInfrastructure.MaintenanceWindowProperty[] | cdktn.IResolvable;
+  readonly maintenanceWindow?: AwsCloudExadataInfrastructure.MaintenanceWindowProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#timeouts TfCloudExadataInfrastructure#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#timeouts AwsCloudExadataInfrastructure#timeouts}
   */
-  readonly timeouts?: TfCloudExadataInfrastructure.TimeoutsProperty;
+  readonly timeouts?: AwsCloudExadataInfrastructure.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure aws_odb_cloud_exadata_infrastructure}
 */
-export class TfCloudExadataInfrastructure extends cdktn.TerraformResource {
+export class AwsCloudExadataInfrastructure extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -98,11 +98,11 @@ export class TfCloudExadataInfrastructure extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCloudExadataInfrastructure resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCloudExadataInfrastructure resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCloudExadataInfrastructure to import
-  * @param importFromId The id of the existing TfCloudExadataInfrastructure that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCloudExadataInfrastructure to import is found
+  * @param importToId The construct id used in the generated config for the AwsCloudExadataInfrastructure to import
+  * @param importFromId The id of the existing AwsCloudExadataInfrastructure that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCloudExadataInfrastructure to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_odb_cloud_exadata_infrastructure", importId: importFromId, provider });
@@ -117,9 +117,9 @@ export class TfCloudExadataInfrastructure extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCloudExadataInfrastructureConfig
+  * @param options AwsCloudExadataInfrastructureConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCloudExadataInfrastructureConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCloudExadataInfrastructureConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_odb_cloud_exadata_infrastructure',
       terraformGeneratorMetadata: {
@@ -235,11 +235,11 @@ export class TfCloudExadataInfrastructure extends cdktn.TerraformResource {
   }
 
   // customer_contacts_to_send_to_oci - computed: false, optional: true, required: false
-  private _customerContactsToSendToOci = new TfCloudExadataInfrastructure.CustomerContactsToSendToOciPropertyList(this, "customer_contacts_to_send_to_oci", true);
+  private _customerContactsToSendToOci = new AwsCloudExadataInfrastructure.CustomerContactsToSendToOciPropertyList(this, "customer_contacts_to_send_to_oci", true);
   public get customerContactsToSendToOci() {
     return this._customerContactsToSendToOci;
   }
-  public putCustomerContactsToSendToOci(value: TfCloudExadataInfrastructure.CustomerContactsToSendToOciProperty[] | cdktn.IResolvable) {
+  public putCustomerContactsToSendToOci(value: AwsCloudExadataInfrastructure.CustomerContactsToSendToOciProperty[] | cdktn.IResolvable) {
     this._customerContactsToSendToOci.internalValue = value;
   }
   public resetCustomerContactsToSendToOci() {
@@ -468,11 +468,11 @@ export class TfCloudExadataInfrastructure extends cdktn.TerraformResource {
   }
 
   // maintenance_window - computed: false, optional: true, required: false
-  private _maintenanceWindow = new TfCloudExadataInfrastructure.MaintenanceWindowPropertyList(this, "maintenance_window", false);
+  private _maintenanceWindow = new AwsCloudExadataInfrastructure.MaintenanceWindowPropertyList(this, "maintenance_window", false);
   public get maintenanceWindow() {
     return this._maintenanceWindow;
   }
-  public putMaintenanceWindow(value: TfCloudExadataInfrastructure.MaintenanceWindowProperty[] | cdktn.IResolvable) {
+  public putMaintenanceWindow(value: AwsCloudExadataInfrastructure.MaintenanceWindowProperty[] | cdktn.IResolvable) {
     this._maintenanceWindow.internalValue = value;
   }
   public resetMaintenanceWindow() {
@@ -484,11 +484,11 @@ export class TfCloudExadataInfrastructure extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCloudExadataInfrastructure.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCloudExadataInfrastructure.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCloudExadataInfrastructure.TimeoutsProperty) {
+  public putTimeouts(value: AwsCloudExadataInfrastructure.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -508,7 +508,7 @@ export class TfCloudExadataInfrastructure extends cdktn.TerraformResource {
       availability_zone: cdktn.stringToTerraform(this._availabilityZone),
       availability_zone_id: cdktn.stringToTerraform(this._availabilityZoneId),
       compute_count: cdktn.numberToTerraform(this._computeCount),
-      customer_contacts_to_send_to_oci: cdktn.listMapper(tfCloudExadataInfrastructureCustomerContactsToSendToOciPropertyToTerraform, false)(this._customerContactsToSendToOci.internalValue),
+      customer_contacts_to_send_to_oci: cdktn.listMapper(awsCloudExadataInfrastructureCustomerContactsToSendToOciPropertyToTerraform, false)(this._customerContactsToSendToOci.internalValue),
       database_server_type: cdktn.stringToTerraform(this._databaseServerType),
       display_name: cdktn.stringToTerraform(this._displayName),
       region: cdktn.stringToTerraform(this._region),
@@ -516,8 +516,8 @@ export class TfCloudExadataInfrastructure extends cdktn.TerraformResource {
       storage_count: cdktn.numberToTerraform(this._storageCount),
       storage_server_type: cdktn.stringToTerraform(this._storageServerType),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      maintenance_window: cdktn.listMapper(tfCloudExadataInfrastructureMaintenanceWindowPropertyToTerraform, true)(this._maintenanceWindow.internalValue),
-      timeouts: tfCloudExadataInfrastructureTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      maintenance_window: cdktn.listMapper(awsCloudExadataInfrastructureMaintenanceWindowPropertyToTerraform, true)(this._maintenanceWindow.internalValue),
+      timeouts: awsCloudExadataInfrastructureTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -542,10 +542,10 @@ export class TfCloudExadataInfrastructure extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       customer_contacts_to_send_to_oci: {
-        value: cdktn.listMapperHcl(tfCloudExadataInfrastructureCustomerContactsToSendToOciPropertyToHclTerraform, false)(this._customerContactsToSendToOci.internalValue),
+        value: cdktn.listMapperHcl(awsCloudExadataInfrastructureCustomerContactsToSendToOciPropertyToHclTerraform, false)(this._customerContactsToSendToOci.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfCloudExadataInfrastructure.CustomerContactsToSendToOciPropertyList",
+        storageClassType: "AwsCloudExadataInfrastructure.CustomerContactsToSendToOciPropertyList",
       },
       database_server_type: {
         value: cdktn.stringToHclTerraform(this._databaseServerType),
@@ -590,16 +590,16 @@ export class TfCloudExadataInfrastructure extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       maintenance_window: {
-        value: cdktn.listMapperHcl(tfCloudExadataInfrastructureMaintenanceWindowPropertyToHclTerraform, true)(this._maintenanceWindow.internalValue),
+        value: cdktn.listMapperHcl(awsCloudExadataInfrastructureMaintenanceWindowPropertyToHclTerraform, true)(this._maintenanceWindow.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCloudExadataInfrastructure.MaintenanceWindowPropertyList",
+        storageClassType: "AwsCloudExadataInfrastructure.MaintenanceWindowPropertyList",
       },
       timeouts: {
-        value: tfCloudExadataInfrastructureTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCloudExadataInfrastructureTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCloudExadataInfrastructure.TimeoutsProperty",
+        storageClassType: "AwsCloudExadataInfrastructure.TimeoutsProperty",
       },
     };
 
@@ -608,7 +608,7 @@ export class TfCloudExadataInfrastructure extends cdktn.TerraformResource {
   }
 }
 
-export function tfCloudExadataInfrastructureCustomerContactsToSendToOciPropertyToTerraform(struct?: TfCloudExadataInfrastructure.CustomerContactsToSendToOciProperty | cdktn.IResolvable): any {
+export function awsCloudExadataInfrastructureCustomerContactsToSendToOciPropertyToTerraform(struct?: AwsCloudExadataInfrastructure.CustomerContactsToSendToOciProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -619,7 +619,7 @@ export function tfCloudExadataInfrastructureCustomerContactsToSendToOciPropertyT
 }
 
 
-export function tfCloudExadataInfrastructureCustomerContactsToSendToOciPropertyToHclTerraform(struct?: TfCloudExadataInfrastructure.CustomerContactsToSendToOciProperty | cdktn.IResolvable): any {
+export function awsCloudExadataInfrastructureCustomerContactsToSendToOciPropertyToHclTerraform(struct?: AwsCloudExadataInfrastructure.CustomerContactsToSendToOciProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -638,7 +638,7 @@ export function tfCloudExadataInfrastructureCustomerContactsToSendToOciPropertyT
 }
 
 
-export function tfCloudExadataInfrastructureDaysOfWeekPropertyToTerraform(struct?: TfCloudExadataInfrastructure.DaysOfWeekProperty | cdktn.IResolvable): any {
+export function awsCloudExadataInfrastructureDaysOfWeekPropertyToTerraform(struct?: AwsCloudExadataInfrastructure.DaysOfWeekProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -649,7 +649,7 @@ export function tfCloudExadataInfrastructureDaysOfWeekPropertyToTerraform(struct
 }
 
 
-export function tfCloudExadataInfrastructureDaysOfWeekPropertyToHclTerraform(struct?: TfCloudExadataInfrastructure.DaysOfWeekProperty | cdktn.IResolvable): any {
+export function awsCloudExadataInfrastructureDaysOfWeekPropertyToHclTerraform(struct?: AwsCloudExadataInfrastructure.DaysOfWeekProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -668,7 +668,7 @@ export function tfCloudExadataInfrastructureDaysOfWeekPropertyToHclTerraform(str
 }
 
 
-export function tfCloudExadataInfrastructureMonthsPropertyToTerraform(struct?: TfCloudExadataInfrastructure.MonthsProperty | cdktn.IResolvable): any {
+export function awsCloudExadataInfrastructureMonthsPropertyToTerraform(struct?: AwsCloudExadataInfrastructure.MonthsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -679,7 +679,7 @@ export function tfCloudExadataInfrastructureMonthsPropertyToTerraform(struct?: T
 }
 
 
-export function tfCloudExadataInfrastructureMonthsPropertyToHclTerraform(struct?: TfCloudExadataInfrastructure.MonthsProperty | cdktn.IResolvable): any {
+export function awsCloudExadataInfrastructureMonthsPropertyToHclTerraform(struct?: AwsCloudExadataInfrastructure.MonthsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -698,18 +698,18 @@ export function tfCloudExadataInfrastructureMonthsPropertyToHclTerraform(struct?
 }
 
 
-export function tfCloudExadataInfrastructureMaintenanceWindowPropertyToTerraform(struct?: TfCloudExadataInfrastructure.MaintenanceWindowProperty | cdktn.IResolvable): any {
+export function awsCloudExadataInfrastructureMaintenanceWindowPropertyToTerraform(struct?: AwsCloudExadataInfrastructure.MaintenanceWindowProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     custom_action_timeout_in_mins: cdktn.numberToTerraform(struct!.customActionTimeoutInMins),
-    days_of_week: cdktn.listMapper(tfCloudExadataInfrastructureDaysOfWeekPropertyToTerraform, false)(struct!.daysOfWeek),
+    days_of_week: cdktn.listMapper(awsCloudExadataInfrastructureDaysOfWeekPropertyToTerraform, false)(struct!.daysOfWeek),
     hours_of_day: cdktn.listMapper(cdktn.numberToTerraform, false)(struct!.hoursOfDay),
     is_custom_action_timeout_enabled: cdktn.booleanToTerraform(struct!.isCustomActionTimeoutEnabled),
     lead_time_in_weeks: cdktn.numberToTerraform(struct!.leadTimeInWeeks),
-    months: cdktn.listMapper(tfCloudExadataInfrastructureMonthsPropertyToTerraform, false)(struct!.months),
+    months: cdktn.listMapper(awsCloudExadataInfrastructureMonthsPropertyToTerraform, false)(struct!.months),
     patching_mode: cdktn.stringToTerraform(struct!.patchingMode),
     preference: cdktn.stringToTerraform(struct!.preference),
     weeks_of_month: cdktn.listMapper(cdktn.numberToTerraform, false)(struct!.weeksOfMonth),
@@ -717,7 +717,7 @@ export function tfCloudExadataInfrastructureMaintenanceWindowPropertyToTerraform
 }
 
 
-export function tfCloudExadataInfrastructureMaintenanceWindowPropertyToHclTerraform(struct?: TfCloudExadataInfrastructure.MaintenanceWindowProperty | cdktn.IResolvable): any {
+export function awsCloudExadataInfrastructureMaintenanceWindowPropertyToHclTerraform(struct?: AwsCloudExadataInfrastructure.MaintenanceWindowProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -730,7 +730,7 @@ export function tfCloudExadataInfrastructureMaintenanceWindowPropertyToHclTerraf
       storageClassType: "number",
     },
     days_of_week: {
-      value: cdktn.listMapperHcl(tfCloudExadataInfrastructureDaysOfWeekPropertyToHclTerraform, false)(struct!.daysOfWeek),
+      value: cdktn.listMapperHcl(awsCloudExadataInfrastructureDaysOfWeekPropertyToHclTerraform, false)(struct!.daysOfWeek),
       isBlock: true,
       type: "set",
       storageClassType: "DaysOfWeekPropertyList",
@@ -754,7 +754,7 @@ export function tfCloudExadataInfrastructureMaintenanceWindowPropertyToHclTerraf
       storageClassType: "number",
     },
     months: {
-      value: cdktn.listMapperHcl(tfCloudExadataInfrastructureMonthsPropertyToHclTerraform, false)(struct!.months),
+      value: cdktn.listMapperHcl(awsCloudExadataInfrastructureMonthsPropertyToHclTerraform, false)(struct!.months),
       isBlock: true,
       type: "set",
       storageClassType: "MonthsPropertyList",
@@ -784,7 +784,7 @@ export function tfCloudExadataInfrastructureMaintenanceWindowPropertyToHclTerraf
 }
 
 
-export function tfCloudExadataInfrastructureTimeoutsPropertyToTerraform(struct?: TfCloudExadataInfrastructure.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCloudExadataInfrastructureTimeoutsPropertyToTerraform(struct?: AwsCloudExadataInfrastructure.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -797,7 +797,7 @@ export function tfCloudExadataInfrastructureTimeoutsPropertyToTerraform(struct?:
 }
 
 
-export function tfCloudExadataInfrastructureTimeoutsPropertyToHclTerraform(struct?: TfCloudExadataInfrastructure.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCloudExadataInfrastructureTimeoutsPropertyToHclTerraform(struct?: AwsCloudExadataInfrastructure.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -828,10 +828,10 @@ export function tfCloudExadataInfrastructureTimeoutsPropertyToHclTerraform(struc
 }
 
 
-export namespace TfCloudExadataInfrastructure {
+export namespace AwsCloudExadataInfrastructure {
 export interface CustomerContactsToSendToOciProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#email TfCloudExadataInfrastructure#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#email AwsCloudExadataInfrastructure#email}
   */
   readonly email?: string;
 }
@@ -917,7 +917,7 @@ export class CustomerContactsToSendToOciPropertyList extends cdktn.ComplexList {
 }
 export interface DaysOfWeekProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#name TfCloudExadataInfrastructure#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#name AwsCloudExadataInfrastructure#name}
   */
   readonly name?: string;
 }
@@ -1003,7 +1003,7 @@ export class DaysOfWeekPropertyList extends cdktn.ComplexList {
 }
 export interface MonthsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#name TfCloudExadataInfrastructure#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#name AwsCloudExadataInfrastructure#name}
   */
   readonly name?: string;
 }
@@ -1089,39 +1089,39 @@ export class MonthsPropertyList extends cdktn.ComplexList {
 }
 export interface MaintenanceWindowProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#custom_action_timeout_in_mins TfCloudExadataInfrastructure#custom_action_timeout_in_mins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#custom_action_timeout_in_mins AwsCloudExadataInfrastructure#custom_action_timeout_in_mins}
   */
   readonly customActionTimeoutInMins: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#days_of_week TfCloudExadataInfrastructure#days_of_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#days_of_week AwsCloudExadataInfrastructure#days_of_week}
   */
   readonly daysOfWeek?: DaysOfWeekProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#hours_of_day TfCloudExadataInfrastructure#hours_of_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#hours_of_day AwsCloudExadataInfrastructure#hours_of_day}
   */
   readonly hoursOfDay?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#is_custom_action_timeout_enabled TfCloudExadataInfrastructure#is_custom_action_timeout_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#is_custom_action_timeout_enabled AwsCloudExadataInfrastructure#is_custom_action_timeout_enabled}
   */
   readonly isCustomActionTimeoutEnabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#lead_time_in_weeks TfCloudExadataInfrastructure#lead_time_in_weeks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#lead_time_in_weeks AwsCloudExadataInfrastructure#lead_time_in_weeks}
   */
   readonly leadTimeInWeeks?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#months TfCloudExadataInfrastructure#months}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#months AwsCloudExadataInfrastructure#months}
   */
   readonly months?: MonthsProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#patching_mode TfCloudExadataInfrastructure#patching_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#patching_mode AwsCloudExadataInfrastructure#patching_mode}
   */
   readonly patchingMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#preference TfCloudExadataInfrastructure#preference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#preference AwsCloudExadataInfrastructure#preference}
   */
   readonly preference: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#weeks_of_month TfCloudExadataInfrastructure#weeks_of_month}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#weeks_of_month AwsCloudExadataInfrastructure#weeks_of_month}
   */
   readonly weeksOfMonth?: number[];
 }
@@ -1373,19 +1373,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#create TfCloudExadataInfrastructure#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#create AwsCloudExadataInfrastructure#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#delete TfCloudExadataInfrastructure#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#delete AwsCloudExadataInfrastructure#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#update TfCloudExadataInfrastructure#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/odb_cloud_exadata_infrastructure#update AwsCloudExadataInfrastructure#update}
   */
   readonly update?: string;
 }

@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfLbConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsLbConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#arn DataTfLb#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#arn DataAwsLb#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#id DataTfLb#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#id DataAwsLb#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#name DataTfLb#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#name DataAwsLb#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#region DataTfLb#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#region DataAwsLb#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#tags DataTfLb#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#tags DataAwsLb#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#timeouts DataTfLb#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#timeouts DataAwsLb#timeouts}
   */
-  readonly timeouts?: DataTfLb.TimeoutsProperty;
+  readonly timeouts?: DataAwsLb.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb aws_lb}
 */
-export class DataTfLb extends cdktn.TerraformDataSource {
+export class DataAwsLb extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class DataTfLb extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfLb resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsLb resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfLb to import
-  * @param importFromId The id of the existing DataTfLb that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfLb to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsLb to import
+  * @param importFromId The id of the existing DataAwsLb that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsLb to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lb", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class DataTfLb extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfLbConfig = {}
+  * @param options DataAwsLbConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfLbConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsLbConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_lb',
       terraformGeneratorMetadata: {
@@ -103,7 +103,7 @@ export class DataTfLb extends cdktn.TerraformDataSource {
   // ==========
 
   // access_logs - computed: true, optional: false, required: false
-  private _accessLogs = new DataTfLb.AccessLogsPropertyList(this, "access_logs", false);
+  private _accessLogs = new DataAwsLb.AccessLogsPropertyList(this, "access_logs", false);
   public get accessLogs() {
     return this._accessLogs;
   }
@@ -135,7 +135,7 @@ export class DataTfLb extends cdktn.TerraformDataSource {
   }
 
   // connection_logs - computed: true, optional: false, required: false
-  private _connectionLogs = new DataTfLb.ConnectionLogsPropertyList(this, "connection_logs", false);
+  private _connectionLogs = new DataAwsLb.ConnectionLogsPropertyList(this, "connection_logs", false);
   public get connectionLogs() {
     return this._connectionLogs;
   }
@@ -211,7 +211,7 @@ export class DataTfLb extends cdktn.TerraformDataSource {
   }
 
   // health_check_logs - computed: true, optional: false, required: false
-  private _healthCheckLogs = new DataTfLb.HealthCheckLogsPropertyList(this, "health_check_logs", false);
+  private _healthCheckLogs = new DataAwsLb.HealthCheckLogsPropertyList(this, "health_check_logs", false);
   public get healthCheckLogs() {
     return this._healthCheckLogs;
   }
@@ -248,7 +248,7 @@ export class DataTfLb extends cdktn.TerraformDataSource {
   }
 
   // ipam_pools - computed: true, optional: false, required: false
-  private _ipamPools = new DataTfLb.IpamPoolsPropertyList(this, "ipam_pools", false);
+  private _ipamPools = new DataAwsLb.IpamPoolsPropertyList(this, "ipam_pools", false);
   public get ipamPools() {
     return this._ipamPools;
   }
@@ -306,7 +306,7 @@ export class DataTfLb extends cdktn.TerraformDataSource {
   }
 
   // subnet_mapping - computed: true, optional: false, required: false
-  private _subnetMapping = new DataTfLb.SubnetMappingPropertyList(this, "subnet_mapping", true);
+  private _subnetMapping = new DataAwsLb.SubnetMappingPropertyList(this, "subnet_mapping", true);
   public get subnetMapping() {
     return this._subnetMapping;
   }
@@ -348,11 +348,11 @@ export class DataTfLb extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataTfLb.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataAwsLb.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataTfLb.TimeoutsProperty) {
+  public putTimeouts(value: DataAwsLb.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -374,7 +374,7 @@ export class DataTfLb extends cdktn.TerraformDataSource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: dataTfLbTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: dataAwsLbTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -411,10 +411,10 @@ export class DataTfLb extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: dataTfLbTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataAwsLbTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataTfLb.TimeoutsProperty",
+        storageClassType: "DataAwsLb.TimeoutsProperty",
       },
     };
 
@@ -423,7 +423,7 @@ export class DataTfLb extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfLbAccessLogsPropertyToTerraform(struct?: DataTfLb.AccessLogsProperty): any {
+export function dataAwsLbAccessLogsPropertyToTerraform(struct?: DataAwsLb.AccessLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -433,7 +433,7 @@ export function dataTfLbAccessLogsPropertyToTerraform(struct?: DataTfLb.AccessLo
 }
 
 
-export function dataTfLbAccessLogsPropertyToHclTerraform(struct?: DataTfLb.AccessLogsProperty): any {
+export function dataAwsLbAccessLogsPropertyToHclTerraform(struct?: DataAwsLb.AccessLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -444,7 +444,7 @@ export function dataTfLbAccessLogsPropertyToHclTerraform(struct?: DataTfLb.Acces
 }
 
 
-export function dataTfLbConnectionLogsPropertyToTerraform(struct?: DataTfLb.ConnectionLogsProperty): any {
+export function dataAwsLbConnectionLogsPropertyToTerraform(struct?: DataAwsLb.ConnectionLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -454,7 +454,7 @@ export function dataTfLbConnectionLogsPropertyToTerraform(struct?: DataTfLb.Conn
 }
 
 
-export function dataTfLbConnectionLogsPropertyToHclTerraform(struct?: DataTfLb.ConnectionLogsProperty): any {
+export function dataAwsLbConnectionLogsPropertyToHclTerraform(struct?: DataAwsLb.ConnectionLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -465,7 +465,7 @@ export function dataTfLbConnectionLogsPropertyToHclTerraform(struct?: DataTfLb.C
 }
 
 
-export function dataTfLbHealthCheckLogsPropertyToTerraform(struct?: DataTfLb.HealthCheckLogsProperty): any {
+export function dataAwsLbHealthCheckLogsPropertyToTerraform(struct?: DataAwsLb.HealthCheckLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -475,7 +475,7 @@ export function dataTfLbHealthCheckLogsPropertyToTerraform(struct?: DataTfLb.Hea
 }
 
 
-export function dataTfLbHealthCheckLogsPropertyToHclTerraform(struct?: DataTfLb.HealthCheckLogsProperty): any {
+export function dataAwsLbHealthCheckLogsPropertyToHclTerraform(struct?: DataAwsLb.HealthCheckLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -486,7 +486,7 @@ export function dataTfLbHealthCheckLogsPropertyToHclTerraform(struct?: DataTfLb.
 }
 
 
-export function dataTfLbIpamPoolsPropertyToTerraform(struct?: DataTfLb.IpamPoolsProperty): any {
+export function dataAwsLbIpamPoolsPropertyToTerraform(struct?: DataAwsLb.IpamPoolsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,7 +496,7 @@ export function dataTfLbIpamPoolsPropertyToTerraform(struct?: DataTfLb.IpamPools
 }
 
 
-export function dataTfLbIpamPoolsPropertyToHclTerraform(struct?: DataTfLb.IpamPoolsProperty): any {
+export function dataAwsLbIpamPoolsPropertyToHclTerraform(struct?: DataAwsLb.IpamPoolsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -507,7 +507,7 @@ export function dataTfLbIpamPoolsPropertyToHclTerraform(struct?: DataTfLb.IpamPo
 }
 
 
-export function dataTfLbSubnetMappingPropertyToTerraform(struct?: DataTfLb.SubnetMappingProperty): any {
+export function dataAwsLbSubnetMappingPropertyToTerraform(struct?: DataAwsLb.SubnetMappingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -517,7 +517,7 @@ export function dataTfLbSubnetMappingPropertyToTerraform(struct?: DataTfLb.Subne
 }
 
 
-export function dataTfLbSubnetMappingPropertyToHclTerraform(struct?: DataTfLb.SubnetMappingProperty): any {
+export function dataAwsLbSubnetMappingPropertyToHclTerraform(struct?: DataAwsLb.SubnetMappingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -528,7 +528,7 @@ export function dataTfLbSubnetMappingPropertyToHclTerraform(struct?: DataTfLb.Su
 }
 
 
-export function dataTfLbTimeoutsPropertyToTerraform(struct?: DataTfLb.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsLbTimeoutsPropertyToTerraform(struct?: DataAwsLb.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -539,7 +539,7 @@ export function dataTfLbTimeoutsPropertyToTerraform(struct?: DataTfLb.TimeoutsPr
 }
 
 
-export function dataTfLbTimeoutsPropertyToHclTerraform(struct?: DataTfLb.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsLbTimeoutsPropertyToHclTerraform(struct?: DataAwsLb.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -558,7 +558,7 @@ export function dataTfLbTimeoutsPropertyToHclTerraform(struct?: DataTfLb.Timeout
 }
 
 
-export namespace DataTfLb {
+export namespace DataAwsLb {
 export interface AccessLogsProperty {
 }
 export class AccessLogsPropertyOutputReference extends cdktn.ComplexObject {
@@ -881,7 +881,7 @@ export class SubnetMappingPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#read DataTfLb#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lb#read DataAwsLb#read}
   */
   readonly read?: string;
 }

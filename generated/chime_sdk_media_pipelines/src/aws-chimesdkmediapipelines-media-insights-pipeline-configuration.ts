@@ -5,53 +5,53 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfMediaInsightsPipelineConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsMediaInsightsPipelineConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#name TfMediaInsightsPipelineConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#name AwsMediaInsightsPipelineConfiguration#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#region TfMediaInsightsPipelineConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#region AwsMediaInsightsPipelineConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#resource_access_role_arn TfMediaInsightsPipelineConfiguration#resource_access_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#resource_access_role_arn AwsMediaInsightsPipelineConfiguration#resource_access_role_arn}
   */
   readonly resourceAccessRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#tags TfMediaInsightsPipelineConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#tags AwsMediaInsightsPipelineConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#tags_all TfMediaInsightsPipelineConfiguration#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#tags_all AwsMediaInsightsPipelineConfiguration#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * elements block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#elements TfMediaInsightsPipelineConfiguration#elements}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#elements AwsMediaInsightsPipelineConfiguration#elements}
   */
-  readonly elements: TfMediaInsightsPipelineConfiguration.ElementsProperty[] | cdktn.IResolvable;
+  readonly elements: AwsMediaInsightsPipelineConfiguration.ElementsProperty[] | cdktn.IResolvable;
   /**
   * real_time_alert_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#real_time_alert_configuration TfMediaInsightsPipelineConfiguration#real_time_alert_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#real_time_alert_configuration AwsMediaInsightsPipelineConfiguration#real_time_alert_configuration}
   */
-  readonly realTimeAlertConfiguration?: TfMediaInsightsPipelineConfiguration.RealTimeAlertConfigurationProperty;
+  readonly realTimeAlertConfiguration?: AwsMediaInsightsPipelineConfiguration.RealTimeAlertConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#timeouts TfMediaInsightsPipelineConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#timeouts AwsMediaInsightsPipelineConfiguration#timeouts}
   */
-  readonly timeouts?: TfMediaInsightsPipelineConfiguration.TimeoutsProperty;
+  readonly timeouts?: AwsMediaInsightsPipelineConfiguration.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration aws_chimesdkmediapipelines_media_insights_pipeline_configuration}
 */
-export class TfMediaInsightsPipelineConfiguration extends cdktn.TerraformResource {
+export class AwsMediaInsightsPipelineConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -62,11 +62,11 @@ export class TfMediaInsightsPipelineConfiguration extends cdktn.TerraformResourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfMediaInsightsPipelineConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsMediaInsightsPipelineConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfMediaInsightsPipelineConfiguration to import
-  * @param importFromId The id of the existing TfMediaInsightsPipelineConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfMediaInsightsPipelineConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsMediaInsightsPipelineConfiguration to import
+  * @param importFromId The id of the existing AwsMediaInsightsPipelineConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMediaInsightsPipelineConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_chimesdkmediapipelines_media_insights_pipeline_configuration", importId: importFromId, provider });
@@ -81,9 +81,9 @@ export class TfMediaInsightsPipelineConfiguration extends cdktn.TerraformResourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfMediaInsightsPipelineConfigurationConfig
+  * @param options AwsMediaInsightsPipelineConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfMediaInsightsPipelineConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsMediaInsightsPipelineConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_chimesdkmediapipelines_media_insights_pipeline_configuration',
       terraformGeneratorMetadata: {
@@ -198,11 +198,11 @@ export class TfMediaInsightsPipelineConfiguration extends cdktn.TerraformResourc
   }
 
   // elements - computed: false, optional: false, required: true
-  private _elements = new TfMediaInsightsPipelineConfiguration.ElementsPropertyList(this, "elements", false);
+  private _elements = new AwsMediaInsightsPipelineConfiguration.ElementsPropertyList(this, "elements", false);
   public get elements() {
     return this._elements;
   }
-  public putElements(value: TfMediaInsightsPipelineConfiguration.ElementsProperty[] | cdktn.IResolvable) {
+  public putElements(value: AwsMediaInsightsPipelineConfiguration.ElementsProperty[] | cdktn.IResolvable) {
     this._elements.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -211,11 +211,11 @@ export class TfMediaInsightsPipelineConfiguration extends cdktn.TerraformResourc
   }
 
   // real_time_alert_configuration - computed: false, optional: true, required: false
-  private _realTimeAlertConfiguration = new TfMediaInsightsPipelineConfiguration.RealTimeAlertConfigurationPropertyOutputReference(this, "real_time_alert_configuration");
+  private _realTimeAlertConfiguration = new AwsMediaInsightsPipelineConfiguration.RealTimeAlertConfigurationPropertyOutputReference(this, "real_time_alert_configuration");
   public get realTimeAlertConfiguration() {
     return this._realTimeAlertConfiguration;
   }
-  public putRealTimeAlertConfiguration(value: TfMediaInsightsPipelineConfiguration.RealTimeAlertConfigurationProperty) {
+  public putRealTimeAlertConfiguration(value: AwsMediaInsightsPipelineConfiguration.RealTimeAlertConfigurationProperty) {
     this._realTimeAlertConfiguration.internalValue = value;
   }
   public resetRealTimeAlertConfiguration() {
@@ -227,11 +227,11 @@ export class TfMediaInsightsPipelineConfiguration extends cdktn.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfMediaInsightsPipelineConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsMediaInsightsPipelineConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfMediaInsightsPipelineConfiguration.TimeoutsProperty) {
+  public putTimeouts(value: AwsMediaInsightsPipelineConfiguration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -253,9 +253,9 @@ export class TfMediaInsightsPipelineConfiguration extends cdktn.TerraformResourc
       resource_access_role_arn: cdktn.stringToTerraform(this._resourceAccessRoleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      elements: cdktn.listMapper(tfMediaInsightsPipelineConfigurationElementsPropertyToTerraform, true)(this._elements.internalValue),
-      real_time_alert_configuration: tfMediaInsightsPipelineConfigurationRealTimeAlertConfigurationPropertyToTerraform(this._realTimeAlertConfiguration.internalValue),
-      timeouts: tfMediaInsightsPipelineConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      elements: cdktn.listMapper(awsMediaInsightsPipelineConfigurationElementsPropertyToTerraform, true)(this._elements.internalValue),
+      real_time_alert_configuration: awsMediaInsightsPipelineConfigurationRealTimeAlertConfigurationPropertyToTerraform(this._realTimeAlertConfiguration.internalValue),
+      timeouts: awsMediaInsightsPipelineConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -292,22 +292,22 @@ export class TfMediaInsightsPipelineConfiguration extends cdktn.TerraformResourc
         storageClassType: "stringMap",
       },
       elements: {
-        value: cdktn.listMapperHcl(tfMediaInsightsPipelineConfigurationElementsPropertyToHclTerraform, true)(this._elements.internalValue),
+        value: cdktn.listMapperHcl(awsMediaInsightsPipelineConfigurationElementsPropertyToHclTerraform, true)(this._elements.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMediaInsightsPipelineConfiguration.ElementsPropertyList",
+        storageClassType: "AwsMediaInsightsPipelineConfiguration.ElementsPropertyList",
       },
       real_time_alert_configuration: {
-        value: tfMediaInsightsPipelineConfigurationRealTimeAlertConfigurationPropertyToHclTerraform(this._realTimeAlertConfiguration.internalValue),
+        value: awsMediaInsightsPipelineConfigurationRealTimeAlertConfigurationPropertyToHclTerraform(this._realTimeAlertConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMediaInsightsPipelineConfiguration.RealTimeAlertConfigurationPropertyList",
+        storageClassType: "AwsMediaInsightsPipelineConfiguration.RealTimeAlertConfigurationPropertyList",
       },
       timeouts: {
-        value: tfMediaInsightsPipelineConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsMediaInsightsPipelineConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfMediaInsightsPipelineConfiguration.TimeoutsProperty",
+        storageClassType: "AwsMediaInsightsPipelineConfiguration.TimeoutsProperty",
       },
     };
 
@@ -316,7 +316,7 @@ export class TfMediaInsightsPipelineConfiguration extends cdktn.TerraformResourc
   }
 }
 
-export function tfMediaInsightsPipelineConfigurationPostCallAnalyticsSettingsPropertyToTerraform(struct?: TfMediaInsightsPipelineConfiguration.PostCallAnalyticsSettingsPropertyOutputReference | TfMediaInsightsPipelineConfiguration.PostCallAnalyticsSettingsProperty): any {
+export function awsMediaInsightsPipelineConfigurationPostCallAnalyticsSettingsPropertyToTerraform(struct?: AwsMediaInsightsPipelineConfiguration.PostCallAnalyticsSettingsPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.PostCallAnalyticsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function tfMediaInsightsPipelineConfigurationPostCallAnalyticsSettingsPro
 }
 
 
-export function tfMediaInsightsPipelineConfigurationPostCallAnalyticsSettingsPropertyToHclTerraform(struct?: TfMediaInsightsPipelineConfiguration.PostCallAnalyticsSettingsPropertyOutputReference | TfMediaInsightsPipelineConfiguration.PostCallAnalyticsSettingsProperty): any {
+export function awsMediaInsightsPipelineConfigurationPostCallAnalyticsSettingsPropertyToHclTerraform(struct?: AwsMediaInsightsPipelineConfiguration.PostCallAnalyticsSettingsPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.PostCallAnalyticsSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,7 +367,7 @@ export function tfMediaInsightsPipelineConfigurationPostCallAnalyticsSettingsPro
 }
 
 
-export function tfMediaInsightsPipelineConfigurationAmazonTranscribeCallAnalyticsProcessorConfigurationPropertyToTerraform(struct?: TfMediaInsightsPipelineConfiguration.AmazonTranscribeCallAnalyticsProcessorConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.AmazonTranscribeCallAnalyticsProcessorConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationAmazonTranscribeCallAnalyticsProcessorConfigurationPropertyToTerraform(struct?: AwsMediaInsightsPipelineConfiguration.AmazonTranscribeCallAnalyticsProcessorConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.AmazonTranscribeCallAnalyticsProcessorConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,12 +385,12 @@ export function tfMediaInsightsPipelineConfigurationAmazonTranscribeCallAnalytic
     vocabulary_filter_method: cdktn.stringToTerraform(struct!.vocabularyFilterMethod),
     vocabulary_filter_name: cdktn.stringToTerraform(struct!.vocabularyFilterName),
     vocabulary_name: cdktn.stringToTerraform(struct!.vocabularyName),
-    post_call_analytics_settings: tfMediaInsightsPipelineConfigurationPostCallAnalyticsSettingsPropertyToTerraform(struct!.postCallAnalyticsSettings),
+    post_call_analytics_settings: awsMediaInsightsPipelineConfigurationPostCallAnalyticsSettingsPropertyToTerraform(struct!.postCallAnalyticsSettings),
   }
 }
 
 
-export function tfMediaInsightsPipelineConfigurationAmazonTranscribeCallAnalyticsProcessorConfigurationPropertyToHclTerraform(struct?: TfMediaInsightsPipelineConfiguration.AmazonTranscribeCallAnalyticsProcessorConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.AmazonTranscribeCallAnalyticsProcessorConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationAmazonTranscribeCallAnalyticsProcessorConfigurationPropertyToHclTerraform(struct?: AwsMediaInsightsPipelineConfiguration.AmazonTranscribeCallAnalyticsProcessorConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.AmazonTranscribeCallAnalyticsProcessorConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,7 +469,7 @@ export function tfMediaInsightsPipelineConfigurationAmazonTranscribeCallAnalytic
       storageClassType: "string",
     },
     post_call_analytics_settings: {
-      value: tfMediaInsightsPipelineConfigurationPostCallAnalyticsSettingsPropertyToHclTerraform(struct!.postCallAnalyticsSettings),
+      value: awsMediaInsightsPipelineConfigurationPostCallAnalyticsSettingsPropertyToHclTerraform(struct!.postCallAnalyticsSettings),
       isBlock: true,
       type: "list",
       storageClassType: "PostCallAnalyticsSettingsPropertyList",
@@ -481,7 +481,7 @@ export function tfMediaInsightsPipelineConfigurationAmazonTranscribeCallAnalytic
 }
 
 
-export function tfMediaInsightsPipelineConfigurationAmazonTranscribeProcessorConfigurationPropertyToTerraform(struct?: TfMediaInsightsPipelineConfiguration.AmazonTranscribeProcessorConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.AmazonTranscribeProcessorConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationAmazonTranscribeProcessorConfigurationPropertyToTerraform(struct?: AwsMediaInsightsPipelineConfiguration.AmazonTranscribeProcessorConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.AmazonTranscribeProcessorConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -503,7 +503,7 @@ export function tfMediaInsightsPipelineConfigurationAmazonTranscribeProcessorCon
 }
 
 
-export function tfMediaInsightsPipelineConfigurationAmazonTranscribeProcessorConfigurationPropertyToHclTerraform(struct?: TfMediaInsightsPipelineConfiguration.AmazonTranscribeProcessorConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.AmazonTranscribeProcessorConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationAmazonTranscribeProcessorConfigurationPropertyToHclTerraform(struct?: AwsMediaInsightsPipelineConfiguration.AmazonTranscribeProcessorConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.AmazonTranscribeProcessorConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -588,7 +588,7 @@ export function tfMediaInsightsPipelineConfigurationAmazonTranscribeProcessorCon
 }
 
 
-export function tfMediaInsightsPipelineConfigurationKinesisDataStreamSinkConfigurationPropertyToTerraform(struct?: TfMediaInsightsPipelineConfiguration.KinesisDataStreamSinkConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.KinesisDataStreamSinkConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationKinesisDataStreamSinkConfigurationPropertyToTerraform(struct?: AwsMediaInsightsPipelineConfiguration.KinesisDataStreamSinkConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.KinesisDataStreamSinkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -599,7 +599,7 @@ export function tfMediaInsightsPipelineConfigurationKinesisDataStreamSinkConfigu
 }
 
 
-export function tfMediaInsightsPipelineConfigurationKinesisDataStreamSinkConfigurationPropertyToHclTerraform(struct?: TfMediaInsightsPipelineConfiguration.KinesisDataStreamSinkConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.KinesisDataStreamSinkConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationKinesisDataStreamSinkConfigurationPropertyToHclTerraform(struct?: AwsMediaInsightsPipelineConfiguration.KinesisDataStreamSinkConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.KinesisDataStreamSinkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -618,7 +618,7 @@ export function tfMediaInsightsPipelineConfigurationKinesisDataStreamSinkConfigu
 }
 
 
-export function tfMediaInsightsPipelineConfigurationLambdaFunctionSinkConfigurationPropertyToTerraform(struct?: TfMediaInsightsPipelineConfiguration.LambdaFunctionSinkConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.LambdaFunctionSinkConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationLambdaFunctionSinkConfigurationPropertyToTerraform(struct?: AwsMediaInsightsPipelineConfiguration.LambdaFunctionSinkConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.LambdaFunctionSinkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -629,7 +629,7 @@ export function tfMediaInsightsPipelineConfigurationLambdaFunctionSinkConfigurat
 }
 
 
-export function tfMediaInsightsPipelineConfigurationLambdaFunctionSinkConfigurationPropertyToHclTerraform(struct?: TfMediaInsightsPipelineConfiguration.LambdaFunctionSinkConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.LambdaFunctionSinkConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationLambdaFunctionSinkConfigurationPropertyToHclTerraform(struct?: AwsMediaInsightsPipelineConfiguration.LambdaFunctionSinkConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.LambdaFunctionSinkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -648,7 +648,7 @@ export function tfMediaInsightsPipelineConfigurationLambdaFunctionSinkConfigurat
 }
 
 
-export function tfMediaInsightsPipelineConfigurationS3RecordingSinkConfigurationPropertyToTerraform(struct?: TfMediaInsightsPipelineConfiguration.S3RecordingSinkConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.S3RecordingSinkConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationS3RecordingSinkConfigurationPropertyToTerraform(struct?: AwsMediaInsightsPipelineConfiguration.S3RecordingSinkConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.S3RecordingSinkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -659,7 +659,7 @@ export function tfMediaInsightsPipelineConfigurationS3RecordingSinkConfiguration
 }
 
 
-export function tfMediaInsightsPipelineConfigurationS3RecordingSinkConfigurationPropertyToHclTerraform(struct?: TfMediaInsightsPipelineConfiguration.S3RecordingSinkConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.S3RecordingSinkConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationS3RecordingSinkConfigurationPropertyToHclTerraform(struct?: AwsMediaInsightsPipelineConfiguration.S3RecordingSinkConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.S3RecordingSinkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -678,7 +678,7 @@ export function tfMediaInsightsPipelineConfigurationS3RecordingSinkConfiguration
 }
 
 
-export function tfMediaInsightsPipelineConfigurationSnsTopicSinkConfigurationPropertyToTerraform(struct?: TfMediaInsightsPipelineConfiguration.SnsTopicSinkConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.SnsTopicSinkConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationSnsTopicSinkConfigurationPropertyToTerraform(struct?: AwsMediaInsightsPipelineConfiguration.SnsTopicSinkConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.SnsTopicSinkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -689,7 +689,7 @@ export function tfMediaInsightsPipelineConfigurationSnsTopicSinkConfigurationPro
 }
 
 
-export function tfMediaInsightsPipelineConfigurationSnsTopicSinkConfigurationPropertyToHclTerraform(struct?: TfMediaInsightsPipelineConfiguration.SnsTopicSinkConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.SnsTopicSinkConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationSnsTopicSinkConfigurationPropertyToHclTerraform(struct?: AwsMediaInsightsPipelineConfiguration.SnsTopicSinkConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.SnsTopicSinkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -708,7 +708,7 @@ export function tfMediaInsightsPipelineConfigurationSnsTopicSinkConfigurationPro
 }
 
 
-export function tfMediaInsightsPipelineConfigurationSqsQueueSinkConfigurationPropertyToTerraform(struct?: TfMediaInsightsPipelineConfiguration.SqsQueueSinkConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.SqsQueueSinkConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationSqsQueueSinkConfigurationPropertyToTerraform(struct?: AwsMediaInsightsPipelineConfiguration.SqsQueueSinkConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.SqsQueueSinkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -719,7 +719,7 @@ export function tfMediaInsightsPipelineConfigurationSqsQueueSinkConfigurationPro
 }
 
 
-export function tfMediaInsightsPipelineConfigurationSqsQueueSinkConfigurationPropertyToHclTerraform(struct?: TfMediaInsightsPipelineConfiguration.SqsQueueSinkConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.SqsQueueSinkConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationSqsQueueSinkConfigurationPropertyToHclTerraform(struct?: AwsMediaInsightsPipelineConfiguration.SqsQueueSinkConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.SqsQueueSinkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -738,7 +738,7 @@ export function tfMediaInsightsPipelineConfigurationSqsQueueSinkConfigurationPro
 }
 
 
-export function tfMediaInsightsPipelineConfigurationVoiceAnalyticsProcessorConfigurationPropertyToTerraform(struct?: TfMediaInsightsPipelineConfiguration.VoiceAnalyticsProcessorConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.VoiceAnalyticsProcessorConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationVoiceAnalyticsProcessorConfigurationPropertyToTerraform(struct?: AwsMediaInsightsPipelineConfiguration.VoiceAnalyticsProcessorConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.VoiceAnalyticsProcessorConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -750,7 +750,7 @@ export function tfMediaInsightsPipelineConfigurationVoiceAnalyticsProcessorConfi
 }
 
 
-export function tfMediaInsightsPipelineConfigurationVoiceAnalyticsProcessorConfigurationPropertyToHclTerraform(struct?: TfMediaInsightsPipelineConfiguration.VoiceAnalyticsProcessorConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.VoiceAnalyticsProcessorConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationVoiceAnalyticsProcessorConfigurationPropertyToHclTerraform(struct?: AwsMediaInsightsPipelineConfiguration.VoiceAnalyticsProcessorConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.VoiceAnalyticsProcessorConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -775,26 +775,26 @@ export function tfMediaInsightsPipelineConfigurationVoiceAnalyticsProcessorConfi
 }
 
 
-export function tfMediaInsightsPipelineConfigurationElementsPropertyToTerraform(struct?: TfMediaInsightsPipelineConfiguration.ElementsProperty | cdktn.IResolvable): any {
+export function awsMediaInsightsPipelineConfigurationElementsPropertyToTerraform(struct?: AwsMediaInsightsPipelineConfiguration.ElementsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    amazon_transcribe_call_analytics_processor_configuration: tfMediaInsightsPipelineConfigurationAmazonTranscribeCallAnalyticsProcessorConfigurationPropertyToTerraform(struct!.amazonTranscribeCallAnalyticsProcessorConfiguration),
-    amazon_transcribe_processor_configuration: tfMediaInsightsPipelineConfigurationAmazonTranscribeProcessorConfigurationPropertyToTerraform(struct!.amazonTranscribeProcessorConfiguration),
-    kinesis_data_stream_sink_configuration: tfMediaInsightsPipelineConfigurationKinesisDataStreamSinkConfigurationPropertyToTerraform(struct!.kinesisDataStreamSinkConfiguration),
-    lambda_function_sink_configuration: tfMediaInsightsPipelineConfigurationLambdaFunctionSinkConfigurationPropertyToTerraform(struct!.lambdaFunctionSinkConfiguration),
-    s3_recording_sink_configuration: tfMediaInsightsPipelineConfigurationS3RecordingSinkConfigurationPropertyToTerraform(struct!.s3RecordingSinkConfiguration),
-    sns_topic_sink_configuration: tfMediaInsightsPipelineConfigurationSnsTopicSinkConfigurationPropertyToTerraform(struct!.snsTopicSinkConfiguration),
-    sqs_queue_sink_configuration: tfMediaInsightsPipelineConfigurationSqsQueueSinkConfigurationPropertyToTerraform(struct!.sqsQueueSinkConfiguration),
-    voice_analytics_processor_configuration: tfMediaInsightsPipelineConfigurationVoiceAnalyticsProcessorConfigurationPropertyToTerraform(struct!.voiceAnalyticsProcessorConfiguration),
+    amazon_transcribe_call_analytics_processor_configuration: awsMediaInsightsPipelineConfigurationAmazonTranscribeCallAnalyticsProcessorConfigurationPropertyToTerraform(struct!.amazonTranscribeCallAnalyticsProcessorConfiguration),
+    amazon_transcribe_processor_configuration: awsMediaInsightsPipelineConfigurationAmazonTranscribeProcessorConfigurationPropertyToTerraform(struct!.amazonTranscribeProcessorConfiguration),
+    kinesis_data_stream_sink_configuration: awsMediaInsightsPipelineConfigurationKinesisDataStreamSinkConfigurationPropertyToTerraform(struct!.kinesisDataStreamSinkConfiguration),
+    lambda_function_sink_configuration: awsMediaInsightsPipelineConfigurationLambdaFunctionSinkConfigurationPropertyToTerraform(struct!.lambdaFunctionSinkConfiguration),
+    s3_recording_sink_configuration: awsMediaInsightsPipelineConfigurationS3RecordingSinkConfigurationPropertyToTerraform(struct!.s3RecordingSinkConfiguration),
+    sns_topic_sink_configuration: awsMediaInsightsPipelineConfigurationSnsTopicSinkConfigurationPropertyToTerraform(struct!.snsTopicSinkConfiguration),
+    sqs_queue_sink_configuration: awsMediaInsightsPipelineConfigurationSqsQueueSinkConfigurationPropertyToTerraform(struct!.sqsQueueSinkConfiguration),
+    voice_analytics_processor_configuration: awsMediaInsightsPipelineConfigurationVoiceAnalyticsProcessorConfigurationPropertyToTerraform(struct!.voiceAnalyticsProcessorConfiguration),
   }
 }
 
 
-export function tfMediaInsightsPipelineConfigurationElementsPropertyToHclTerraform(struct?: TfMediaInsightsPipelineConfiguration.ElementsProperty | cdktn.IResolvable): any {
+export function awsMediaInsightsPipelineConfigurationElementsPropertyToHclTerraform(struct?: AwsMediaInsightsPipelineConfiguration.ElementsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -807,49 +807,49 @@ export function tfMediaInsightsPipelineConfigurationElementsPropertyToHclTerrafo
       storageClassType: "string",
     },
     amazon_transcribe_call_analytics_processor_configuration: {
-      value: tfMediaInsightsPipelineConfigurationAmazonTranscribeCallAnalyticsProcessorConfigurationPropertyToHclTerraform(struct!.amazonTranscribeCallAnalyticsProcessorConfiguration),
+      value: awsMediaInsightsPipelineConfigurationAmazonTranscribeCallAnalyticsProcessorConfigurationPropertyToHclTerraform(struct!.amazonTranscribeCallAnalyticsProcessorConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "AmazonTranscribeCallAnalyticsProcessorConfigurationPropertyList",
     },
     amazon_transcribe_processor_configuration: {
-      value: tfMediaInsightsPipelineConfigurationAmazonTranscribeProcessorConfigurationPropertyToHclTerraform(struct!.amazonTranscribeProcessorConfiguration),
+      value: awsMediaInsightsPipelineConfigurationAmazonTranscribeProcessorConfigurationPropertyToHclTerraform(struct!.amazonTranscribeProcessorConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "AmazonTranscribeProcessorConfigurationPropertyList",
     },
     kinesis_data_stream_sink_configuration: {
-      value: tfMediaInsightsPipelineConfigurationKinesisDataStreamSinkConfigurationPropertyToHclTerraform(struct!.kinesisDataStreamSinkConfiguration),
+      value: awsMediaInsightsPipelineConfigurationKinesisDataStreamSinkConfigurationPropertyToHclTerraform(struct!.kinesisDataStreamSinkConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "KinesisDataStreamSinkConfigurationPropertyList",
     },
     lambda_function_sink_configuration: {
-      value: tfMediaInsightsPipelineConfigurationLambdaFunctionSinkConfigurationPropertyToHclTerraform(struct!.lambdaFunctionSinkConfiguration),
+      value: awsMediaInsightsPipelineConfigurationLambdaFunctionSinkConfigurationPropertyToHclTerraform(struct!.lambdaFunctionSinkConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "LambdaFunctionSinkConfigurationPropertyList",
     },
     s3_recording_sink_configuration: {
-      value: tfMediaInsightsPipelineConfigurationS3RecordingSinkConfigurationPropertyToHclTerraform(struct!.s3RecordingSinkConfiguration),
+      value: awsMediaInsightsPipelineConfigurationS3RecordingSinkConfigurationPropertyToHclTerraform(struct!.s3RecordingSinkConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "S3RecordingSinkConfigurationPropertyList",
     },
     sns_topic_sink_configuration: {
-      value: tfMediaInsightsPipelineConfigurationSnsTopicSinkConfigurationPropertyToHclTerraform(struct!.snsTopicSinkConfiguration),
+      value: awsMediaInsightsPipelineConfigurationSnsTopicSinkConfigurationPropertyToHclTerraform(struct!.snsTopicSinkConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SnsTopicSinkConfigurationPropertyList",
     },
     sqs_queue_sink_configuration: {
-      value: tfMediaInsightsPipelineConfigurationSqsQueueSinkConfigurationPropertyToHclTerraform(struct!.sqsQueueSinkConfiguration),
+      value: awsMediaInsightsPipelineConfigurationSqsQueueSinkConfigurationPropertyToHclTerraform(struct!.sqsQueueSinkConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SqsQueueSinkConfigurationPropertyList",
     },
     voice_analytics_processor_configuration: {
-      value: tfMediaInsightsPipelineConfigurationVoiceAnalyticsProcessorConfigurationPropertyToHclTerraform(struct!.voiceAnalyticsProcessorConfiguration),
+      value: awsMediaInsightsPipelineConfigurationVoiceAnalyticsProcessorConfigurationPropertyToHclTerraform(struct!.voiceAnalyticsProcessorConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "VoiceAnalyticsProcessorConfigurationPropertyList",
@@ -861,7 +861,7 @@ export function tfMediaInsightsPipelineConfigurationElementsPropertyToHclTerrafo
 }
 
 
-export function tfMediaInsightsPipelineConfigurationIssueDetectionConfigurationPropertyToTerraform(struct?: TfMediaInsightsPipelineConfiguration.IssueDetectionConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.IssueDetectionConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationIssueDetectionConfigurationPropertyToTerraform(struct?: AwsMediaInsightsPipelineConfiguration.IssueDetectionConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.IssueDetectionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -872,7 +872,7 @@ export function tfMediaInsightsPipelineConfigurationIssueDetectionConfigurationP
 }
 
 
-export function tfMediaInsightsPipelineConfigurationIssueDetectionConfigurationPropertyToHclTerraform(struct?: TfMediaInsightsPipelineConfiguration.IssueDetectionConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.IssueDetectionConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationIssueDetectionConfigurationPropertyToHclTerraform(struct?: AwsMediaInsightsPipelineConfiguration.IssueDetectionConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.IssueDetectionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -891,7 +891,7 @@ export function tfMediaInsightsPipelineConfigurationIssueDetectionConfigurationP
 }
 
 
-export function tfMediaInsightsPipelineConfigurationKeywordMatchConfigurationPropertyToTerraform(struct?: TfMediaInsightsPipelineConfiguration.KeywordMatchConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.KeywordMatchConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationKeywordMatchConfigurationPropertyToTerraform(struct?: AwsMediaInsightsPipelineConfiguration.KeywordMatchConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.KeywordMatchConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -904,7 +904,7 @@ export function tfMediaInsightsPipelineConfigurationKeywordMatchConfigurationPro
 }
 
 
-export function tfMediaInsightsPipelineConfigurationKeywordMatchConfigurationPropertyToHclTerraform(struct?: TfMediaInsightsPipelineConfiguration.KeywordMatchConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.KeywordMatchConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationKeywordMatchConfigurationPropertyToHclTerraform(struct?: AwsMediaInsightsPipelineConfiguration.KeywordMatchConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.KeywordMatchConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -935,7 +935,7 @@ export function tfMediaInsightsPipelineConfigurationKeywordMatchConfigurationPro
 }
 
 
-export function tfMediaInsightsPipelineConfigurationSentimentConfigurationPropertyToTerraform(struct?: TfMediaInsightsPipelineConfiguration.SentimentConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.SentimentConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationSentimentConfigurationPropertyToTerraform(struct?: AwsMediaInsightsPipelineConfiguration.SentimentConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.SentimentConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -948,7 +948,7 @@ export function tfMediaInsightsPipelineConfigurationSentimentConfigurationProper
 }
 
 
-export function tfMediaInsightsPipelineConfigurationSentimentConfigurationPropertyToHclTerraform(struct?: TfMediaInsightsPipelineConfiguration.SentimentConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.SentimentConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationSentimentConfigurationPropertyToHclTerraform(struct?: AwsMediaInsightsPipelineConfiguration.SentimentConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.SentimentConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -979,21 +979,21 @@ export function tfMediaInsightsPipelineConfigurationSentimentConfigurationProper
 }
 
 
-export function tfMediaInsightsPipelineConfigurationRulesPropertyToTerraform(struct?: TfMediaInsightsPipelineConfiguration.RulesProperty | cdktn.IResolvable): any {
+export function awsMediaInsightsPipelineConfigurationRulesPropertyToTerraform(struct?: AwsMediaInsightsPipelineConfiguration.RulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    issue_detection_configuration: tfMediaInsightsPipelineConfigurationIssueDetectionConfigurationPropertyToTerraform(struct!.issueDetectionConfiguration),
-    keyword_match_configuration: tfMediaInsightsPipelineConfigurationKeywordMatchConfigurationPropertyToTerraform(struct!.keywordMatchConfiguration),
-    sentiment_configuration: tfMediaInsightsPipelineConfigurationSentimentConfigurationPropertyToTerraform(struct!.sentimentConfiguration),
+    issue_detection_configuration: awsMediaInsightsPipelineConfigurationIssueDetectionConfigurationPropertyToTerraform(struct!.issueDetectionConfiguration),
+    keyword_match_configuration: awsMediaInsightsPipelineConfigurationKeywordMatchConfigurationPropertyToTerraform(struct!.keywordMatchConfiguration),
+    sentiment_configuration: awsMediaInsightsPipelineConfigurationSentimentConfigurationPropertyToTerraform(struct!.sentimentConfiguration),
   }
 }
 
 
-export function tfMediaInsightsPipelineConfigurationRulesPropertyToHclTerraform(struct?: TfMediaInsightsPipelineConfiguration.RulesProperty | cdktn.IResolvable): any {
+export function awsMediaInsightsPipelineConfigurationRulesPropertyToHclTerraform(struct?: AwsMediaInsightsPipelineConfiguration.RulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1006,19 +1006,19 @@ export function tfMediaInsightsPipelineConfigurationRulesPropertyToHclTerraform(
       storageClassType: "string",
     },
     issue_detection_configuration: {
-      value: tfMediaInsightsPipelineConfigurationIssueDetectionConfigurationPropertyToHclTerraform(struct!.issueDetectionConfiguration),
+      value: awsMediaInsightsPipelineConfigurationIssueDetectionConfigurationPropertyToHclTerraform(struct!.issueDetectionConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "IssueDetectionConfigurationPropertyList",
     },
     keyword_match_configuration: {
-      value: tfMediaInsightsPipelineConfigurationKeywordMatchConfigurationPropertyToHclTerraform(struct!.keywordMatchConfiguration),
+      value: awsMediaInsightsPipelineConfigurationKeywordMatchConfigurationPropertyToHclTerraform(struct!.keywordMatchConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "KeywordMatchConfigurationPropertyList",
     },
     sentiment_configuration: {
-      value: tfMediaInsightsPipelineConfigurationSentimentConfigurationPropertyToHclTerraform(struct!.sentimentConfiguration),
+      value: awsMediaInsightsPipelineConfigurationSentimentConfigurationPropertyToHclTerraform(struct!.sentimentConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SentimentConfigurationPropertyList",
@@ -1030,19 +1030,19 @@ export function tfMediaInsightsPipelineConfigurationRulesPropertyToHclTerraform(
 }
 
 
-export function tfMediaInsightsPipelineConfigurationRealTimeAlertConfigurationPropertyToTerraform(struct?: TfMediaInsightsPipelineConfiguration.RealTimeAlertConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.RealTimeAlertConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationRealTimeAlertConfigurationPropertyToTerraform(struct?: AwsMediaInsightsPipelineConfiguration.RealTimeAlertConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.RealTimeAlertConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     disabled: cdktn.booleanToTerraform(struct!.disabled),
-    rules: cdktn.listMapper(tfMediaInsightsPipelineConfigurationRulesPropertyToTerraform, true)(struct!.rules),
+    rules: cdktn.listMapper(awsMediaInsightsPipelineConfigurationRulesPropertyToTerraform, true)(struct!.rules),
   }
 }
 
 
-export function tfMediaInsightsPipelineConfigurationRealTimeAlertConfigurationPropertyToHclTerraform(struct?: TfMediaInsightsPipelineConfiguration.RealTimeAlertConfigurationPropertyOutputReference | TfMediaInsightsPipelineConfiguration.RealTimeAlertConfigurationProperty): any {
+export function awsMediaInsightsPipelineConfigurationRealTimeAlertConfigurationPropertyToHclTerraform(struct?: AwsMediaInsightsPipelineConfiguration.RealTimeAlertConfigurationPropertyOutputReference | AwsMediaInsightsPipelineConfiguration.RealTimeAlertConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1055,7 +1055,7 @@ export function tfMediaInsightsPipelineConfigurationRealTimeAlertConfigurationPr
       storageClassType: "boolean",
     },
     rules: {
-      value: cdktn.listMapperHcl(tfMediaInsightsPipelineConfigurationRulesPropertyToHclTerraform, true)(struct!.rules),
+      value: cdktn.listMapperHcl(awsMediaInsightsPipelineConfigurationRulesPropertyToHclTerraform, true)(struct!.rules),
       isBlock: true,
       type: "list",
       storageClassType: "RulesPropertyList",
@@ -1067,7 +1067,7 @@ export function tfMediaInsightsPipelineConfigurationRealTimeAlertConfigurationPr
 }
 
 
-export function tfMediaInsightsPipelineConfigurationTimeoutsPropertyToTerraform(struct?: TfMediaInsightsPipelineConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMediaInsightsPipelineConfigurationTimeoutsPropertyToTerraform(struct?: AwsMediaInsightsPipelineConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1080,7 +1080,7 @@ export function tfMediaInsightsPipelineConfigurationTimeoutsPropertyToTerraform(
 }
 
 
-export function tfMediaInsightsPipelineConfigurationTimeoutsPropertyToHclTerraform(struct?: TfMediaInsightsPipelineConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMediaInsightsPipelineConfigurationTimeoutsPropertyToHclTerraform(struct?: AwsMediaInsightsPipelineConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1111,22 +1111,22 @@ export function tfMediaInsightsPipelineConfigurationTimeoutsPropertyToHclTerrafo
 }
 
 
-export namespace TfMediaInsightsPipelineConfiguration {
+export namespace AwsMediaInsightsPipelineConfiguration {
 export interface PostCallAnalyticsSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#content_redaction_output TfMediaInsightsPipelineConfiguration#content_redaction_output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#content_redaction_output AwsMediaInsightsPipelineConfiguration#content_redaction_output}
   */
   readonly contentRedactionOutput?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#data_access_role_arn TfMediaInsightsPipelineConfiguration#data_access_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#data_access_role_arn AwsMediaInsightsPipelineConfiguration#data_access_role_arn}
   */
   readonly dataAccessRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#output_encryption_kms_key_id TfMediaInsightsPipelineConfiguration#output_encryption_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#output_encryption_kms_key_id AwsMediaInsightsPipelineConfiguration#output_encryption_kms_key_id}
   */
   readonly outputEncryptionKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#output_location TfMediaInsightsPipelineConfiguration#output_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#output_location AwsMediaInsightsPipelineConfiguration#output_location}
   */
   readonly outputLocation: string;
 }
@@ -1240,57 +1240,57 @@ export class PostCallAnalyticsSettingsPropertyOutputReference extends cdktn.Comp
 }
 export interface AmazonTranscribeCallAnalyticsProcessorConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#call_analytics_stream_categories TfMediaInsightsPipelineConfiguration#call_analytics_stream_categories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#call_analytics_stream_categories AwsMediaInsightsPipelineConfiguration#call_analytics_stream_categories}
   */
   readonly callAnalyticsStreamCategories?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#content_identification_type TfMediaInsightsPipelineConfiguration#content_identification_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#content_identification_type AwsMediaInsightsPipelineConfiguration#content_identification_type}
   */
   readonly contentIdentificationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#content_redaction_type TfMediaInsightsPipelineConfiguration#content_redaction_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#content_redaction_type AwsMediaInsightsPipelineConfiguration#content_redaction_type}
   */
   readonly contentRedactionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#enable_partial_results_stabilization TfMediaInsightsPipelineConfiguration#enable_partial_results_stabilization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#enable_partial_results_stabilization AwsMediaInsightsPipelineConfiguration#enable_partial_results_stabilization}
   */
   readonly enablePartialResultsStabilization?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#filter_partial_results TfMediaInsightsPipelineConfiguration#filter_partial_results}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#filter_partial_results AwsMediaInsightsPipelineConfiguration#filter_partial_results}
   */
   readonly filterPartialResults?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#language_code TfMediaInsightsPipelineConfiguration#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#language_code AwsMediaInsightsPipelineConfiguration#language_code}
   */
   readonly languageCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#language_model_name TfMediaInsightsPipelineConfiguration#language_model_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#language_model_name AwsMediaInsightsPipelineConfiguration#language_model_name}
   */
   readonly languageModelName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#partial_results_stability TfMediaInsightsPipelineConfiguration#partial_results_stability}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#partial_results_stability AwsMediaInsightsPipelineConfiguration#partial_results_stability}
   */
   readonly partialResultsStability?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#pii_entity_types TfMediaInsightsPipelineConfiguration#pii_entity_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#pii_entity_types AwsMediaInsightsPipelineConfiguration#pii_entity_types}
   */
   readonly piiEntityTypes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#vocabulary_filter_method TfMediaInsightsPipelineConfiguration#vocabulary_filter_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#vocabulary_filter_method AwsMediaInsightsPipelineConfiguration#vocabulary_filter_method}
   */
   readonly vocabularyFilterMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#vocabulary_filter_name TfMediaInsightsPipelineConfiguration#vocabulary_filter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#vocabulary_filter_name AwsMediaInsightsPipelineConfiguration#vocabulary_filter_name}
   */
   readonly vocabularyFilterName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#vocabulary_name TfMediaInsightsPipelineConfiguration#vocabulary_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#vocabulary_name AwsMediaInsightsPipelineConfiguration#vocabulary_name}
   */
   readonly vocabularyName?: string;
   /**
   * post_call_analytics_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#post_call_analytics_settings TfMediaInsightsPipelineConfiguration#post_call_analytics_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#post_call_analytics_settings AwsMediaInsightsPipelineConfiguration#post_call_analytics_settings}
   */
   readonly postCallAnalyticsSettings?: PostCallAnalyticsSettingsProperty;
 }
@@ -1605,51 +1605,51 @@ export class AmazonTranscribeCallAnalyticsProcessorConfigurationPropertyOutputRe
 }
 export interface AmazonTranscribeProcessorConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#content_identification_type TfMediaInsightsPipelineConfiguration#content_identification_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#content_identification_type AwsMediaInsightsPipelineConfiguration#content_identification_type}
   */
   readonly contentIdentificationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#content_redaction_type TfMediaInsightsPipelineConfiguration#content_redaction_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#content_redaction_type AwsMediaInsightsPipelineConfiguration#content_redaction_type}
   */
   readonly contentRedactionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#enable_partial_results_stabilization TfMediaInsightsPipelineConfiguration#enable_partial_results_stabilization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#enable_partial_results_stabilization AwsMediaInsightsPipelineConfiguration#enable_partial_results_stabilization}
   */
   readonly enablePartialResultsStabilization?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#filter_partial_results TfMediaInsightsPipelineConfiguration#filter_partial_results}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#filter_partial_results AwsMediaInsightsPipelineConfiguration#filter_partial_results}
   */
   readonly filterPartialResults?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#language_code TfMediaInsightsPipelineConfiguration#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#language_code AwsMediaInsightsPipelineConfiguration#language_code}
   */
   readonly languageCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#language_model_name TfMediaInsightsPipelineConfiguration#language_model_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#language_model_name AwsMediaInsightsPipelineConfiguration#language_model_name}
   */
   readonly languageModelName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#partial_results_stability TfMediaInsightsPipelineConfiguration#partial_results_stability}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#partial_results_stability AwsMediaInsightsPipelineConfiguration#partial_results_stability}
   */
   readonly partialResultsStability?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#pii_entity_types TfMediaInsightsPipelineConfiguration#pii_entity_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#pii_entity_types AwsMediaInsightsPipelineConfiguration#pii_entity_types}
   */
   readonly piiEntityTypes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#show_speaker_label TfMediaInsightsPipelineConfiguration#show_speaker_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#show_speaker_label AwsMediaInsightsPipelineConfiguration#show_speaker_label}
   */
   readonly showSpeakerLabel?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#vocabulary_filter_method TfMediaInsightsPipelineConfiguration#vocabulary_filter_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#vocabulary_filter_method AwsMediaInsightsPipelineConfiguration#vocabulary_filter_method}
   */
   readonly vocabularyFilterMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#vocabulary_filter_name TfMediaInsightsPipelineConfiguration#vocabulary_filter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#vocabulary_filter_name AwsMediaInsightsPipelineConfiguration#vocabulary_filter_name}
   */
   readonly vocabularyFilterName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#vocabulary_name TfMediaInsightsPipelineConfiguration#vocabulary_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#vocabulary_name AwsMediaInsightsPipelineConfiguration#vocabulary_name}
   */
   readonly vocabularyName?: string;
 }
@@ -1942,7 +1942,7 @@ export class AmazonTranscribeProcessorConfigurationPropertyOutputReference exten
 }
 export interface KinesisDataStreamSinkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#insights_target TfMediaInsightsPipelineConfiguration#insights_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#insights_target AwsMediaInsightsPipelineConfiguration#insights_target}
   */
   readonly insightsTarget: string;
 }
@@ -1993,7 +1993,7 @@ export class KinesisDataStreamSinkConfigurationPropertyOutputReference extends c
 }
 export interface LambdaFunctionSinkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#insights_target TfMediaInsightsPipelineConfiguration#insights_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#insights_target AwsMediaInsightsPipelineConfiguration#insights_target}
   */
   readonly insightsTarget: string;
 }
@@ -2044,7 +2044,7 @@ export class LambdaFunctionSinkConfigurationPropertyOutputReference extends cdkt
 }
 export interface S3RecordingSinkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#destination TfMediaInsightsPipelineConfiguration#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#destination AwsMediaInsightsPipelineConfiguration#destination}
   */
   readonly destination?: string;
 }
@@ -2098,7 +2098,7 @@ export class S3RecordingSinkConfigurationPropertyOutputReference extends cdktn.C
 }
 export interface SnsTopicSinkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#insights_target TfMediaInsightsPipelineConfiguration#insights_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#insights_target AwsMediaInsightsPipelineConfiguration#insights_target}
   */
   readonly insightsTarget: string;
 }
@@ -2149,7 +2149,7 @@ export class SnsTopicSinkConfigurationPropertyOutputReference extends cdktn.Comp
 }
 export interface SqsQueueSinkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#insights_target TfMediaInsightsPipelineConfiguration#insights_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#insights_target AwsMediaInsightsPipelineConfiguration#insights_target}
   */
   readonly insightsTarget: string;
 }
@@ -2200,11 +2200,11 @@ export class SqsQueueSinkConfigurationPropertyOutputReference extends cdktn.Comp
 }
 export interface VoiceAnalyticsProcessorConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#speaker_search_status TfMediaInsightsPipelineConfiguration#speaker_search_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#speaker_search_status AwsMediaInsightsPipelineConfiguration#speaker_search_status}
   */
   readonly speakerSearchStatus: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#voice_tone_analysis_status TfMediaInsightsPipelineConfiguration#voice_tone_analysis_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#voice_tone_analysis_status AwsMediaInsightsPipelineConfiguration#voice_tone_analysis_status}
   */
   readonly voiceToneAnalysisStatus: string;
 }
@@ -2274,55 +2274,55 @@ export class VoiceAnalyticsProcessorConfigurationPropertyOutputReference extends
 }
 export interface ElementsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#type TfMediaInsightsPipelineConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#type AwsMediaInsightsPipelineConfiguration#type}
   */
   readonly type: string;
   /**
   * amazon_transcribe_call_analytics_processor_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#amazon_transcribe_call_analytics_processor_configuration TfMediaInsightsPipelineConfiguration#amazon_transcribe_call_analytics_processor_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#amazon_transcribe_call_analytics_processor_configuration AwsMediaInsightsPipelineConfiguration#amazon_transcribe_call_analytics_processor_configuration}
   */
   readonly amazonTranscribeCallAnalyticsProcessorConfiguration?: AmazonTranscribeCallAnalyticsProcessorConfigurationProperty;
   /**
   * amazon_transcribe_processor_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#amazon_transcribe_processor_configuration TfMediaInsightsPipelineConfiguration#amazon_transcribe_processor_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#amazon_transcribe_processor_configuration AwsMediaInsightsPipelineConfiguration#amazon_transcribe_processor_configuration}
   */
   readonly amazonTranscribeProcessorConfiguration?: AmazonTranscribeProcessorConfigurationProperty;
   /**
   * kinesis_data_stream_sink_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#kinesis_data_stream_sink_configuration TfMediaInsightsPipelineConfiguration#kinesis_data_stream_sink_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#kinesis_data_stream_sink_configuration AwsMediaInsightsPipelineConfiguration#kinesis_data_stream_sink_configuration}
   */
   readonly kinesisDataStreamSinkConfiguration?: KinesisDataStreamSinkConfigurationProperty;
   /**
   * lambda_function_sink_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#lambda_function_sink_configuration TfMediaInsightsPipelineConfiguration#lambda_function_sink_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#lambda_function_sink_configuration AwsMediaInsightsPipelineConfiguration#lambda_function_sink_configuration}
   */
   readonly lambdaFunctionSinkConfiguration?: LambdaFunctionSinkConfigurationProperty;
   /**
   * s3_recording_sink_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#s3_recording_sink_configuration TfMediaInsightsPipelineConfiguration#s3_recording_sink_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#s3_recording_sink_configuration AwsMediaInsightsPipelineConfiguration#s3_recording_sink_configuration}
   */
   readonly s3RecordingSinkConfiguration?: S3RecordingSinkConfigurationProperty;
   /**
   * sns_topic_sink_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#sns_topic_sink_configuration TfMediaInsightsPipelineConfiguration#sns_topic_sink_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#sns_topic_sink_configuration AwsMediaInsightsPipelineConfiguration#sns_topic_sink_configuration}
   */
   readonly snsTopicSinkConfiguration?: SnsTopicSinkConfigurationProperty;
   /**
   * sqs_queue_sink_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#sqs_queue_sink_configuration TfMediaInsightsPipelineConfiguration#sqs_queue_sink_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#sqs_queue_sink_configuration AwsMediaInsightsPipelineConfiguration#sqs_queue_sink_configuration}
   */
   readonly sqsQueueSinkConfiguration?: SqsQueueSinkConfigurationProperty;
   /**
   * voice_analytics_processor_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#voice_analytics_processor_configuration TfMediaInsightsPipelineConfiguration#voice_analytics_processor_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#voice_analytics_processor_configuration AwsMediaInsightsPipelineConfiguration#voice_analytics_processor_configuration}
   */
   readonly voiceAnalyticsProcessorConfiguration?: VoiceAnalyticsProcessorConfigurationProperty;
 }
@@ -2581,7 +2581,7 @@ export class ElementsPropertyList extends cdktn.ComplexList {
 }
 export interface IssueDetectionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#rule_name TfMediaInsightsPipelineConfiguration#rule_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#rule_name AwsMediaInsightsPipelineConfiguration#rule_name}
   */
   readonly ruleName: string;
 }
@@ -2632,15 +2632,15 @@ export class IssueDetectionConfigurationPropertyOutputReference extends cdktn.Co
 }
 export interface KeywordMatchConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#keywords TfMediaInsightsPipelineConfiguration#keywords}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#keywords AwsMediaInsightsPipelineConfiguration#keywords}
   */
   readonly keywords: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#negate TfMediaInsightsPipelineConfiguration#negate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#negate AwsMediaInsightsPipelineConfiguration#negate}
   */
   readonly negate?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#rule_name TfMediaInsightsPipelineConfiguration#rule_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#rule_name AwsMediaInsightsPipelineConfiguration#rule_name}
   */
   readonly ruleName: string;
 }
@@ -2732,15 +2732,15 @@ export class KeywordMatchConfigurationPropertyOutputReference extends cdktn.Comp
 }
 export interface SentimentConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#rule_name TfMediaInsightsPipelineConfiguration#rule_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#rule_name AwsMediaInsightsPipelineConfiguration#rule_name}
   */
   readonly ruleName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#sentiment_type TfMediaInsightsPipelineConfiguration#sentiment_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#sentiment_type AwsMediaInsightsPipelineConfiguration#sentiment_type}
   */
   readonly sentimentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#time_period TfMediaInsightsPipelineConfiguration#time_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#time_period AwsMediaInsightsPipelineConfiguration#time_period}
   */
   readonly timePeriod: number;
 }
@@ -2829,25 +2829,25 @@ export class SentimentConfigurationPropertyOutputReference extends cdktn.Complex
 }
 export interface RulesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#type TfMediaInsightsPipelineConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#type AwsMediaInsightsPipelineConfiguration#type}
   */
   readonly type: string;
   /**
   * issue_detection_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#issue_detection_configuration TfMediaInsightsPipelineConfiguration#issue_detection_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#issue_detection_configuration AwsMediaInsightsPipelineConfiguration#issue_detection_configuration}
   */
   readonly issueDetectionConfiguration?: IssueDetectionConfigurationProperty;
   /**
   * keyword_match_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#keyword_match_configuration TfMediaInsightsPipelineConfiguration#keyword_match_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#keyword_match_configuration AwsMediaInsightsPipelineConfiguration#keyword_match_configuration}
   */
   readonly keywordMatchConfiguration?: KeywordMatchConfigurationProperty;
   /**
   * sentiment_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#sentiment_configuration TfMediaInsightsPipelineConfiguration#sentiment_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#sentiment_configuration AwsMediaInsightsPipelineConfiguration#sentiment_configuration}
   */
   readonly sentimentConfiguration?: SentimentConfigurationProperty;
 }
@@ -2996,13 +2996,13 @@ export class RulesPropertyList extends cdktn.ComplexList {
 }
 export interface RealTimeAlertConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#disabled TfMediaInsightsPipelineConfiguration#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#disabled AwsMediaInsightsPipelineConfiguration#disabled}
   */
   readonly disabled?: boolean | cdktn.IResolvable;
   /**
   * rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#rules TfMediaInsightsPipelineConfiguration#rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#rules AwsMediaInsightsPipelineConfiguration#rules}
   */
   readonly rules: RulesProperty[] | cdktn.IResolvable;
 }
@@ -3075,15 +3075,15 @@ export class RealTimeAlertConfigurationPropertyOutputReference extends cdktn.Com
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#create TfMediaInsightsPipelineConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#create AwsMediaInsightsPipelineConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#delete TfMediaInsightsPipelineConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#delete AwsMediaInsightsPipelineConfiguration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#update TfMediaInsightsPipelineConfiguration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chimesdkmediapipelines_media_insights_pipeline_configuration#update AwsMediaInsightsPipelineConfiguration#update}
   */
   readonly update?: string;
 }

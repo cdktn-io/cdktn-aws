@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfExtensionAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsExtensionAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_extension_association#extension_arn TfExtensionAssociation#extension_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_extension_association#extension_arn AwsExtensionAssociation#extension_arn}
   */
   readonly extensionArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_extension_association#id TfExtensionAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_extension_association#id AwsExtensionAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_extension_association#parameters TfExtensionAssociation#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_extension_association#parameters AwsExtensionAssociation#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_extension_association#region TfExtensionAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_extension_association#region AwsExtensionAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_extension_association#resource_arn TfExtensionAssociation#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_extension_association#resource_arn AwsExtensionAssociation#resource_arn}
   */
   readonly resourceArn: string;
 }
@@ -36,7 +36,7 @@ export interface TfExtensionAssociationConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_extension_association aws_appconfig_extension_association}
 */
-export class TfExtensionAssociation extends cdktn.TerraformResource {
+export class AwsExtensionAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfExtensionAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfExtensionAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsExtensionAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfExtensionAssociation to import
-  * @param importFromId The id of the existing TfExtensionAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_extension_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfExtensionAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsExtensionAssociation to import
+  * @param importFromId The id of the existing AwsExtensionAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_extension_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsExtensionAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appconfig_extension_association", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfExtensionAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfExtensionAssociationConfig
+  * @param options AwsExtensionAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfExtensionAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsExtensionAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appconfig_extension_association',
       terraformGeneratorMetadata: {

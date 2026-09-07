@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRotationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRotationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#contact_ids TfRotation#contact_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#contact_ids AwsRotation#contact_ids}
   */
   readonly contactIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#name TfRotation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#name AwsRotation#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#region TfRotation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#region AwsRotation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#start_time TfRotation#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#start_time AwsRotation#start_time}
   */
   readonly startTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#tags TfRotation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#tags AwsRotation#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#time_zone_id TfRotation#time_zone_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#time_zone_id AwsRotation#time_zone_id}
   */
   readonly timeZoneId: string;
   /**
   * recurrence block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#recurrence TfRotation#recurrence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#recurrence AwsRotation#recurrence}
   */
-  readonly recurrence?: TfRotation.RecurrenceProperty[] | cdktn.IResolvable;
+  readonly recurrence?: AwsRotation.RecurrenceProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation aws_ssmcontacts_rotation}
 */
-export class TfRotation extends cdktn.TerraformResource {
+export class AwsRotation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class TfRotation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRotation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRotation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRotation to import
-  * @param importFromId The id of the existing TfRotation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRotation to import is found
+  * @param importToId The construct id used in the generated config for the AwsRotation to import
+  * @param importFromId The id of the existing AwsRotation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRotation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssmcontacts_rotation", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class TfRotation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRotationConfig
+  * @param options AwsRotationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRotationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRotationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssmcontacts_rotation',
       terraformGeneratorMetadata: {
@@ -208,11 +208,11 @@ export class TfRotation extends cdktn.TerraformResource {
   }
 
   // recurrence - computed: false, optional: true, required: false
-  private _recurrence = new TfRotation.RecurrencePropertyList(this, "recurrence", false);
+  private _recurrence = new AwsRotation.RecurrencePropertyList(this, "recurrence", false);
   public get recurrence() {
     return this._recurrence;
   }
-  public putRecurrence(value: TfRotation.RecurrenceProperty[] | cdktn.IResolvable) {
+  public putRecurrence(value: AwsRotation.RecurrenceProperty[] | cdktn.IResolvable) {
     this._recurrence.internalValue = value;
   }
   public resetRecurrence() {
@@ -235,7 +235,7 @@ export class TfRotation extends cdktn.TerraformResource {
       start_time: cdktn.stringToTerraform(this._startTime),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       time_zone_id: cdktn.stringToTerraform(this._timeZoneId),
-      recurrence: cdktn.listMapper(tfRotationRecurrencePropertyToTerraform, true)(this._recurrence.internalValue),
+      recurrence: cdktn.listMapper(awsRotationRecurrencePropertyToTerraform, true)(this._recurrence.internalValue),
     };
   }
 
@@ -278,10 +278,10 @@ export class TfRotation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       recurrence: {
-        value: cdktn.listMapperHcl(tfRotationRecurrencePropertyToHclTerraform, true)(this._recurrence.internalValue),
+        value: cdktn.listMapperHcl(awsRotationRecurrencePropertyToHclTerraform, true)(this._recurrence.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRotation.RecurrencePropertyList",
+        storageClassType: "AwsRotation.RecurrencePropertyList",
       },
     };
 
@@ -290,7 +290,7 @@ export class TfRotation extends cdktn.TerraformResource {
   }
 }
 
-export function tfRotationDailySettingsPropertyToTerraform(struct?: TfRotation.DailySettingsProperty | cdktn.IResolvable): any {
+export function awsRotationDailySettingsPropertyToTerraform(struct?: AwsRotation.DailySettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function tfRotationDailySettingsPropertyToTerraform(struct?: TfRotation.D
 }
 
 
-export function tfRotationDailySettingsPropertyToHclTerraform(struct?: TfRotation.DailySettingsProperty | cdktn.IResolvable): any {
+export function awsRotationDailySettingsPropertyToHclTerraform(struct?: AwsRotation.DailySettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,7 +327,7 @@ export function tfRotationDailySettingsPropertyToHclTerraform(struct?: TfRotatio
 }
 
 
-export function tfRotationRecurrenceMonthlySettingsHandOffTimePropertyToTerraform(struct?: TfRotation.RecurrenceMonthlySettingsHandOffTimeProperty | cdktn.IResolvable): any {
+export function awsRotationRecurrenceMonthlySettingsHandOffTimePropertyToTerraform(struct?: AwsRotation.RecurrenceMonthlySettingsHandOffTimeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function tfRotationRecurrenceMonthlySettingsHandOffTimePropertyToTerrafor
 }
 
 
-export function tfRotationRecurrenceMonthlySettingsHandOffTimePropertyToHclTerraform(struct?: TfRotation.RecurrenceMonthlySettingsHandOffTimeProperty | cdktn.IResolvable): any {
+export function awsRotationRecurrenceMonthlySettingsHandOffTimePropertyToHclTerraform(struct?: AwsRotation.RecurrenceMonthlySettingsHandOffTimeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,19 +364,19 @@ export function tfRotationRecurrenceMonthlySettingsHandOffTimePropertyToHclTerra
 }
 
 
-export function tfRotationMonthlySettingsPropertyToTerraform(struct?: TfRotation.MonthlySettingsProperty | cdktn.IResolvable): any {
+export function awsRotationMonthlySettingsPropertyToTerraform(struct?: AwsRotation.MonthlySettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     day_of_month: cdktn.numberToTerraform(struct!.dayOfMonth),
-    hand_off_time: cdktn.listMapper(tfRotationRecurrenceMonthlySettingsHandOffTimePropertyToTerraform, true)(struct!.handOffTime),
+    hand_off_time: cdktn.listMapper(awsRotationRecurrenceMonthlySettingsHandOffTimePropertyToTerraform, true)(struct!.handOffTime),
   }
 }
 
 
-export function tfRotationMonthlySettingsPropertyToHclTerraform(struct?: TfRotation.MonthlySettingsProperty | cdktn.IResolvable): any {
+export function awsRotationMonthlySettingsPropertyToHclTerraform(struct?: AwsRotation.MonthlySettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -389,7 +389,7 @@ export function tfRotationMonthlySettingsPropertyToHclTerraform(struct?: TfRotat
       storageClassType: "number",
     },
     hand_off_time: {
-      value: cdktn.listMapperHcl(tfRotationRecurrenceMonthlySettingsHandOffTimePropertyToHclTerraform, true)(struct!.handOffTime),
+      value: cdktn.listMapperHcl(awsRotationRecurrenceMonthlySettingsHandOffTimePropertyToHclTerraform, true)(struct!.handOffTime),
       isBlock: true,
       type: "list",
       storageClassType: "RecurrenceMonthlySettingsHandOffTimePropertyList",
@@ -401,7 +401,7 @@ export function tfRotationMonthlySettingsPropertyToHclTerraform(struct?: TfRotat
 }
 
 
-export function tfRotationEndPropertyToTerraform(struct?: TfRotation.EndProperty | cdktn.IResolvable): any {
+export function awsRotationEndPropertyToTerraform(struct?: AwsRotation.EndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,7 +413,7 @@ export function tfRotationEndPropertyToTerraform(struct?: TfRotation.EndProperty
 }
 
 
-export function tfRotationEndPropertyToHclTerraform(struct?: TfRotation.EndProperty | cdktn.IResolvable): any {
+export function awsRotationEndPropertyToHclTerraform(struct?: AwsRotation.EndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -438,7 +438,7 @@ export function tfRotationEndPropertyToHclTerraform(struct?: TfRotation.EndPrope
 }
 
 
-export function tfRotationStartPropertyToTerraform(struct?: TfRotation.StartProperty | cdktn.IResolvable): any {
+export function awsRotationStartPropertyToTerraform(struct?: AwsRotation.StartProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -450,7 +450,7 @@ export function tfRotationStartPropertyToTerraform(struct?: TfRotation.StartProp
 }
 
 
-export function tfRotationStartPropertyToHclTerraform(struct?: TfRotation.StartProperty | cdktn.IResolvable): any {
+export function awsRotationStartPropertyToHclTerraform(struct?: AwsRotation.StartProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -475,32 +475,32 @@ export function tfRotationStartPropertyToHclTerraform(struct?: TfRotation.StartP
 }
 
 
-export function tfRotationCoverageTimesPropertyToTerraform(struct?: TfRotation.CoverageTimesProperty | cdktn.IResolvable): any {
+export function awsRotationCoverageTimesPropertyToTerraform(struct?: AwsRotation.CoverageTimesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    end: cdktn.listMapper(tfRotationEndPropertyToTerraform, true)(struct!.end),
-    start: cdktn.listMapper(tfRotationStartPropertyToTerraform, true)(struct!.start),
+    end: cdktn.listMapper(awsRotationEndPropertyToTerraform, true)(struct!.end),
+    start: cdktn.listMapper(awsRotationStartPropertyToTerraform, true)(struct!.start),
   }
 }
 
 
-export function tfRotationCoverageTimesPropertyToHclTerraform(struct?: TfRotation.CoverageTimesProperty | cdktn.IResolvable): any {
+export function awsRotationCoverageTimesPropertyToHclTerraform(struct?: AwsRotation.CoverageTimesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     end: {
-      value: cdktn.listMapperHcl(tfRotationEndPropertyToHclTerraform, true)(struct!.end),
+      value: cdktn.listMapperHcl(awsRotationEndPropertyToHclTerraform, true)(struct!.end),
       isBlock: true,
       type: "list",
       storageClassType: "EndPropertyList",
     },
     start: {
-      value: cdktn.listMapperHcl(tfRotationStartPropertyToHclTerraform, true)(struct!.start),
+      value: cdktn.listMapperHcl(awsRotationStartPropertyToHclTerraform, true)(struct!.start),
       isBlock: true,
       type: "list",
       storageClassType: "StartPropertyList",
@@ -512,19 +512,19 @@ export function tfRotationCoverageTimesPropertyToHclTerraform(struct?: TfRotatio
 }
 
 
-export function tfRotationShiftCoveragesPropertyToTerraform(struct?: TfRotation.ShiftCoveragesProperty | cdktn.IResolvable): any {
+export function awsRotationShiftCoveragesPropertyToTerraform(struct?: AwsRotation.ShiftCoveragesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     map_block_key: cdktn.stringToTerraform(struct!.mapBlockKey),
-    coverage_times: cdktn.listMapper(tfRotationCoverageTimesPropertyToTerraform, true)(struct!.coverageTimes),
+    coverage_times: cdktn.listMapper(awsRotationCoverageTimesPropertyToTerraform, true)(struct!.coverageTimes),
   }
 }
 
 
-export function tfRotationShiftCoveragesPropertyToHclTerraform(struct?: TfRotation.ShiftCoveragesProperty | cdktn.IResolvable): any {
+export function awsRotationShiftCoveragesPropertyToHclTerraform(struct?: AwsRotation.ShiftCoveragesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -537,7 +537,7 @@ export function tfRotationShiftCoveragesPropertyToHclTerraform(struct?: TfRotati
       storageClassType: "string",
     },
     coverage_times: {
-      value: cdktn.listMapperHcl(tfRotationCoverageTimesPropertyToHclTerraform, true)(struct!.coverageTimes),
+      value: cdktn.listMapperHcl(awsRotationCoverageTimesPropertyToHclTerraform, true)(struct!.coverageTimes),
       isBlock: true,
       type: "list",
       storageClassType: "CoverageTimesPropertyList",
@@ -549,7 +549,7 @@ export function tfRotationShiftCoveragesPropertyToHclTerraform(struct?: TfRotati
 }
 
 
-export function tfRotationRecurrenceWeeklySettingsHandOffTimePropertyToTerraform(struct?: TfRotation.RecurrenceWeeklySettingsHandOffTimeProperty | cdktn.IResolvable): any {
+export function awsRotationRecurrenceWeeklySettingsHandOffTimePropertyToTerraform(struct?: AwsRotation.RecurrenceWeeklySettingsHandOffTimeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -561,7 +561,7 @@ export function tfRotationRecurrenceWeeklySettingsHandOffTimePropertyToTerraform
 }
 
 
-export function tfRotationRecurrenceWeeklySettingsHandOffTimePropertyToHclTerraform(struct?: TfRotation.RecurrenceWeeklySettingsHandOffTimeProperty | cdktn.IResolvable): any {
+export function awsRotationRecurrenceWeeklySettingsHandOffTimePropertyToHclTerraform(struct?: AwsRotation.RecurrenceWeeklySettingsHandOffTimeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -586,19 +586,19 @@ export function tfRotationRecurrenceWeeklySettingsHandOffTimePropertyToHclTerraf
 }
 
 
-export function tfRotationWeeklySettingsPropertyToTerraform(struct?: TfRotation.WeeklySettingsProperty | cdktn.IResolvable): any {
+export function awsRotationWeeklySettingsPropertyToTerraform(struct?: AwsRotation.WeeklySettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     day_of_week: cdktn.stringToTerraform(struct!.dayOfWeek),
-    hand_off_time: cdktn.listMapper(tfRotationRecurrenceWeeklySettingsHandOffTimePropertyToTerraform, true)(struct!.handOffTime),
+    hand_off_time: cdktn.listMapper(awsRotationRecurrenceWeeklySettingsHandOffTimePropertyToTerraform, true)(struct!.handOffTime),
   }
 }
 
 
-export function tfRotationWeeklySettingsPropertyToHclTerraform(struct?: TfRotation.WeeklySettingsProperty | cdktn.IResolvable): any {
+export function awsRotationWeeklySettingsPropertyToHclTerraform(struct?: AwsRotation.WeeklySettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -611,7 +611,7 @@ export function tfRotationWeeklySettingsPropertyToHclTerraform(struct?: TfRotati
       storageClassType: "string",
     },
     hand_off_time: {
-      value: cdktn.listMapperHcl(tfRotationRecurrenceWeeklySettingsHandOffTimePropertyToHclTerraform, true)(struct!.handOffTime),
+      value: cdktn.listMapperHcl(awsRotationRecurrenceWeeklySettingsHandOffTimePropertyToHclTerraform, true)(struct!.handOffTime),
       isBlock: true,
       type: "list",
       storageClassType: "RecurrenceWeeklySettingsHandOffTimePropertyList",
@@ -623,7 +623,7 @@ export function tfRotationWeeklySettingsPropertyToHclTerraform(struct?: TfRotati
 }
 
 
-export function tfRotationRecurrencePropertyToTerraform(struct?: TfRotation.RecurrenceProperty | cdktn.IResolvable): any {
+export function awsRotationRecurrencePropertyToTerraform(struct?: AwsRotation.RecurrenceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -631,15 +631,15 @@ export function tfRotationRecurrencePropertyToTerraform(struct?: TfRotation.Recu
   return {
     number_of_on_calls: cdktn.numberToTerraform(struct!.numberOfOnCalls),
     recurrence_multiplier: cdktn.numberToTerraform(struct!.recurrenceMultiplier),
-    daily_settings: cdktn.listMapper(tfRotationDailySettingsPropertyToTerraform, true)(struct!.dailySettings),
-    monthly_settings: cdktn.listMapper(tfRotationMonthlySettingsPropertyToTerraform, true)(struct!.monthlySettings),
-    shift_coverages: cdktn.listMapper(tfRotationShiftCoveragesPropertyToTerraform, true)(struct!.shiftCoverages),
-    weekly_settings: cdktn.listMapper(tfRotationWeeklySettingsPropertyToTerraform, true)(struct!.weeklySettings),
+    daily_settings: cdktn.listMapper(awsRotationDailySettingsPropertyToTerraform, true)(struct!.dailySettings),
+    monthly_settings: cdktn.listMapper(awsRotationMonthlySettingsPropertyToTerraform, true)(struct!.monthlySettings),
+    shift_coverages: cdktn.listMapper(awsRotationShiftCoveragesPropertyToTerraform, true)(struct!.shiftCoverages),
+    weekly_settings: cdktn.listMapper(awsRotationWeeklySettingsPropertyToTerraform, true)(struct!.weeklySettings),
   }
 }
 
 
-export function tfRotationRecurrencePropertyToHclTerraform(struct?: TfRotation.RecurrenceProperty | cdktn.IResolvable): any {
+export function awsRotationRecurrencePropertyToHclTerraform(struct?: AwsRotation.RecurrenceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -658,25 +658,25 @@ export function tfRotationRecurrencePropertyToHclTerraform(struct?: TfRotation.R
       storageClassType: "number",
     },
     daily_settings: {
-      value: cdktn.listMapperHcl(tfRotationDailySettingsPropertyToHclTerraform, true)(struct!.dailySettings),
+      value: cdktn.listMapperHcl(awsRotationDailySettingsPropertyToHclTerraform, true)(struct!.dailySettings),
       isBlock: true,
       type: "list",
       storageClassType: "DailySettingsPropertyList",
     },
     monthly_settings: {
-      value: cdktn.listMapperHcl(tfRotationMonthlySettingsPropertyToHclTerraform, true)(struct!.monthlySettings),
+      value: cdktn.listMapperHcl(awsRotationMonthlySettingsPropertyToHclTerraform, true)(struct!.monthlySettings),
       isBlock: true,
       type: "list",
       storageClassType: "MonthlySettingsPropertyList",
     },
     shift_coverages: {
-      value: cdktn.listMapperHcl(tfRotationShiftCoveragesPropertyToHclTerraform, true)(struct!.shiftCoverages),
+      value: cdktn.listMapperHcl(awsRotationShiftCoveragesPropertyToHclTerraform, true)(struct!.shiftCoverages),
       isBlock: true,
       type: "list",
       storageClassType: "ShiftCoveragesPropertyList",
     },
     weekly_settings: {
-      value: cdktn.listMapperHcl(tfRotationWeeklySettingsPropertyToHclTerraform, true)(struct!.weeklySettings),
+      value: cdktn.listMapperHcl(awsRotationWeeklySettingsPropertyToHclTerraform, true)(struct!.weeklySettings),
       isBlock: true,
       type: "list",
       storageClassType: "WeeklySettingsPropertyList",
@@ -688,14 +688,14 @@ export function tfRotationRecurrencePropertyToHclTerraform(struct?: TfRotation.R
 }
 
 
-export namespace TfRotation {
+export namespace AwsRotation {
 export interface DailySettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#hour_of_day TfRotation#hour_of_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#hour_of_day AwsRotation#hour_of_day}
   */
   readonly hourOfDay: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#minute_of_hour TfRotation#minute_of_hour}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#minute_of_hour AwsRotation#minute_of_hour}
   */
   readonly minuteOfHour: number;
 }
@@ -797,11 +797,11 @@ export class DailySettingsPropertyList extends cdktn.ComplexList {
 }
 export interface RecurrenceMonthlySettingsHandOffTimeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#hour_of_day TfRotation#hour_of_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#hour_of_day AwsRotation#hour_of_day}
   */
   readonly hourOfDay: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#minute_of_hour TfRotation#minute_of_hour}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#minute_of_hour AwsRotation#minute_of_hour}
   */
   readonly minuteOfHour: number;
 }
@@ -903,13 +903,13 @@ export class RecurrenceMonthlySettingsHandOffTimePropertyList extends cdktn.Comp
 }
 export interface MonthlySettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#day_of_month TfRotation#day_of_month}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#day_of_month AwsRotation#day_of_month}
   */
   readonly dayOfMonth: number;
   /**
   * hand_off_time block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#hand_off_time TfRotation#hand_off_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#hand_off_time AwsRotation#hand_off_time}
   */
   readonly handOffTime?: RecurrenceMonthlySettingsHandOffTimeProperty[] | cdktn.IResolvable;
 }
@@ -1014,11 +1014,11 @@ export class MonthlySettingsPropertyList extends cdktn.ComplexList {
 }
 export interface EndProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#hour_of_day TfRotation#hour_of_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#hour_of_day AwsRotation#hour_of_day}
   */
   readonly hourOfDay: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#minute_of_hour TfRotation#minute_of_hour}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#minute_of_hour AwsRotation#minute_of_hour}
   */
   readonly minuteOfHour: number;
 }
@@ -1120,11 +1120,11 @@ export class EndPropertyList extends cdktn.ComplexList {
 }
 export interface StartProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#hour_of_day TfRotation#hour_of_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#hour_of_day AwsRotation#hour_of_day}
   */
   readonly hourOfDay: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#minute_of_hour TfRotation#minute_of_hour}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#minute_of_hour AwsRotation#minute_of_hour}
   */
   readonly minuteOfHour: number;
 }
@@ -1228,13 +1228,13 @@ export interface CoverageTimesProperty {
   /**
   * end block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#end TfRotation#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#end AwsRotation#end}
   */
   readonly end?: EndProperty[] | cdktn.IResolvable;
   /**
   * start block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#start TfRotation#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#start AwsRotation#start}
   */
   readonly start?: StartProperty[] | cdktn.IResolvable;
 }
@@ -1342,13 +1342,13 @@ export class CoverageTimesPropertyList extends cdktn.ComplexList {
 }
 export interface ShiftCoveragesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#map_block_key TfRotation#map_block_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#map_block_key AwsRotation#map_block_key}
   */
   readonly mapBlockKey: string;
   /**
   * coverage_times block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#coverage_times TfRotation#coverage_times}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#coverage_times AwsRotation#coverage_times}
   */
   readonly coverageTimes?: CoverageTimesProperty[] | cdktn.IResolvable;
 }
@@ -1453,11 +1453,11 @@ export class ShiftCoveragesPropertyList extends cdktn.ComplexList {
 }
 export interface RecurrenceWeeklySettingsHandOffTimeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#hour_of_day TfRotation#hour_of_day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#hour_of_day AwsRotation#hour_of_day}
   */
   readonly hourOfDay: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#minute_of_hour TfRotation#minute_of_hour}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#minute_of_hour AwsRotation#minute_of_hour}
   */
   readonly minuteOfHour: number;
 }
@@ -1559,13 +1559,13 @@ export class RecurrenceWeeklySettingsHandOffTimePropertyList extends cdktn.Compl
 }
 export interface WeeklySettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#day_of_week TfRotation#day_of_week}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#day_of_week AwsRotation#day_of_week}
   */
   readonly dayOfWeek: string;
   /**
   * hand_off_time block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#hand_off_time TfRotation#hand_off_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#hand_off_time AwsRotation#hand_off_time}
   */
   readonly handOffTime?: RecurrenceWeeklySettingsHandOffTimeProperty[] | cdktn.IResolvable;
 }
@@ -1670,35 +1670,35 @@ export class WeeklySettingsPropertyList extends cdktn.ComplexList {
 }
 export interface RecurrenceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#number_of_on_calls TfRotation#number_of_on_calls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#number_of_on_calls AwsRotation#number_of_on_calls}
   */
   readonly numberOfOnCalls: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#recurrence_multiplier TfRotation#recurrence_multiplier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#recurrence_multiplier AwsRotation#recurrence_multiplier}
   */
   readonly recurrenceMultiplier: number;
   /**
   * daily_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#daily_settings TfRotation#daily_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#daily_settings AwsRotation#daily_settings}
   */
   readonly dailySettings?: DailySettingsProperty[] | cdktn.IResolvable;
   /**
   * monthly_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#monthly_settings TfRotation#monthly_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#monthly_settings AwsRotation#monthly_settings}
   */
   readonly monthlySettings?: MonthlySettingsProperty[] | cdktn.IResolvable;
   /**
   * shift_coverages block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#shift_coverages TfRotation#shift_coverages}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#shift_coverages AwsRotation#shift_coverages}
   */
   readonly shiftCoverages?: ShiftCoveragesProperty[] | cdktn.IResolvable;
   /**
   * weekly_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#weekly_settings TfRotation#weekly_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_rotation#weekly_settings AwsRotation#weekly_settings}
   */
   readonly weeklySettings?: WeeklySettingsProperty[] | cdktn.IResolvable;
 }

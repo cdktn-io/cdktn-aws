@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfProductPortfolioAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsProductPortfolioAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#accept_language TfProductPortfolioAssociation#accept_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#accept_language AwsProductPortfolioAssociation#accept_language}
   */
   readonly acceptLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#id TfProductPortfolioAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#id AwsProductPortfolioAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#portfolio_id TfProductPortfolioAssociation#portfolio_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#portfolio_id AwsProductPortfolioAssociation#portfolio_id}
   */
   readonly portfolioId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#product_id TfProductPortfolioAssociation#product_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#product_id AwsProductPortfolioAssociation#product_id}
   */
   readonly productId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#region TfProductPortfolioAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#region AwsProductPortfolioAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#source_portfolio_id TfProductPortfolioAssociation#source_portfolio_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#source_portfolio_id AwsProductPortfolioAssociation#source_portfolio_id}
   */
   readonly sourcePortfolioId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#timeouts TfProductPortfolioAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#timeouts AwsProductPortfolioAssociation#timeouts}
   */
-  readonly timeouts?: TfProductPortfolioAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsProductPortfolioAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association aws_servicecatalog_product_portfolio_association}
 */
-export class TfProductPortfolioAssociation extends cdktn.TerraformResource {
+export class AwsProductPortfolioAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfProductPortfolioAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfProductPortfolioAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsProductPortfolioAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfProductPortfolioAssociation to import
-  * @param importFromId The id of the existing TfProductPortfolioAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfProductPortfolioAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsProductPortfolioAssociation to import
+  * @param importFromId The id of the existing AwsProductPortfolioAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsProductPortfolioAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_product_portfolio_association", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfProductPortfolioAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfProductPortfolioAssociationConfig
+  * @param options AwsProductPortfolioAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfProductPortfolioAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsProductPortfolioAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_product_portfolio_association',
       terraformGeneratorMetadata: {
@@ -198,11 +198,11 @@ export class TfProductPortfolioAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfProductPortfolioAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsProductPortfolioAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfProductPortfolioAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsProductPortfolioAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -225,7 +225,7 @@ export class TfProductPortfolioAssociation extends cdktn.TerraformResource {
       product_id: cdktn.stringToTerraform(this._productId),
       region: cdktn.stringToTerraform(this._region),
       source_portfolio_id: cdktn.stringToTerraform(this._sourcePortfolioId),
-      timeouts: tfProductPortfolioAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsProductPortfolioAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -268,10 +268,10 @@ export class TfProductPortfolioAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfProductPortfolioAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsProductPortfolioAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfProductPortfolioAssociation.TimeoutsProperty",
+        storageClassType: "AwsProductPortfolioAssociation.TimeoutsProperty",
       },
     };
 
@@ -280,7 +280,7 @@ export class TfProductPortfolioAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfProductPortfolioAssociationTimeoutsPropertyToTerraform(struct?: TfProductPortfolioAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsProductPortfolioAssociationTimeoutsPropertyToTerraform(struct?: AwsProductPortfolioAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function tfProductPortfolioAssociationTimeoutsPropertyToTerraform(struct?
 }
 
 
-export function tfProductPortfolioAssociationTimeoutsPropertyToHclTerraform(struct?: TfProductPortfolioAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsProductPortfolioAssociationTimeoutsPropertyToHclTerraform(struct?: AwsProductPortfolioAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,18 +324,18 @@ export function tfProductPortfolioAssociationTimeoutsPropertyToHclTerraform(stru
 }
 
 
-export namespace TfProductPortfolioAssociation {
+export namespace AwsProductPortfolioAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#create TfProductPortfolioAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#create AwsProductPortfolioAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#delete TfProductPortfolioAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#delete AwsProductPortfolioAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#read TfProductPortfolioAssociation#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_product_portfolio_association#read AwsProductPortfolioAssociation#read}
   */
   readonly read?: string;
 }

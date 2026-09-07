@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfMultiRegionAccessPointRoutesConfig extends cdktn.TerraformMetaArguments {
+export interface AwsMultiRegionAccessPointRoutesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes#account_id TfMultiRegionAccessPointRoutes#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes#account_id AwsMultiRegionAccessPointRoutes#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes#mrap TfMultiRegionAccessPointRoutes#mrap}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes#mrap AwsMultiRegionAccessPointRoutes#mrap}
   */
   readonly mrap: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes#region TfMultiRegionAccessPointRoutes#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes#region AwsMultiRegionAccessPointRoutes#region}
   */
   readonly region?: string;
   /**
   * route block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes#route TfMultiRegionAccessPointRoutes#route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes#route AwsMultiRegionAccessPointRoutes#route}
   */
-  readonly route?: TfMultiRegionAccessPointRoutes.RouteProperty[] | cdktn.IResolvable;
+  readonly route?: AwsMultiRegionAccessPointRoutes.RouteProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes aws_s3control_multi_region_access_point_routes}
 */
-export class TfMultiRegionAccessPointRoutes extends cdktn.TerraformResource {
+export class AwsMultiRegionAccessPointRoutes extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class TfMultiRegionAccessPointRoutes extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfMultiRegionAccessPointRoutes resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsMultiRegionAccessPointRoutes resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfMultiRegionAccessPointRoutes to import
-  * @param importFromId The id of the existing TfMultiRegionAccessPointRoutes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfMultiRegionAccessPointRoutes to import is found
+  * @param importToId The construct id used in the generated config for the AwsMultiRegionAccessPointRoutes to import
+  * @param importFromId The id of the existing AwsMultiRegionAccessPointRoutes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMultiRegionAccessPointRoutes to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3control_multi_region_access_point_routes", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class TfMultiRegionAccessPointRoutes extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfMultiRegionAccessPointRoutesConfig
+  * @param options AwsMultiRegionAccessPointRoutesConfig
   */
-  public constructor(scope: Construct, id: string, config: TfMultiRegionAccessPointRoutesConfig) {
+  public constructor(scope: Construct, id: string, config: AwsMultiRegionAccessPointRoutesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3control_multi_region_access_point_routes',
       terraformGeneratorMetadata: {
@@ -135,11 +135,11 @@ export class TfMultiRegionAccessPointRoutes extends cdktn.TerraformResource {
   }
 
   // route - computed: false, optional: true, required: false
-  private _route = new TfMultiRegionAccessPointRoutes.RoutePropertyList(this, "route", true);
+  private _route = new AwsMultiRegionAccessPointRoutes.RoutePropertyList(this, "route", true);
   public get route() {
     return this._route;
   }
-  public putRoute(value: TfMultiRegionAccessPointRoutes.RouteProperty[] | cdktn.IResolvable) {
+  public putRoute(value: AwsMultiRegionAccessPointRoutes.RouteProperty[] | cdktn.IResolvable) {
     this._route.internalValue = value;
   }
   public resetRoute() {
@@ -159,7 +159,7 @@ export class TfMultiRegionAccessPointRoutes extends cdktn.TerraformResource {
       account_id: cdktn.stringToTerraform(this._accountId),
       mrap: cdktn.stringToTerraform(this._mrap),
       region: cdktn.stringToTerraform(this._region),
-      route: cdktn.listMapper(tfMultiRegionAccessPointRoutesRoutePropertyToTerraform, true)(this._route.internalValue),
+      route: cdktn.listMapper(awsMultiRegionAccessPointRoutesRoutePropertyToTerraform, true)(this._route.internalValue),
     };
   }
 
@@ -184,10 +184,10 @@ export class TfMultiRegionAccessPointRoutes extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       route: {
-        value: cdktn.listMapperHcl(tfMultiRegionAccessPointRoutesRoutePropertyToHclTerraform, true)(this._route.internalValue),
+        value: cdktn.listMapperHcl(awsMultiRegionAccessPointRoutesRoutePropertyToHclTerraform, true)(this._route.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfMultiRegionAccessPointRoutes.RoutePropertyList",
+        storageClassType: "AwsMultiRegionAccessPointRoutes.RoutePropertyList",
       },
     };
 
@@ -196,7 +196,7 @@ export class TfMultiRegionAccessPointRoutes extends cdktn.TerraformResource {
   }
 }
 
-export function tfMultiRegionAccessPointRoutesRoutePropertyToTerraform(struct?: TfMultiRegionAccessPointRoutes.RouteProperty | cdktn.IResolvable): any {
+export function awsMultiRegionAccessPointRoutesRoutePropertyToTerraform(struct?: AwsMultiRegionAccessPointRoutes.RouteProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -209,7 +209,7 @@ export function tfMultiRegionAccessPointRoutesRoutePropertyToTerraform(struct?: 
 }
 
 
-export function tfMultiRegionAccessPointRoutesRoutePropertyToHclTerraform(struct?: TfMultiRegionAccessPointRoutes.RouteProperty | cdktn.IResolvable): any {
+export function awsMultiRegionAccessPointRoutesRoutePropertyToHclTerraform(struct?: AwsMultiRegionAccessPointRoutes.RouteProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -240,18 +240,18 @@ export function tfMultiRegionAccessPointRoutesRoutePropertyToHclTerraform(struct
 }
 
 
-export namespace TfMultiRegionAccessPointRoutes {
+export namespace AwsMultiRegionAccessPointRoutes {
 export interface RouteProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes#bucket TfMultiRegionAccessPointRoutes#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes#bucket AwsMultiRegionAccessPointRoutes#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes#region TfMultiRegionAccessPointRoutes#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes#region AwsMultiRegionAccessPointRoutes#region}
   */
   readonly region: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes#traffic_dial_percentage TfMultiRegionAccessPointRoutes#traffic_dial_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_multi_region_access_point_routes#traffic_dial_percentage AwsMultiRegionAccessPointRoutes#traffic_dial_percentage}
   */
   readonly trafficDialPercentage: number;
 }

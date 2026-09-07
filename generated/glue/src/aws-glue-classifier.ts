@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfClassifierConfig extends cdktn.TerraformMetaArguments {
+export interface AwsClassifierConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#id TfClassifier#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#id AwsClassifier#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#name TfClassifier#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#name AwsClassifier#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#region TfClassifier#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#region AwsClassifier#region}
   */
   readonly region?: string;
   /**
   * csv_classifier block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#csv_classifier TfClassifier#csv_classifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#csv_classifier AwsClassifier#csv_classifier}
   */
-  readonly csvClassifier?: TfClassifier.CsvClassifierProperty;
+  readonly csvClassifier?: AwsClassifier.CsvClassifierProperty;
   /**
   * grok_classifier block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#grok_classifier TfClassifier#grok_classifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#grok_classifier AwsClassifier#grok_classifier}
   */
-  readonly grokClassifier?: TfClassifier.GrokClassifierProperty;
+  readonly grokClassifier?: AwsClassifier.GrokClassifierProperty;
   /**
   * json_classifier block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#json_classifier TfClassifier#json_classifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#json_classifier AwsClassifier#json_classifier}
   */
-  readonly jsonClassifier?: TfClassifier.JsonClassifierProperty;
+  readonly jsonClassifier?: AwsClassifier.JsonClassifierProperty;
   /**
   * xml_classifier block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#xml_classifier TfClassifier#xml_classifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#xml_classifier AwsClassifier#xml_classifier}
   */
-  readonly xmlClassifier?: TfClassifier.XmlClassifierProperty;
+  readonly xmlClassifier?: AwsClassifier.XmlClassifierProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier aws_glue_classifier}
 */
-export class TfClassifier extends cdktn.TerraformResource {
+export class AwsClassifier extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class TfClassifier extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfClassifier resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsClassifier resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfClassifier to import
-  * @param importFromId The id of the existing TfClassifier that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfClassifier to import is found
+  * @param importToId The construct id used in the generated config for the AwsClassifier to import
+  * @param importFromId The id of the existing AwsClassifier that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsClassifier to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_classifier", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class TfClassifier extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfClassifierConfig
+  * @param options AwsClassifierConfig
   */
-  public constructor(scope: Construct, id: string, config: TfClassifierConfig) {
+  public constructor(scope: Construct, id: string, config: AwsClassifierConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_classifier',
       terraformGeneratorMetadata: {
@@ -159,11 +159,11 @@ export class TfClassifier extends cdktn.TerraformResource {
   }
 
   // csv_classifier - computed: false, optional: true, required: false
-  private _csvClassifier = new TfClassifier.CsvClassifierPropertyOutputReference(this, "csv_classifier");
+  private _csvClassifier = new AwsClassifier.CsvClassifierPropertyOutputReference(this, "csv_classifier");
   public get csvClassifier() {
     return this._csvClassifier;
   }
-  public putCsvClassifier(value: TfClassifier.CsvClassifierProperty) {
+  public putCsvClassifier(value: AwsClassifier.CsvClassifierProperty) {
     this._csvClassifier.internalValue = value;
   }
   public resetCsvClassifier() {
@@ -175,11 +175,11 @@ export class TfClassifier extends cdktn.TerraformResource {
   }
 
   // grok_classifier - computed: false, optional: true, required: false
-  private _grokClassifier = new TfClassifier.GrokClassifierPropertyOutputReference(this, "grok_classifier");
+  private _grokClassifier = new AwsClassifier.GrokClassifierPropertyOutputReference(this, "grok_classifier");
   public get grokClassifier() {
     return this._grokClassifier;
   }
-  public putGrokClassifier(value: TfClassifier.GrokClassifierProperty) {
+  public putGrokClassifier(value: AwsClassifier.GrokClassifierProperty) {
     this._grokClassifier.internalValue = value;
   }
   public resetGrokClassifier() {
@@ -191,11 +191,11 @@ export class TfClassifier extends cdktn.TerraformResource {
   }
 
   // json_classifier - computed: false, optional: true, required: false
-  private _jsonClassifier = new TfClassifier.JsonClassifierPropertyOutputReference(this, "json_classifier");
+  private _jsonClassifier = new AwsClassifier.JsonClassifierPropertyOutputReference(this, "json_classifier");
   public get jsonClassifier() {
     return this._jsonClassifier;
   }
-  public putJsonClassifier(value: TfClassifier.JsonClassifierProperty) {
+  public putJsonClassifier(value: AwsClassifier.JsonClassifierProperty) {
     this._jsonClassifier.internalValue = value;
   }
   public resetJsonClassifier() {
@@ -207,11 +207,11 @@ export class TfClassifier extends cdktn.TerraformResource {
   }
 
   // xml_classifier - computed: false, optional: true, required: false
-  private _xmlClassifier = new TfClassifier.XmlClassifierPropertyOutputReference(this, "xml_classifier");
+  private _xmlClassifier = new AwsClassifier.XmlClassifierPropertyOutputReference(this, "xml_classifier");
   public get xmlClassifier() {
     return this._xmlClassifier;
   }
-  public putXmlClassifier(value: TfClassifier.XmlClassifierProperty) {
+  public putXmlClassifier(value: AwsClassifier.XmlClassifierProperty) {
     this._xmlClassifier.internalValue = value;
   }
   public resetXmlClassifier() {
@@ -231,10 +231,10 @@ export class TfClassifier extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      csv_classifier: tfClassifierCsvClassifierPropertyToTerraform(this._csvClassifier.internalValue),
-      grok_classifier: tfClassifierGrokClassifierPropertyToTerraform(this._grokClassifier.internalValue),
-      json_classifier: tfClassifierJsonClassifierPropertyToTerraform(this._jsonClassifier.internalValue),
-      xml_classifier: tfClassifierXmlClassifierPropertyToTerraform(this._xmlClassifier.internalValue),
+      csv_classifier: awsClassifierCsvClassifierPropertyToTerraform(this._csvClassifier.internalValue),
+      grok_classifier: awsClassifierGrokClassifierPropertyToTerraform(this._grokClassifier.internalValue),
+      json_classifier: awsClassifierJsonClassifierPropertyToTerraform(this._jsonClassifier.internalValue),
+      xml_classifier: awsClassifierXmlClassifierPropertyToTerraform(this._xmlClassifier.internalValue),
     };
   }
 
@@ -259,28 +259,28 @@ export class TfClassifier extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       csv_classifier: {
-        value: tfClassifierCsvClassifierPropertyToHclTerraform(this._csvClassifier.internalValue),
+        value: awsClassifierCsvClassifierPropertyToHclTerraform(this._csvClassifier.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfClassifier.CsvClassifierPropertyList",
+        storageClassType: "AwsClassifier.CsvClassifierPropertyList",
       },
       grok_classifier: {
-        value: tfClassifierGrokClassifierPropertyToHclTerraform(this._grokClassifier.internalValue),
+        value: awsClassifierGrokClassifierPropertyToHclTerraform(this._grokClassifier.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfClassifier.GrokClassifierPropertyList",
+        storageClassType: "AwsClassifier.GrokClassifierPropertyList",
       },
       json_classifier: {
-        value: tfClassifierJsonClassifierPropertyToHclTerraform(this._jsonClassifier.internalValue),
+        value: awsClassifierJsonClassifierPropertyToHclTerraform(this._jsonClassifier.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfClassifier.JsonClassifierPropertyList",
+        storageClassType: "AwsClassifier.JsonClassifierPropertyList",
       },
       xml_classifier: {
-        value: tfClassifierXmlClassifierPropertyToHclTerraform(this._xmlClassifier.internalValue),
+        value: awsClassifierXmlClassifierPropertyToHclTerraform(this._xmlClassifier.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfClassifier.XmlClassifierPropertyList",
+        storageClassType: "AwsClassifier.XmlClassifierPropertyList",
       },
     };
 
@@ -289,7 +289,7 @@ export class TfClassifier extends cdktn.TerraformResource {
   }
 }
 
-export function tfClassifierCsvClassifierPropertyToTerraform(struct?: TfClassifier.CsvClassifierPropertyOutputReference | TfClassifier.CsvClassifierProperty): any {
+export function awsClassifierCsvClassifierPropertyToTerraform(struct?: AwsClassifier.CsvClassifierPropertyOutputReference | AwsClassifier.CsvClassifierProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -308,7 +308,7 @@ export function tfClassifierCsvClassifierPropertyToTerraform(struct?: TfClassifi
 }
 
 
-export function tfClassifierCsvClassifierPropertyToHclTerraform(struct?: TfClassifier.CsvClassifierPropertyOutputReference | TfClassifier.CsvClassifierProperty): any {
+export function awsClassifierCsvClassifierPropertyToHclTerraform(struct?: AwsClassifier.CsvClassifierPropertyOutputReference | AwsClassifier.CsvClassifierProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -375,7 +375,7 @@ export function tfClassifierCsvClassifierPropertyToHclTerraform(struct?: TfClass
 }
 
 
-export function tfClassifierGrokClassifierPropertyToTerraform(struct?: TfClassifier.GrokClassifierPropertyOutputReference | TfClassifier.GrokClassifierProperty): any {
+export function awsClassifierGrokClassifierPropertyToTerraform(struct?: AwsClassifier.GrokClassifierPropertyOutputReference | AwsClassifier.GrokClassifierProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function tfClassifierGrokClassifierPropertyToTerraform(struct?: TfClassif
 }
 
 
-export function tfClassifierGrokClassifierPropertyToHclTerraform(struct?: TfClassifier.GrokClassifierPropertyOutputReference | TfClassifier.GrokClassifierProperty): any {
+export function awsClassifierGrokClassifierPropertyToHclTerraform(struct?: AwsClassifier.GrokClassifierPropertyOutputReference | AwsClassifier.GrokClassifierProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -419,7 +419,7 @@ export function tfClassifierGrokClassifierPropertyToHclTerraform(struct?: TfClas
 }
 
 
-export function tfClassifierJsonClassifierPropertyToTerraform(struct?: TfClassifier.JsonClassifierPropertyOutputReference | TfClassifier.JsonClassifierProperty): any {
+export function awsClassifierJsonClassifierPropertyToTerraform(struct?: AwsClassifier.JsonClassifierPropertyOutputReference | AwsClassifier.JsonClassifierProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -430,7 +430,7 @@ export function tfClassifierJsonClassifierPropertyToTerraform(struct?: TfClassif
 }
 
 
-export function tfClassifierJsonClassifierPropertyToHclTerraform(struct?: TfClassifier.JsonClassifierPropertyOutputReference | TfClassifier.JsonClassifierProperty): any {
+export function awsClassifierJsonClassifierPropertyToHclTerraform(struct?: AwsClassifier.JsonClassifierPropertyOutputReference | AwsClassifier.JsonClassifierProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -449,7 +449,7 @@ export function tfClassifierJsonClassifierPropertyToHclTerraform(struct?: TfClas
 }
 
 
-export function tfClassifierXmlClassifierPropertyToTerraform(struct?: TfClassifier.XmlClassifierPropertyOutputReference | TfClassifier.XmlClassifierProperty): any {
+export function awsClassifierXmlClassifierPropertyToTerraform(struct?: AwsClassifier.XmlClassifierPropertyOutputReference | AwsClassifier.XmlClassifierProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,7 +461,7 @@ export function tfClassifierXmlClassifierPropertyToTerraform(struct?: TfClassifi
 }
 
 
-export function tfClassifierXmlClassifierPropertyToHclTerraform(struct?: TfClassifier.XmlClassifierPropertyOutputReference | TfClassifier.XmlClassifierProperty): any {
+export function awsClassifierXmlClassifierPropertyToHclTerraform(struct?: AwsClassifier.XmlClassifierPropertyOutputReference | AwsClassifier.XmlClassifierProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -486,42 +486,42 @@ export function tfClassifierXmlClassifierPropertyToHclTerraform(struct?: TfClass
 }
 
 
-export namespace TfClassifier {
+export namespace AwsClassifier {
 export interface CsvClassifierProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#allow_single_column TfClassifier#allow_single_column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#allow_single_column AwsClassifier#allow_single_column}
   */
   readonly allowSingleColumn?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#contains_header TfClassifier#contains_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#contains_header AwsClassifier#contains_header}
   */
   readonly containsHeader?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#custom_datatype_configured TfClassifier#custom_datatype_configured}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#custom_datatype_configured AwsClassifier#custom_datatype_configured}
   */
   readonly customDatatypeConfigured?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#custom_datatypes TfClassifier#custom_datatypes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#custom_datatypes AwsClassifier#custom_datatypes}
   */
   readonly customDatatypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#delimiter TfClassifier#delimiter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#delimiter AwsClassifier#delimiter}
   */
   readonly delimiter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#disable_value_trimming TfClassifier#disable_value_trimming}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#disable_value_trimming AwsClassifier#disable_value_trimming}
   */
   readonly disableValueTrimming?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#header TfClassifier#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#header AwsClassifier#header}
   */
   readonly header?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#quote_symbol TfClassifier#quote_symbol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#quote_symbol AwsClassifier#quote_symbol}
   */
   readonly quoteSymbol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#serde TfClassifier#serde}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#serde AwsClassifier#serde}
   */
   readonly serde?: string;
 }
@@ -751,15 +751,15 @@ export class CsvClassifierPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface GrokClassifierProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#classification TfClassifier#classification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#classification AwsClassifier#classification}
   */
   readonly classification: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#custom_patterns TfClassifier#custom_patterns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#custom_patterns AwsClassifier#custom_patterns}
   */
   readonly customPatterns?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#grok_pattern TfClassifier#grok_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#grok_pattern AwsClassifier#grok_pattern}
   */
   readonly grokPattern: string;
 }
@@ -851,7 +851,7 @@ export class GrokClassifierPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface JsonClassifierProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#json_path TfClassifier#json_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#json_path AwsClassifier#json_path}
   */
   readonly jsonPath: string;
 }
@@ -902,11 +902,11 @@ export class JsonClassifierPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface XmlClassifierProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#classification TfClassifier#classification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#classification AwsClassifier#classification}
   */
   readonly classification: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#row_tag TfClassifier#row_tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_classifier#row_tag AwsClassifier#row_tag}
   */
   readonly rowTag: string;
 }

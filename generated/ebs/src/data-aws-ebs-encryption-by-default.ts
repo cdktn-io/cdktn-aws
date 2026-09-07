@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfEncryptionByDefaultConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsEncryptionByDefaultConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_encryption_by_default#id DataTfEncryptionByDefault#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_encryption_by_default#id DataAwsEncryptionByDefault#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface DataTfEncryptionByDefaultConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_encryption_by_default#region DataTfEncryptionByDefault#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_encryption_by_default#region DataAwsEncryptionByDefault#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_encryption_by_default#timeouts DataTfEncryptionByDefault#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_encryption_by_default#timeouts DataAwsEncryptionByDefault#timeouts}
   */
-  readonly timeouts?: DataTfEncryptionByDefault.TimeoutsProperty;
+  readonly timeouts?: DataAwsEncryptionByDefault.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_encryption_by_default aws_ebs_encryption_by_default}
 */
-export class DataTfEncryptionByDefault extends cdktn.TerraformDataSource {
+export class DataAwsEncryptionByDefault extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class DataTfEncryptionByDefault extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfEncryptionByDefault resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsEncryptionByDefault resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfEncryptionByDefault to import
-  * @param importFromId The id of the existing DataTfEncryptionByDefault that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_encryption_by_default#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfEncryptionByDefault to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsEncryptionByDefault to import
+  * @param importFromId The id of the existing DataAwsEncryptionByDefault that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_encryption_by_default#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsEncryptionByDefault to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ebs_encryption_by_default", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class DataTfEncryptionByDefault extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfEncryptionByDefaultConfig = {}
+  * @param options DataAwsEncryptionByDefaultConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfEncryptionByDefaultConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsEncryptionByDefaultConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ebs_encryption_by_default',
       terraformGeneratorMetadata: {
@@ -125,11 +125,11 @@ export class DataTfEncryptionByDefault extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataTfEncryptionByDefault.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataAwsEncryptionByDefault.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataTfEncryptionByDefault.TimeoutsProperty) {
+  public putTimeouts(value: DataAwsEncryptionByDefault.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -148,7 +148,7 @@ export class DataTfEncryptionByDefault extends cdktn.TerraformDataSource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: dataTfEncryptionByDefaultTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: dataAwsEncryptionByDefaultTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -167,10 +167,10 @@ export class DataTfEncryptionByDefault extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       timeouts: {
-        value: dataTfEncryptionByDefaultTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataAwsEncryptionByDefaultTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataTfEncryptionByDefault.TimeoutsProperty",
+        storageClassType: "DataAwsEncryptionByDefault.TimeoutsProperty",
       },
     };
 
@@ -179,7 +179,7 @@ export class DataTfEncryptionByDefault extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfEncryptionByDefaultTimeoutsPropertyToTerraform(struct?: DataTfEncryptionByDefault.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsEncryptionByDefaultTimeoutsPropertyToTerraform(struct?: DataAwsEncryptionByDefault.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -190,7 +190,7 @@ export function dataTfEncryptionByDefaultTimeoutsPropertyToTerraform(struct?: Da
 }
 
 
-export function dataTfEncryptionByDefaultTimeoutsPropertyToHclTerraform(struct?: DataTfEncryptionByDefault.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsEncryptionByDefaultTimeoutsPropertyToHclTerraform(struct?: DataAwsEncryptionByDefault.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -209,10 +209,10 @@ export function dataTfEncryptionByDefaultTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace DataTfEncryptionByDefault {
+export namespace DataAwsEncryptionByDefault {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_encryption_by_default#read DataTfEncryptionByDefault#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_encryption_by_default#read DataAwsEncryptionByDefault#read}
   */
   readonly read?: string;
 }

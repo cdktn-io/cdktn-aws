@@ -5,106 +5,106 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEndpointConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEndpointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#application_domain TfEndpoint#application_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#application_domain AwsEndpoint#application_domain}
   */
   readonly applicationDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#attachment_type TfEndpoint#attachment_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#attachment_type AwsEndpoint#attachment_type}
   */
   readonly attachmentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#description TfEndpoint#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#description AwsEndpoint#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#domain_certificate_arn TfEndpoint#domain_certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#domain_certificate_arn AwsEndpoint#domain_certificate_arn}
   */
   readonly domainCertificateArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#endpoint_domain_prefix TfEndpoint#endpoint_domain_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#endpoint_domain_prefix AwsEndpoint#endpoint_domain_prefix}
   */
   readonly endpointDomainPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#endpoint_type TfEndpoint#endpoint_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#endpoint_type AwsEndpoint#endpoint_type}
   */
   readonly endpointType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#id TfEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#id AwsEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#policy_document TfEndpoint#policy_document}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#policy_document AwsEndpoint#policy_document}
   */
   readonly policyDocument?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#region TfEndpoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#region AwsEndpoint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#security_group_ids TfEndpoint#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#security_group_ids AwsEndpoint#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#tags TfEndpoint#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#tags AwsEndpoint#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#tags_all TfEndpoint#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#tags_all AwsEndpoint#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#verified_access_group_id TfEndpoint#verified_access_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#verified_access_group_id AwsEndpoint#verified_access_group_id}
   */
   readonly verifiedAccessGroupId: string;
   /**
   * cidr_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#cidr_options TfEndpoint#cidr_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#cidr_options AwsEndpoint#cidr_options}
   */
-  readonly cidrOptions?: TfEndpoint.CidrOptionsProperty;
+  readonly cidrOptions?: AwsEndpoint.CidrOptionsProperty;
   /**
   * load_balancer_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#load_balancer_options TfEndpoint#load_balancer_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#load_balancer_options AwsEndpoint#load_balancer_options}
   */
-  readonly loadBalancerOptions?: TfEndpoint.LoadBalancerOptionsProperty;
+  readonly loadBalancerOptions?: AwsEndpoint.LoadBalancerOptionsProperty;
   /**
   * network_interface_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#network_interface_options TfEndpoint#network_interface_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#network_interface_options AwsEndpoint#network_interface_options}
   */
-  readonly networkInterfaceOptions?: TfEndpoint.NetworkInterfaceOptionsProperty;
+  readonly networkInterfaceOptions?: AwsEndpoint.NetworkInterfaceOptionsProperty;
   /**
   * rds_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#rds_options TfEndpoint#rds_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#rds_options AwsEndpoint#rds_options}
   */
-  readonly rdsOptions?: TfEndpoint.RdsOptionsProperty;
+  readonly rdsOptions?: AwsEndpoint.RdsOptionsProperty;
   /**
   * sse_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#sse_specification TfEndpoint#sse_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#sse_specification AwsEndpoint#sse_specification}
   */
-  readonly sseSpecification?: TfEndpoint.SseSpecificationProperty;
+  readonly sseSpecification?: AwsEndpoint.SseSpecificationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#timeouts TfEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#timeouts AwsEndpoint#timeouts}
   */
-  readonly timeouts?: TfEndpoint.TimeoutsProperty;
+  readonly timeouts?: AwsEndpoint.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint aws_verifiedaccess_endpoint}
 */
-export class TfEndpoint extends cdktn.TerraformResource {
+export class AwsEndpoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -115,11 +115,11 @@ export class TfEndpoint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEndpoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEndpoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEndpoint to import
-  * @param importFromId The id of the existing TfEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEndpoint to import is found
+  * @param importToId The construct id used in the generated config for the AwsEndpoint to import
+  * @param importFromId The id of the existing AwsEndpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEndpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_verifiedaccess_endpoint", importId: importFromId, provider });
@@ -134,9 +134,9 @@ export class TfEndpoint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEndpointConfig
+  * @param options AwsEndpointConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEndpointConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_verifiedaccess_endpoint',
       terraformGeneratorMetadata: {
@@ -392,11 +392,11 @@ export class TfEndpoint extends cdktn.TerraformResource {
   }
 
   // cidr_options - computed: false, optional: true, required: false
-  private _cidrOptions = new TfEndpoint.CidrOptionsPropertyOutputReference(this, "cidr_options");
+  private _cidrOptions = new AwsEndpoint.CidrOptionsPropertyOutputReference(this, "cidr_options");
   public get cidrOptions() {
     return this._cidrOptions;
   }
-  public putCidrOptions(value: TfEndpoint.CidrOptionsProperty) {
+  public putCidrOptions(value: AwsEndpoint.CidrOptionsProperty) {
     this._cidrOptions.internalValue = value;
   }
   public resetCidrOptions() {
@@ -408,11 +408,11 @@ export class TfEndpoint extends cdktn.TerraformResource {
   }
 
   // load_balancer_options - computed: false, optional: true, required: false
-  private _loadBalancerOptions = new TfEndpoint.LoadBalancerOptionsPropertyOutputReference(this, "load_balancer_options");
+  private _loadBalancerOptions = new AwsEndpoint.LoadBalancerOptionsPropertyOutputReference(this, "load_balancer_options");
   public get loadBalancerOptions() {
     return this._loadBalancerOptions;
   }
-  public putLoadBalancerOptions(value: TfEndpoint.LoadBalancerOptionsProperty) {
+  public putLoadBalancerOptions(value: AwsEndpoint.LoadBalancerOptionsProperty) {
     this._loadBalancerOptions.internalValue = value;
   }
   public resetLoadBalancerOptions() {
@@ -424,11 +424,11 @@ export class TfEndpoint extends cdktn.TerraformResource {
   }
 
   // network_interface_options - computed: false, optional: true, required: false
-  private _networkInterfaceOptions = new TfEndpoint.NetworkInterfaceOptionsPropertyOutputReference(this, "network_interface_options");
+  private _networkInterfaceOptions = new AwsEndpoint.NetworkInterfaceOptionsPropertyOutputReference(this, "network_interface_options");
   public get networkInterfaceOptions() {
     return this._networkInterfaceOptions;
   }
-  public putNetworkInterfaceOptions(value: TfEndpoint.NetworkInterfaceOptionsProperty) {
+  public putNetworkInterfaceOptions(value: AwsEndpoint.NetworkInterfaceOptionsProperty) {
     this._networkInterfaceOptions.internalValue = value;
   }
   public resetNetworkInterfaceOptions() {
@@ -440,11 +440,11 @@ export class TfEndpoint extends cdktn.TerraformResource {
   }
 
   // rds_options - computed: false, optional: true, required: false
-  private _rdsOptions = new TfEndpoint.RdsOptionsPropertyOutputReference(this, "rds_options");
+  private _rdsOptions = new AwsEndpoint.RdsOptionsPropertyOutputReference(this, "rds_options");
   public get rdsOptions() {
     return this._rdsOptions;
   }
-  public putRdsOptions(value: TfEndpoint.RdsOptionsProperty) {
+  public putRdsOptions(value: AwsEndpoint.RdsOptionsProperty) {
     this._rdsOptions.internalValue = value;
   }
   public resetRdsOptions() {
@@ -456,11 +456,11 @@ export class TfEndpoint extends cdktn.TerraformResource {
   }
 
   // sse_specification - computed: false, optional: true, required: false
-  private _sseSpecification = new TfEndpoint.SseSpecificationPropertyOutputReference(this, "sse_specification");
+  private _sseSpecification = new AwsEndpoint.SseSpecificationPropertyOutputReference(this, "sse_specification");
   public get sseSpecification() {
     return this._sseSpecification;
   }
-  public putSseSpecification(value: TfEndpoint.SseSpecificationProperty) {
+  public putSseSpecification(value: AwsEndpoint.SseSpecificationProperty) {
     this._sseSpecification.internalValue = value;
   }
   public resetSseSpecification() {
@@ -472,11 +472,11 @@ export class TfEndpoint extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsEndpoint.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfEndpoint.TimeoutsProperty) {
+  public putTimeouts(value: AwsEndpoint.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -506,12 +506,12 @@ export class TfEndpoint extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       verified_access_group_id: cdktn.stringToTerraform(this._verifiedAccessGroupId),
-      cidr_options: tfEndpointCidrOptionsPropertyToTerraform(this._cidrOptions.internalValue),
-      load_balancer_options: tfEndpointLoadBalancerOptionsPropertyToTerraform(this._loadBalancerOptions.internalValue),
-      network_interface_options: tfEndpointNetworkInterfaceOptionsPropertyToTerraform(this._networkInterfaceOptions.internalValue),
-      rds_options: tfEndpointRdsOptionsPropertyToTerraform(this._rdsOptions.internalValue),
-      sse_specification: tfEndpointSseSpecificationPropertyToTerraform(this._sseSpecification.internalValue),
-      timeouts: tfEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      cidr_options: awsEndpointCidrOptionsPropertyToTerraform(this._cidrOptions.internalValue),
+      load_balancer_options: awsEndpointLoadBalancerOptionsPropertyToTerraform(this._loadBalancerOptions.internalValue),
+      network_interface_options: awsEndpointNetworkInterfaceOptionsPropertyToTerraform(this._networkInterfaceOptions.internalValue),
+      rds_options: awsEndpointRdsOptionsPropertyToTerraform(this._rdsOptions.internalValue),
+      sse_specification: awsEndpointSseSpecificationPropertyToTerraform(this._sseSpecification.internalValue),
+      timeouts: awsEndpointTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -596,40 +596,40 @@ export class TfEndpoint extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       cidr_options: {
-        value: tfEndpointCidrOptionsPropertyToHclTerraform(this._cidrOptions.internalValue),
+        value: awsEndpointCidrOptionsPropertyToHclTerraform(this._cidrOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEndpoint.CidrOptionsPropertyList",
+        storageClassType: "AwsEndpoint.CidrOptionsPropertyList",
       },
       load_balancer_options: {
-        value: tfEndpointLoadBalancerOptionsPropertyToHclTerraform(this._loadBalancerOptions.internalValue),
+        value: awsEndpointLoadBalancerOptionsPropertyToHclTerraform(this._loadBalancerOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEndpoint.LoadBalancerOptionsPropertyList",
+        storageClassType: "AwsEndpoint.LoadBalancerOptionsPropertyList",
       },
       network_interface_options: {
-        value: tfEndpointNetworkInterfaceOptionsPropertyToHclTerraform(this._networkInterfaceOptions.internalValue),
+        value: awsEndpointNetworkInterfaceOptionsPropertyToHclTerraform(this._networkInterfaceOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEndpoint.NetworkInterfaceOptionsPropertyList",
+        storageClassType: "AwsEndpoint.NetworkInterfaceOptionsPropertyList",
       },
       rds_options: {
-        value: tfEndpointRdsOptionsPropertyToHclTerraform(this._rdsOptions.internalValue),
+        value: awsEndpointRdsOptionsPropertyToHclTerraform(this._rdsOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEndpoint.RdsOptionsPropertyList",
+        storageClassType: "AwsEndpoint.RdsOptionsPropertyList",
       },
       sse_specification: {
-        value: tfEndpointSseSpecificationPropertyToHclTerraform(this._sseSpecification.internalValue),
+        value: awsEndpointSseSpecificationPropertyToHclTerraform(this._sseSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEndpoint.SseSpecificationPropertyList",
+        storageClassType: "AwsEndpoint.SseSpecificationPropertyList",
       },
       timeouts: {
-        value: tfEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsEndpointTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfEndpoint.TimeoutsProperty",
+        storageClassType: "AwsEndpoint.TimeoutsProperty",
       },
     };
 
@@ -638,7 +638,7 @@ export class TfEndpoint extends cdktn.TerraformResource {
   }
 }
 
-export function tfEndpointCidrOptionsPortRangePropertyToTerraform(struct?: TfEndpoint.CidrOptionsPortRangeProperty | cdktn.IResolvable): any {
+export function awsEndpointCidrOptionsPortRangePropertyToTerraform(struct?: AwsEndpoint.CidrOptionsPortRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -650,7 +650,7 @@ export function tfEndpointCidrOptionsPortRangePropertyToTerraform(struct?: TfEnd
 }
 
 
-export function tfEndpointCidrOptionsPortRangePropertyToHclTerraform(struct?: TfEndpoint.CidrOptionsPortRangeProperty | cdktn.IResolvable): any {
+export function awsEndpointCidrOptionsPortRangePropertyToHclTerraform(struct?: AwsEndpoint.CidrOptionsPortRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -675,7 +675,7 @@ export function tfEndpointCidrOptionsPortRangePropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfEndpointCidrOptionsPropertyToTerraform(struct?: TfEndpoint.CidrOptionsPropertyOutputReference | TfEndpoint.CidrOptionsProperty): any {
+export function awsEndpointCidrOptionsPropertyToTerraform(struct?: AwsEndpoint.CidrOptionsPropertyOutputReference | AwsEndpoint.CidrOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -684,12 +684,12 @@ export function tfEndpointCidrOptionsPropertyToTerraform(struct?: TfEndpoint.Cid
     cidr: cdktn.stringToTerraform(struct!.cidr),
     protocol: cdktn.stringToTerraform(struct!.protocol),
     subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.subnetIds),
-    port_range: cdktn.listMapper(tfEndpointCidrOptionsPortRangePropertyToTerraform, true)(struct!.portRange),
+    port_range: cdktn.listMapper(awsEndpointCidrOptionsPortRangePropertyToTerraform, true)(struct!.portRange),
   }
 }
 
 
-export function tfEndpointCidrOptionsPropertyToHclTerraform(struct?: TfEndpoint.CidrOptionsPropertyOutputReference | TfEndpoint.CidrOptionsProperty): any {
+export function awsEndpointCidrOptionsPropertyToHclTerraform(struct?: AwsEndpoint.CidrOptionsPropertyOutputReference | AwsEndpoint.CidrOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -714,7 +714,7 @@ export function tfEndpointCidrOptionsPropertyToHclTerraform(struct?: TfEndpoint.
       storageClassType: "stringList",
     },
     port_range: {
-      value: cdktn.listMapperHcl(tfEndpointCidrOptionsPortRangePropertyToHclTerraform, true)(struct!.portRange),
+      value: cdktn.listMapperHcl(awsEndpointCidrOptionsPortRangePropertyToHclTerraform, true)(struct!.portRange),
       isBlock: true,
       type: "set",
       storageClassType: "CidrOptionsPortRangePropertyList",
@@ -726,7 +726,7 @@ export function tfEndpointCidrOptionsPropertyToHclTerraform(struct?: TfEndpoint.
 }
 
 
-export function tfEndpointLoadBalancerOptionsPortRangePropertyToTerraform(struct?: TfEndpoint.LoadBalancerOptionsPortRangeProperty | cdktn.IResolvable): any {
+export function awsEndpointLoadBalancerOptionsPortRangePropertyToTerraform(struct?: AwsEndpoint.LoadBalancerOptionsPortRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -738,7 +738,7 @@ export function tfEndpointLoadBalancerOptionsPortRangePropertyToTerraform(struct
 }
 
 
-export function tfEndpointLoadBalancerOptionsPortRangePropertyToHclTerraform(struct?: TfEndpoint.LoadBalancerOptionsPortRangeProperty | cdktn.IResolvable): any {
+export function awsEndpointLoadBalancerOptionsPortRangePropertyToHclTerraform(struct?: AwsEndpoint.LoadBalancerOptionsPortRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -763,7 +763,7 @@ export function tfEndpointLoadBalancerOptionsPortRangePropertyToHclTerraform(str
 }
 
 
-export function tfEndpointLoadBalancerOptionsPropertyToTerraform(struct?: TfEndpoint.LoadBalancerOptionsPropertyOutputReference | TfEndpoint.LoadBalancerOptionsProperty): any {
+export function awsEndpointLoadBalancerOptionsPropertyToTerraform(struct?: AwsEndpoint.LoadBalancerOptionsPropertyOutputReference | AwsEndpoint.LoadBalancerOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -773,12 +773,12 @@ export function tfEndpointLoadBalancerOptionsPropertyToTerraform(struct?: TfEndp
     port: cdktn.numberToTerraform(struct!.port),
     protocol: cdktn.stringToTerraform(struct!.protocol),
     subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.subnetIds),
-    port_range: cdktn.listMapper(tfEndpointLoadBalancerOptionsPortRangePropertyToTerraform, true)(struct!.portRange),
+    port_range: cdktn.listMapper(awsEndpointLoadBalancerOptionsPortRangePropertyToTerraform, true)(struct!.portRange),
   }
 }
 
 
-export function tfEndpointLoadBalancerOptionsPropertyToHclTerraform(struct?: TfEndpoint.LoadBalancerOptionsPropertyOutputReference | TfEndpoint.LoadBalancerOptionsProperty): any {
+export function awsEndpointLoadBalancerOptionsPropertyToHclTerraform(struct?: AwsEndpoint.LoadBalancerOptionsPropertyOutputReference | AwsEndpoint.LoadBalancerOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -809,7 +809,7 @@ export function tfEndpointLoadBalancerOptionsPropertyToHclTerraform(struct?: TfE
       storageClassType: "stringList",
     },
     port_range: {
-      value: cdktn.listMapperHcl(tfEndpointLoadBalancerOptionsPortRangePropertyToHclTerraform, true)(struct!.portRange),
+      value: cdktn.listMapperHcl(awsEndpointLoadBalancerOptionsPortRangePropertyToHclTerraform, true)(struct!.portRange),
       isBlock: true,
       type: "set",
       storageClassType: "LoadBalancerOptionsPortRangePropertyList",
@@ -821,7 +821,7 @@ export function tfEndpointLoadBalancerOptionsPropertyToHclTerraform(struct?: TfE
 }
 
 
-export function tfEndpointNetworkInterfaceOptionsPortRangePropertyToTerraform(struct?: TfEndpoint.NetworkInterfaceOptionsPortRangeProperty | cdktn.IResolvable): any {
+export function awsEndpointNetworkInterfaceOptionsPortRangePropertyToTerraform(struct?: AwsEndpoint.NetworkInterfaceOptionsPortRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -833,7 +833,7 @@ export function tfEndpointNetworkInterfaceOptionsPortRangePropertyToTerraform(st
 }
 
 
-export function tfEndpointNetworkInterfaceOptionsPortRangePropertyToHclTerraform(struct?: TfEndpoint.NetworkInterfaceOptionsPortRangeProperty | cdktn.IResolvable): any {
+export function awsEndpointNetworkInterfaceOptionsPortRangePropertyToHclTerraform(struct?: AwsEndpoint.NetworkInterfaceOptionsPortRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -858,7 +858,7 @@ export function tfEndpointNetworkInterfaceOptionsPortRangePropertyToHclTerraform
 }
 
 
-export function tfEndpointNetworkInterfaceOptionsPropertyToTerraform(struct?: TfEndpoint.NetworkInterfaceOptionsPropertyOutputReference | TfEndpoint.NetworkInterfaceOptionsProperty): any {
+export function awsEndpointNetworkInterfaceOptionsPropertyToTerraform(struct?: AwsEndpoint.NetworkInterfaceOptionsPropertyOutputReference | AwsEndpoint.NetworkInterfaceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -867,12 +867,12 @@ export function tfEndpointNetworkInterfaceOptionsPropertyToTerraform(struct?: Tf
     network_interface_id: cdktn.stringToTerraform(struct!.networkInterfaceId),
     port: cdktn.numberToTerraform(struct!.port),
     protocol: cdktn.stringToTerraform(struct!.protocol),
-    port_range: cdktn.listMapper(tfEndpointNetworkInterfaceOptionsPortRangePropertyToTerraform, true)(struct!.portRange),
+    port_range: cdktn.listMapper(awsEndpointNetworkInterfaceOptionsPortRangePropertyToTerraform, true)(struct!.portRange),
   }
 }
 
 
-export function tfEndpointNetworkInterfaceOptionsPropertyToHclTerraform(struct?: TfEndpoint.NetworkInterfaceOptionsPropertyOutputReference | TfEndpoint.NetworkInterfaceOptionsProperty): any {
+export function awsEndpointNetworkInterfaceOptionsPropertyToHclTerraform(struct?: AwsEndpoint.NetworkInterfaceOptionsPropertyOutputReference | AwsEndpoint.NetworkInterfaceOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -897,7 +897,7 @@ export function tfEndpointNetworkInterfaceOptionsPropertyToHclTerraform(struct?:
       storageClassType: "string",
     },
     port_range: {
-      value: cdktn.listMapperHcl(tfEndpointNetworkInterfaceOptionsPortRangePropertyToHclTerraform, true)(struct!.portRange),
+      value: cdktn.listMapperHcl(awsEndpointNetworkInterfaceOptionsPortRangePropertyToHclTerraform, true)(struct!.portRange),
       isBlock: true,
       type: "set",
       storageClassType: "NetworkInterfaceOptionsPortRangePropertyList",
@@ -909,7 +909,7 @@ export function tfEndpointNetworkInterfaceOptionsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfEndpointRdsOptionsPropertyToTerraform(struct?: TfEndpoint.RdsOptionsPropertyOutputReference | TfEndpoint.RdsOptionsProperty): any {
+export function awsEndpointRdsOptionsPropertyToTerraform(struct?: AwsEndpoint.RdsOptionsPropertyOutputReference | AwsEndpoint.RdsOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -926,7 +926,7 @@ export function tfEndpointRdsOptionsPropertyToTerraform(struct?: TfEndpoint.RdsO
 }
 
 
-export function tfEndpointRdsOptionsPropertyToHclTerraform(struct?: TfEndpoint.RdsOptionsPropertyOutputReference | TfEndpoint.RdsOptionsProperty): any {
+export function awsEndpointRdsOptionsPropertyToHclTerraform(struct?: AwsEndpoint.RdsOptionsPropertyOutputReference | AwsEndpoint.RdsOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -981,7 +981,7 @@ export function tfEndpointRdsOptionsPropertyToHclTerraform(struct?: TfEndpoint.R
 }
 
 
-export function tfEndpointSseSpecificationPropertyToTerraform(struct?: TfEndpoint.SseSpecificationPropertyOutputReference | TfEndpoint.SseSpecificationProperty): any {
+export function awsEndpointSseSpecificationPropertyToTerraform(struct?: AwsEndpoint.SseSpecificationPropertyOutputReference | AwsEndpoint.SseSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -993,7 +993,7 @@ export function tfEndpointSseSpecificationPropertyToTerraform(struct?: TfEndpoin
 }
 
 
-export function tfEndpointSseSpecificationPropertyToHclTerraform(struct?: TfEndpoint.SseSpecificationPropertyOutputReference | TfEndpoint.SseSpecificationProperty): any {
+export function awsEndpointSseSpecificationPropertyToHclTerraform(struct?: AwsEndpoint.SseSpecificationPropertyOutputReference | AwsEndpoint.SseSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1018,7 +1018,7 @@ export function tfEndpointSseSpecificationPropertyToHclTerraform(struct?: TfEndp
 }
 
 
-export function tfEndpointTimeoutsPropertyToTerraform(struct?: TfEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsEndpointTimeoutsPropertyToTerraform(struct?: AwsEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1031,7 +1031,7 @@ export function tfEndpointTimeoutsPropertyToTerraform(struct?: TfEndpoint.Timeou
 }
 
 
-export function tfEndpointTimeoutsPropertyToHclTerraform(struct?: TfEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsEndpointTimeoutsPropertyToHclTerraform(struct?: AwsEndpoint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1062,14 +1062,14 @@ export function tfEndpointTimeoutsPropertyToHclTerraform(struct?: TfEndpoint.Tim
 }
 
 
-export namespace TfEndpoint {
+export namespace AwsEndpoint {
 export interface CidrOptionsPortRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#from_port TfEndpoint#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#from_port AwsEndpoint#from_port}
   */
   readonly fromPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#to_port TfEndpoint#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#to_port AwsEndpoint#to_port}
   */
   readonly toPort: number;
 }
@@ -1171,21 +1171,21 @@ export class CidrOptionsPortRangePropertyList extends cdktn.ComplexList {
 }
 export interface CidrOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#cidr TfEndpoint#cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#cidr AwsEndpoint#cidr}
   */
   readonly cidr: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#protocol TfEndpoint#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#protocol AwsEndpoint#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#subnet_ids TfEndpoint#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#subnet_ids AwsEndpoint#subnet_ids}
   */
   readonly subnetIds?: string[];
   /**
   * port_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port_range TfEndpoint#port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port_range AwsEndpoint#port_range}
   */
   readonly portRange: CidrOptionsPortRangeProperty[] | cdktn.IResolvable;
 }
@@ -1299,11 +1299,11 @@ export class CidrOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LoadBalancerOptionsPortRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#from_port TfEndpoint#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#from_port AwsEndpoint#from_port}
   */
   readonly fromPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#to_port TfEndpoint#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#to_port AwsEndpoint#to_port}
   */
   readonly toPort: number;
 }
@@ -1405,25 +1405,25 @@ export class LoadBalancerOptionsPortRangePropertyList extends cdktn.ComplexList 
 }
 export interface LoadBalancerOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#load_balancer_arn TfEndpoint#load_balancer_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#load_balancer_arn AwsEndpoint#load_balancer_arn}
   */
   readonly loadBalancerArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port TfEndpoint#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port AwsEndpoint#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#protocol TfEndpoint#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#protocol AwsEndpoint#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#subnet_ids TfEndpoint#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#subnet_ids AwsEndpoint#subnet_ids}
   */
   readonly subnetIds?: string[];
   /**
   * port_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port_range TfEndpoint#port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port_range AwsEndpoint#port_range}
   */
   readonly portRange?: LoadBalancerOptionsPortRangeProperty[] | cdktn.IResolvable;
 }
@@ -1565,11 +1565,11 @@ export class LoadBalancerOptionsPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface NetworkInterfaceOptionsPortRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#from_port TfEndpoint#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#from_port AwsEndpoint#from_port}
   */
   readonly fromPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#to_port TfEndpoint#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#to_port AwsEndpoint#to_port}
   */
   readonly toPort: number;
 }
@@ -1671,21 +1671,21 @@ export class NetworkInterfaceOptionsPortRangePropertyList extends cdktn.ComplexL
 }
 export interface NetworkInterfaceOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#network_interface_id TfEndpoint#network_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#network_interface_id AwsEndpoint#network_interface_id}
   */
   readonly networkInterfaceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port TfEndpoint#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port AwsEndpoint#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#protocol TfEndpoint#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#protocol AwsEndpoint#protocol}
   */
   readonly protocol?: string;
   /**
   * port_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port_range TfEndpoint#port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port_range AwsEndpoint#port_range}
   */
   readonly portRange?: NetworkInterfaceOptionsPortRangeProperty[] | cdktn.IResolvable;
 }
@@ -1805,31 +1805,31 @@ export class NetworkInterfaceOptionsPropertyOutputReference extends cdktn.Comple
 }
 export interface RdsOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port TfEndpoint#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#port AwsEndpoint#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#protocol TfEndpoint#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#protocol AwsEndpoint#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#rds_db_cluster_arn TfEndpoint#rds_db_cluster_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#rds_db_cluster_arn AwsEndpoint#rds_db_cluster_arn}
   */
   readonly rdsDbClusterArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#rds_db_instance_arn TfEndpoint#rds_db_instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#rds_db_instance_arn AwsEndpoint#rds_db_instance_arn}
   */
   readonly rdsDbInstanceArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#rds_db_proxy_arn TfEndpoint#rds_db_proxy_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#rds_db_proxy_arn AwsEndpoint#rds_db_proxy_arn}
   */
   readonly rdsDbProxyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#rds_endpoint TfEndpoint#rds_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#rds_endpoint AwsEndpoint#rds_endpoint}
   */
   readonly rdsEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#subnet_ids TfEndpoint#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#subnet_ids AwsEndpoint#subnet_ids}
   */
   readonly subnetIds?: string[];
 }
@@ -2015,11 +2015,11 @@ export class RdsOptionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SseSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#customer_managed_key_enabled TfEndpoint#customer_managed_key_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#customer_managed_key_enabled AwsEndpoint#customer_managed_key_enabled}
   */
   readonly customerManagedKeyEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#kms_key_arn TfEndpoint#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#kms_key_arn AwsEndpoint#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
 }
@@ -2095,15 +2095,15 @@ export class SseSpecificationPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#create TfEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#create AwsEndpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#delete TfEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#delete AwsEndpoint#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#update TfEndpoint#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_endpoint#update AwsEndpoint#update}
   */
   readonly update?: string;
 }

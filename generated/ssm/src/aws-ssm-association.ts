@@ -5,98 +5,98 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#apply_only_at_cron_interval TfAssociation#apply_only_at_cron_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#apply_only_at_cron_interval AwsAssociation#apply_only_at_cron_interval}
   */
   readonly applyOnlyAtCronInterval?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#association_name TfAssociation#association_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#association_name AwsAssociation#association_name}
   */
   readonly associationName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#automation_target_parameter_name TfAssociation#automation_target_parameter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#automation_target_parameter_name AwsAssociation#automation_target_parameter_name}
   */
   readonly automationTargetParameterName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#calendar_names TfAssociation#calendar_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#calendar_names AwsAssociation#calendar_names}
   */
   readonly calendarNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#compliance_severity TfAssociation#compliance_severity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#compliance_severity AwsAssociation#compliance_severity}
   */
   readonly complianceSeverity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#document_version TfAssociation#document_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#document_version AwsAssociation#document_version}
   */
   readonly documentVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#id TfAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#id AwsAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#max_concurrency TfAssociation#max_concurrency}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#max_concurrency AwsAssociation#max_concurrency}
   */
   readonly maxConcurrency?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#max_errors TfAssociation#max_errors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#max_errors AwsAssociation#max_errors}
   */
   readonly maxErrors?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#name TfAssociation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#name AwsAssociation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#parameters TfAssociation#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#parameters AwsAssociation#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#region TfAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#region AwsAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#schedule_expression TfAssociation#schedule_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#schedule_expression AwsAssociation#schedule_expression}
   */
   readonly scheduleExpression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#sync_compliance TfAssociation#sync_compliance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#sync_compliance AwsAssociation#sync_compliance}
   */
   readonly syncCompliance?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#tags TfAssociation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#tags AwsAssociation#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#tags_all TfAssociation#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#tags_all AwsAssociation#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#wait_for_success_timeout_seconds TfAssociation#wait_for_success_timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#wait_for_success_timeout_seconds AwsAssociation#wait_for_success_timeout_seconds}
   */
   readonly waitForSuccessTimeoutSeconds?: number;
   /**
   * output_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#output_location TfAssociation#output_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#output_location AwsAssociation#output_location}
   */
-  readonly outputLocation?: TfAssociation.OutputLocationProperty;
+  readonly outputLocation?: AwsAssociation.OutputLocationProperty;
   /**
   * targets block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#targets TfAssociation#targets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#targets AwsAssociation#targets}
   */
-  readonly targets?: TfAssociation.TargetsProperty[] | cdktn.IResolvable;
+  readonly targets?: AwsAssociation.TargetsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association aws_ssm_association}
 */
-export class TfAssociation extends cdktn.TerraformResource {
+export class AwsAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -107,11 +107,11 @@ export class TfAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAssociation to import
-  * @param importFromId The id of the existing TfAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsAssociation to import
+  * @param importFromId The id of the existing AwsAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssm_association", importId: importFromId, provider });
@@ -126,9 +126,9 @@ export class TfAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAssociationConfig
+  * @param options AwsAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssm_association',
       terraformGeneratorMetadata: {
@@ -449,11 +449,11 @@ export class TfAssociation extends cdktn.TerraformResource {
   }
 
   // output_location - computed: false, optional: true, required: false
-  private _outputLocation = new TfAssociation.OutputLocationPropertyOutputReference(this, "output_location");
+  private _outputLocation = new AwsAssociation.OutputLocationPropertyOutputReference(this, "output_location");
   public get outputLocation() {
     return this._outputLocation;
   }
-  public putOutputLocation(value: TfAssociation.OutputLocationProperty) {
+  public putOutputLocation(value: AwsAssociation.OutputLocationProperty) {
     this._outputLocation.internalValue = value;
   }
   public resetOutputLocation() {
@@ -465,11 +465,11 @@ export class TfAssociation extends cdktn.TerraformResource {
   }
 
   // targets - computed: false, optional: true, required: false
-  private _targets = new TfAssociation.TargetsPropertyList(this, "targets", false);
+  private _targets = new AwsAssociation.TargetsPropertyList(this, "targets", false);
   public get targets() {
     return this._targets;
   }
-  public putTargets(value: TfAssociation.TargetsProperty[] | cdktn.IResolvable) {
+  public putTargets(value: AwsAssociation.TargetsProperty[] | cdktn.IResolvable) {
     this._targets.internalValue = value;
   }
   public resetTargets() {
@@ -503,8 +503,8 @@ export class TfAssociation extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       wait_for_success_timeout_seconds: cdktn.numberToTerraform(this._waitForSuccessTimeoutSeconds),
-      output_location: tfAssociationOutputLocationPropertyToTerraform(this._outputLocation.internalValue),
-      targets: cdktn.listMapper(tfAssociationTargetsPropertyToTerraform, true)(this._targets.internalValue),
+      output_location: awsAssociationOutputLocationPropertyToTerraform(this._outputLocation.internalValue),
+      targets: cdktn.listMapper(awsAssociationTargetsPropertyToTerraform, true)(this._targets.internalValue),
     };
   }
 
@@ -613,16 +613,16 @@ export class TfAssociation extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       output_location: {
-        value: tfAssociationOutputLocationPropertyToHclTerraform(this._outputLocation.internalValue),
+        value: awsAssociationOutputLocationPropertyToHclTerraform(this._outputLocation.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAssociation.OutputLocationPropertyList",
+        storageClassType: "AwsAssociation.OutputLocationPropertyList",
       },
       targets: {
-        value: cdktn.listMapperHcl(tfAssociationTargetsPropertyToHclTerraform, true)(this._targets.internalValue),
+        value: cdktn.listMapperHcl(awsAssociationTargetsPropertyToHclTerraform, true)(this._targets.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAssociation.TargetsPropertyList",
+        storageClassType: "AwsAssociation.TargetsPropertyList",
       },
     };
 
@@ -631,7 +631,7 @@ export class TfAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfAssociationOutputLocationPropertyToTerraform(struct?: TfAssociation.OutputLocationPropertyOutputReference | TfAssociation.OutputLocationProperty): any {
+export function awsAssociationOutputLocationPropertyToTerraform(struct?: AwsAssociation.OutputLocationPropertyOutputReference | AwsAssociation.OutputLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -644,7 +644,7 @@ export function tfAssociationOutputLocationPropertyToTerraform(struct?: TfAssoci
 }
 
 
-export function tfAssociationOutputLocationPropertyToHclTerraform(struct?: TfAssociation.OutputLocationPropertyOutputReference | TfAssociation.OutputLocationProperty): any {
+export function awsAssociationOutputLocationPropertyToHclTerraform(struct?: AwsAssociation.OutputLocationPropertyOutputReference | AwsAssociation.OutputLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -675,7 +675,7 @@ export function tfAssociationOutputLocationPropertyToHclTerraform(struct?: TfAss
 }
 
 
-export function tfAssociationTargetsPropertyToTerraform(struct?: TfAssociation.TargetsProperty | cdktn.IResolvable): any {
+export function awsAssociationTargetsPropertyToTerraform(struct?: AwsAssociation.TargetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -687,7 +687,7 @@ export function tfAssociationTargetsPropertyToTerraform(struct?: TfAssociation.T
 }
 
 
-export function tfAssociationTargetsPropertyToHclTerraform(struct?: TfAssociation.TargetsProperty | cdktn.IResolvable): any {
+export function awsAssociationTargetsPropertyToHclTerraform(struct?: AwsAssociation.TargetsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -712,18 +712,18 @@ export function tfAssociationTargetsPropertyToHclTerraform(struct?: TfAssociatio
 }
 
 
-export namespace TfAssociation {
+export namespace AwsAssociation {
 export interface OutputLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#s3_bucket_name TfAssociation#s3_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#s3_bucket_name AwsAssociation#s3_bucket_name}
   */
   readonly s3BucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#s3_key_prefix TfAssociation#s3_key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#s3_key_prefix AwsAssociation#s3_key_prefix}
   */
   readonly s3KeyPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#s3_region TfAssociation#s3_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#s3_region AwsAssociation#s3_region}
   */
   readonly s3Region?: string;
 }
@@ -818,11 +818,11 @@ export class OutputLocationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TargetsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#key TfAssociation#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#key AwsAssociation#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#values TfAssociation#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_association#values AwsAssociation#values}
   */
   readonly values: string[];
 }

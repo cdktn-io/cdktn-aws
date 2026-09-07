@@ -5,100 +5,100 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTaskSetConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTaskSetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#cluster TfTaskSet#cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#cluster AwsTaskSet#cluster}
   */
   readonly cluster: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#external_id TfTaskSet#external_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#external_id AwsTaskSet#external_id}
   */
   readonly externalId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#force_delete TfTaskSet#force_delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#force_delete AwsTaskSet#force_delete}
   */
   readonly forceDelete?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#id TfTaskSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#id AwsTaskSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#launch_type TfTaskSet#launch_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#launch_type AwsTaskSet#launch_type}
   */
   readonly launchType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#platform_version TfTaskSet#platform_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#platform_version AwsTaskSet#platform_version}
   */
   readonly platformVersion?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#region TfTaskSet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#region AwsTaskSet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#service TfTaskSet#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#service AwsTaskSet#service}
   */
   readonly service: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#tags TfTaskSet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#tags AwsTaskSet#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#tags_all TfTaskSet#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#tags_all AwsTaskSet#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#task_definition TfTaskSet#task_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#task_definition AwsTaskSet#task_definition}
   */
   readonly taskDefinition: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#wait_until_stable TfTaskSet#wait_until_stable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#wait_until_stable AwsTaskSet#wait_until_stable}
   */
   readonly waitUntilStable?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#wait_until_stable_timeout TfTaskSet#wait_until_stable_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#wait_until_stable_timeout AwsTaskSet#wait_until_stable_timeout}
   */
   readonly waitUntilStableTimeout?: string;
   /**
   * capacity_provider_strategy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#capacity_provider_strategy TfTaskSet#capacity_provider_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#capacity_provider_strategy AwsTaskSet#capacity_provider_strategy}
   */
-  readonly capacityProviderStrategy?: TfTaskSet.CapacityProviderStrategyProperty[] | cdktn.IResolvable;
+  readonly capacityProviderStrategy?: AwsTaskSet.CapacityProviderStrategyProperty[] | cdktn.IResolvable;
   /**
   * load_balancer block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#load_balancer TfTaskSet#load_balancer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#load_balancer AwsTaskSet#load_balancer}
   */
-  readonly loadBalancer?: TfTaskSet.LoadBalancerProperty[] | cdktn.IResolvable;
+  readonly loadBalancer?: AwsTaskSet.LoadBalancerProperty[] | cdktn.IResolvable;
   /**
   * network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#network_configuration TfTaskSet#network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#network_configuration AwsTaskSet#network_configuration}
   */
-  readonly networkConfiguration?: TfTaskSet.NetworkConfigurationProperty;
+  readonly networkConfiguration?: AwsTaskSet.NetworkConfigurationProperty;
   /**
   * scale block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#scale TfTaskSet#scale}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#scale AwsTaskSet#scale}
   */
-  readonly scale?: TfTaskSet.ScaleProperty;
+  readonly scale?: AwsTaskSet.ScaleProperty;
   /**
   * service_registries block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#service_registries TfTaskSet#service_registries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#service_registries AwsTaskSet#service_registries}
   */
-  readonly serviceRegistries?: TfTaskSet.ServiceRegistriesProperty;
+  readonly serviceRegistries?: AwsTaskSet.ServiceRegistriesProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set aws_ecs_task_set}
 */
-export class TfTaskSet extends cdktn.TerraformResource {
+export class AwsTaskSet extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -109,11 +109,11 @@ export class TfTaskSet extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTaskSet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTaskSet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTaskSet to import
-  * @param importFromId The id of the existing TfTaskSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTaskSet to import is found
+  * @param importToId The construct id used in the generated config for the AwsTaskSet to import
+  * @param importFromId The id of the existing AwsTaskSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTaskSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecs_task_set", importId: importFromId, provider });
@@ -128,9 +128,9 @@ export class TfTaskSet extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTaskSetConfig
+  * @param options AwsTaskSetConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTaskSetConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTaskSetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecs_task_set',
       terraformGeneratorMetadata: {
@@ -390,11 +390,11 @@ export class TfTaskSet extends cdktn.TerraformResource {
   }
 
   // capacity_provider_strategy - computed: false, optional: true, required: false
-  private _capacityProviderStrategy = new TfTaskSet.CapacityProviderStrategyPropertyList(this, "capacity_provider_strategy", true);
+  private _capacityProviderStrategy = new AwsTaskSet.CapacityProviderStrategyPropertyList(this, "capacity_provider_strategy", true);
   public get capacityProviderStrategy() {
     return this._capacityProviderStrategy;
   }
-  public putCapacityProviderStrategy(value: TfTaskSet.CapacityProviderStrategyProperty[] | cdktn.IResolvable) {
+  public putCapacityProviderStrategy(value: AwsTaskSet.CapacityProviderStrategyProperty[] | cdktn.IResolvable) {
     this._capacityProviderStrategy.internalValue = value;
   }
   public resetCapacityProviderStrategy() {
@@ -406,11 +406,11 @@ export class TfTaskSet extends cdktn.TerraformResource {
   }
 
   // load_balancer - computed: false, optional: true, required: false
-  private _loadBalancer = new TfTaskSet.LoadBalancerPropertyList(this, "load_balancer", true);
+  private _loadBalancer = new AwsTaskSet.LoadBalancerPropertyList(this, "load_balancer", true);
   public get loadBalancer() {
     return this._loadBalancer;
   }
-  public putLoadBalancer(value: TfTaskSet.LoadBalancerProperty[] | cdktn.IResolvable) {
+  public putLoadBalancer(value: AwsTaskSet.LoadBalancerProperty[] | cdktn.IResolvable) {
     this._loadBalancer.internalValue = value;
   }
   public resetLoadBalancer() {
@@ -422,11 +422,11 @@ export class TfTaskSet extends cdktn.TerraformResource {
   }
 
   // network_configuration - computed: false, optional: true, required: false
-  private _networkConfiguration = new TfTaskSet.NetworkConfigurationPropertyOutputReference(this, "network_configuration");
+  private _networkConfiguration = new AwsTaskSet.NetworkConfigurationPropertyOutputReference(this, "network_configuration");
   public get networkConfiguration() {
     return this._networkConfiguration;
   }
-  public putNetworkConfiguration(value: TfTaskSet.NetworkConfigurationProperty) {
+  public putNetworkConfiguration(value: AwsTaskSet.NetworkConfigurationProperty) {
     this._networkConfiguration.internalValue = value;
   }
   public resetNetworkConfiguration() {
@@ -438,11 +438,11 @@ export class TfTaskSet extends cdktn.TerraformResource {
   }
 
   // scale - computed: false, optional: true, required: false
-  private _scale = new TfTaskSet.ScalePropertyOutputReference(this, "scale");
+  private _scale = new AwsTaskSet.ScalePropertyOutputReference(this, "scale");
   public get scale() {
     return this._scale;
   }
-  public putScale(value: TfTaskSet.ScaleProperty) {
+  public putScale(value: AwsTaskSet.ScaleProperty) {
     this._scale.internalValue = value;
   }
   public resetScale() {
@@ -454,11 +454,11 @@ export class TfTaskSet extends cdktn.TerraformResource {
   }
 
   // service_registries - computed: false, optional: true, required: false
-  private _serviceRegistries = new TfTaskSet.ServiceRegistriesPropertyOutputReference(this, "service_registries");
+  private _serviceRegistries = new AwsTaskSet.ServiceRegistriesPropertyOutputReference(this, "service_registries");
   public get serviceRegistries() {
     return this._serviceRegistries;
   }
-  public putServiceRegistries(value: TfTaskSet.ServiceRegistriesProperty) {
+  public putServiceRegistries(value: AwsTaskSet.ServiceRegistriesProperty) {
     this._serviceRegistries.internalValue = value;
   }
   public resetServiceRegistries() {
@@ -488,11 +488,11 @@ export class TfTaskSet extends cdktn.TerraformResource {
       task_definition: cdktn.stringToTerraform(this._taskDefinition),
       wait_until_stable: cdktn.booleanToTerraform(this._waitUntilStable),
       wait_until_stable_timeout: cdktn.stringToTerraform(this._waitUntilStableTimeout),
-      capacity_provider_strategy: cdktn.listMapper(tfTaskSetCapacityProviderStrategyPropertyToTerraform, true)(this._capacityProviderStrategy.internalValue),
-      load_balancer: cdktn.listMapper(tfTaskSetLoadBalancerPropertyToTerraform, true)(this._loadBalancer.internalValue),
-      network_configuration: tfTaskSetNetworkConfigurationPropertyToTerraform(this._networkConfiguration.internalValue),
-      scale: tfTaskSetScalePropertyToTerraform(this._scale.internalValue),
-      service_registries: tfTaskSetServiceRegistriesPropertyToTerraform(this._serviceRegistries.internalValue),
+      capacity_provider_strategy: cdktn.listMapper(awsTaskSetCapacityProviderStrategyPropertyToTerraform, true)(this._capacityProviderStrategy.internalValue),
+      load_balancer: cdktn.listMapper(awsTaskSetLoadBalancerPropertyToTerraform, true)(this._loadBalancer.internalValue),
+      network_configuration: awsTaskSetNetworkConfigurationPropertyToTerraform(this._networkConfiguration.internalValue),
+      scale: awsTaskSetScalePropertyToTerraform(this._scale.internalValue),
+      service_registries: awsTaskSetServiceRegistriesPropertyToTerraform(this._serviceRegistries.internalValue),
     };
   }
 
@@ -577,34 +577,34 @@ export class TfTaskSet extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       capacity_provider_strategy: {
-        value: cdktn.listMapperHcl(tfTaskSetCapacityProviderStrategyPropertyToHclTerraform, true)(this._capacityProviderStrategy.internalValue),
+        value: cdktn.listMapperHcl(awsTaskSetCapacityProviderStrategyPropertyToHclTerraform, true)(this._capacityProviderStrategy.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfTaskSet.CapacityProviderStrategyPropertyList",
+        storageClassType: "AwsTaskSet.CapacityProviderStrategyPropertyList",
       },
       load_balancer: {
-        value: cdktn.listMapperHcl(tfTaskSetLoadBalancerPropertyToHclTerraform, true)(this._loadBalancer.internalValue),
+        value: cdktn.listMapperHcl(awsTaskSetLoadBalancerPropertyToHclTerraform, true)(this._loadBalancer.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfTaskSet.LoadBalancerPropertyList",
+        storageClassType: "AwsTaskSet.LoadBalancerPropertyList",
       },
       network_configuration: {
-        value: tfTaskSetNetworkConfigurationPropertyToHclTerraform(this._networkConfiguration.internalValue),
+        value: awsTaskSetNetworkConfigurationPropertyToHclTerraform(this._networkConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTaskSet.NetworkConfigurationPropertyList",
+        storageClassType: "AwsTaskSet.NetworkConfigurationPropertyList",
       },
       scale: {
-        value: tfTaskSetScalePropertyToHclTerraform(this._scale.internalValue),
+        value: awsTaskSetScalePropertyToHclTerraform(this._scale.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTaskSet.ScalePropertyList",
+        storageClassType: "AwsTaskSet.ScalePropertyList",
       },
       service_registries: {
-        value: tfTaskSetServiceRegistriesPropertyToHclTerraform(this._serviceRegistries.internalValue),
+        value: awsTaskSetServiceRegistriesPropertyToHclTerraform(this._serviceRegistries.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTaskSet.ServiceRegistriesPropertyList",
+        storageClassType: "AwsTaskSet.ServiceRegistriesPropertyList",
       },
     };
 
@@ -613,7 +613,7 @@ export class TfTaskSet extends cdktn.TerraformResource {
   }
 }
 
-export function tfTaskSetCapacityProviderStrategyPropertyToTerraform(struct?: TfTaskSet.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
+export function awsTaskSetCapacityProviderStrategyPropertyToTerraform(struct?: AwsTaskSet.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -626,7 +626,7 @@ export function tfTaskSetCapacityProviderStrategyPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfTaskSetCapacityProviderStrategyPropertyToHclTerraform(struct?: TfTaskSet.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
+export function awsTaskSetCapacityProviderStrategyPropertyToHclTerraform(struct?: AwsTaskSet.CapacityProviderStrategyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -657,7 +657,7 @@ export function tfTaskSetCapacityProviderStrategyPropertyToHclTerraform(struct?:
 }
 
 
-export function tfTaskSetLoadBalancerPropertyToTerraform(struct?: TfTaskSet.LoadBalancerProperty | cdktn.IResolvable): any {
+export function awsTaskSetLoadBalancerPropertyToTerraform(struct?: AwsTaskSet.LoadBalancerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -671,7 +671,7 @@ export function tfTaskSetLoadBalancerPropertyToTerraform(struct?: TfTaskSet.Load
 }
 
 
-export function tfTaskSetLoadBalancerPropertyToHclTerraform(struct?: TfTaskSet.LoadBalancerProperty | cdktn.IResolvable): any {
+export function awsTaskSetLoadBalancerPropertyToHclTerraform(struct?: AwsTaskSet.LoadBalancerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -708,7 +708,7 @@ export function tfTaskSetLoadBalancerPropertyToHclTerraform(struct?: TfTaskSet.L
 }
 
 
-export function tfTaskSetNetworkConfigurationPropertyToTerraform(struct?: TfTaskSet.NetworkConfigurationPropertyOutputReference | TfTaskSet.NetworkConfigurationProperty): any {
+export function awsTaskSetNetworkConfigurationPropertyToTerraform(struct?: AwsTaskSet.NetworkConfigurationPropertyOutputReference | AwsTaskSet.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -721,7 +721,7 @@ export function tfTaskSetNetworkConfigurationPropertyToTerraform(struct?: TfTask
 }
 
 
-export function tfTaskSetNetworkConfigurationPropertyToHclTerraform(struct?: TfTaskSet.NetworkConfigurationPropertyOutputReference | TfTaskSet.NetworkConfigurationProperty): any {
+export function awsTaskSetNetworkConfigurationPropertyToHclTerraform(struct?: AwsTaskSet.NetworkConfigurationPropertyOutputReference | AwsTaskSet.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -752,7 +752,7 @@ export function tfTaskSetNetworkConfigurationPropertyToHclTerraform(struct?: TfT
 }
 
 
-export function tfTaskSetScalePropertyToTerraform(struct?: TfTaskSet.ScalePropertyOutputReference | TfTaskSet.ScaleProperty): any {
+export function awsTaskSetScalePropertyToTerraform(struct?: AwsTaskSet.ScalePropertyOutputReference | AwsTaskSet.ScaleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -764,7 +764,7 @@ export function tfTaskSetScalePropertyToTerraform(struct?: TfTaskSet.ScaleProper
 }
 
 
-export function tfTaskSetScalePropertyToHclTerraform(struct?: TfTaskSet.ScalePropertyOutputReference | TfTaskSet.ScaleProperty): any {
+export function awsTaskSetScalePropertyToHclTerraform(struct?: AwsTaskSet.ScalePropertyOutputReference | AwsTaskSet.ScaleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -789,7 +789,7 @@ export function tfTaskSetScalePropertyToHclTerraform(struct?: TfTaskSet.ScalePro
 }
 
 
-export function tfTaskSetServiceRegistriesPropertyToTerraform(struct?: TfTaskSet.ServiceRegistriesPropertyOutputReference | TfTaskSet.ServiceRegistriesProperty): any {
+export function awsTaskSetServiceRegistriesPropertyToTerraform(struct?: AwsTaskSet.ServiceRegistriesPropertyOutputReference | AwsTaskSet.ServiceRegistriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -803,7 +803,7 @@ export function tfTaskSetServiceRegistriesPropertyToTerraform(struct?: TfTaskSet
 }
 
 
-export function tfTaskSetServiceRegistriesPropertyToHclTerraform(struct?: TfTaskSet.ServiceRegistriesPropertyOutputReference | TfTaskSet.ServiceRegistriesProperty): any {
+export function awsTaskSetServiceRegistriesPropertyToHclTerraform(struct?: AwsTaskSet.ServiceRegistriesPropertyOutputReference | AwsTaskSet.ServiceRegistriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -840,18 +840,18 @@ export function tfTaskSetServiceRegistriesPropertyToHclTerraform(struct?: TfTask
 }
 
 
-export namespace TfTaskSet {
+export namespace AwsTaskSet {
 export interface CapacityProviderStrategyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#base TfTaskSet#base}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#base AwsTaskSet#base}
   */
   readonly base?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#capacity_provider TfTaskSet#capacity_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#capacity_provider AwsTaskSet#capacity_provider}
   */
   readonly capacityProvider: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#weight TfTaskSet#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#weight AwsTaskSet#weight}
   */
   readonly weight: number;
 }
@@ -975,19 +975,19 @@ export class CapacityProviderStrategyPropertyList extends cdktn.ComplexList {
 }
 export interface LoadBalancerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#container_name TfTaskSet#container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#container_name AwsTaskSet#container_name}
   */
   readonly containerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#container_port TfTaskSet#container_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#container_port AwsTaskSet#container_port}
   */
   readonly containerPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#load_balancer_name TfTaskSet#load_balancer_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#load_balancer_name AwsTaskSet#load_balancer_name}
   */
   readonly loadBalancerName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#target_group_arn TfTaskSet#target_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#target_group_arn AwsTaskSet#target_group_arn}
   */
   readonly targetGroupArn?: string;
 }
@@ -1136,15 +1136,15 @@ export class LoadBalancerPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#assign_public_ip TfTaskSet#assign_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#assign_public_ip AwsTaskSet#assign_public_ip}
   */
   readonly assignPublicIp?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#security_groups TfTaskSet#security_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#security_groups AwsTaskSet#security_groups}
   */
   readonly securityGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#subnets TfTaskSet#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#subnets AwsTaskSet#subnets}
   */
   readonly subnets: string[];
 }
@@ -1239,11 +1239,11 @@ export class NetworkConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface ScaleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#unit TfTaskSet#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#unit AwsTaskSet#unit}
   */
   readonly unit?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#value TfTaskSet#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#value AwsTaskSet#value}
   */
   readonly value?: number;
 }
@@ -1319,19 +1319,19 @@ export class ScalePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ServiceRegistriesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#container_name TfTaskSet#container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#container_name AwsTaskSet#container_name}
   */
   readonly containerName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#container_port TfTaskSet#container_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#container_port AwsTaskSet#container_port}
   */
   readonly containerPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#port TfTaskSet#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#port AwsTaskSet#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#registry_arn TfTaskSet#registry_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_set#registry_arn AwsTaskSet#registry_arn}
   */
   readonly registryArn: string;
 }

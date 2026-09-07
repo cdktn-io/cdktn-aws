@@ -5,49 +5,49 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfMonitorConfig extends cdktn.TerraformMetaArguments {
+export interface AwsMonitorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#monitor_name TfMonitor#monitor_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#monitor_name AwsMonitor#monitor_name}
   */
   readonly monitorName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#region TfMonitor#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#region AwsMonitor#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#scope_arn TfMonitor#scope_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#scope_arn AwsMonitor#scope_arn}
   */
   readonly scopeArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#tags TfMonitor#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#tags AwsMonitor#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * local_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#local_resource TfMonitor#local_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#local_resource AwsMonitor#local_resource}
   */
-  readonly localResource?: TfMonitor.LocalResourceProperty[] | cdktn.IResolvable;
+  readonly localResource?: AwsMonitor.LocalResourceProperty[] | cdktn.IResolvable;
   /**
   * remote_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#remote_resource TfMonitor#remote_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#remote_resource AwsMonitor#remote_resource}
   */
-  readonly remoteResource?: TfMonitor.RemoteResourceProperty[] | cdktn.IResolvable;
+  readonly remoteResource?: AwsMonitor.RemoteResourceProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#timeouts TfMonitor#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#timeouts AwsMonitor#timeouts}
   */
-  readonly timeouts?: TfMonitor.TimeoutsProperty;
+  readonly timeouts?: AwsMonitor.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor aws_networkflowmonitor_monitor}
 */
-export class TfMonitor extends cdktn.TerraformResource {
+export class AwsMonitor extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -58,11 +58,11 @@ export class TfMonitor extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfMonitor resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsMonitor resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfMonitor to import
-  * @param importFromId The id of the existing TfMonitor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfMonitor to import is found
+  * @param importToId The construct id used in the generated config for the AwsMonitor to import
+  * @param importFromId The id of the existing AwsMonitor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMonitor to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkflowmonitor_monitor", importId: importFromId, provider });
@@ -77,9 +77,9 @@ export class TfMonitor extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfMonitorConfig
+  * @param options AwsMonitorConfig
   */
-  public constructor(scope: Construct, id: string, config: TfMonitorConfig) {
+  public constructor(scope: Construct, id: string, config: AwsMonitorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkflowmonitor_monitor',
       terraformGeneratorMetadata: {
@@ -178,11 +178,11 @@ export class TfMonitor extends cdktn.TerraformResource {
   }
 
   // local_resource - computed: false, optional: true, required: false
-  private _localResource = new TfMonitor.LocalResourcePropertyList(this, "local_resource", true);
+  private _localResource = new AwsMonitor.LocalResourcePropertyList(this, "local_resource", true);
   public get localResource() {
     return this._localResource;
   }
-  public putLocalResource(value: TfMonitor.LocalResourceProperty[] | cdktn.IResolvable) {
+  public putLocalResource(value: AwsMonitor.LocalResourceProperty[] | cdktn.IResolvable) {
     this._localResource.internalValue = value;
   }
   public resetLocalResource() {
@@ -194,11 +194,11 @@ export class TfMonitor extends cdktn.TerraformResource {
   }
 
   // remote_resource - computed: false, optional: true, required: false
-  private _remoteResource = new TfMonitor.RemoteResourcePropertyList(this, "remote_resource", true);
+  private _remoteResource = new AwsMonitor.RemoteResourcePropertyList(this, "remote_resource", true);
   public get remoteResource() {
     return this._remoteResource;
   }
-  public putRemoteResource(value: TfMonitor.RemoteResourceProperty[] | cdktn.IResolvable) {
+  public putRemoteResource(value: AwsMonitor.RemoteResourceProperty[] | cdktn.IResolvable) {
     this._remoteResource.internalValue = value;
   }
   public resetRemoteResource() {
@@ -210,11 +210,11 @@ export class TfMonitor extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfMonitor.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsMonitor.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfMonitor.TimeoutsProperty) {
+  public putTimeouts(value: AwsMonitor.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -235,9 +235,9 @@ export class TfMonitor extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       scope_arn: cdktn.stringToTerraform(this._scopeArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      local_resource: cdktn.listMapper(tfMonitorLocalResourcePropertyToTerraform, true)(this._localResource.internalValue),
-      remote_resource: cdktn.listMapper(tfMonitorRemoteResourcePropertyToTerraform, true)(this._remoteResource.internalValue),
-      timeouts: tfMonitorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      local_resource: cdktn.listMapper(awsMonitorLocalResourcePropertyToTerraform, true)(this._localResource.internalValue),
+      remote_resource: cdktn.listMapper(awsMonitorRemoteResourcePropertyToTerraform, true)(this._remoteResource.internalValue),
+      timeouts: awsMonitorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -268,22 +268,22 @@ export class TfMonitor extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       local_resource: {
-        value: cdktn.listMapperHcl(tfMonitorLocalResourcePropertyToHclTerraform, true)(this._localResource.internalValue),
+        value: cdktn.listMapperHcl(awsMonitorLocalResourcePropertyToHclTerraform, true)(this._localResource.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfMonitor.LocalResourcePropertyList",
+        storageClassType: "AwsMonitor.LocalResourcePropertyList",
       },
       remote_resource: {
-        value: cdktn.listMapperHcl(tfMonitorRemoteResourcePropertyToHclTerraform, true)(this._remoteResource.internalValue),
+        value: cdktn.listMapperHcl(awsMonitorRemoteResourcePropertyToHclTerraform, true)(this._remoteResource.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfMonitor.RemoteResourcePropertyList",
+        storageClassType: "AwsMonitor.RemoteResourcePropertyList",
       },
       timeouts: {
-        value: tfMonitorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsMonitorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfMonitor.TimeoutsProperty",
+        storageClassType: "AwsMonitor.TimeoutsProperty",
       },
     };
 
@@ -292,7 +292,7 @@ export class TfMonitor extends cdktn.TerraformResource {
   }
 }
 
-export function tfMonitorLocalResourcePropertyToTerraform(struct?: TfMonitor.LocalResourceProperty | cdktn.IResolvable): any {
+export function awsMonitorLocalResourcePropertyToTerraform(struct?: AwsMonitor.LocalResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function tfMonitorLocalResourcePropertyToTerraform(struct?: TfMonitor.Loc
 }
 
 
-export function tfMonitorLocalResourcePropertyToHclTerraform(struct?: TfMonitor.LocalResourceProperty | cdktn.IResolvable): any {
+export function awsMonitorLocalResourcePropertyToHclTerraform(struct?: AwsMonitor.LocalResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function tfMonitorLocalResourcePropertyToHclTerraform(struct?: TfMonitor.
 }
 
 
-export function tfMonitorRemoteResourcePropertyToTerraform(struct?: TfMonitor.RemoteResourceProperty | cdktn.IResolvable): any {
+export function awsMonitorRemoteResourcePropertyToTerraform(struct?: AwsMonitor.RemoteResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,7 +341,7 @@ export function tfMonitorRemoteResourcePropertyToTerraform(struct?: TfMonitor.Re
 }
 
 
-export function tfMonitorRemoteResourcePropertyToHclTerraform(struct?: TfMonitor.RemoteResourceProperty | cdktn.IResolvable): any {
+export function awsMonitorRemoteResourcePropertyToHclTerraform(struct?: AwsMonitor.RemoteResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -366,7 +366,7 @@ export function tfMonitorRemoteResourcePropertyToHclTerraform(struct?: TfMonitor
 }
 
 
-export function tfMonitorTimeoutsPropertyToTerraform(struct?: TfMonitor.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMonitorTimeoutsPropertyToTerraform(struct?: AwsMonitor.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,7 +379,7 @@ export function tfMonitorTimeoutsPropertyToTerraform(struct?: TfMonitor.Timeouts
 }
 
 
-export function tfMonitorTimeoutsPropertyToHclTerraform(struct?: TfMonitor.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMonitorTimeoutsPropertyToHclTerraform(struct?: AwsMonitor.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,14 +410,14 @@ export function tfMonitorTimeoutsPropertyToHclTerraform(struct?: TfMonitor.Timeo
 }
 
 
-export namespace TfMonitor {
+export namespace AwsMonitor {
 export interface LocalResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#identifier TfMonitor#identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#identifier AwsMonitor#identifier}
   */
   readonly identifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#type TfMonitor#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#type AwsMonitor#type}
   */
   readonly type: string;
 }
@@ -519,11 +519,11 @@ export class LocalResourcePropertyList extends cdktn.ComplexList {
 }
 export interface RemoteResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#identifier TfMonitor#identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#identifier AwsMonitor#identifier}
   */
   readonly identifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#type TfMonitor#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#type AwsMonitor#type}
   */
   readonly type: string;
 }
@@ -627,19 +627,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#create TfMonitor#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#create AwsMonitor#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#delete TfMonitor#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#delete AwsMonitor#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#update TfMonitor#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkflowmonitor_monitor#update AwsMonitor#update}
   */
   readonly update?: string;
 }

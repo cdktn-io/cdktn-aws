@@ -5,39 +5,39 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfMultiplexProgramConfig extends cdktn.TerraformMetaArguments {
+export interface AwsMultiplexProgramConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#multiplex_id TfMultiplexProgram#multiplex_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#multiplex_id AwsMultiplexProgram#multiplex_id}
   */
   readonly multiplexId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#program_name TfMultiplexProgram#program_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#program_name AwsMultiplexProgram#program_name}
   */
   readonly programName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#region TfMultiplexProgram#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#region AwsMultiplexProgram#region}
   */
   readonly region?: string;
   /**
   * multiplex_program_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#multiplex_program_settings TfMultiplexProgram#multiplex_program_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#multiplex_program_settings AwsMultiplexProgram#multiplex_program_settings}
   */
-  readonly multiplexProgramSettings?: TfMultiplexProgram.MultiplexProgramSettingsProperty[] | cdktn.IResolvable;
+  readonly multiplexProgramSettings?: AwsMultiplexProgram.MultiplexProgramSettingsProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#timeouts TfMultiplexProgram#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#timeouts AwsMultiplexProgram#timeouts}
   */
-  readonly timeouts?: TfMultiplexProgram.TimeoutsProperty;
+  readonly timeouts?: AwsMultiplexProgram.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program aws_medialive_multiplex_program}
 */
-export class TfMultiplexProgram extends cdktn.TerraformResource {
+export class AwsMultiplexProgram extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class TfMultiplexProgram extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfMultiplexProgram resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsMultiplexProgram resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfMultiplexProgram to import
-  * @param importFromId The id of the existing TfMultiplexProgram that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfMultiplexProgram to import is found
+  * @param importToId The construct id used in the generated config for the AwsMultiplexProgram to import
+  * @param importFromId The id of the existing AwsMultiplexProgram that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMultiplexProgram to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_medialive_multiplex_program", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class TfMultiplexProgram extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfMultiplexProgramConfig
+  * @param options AwsMultiplexProgramConfig
   */
-  public constructor(scope: Construct, id: string, config: TfMultiplexProgramConfig) {
+  public constructor(scope: Construct, id: string, config: AwsMultiplexProgramConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_medialive_multiplex_program',
       terraformGeneratorMetadata: {
@@ -144,11 +144,11 @@ export class TfMultiplexProgram extends cdktn.TerraformResource {
   }
 
   // multiplex_program_settings - computed: false, optional: true, required: false
-  private _multiplexProgramSettings = new TfMultiplexProgram.MultiplexProgramSettingsPropertyList(this, "multiplex_program_settings", false);
+  private _multiplexProgramSettings = new AwsMultiplexProgram.MultiplexProgramSettingsPropertyList(this, "multiplex_program_settings", false);
   public get multiplexProgramSettings() {
     return this._multiplexProgramSettings;
   }
-  public putMultiplexProgramSettings(value: TfMultiplexProgram.MultiplexProgramSettingsProperty[] | cdktn.IResolvable) {
+  public putMultiplexProgramSettings(value: AwsMultiplexProgram.MultiplexProgramSettingsProperty[] | cdktn.IResolvable) {
     this._multiplexProgramSettings.internalValue = value;
   }
   public resetMultiplexProgramSettings() {
@@ -160,11 +160,11 @@ export class TfMultiplexProgram extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfMultiplexProgram.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsMultiplexProgram.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfMultiplexProgram.TimeoutsProperty) {
+  public putTimeouts(value: AwsMultiplexProgram.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -184,8 +184,8 @@ export class TfMultiplexProgram extends cdktn.TerraformResource {
       multiplex_id: cdktn.stringToTerraform(this._multiplexId),
       program_name: cdktn.stringToTerraform(this._programName),
       region: cdktn.stringToTerraform(this._region),
-      multiplex_program_settings: cdktn.listMapper(tfMultiplexProgramMultiplexProgramSettingsPropertyToTerraform, true)(this._multiplexProgramSettings.internalValue),
-      timeouts: tfMultiplexProgramTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      multiplex_program_settings: cdktn.listMapper(awsMultiplexProgramMultiplexProgramSettingsPropertyToTerraform, true)(this._multiplexProgramSettings.internalValue),
+      timeouts: awsMultiplexProgramTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -210,16 +210,16 @@ export class TfMultiplexProgram extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       multiplex_program_settings: {
-        value: cdktn.listMapperHcl(tfMultiplexProgramMultiplexProgramSettingsPropertyToHclTerraform, true)(this._multiplexProgramSettings.internalValue),
+        value: cdktn.listMapperHcl(awsMultiplexProgramMultiplexProgramSettingsPropertyToHclTerraform, true)(this._multiplexProgramSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMultiplexProgram.MultiplexProgramSettingsPropertyList",
+        storageClassType: "AwsMultiplexProgram.MultiplexProgramSettingsPropertyList",
       },
       timeouts: {
-        value: tfMultiplexProgramTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsMultiplexProgramTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfMultiplexProgram.TimeoutsProperty",
+        storageClassType: "AwsMultiplexProgram.TimeoutsProperty",
       },
     };
 
@@ -228,7 +228,7 @@ export class TfMultiplexProgram extends cdktn.TerraformResource {
   }
 }
 
-export function tfMultiplexProgramServiceDescriptorPropertyToTerraform(struct?: TfMultiplexProgram.ServiceDescriptorProperty | cdktn.IResolvable): any {
+export function awsMultiplexProgramServiceDescriptorPropertyToTerraform(struct?: AwsMultiplexProgram.ServiceDescriptorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -240,7 +240,7 @@ export function tfMultiplexProgramServiceDescriptorPropertyToTerraform(struct?: 
 }
 
 
-export function tfMultiplexProgramServiceDescriptorPropertyToHclTerraform(struct?: TfMultiplexProgram.ServiceDescriptorProperty | cdktn.IResolvable): any {
+export function awsMultiplexProgramServiceDescriptorPropertyToHclTerraform(struct?: AwsMultiplexProgram.ServiceDescriptorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,7 +265,7 @@ export function tfMultiplexProgramServiceDescriptorPropertyToHclTerraform(struct
 }
 
 
-export function tfMultiplexProgramStatmuxSettingsPropertyToTerraform(struct?: TfMultiplexProgram.StatmuxSettingsProperty | cdktn.IResolvable): any {
+export function awsMultiplexProgramStatmuxSettingsPropertyToTerraform(struct?: AwsMultiplexProgram.StatmuxSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -278,7 +278,7 @@ export function tfMultiplexProgramStatmuxSettingsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfMultiplexProgramStatmuxSettingsPropertyToHclTerraform(struct?: TfMultiplexProgram.StatmuxSettingsProperty | cdktn.IResolvable): any {
+export function awsMultiplexProgramStatmuxSettingsPropertyToHclTerraform(struct?: AwsMultiplexProgram.StatmuxSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,19 +309,19 @@ export function tfMultiplexProgramStatmuxSettingsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfMultiplexProgramVideoSettingsPropertyToTerraform(struct?: TfMultiplexProgram.VideoSettingsProperty | cdktn.IResolvable): any {
+export function awsMultiplexProgramVideoSettingsPropertyToTerraform(struct?: AwsMultiplexProgram.VideoSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     constant_bitrate: cdktn.numberToTerraform(struct!.constantBitrate),
-    statmux_settings: cdktn.listMapper(tfMultiplexProgramStatmuxSettingsPropertyToTerraform, true)(struct!.statmuxSettings),
+    statmux_settings: cdktn.listMapper(awsMultiplexProgramStatmuxSettingsPropertyToTerraform, true)(struct!.statmuxSettings),
   }
 }
 
 
-export function tfMultiplexProgramVideoSettingsPropertyToHclTerraform(struct?: TfMultiplexProgram.VideoSettingsProperty | cdktn.IResolvable): any {
+export function awsMultiplexProgramVideoSettingsPropertyToHclTerraform(struct?: AwsMultiplexProgram.VideoSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,7 +334,7 @@ export function tfMultiplexProgramVideoSettingsPropertyToHclTerraform(struct?: T
       storageClassType: "number",
     },
     statmux_settings: {
-      value: cdktn.listMapperHcl(tfMultiplexProgramStatmuxSettingsPropertyToHclTerraform, true)(struct!.statmuxSettings),
+      value: cdktn.listMapperHcl(awsMultiplexProgramStatmuxSettingsPropertyToHclTerraform, true)(struct!.statmuxSettings),
       isBlock: true,
       type: "list",
       storageClassType: "StatmuxSettingsPropertyList",
@@ -346,7 +346,7 @@ export function tfMultiplexProgramVideoSettingsPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfMultiplexProgramMultiplexProgramSettingsPropertyToTerraform(struct?: TfMultiplexProgram.MultiplexProgramSettingsProperty | cdktn.IResolvable): any {
+export function awsMultiplexProgramMultiplexProgramSettingsPropertyToTerraform(struct?: AwsMultiplexProgram.MultiplexProgramSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,13 +354,13 @@ export function tfMultiplexProgramMultiplexProgramSettingsPropertyToTerraform(st
   return {
     preferred_channel_pipeline: cdktn.stringToTerraform(struct!.preferredChannelPipeline),
     program_number: cdktn.numberToTerraform(struct!.programNumber),
-    service_descriptor: cdktn.listMapper(tfMultiplexProgramServiceDescriptorPropertyToTerraform, true)(struct!.serviceDescriptor),
-    video_settings: cdktn.listMapper(tfMultiplexProgramVideoSettingsPropertyToTerraform, true)(struct!.videoSettings),
+    service_descriptor: cdktn.listMapper(awsMultiplexProgramServiceDescriptorPropertyToTerraform, true)(struct!.serviceDescriptor),
+    video_settings: cdktn.listMapper(awsMultiplexProgramVideoSettingsPropertyToTerraform, true)(struct!.videoSettings),
   }
 }
 
 
-export function tfMultiplexProgramMultiplexProgramSettingsPropertyToHclTerraform(struct?: TfMultiplexProgram.MultiplexProgramSettingsProperty | cdktn.IResolvable): any {
+export function awsMultiplexProgramMultiplexProgramSettingsPropertyToHclTerraform(struct?: AwsMultiplexProgram.MultiplexProgramSettingsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,13 +379,13 @@ export function tfMultiplexProgramMultiplexProgramSettingsPropertyToHclTerraform
       storageClassType: "number",
     },
     service_descriptor: {
-      value: cdktn.listMapperHcl(tfMultiplexProgramServiceDescriptorPropertyToHclTerraform, true)(struct!.serviceDescriptor),
+      value: cdktn.listMapperHcl(awsMultiplexProgramServiceDescriptorPropertyToHclTerraform, true)(struct!.serviceDescriptor),
       isBlock: true,
       type: "list",
       storageClassType: "ServiceDescriptorPropertyList",
     },
     video_settings: {
-      value: cdktn.listMapperHcl(tfMultiplexProgramVideoSettingsPropertyToHclTerraform, true)(struct!.videoSettings),
+      value: cdktn.listMapperHcl(awsMultiplexProgramVideoSettingsPropertyToHclTerraform, true)(struct!.videoSettings),
       isBlock: true,
       type: "list",
       storageClassType: "VideoSettingsPropertyList",
@@ -397,7 +397,7 @@ export function tfMultiplexProgramMultiplexProgramSettingsPropertyToHclTerraform
 }
 
 
-export function tfMultiplexProgramTimeoutsPropertyToTerraform(struct?: TfMultiplexProgram.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMultiplexProgramTimeoutsPropertyToTerraform(struct?: AwsMultiplexProgram.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,7 +408,7 @@ export function tfMultiplexProgramTimeoutsPropertyToTerraform(struct?: TfMultipl
 }
 
 
-export function tfMultiplexProgramTimeoutsPropertyToHclTerraform(struct?: TfMultiplexProgram.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMultiplexProgramTimeoutsPropertyToHclTerraform(struct?: AwsMultiplexProgram.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -427,14 +427,14 @@ export function tfMultiplexProgramTimeoutsPropertyToHclTerraform(struct?: TfMult
 }
 
 
-export namespace TfMultiplexProgram {
+export namespace AwsMultiplexProgram {
 export interface ServiceDescriptorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#provider_name TfMultiplexProgram#provider_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#provider_name AwsMultiplexProgram#provider_name}
   */
   readonly providerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#service_name TfMultiplexProgram#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#service_name AwsMultiplexProgram#service_name}
   */
   readonly serviceName: string;
 }
@@ -536,15 +536,15 @@ export class ServiceDescriptorPropertyList extends cdktn.ComplexList {
 }
 export interface StatmuxSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#maximum_bitrate TfMultiplexProgram#maximum_bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#maximum_bitrate AwsMultiplexProgram#maximum_bitrate}
   */
   readonly maximumBitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#minimum_bitrate TfMultiplexProgram#minimum_bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#minimum_bitrate AwsMultiplexProgram#minimum_bitrate}
   */
   readonly minimumBitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#priority TfMultiplexProgram#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#priority AwsMultiplexProgram#priority}
   */
   readonly priority?: number;
 }
@@ -674,13 +674,13 @@ export class StatmuxSettingsPropertyList extends cdktn.ComplexList {
 }
 export interface VideoSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#constant_bitrate TfMultiplexProgram#constant_bitrate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#constant_bitrate AwsMultiplexProgram#constant_bitrate}
   */
   readonly constantBitrate?: number;
   /**
   * statmux_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#statmux_settings TfMultiplexProgram#statmux_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#statmux_settings AwsMultiplexProgram#statmux_settings}
   */
   readonly statmuxSettings?: StatmuxSettingsProperty[] | cdktn.IResolvable;
 }
@@ -788,23 +788,23 @@ export class VideoSettingsPropertyList extends cdktn.ComplexList {
 }
 export interface MultiplexProgramSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#preferred_channel_pipeline TfMultiplexProgram#preferred_channel_pipeline}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#preferred_channel_pipeline AwsMultiplexProgram#preferred_channel_pipeline}
   */
   readonly preferredChannelPipeline: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#program_number TfMultiplexProgram#program_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#program_number AwsMultiplexProgram#program_number}
   */
   readonly programNumber: number;
   /**
   * service_descriptor block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#service_descriptor TfMultiplexProgram#service_descriptor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#service_descriptor AwsMultiplexProgram#service_descriptor}
   */
   readonly serviceDescriptor?: ServiceDescriptorProperty[] | cdktn.IResolvable;
   /**
   * video_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#video_settings TfMultiplexProgram#video_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#video_settings AwsMultiplexProgram#video_settings}
   */
   readonly videoSettings?: VideoSettingsProperty[] | cdktn.IResolvable;
 }
@@ -952,7 +952,7 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#create TfMultiplexProgram#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_multiplex_program#create AwsMultiplexProgram#create}
   */
   readonly create?: string;
 }

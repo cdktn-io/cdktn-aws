@@ -23,7 +23,7 @@ import * as path from "node:path";
 const repoRoot = path.resolve(__dirname, "..", "..", "..");
 /** The smallest group in the fleet — one resource, so this is a build and not a wait. */
 const GROUP = "swf";
-const MODULE = "awsswf";
+const MODULE = "swf";
 const moduleDir = path.join(repoRoot, "generated", GROUP, "dist", "go", MODULE);
 const manifestFile = path.join(repoRoot, "generated", GROUP, "package.json");
 

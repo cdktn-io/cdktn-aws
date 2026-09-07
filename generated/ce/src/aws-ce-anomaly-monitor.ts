@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAnomalyMonitorConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAnomalyMonitorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor#id TfAnomalyMonitor#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor#id AwsAnomalyMonitor#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor#monitor_dimension TfAnomalyMonitor#monitor_dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor#monitor_dimension AwsAnomalyMonitor#monitor_dimension}
   */
   readonly monitorDimension?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor#monitor_specification TfAnomalyMonitor#monitor_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor#monitor_specification AwsAnomalyMonitor#monitor_specification}
   */
   readonly monitorSpecification?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor#monitor_type TfAnomalyMonitor#monitor_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor#monitor_type AwsAnomalyMonitor#monitor_type}
   */
   readonly monitorType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor#name TfAnomalyMonitor#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor#name AwsAnomalyMonitor#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor#tags TfAnomalyMonitor#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor#tags AwsAnomalyMonitor#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor#tags_all TfAnomalyMonitor#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor#tags_all AwsAnomalyMonitor#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -42,7 +42,7 @@ export interface TfAnomalyMonitorConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor aws_ce_anomaly_monitor}
 */
-export class TfAnomalyMonitor extends cdktn.TerraformResource {
+export class AwsAnomalyMonitor extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class TfAnomalyMonitor extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAnomalyMonitor resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAnomalyMonitor resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAnomalyMonitor to import
-  * @param importFromId The id of the existing TfAnomalyMonitor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAnomalyMonitor to import is found
+  * @param importToId The construct id used in the generated config for the AwsAnomalyMonitor to import
+  * @param importFromId The id of the existing AwsAnomalyMonitor that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_anomaly_monitor#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAnomalyMonitor to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ce_anomaly_monitor", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class TfAnomalyMonitor extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAnomalyMonitorConfig
+  * @param options AwsAnomalyMonitorConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAnomalyMonitorConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAnomalyMonitorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ce_anomaly_monitor',
       terraformGeneratorMetadata: {

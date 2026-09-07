@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCoreNetworkPolicyAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCoreNetworkPolicyAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network_policy_attachment#core_network_id TfCoreNetworkPolicyAttachment#core_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network_policy_attachment#core_network_id AwsCoreNetworkPolicyAttachment#core_network_id}
   */
   readonly coreNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network_policy_attachment#id TfCoreNetworkPolicyAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network_policy_attachment#id AwsCoreNetworkPolicyAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network_policy_attachment#policy_document TfCoreNetworkPolicyAttachment#policy_document}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network_policy_attachment#policy_document AwsCoreNetworkPolicyAttachment#policy_document}
   */
   readonly policyDocument: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network_policy_attachment#timeouts TfCoreNetworkPolicyAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network_policy_attachment#timeouts AwsCoreNetworkPolicyAttachment#timeouts}
   */
-  readonly timeouts?: TfCoreNetworkPolicyAttachment.TimeoutsProperty;
+  readonly timeouts?: AwsCoreNetworkPolicyAttachment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network_policy_attachment aws_networkmanager_core_network_policy_attachment}
 */
-export class TfCoreNetworkPolicyAttachment extends cdktn.TerraformResource {
+export class AwsCoreNetworkPolicyAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfCoreNetworkPolicyAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCoreNetworkPolicyAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCoreNetworkPolicyAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCoreNetworkPolicyAttachment to import
-  * @param importFromId The id of the existing TfCoreNetworkPolicyAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network_policy_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCoreNetworkPolicyAttachment to import is found
+  * @param importToId The construct id used in the generated config for the AwsCoreNetworkPolicyAttachment to import
+  * @param importFromId The id of the existing AwsCoreNetworkPolicyAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network_policy_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCoreNetworkPolicyAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_core_network_policy_attachment", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfCoreNetworkPolicyAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCoreNetworkPolicyAttachmentConfig
+  * @param options AwsCoreNetworkPolicyAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCoreNetworkPolicyAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCoreNetworkPolicyAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_core_network_policy_attachment',
       terraformGeneratorMetadata: {
@@ -138,11 +138,11 @@ export class TfCoreNetworkPolicyAttachment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCoreNetworkPolicyAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCoreNetworkPolicyAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCoreNetworkPolicyAttachment.TimeoutsProperty) {
+  public putTimeouts(value: AwsCoreNetworkPolicyAttachment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -162,7 +162,7 @@ export class TfCoreNetworkPolicyAttachment extends cdktn.TerraformResource {
       core_network_id: cdktn.stringToTerraform(this._coreNetworkId),
       id: cdktn.stringToTerraform(this._id),
       policy_document: cdktn.stringToTerraform(this._policyDocument),
-      timeouts: tfCoreNetworkPolicyAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsCoreNetworkPolicyAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -187,10 +187,10 @@ export class TfCoreNetworkPolicyAttachment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfCoreNetworkPolicyAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCoreNetworkPolicyAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCoreNetworkPolicyAttachment.TimeoutsProperty",
+        storageClassType: "AwsCoreNetworkPolicyAttachment.TimeoutsProperty",
       },
     };
 
@@ -199,7 +199,7 @@ export class TfCoreNetworkPolicyAttachment extends cdktn.TerraformResource {
   }
 }
 
-export function tfCoreNetworkPolicyAttachmentTimeoutsPropertyToTerraform(struct?: TfCoreNetworkPolicyAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCoreNetworkPolicyAttachmentTimeoutsPropertyToTerraform(struct?: AwsCoreNetworkPolicyAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -210,7 +210,7 @@ export function tfCoreNetworkPolicyAttachmentTimeoutsPropertyToTerraform(struct?
 }
 
 
-export function tfCoreNetworkPolicyAttachmentTimeoutsPropertyToHclTerraform(struct?: TfCoreNetworkPolicyAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCoreNetworkPolicyAttachmentTimeoutsPropertyToHclTerraform(struct?: AwsCoreNetworkPolicyAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -229,10 +229,10 @@ export function tfCoreNetworkPolicyAttachmentTimeoutsPropertyToHclTerraform(stru
 }
 
 
-export namespace TfCoreNetworkPolicyAttachment {
+export namespace AwsCoreNetworkPolicyAttachment {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network_policy_attachment#update TfCoreNetworkPolicyAttachment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkmanager_core_network_policy_attachment#update AwsCoreNetworkPolicyAttachment#update}
   */
   readonly update?: string;
 }

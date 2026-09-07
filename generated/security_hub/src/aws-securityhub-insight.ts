@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfInsightConfig extends cdktn.TerraformMetaArguments {
+export interface AwsInsightConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#group_by_attribute TfInsight#group_by_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#group_by_attribute AwsInsight#group_by_attribute}
   */
   readonly groupByAttribute: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#id TfInsight#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#id AwsInsight#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#name TfInsight#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#name AwsInsight#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#region TfInsight#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#region AwsInsight#region}
   */
   readonly region?: string;
   /**
   * filters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#filters TfInsight#filters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#filters AwsInsight#filters}
   */
-  readonly filters: TfInsight.FiltersProperty;
+  readonly filters: AwsInsight.FiltersProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight aws_securityhub_insight}
 */
-export class TfInsight extends cdktn.TerraformResource {
+export class AwsInsight extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfInsight extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfInsight resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsInsight resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfInsight to import
-  * @param importFromId The id of the existing TfInsight that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfInsight to import is found
+  * @param importToId The construct id used in the generated config for the AwsInsight to import
+  * @param importFromId The id of the existing AwsInsight that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsInsight to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securityhub_insight", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfInsight extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfInsightConfig
+  * @param options AwsInsightConfig
   */
-  public constructor(scope: Construct, id: string, config: TfInsightConfig) {
+  public constructor(scope: Construct, id: string, config: AwsInsightConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_securityhub_insight',
       terraformGeneratorMetadata: {
@@ -161,11 +161,11 @@ export class TfInsight extends cdktn.TerraformResource {
   }
 
   // filters - computed: false, optional: false, required: true
-  private _filters = new TfInsight.FiltersPropertyOutputReference(this, "filters");
+  private _filters = new AwsInsight.FiltersPropertyOutputReference(this, "filters");
   public get filters() {
     return this._filters;
   }
-  public putFilters(value: TfInsight.FiltersProperty) {
+  public putFilters(value: AwsInsight.FiltersProperty) {
     this._filters.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -183,7 +183,7 @@ export class TfInsight extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      filters: tfInsightFiltersPropertyToTerraform(this._filters.internalValue),
+      filters: awsInsightFiltersPropertyToTerraform(this._filters.internalValue),
     };
   }
 
@@ -214,10 +214,10 @@ export class TfInsight extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       filters: {
-        value: tfInsightFiltersPropertyToHclTerraform(this._filters.internalValue),
+        value: awsInsightFiltersPropertyToHclTerraform(this._filters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfInsight.FiltersPropertyList",
+        storageClassType: "AwsInsight.FiltersPropertyList",
       },
     };
 
@@ -226,7 +226,7 @@ export class TfInsight extends cdktn.TerraformResource {
   }
 }
 
-export function tfInsightAwsAccountIdPropertyToTerraform(struct?: TfInsight.AwsAccountIdProperty | cdktn.IResolvable): any {
+export function awsInsightAwsAccountIdPropertyToTerraform(struct?: AwsInsight.AwsAccountIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -238,7 +238,7 @@ export function tfInsightAwsAccountIdPropertyToTerraform(struct?: TfInsight.AwsA
 }
 
 
-export function tfInsightAwsAccountIdPropertyToHclTerraform(struct?: TfInsight.AwsAccountIdProperty | cdktn.IResolvable): any {
+export function awsInsightAwsAccountIdPropertyToHclTerraform(struct?: AwsInsight.AwsAccountIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -263,7 +263,7 @@ export function tfInsightAwsAccountIdPropertyToHclTerraform(struct?: TfInsight.A
 }
 
 
-export function tfInsightAwsAccountNamePropertyToTerraform(struct?: TfInsight.AwsAccountNameProperty | cdktn.IResolvable): any {
+export function awsInsightAwsAccountNamePropertyToTerraform(struct?: AwsInsight.AwsAccountNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function tfInsightAwsAccountNamePropertyToTerraform(struct?: TfInsight.Aw
 }
 
 
-export function tfInsightAwsAccountNamePropertyToHclTerraform(struct?: TfInsight.AwsAccountNameProperty | cdktn.IResolvable): any {
+export function awsInsightAwsAccountNamePropertyToHclTerraform(struct?: AwsInsight.AwsAccountNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -300,7 +300,7 @@ export function tfInsightAwsAccountNamePropertyToHclTerraform(struct?: TfInsight
 }
 
 
-export function tfInsightCompanyNamePropertyToTerraform(struct?: TfInsight.CompanyNameProperty | cdktn.IResolvable): any {
+export function awsInsightCompanyNamePropertyToTerraform(struct?: AwsInsight.CompanyNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -312,7 +312,7 @@ export function tfInsightCompanyNamePropertyToTerraform(struct?: TfInsight.Compa
 }
 
 
-export function tfInsightCompanyNamePropertyToHclTerraform(struct?: TfInsight.CompanyNameProperty | cdktn.IResolvable): any {
+export function awsInsightCompanyNamePropertyToHclTerraform(struct?: AwsInsight.CompanyNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function tfInsightCompanyNamePropertyToHclTerraform(struct?: TfInsight.Co
 }
 
 
-export function tfInsightComplianceAssociatedStandardsIdPropertyToTerraform(struct?: TfInsight.ComplianceAssociatedStandardsIdProperty | cdktn.IResolvable): any {
+export function awsInsightComplianceAssociatedStandardsIdPropertyToTerraform(struct?: AwsInsight.ComplianceAssociatedStandardsIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function tfInsightComplianceAssociatedStandardsIdPropertyToTerraform(stru
 }
 
 
-export function tfInsightComplianceAssociatedStandardsIdPropertyToHclTerraform(struct?: TfInsight.ComplianceAssociatedStandardsIdProperty | cdktn.IResolvable): any {
+export function awsInsightComplianceAssociatedStandardsIdPropertyToHclTerraform(struct?: AwsInsight.ComplianceAssociatedStandardsIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,7 +374,7 @@ export function tfInsightComplianceAssociatedStandardsIdPropertyToHclTerraform(s
 }
 
 
-export function tfInsightComplianceSecurityControlIdPropertyToTerraform(struct?: TfInsight.ComplianceSecurityControlIdProperty | cdktn.IResolvable): any {
+export function awsInsightComplianceSecurityControlIdPropertyToTerraform(struct?: AwsInsight.ComplianceSecurityControlIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,7 +386,7 @@ export function tfInsightComplianceSecurityControlIdPropertyToTerraform(struct?:
 }
 
 
-export function tfInsightComplianceSecurityControlIdPropertyToHclTerraform(struct?: TfInsight.ComplianceSecurityControlIdProperty | cdktn.IResolvable): any {
+export function awsInsightComplianceSecurityControlIdPropertyToHclTerraform(struct?: AwsInsight.ComplianceSecurityControlIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -411,7 +411,7 @@ export function tfInsightComplianceSecurityControlIdPropertyToHclTerraform(struc
 }
 
 
-export function tfInsightComplianceSecurityControlParametersNamePropertyToTerraform(struct?: TfInsight.ComplianceSecurityControlParametersNameProperty | cdktn.IResolvable): any {
+export function awsInsightComplianceSecurityControlParametersNamePropertyToTerraform(struct?: AwsInsight.ComplianceSecurityControlParametersNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,7 +423,7 @@ export function tfInsightComplianceSecurityControlParametersNamePropertyToTerraf
 }
 
 
-export function tfInsightComplianceSecurityControlParametersNamePropertyToHclTerraform(struct?: TfInsight.ComplianceSecurityControlParametersNameProperty | cdktn.IResolvable): any {
+export function awsInsightComplianceSecurityControlParametersNamePropertyToHclTerraform(struct?: AwsInsight.ComplianceSecurityControlParametersNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,7 +448,7 @@ export function tfInsightComplianceSecurityControlParametersNamePropertyToHclTer
 }
 
 
-export function tfInsightComplianceSecurityControlParametersValuePropertyToTerraform(struct?: TfInsight.ComplianceSecurityControlParametersValueProperty | cdktn.IResolvable): any {
+export function awsInsightComplianceSecurityControlParametersValuePropertyToTerraform(struct?: AwsInsight.ComplianceSecurityControlParametersValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -460,7 +460,7 @@ export function tfInsightComplianceSecurityControlParametersValuePropertyToTerra
 }
 
 
-export function tfInsightComplianceSecurityControlParametersValuePropertyToHclTerraform(struct?: TfInsight.ComplianceSecurityControlParametersValueProperty | cdktn.IResolvable): any {
+export function awsInsightComplianceSecurityControlParametersValuePropertyToHclTerraform(struct?: AwsInsight.ComplianceSecurityControlParametersValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -485,7 +485,7 @@ export function tfInsightComplianceSecurityControlParametersValuePropertyToHclTe
 }
 
 
-export function tfInsightComplianceStatusPropertyToTerraform(struct?: TfInsight.ComplianceStatusProperty | cdktn.IResolvable): any {
+export function awsInsightComplianceStatusPropertyToTerraform(struct?: AwsInsight.ComplianceStatusProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -497,7 +497,7 @@ export function tfInsightComplianceStatusPropertyToTerraform(struct?: TfInsight.
 }
 
 
-export function tfInsightComplianceStatusPropertyToHclTerraform(struct?: TfInsight.ComplianceStatusProperty | cdktn.IResolvable): any {
+export function awsInsightComplianceStatusPropertyToHclTerraform(struct?: AwsInsight.ComplianceStatusProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -522,7 +522,7 @@ export function tfInsightComplianceStatusPropertyToHclTerraform(struct?: TfInsig
 }
 
 
-export function tfInsightConfidencePropertyToTerraform(struct?: TfInsight.ConfidenceProperty | cdktn.IResolvable): any {
+export function awsInsightConfidencePropertyToTerraform(struct?: AwsInsight.ConfidenceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -535,7 +535,7 @@ export function tfInsightConfidencePropertyToTerraform(struct?: TfInsight.Confid
 }
 
 
-export function tfInsightConfidencePropertyToHclTerraform(struct?: TfInsight.ConfidenceProperty | cdktn.IResolvable): any {
+export function awsInsightConfidencePropertyToHclTerraform(struct?: AwsInsight.ConfidenceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -566,7 +566,7 @@ export function tfInsightConfidencePropertyToHclTerraform(struct?: TfInsight.Con
 }
 
 
-export function tfInsightFiltersCreatedAtDateRangePropertyToTerraform(struct?: TfInsight.FiltersCreatedAtDateRangePropertyOutputReference | TfInsight.FiltersCreatedAtDateRangeProperty): any {
+export function awsInsightFiltersCreatedAtDateRangePropertyToTerraform(struct?: AwsInsight.FiltersCreatedAtDateRangePropertyOutputReference | AwsInsight.FiltersCreatedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -578,7 +578,7 @@ export function tfInsightFiltersCreatedAtDateRangePropertyToTerraform(struct?: T
 }
 
 
-export function tfInsightFiltersCreatedAtDateRangePropertyToHclTerraform(struct?: TfInsight.FiltersCreatedAtDateRangePropertyOutputReference | TfInsight.FiltersCreatedAtDateRangeProperty): any {
+export function awsInsightFiltersCreatedAtDateRangePropertyToHclTerraform(struct?: AwsInsight.FiltersCreatedAtDateRangePropertyOutputReference | AwsInsight.FiltersCreatedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -603,7 +603,7 @@ export function tfInsightFiltersCreatedAtDateRangePropertyToHclTerraform(struct?
 }
 
 
-export function tfInsightCreatedAtPropertyToTerraform(struct?: TfInsight.CreatedAtProperty | cdktn.IResolvable): any {
+export function awsInsightCreatedAtPropertyToTerraform(struct?: AwsInsight.CreatedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -611,12 +611,12 @@ export function tfInsightCreatedAtPropertyToTerraform(struct?: TfInsight.Created
   return {
     end: cdktn.stringToTerraform(struct!.end),
     start: cdktn.stringToTerraform(struct!.start),
-    date_range: tfInsightFiltersCreatedAtDateRangePropertyToTerraform(struct!.dateRange),
+    date_range: awsInsightFiltersCreatedAtDateRangePropertyToTerraform(struct!.dateRange),
   }
 }
 
 
-export function tfInsightCreatedAtPropertyToHclTerraform(struct?: TfInsight.CreatedAtProperty | cdktn.IResolvable): any {
+export function awsInsightCreatedAtPropertyToHclTerraform(struct?: AwsInsight.CreatedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -635,7 +635,7 @@ export function tfInsightCreatedAtPropertyToHclTerraform(struct?: TfInsight.Crea
       storageClassType: "string",
     },
     date_range: {
-      value: tfInsightFiltersCreatedAtDateRangePropertyToHclTerraform(struct!.dateRange),
+      value: awsInsightFiltersCreatedAtDateRangePropertyToHclTerraform(struct!.dateRange),
       isBlock: true,
       type: "list",
       storageClassType: "FiltersCreatedAtDateRangePropertyList",
@@ -647,7 +647,7 @@ export function tfInsightCreatedAtPropertyToHclTerraform(struct?: TfInsight.Crea
 }
 
 
-export function tfInsightCriticalityPropertyToTerraform(struct?: TfInsight.CriticalityProperty | cdktn.IResolvable): any {
+export function awsInsightCriticalityPropertyToTerraform(struct?: AwsInsight.CriticalityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -660,7 +660,7 @@ export function tfInsightCriticalityPropertyToTerraform(struct?: TfInsight.Criti
 }
 
 
-export function tfInsightCriticalityPropertyToHclTerraform(struct?: TfInsight.CriticalityProperty | cdktn.IResolvable): any {
+export function awsInsightCriticalityPropertyToHclTerraform(struct?: AwsInsight.CriticalityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -691,7 +691,7 @@ export function tfInsightCriticalityPropertyToHclTerraform(struct?: TfInsight.Cr
 }
 
 
-export function tfInsightDescriptionPropertyToTerraform(struct?: TfInsight.DescriptionProperty | cdktn.IResolvable): any {
+export function awsInsightDescriptionPropertyToTerraform(struct?: AwsInsight.DescriptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -703,7 +703,7 @@ export function tfInsightDescriptionPropertyToTerraform(struct?: TfInsight.Descr
 }
 
 
-export function tfInsightDescriptionPropertyToHclTerraform(struct?: TfInsight.DescriptionProperty | cdktn.IResolvable): any {
+export function awsInsightDescriptionPropertyToHclTerraform(struct?: AwsInsight.DescriptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -728,7 +728,7 @@ export function tfInsightDescriptionPropertyToHclTerraform(struct?: TfInsight.De
 }
 
 
-export function tfInsightFindingProviderFieldsConfidencePropertyToTerraform(struct?: TfInsight.FindingProviderFieldsConfidenceProperty | cdktn.IResolvable): any {
+export function awsInsightFindingProviderFieldsConfidencePropertyToTerraform(struct?: AwsInsight.FindingProviderFieldsConfidenceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -741,7 +741,7 @@ export function tfInsightFindingProviderFieldsConfidencePropertyToTerraform(stru
 }
 
 
-export function tfInsightFindingProviderFieldsConfidencePropertyToHclTerraform(struct?: TfInsight.FindingProviderFieldsConfidenceProperty | cdktn.IResolvable): any {
+export function awsInsightFindingProviderFieldsConfidencePropertyToHclTerraform(struct?: AwsInsight.FindingProviderFieldsConfidenceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -772,7 +772,7 @@ export function tfInsightFindingProviderFieldsConfidencePropertyToHclTerraform(s
 }
 
 
-export function tfInsightFindingProviderFieldsCriticalityPropertyToTerraform(struct?: TfInsight.FindingProviderFieldsCriticalityProperty | cdktn.IResolvable): any {
+export function awsInsightFindingProviderFieldsCriticalityPropertyToTerraform(struct?: AwsInsight.FindingProviderFieldsCriticalityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -785,7 +785,7 @@ export function tfInsightFindingProviderFieldsCriticalityPropertyToTerraform(str
 }
 
 
-export function tfInsightFindingProviderFieldsCriticalityPropertyToHclTerraform(struct?: TfInsight.FindingProviderFieldsCriticalityProperty | cdktn.IResolvable): any {
+export function awsInsightFindingProviderFieldsCriticalityPropertyToHclTerraform(struct?: AwsInsight.FindingProviderFieldsCriticalityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -816,7 +816,7 @@ export function tfInsightFindingProviderFieldsCriticalityPropertyToHclTerraform(
 }
 
 
-export function tfInsightFindingProviderFieldsRelatedFindingsIdPropertyToTerraform(struct?: TfInsight.FindingProviderFieldsRelatedFindingsIdProperty | cdktn.IResolvable): any {
+export function awsInsightFindingProviderFieldsRelatedFindingsIdPropertyToTerraform(struct?: AwsInsight.FindingProviderFieldsRelatedFindingsIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -828,7 +828,7 @@ export function tfInsightFindingProviderFieldsRelatedFindingsIdPropertyToTerrafo
 }
 
 
-export function tfInsightFindingProviderFieldsRelatedFindingsIdPropertyToHclTerraform(struct?: TfInsight.FindingProviderFieldsRelatedFindingsIdProperty | cdktn.IResolvable): any {
+export function awsInsightFindingProviderFieldsRelatedFindingsIdPropertyToHclTerraform(struct?: AwsInsight.FindingProviderFieldsRelatedFindingsIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -853,7 +853,7 @@ export function tfInsightFindingProviderFieldsRelatedFindingsIdPropertyToHclTerr
 }
 
 
-export function tfInsightFindingProviderFieldsRelatedFindingsProductArnPropertyToTerraform(struct?: TfInsight.FindingProviderFieldsRelatedFindingsProductArnProperty | cdktn.IResolvable): any {
+export function awsInsightFindingProviderFieldsRelatedFindingsProductArnPropertyToTerraform(struct?: AwsInsight.FindingProviderFieldsRelatedFindingsProductArnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -865,7 +865,7 @@ export function tfInsightFindingProviderFieldsRelatedFindingsProductArnPropertyT
 }
 
 
-export function tfInsightFindingProviderFieldsRelatedFindingsProductArnPropertyToHclTerraform(struct?: TfInsight.FindingProviderFieldsRelatedFindingsProductArnProperty | cdktn.IResolvable): any {
+export function awsInsightFindingProviderFieldsRelatedFindingsProductArnPropertyToHclTerraform(struct?: AwsInsight.FindingProviderFieldsRelatedFindingsProductArnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -890,7 +890,7 @@ export function tfInsightFindingProviderFieldsRelatedFindingsProductArnPropertyT
 }
 
 
-export function tfInsightFindingProviderFieldsSeverityLabelPropertyToTerraform(struct?: TfInsight.FindingProviderFieldsSeverityLabelProperty | cdktn.IResolvable): any {
+export function awsInsightFindingProviderFieldsSeverityLabelPropertyToTerraform(struct?: AwsInsight.FindingProviderFieldsSeverityLabelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -902,7 +902,7 @@ export function tfInsightFindingProviderFieldsSeverityLabelPropertyToTerraform(s
 }
 
 
-export function tfInsightFindingProviderFieldsSeverityLabelPropertyToHclTerraform(struct?: TfInsight.FindingProviderFieldsSeverityLabelProperty | cdktn.IResolvable): any {
+export function awsInsightFindingProviderFieldsSeverityLabelPropertyToHclTerraform(struct?: AwsInsight.FindingProviderFieldsSeverityLabelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -927,7 +927,7 @@ export function tfInsightFindingProviderFieldsSeverityLabelPropertyToHclTerrafor
 }
 
 
-export function tfInsightFindingProviderFieldsSeverityOriginalPropertyToTerraform(struct?: TfInsight.FindingProviderFieldsSeverityOriginalProperty | cdktn.IResolvable): any {
+export function awsInsightFindingProviderFieldsSeverityOriginalPropertyToTerraform(struct?: AwsInsight.FindingProviderFieldsSeverityOriginalProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -939,7 +939,7 @@ export function tfInsightFindingProviderFieldsSeverityOriginalPropertyToTerrafor
 }
 
 
-export function tfInsightFindingProviderFieldsSeverityOriginalPropertyToHclTerraform(struct?: TfInsight.FindingProviderFieldsSeverityOriginalProperty | cdktn.IResolvable): any {
+export function awsInsightFindingProviderFieldsSeverityOriginalPropertyToHclTerraform(struct?: AwsInsight.FindingProviderFieldsSeverityOriginalProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -964,7 +964,7 @@ export function tfInsightFindingProviderFieldsSeverityOriginalPropertyToHclTerra
 }
 
 
-export function tfInsightFindingProviderFieldsTypesPropertyToTerraform(struct?: TfInsight.FindingProviderFieldsTypesProperty | cdktn.IResolvable): any {
+export function awsInsightFindingProviderFieldsTypesPropertyToTerraform(struct?: AwsInsight.FindingProviderFieldsTypesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -976,7 +976,7 @@ export function tfInsightFindingProviderFieldsTypesPropertyToTerraform(struct?: 
 }
 
 
-export function tfInsightFindingProviderFieldsTypesPropertyToHclTerraform(struct?: TfInsight.FindingProviderFieldsTypesProperty | cdktn.IResolvable): any {
+export function awsInsightFindingProviderFieldsTypesPropertyToHclTerraform(struct?: AwsInsight.FindingProviderFieldsTypesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1001,7 +1001,7 @@ export function tfInsightFindingProviderFieldsTypesPropertyToHclTerraform(struct
 }
 
 
-export function tfInsightFiltersFirstObservedAtDateRangePropertyToTerraform(struct?: TfInsight.FiltersFirstObservedAtDateRangePropertyOutputReference | TfInsight.FiltersFirstObservedAtDateRangeProperty): any {
+export function awsInsightFiltersFirstObservedAtDateRangePropertyToTerraform(struct?: AwsInsight.FiltersFirstObservedAtDateRangePropertyOutputReference | AwsInsight.FiltersFirstObservedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1013,7 +1013,7 @@ export function tfInsightFiltersFirstObservedAtDateRangePropertyToTerraform(stru
 }
 
 
-export function tfInsightFiltersFirstObservedAtDateRangePropertyToHclTerraform(struct?: TfInsight.FiltersFirstObservedAtDateRangePropertyOutputReference | TfInsight.FiltersFirstObservedAtDateRangeProperty): any {
+export function awsInsightFiltersFirstObservedAtDateRangePropertyToHclTerraform(struct?: AwsInsight.FiltersFirstObservedAtDateRangePropertyOutputReference | AwsInsight.FiltersFirstObservedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1038,7 +1038,7 @@ export function tfInsightFiltersFirstObservedAtDateRangePropertyToHclTerraform(s
 }
 
 
-export function tfInsightFirstObservedAtPropertyToTerraform(struct?: TfInsight.FirstObservedAtProperty | cdktn.IResolvable): any {
+export function awsInsightFirstObservedAtPropertyToTerraform(struct?: AwsInsight.FirstObservedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1046,12 +1046,12 @@ export function tfInsightFirstObservedAtPropertyToTerraform(struct?: TfInsight.F
   return {
     end: cdktn.stringToTerraform(struct!.end),
     start: cdktn.stringToTerraform(struct!.start),
-    date_range: tfInsightFiltersFirstObservedAtDateRangePropertyToTerraform(struct!.dateRange),
+    date_range: awsInsightFiltersFirstObservedAtDateRangePropertyToTerraform(struct!.dateRange),
   }
 }
 
 
-export function tfInsightFirstObservedAtPropertyToHclTerraform(struct?: TfInsight.FirstObservedAtProperty | cdktn.IResolvable): any {
+export function awsInsightFirstObservedAtPropertyToHclTerraform(struct?: AwsInsight.FirstObservedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1070,7 +1070,7 @@ export function tfInsightFirstObservedAtPropertyToHclTerraform(struct?: TfInsigh
       storageClassType: "string",
     },
     date_range: {
-      value: tfInsightFiltersFirstObservedAtDateRangePropertyToHclTerraform(struct!.dateRange),
+      value: awsInsightFiltersFirstObservedAtDateRangePropertyToHclTerraform(struct!.dateRange),
       isBlock: true,
       type: "list",
       storageClassType: "FiltersFirstObservedAtDateRangePropertyList",
@@ -1082,7 +1082,7 @@ export function tfInsightFirstObservedAtPropertyToHclTerraform(struct?: TfInsigh
 }
 
 
-export function tfInsightGeneratorIdPropertyToTerraform(struct?: TfInsight.GeneratorIdProperty | cdktn.IResolvable): any {
+export function awsInsightGeneratorIdPropertyToTerraform(struct?: AwsInsight.GeneratorIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1094,7 +1094,7 @@ export function tfInsightGeneratorIdPropertyToTerraform(struct?: TfInsight.Gener
 }
 
 
-export function tfInsightGeneratorIdPropertyToHclTerraform(struct?: TfInsight.GeneratorIdProperty | cdktn.IResolvable): any {
+export function awsInsightGeneratorIdPropertyToHclTerraform(struct?: AwsInsight.GeneratorIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1119,7 +1119,7 @@ export function tfInsightGeneratorIdPropertyToHclTerraform(struct?: TfInsight.Ge
 }
 
 
-export function tfInsightIdPropertyToTerraform(struct?: TfInsight.IdProperty | cdktn.IResolvable): any {
+export function awsInsightIdPropertyToTerraform(struct?: AwsInsight.IdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1131,7 +1131,7 @@ export function tfInsightIdPropertyToTerraform(struct?: TfInsight.IdProperty | c
 }
 
 
-export function tfInsightIdPropertyToHclTerraform(struct?: TfInsight.IdProperty | cdktn.IResolvable): any {
+export function awsInsightIdPropertyToHclTerraform(struct?: AwsInsight.IdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1156,7 +1156,7 @@ export function tfInsightIdPropertyToHclTerraform(struct?: TfInsight.IdProperty 
 }
 
 
-export function tfInsightKeywordPropertyToTerraform(struct?: TfInsight.KeywordProperty | cdktn.IResolvable): any {
+export function awsInsightKeywordPropertyToTerraform(struct?: AwsInsight.KeywordProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1167,7 +1167,7 @@ export function tfInsightKeywordPropertyToTerraform(struct?: TfInsight.KeywordPr
 }
 
 
-export function tfInsightKeywordPropertyToHclTerraform(struct?: TfInsight.KeywordProperty | cdktn.IResolvable): any {
+export function awsInsightKeywordPropertyToHclTerraform(struct?: AwsInsight.KeywordProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1186,7 +1186,7 @@ export function tfInsightKeywordPropertyToHclTerraform(struct?: TfInsight.Keywor
 }
 
 
-export function tfInsightFiltersLastObservedAtDateRangePropertyToTerraform(struct?: TfInsight.FiltersLastObservedAtDateRangePropertyOutputReference | TfInsight.FiltersLastObservedAtDateRangeProperty): any {
+export function awsInsightFiltersLastObservedAtDateRangePropertyToTerraform(struct?: AwsInsight.FiltersLastObservedAtDateRangePropertyOutputReference | AwsInsight.FiltersLastObservedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1198,7 +1198,7 @@ export function tfInsightFiltersLastObservedAtDateRangePropertyToTerraform(struc
 }
 
 
-export function tfInsightFiltersLastObservedAtDateRangePropertyToHclTerraform(struct?: TfInsight.FiltersLastObservedAtDateRangePropertyOutputReference | TfInsight.FiltersLastObservedAtDateRangeProperty): any {
+export function awsInsightFiltersLastObservedAtDateRangePropertyToHclTerraform(struct?: AwsInsight.FiltersLastObservedAtDateRangePropertyOutputReference | AwsInsight.FiltersLastObservedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1223,7 +1223,7 @@ export function tfInsightFiltersLastObservedAtDateRangePropertyToHclTerraform(st
 }
 
 
-export function tfInsightLastObservedAtPropertyToTerraform(struct?: TfInsight.LastObservedAtProperty | cdktn.IResolvable): any {
+export function awsInsightLastObservedAtPropertyToTerraform(struct?: AwsInsight.LastObservedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1231,12 +1231,12 @@ export function tfInsightLastObservedAtPropertyToTerraform(struct?: TfInsight.La
   return {
     end: cdktn.stringToTerraform(struct!.end),
     start: cdktn.stringToTerraform(struct!.start),
-    date_range: tfInsightFiltersLastObservedAtDateRangePropertyToTerraform(struct!.dateRange),
+    date_range: awsInsightFiltersLastObservedAtDateRangePropertyToTerraform(struct!.dateRange),
   }
 }
 
 
-export function tfInsightLastObservedAtPropertyToHclTerraform(struct?: TfInsight.LastObservedAtProperty | cdktn.IResolvable): any {
+export function awsInsightLastObservedAtPropertyToHclTerraform(struct?: AwsInsight.LastObservedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1255,7 +1255,7 @@ export function tfInsightLastObservedAtPropertyToHclTerraform(struct?: TfInsight
       storageClassType: "string",
     },
     date_range: {
-      value: tfInsightFiltersLastObservedAtDateRangePropertyToHclTerraform(struct!.dateRange),
+      value: awsInsightFiltersLastObservedAtDateRangePropertyToHclTerraform(struct!.dateRange),
       isBlock: true,
       type: "list",
       storageClassType: "FiltersLastObservedAtDateRangePropertyList",
@@ -1267,7 +1267,7 @@ export function tfInsightLastObservedAtPropertyToHclTerraform(struct?: TfInsight
 }
 
 
-export function tfInsightMalwareNamePropertyToTerraform(struct?: TfInsight.MalwareNameProperty | cdktn.IResolvable): any {
+export function awsInsightMalwareNamePropertyToTerraform(struct?: AwsInsight.MalwareNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1279,7 +1279,7 @@ export function tfInsightMalwareNamePropertyToTerraform(struct?: TfInsight.Malwa
 }
 
 
-export function tfInsightMalwareNamePropertyToHclTerraform(struct?: TfInsight.MalwareNameProperty | cdktn.IResolvable): any {
+export function awsInsightMalwareNamePropertyToHclTerraform(struct?: AwsInsight.MalwareNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1304,7 +1304,7 @@ export function tfInsightMalwareNamePropertyToHclTerraform(struct?: TfInsight.Ma
 }
 
 
-export function tfInsightMalwarePathPropertyToTerraform(struct?: TfInsight.MalwarePathProperty | cdktn.IResolvable): any {
+export function awsInsightMalwarePathPropertyToTerraform(struct?: AwsInsight.MalwarePathProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1316,7 +1316,7 @@ export function tfInsightMalwarePathPropertyToTerraform(struct?: TfInsight.Malwa
 }
 
 
-export function tfInsightMalwarePathPropertyToHclTerraform(struct?: TfInsight.MalwarePathProperty | cdktn.IResolvable): any {
+export function awsInsightMalwarePathPropertyToHclTerraform(struct?: AwsInsight.MalwarePathProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1341,7 +1341,7 @@ export function tfInsightMalwarePathPropertyToHclTerraform(struct?: TfInsight.Ma
 }
 
 
-export function tfInsightMalwareStatePropertyToTerraform(struct?: TfInsight.MalwareStateProperty | cdktn.IResolvable): any {
+export function awsInsightMalwareStatePropertyToTerraform(struct?: AwsInsight.MalwareStateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1353,7 +1353,7 @@ export function tfInsightMalwareStatePropertyToTerraform(struct?: TfInsight.Malw
 }
 
 
-export function tfInsightMalwareStatePropertyToHclTerraform(struct?: TfInsight.MalwareStateProperty | cdktn.IResolvable): any {
+export function awsInsightMalwareStatePropertyToHclTerraform(struct?: AwsInsight.MalwareStateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1378,7 +1378,7 @@ export function tfInsightMalwareStatePropertyToHclTerraform(struct?: TfInsight.M
 }
 
 
-export function tfInsightMalwareTypePropertyToTerraform(struct?: TfInsight.MalwareTypeProperty | cdktn.IResolvable): any {
+export function awsInsightMalwareTypePropertyToTerraform(struct?: AwsInsight.MalwareTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1390,7 +1390,7 @@ export function tfInsightMalwareTypePropertyToTerraform(struct?: TfInsight.Malwa
 }
 
 
-export function tfInsightMalwareTypePropertyToHclTerraform(struct?: TfInsight.MalwareTypeProperty | cdktn.IResolvable): any {
+export function awsInsightMalwareTypePropertyToHclTerraform(struct?: AwsInsight.MalwareTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1415,7 +1415,7 @@ export function tfInsightMalwareTypePropertyToHclTerraform(struct?: TfInsight.Ma
 }
 
 
-export function tfInsightNetworkDestinationDomainPropertyToTerraform(struct?: TfInsight.NetworkDestinationDomainProperty | cdktn.IResolvable): any {
+export function awsInsightNetworkDestinationDomainPropertyToTerraform(struct?: AwsInsight.NetworkDestinationDomainProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1427,7 +1427,7 @@ export function tfInsightNetworkDestinationDomainPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfInsightNetworkDestinationDomainPropertyToHclTerraform(struct?: TfInsight.NetworkDestinationDomainProperty | cdktn.IResolvable): any {
+export function awsInsightNetworkDestinationDomainPropertyToHclTerraform(struct?: AwsInsight.NetworkDestinationDomainProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1452,7 +1452,7 @@ export function tfInsightNetworkDestinationDomainPropertyToHclTerraform(struct?:
 }
 
 
-export function tfInsightNetworkDestinationIpv4PropertyToTerraform(struct?: TfInsight.NetworkDestinationIpv4Property | cdktn.IResolvable): any {
+export function awsInsightNetworkDestinationIpv4PropertyToTerraform(struct?: AwsInsight.NetworkDestinationIpv4Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1463,7 +1463,7 @@ export function tfInsightNetworkDestinationIpv4PropertyToTerraform(struct?: TfIn
 }
 
 
-export function tfInsightNetworkDestinationIpv4PropertyToHclTerraform(struct?: TfInsight.NetworkDestinationIpv4Property | cdktn.IResolvable): any {
+export function awsInsightNetworkDestinationIpv4PropertyToHclTerraform(struct?: AwsInsight.NetworkDestinationIpv4Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1482,7 +1482,7 @@ export function tfInsightNetworkDestinationIpv4PropertyToHclTerraform(struct?: T
 }
 
 
-export function tfInsightNetworkDestinationIpv6PropertyToTerraform(struct?: TfInsight.NetworkDestinationIpv6Property | cdktn.IResolvable): any {
+export function awsInsightNetworkDestinationIpv6PropertyToTerraform(struct?: AwsInsight.NetworkDestinationIpv6Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1493,7 +1493,7 @@ export function tfInsightNetworkDestinationIpv6PropertyToTerraform(struct?: TfIn
 }
 
 
-export function tfInsightNetworkDestinationIpv6PropertyToHclTerraform(struct?: TfInsight.NetworkDestinationIpv6Property | cdktn.IResolvable): any {
+export function awsInsightNetworkDestinationIpv6PropertyToHclTerraform(struct?: AwsInsight.NetworkDestinationIpv6Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1512,7 +1512,7 @@ export function tfInsightNetworkDestinationIpv6PropertyToHclTerraform(struct?: T
 }
 
 
-export function tfInsightNetworkDestinationPortPropertyToTerraform(struct?: TfInsight.NetworkDestinationPortProperty | cdktn.IResolvable): any {
+export function awsInsightNetworkDestinationPortPropertyToTerraform(struct?: AwsInsight.NetworkDestinationPortProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1525,7 +1525,7 @@ export function tfInsightNetworkDestinationPortPropertyToTerraform(struct?: TfIn
 }
 
 
-export function tfInsightNetworkDestinationPortPropertyToHclTerraform(struct?: TfInsight.NetworkDestinationPortProperty | cdktn.IResolvable): any {
+export function awsInsightNetworkDestinationPortPropertyToHclTerraform(struct?: AwsInsight.NetworkDestinationPortProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1556,7 +1556,7 @@ export function tfInsightNetworkDestinationPortPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfInsightNetworkDirectionPropertyToTerraform(struct?: TfInsight.NetworkDirectionProperty | cdktn.IResolvable): any {
+export function awsInsightNetworkDirectionPropertyToTerraform(struct?: AwsInsight.NetworkDirectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1568,7 +1568,7 @@ export function tfInsightNetworkDirectionPropertyToTerraform(struct?: TfInsight.
 }
 
 
-export function tfInsightNetworkDirectionPropertyToHclTerraform(struct?: TfInsight.NetworkDirectionProperty | cdktn.IResolvable): any {
+export function awsInsightNetworkDirectionPropertyToHclTerraform(struct?: AwsInsight.NetworkDirectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1593,7 +1593,7 @@ export function tfInsightNetworkDirectionPropertyToHclTerraform(struct?: TfInsig
 }
 
 
-export function tfInsightNetworkProtocolPropertyToTerraform(struct?: TfInsight.NetworkProtocolProperty | cdktn.IResolvable): any {
+export function awsInsightNetworkProtocolPropertyToTerraform(struct?: AwsInsight.NetworkProtocolProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1605,7 +1605,7 @@ export function tfInsightNetworkProtocolPropertyToTerraform(struct?: TfInsight.N
 }
 
 
-export function tfInsightNetworkProtocolPropertyToHclTerraform(struct?: TfInsight.NetworkProtocolProperty | cdktn.IResolvable): any {
+export function awsInsightNetworkProtocolPropertyToHclTerraform(struct?: AwsInsight.NetworkProtocolProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1630,7 +1630,7 @@ export function tfInsightNetworkProtocolPropertyToHclTerraform(struct?: TfInsigh
 }
 
 
-export function tfInsightNetworkSourceDomainPropertyToTerraform(struct?: TfInsight.NetworkSourceDomainProperty | cdktn.IResolvable): any {
+export function awsInsightNetworkSourceDomainPropertyToTerraform(struct?: AwsInsight.NetworkSourceDomainProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1642,7 +1642,7 @@ export function tfInsightNetworkSourceDomainPropertyToTerraform(struct?: TfInsig
 }
 
 
-export function tfInsightNetworkSourceDomainPropertyToHclTerraform(struct?: TfInsight.NetworkSourceDomainProperty | cdktn.IResolvable): any {
+export function awsInsightNetworkSourceDomainPropertyToHclTerraform(struct?: AwsInsight.NetworkSourceDomainProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1667,7 +1667,7 @@ export function tfInsightNetworkSourceDomainPropertyToHclTerraform(struct?: TfIn
 }
 
 
-export function tfInsightNetworkSourceIpv4PropertyToTerraform(struct?: TfInsight.NetworkSourceIpv4Property | cdktn.IResolvable): any {
+export function awsInsightNetworkSourceIpv4PropertyToTerraform(struct?: AwsInsight.NetworkSourceIpv4Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1678,7 +1678,7 @@ export function tfInsightNetworkSourceIpv4PropertyToTerraform(struct?: TfInsight
 }
 
 
-export function tfInsightNetworkSourceIpv4PropertyToHclTerraform(struct?: TfInsight.NetworkSourceIpv4Property | cdktn.IResolvable): any {
+export function awsInsightNetworkSourceIpv4PropertyToHclTerraform(struct?: AwsInsight.NetworkSourceIpv4Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1697,7 +1697,7 @@ export function tfInsightNetworkSourceIpv4PropertyToHclTerraform(struct?: TfInsi
 }
 
 
-export function tfInsightNetworkSourceIpv6PropertyToTerraform(struct?: TfInsight.NetworkSourceIpv6Property | cdktn.IResolvable): any {
+export function awsInsightNetworkSourceIpv6PropertyToTerraform(struct?: AwsInsight.NetworkSourceIpv6Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1708,7 +1708,7 @@ export function tfInsightNetworkSourceIpv6PropertyToTerraform(struct?: TfInsight
 }
 
 
-export function tfInsightNetworkSourceIpv6PropertyToHclTerraform(struct?: TfInsight.NetworkSourceIpv6Property | cdktn.IResolvable): any {
+export function awsInsightNetworkSourceIpv6PropertyToHclTerraform(struct?: AwsInsight.NetworkSourceIpv6Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1727,7 +1727,7 @@ export function tfInsightNetworkSourceIpv6PropertyToHclTerraform(struct?: TfInsi
 }
 
 
-export function tfInsightNetworkSourceMacPropertyToTerraform(struct?: TfInsight.NetworkSourceMacProperty | cdktn.IResolvable): any {
+export function awsInsightNetworkSourceMacPropertyToTerraform(struct?: AwsInsight.NetworkSourceMacProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1739,7 +1739,7 @@ export function tfInsightNetworkSourceMacPropertyToTerraform(struct?: TfInsight.
 }
 
 
-export function tfInsightNetworkSourceMacPropertyToHclTerraform(struct?: TfInsight.NetworkSourceMacProperty | cdktn.IResolvable): any {
+export function awsInsightNetworkSourceMacPropertyToHclTerraform(struct?: AwsInsight.NetworkSourceMacProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1764,7 +1764,7 @@ export function tfInsightNetworkSourceMacPropertyToHclTerraform(struct?: TfInsig
 }
 
 
-export function tfInsightNetworkSourcePortPropertyToTerraform(struct?: TfInsight.NetworkSourcePortProperty | cdktn.IResolvable): any {
+export function awsInsightNetworkSourcePortPropertyToTerraform(struct?: AwsInsight.NetworkSourcePortProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1777,7 +1777,7 @@ export function tfInsightNetworkSourcePortPropertyToTerraform(struct?: TfInsight
 }
 
 
-export function tfInsightNetworkSourcePortPropertyToHclTerraform(struct?: TfInsight.NetworkSourcePortProperty | cdktn.IResolvable): any {
+export function awsInsightNetworkSourcePortPropertyToHclTerraform(struct?: AwsInsight.NetworkSourcePortProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1808,7 +1808,7 @@ export function tfInsightNetworkSourcePortPropertyToHclTerraform(struct?: TfInsi
 }
 
 
-export function tfInsightNoteTextPropertyToTerraform(struct?: TfInsight.NoteTextProperty | cdktn.IResolvable): any {
+export function awsInsightNoteTextPropertyToTerraform(struct?: AwsInsight.NoteTextProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1820,7 +1820,7 @@ export function tfInsightNoteTextPropertyToTerraform(struct?: TfInsight.NoteText
 }
 
 
-export function tfInsightNoteTextPropertyToHclTerraform(struct?: TfInsight.NoteTextProperty | cdktn.IResolvable): any {
+export function awsInsightNoteTextPropertyToHclTerraform(struct?: AwsInsight.NoteTextProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1845,7 +1845,7 @@ export function tfInsightNoteTextPropertyToHclTerraform(struct?: TfInsight.NoteT
 }
 
 
-export function tfInsightFiltersNoteUpdatedAtDateRangePropertyToTerraform(struct?: TfInsight.FiltersNoteUpdatedAtDateRangePropertyOutputReference | TfInsight.FiltersNoteUpdatedAtDateRangeProperty): any {
+export function awsInsightFiltersNoteUpdatedAtDateRangePropertyToTerraform(struct?: AwsInsight.FiltersNoteUpdatedAtDateRangePropertyOutputReference | AwsInsight.FiltersNoteUpdatedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1857,7 +1857,7 @@ export function tfInsightFiltersNoteUpdatedAtDateRangePropertyToTerraform(struct
 }
 
 
-export function tfInsightFiltersNoteUpdatedAtDateRangePropertyToHclTerraform(struct?: TfInsight.FiltersNoteUpdatedAtDateRangePropertyOutputReference | TfInsight.FiltersNoteUpdatedAtDateRangeProperty): any {
+export function awsInsightFiltersNoteUpdatedAtDateRangePropertyToHclTerraform(struct?: AwsInsight.FiltersNoteUpdatedAtDateRangePropertyOutputReference | AwsInsight.FiltersNoteUpdatedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1882,7 +1882,7 @@ export function tfInsightFiltersNoteUpdatedAtDateRangePropertyToHclTerraform(str
 }
 
 
-export function tfInsightNoteUpdatedAtPropertyToTerraform(struct?: TfInsight.NoteUpdatedAtProperty | cdktn.IResolvable): any {
+export function awsInsightNoteUpdatedAtPropertyToTerraform(struct?: AwsInsight.NoteUpdatedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1890,12 +1890,12 @@ export function tfInsightNoteUpdatedAtPropertyToTerraform(struct?: TfInsight.Not
   return {
     end: cdktn.stringToTerraform(struct!.end),
     start: cdktn.stringToTerraform(struct!.start),
-    date_range: tfInsightFiltersNoteUpdatedAtDateRangePropertyToTerraform(struct!.dateRange),
+    date_range: awsInsightFiltersNoteUpdatedAtDateRangePropertyToTerraform(struct!.dateRange),
   }
 }
 
 
-export function tfInsightNoteUpdatedAtPropertyToHclTerraform(struct?: TfInsight.NoteUpdatedAtProperty | cdktn.IResolvable): any {
+export function awsInsightNoteUpdatedAtPropertyToHclTerraform(struct?: AwsInsight.NoteUpdatedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1914,7 +1914,7 @@ export function tfInsightNoteUpdatedAtPropertyToHclTerraform(struct?: TfInsight.
       storageClassType: "string",
     },
     date_range: {
-      value: tfInsightFiltersNoteUpdatedAtDateRangePropertyToHclTerraform(struct!.dateRange),
+      value: awsInsightFiltersNoteUpdatedAtDateRangePropertyToHclTerraform(struct!.dateRange),
       isBlock: true,
       type: "list",
       storageClassType: "FiltersNoteUpdatedAtDateRangePropertyList",
@@ -1926,7 +1926,7 @@ export function tfInsightNoteUpdatedAtPropertyToHclTerraform(struct?: TfInsight.
 }
 
 
-export function tfInsightNoteUpdatedByPropertyToTerraform(struct?: TfInsight.NoteUpdatedByProperty | cdktn.IResolvable): any {
+export function awsInsightNoteUpdatedByPropertyToTerraform(struct?: AwsInsight.NoteUpdatedByProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1938,7 +1938,7 @@ export function tfInsightNoteUpdatedByPropertyToTerraform(struct?: TfInsight.Not
 }
 
 
-export function tfInsightNoteUpdatedByPropertyToHclTerraform(struct?: TfInsight.NoteUpdatedByProperty | cdktn.IResolvable): any {
+export function awsInsightNoteUpdatedByPropertyToHclTerraform(struct?: AwsInsight.NoteUpdatedByProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1963,7 +1963,7 @@ export function tfInsightNoteUpdatedByPropertyToHclTerraform(struct?: TfInsight.
 }
 
 
-export function tfInsightFiltersProcessLaunchedAtDateRangePropertyToTerraform(struct?: TfInsight.FiltersProcessLaunchedAtDateRangePropertyOutputReference | TfInsight.FiltersProcessLaunchedAtDateRangeProperty): any {
+export function awsInsightFiltersProcessLaunchedAtDateRangePropertyToTerraform(struct?: AwsInsight.FiltersProcessLaunchedAtDateRangePropertyOutputReference | AwsInsight.FiltersProcessLaunchedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1975,7 +1975,7 @@ export function tfInsightFiltersProcessLaunchedAtDateRangePropertyToTerraform(st
 }
 
 
-export function tfInsightFiltersProcessLaunchedAtDateRangePropertyToHclTerraform(struct?: TfInsight.FiltersProcessLaunchedAtDateRangePropertyOutputReference | TfInsight.FiltersProcessLaunchedAtDateRangeProperty): any {
+export function awsInsightFiltersProcessLaunchedAtDateRangePropertyToHclTerraform(struct?: AwsInsight.FiltersProcessLaunchedAtDateRangePropertyOutputReference | AwsInsight.FiltersProcessLaunchedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2000,7 +2000,7 @@ export function tfInsightFiltersProcessLaunchedAtDateRangePropertyToHclTerraform
 }
 
 
-export function tfInsightProcessLaunchedAtPropertyToTerraform(struct?: TfInsight.ProcessLaunchedAtProperty | cdktn.IResolvable): any {
+export function awsInsightProcessLaunchedAtPropertyToTerraform(struct?: AwsInsight.ProcessLaunchedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2008,12 +2008,12 @@ export function tfInsightProcessLaunchedAtPropertyToTerraform(struct?: TfInsight
   return {
     end: cdktn.stringToTerraform(struct!.end),
     start: cdktn.stringToTerraform(struct!.start),
-    date_range: tfInsightFiltersProcessLaunchedAtDateRangePropertyToTerraform(struct!.dateRange),
+    date_range: awsInsightFiltersProcessLaunchedAtDateRangePropertyToTerraform(struct!.dateRange),
   }
 }
 
 
-export function tfInsightProcessLaunchedAtPropertyToHclTerraform(struct?: TfInsight.ProcessLaunchedAtProperty | cdktn.IResolvable): any {
+export function awsInsightProcessLaunchedAtPropertyToHclTerraform(struct?: AwsInsight.ProcessLaunchedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2032,7 +2032,7 @@ export function tfInsightProcessLaunchedAtPropertyToHclTerraform(struct?: TfInsi
       storageClassType: "string",
     },
     date_range: {
-      value: tfInsightFiltersProcessLaunchedAtDateRangePropertyToHclTerraform(struct!.dateRange),
+      value: awsInsightFiltersProcessLaunchedAtDateRangePropertyToHclTerraform(struct!.dateRange),
       isBlock: true,
       type: "list",
       storageClassType: "FiltersProcessLaunchedAtDateRangePropertyList",
@@ -2044,7 +2044,7 @@ export function tfInsightProcessLaunchedAtPropertyToHclTerraform(struct?: TfInsi
 }
 
 
-export function tfInsightProcessNamePropertyToTerraform(struct?: TfInsight.ProcessNameProperty | cdktn.IResolvable): any {
+export function awsInsightProcessNamePropertyToTerraform(struct?: AwsInsight.ProcessNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2056,7 +2056,7 @@ export function tfInsightProcessNamePropertyToTerraform(struct?: TfInsight.Proce
 }
 
 
-export function tfInsightProcessNamePropertyToHclTerraform(struct?: TfInsight.ProcessNameProperty | cdktn.IResolvable): any {
+export function awsInsightProcessNamePropertyToHclTerraform(struct?: AwsInsight.ProcessNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2081,7 +2081,7 @@ export function tfInsightProcessNamePropertyToHclTerraform(struct?: TfInsight.Pr
 }
 
 
-export function tfInsightProcessParentPidPropertyToTerraform(struct?: TfInsight.ProcessParentPidProperty | cdktn.IResolvable): any {
+export function awsInsightProcessParentPidPropertyToTerraform(struct?: AwsInsight.ProcessParentPidProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2094,7 +2094,7 @@ export function tfInsightProcessParentPidPropertyToTerraform(struct?: TfInsight.
 }
 
 
-export function tfInsightProcessParentPidPropertyToHclTerraform(struct?: TfInsight.ProcessParentPidProperty | cdktn.IResolvable): any {
+export function awsInsightProcessParentPidPropertyToHclTerraform(struct?: AwsInsight.ProcessParentPidProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2125,7 +2125,7 @@ export function tfInsightProcessParentPidPropertyToHclTerraform(struct?: TfInsig
 }
 
 
-export function tfInsightProcessPathPropertyToTerraform(struct?: TfInsight.ProcessPathProperty | cdktn.IResolvable): any {
+export function awsInsightProcessPathPropertyToTerraform(struct?: AwsInsight.ProcessPathProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2137,7 +2137,7 @@ export function tfInsightProcessPathPropertyToTerraform(struct?: TfInsight.Proce
 }
 
 
-export function tfInsightProcessPathPropertyToHclTerraform(struct?: TfInsight.ProcessPathProperty | cdktn.IResolvable): any {
+export function awsInsightProcessPathPropertyToHclTerraform(struct?: AwsInsight.ProcessPathProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2162,7 +2162,7 @@ export function tfInsightProcessPathPropertyToHclTerraform(struct?: TfInsight.Pr
 }
 
 
-export function tfInsightProcessPidPropertyToTerraform(struct?: TfInsight.ProcessPidProperty | cdktn.IResolvable): any {
+export function awsInsightProcessPidPropertyToTerraform(struct?: AwsInsight.ProcessPidProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2175,7 +2175,7 @@ export function tfInsightProcessPidPropertyToTerraform(struct?: TfInsight.Proces
 }
 
 
-export function tfInsightProcessPidPropertyToHclTerraform(struct?: TfInsight.ProcessPidProperty | cdktn.IResolvable): any {
+export function awsInsightProcessPidPropertyToHclTerraform(struct?: AwsInsight.ProcessPidProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2206,7 +2206,7 @@ export function tfInsightProcessPidPropertyToHclTerraform(struct?: TfInsight.Pro
 }
 
 
-export function tfInsightFiltersProcessTerminatedAtDateRangePropertyToTerraform(struct?: TfInsight.FiltersProcessTerminatedAtDateRangePropertyOutputReference | TfInsight.FiltersProcessTerminatedAtDateRangeProperty): any {
+export function awsInsightFiltersProcessTerminatedAtDateRangePropertyToTerraform(struct?: AwsInsight.FiltersProcessTerminatedAtDateRangePropertyOutputReference | AwsInsight.FiltersProcessTerminatedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2218,7 +2218,7 @@ export function tfInsightFiltersProcessTerminatedAtDateRangePropertyToTerraform(
 }
 
 
-export function tfInsightFiltersProcessTerminatedAtDateRangePropertyToHclTerraform(struct?: TfInsight.FiltersProcessTerminatedAtDateRangePropertyOutputReference | TfInsight.FiltersProcessTerminatedAtDateRangeProperty): any {
+export function awsInsightFiltersProcessTerminatedAtDateRangePropertyToHclTerraform(struct?: AwsInsight.FiltersProcessTerminatedAtDateRangePropertyOutputReference | AwsInsight.FiltersProcessTerminatedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2243,7 +2243,7 @@ export function tfInsightFiltersProcessTerminatedAtDateRangePropertyToHclTerrafo
 }
 
 
-export function tfInsightProcessTerminatedAtPropertyToTerraform(struct?: TfInsight.ProcessTerminatedAtProperty | cdktn.IResolvable): any {
+export function awsInsightProcessTerminatedAtPropertyToTerraform(struct?: AwsInsight.ProcessTerminatedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2251,12 +2251,12 @@ export function tfInsightProcessTerminatedAtPropertyToTerraform(struct?: TfInsig
   return {
     end: cdktn.stringToTerraform(struct!.end),
     start: cdktn.stringToTerraform(struct!.start),
-    date_range: tfInsightFiltersProcessTerminatedAtDateRangePropertyToTerraform(struct!.dateRange),
+    date_range: awsInsightFiltersProcessTerminatedAtDateRangePropertyToTerraform(struct!.dateRange),
   }
 }
 
 
-export function tfInsightProcessTerminatedAtPropertyToHclTerraform(struct?: TfInsight.ProcessTerminatedAtProperty | cdktn.IResolvable): any {
+export function awsInsightProcessTerminatedAtPropertyToHclTerraform(struct?: AwsInsight.ProcessTerminatedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2275,7 +2275,7 @@ export function tfInsightProcessTerminatedAtPropertyToHclTerraform(struct?: TfIn
       storageClassType: "string",
     },
     date_range: {
-      value: tfInsightFiltersProcessTerminatedAtDateRangePropertyToHclTerraform(struct!.dateRange),
+      value: awsInsightFiltersProcessTerminatedAtDateRangePropertyToHclTerraform(struct!.dateRange),
       isBlock: true,
       type: "list",
       storageClassType: "FiltersProcessTerminatedAtDateRangePropertyList",
@@ -2287,7 +2287,7 @@ export function tfInsightProcessTerminatedAtPropertyToHclTerraform(struct?: TfIn
 }
 
 
-export function tfInsightProductArnPropertyToTerraform(struct?: TfInsight.ProductArnProperty | cdktn.IResolvable): any {
+export function awsInsightProductArnPropertyToTerraform(struct?: AwsInsight.ProductArnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2299,7 +2299,7 @@ export function tfInsightProductArnPropertyToTerraform(struct?: TfInsight.Produc
 }
 
 
-export function tfInsightProductArnPropertyToHclTerraform(struct?: TfInsight.ProductArnProperty | cdktn.IResolvable): any {
+export function awsInsightProductArnPropertyToHclTerraform(struct?: AwsInsight.ProductArnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2324,7 +2324,7 @@ export function tfInsightProductArnPropertyToHclTerraform(struct?: TfInsight.Pro
 }
 
 
-export function tfInsightProductFieldsPropertyToTerraform(struct?: TfInsight.ProductFieldsProperty | cdktn.IResolvable): any {
+export function awsInsightProductFieldsPropertyToTerraform(struct?: AwsInsight.ProductFieldsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2337,7 +2337,7 @@ export function tfInsightProductFieldsPropertyToTerraform(struct?: TfInsight.Pro
 }
 
 
-export function tfInsightProductFieldsPropertyToHclTerraform(struct?: TfInsight.ProductFieldsProperty | cdktn.IResolvable): any {
+export function awsInsightProductFieldsPropertyToHclTerraform(struct?: AwsInsight.ProductFieldsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2368,7 +2368,7 @@ export function tfInsightProductFieldsPropertyToHclTerraform(struct?: TfInsight.
 }
 
 
-export function tfInsightProductNamePropertyToTerraform(struct?: TfInsight.ProductNameProperty | cdktn.IResolvable): any {
+export function awsInsightProductNamePropertyToTerraform(struct?: AwsInsight.ProductNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2380,7 +2380,7 @@ export function tfInsightProductNamePropertyToTerraform(struct?: TfInsight.Produ
 }
 
 
-export function tfInsightProductNamePropertyToHclTerraform(struct?: TfInsight.ProductNameProperty | cdktn.IResolvable): any {
+export function awsInsightProductNamePropertyToHclTerraform(struct?: AwsInsight.ProductNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2405,7 +2405,7 @@ export function tfInsightProductNamePropertyToHclTerraform(struct?: TfInsight.Pr
 }
 
 
-export function tfInsightRecommendationTextPropertyToTerraform(struct?: TfInsight.RecommendationTextProperty | cdktn.IResolvable): any {
+export function awsInsightRecommendationTextPropertyToTerraform(struct?: AwsInsight.RecommendationTextProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2417,7 +2417,7 @@ export function tfInsightRecommendationTextPropertyToTerraform(struct?: TfInsigh
 }
 
 
-export function tfInsightRecommendationTextPropertyToHclTerraform(struct?: TfInsight.RecommendationTextProperty | cdktn.IResolvable): any {
+export function awsInsightRecommendationTextPropertyToHclTerraform(struct?: AwsInsight.RecommendationTextProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2442,7 +2442,7 @@ export function tfInsightRecommendationTextPropertyToHclTerraform(struct?: TfIns
 }
 
 
-export function tfInsightRecordStatePropertyToTerraform(struct?: TfInsight.RecordStateProperty | cdktn.IResolvable): any {
+export function awsInsightRecordStatePropertyToTerraform(struct?: AwsInsight.RecordStateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2454,7 +2454,7 @@ export function tfInsightRecordStatePropertyToTerraform(struct?: TfInsight.Recor
 }
 
 
-export function tfInsightRecordStatePropertyToHclTerraform(struct?: TfInsight.RecordStateProperty | cdktn.IResolvable): any {
+export function awsInsightRecordStatePropertyToHclTerraform(struct?: AwsInsight.RecordStateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2479,7 +2479,7 @@ export function tfInsightRecordStatePropertyToHclTerraform(struct?: TfInsight.Re
 }
 
 
-export function tfInsightRelatedFindingsIdPropertyToTerraform(struct?: TfInsight.RelatedFindingsIdProperty | cdktn.IResolvable): any {
+export function awsInsightRelatedFindingsIdPropertyToTerraform(struct?: AwsInsight.RelatedFindingsIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2491,7 +2491,7 @@ export function tfInsightRelatedFindingsIdPropertyToTerraform(struct?: TfInsight
 }
 
 
-export function tfInsightRelatedFindingsIdPropertyToHclTerraform(struct?: TfInsight.RelatedFindingsIdProperty | cdktn.IResolvable): any {
+export function awsInsightRelatedFindingsIdPropertyToHclTerraform(struct?: AwsInsight.RelatedFindingsIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2516,7 +2516,7 @@ export function tfInsightRelatedFindingsIdPropertyToHclTerraform(struct?: TfInsi
 }
 
 
-export function tfInsightRelatedFindingsProductArnPropertyToTerraform(struct?: TfInsight.RelatedFindingsProductArnProperty | cdktn.IResolvable): any {
+export function awsInsightRelatedFindingsProductArnPropertyToTerraform(struct?: AwsInsight.RelatedFindingsProductArnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2528,7 +2528,7 @@ export function tfInsightRelatedFindingsProductArnPropertyToTerraform(struct?: T
 }
 
 
-export function tfInsightRelatedFindingsProductArnPropertyToHclTerraform(struct?: TfInsight.RelatedFindingsProductArnProperty | cdktn.IResolvable): any {
+export function awsInsightRelatedFindingsProductArnPropertyToHclTerraform(struct?: AwsInsight.RelatedFindingsProductArnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2553,7 +2553,7 @@ export function tfInsightRelatedFindingsProductArnPropertyToHclTerraform(struct?
 }
 
 
-export function tfInsightResourceAwsEc2InstanceIamInstanceProfileArnPropertyToTerraform(struct?: TfInsight.ResourceAwsEc2InstanceIamInstanceProfileArnProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceIamInstanceProfileArnPropertyToTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceIamInstanceProfileArnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2565,7 +2565,7 @@ export function tfInsightResourceAwsEc2InstanceIamInstanceProfileArnPropertyToTe
 }
 
 
-export function tfInsightResourceAwsEc2InstanceIamInstanceProfileArnPropertyToHclTerraform(struct?: TfInsight.ResourceAwsEc2InstanceIamInstanceProfileArnProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceIamInstanceProfileArnPropertyToHclTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceIamInstanceProfileArnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2590,7 +2590,7 @@ export function tfInsightResourceAwsEc2InstanceIamInstanceProfileArnPropertyToHc
 }
 
 
-export function tfInsightResourceAwsEc2InstanceImageIdPropertyToTerraform(struct?: TfInsight.ResourceAwsEc2InstanceImageIdProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceImageIdPropertyToTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceImageIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2602,7 +2602,7 @@ export function tfInsightResourceAwsEc2InstanceImageIdPropertyToTerraform(struct
 }
 
 
-export function tfInsightResourceAwsEc2InstanceImageIdPropertyToHclTerraform(struct?: TfInsight.ResourceAwsEc2InstanceImageIdProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceImageIdPropertyToHclTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceImageIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2627,7 +2627,7 @@ export function tfInsightResourceAwsEc2InstanceImageIdPropertyToHclTerraform(str
 }
 
 
-export function tfInsightResourceAwsEc2InstanceIpv4AddressesPropertyToTerraform(struct?: TfInsight.ResourceAwsEc2InstanceIpv4AddressesProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceIpv4AddressesPropertyToTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceIpv4AddressesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2638,7 +2638,7 @@ export function tfInsightResourceAwsEc2InstanceIpv4AddressesPropertyToTerraform(
 }
 
 
-export function tfInsightResourceAwsEc2InstanceIpv4AddressesPropertyToHclTerraform(struct?: TfInsight.ResourceAwsEc2InstanceIpv4AddressesProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceIpv4AddressesPropertyToHclTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceIpv4AddressesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2657,7 +2657,7 @@ export function tfInsightResourceAwsEc2InstanceIpv4AddressesPropertyToHclTerrafo
 }
 
 
-export function tfInsightResourceAwsEc2InstanceIpv6AddressesPropertyToTerraform(struct?: TfInsight.ResourceAwsEc2InstanceIpv6AddressesProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceIpv6AddressesPropertyToTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceIpv6AddressesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2668,7 +2668,7 @@ export function tfInsightResourceAwsEc2InstanceIpv6AddressesPropertyToTerraform(
 }
 
 
-export function tfInsightResourceAwsEc2InstanceIpv6AddressesPropertyToHclTerraform(struct?: TfInsight.ResourceAwsEc2InstanceIpv6AddressesProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceIpv6AddressesPropertyToHclTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceIpv6AddressesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2687,7 +2687,7 @@ export function tfInsightResourceAwsEc2InstanceIpv6AddressesPropertyToHclTerrafo
 }
 
 
-export function tfInsightResourceAwsEc2InstanceKeyNamePropertyToTerraform(struct?: TfInsight.ResourceAwsEc2InstanceKeyNameProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceKeyNamePropertyToTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceKeyNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2699,7 +2699,7 @@ export function tfInsightResourceAwsEc2InstanceKeyNamePropertyToTerraform(struct
 }
 
 
-export function tfInsightResourceAwsEc2InstanceKeyNamePropertyToHclTerraform(struct?: TfInsight.ResourceAwsEc2InstanceKeyNameProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceKeyNamePropertyToHclTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceKeyNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2724,7 +2724,7 @@ export function tfInsightResourceAwsEc2InstanceKeyNamePropertyToHclTerraform(str
 }
 
 
-export function tfInsightFiltersResourceAwsEc2InstanceLaunchedAtDateRangePropertyToTerraform(struct?: TfInsight.FiltersResourceAwsEc2InstanceLaunchedAtDateRangePropertyOutputReference | TfInsight.FiltersResourceAwsEc2InstanceLaunchedAtDateRangeProperty): any {
+export function awsInsightFiltersResourceAwsEc2InstanceLaunchedAtDateRangePropertyToTerraform(struct?: AwsInsight.FiltersResourceAwsEc2InstanceLaunchedAtDateRangePropertyOutputReference | AwsInsight.FiltersResourceAwsEc2InstanceLaunchedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2736,7 +2736,7 @@ export function tfInsightFiltersResourceAwsEc2InstanceLaunchedAtDateRangePropert
 }
 
 
-export function tfInsightFiltersResourceAwsEc2InstanceLaunchedAtDateRangePropertyToHclTerraform(struct?: TfInsight.FiltersResourceAwsEc2InstanceLaunchedAtDateRangePropertyOutputReference | TfInsight.FiltersResourceAwsEc2InstanceLaunchedAtDateRangeProperty): any {
+export function awsInsightFiltersResourceAwsEc2InstanceLaunchedAtDateRangePropertyToHclTerraform(struct?: AwsInsight.FiltersResourceAwsEc2InstanceLaunchedAtDateRangePropertyOutputReference | AwsInsight.FiltersResourceAwsEc2InstanceLaunchedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2761,7 +2761,7 @@ export function tfInsightFiltersResourceAwsEc2InstanceLaunchedAtDateRangePropert
 }
 
 
-export function tfInsightResourceAwsEc2InstanceLaunchedAtPropertyToTerraform(struct?: TfInsight.ResourceAwsEc2InstanceLaunchedAtProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceLaunchedAtPropertyToTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceLaunchedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2769,12 +2769,12 @@ export function tfInsightResourceAwsEc2InstanceLaunchedAtPropertyToTerraform(str
   return {
     end: cdktn.stringToTerraform(struct!.end),
     start: cdktn.stringToTerraform(struct!.start),
-    date_range: tfInsightFiltersResourceAwsEc2InstanceLaunchedAtDateRangePropertyToTerraform(struct!.dateRange),
+    date_range: awsInsightFiltersResourceAwsEc2InstanceLaunchedAtDateRangePropertyToTerraform(struct!.dateRange),
   }
 }
 
 
-export function tfInsightResourceAwsEc2InstanceLaunchedAtPropertyToHclTerraform(struct?: TfInsight.ResourceAwsEc2InstanceLaunchedAtProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceLaunchedAtPropertyToHclTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceLaunchedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2793,7 +2793,7 @@ export function tfInsightResourceAwsEc2InstanceLaunchedAtPropertyToHclTerraform(
       storageClassType: "string",
     },
     date_range: {
-      value: tfInsightFiltersResourceAwsEc2InstanceLaunchedAtDateRangePropertyToHclTerraform(struct!.dateRange),
+      value: awsInsightFiltersResourceAwsEc2InstanceLaunchedAtDateRangePropertyToHclTerraform(struct!.dateRange),
       isBlock: true,
       type: "list",
       storageClassType: "FiltersResourceAwsEc2InstanceLaunchedAtDateRangePropertyList",
@@ -2805,7 +2805,7 @@ export function tfInsightResourceAwsEc2InstanceLaunchedAtPropertyToHclTerraform(
 }
 
 
-export function tfInsightResourceAwsEc2InstanceSubnetIdPropertyToTerraform(struct?: TfInsight.ResourceAwsEc2InstanceSubnetIdProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceSubnetIdPropertyToTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceSubnetIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2817,7 +2817,7 @@ export function tfInsightResourceAwsEc2InstanceSubnetIdPropertyToTerraform(struc
 }
 
 
-export function tfInsightResourceAwsEc2InstanceSubnetIdPropertyToHclTerraform(struct?: TfInsight.ResourceAwsEc2InstanceSubnetIdProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceSubnetIdPropertyToHclTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceSubnetIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2842,7 +2842,7 @@ export function tfInsightResourceAwsEc2InstanceSubnetIdPropertyToHclTerraform(st
 }
 
 
-export function tfInsightResourceAwsEc2InstanceTypePropertyToTerraform(struct?: TfInsight.ResourceAwsEc2InstanceTypeProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceTypePropertyToTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2854,7 +2854,7 @@ export function tfInsightResourceAwsEc2InstanceTypePropertyToTerraform(struct?: 
 }
 
 
-export function tfInsightResourceAwsEc2InstanceTypePropertyToHclTerraform(struct?: TfInsight.ResourceAwsEc2InstanceTypeProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceTypePropertyToHclTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2879,7 +2879,7 @@ export function tfInsightResourceAwsEc2InstanceTypePropertyToHclTerraform(struct
 }
 
 
-export function tfInsightResourceAwsEc2InstanceVpcIdPropertyToTerraform(struct?: TfInsight.ResourceAwsEc2InstanceVpcIdProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceVpcIdPropertyToTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceVpcIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2891,7 +2891,7 @@ export function tfInsightResourceAwsEc2InstanceVpcIdPropertyToTerraform(struct?:
 }
 
 
-export function tfInsightResourceAwsEc2InstanceVpcIdPropertyToHclTerraform(struct?: TfInsight.ResourceAwsEc2InstanceVpcIdProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsEc2InstanceVpcIdPropertyToHclTerraform(struct?: AwsInsight.ResourceAwsEc2InstanceVpcIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2916,7 +2916,7 @@ export function tfInsightResourceAwsEc2InstanceVpcIdPropertyToHclTerraform(struc
 }
 
 
-export function tfInsightFiltersResourceAwsIamAccessKeyCreatedAtDateRangePropertyToTerraform(struct?: TfInsight.FiltersResourceAwsIamAccessKeyCreatedAtDateRangePropertyOutputReference | TfInsight.FiltersResourceAwsIamAccessKeyCreatedAtDateRangeProperty): any {
+export function awsInsightFiltersResourceAwsIamAccessKeyCreatedAtDateRangePropertyToTerraform(struct?: AwsInsight.FiltersResourceAwsIamAccessKeyCreatedAtDateRangePropertyOutputReference | AwsInsight.FiltersResourceAwsIamAccessKeyCreatedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2928,7 +2928,7 @@ export function tfInsightFiltersResourceAwsIamAccessKeyCreatedAtDateRangePropert
 }
 
 
-export function tfInsightFiltersResourceAwsIamAccessKeyCreatedAtDateRangePropertyToHclTerraform(struct?: TfInsight.FiltersResourceAwsIamAccessKeyCreatedAtDateRangePropertyOutputReference | TfInsight.FiltersResourceAwsIamAccessKeyCreatedAtDateRangeProperty): any {
+export function awsInsightFiltersResourceAwsIamAccessKeyCreatedAtDateRangePropertyToHclTerraform(struct?: AwsInsight.FiltersResourceAwsIamAccessKeyCreatedAtDateRangePropertyOutputReference | AwsInsight.FiltersResourceAwsIamAccessKeyCreatedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2953,7 +2953,7 @@ export function tfInsightFiltersResourceAwsIamAccessKeyCreatedAtDateRangePropert
 }
 
 
-export function tfInsightResourceAwsIamAccessKeyCreatedAtPropertyToTerraform(struct?: TfInsight.ResourceAwsIamAccessKeyCreatedAtProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsIamAccessKeyCreatedAtPropertyToTerraform(struct?: AwsInsight.ResourceAwsIamAccessKeyCreatedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2961,12 +2961,12 @@ export function tfInsightResourceAwsIamAccessKeyCreatedAtPropertyToTerraform(str
   return {
     end: cdktn.stringToTerraform(struct!.end),
     start: cdktn.stringToTerraform(struct!.start),
-    date_range: tfInsightFiltersResourceAwsIamAccessKeyCreatedAtDateRangePropertyToTerraform(struct!.dateRange),
+    date_range: awsInsightFiltersResourceAwsIamAccessKeyCreatedAtDateRangePropertyToTerraform(struct!.dateRange),
   }
 }
 
 
-export function tfInsightResourceAwsIamAccessKeyCreatedAtPropertyToHclTerraform(struct?: TfInsight.ResourceAwsIamAccessKeyCreatedAtProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsIamAccessKeyCreatedAtPropertyToHclTerraform(struct?: AwsInsight.ResourceAwsIamAccessKeyCreatedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2985,7 +2985,7 @@ export function tfInsightResourceAwsIamAccessKeyCreatedAtPropertyToHclTerraform(
       storageClassType: "string",
     },
     date_range: {
-      value: tfInsightFiltersResourceAwsIamAccessKeyCreatedAtDateRangePropertyToHclTerraform(struct!.dateRange),
+      value: awsInsightFiltersResourceAwsIamAccessKeyCreatedAtDateRangePropertyToHclTerraform(struct!.dateRange),
       isBlock: true,
       type: "list",
       storageClassType: "FiltersResourceAwsIamAccessKeyCreatedAtDateRangePropertyList",
@@ -2997,7 +2997,7 @@ export function tfInsightResourceAwsIamAccessKeyCreatedAtPropertyToHclTerraform(
 }
 
 
-export function tfInsightResourceAwsIamAccessKeyStatusPropertyToTerraform(struct?: TfInsight.ResourceAwsIamAccessKeyStatusProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsIamAccessKeyStatusPropertyToTerraform(struct?: AwsInsight.ResourceAwsIamAccessKeyStatusProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3009,7 +3009,7 @@ export function tfInsightResourceAwsIamAccessKeyStatusPropertyToTerraform(struct
 }
 
 
-export function tfInsightResourceAwsIamAccessKeyStatusPropertyToHclTerraform(struct?: TfInsight.ResourceAwsIamAccessKeyStatusProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsIamAccessKeyStatusPropertyToHclTerraform(struct?: AwsInsight.ResourceAwsIamAccessKeyStatusProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3034,7 +3034,7 @@ export function tfInsightResourceAwsIamAccessKeyStatusPropertyToHclTerraform(str
 }
 
 
-export function tfInsightResourceAwsIamAccessKeyUserNamePropertyToTerraform(struct?: TfInsight.ResourceAwsIamAccessKeyUserNameProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsIamAccessKeyUserNamePropertyToTerraform(struct?: AwsInsight.ResourceAwsIamAccessKeyUserNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3046,7 +3046,7 @@ export function tfInsightResourceAwsIamAccessKeyUserNamePropertyToTerraform(stru
 }
 
 
-export function tfInsightResourceAwsIamAccessKeyUserNamePropertyToHclTerraform(struct?: TfInsight.ResourceAwsIamAccessKeyUserNameProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsIamAccessKeyUserNamePropertyToHclTerraform(struct?: AwsInsight.ResourceAwsIamAccessKeyUserNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3071,7 +3071,7 @@ export function tfInsightResourceAwsIamAccessKeyUserNamePropertyToHclTerraform(s
 }
 
 
-export function tfInsightResourceAwsS3BucketOwnerIdPropertyToTerraform(struct?: TfInsight.ResourceAwsS3BucketOwnerIdProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsS3BucketOwnerIdPropertyToTerraform(struct?: AwsInsight.ResourceAwsS3BucketOwnerIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3083,7 +3083,7 @@ export function tfInsightResourceAwsS3BucketOwnerIdPropertyToTerraform(struct?: 
 }
 
 
-export function tfInsightResourceAwsS3BucketOwnerIdPropertyToHclTerraform(struct?: TfInsight.ResourceAwsS3BucketOwnerIdProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsS3BucketOwnerIdPropertyToHclTerraform(struct?: AwsInsight.ResourceAwsS3BucketOwnerIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3108,7 +3108,7 @@ export function tfInsightResourceAwsS3BucketOwnerIdPropertyToHclTerraform(struct
 }
 
 
-export function tfInsightResourceAwsS3BucketOwnerNamePropertyToTerraform(struct?: TfInsight.ResourceAwsS3BucketOwnerNameProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsS3BucketOwnerNamePropertyToTerraform(struct?: AwsInsight.ResourceAwsS3BucketOwnerNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3120,7 +3120,7 @@ export function tfInsightResourceAwsS3BucketOwnerNamePropertyToTerraform(struct?
 }
 
 
-export function tfInsightResourceAwsS3BucketOwnerNamePropertyToHclTerraform(struct?: TfInsight.ResourceAwsS3BucketOwnerNameProperty | cdktn.IResolvable): any {
+export function awsInsightResourceAwsS3BucketOwnerNamePropertyToHclTerraform(struct?: AwsInsight.ResourceAwsS3BucketOwnerNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3145,7 +3145,7 @@ export function tfInsightResourceAwsS3BucketOwnerNamePropertyToHclTerraform(stru
 }
 
 
-export function tfInsightResourceContainerImageIdPropertyToTerraform(struct?: TfInsight.ResourceContainerImageIdProperty | cdktn.IResolvable): any {
+export function awsInsightResourceContainerImageIdPropertyToTerraform(struct?: AwsInsight.ResourceContainerImageIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3157,7 +3157,7 @@ export function tfInsightResourceContainerImageIdPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfInsightResourceContainerImageIdPropertyToHclTerraform(struct?: TfInsight.ResourceContainerImageIdProperty | cdktn.IResolvable): any {
+export function awsInsightResourceContainerImageIdPropertyToHclTerraform(struct?: AwsInsight.ResourceContainerImageIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3182,7 +3182,7 @@ export function tfInsightResourceContainerImageIdPropertyToHclTerraform(struct?:
 }
 
 
-export function tfInsightResourceContainerImageNamePropertyToTerraform(struct?: TfInsight.ResourceContainerImageNameProperty | cdktn.IResolvable): any {
+export function awsInsightResourceContainerImageNamePropertyToTerraform(struct?: AwsInsight.ResourceContainerImageNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3194,7 +3194,7 @@ export function tfInsightResourceContainerImageNamePropertyToTerraform(struct?: 
 }
 
 
-export function tfInsightResourceContainerImageNamePropertyToHclTerraform(struct?: TfInsight.ResourceContainerImageNameProperty | cdktn.IResolvable): any {
+export function awsInsightResourceContainerImageNamePropertyToHclTerraform(struct?: AwsInsight.ResourceContainerImageNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3219,7 +3219,7 @@ export function tfInsightResourceContainerImageNamePropertyToHclTerraform(struct
 }
 
 
-export function tfInsightFiltersResourceContainerLaunchedAtDateRangePropertyToTerraform(struct?: TfInsight.FiltersResourceContainerLaunchedAtDateRangePropertyOutputReference | TfInsight.FiltersResourceContainerLaunchedAtDateRangeProperty): any {
+export function awsInsightFiltersResourceContainerLaunchedAtDateRangePropertyToTerraform(struct?: AwsInsight.FiltersResourceContainerLaunchedAtDateRangePropertyOutputReference | AwsInsight.FiltersResourceContainerLaunchedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3231,7 +3231,7 @@ export function tfInsightFiltersResourceContainerLaunchedAtDateRangePropertyToTe
 }
 
 
-export function tfInsightFiltersResourceContainerLaunchedAtDateRangePropertyToHclTerraform(struct?: TfInsight.FiltersResourceContainerLaunchedAtDateRangePropertyOutputReference | TfInsight.FiltersResourceContainerLaunchedAtDateRangeProperty): any {
+export function awsInsightFiltersResourceContainerLaunchedAtDateRangePropertyToHclTerraform(struct?: AwsInsight.FiltersResourceContainerLaunchedAtDateRangePropertyOutputReference | AwsInsight.FiltersResourceContainerLaunchedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3256,7 +3256,7 @@ export function tfInsightFiltersResourceContainerLaunchedAtDateRangePropertyToHc
 }
 
 
-export function tfInsightResourceContainerLaunchedAtPropertyToTerraform(struct?: TfInsight.ResourceContainerLaunchedAtProperty | cdktn.IResolvable): any {
+export function awsInsightResourceContainerLaunchedAtPropertyToTerraform(struct?: AwsInsight.ResourceContainerLaunchedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3264,12 +3264,12 @@ export function tfInsightResourceContainerLaunchedAtPropertyToTerraform(struct?:
   return {
     end: cdktn.stringToTerraform(struct!.end),
     start: cdktn.stringToTerraform(struct!.start),
-    date_range: tfInsightFiltersResourceContainerLaunchedAtDateRangePropertyToTerraform(struct!.dateRange),
+    date_range: awsInsightFiltersResourceContainerLaunchedAtDateRangePropertyToTerraform(struct!.dateRange),
   }
 }
 
 
-export function tfInsightResourceContainerLaunchedAtPropertyToHclTerraform(struct?: TfInsight.ResourceContainerLaunchedAtProperty | cdktn.IResolvable): any {
+export function awsInsightResourceContainerLaunchedAtPropertyToHclTerraform(struct?: AwsInsight.ResourceContainerLaunchedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3288,7 +3288,7 @@ export function tfInsightResourceContainerLaunchedAtPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     date_range: {
-      value: tfInsightFiltersResourceContainerLaunchedAtDateRangePropertyToHclTerraform(struct!.dateRange),
+      value: awsInsightFiltersResourceContainerLaunchedAtDateRangePropertyToHclTerraform(struct!.dateRange),
       isBlock: true,
       type: "list",
       storageClassType: "FiltersResourceContainerLaunchedAtDateRangePropertyList",
@@ -3300,7 +3300,7 @@ export function tfInsightResourceContainerLaunchedAtPropertyToHclTerraform(struc
 }
 
 
-export function tfInsightResourceContainerNamePropertyToTerraform(struct?: TfInsight.ResourceContainerNameProperty | cdktn.IResolvable): any {
+export function awsInsightResourceContainerNamePropertyToTerraform(struct?: AwsInsight.ResourceContainerNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3312,7 +3312,7 @@ export function tfInsightResourceContainerNamePropertyToTerraform(struct?: TfIns
 }
 
 
-export function tfInsightResourceContainerNamePropertyToHclTerraform(struct?: TfInsight.ResourceContainerNameProperty | cdktn.IResolvable): any {
+export function awsInsightResourceContainerNamePropertyToHclTerraform(struct?: AwsInsight.ResourceContainerNameProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3337,7 +3337,7 @@ export function tfInsightResourceContainerNamePropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfInsightResourceDetailsOtherPropertyToTerraform(struct?: TfInsight.ResourceDetailsOtherProperty | cdktn.IResolvable): any {
+export function awsInsightResourceDetailsOtherPropertyToTerraform(struct?: AwsInsight.ResourceDetailsOtherProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3350,7 +3350,7 @@ export function tfInsightResourceDetailsOtherPropertyToTerraform(struct?: TfInsi
 }
 
 
-export function tfInsightResourceDetailsOtherPropertyToHclTerraform(struct?: TfInsight.ResourceDetailsOtherProperty | cdktn.IResolvable): any {
+export function awsInsightResourceDetailsOtherPropertyToHclTerraform(struct?: AwsInsight.ResourceDetailsOtherProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3381,7 +3381,7 @@ export function tfInsightResourceDetailsOtherPropertyToHclTerraform(struct?: TfI
 }
 
 
-export function tfInsightResourceIdPropertyToTerraform(struct?: TfInsight.ResourceIdProperty | cdktn.IResolvable): any {
+export function awsInsightResourceIdPropertyToTerraform(struct?: AwsInsight.ResourceIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3393,7 +3393,7 @@ export function tfInsightResourceIdPropertyToTerraform(struct?: TfInsight.Resour
 }
 
 
-export function tfInsightResourceIdPropertyToHclTerraform(struct?: TfInsight.ResourceIdProperty | cdktn.IResolvable): any {
+export function awsInsightResourceIdPropertyToHclTerraform(struct?: AwsInsight.ResourceIdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3418,7 +3418,7 @@ export function tfInsightResourceIdPropertyToHclTerraform(struct?: TfInsight.Res
 }
 
 
-export function tfInsightResourcePartitionPropertyToTerraform(struct?: TfInsight.ResourcePartitionProperty | cdktn.IResolvable): any {
+export function awsInsightResourcePartitionPropertyToTerraform(struct?: AwsInsight.ResourcePartitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3430,7 +3430,7 @@ export function tfInsightResourcePartitionPropertyToTerraform(struct?: TfInsight
 }
 
 
-export function tfInsightResourcePartitionPropertyToHclTerraform(struct?: TfInsight.ResourcePartitionProperty | cdktn.IResolvable): any {
+export function awsInsightResourcePartitionPropertyToHclTerraform(struct?: AwsInsight.ResourcePartitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3455,7 +3455,7 @@ export function tfInsightResourcePartitionPropertyToHclTerraform(struct?: TfInsi
 }
 
 
-export function tfInsightResourceRegionPropertyToTerraform(struct?: TfInsight.ResourceRegionProperty | cdktn.IResolvable): any {
+export function awsInsightResourceRegionPropertyToTerraform(struct?: AwsInsight.ResourceRegionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3467,7 +3467,7 @@ export function tfInsightResourceRegionPropertyToTerraform(struct?: TfInsight.Re
 }
 
 
-export function tfInsightResourceRegionPropertyToHclTerraform(struct?: TfInsight.ResourceRegionProperty | cdktn.IResolvable): any {
+export function awsInsightResourceRegionPropertyToHclTerraform(struct?: AwsInsight.ResourceRegionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3492,7 +3492,7 @@ export function tfInsightResourceRegionPropertyToHclTerraform(struct?: TfInsight
 }
 
 
-export function tfInsightResourceTagsPropertyToTerraform(struct?: TfInsight.ResourceTagsProperty | cdktn.IResolvable): any {
+export function awsInsightResourceTagsPropertyToTerraform(struct?: AwsInsight.ResourceTagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3505,7 +3505,7 @@ export function tfInsightResourceTagsPropertyToTerraform(struct?: TfInsight.Reso
 }
 
 
-export function tfInsightResourceTagsPropertyToHclTerraform(struct?: TfInsight.ResourceTagsProperty | cdktn.IResolvable): any {
+export function awsInsightResourceTagsPropertyToHclTerraform(struct?: AwsInsight.ResourceTagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3536,7 +3536,7 @@ export function tfInsightResourceTagsPropertyToHclTerraform(struct?: TfInsight.R
 }
 
 
-export function tfInsightResourceTypePropertyToTerraform(struct?: TfInsight.ResourceTypeProperty | cdktn.IResolvable): any {
+export function awsInsightResourceTypePropertyToTerraform(struct?: AwsInsight.ResourceTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3548,7 +3548,7 @@ export function tfInsightResourceTypePropertyToTerraform(struct?: TfInsight.Reso
 }
 
 
-export function tfInsightResourceTypePropertyToHclTerraform(struct?: TfInsight.ResourceTypeProperty | cdktn.IResolvable): any {
+export function awsInsightResourceTypePropertyToHclTerraform(struct?: AwsInsight.ResourceTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3573,7 +3573,7 @@ export function tfInsightResourceTypePropertyToHclTerraform(struct?: TfInsight.R
 }
 
 
-export function tfInsightSeverityLabelPropertyToTerraform(struct?: TfInsight.SeverityLabelProperty | cdktn.IResolvable): any {
+export function awsInsightSeverityLabelPropertyToTerraform(struct?: AwsInsight.SeverityLabelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3585,7 +3585,7 @@ export function tfInsightSeverityLabelPropertyToTerraform(struct?: TfInsight.Sev
 }
 
 
-export function tfInsightSeverityLabelPropertyToHclTerraform(struct?: TfInsight.SeverityLabelProperty | cdktn.IResolvable): any {
+export function awsInsightSeverityLabelPropertyToHclTerraform(struct?: AwsInsight.SeverityLabelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3610,7 +3610,7 @@ export function tfInsightSeverityLabelPropertyToHclTerraform(struct?: TfInsight.
 }
 
 
-export function tfInsightSourceUrlPropertyToTerraform(struct?: TfInsight.SourceUrlProperty | cdktn.IResolvable): any {
+export function awsInsightSourceUrlPropertyToTerraform(struct?: AwsInsight.SourceUrlProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3622,7 +3622,7 @@ export function tfInsightSourceUrlPropertyToTerraform(struct?: TfInsight.SourceU
 }
 
 
-export function tfInsightSourceUrlPropertyToHclTerraform(struct?: TfInsight.SourceUrlProperty | cdktn.IResolvable): any {
+export function awsInsightSourceUrlPropertyToHclTerraform(struct?: AwsInsight.SourceUrlProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3647,7 +3647,7 @@ export function tfInsightSourceUrlPropertyToHclTerraform(struct?: TfInsight.Sour
 }
 
 
-export function tfInsightThreatIntelIndicatorCategoryPropertyToTerraform(struct?: TfInsight.ThreatIntelIndicatorCategoryProperty | cdktn.IResolvable): any {
+export function awsInsightThreatIntelIndicatorCategoryPropertyToTerraform(struct?: AwsInsight.ThreatIntelIndicatorCategoryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3659,7 +3659,7 @@ export function tfInsightThreatIntelIndicatorCategoryPropertyToTerraform(struct?
 }
 
 
-export function tfInsightThreatIntelIndicatorCategoryPropertyToHclTerraform(struct?: TfInsight.ThreatIntelIndicatorCategoryProperty | cdktn.IResolvable): any {
+export function awsInsightThreatIntelIndicatorCategoryPropertyToHclTerraform(struct?: AwsInsight.ThreatIntelIndicatorCategoryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3684,7 +3684,7 @@ export function tfInsightThreatIntelIndicatorCategoryPropertyToHclTerraform(stru
 }
 
 
-export function tfInsightFiltersThreatIntelIndicatorLastObservedAtDateRangePropertyToTerraform(struct?: TfInsight.FiltersThreatIntelIndicatorLastObservedAtDateRangePropertyOutputReference | TfInsight.FiltersThreatIntelIndicatorLastObservedAtDateRangeProperty): any {
+export function awsInsightFiltersThreatIntelIndicatorLastObservedAtDateRangePropertyToTerraform(struct?: AwsInsight.FiltersThreatIntelIndicatorLastObservedAtDateRangePropertyOutputReference | AwsInsight.FiltersThreatIntelIndicatorLastObservedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3696,7 +3696,7 @@ export function tfInsightFiltersThreatIntelIndicatorLastObservedAtDateRangePrope
 }
 
 
-export function tfInsightFiltersThreatIntelIndicatorLastObservedAtDateRangePropertyToHclTerraform(struct?: TfInsight.FiltersThreatIntelIndicatorLastObservedAtDateRangePropertyOutputReference | TfInsight.FiltersThreatIntelIndicatorLastObservedAtDateRangeProperty): any {
+export function awsInsightFiltersThreatIntelIndicatorLastObservedAtDateRangePropertyToHclTerraform(struct?: AwsInsight.FiltersThreatIntelIndicatorLastObservedAtDateRangePropertyOutputReference | AwsInsight.FiltersThreatIntelIndicatorLastObservedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3721,7 +3721,7 @@ export function tfInsightFiltersThreatIntelIndicatorLastObservedAtDateRangePrope
 }
 
 
-export function tfInsightThreatIntelIndicatorLastObservedAtPropertyToTerraform(struct?: TfInsight.ThreatIntelIndicatorLastObservedAtProperty | cdktn.IResolvable): any {
+export function awsInsightThreatIntelIndicatorLastObservedAtPropertyToTerraform(struct?: AwsInsight.ThreatIntelIndicatorLastObservedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3729,12 +3729,12 @@ export function tfInsightThreatIntelIndicatorLastObservedAtPropertyToTerraform(s
   return {
     end: cdktn.stringToTerraform(struct!.end),
     start: cdktn.stringToTerraform(struct!.start),
-    date_range: tfInsightFiltersThreatIntelIndicatorLastObservedAtDateRangePropertyToTerraform(struct!.dateRange),
+    date_range: awsInsightFiltersThreatIntelIndicatorLastObservedAtDateRangePropertyToTerraform(struct!.dateRange),
   }
 }
 
 
-export function tfInsightThreatIntelIndicatorLastObservedAtPropertyToHclTerraform(struct?: TfInsight.ThreatIntelIndicatorLastObservedAtProperty | cdktn.IResolvable): any {
+export function awsInsightThreatIntelIndicatorLastObservedAtPropertyToHclTerraform(struct?: AwsInsight.ThreatIntelIndicatorLastObservedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3753,7 +3753,7 @@ export function tfInsightThreatIntelIndicatorLastObservedAtPropertyToHclTerrafor
       storageClassType: "string",
     },
     date_range: {
-      value: tfInsightFiltersThreatIntelIndicatorLastObservedAtDateRangePropertyToHclTerraform(struct!.dateRange),
+      value: awsInsightFiltersThreatIntelIndicatorLastObservedAtDateRangePropertyToHclTerraform(struct!.dateRange),
       isBlock: true,
       type: "list",
       storageClassType: "FiltersThreatIntelIndicatorLastObservedAtDateRangePropertyList",
@@ -3765,7 +3765,7 @@ export function tfInsightThreatIntelIndicatorLastObservedAtPropertyToHclTerrafor
 }
 
 
-export function tfInsightThreatIntelIndicatorSourcePropertyToTerraform(struct?: TfInsight.ThreatIntelIndicatorSourceProperty | cdktn.IResolvable): any {
+export function awsInsightThreatIntelIndicatorSourcePropertyToTerraform(struct?: AwsInsight.ThreatIntelIndicatorSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3777,7 +3777,7 @@ export function tfInsightThreatIntelIndicatorSourcePropertyToTerraform(struct?: 
 }
 
 
-export function tfInsightThreatIntelIndicatorSourcePropertyToHclTerraform(struct?: TfInsight.ThreatIntelIndicatorSourceProperty | cdktn.IResolvable): any {
+export function awsInsightThreatIntelIndicatorSourcePropertyToHclTerraform(struct?: AwsInsight.ThreatIntelIndicatorSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3802,7 +3802,7 @@ export function tfInsightThreatIntelIndicatorSourcePropertyToHclTerraform(struct
 }
 
 
-export function tfInsightThreatIntelIndicatorSourceUrlPropertyToTerraform(struct?: TfInsight.ThreatIntelIndicatorSourceUrlProperty | cdktn.IResolvable): any {
+export function awsInsightThreatIntelIndicatorSourceUrlPropertyToTerraform(struct?: AwsInsight.ThreatIntelIndicatorSourceUrlProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3814,7 +3814,7 @@ export function tfInsightThreatIntelIndicatorSourceUrlPropertyToTerraform(struct
 }
 
 
-export function tfInsightThreatIntelIndicatorSourceUrlPropertyToHclTerraform(struct?: TfInsight.ThreatIntelIndicatorSourceUrlProperty | cdktn.IResolvable): any {
+export function awsInsightThreatIntelIndicatorSourceUrlPropertyToHclTerraform(struct?: AwsInsight.ThreatIntelIndicatorSourceUrlProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3839,7 +3839,7 @@ export function tfInsightThreatIntelIndicatorSourceUrlPropertyToHclTerraform(str
 }
 
 
-export function tfInsightThreatIntelIndicatorTypePropertyToTerraform(struct?: TfInsight.ThreatIntelIndicatorTypeProperty | cdktn.IResolvable): any {
+export function awsInsightThreatIntelIndicatorTypePropertyToTerraform(struct?: AwsInsight.ThreatIntelIndicatorTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3851,7 +3851,7 @@ export function tfInsightThreatIntelIndicatorTypePropertyToTerraform(struct?: Tf
 }
 
 
-export function tfInsightThreatIntelIndicatorTypePropertyToHclTerraform(struct?: TfInsight.ThreatIntelIndicatorTypeProperty | cdktn.IResolvable): any {
+export function awsInsightThreatIntelIndicatorTypePropertyToHclTerraform(struct?: AwsInsight.ThreatIntelIndicatorTypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3876,7 +3876,7 @@ export function tfInsightThreatIntelIndicatorTypePropertyToHclTerraform(struct?:
 }
 
 
-export function tfInsightThreatIntelIndicatorValuePropertyToTerraform(struct?: TfInsight.ThreatIntelIndicatorValueProperty | cdktn.IResolvable): any {
+export function awsInsightThreatIntelIndicatorValuePropertyToTerraform(struct?: AwsInsight.ThreatIntelIndicatorValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3888,7 +3888,7 @@ export function tfInsightThreatIntelIndicatorValuePropertyToTerraform(struct?: T
 }
 
 
-export function tfInsightThreatIntelIndicatorValuePropertyToHclTerraform(struct?: TfInsight.ThreatIntelIndicatorValueProperty | cdktn.IResolvable): any {
+export function awsInsightThreatIntelIndicatorValuePropertyToHclTerraform(struct?: AwsInsight.ThreatIntelIndicatorValueProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3913,7 +3913,7 @@ export function tfInsightThreatIntelIndicatorValuePropertyToHclTerraform(struct?
 }
 
 
-export function tfInsightTitlePropertyToTerraform(struct?: TfInsight.TitleProperty | cdktn.IResolvable): any {
+export function awsInsightTitlePropertyToTerraform(struct?: AwsInsight.TitleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3925,7 +3925,7 @@ export function tfInsightTitlePropertyToTerraform(struct?: TfInsight.TitleProper
 }
 
 
-export function tfInsightTitlePropertyToHclTerraform(struct?: TfInsight.TitleProperty | cdktn.IResolvable): any {
+export function awsInsightTitlePropertyToHclTerraform(struct?: AwsInsight.TitleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3950,7 +3950,7 @@ export function tfInsightTitlePropertyToHclTerraform(struct?: TfInsight.TitlePro
 }
 
 
-export function tfInsightTypePropertyToTerraform(struct?: TfInsight.TypeProperty | cdktn.IResolvable): any {
+export function awsInsightTypePropertyToTerraform(struct?: AwsInsight.TypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3962,7 +3962,7 @@ export function tfInsightTypePropertyToTerraform(struct?: TfInsight.TypeProperty
 }
 
 
-export function tfInsightTypePropertyToHclTerraform(struct?: TfInsight.TypeProperty | cdktn.IResolvable): any {
+export function awsInsightTypePropertyToHclTerraform(struct?: AwsInsight.TypeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3987,7 +3987,7 @@ export function tfInsightTypePropertyToHclTerraform(struct?: TfInsight.TypePrope
 }
 
 
-export function tfInsightFiltersUpdatedAtDateRangePropertyToTerraform(struct?: TfInsight.FiltersUpdatedAtDateRangePropertyOutputReference | TfInsight.FiltersUpdatedAtDateRangeProperty): any {
+export function awsInsightFiltersUpdatedAtDateRangePropertyToTerraform(struct?: AwsInsight.FiltersUpdatedAtDateRangePropertyOutputReference | AwsInsight.FiltersUpdatedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -3999,7 +3999,7 @@ export function tfInsightFiltersUpdatedAtDateRangePropertyToTerraform(struct?: T
 }
 
 
-export function tfInsightFiltersUpdatedAtDateRangePropertyToHclTerraform(struct?: TfInsight.FiltersUpdatedAtDateRangePropertyOutputReference | TfInsight.FiltersUpdatedAtDateRangeProperty): any {
+export function awsInsightFiltersUpdatedAtDateRangePropertyToHclTerraform(struct?: AwsInsight.FiltersUpdatedAtDateRangePropertyOutputReference | AwsInsight.FiltersUpdatedAtDateRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4024,7 +4024,7 @@ export function tfInsightFiltersUpdatedAtDateRangePropertyToHclTerraform(struct?
 }
 
 
-export function tfInsightUpdatedAtPropertyToTerraform(struct?: TfInsight.UpdatedAtProperty | cdktn.IResolvable): any {
+export function awsInsightUpdatedAtPropertyToTerraform(struct?: AwsInsight.UpdatedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4032,12 +4032,12 @@ export function tfInsightUpdatedAtPropertyToTerraform(struct?: TfInsight.Updated
   return {
     end: cdktn.stringToTerraform(struct!.end),
     start: cdktn.stringToTerraform(struct!.start),
-    date_range: tfInsightFiltersUpdatedAtDateRangePropertyToTerraform(struct!.dateRange),
+    date_range: awsInsightFiltersUpdatedAtDateRangePropertyToTerraform(struct!.dateRange),
   }
 }
 
 
-export function tfInsightUpdatedAtPropertyToHclTerraform(struct?: TfInsight.UpdatedAtProperty | cdktn.IResolvable): any {
+export function awsInsightUpdatedAtPropertyToHclTerraform(struct?: AwsInsight.UpdatedAtProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4056,7 +4056,7 @@ export function tfInsightUpdatedAtPropertyToHclTerraform(struct?: TfInsight.Upda
       storageClassType: "string",
     },
     date_range: {
-      value: tfInsightFiltersUpdatedAtDateRangePropertyToHclTerraform(struct!.dateRange),
+      value: awsInsightFiltersUpdatedAtDateRangePropertyToHclTerraform(struct!.dateRange),
       isBlock: true,
       type: "list",
       storageClassType: "FiltersUpdatedAtDateRangePropertyList",
@@ -4068,7 +4068,7 @@ export function tfInsightUpdatedAtPropertyToHclTerraform(struct?: TfInsight.Upda
 }
 
 
-export function tfInsightUserDefinedValuesPropertyToTerraform(struct?: TfInsight.UserDefinedValuesProperty | cdktn.IResolvable): any {
+export function awsInsightUserDefinedValuesPropertyToTerraform(struct?: AwsInsight.UserDefinedValuesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4081,7 +4081,7 @@ export function tfInsightUserDefinedValuesPropertyToTerraform(struct?: TfInsight
 }
 
 
-export function tfInsightUserDefinedValuesPropertyToHclTerraform(struct?: TfInsight.UserDefinedValuesProperty | cdktn.IResolvable): any {
+export function awsInsightUserDefinedValuesPropertyToHclTerraform(struct?: AwsInsight.UserDefinedValuesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4112,7 +4112,7 @@ export function tfInsightUserDefinedValuesPropertyToHclTerraform(struct?: TfInsi
 }
 
 
-export function tfInsightVerificationStatePropertyToTerraform(struct?: TfInsight.VerificationStateProperty | cdktn.IResolvable): any {
+export function awsInsightVerificationStatePropertyToTerraform(struct?: AwsInsight.VerificationStateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4124,7 +4124,7 @@ export function tfInsightVerificationStatePropertyToTerraform(struct?: TfInsight
 }
 
 
-export function tfInsightVerificationStatePropertyToHclTerraform(struct?: TfInsight.VerificationStateProperty | cdktn.IResolvable): any {
+export function awsInsightVerificationStatePropertyToHclTerraform(struct?: AwsInsight.VerificationStateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4149,7 +4149,7 @@ export function tfInsightVerificationStatePropertyToHclTerraform(struct?: TfInsi
 }
 
 
-export function tfInsightWorkflowStatusPropertyToTerraform(struct?: TfInsight.WorkflowStatusProperty | cdktn.IResolvable): any {
+export function awsInsightWorkflowStatusPropertyToTerraform(struct?: AwsInsight.WorkflowStatusProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4161,7 +4161,7 @@ export function tfInsightWorkflowStatusPropertyToTerraform(struct?: TfInsight.Wo
 }
 
 
-export function tfInsightWorkflowStatusPropertyToHclTerraform(struct?: TfInsight.WorkflowStatusProperty | cdktn.IResolvable): any {
+export function awsInsightWorkflowStatusPropertyToHclTerraform(struct?: AwsInsight.WorkflowStatusProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -4186,669 +4186,669 @@ export function tfInsightWorkflowStatusPropertyToHclTerraform(struct?: TfInsight
 }
 
 
-export function tfInsightFiltersPropertyToTerraform(struct?: TfInsight.FiltersPropertyOutputReference | TfInsight.FiltersProperty): any {
+export function awsInsightFiltersPropertyToTerraform(struct?: AwsInsight.FiltersPropertyOutputReference | AwsInsight.FiltersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    aws_account_id: cdktn.listMapper(tfInsightAwsAccountIdPropertyToTerraform, true)(struct!.awsAccountId),
-    aws_account_name: cdktn.listMapper(tfInsightAwsAccountNamePropertyToTerraform, true)(struct!.awsAccountName),
-    company_name: cdktn.listMapper(tfInsightCompanyNamePropertyToTerraform, true)(struct!.companyName),
-    compliance_associated_standards_id: cdktn.listMapper(tfInsightComplianceAssociatedStandardsIdPropertyToTerraform, true)(struct!.complianceAssociatedStandardsId),
-    compliance_security_control_id: cdktn.listMapper(tfInsightComplianceSecurityControlIdPropertyToTerraform, true)(struct!.complianceSecurityControlId),
-    compliance_security_control_parameters_name: cdktn.listMapper(tfInsightComplianceSecurityControlParametersNamePropertyToTerraform, true)(struct!.complianceSecurityControlParametersName),
-    compliance_security_control_parameters_value: cdktn.listMapper(tfInsightComplianceSecurityControlParametersValuePropertyToTerraform, true)(struct!.complianceSecurityControlParametersValue),
-    compliance_status: cdktn.listMapper(tfInsightComplianceStatusPropertyToTerraform, true)(struct!.complianceStatus),
-    confidence: cdktn.listMapper(tfInsightConfidencePropertyToTerraform, true)(struct!.confidence),
-    created_at: cdktn.listMapper(tfInsightCreatedAtPropertyToTerraform, true)(struct!.createdAt),
-    criticality: cdktn.listMapper(tfInsightCriticalityPropertyToTerraform, true)(struct!.criticality),
-    description: cdktn.listMapper(tfInsightDescriptionPropertyToTerraform, true)(struct!.description),
-    finding_provider_fields_confidence: cdktn.listMapper(tfInsightFindingProviderFieldsConfidencePropertyToTerraform, true)(struct!.findingProviderFieldsConfidence),
-    finding_provider_fields_criticality: cdktn.listMapper(tfInsightFindingProviderFieldsCriticalityPropertyToTerraform, true)(struct!.findingProviderFieldsCriticality),
-    finding_provider_fields_related_findings_id: cdktn.listMapper(tfInsightFindingProviderFieldsRelatedFindingsIdPropertyToTerraform, true)(struct!.findingProviderFieldsRelatedFindingsId),
-    finding_provider_fields_related_findings_product_arn: cdktn.listMapper(tfInsightFindingProviderFieldsRelatedFindingsProductArnPropertyToTerraform, true)(struct!.findingProviderFieldsRelatedFindingsProductArn),
-    finding_provider_fields_severity_label: cdktn.listMapper(tfInsightFindingProviderFieldsSeverityLabelPropertyToTerraform, true)(struct!.findingProviderFieldsSeverityLabel),
-    finding_provider_fields_severity_original: cdktn.listMapper(tfInsightFindingProviderFieldsSeverityOriginalPropertyToTerraform, true)(struct!.findingProviderFieldsSeverityOriginal),
-    finding_provider_fields_types: cdktn.listMapper(tfInsightFindingProviderFieldsTypesPropertyToTerraform, true)(struct!.findingProviderFieldsTypes),
-    first_observed_at: cdktn.listMapper(tfInsightFirstObservedAtPropertyToTerraform, true)(struct!.firstObservedAt),
-    generator_id: cdktn.listMapper(tfInsightGeneratorIdPropertyToTerraform, true)(struct!.generatorId),
-    id: cdktn.listMapper(tfInsightIdPropertyToTerraform, true)(struct!.id),
-    keyword: cdktn.listMapper(tfInsightKeywordPropertyToTerraform, true)(struct!.keyword),
-    last_observed_at: cdktn.listMapper(tfInsightLastObservedAtPropertyToTerraform, true)(struct!.lastObservedAt),
-    malware_name: cdktn.listMapper(tfInsightMalwareNamePropertyToTerraform, true)(struct!.malwareName),
-    malware_path: cdktn.listMapper(tfInsightMalwarePathPropertyToTerraform, true)(struct!.malwarePath),
-    malware_state: cdktn.listMapper(tfInsightMalwareStatePropertyToTerraform, true)(struct!.malwareState),
-    malware_type: cdktn.listMapper(tfInsightMalwareTypePropertyToTerraform, true)(struct!.malwareType),
-    network_destination_domain: cdktn.listMapper(tfInsightNetworkDestinationDomainPropertyToTerraform, true)(struct!.networkDestinationDomain),
-    network_destination_ipv4: cdktn.listMapper(tfInsightNetworkDestinationIpv4PropertyToTerraform, true)(struct!.networkDestinationIpv4),
-    network_destination_ipv6: cdktn.listMapper(tfInsightNetworkDestinationIpv6PropertyToTerraform, true)(struct!.networkDestinationIpv6),
-    network_destination_port: cdktn.listMapper(tfInsightNetworkDestinationPortPropertyToTerraform, true)(struct!.networkDestinationPort),
-    network_direction: cdktn.listMapper(tfInsightNetworkDirectionPropertyToTerraform, true)(struct!.networkDirection),
-    network_protocol: cdktn.listMapper(tfInsightNetworkProtocolPropertyToTerraform, true)(struct!.networkProtocol),
-    network_source_domain: cdktn.listMapper(tfInsightNetworkSourceDomainPropertyToTerraform, true)(struct!.networkSourceDomain),
-    network_source_ipv4: cdktn.listMapper(tfInsightNetworkSourceIpv4PropertyToTerraform, true)(struct!.networkSourceIpv4),
-    network_source_ipv6: cdktn.listMapper(tfInsightNetworkSourceIpv6PropertyToTerraform, true)(struct!.networkSourceIpv6),
-    network_source_mac: cdktn.listMapper(tfInsightNetworkSourceMacPropertyToTerraform, true)(struct!.networkSourceMac),
-    network_source_port: cdktn.listMapper(tfInsightNetworkSourcePortPropertyToTerraform, true)(struct!.networkSourcePort),
-    note_text: cdktn.listMapper(tfInsightNoteTextPropertyToTerraform, true)(struct!.noteText),
-    note_updated_at: cdktn.listMapper(tfInsightNoteUpdatedAtPropertyToTerraform, true)(struct!.noteUpdatedAt),
-    note_updated_by: cdktn.listMapper(tfInsightNoteUpdatedByPropertyToTerraform, true)(struct!.noteUpdatedBy),
-    process_launched_at: cdktn.listMapper(tfInsightProcessLaunchedAtPropertyToTerraform, true)(struct!.processLaunchedAt),
-    process_name: cdktn.listMapper(tfInsightProcessNamePropertyToTerraform, true)(struct!.processName),
-    process_parent_pid: cdktn.listMapper(tfInsightProcessParentPidPropertyToTerraform, true)(struct!.processParentPid),
-    process_path: cdktn.listMapper(tfInsightProcessPathPropertyToTerraform, true)(struct!.processPath),
-    process_pid: cdktn.listMapper(tfInsightProcessPidPropertyToTerraform, true)(struct!.processPid),
-    process_terminated_at: cdktn.listMapper(tfInsightProcessTerminatedAtPropertyToTerraform, true)(struct!.processTerminatedAt),
-    product_arn: cdktn.listMapper(tfInsightProductArnPropertyToTerraform, true)(struct!.productArn),
-    product_fields: cdktn.listMapper(tfInsightProductFieldsPropertyToTerraform, true)(struct!.productFields),
-    product_name: cdktn.listMapper(tfInsightProductNamePropertyToTerraform, true)(struct!.productName),
-    recommendation_text: cdktn.listMapper(tfInsightRecommendationTextPropertyToTerraform, true)(struct!.recommendationText),
-    record_state: cdktn.listMapper(tfInsightRecordStatePropertyToTerraform, true)(struct!.recordState),
-    related_findings_id: cdktn.listMapper(tfInsightRelatedFindingsIdPropertyToTerraform, true)(struct!.relatedFindingsId),
-    related_findings_product_arn: cdktn.listMapper(tfInsightRelatedFindingsProductArnPropertyToTerraform, true)(struct!.relatedFindingsProductArn),
-    resource_aws_ec2_instance_iam_instance_profile_arn: cdktn.listMapper(tfInsightResourceAwsEc2InstanceIamInstanceProfileArnPropertyToTerraform, true)(struct!.resourceAwsEc2InstanceIamInstanceProfileArn),
-    resource_aws_ec2_instance_image_id: cdktn.listMapper(tfInsightResourceAwsEc2InstanceImageIdPropertyToTerraform, true)(struct!.resourceAwsEc2InstanceImageId),
-    resource_aws_ec2_instance_ipv4_addresses: cdktn.listMapper(tfInsightResourceAwsEc2InstanceIpv4AddressesPropertyToTerraform, true)(struct!.resourceAwsEc2InstanceIpv4Addresses),
-    resource_aws_ec2_instance_ipv6_addresses: cdktn.listMapper(tfInsightResourceAwsEc2InstanceIpv6AddressesPropertyToTerraform, true)(struct!.resourceAwsEc2InstanceIpv6Addresses),
-    resource_aws_ec2_instance_key_name: cdktn.listMapper(tfInsightResourceAwsEc2InstanceKeyNamePropertyToTerraform, true)(struct!.resourceAwsEc2InstanceKeyName),
-    resource_aws_ec2_instance_launched_at: cdktn.listMapper(tfInsightResourceAwsEc2InstanceLaunchedAtPropertyToTerraform, true)(struct!.resourceAwsEc2InstanceLaunchedAt),
-    resource_aws_ec2_instance_subnet_id: cdktn.listMapper(tfInsightResourceAwsEc2InstanceSubnetIdPropertyToTerraform, true)(struct!.resourceAwsEc2InstanceSubnetId),
-    resource_aws_ec2_instance_type: cdktn.listMapper(tfInsightResourceAwsEc2InstanceTypePropertyToTerraform, true)(struct!.resourceAwsEc2InstanceType),
-    resource_aws_ec2_instance_vpc_id: cdktn.listMapper(tfInsightResourceAwsEc2InstanceVpcIdPropertyToTerraform, true)(struct!.resourceAwsEc2InstanceVpcId),
-    resource_aws_iam_access_key_created_at: cdktn.listMapper(tfInsightResourceAwsIamAccessKeyCreatedAtPropertyToTerraform, true)(struct!.resourceAwsIamAccessKeyCreatedAt),
-    resource_aws_iam_access_key_status: cdktn.listMapper(tfInsightResourceAwsIamAccessKeyStatusPropertyToTerraform, true)(struct!.resourceAwsIamAccessKeyStatus),
-    resource_aws_iam_access_key_user_name: cdktn.listMapper(tfInsightResourceAwsIamAccessKeyUserNamePropertyToTerraform, true)(struct!.resourceAwsIamAccessKeyUserName),
-    resource_aws_s3_bucket_owner_id: cdktn.listMapper(tfInsightResourceAwsS3BucketOwnerIdPropertyToTerraform, true)(struct!.resourceAwsS3BucketOwnerId),
-    resource_aws_s3_bucket_owner_name: cdktn.listMapper(tfInsightResourceAwsS3BucketOwnerNamePropertyToTerraform, true)(struct!.resourceAwsS3BucketOwnerName),
-    resource_container_image_id: cdktn.listMapper(tfInsightResourceContainerImageIdPropertyToTerraform, true)(struct!.resourceContainerImageId),
-    resource_container_image_name: cdktn.listMapper(tfInsightResourceContainerImageNamePropertyToTerraform, true)(struct!.resourceContainerImageName),
-    resource_container_launched_at: cdktn.listMapper(tfInsightResourceContainerLaunchedAtPropertyToTerraform, true)(struct!.resourceContainerLaunchedAt),
-    resource_container_name: cdktn.listMapper(tfInsightResourceContainerNamePropertyToTerraform, true)(struct!.resourceContainerName),
-    resource_details_other: cdktn.listMapper(tfInsightResourceDetailsOtherPropertyToTerraform, true)(struct!.resourceDetailsOther),
-    resource_id: cdktn.listMapper(tfInsightResourceIdPropertyToTerraform, true)(struct!.resourceId),
-    resource_partition: cdktn.listMapper(tfInsightResourcePartitionPropertyToTerraform, true)(struct!.resourcePartition),
-    resource_region: cdktn.listMapper(tfInsightResourceRegionPropertyToTerraform, true)(struct!.resourceRegion),
-    resource_tags: cdktn.listMapper(tfInsightResourceTagsPropertyToTerraform, true)(struct!.resourceTags),
-    resource_type: cdktn.listMapper(tfInsightResourceTypePropertyToTerraform, true)(struct!.resourceType),
-    severity_label: cdktn.listMapper(tfInsightSeverityLabelPropertyToTerraform, true)(struct!.severityLabel),
-    source_url: cdktn.listMapper(tfInsightSourceUrlPropertyToTerraform, true)(struct!.sourceUrl),
-    threat_intel_indicator_category: cdktn.listMapper(tfInsightThreatIntelIndicatorCategoryPropertyToTerraform, true)(struct!.threatIntelIndicatorCategory),
-    threat_intel_indicator_last_observed_at: cdktn.listMapper(tfInsightThreatIntelIndicatorLastObservedAtPropertyToTerraform, true)(struct!.threatIntelIndicatorLastObservedAt),
-    threat_intel_indicator_source: cdktn.listMapper(tfInsightThreatIntelIndicatorSourcePropertyToTerraform, true)(struct!.threatIntelIndicatorSource),
-    threat_intel_indicator_source_url: cdktn.listMapper(tfInsightThreatIntelIndicatorSourceUrlPropertyToTerraform, true)(struct!.threatIntelIndicatorSourceUrl),
-    threat_intel_indicator_type: cdktn.listMapper(tfInsightThreatIntelIndicatorTypePropertyToTerraform, true)(struct!.threatIntelIndicatorType),
-    threat_intel_indicator_value: cdktn.listMapper(tfInsightThreatIntelIndicatorValuePropertyToTerraform, true)(struct!.threatIntelIndicatorValue),
-    title: cdktn.listMapper(tfInsightTitlePropertyToTerraform, true)(struct!.title),
-    type: cdktn.listMapper(tfInsightTypePropertyToTerraform, true)(struct!.type),
-    updated_at: cdktn.listMapper(tfInsightUpdatedAtPropertyToTerraform, true)(struct!.updatedAt),
-    user_defined_values: cdktn.listMapper(tfInsightUserDefinedValuesPropertyToTerraform, true)(struct!.userDefinedValues),
-    verification_state: cdktn.listMapper(tfInsightVerificationStatePropertyToTerraform, true)(struct!.verificationState),
-    workflow_status: cdktn.listMapper(tfInsightWorkflowStatusPropertyToTerraform, true)(struct!.workflowStatus),
+    aws_account_id: cdktn.listMapper(awsInsightAwsAccountIdPropertyToTerraform, true)(struct!.awsAccountId),
+    aws_account_name: cdktn.listMapper(awsInsightAwsAccountNamePropertyToTerraform, true)(struct!.awsAccountName),
+    company_name: cdktn.listMapper(awsInsightCompanyNamePropertyToTerraform, true)(struct!.companyName),
+    compliance_associated_standards_id: cdktn.listMapper(awsInsightComplianceAssociatedStandardsIdPropertyToTerraform, true)(struct!.complianceAssociatedStandardsId),
+    compliance_security_control_id: cdktn.listMapper(awsInsightComplianceSecurityControlIdPropertyToTerraform, true)(struct!.complianceSecurityControlId),
+    compliance_security_control_parameters_name: cdktn.listMapper(awsInsightComplianceSecurityControlParametersNamePropertyToTerraform, true)(struct!.complianceSecurityControlParametersName),
+    compliance_security_control_parameters_value: cdktn.listMapper(awsInsightComplianceSecurityControlParametersValuePropertyToTerraform, true)(struct!.complianceSecurityControlParametersValue),
+    compliance_status: cdktn.listMapper(awsInsightComplianceStatusPropertyToTerraform, true)(struct!.complianceStatus),
+    confidence: cdktn.listMapper(awsInsightConfidencePropertyToTerraform, true)(struct!.confidence),
+    created_at: cdktn.listMapper(awsInsightCreatedAtPropertyToTerraform, true)(struct!.createdAt),
+    criticality: cdktn.listMapper(awsInsightCriticalityPropertyToTerraform, true)(struct!.criticality),
+    description: cdktn.listMapper(awsInsightDescriptionPropertyToTerraform, true)(struct!.description),
+    finding_provider_fields_confidence: cdktn.listMapper(awsInsightFindingProviderFieldsConfidencePropertyToTerraform, true)(struct!.findingProviderFieldsConfidence),
+    finding_provider_fields_criticality: cdktn.listMapper(awsInsightFindingProviderFieldsCriticalityPropertyToTerraform, true)(struct!.findingProviderFieldsCriticality),
+    finding_provider_fields_related_findings_id: cdktn.listMapper(awsInsightFindingProviderFieldsRelatedFindingsIdPropertyToTerraform, true)(struct!.findingProviderFieldsRelatedFindingsId),
+    finding_provider_fields_related_findings_product_arn: cdktn.listMapper(awsInsightFindingProviderFieldsRelatedFindingsProductArnPropertyToTerraform, true)(struct!.findingProviderFieldsRelatedFindingsProductArn),
+    finding_provider_fields_severity_label: cdktn.listMapper(awsInsightFindingProviderFieldsSeverityLabelPropertyToTerraform, true)(struct!.findingProviderFieldsSeverityLabel),
+    finding_provider_fields_severity_original: cdktn.listMapper(awsInsightFindingProviderFieldsSeverityOriginalPropertyToTerraform, true)(struct!.findingProviderFieldsSeverityOriginal),
+    finding_provider_fields_types: cdktn.listMapper(awsInsightFindingProviderFieldsTypesPropertyToTerraform, true)(struct!.findingProviderFieldsTypes),
+    first_observed_at: cdktn.listMapper(awsInsightFirstObservedAtPropertyToTerraform, true)(struct!.firstObservedAt),
+    generator_id: cdktn.listMapper(awsInsightGeneratorIdPropertyToTerraform, true)(struct!.generatorId),
+    id: cdktn.listMapper(awsInsightIdPropertyToTerraform, true)(struct!.id),
+    keyword: cdktn.listMapper(awsInsightKeywordPropertyToTerraform, true)(struct!.keyword),
+    last_observed_at: cdktn.listMapper(awsInsightLastObservedAtPropertyToTerraform, true)(struct!.lastObservedAt),
+    malware_name: cdktn.listMapper(awsInsightMalwareNamePropertyToTerraform, true)(struct!.malwareName),
+    malware_path: cdktn.listMapper(awsInsightMalwarePathPropertyToTerraform, true)(struct!.malwarePath),
+    malware_state: cdktn.listMapper(awsInsightMalwareStatePropertyToTerraform, true)(struct!.malwareState),
+    malware_type: cdktn.listMapper(awsInsightMalwareTypePropertyToTerraform, true)(struct!.malwareType),
+    network_destination_domain: cdktn.listMapper(awsInsightNetworkDestinationDomainPropertyToTerraform, true)(struct!.networkDestinationDomain),
+    network_destination_ipv4: cdktn.listMapper(awsInsightNetworkDestinationIpv4PropertyToTerraform, true)(struct!.networkDestinationIpv4),
+    network_destination_ipv6: cdktn.listMapper(awsInsightNetworkDestinationIpv6PropertyToTerraform, true)(struct!.networkDestinationIpv6),
+    network_destination_port: cdktn.listMapper(awsInsightNetworkDestinationPortPropertyToTerraform, true)(struct!.networkDestinationPort),
+    network_direction: cdktn.listMapper(awsInsightNetworkDirectionPropertyToTerraform, true)(struct!.networkDirection),
+    network_protocol: cdktn.listMapper(awsInsightNetworkProtocolPropertyToTerraform, true)(struct!.networkProtocol),
+    network_source_domain: cdktn.listMapper(awsInsightNetworkSourceDomainPropertyToTerraform, true)(struct!.networkSourceDomain),
+    network_source_ipv4: cdktn.listMapper(awsInsightNetworkSourceIpv4PropertyToTerraform, true)(struct!.networkSourceIpv4),
+    network_source_ipv6: cdktn.listMapper(awsInsightNetworkSourceIpv6PropertyToTerraform, true)(struct!.networkSourceIpv6),
+    network_source_mac: cdktn.listMapper(awsInsightNetworkSourceMacPropertyToTerraform, true)(struct!.networkSourceMac),
+    network_source_port: cdktn.listMapper(awsInsightNetworkSourcePortPropertyToTerraform, true)(struct!.networkSourcePort),
+    note_text: cdktn.listMapper(awsInsightNoteTextPropertyToTerraform, true)(struct!.noteText),
+    note_updated_at: cdktn.listMapper(awsInsightNoteUpdatedAtPropertyToTerraform, true)(struct!.noteUpdatedAt),
+    note_updated_by: cdktn.listMapper(awsInsightNoteUpdatedByPropertyToTerraform, true)(struct!.noteUpdatedBy),
+    process_launched_at: cdktn.listMapper(awsInsightProcessLaunchedAtPropertyToTerraform, true)(struct!.processLaunchedAt),
+    process_name: cdktn.listMapper(awsInsightProcessNamePropertyToTerraform, true)(struct!.processName),
+    process_parent_pid: cdktn.listMapper(awsInsightProcessParentPidPropertyToTerraform, true)(struct!.processParentPid),
+    process_path: cdktn.listMapper(awsInsightProcessPathPropertyToTerraform, true)(struct!.processPath),
+    process_pid: cdktn.listMapper(awsInsightProcessPidPropertyToTerraform, true)(struct!.processPid),
+    process_terminated_at: cdktn.listMapper(awsInsightProcessTerminatedAtPropertyToTerraform, true)(struct!.processTerminatedAt),
+    product_arn: cdktn.listMapper(awsInsightProductArnPropertyToTerraform, true)(struct!.productArn),
+    product_fields: cdktn.listMapper(awsInsightProductFieldsPropertyToTerraform, true)(struct!.productFields),
+    product_name: cdktn.listMapper(awsInsightProductNamePropertyToTerraform, true)(struct!.productName),
+    recommendation_text: cdktn.listMapper(awsInsightRecommendationTextPropertyToTerraform, true)(struct!.recommendationText),
+    record_state: cdktn.listMapper(awsInsightRecordStatePropertyToTerraform, true)(struct!.recordState),
+    related_findings_id: cdktn.listMapper(awsInsightRelatedFindingsIdPropertyToTerraform, true)(struct!.relatedFindingsId),
+    related_findings_product_arn: cdktn.listMapper(awsInsightRelatedFindingsProductArnPropertyToTerraform, true)(struct!.relatedFindingsProductArn),
+    resource_aws_ec2_instance_iam_instance_profile_arn: cdktn.listMapper(awsInsightResourceAwsEc2InstanceIamInstanceProfileArnPropertyToTerraform, true)(struct!.resourceAwsEc2InstanceIamInstanceProfileArn),
+    resource_aws_ec2_instance_image_id: cdktn.listMapper(awsInsightResourceAwsEc2InstanceImageIdPropertyToTerraform, true)(struct!.resourceAwsEc2InstanceImageId),
+    resource_aws_ec2_instance_ipv4_addresses: cdktn.listMapper(awsInsightResourceAwsEc2InstanceIpv4AddressesPropertyToTerraform, true)(struct!.resourceAwsEc2InstanceIpv4Addresses),
+    resource_aws_ec2_instance_ipv6_addresses: cdktn.listMapper(awsInsightResourceAwsEc2InstanceIpv6AddressesPropertyToTerraform, true)(struct!.resourceAwsEc2InstanceIpv6Addresses),
+    resource_aws_ec2_instance_key_name: cdktn.listMapper(awsInsightResourceAwsEc2InstanceKeyNamePropertyToTerraform, true)(struct!.resourceAwsEc2InstanceKeyName),
+    resource_aws_ec2_instance_launched_at: cdktn.listMapper(awsInsightResourceAwsEc2InstanceLaunchedAtPropertyToTerraform, true)(struct!.resourceAwsEc2InstanceLaunchedAt),
+    resource_aws_ec2_instance_subnet_id: cdktn.listMapper(awsInsightResourceAwsEc2InstanceSubnetIdPropertyToTerraform, true)(struct!.resourceAwsEc2InstanceSubnetId),
+    resource_aws_ec2_instance_type: cdktn.listMapper(awsInsightResourceAwsEc2InstanceTypePropertyToTerraform, true)(struct!.resourceAwsEc2InstanceType),
+    resource_aws_ec2_instance_vpc_id: cdktn.listMapper(awsInsightResourceAwsEc2InstanceVpcIdPropertyToTerraform, true)(struct!.resourceAwsEc2InstanceVpcId),
+    resource_aws_iam_access_key_created_at: cdktn.listMapper(awsInsightResourceAwsIamAccessKeyCreatedAtPropertyToTerraform, true)(struct!.resourceAwsIamAccessKeyCreatedAt),
+    resource_aws_iam_access_key_status: cdktn.listMapper(awsInsightResourceAwsIamAccessKeyStatusPropertyToTerraform, true)(struct!.resourceAwsIamAccessKeyStatus),
+    resource_aws_iam_access_key_user_name: cdktn.listMapper(awsInsightResourceAwsIamAccessKeyUserNamePropertyToTerraform, true)(struct!.resourceAwsIamAccessKeyUserName),
+    resource_aws_s3_bucket_owner_id: cdktn.listMapper(awsInsightResourceAwsS3BucketOwnerIdPropertyToTerraform, true)(struct!.resourceAwsS3BucketOwnerId),
+    resource_aws_s3_bucket_owner_name: cdktn.listMapper(awsInsightResourceAwsS3BucketOwnerNamePropertyToTerraform, true)(struct!.resourceAwsS3BucketOwnerName),
+    resource_container_image_id: cdktn.listMapper(awsInsightResourceContainerImageIdPropertyToTerraform, true)(struct!.resourceContainerImageId),
+    resource_container_image_name: cdktn.listMapper(awsInsightResourceContainerImageNamePropertyToTerraform, true)(struct!.resourceContainerImageName),
+    resource_container_launched_at: cdktn.listMapper(awsInsightResourceContainerLaunchedAtPropertyToTerraform, true)(struct!.resourceContainerLaunchedAt),
+    resource_container_name: cdktn.listMapper(awsInsightResourceContainerNamePropertyToTerraform, true)(struct!.resourceContainerName),
+    resource_details_other: cdktn.listMapper(awsInsightResourceDetailsOtherPropertyToTerraform, true)(struct!.resourceDetailsOther),
+    resource_id: cdktn.listMapper(awsInsightResourceIdPropertyToTerraform, true)(struct!.resourceId),
+    resource_partition: cdktn.listMapper(awsInsightResourcePartitionPropertyToTerraform, true)(struct!.resourcePartition),
+    resource_region: cdktn.listMapper(awsInsightResourceRegionPropertyToTerraform, true)(struct!.resourceRegion),
+    resource_tags: cdktn.listMapper(awsInsightResourceTagsPropertyToTerraform, true)(struct!.resourceTags),
+    resource_type: cdktn.listMapper(awsInsightResourceTypePropertyToTerraform, true)(struct!.resourceType),
+    severity_label: cdktn.listMapper(awsInsightSeverityLabelPropertyToTerraform, true)(struct!.severityLabel),
+    source_url: cdktn.listMapper(awsInsightSourceUrlPropertyToTerraform, true)(struct!.sourceUrl),
+    threat_intel_indicator_category: cdktn.listMapper(awsInsightThreatIntelIndicatorCategoryPropertyToTerraform, true)(struct!.threatIntelIndicatorCategory),
+    threat_intel_indicator_last_observed_at: cdktn.listMapper(awsInsightThreatIntelIndicatorLastObservedAtPropertyToTerraform, true)(struct!.threatIntelIndicatorLastObservedAt),
+    threat_intel_indicator_source: cdktn.listMapper(awsInsightThreatIntelIndicatorSourcePropertyToTerraform, true)(struct!.threatIntelIndicatorSource),
+    threat_intel_indicator_source_url: cdktn.listMapper(awsInsightThreatIntelIndicatorSourceUrlPropertyToTerraform, true)(struct!.threatIntelIndicatorSourceUrl),
+    threat_intel_indicator_type: cdktn.listMapper(awsInsightThreatIntelIndicatorTypePropertyToTerraform, true)(struct!.threatIntelIndicatorType),
+    threat_intel_indicator_value: cdktn.listMapper(awsInsightThreatIntelIndicatorValuePropertyToTerraform, true)(struct!.threatIntelIndicatorValue),
+    title: cdktn.listMapper(awsInsightTitlePropertyToTerraform, true)(struct!.title),
+    type: cdktn.listMapper(awsInsightTypePropertyToTerraform, true)(struct!.type),
+    updated_at: cdktn.listMapper(awsInsightUpdatedAtPropertyToTerraform, true)(struct!.updatedAt),
+    user_defined_values: cdktn.listMapper(awsInsightUserDefinedValuesPropertyToTerraform, true)(struct!.userDefinedValues),
+    verification_state: cdktn.listMapper(awsInsightVerificationStatePropertyToTerraform, true)(struct!.verificationState),
+    workflow_status: cdktn.listMapper(awsInsightWorkflowStatusPropertyToTerraform, true)(struct!.workflowStatus),
   }
 }
 
 
-export function tfInsightFiltersPropertyToHclTerraform(struct?: TfInsight.FiltersPropertyOutputReference | TfInsight.FiltersProperty): any {
+export function awsInsightFiltersPropertyToHclTerraform(struct?: AwsInsight.FiltersPropertyOutputReference | AwsInsight.FiltersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     aws_account_id: {
-      value: cdktn.listMapperHcl(tfInsightAwsAccountIdPropertyToHclTerraform, true)(struct!.awsAccountId),
+      value: cdktn.listMapperHcl(awsInsightAwsAccountIdPropertyToHclTerraform, true)(struct!.awsAccountId),
       isBlock: true,
       type: "set",
       storageClassType: "AwsAccountIdPropertyList",
     },
     aws_account_name: {
-      value: cdktn.listMapperHcl(tfInsightAwsAccountNamePropertyToHclTerraform, true)(struct!.awsAccountName),
+      value: cdktn.listMapperHcl(awsInsightAwsAccountNamePropertyToHclTerraform, true)(struct!.awsAccountName),
       isBlock: true,
       type: "set",
       storageClassType: "AwsAccountNamePropertyList",
     },
     company_name: {
-      value: cdktn.listMapperHcl(tfInsightCompanyNamePropertyToHclTerraform, true)(struct!.companyName),
+      value: cdktn.listMapperHcl(awsInsightCompanyNamePropertyToHclTerraform, true)(struct!.companyName),
       isBlock: true,
       type: "set",
       storageClassType: "CompanyNamePropertyList",
     },
     compliance_associated_standards_id: {
-      value: cdktn.listMapperHcl(tfInsightComplianceAssociatedStandardsIdPropertyToHclTerraform, true)(struct!.complianceAssociatedStandardsId),
+      value: cdktn.listMapperHcl(awsInsightComplianceAssociatedStandardsIdPropertyToHclTerraform, true)(struct!.complianceAssociatedStandardsId),
       isBlock: true,
       type: "set",
       storageClassType: "ComplianceAssociatedStandardsIdPropertyList",
     },
     compliance_security_control_id: {
-      value: cdktn.listMapperHcl(tfInsightComplianceSecurityControlIdPropertyToHclTerraform, true)(struct!.complianceSecurityControlId),
+      value: cdktn.listMapperHcl(awsInsightComplianceSecurityControlIdPropertyToHclTerraform, true)(struct!.complianceSecurityControlId),
       isBlock: true,
       type: "set",
       storageClassType: "ComplianceSecurityControlIdPropertyList",
     },
     compliance_security_control_parameters_name: {
-      value: cdktn.listMapperHcl(tfInsightComplianceSecurityControlParametersNamePropertyToHclTerraform, true)(struct!.complianceSecurityControlParametersName),
+      value: cdktn.listMapperHcl(awsInsightComplianceSecurityControlParametersNamePropertyToHclTerraform, true)(struct!.complianceSecurityControlParametersName),
       isBlock: true,
       type: "set",
       storageClassType: "ComplianceSecurityControlParametersNamePropertyList",
     },
     compliance_security_control_parameters_value: {
-      value: cdktn.listMapperHcl(tfInsightComplianceSecurityControlParametersValuePropertyToHclTerraform, true)(struct!.complianceSecurityControlParametersValue),
+      value: cdktn.listMapperHcl(awsInsightComplianceSecurityControlParametersValuePropertyToHclTerraform, true)(struct!.complianceSecurityControlParametersValue),
       isBlock: true,
       type: "set",
       storageClassType: "ComplianceSecurityControlParametersValuePropertyList",
     },
     compliance_status: {
-      value: cdktn.listMapperHcl(tfInsightComplianceStatusPropertyToHclTerraform, true)(struct!.complianceStatus),
+      value: cdktn.listMapperHcl(awsInsightComplianceStatusPropertyToHclTerraform, true)(struct!.complianceStatus),
       isBlock: true,
       type: "set",
       storageClassType: "ComplianceStatusPropertyList",
     },
     confidence: {
-      value: cdktn.listMapperHcl(tfInsightConfidencePropertyToHclTerraform, true)(struct!.confidence),
+      value: cdktn.listMapperHcl(awsInsightConfidencePropertyToHclTerraform, true)(struct!.confidence),
       isBlock: true,
       type: "set",
       storageClassType: "ConfidencePropertyList",
     },
     created_at: {
-      value: cdktn.listMapperHcl(tfInsightCreatedAtPropertyToHclTerraform, true)(struct!.createdAt),
+      value: cdktn.listMapperHcl(awsInsightCreatedAtPropertyToHclTerraform, true)(struct!.createdAt),
       isBlock: true,
       type: "set",
       storageClassType: "CreatedAtPropertyList",
     },
     criticality: {
-      value: cdktn.listMapperHcl(tfInsightCriticalityPropertyToHclTerraform, true)(struct!.criticality),
+      value: cdktn.listMapperHcl(awsInsightCriticalityPropertyToHclTerraform, true)(struct!.criticality),
       isBlock: true,
       type: "set",
       storageClassType: "CriticalityPropertyList",
     },
     description: {
-      value: cdktn.listMapperHcl(tfInsightDescriptionPropertyToHclTerraform, true)(struct!.description),
+      value: cdktn.listMapperHcl(awsInsightDescriptionPropertyToHclTerraform, true)(struct!.description),
       isBlock: true,
       type: "set",
       storageClassType: "DescriptionPropertyList",
     },
     finding_provider_fields_confidence: {
-      value: cdktn.listMapperHcl(tfInsightFindingProviderFieldsConfidencePropertyToHclTerraform, true)(struct!.findingProviderFieldsConfidence),
+      value: cdktn.listMapperHcl(awsInsightFindingProviderFieldsConfidencePropertyToHclTerraform, true)(struct!.findingProviderFieldsConfidence),
       isBlock: true,
       type: "set",
       storageClassType: "FindingProviderFieldsConfidencePropertyList",
     },
     finding_provider_fields_criticality: {
-      value: cdktn.listMapperHcl(tfInsightFindingProviderFieldsCriticalityPropertyToHclTerraform, true)(struct!.findingProviderFieldsCriticality),
+      value: cdktn.listMapperHcl(awsInsightFindingProviderFieldsCriticalityPropertyToHclTerraform, true)(struct!.findingProviderFieldsCriticality),
       isBlock: true,
       type: "set",
       storageClassType: "FindingProviderFieldsCriticalityPropertyList",
     },
     finding_provider_fields_related_findings_id: {
-      value: cdktn.listMapperHcl(tfInsightFindingProviderFieldsRelatedFindingsIdPropertyToHclTerraform, true)(struct!.findingProviderFieldsRelatedFindingsId),
+      value: cdktn.listMapperHcl(awsInsightFindingProviderFieldsRelatedFindingsIdPropertyToHclTerraform, true)(struct!.findingProviderFieldsRelatedFindingsId),
       isBlock: true,
       type: "set",
       storageClassType: "FindingProviderFieldsRelatedFindingsIdPropertyList",
     },
     finding_provider_fields_related_findings_product_arn: {
-      value: cdktn.listMapperHcl(tfInsightFindingProviderFieldsRelatedFindingsProductArnPropertyToHclTerraform, true)(struct!.findingProviderFieldsRelatedFindingsProductArn),
+      value: cdktn.listMapperHcl(awsInsightFindingProviderFieldsRelatedFindingsProductArnPropertyToHclTerraform, true)(struct!.findingProviderFieldsRelatedFindingsProductArn),
       isBlock: true,
       type: "set",
       storageClassType: "FindingProviderFieldsRelatedFindingsProductArnPropertyList",
     },
     finding_provider_fields_severity_label: {
-      value: cdktn.listMapperHcl(tfInsightFindingProviderFieldsSeverityLabelPropertyToHclTerraform, true)(struct!.findingProviderFieldsSeverityLabel),
+      value: cdktn.listMapperHcl(awsInsightFindingProviderFieldsSeverityLabelPropertyToHclTerraform, true)(struct!.findingProviderFieldsSeverityLabel),
       isBlock: true,
       type: "set",
       storageClassType: "FindingProviderFieldsSeverityLabelPropertyList",
     },
     finding_provider_fields_severity_original: {
-      value: cdktn.listMapperHcl(tfInsightFindingProviderFieldsSeverityOriginalPropertyToHclTerraform, true)(struct!.findingProviderFieldsSeverityOriginal),
+      value: cdktn.listMapperHcl(awsInsightFindingProviderFieldsSeverityOriginalPropertyToHclTerraform, true)(struct!.findingProviderFieldsSeverityOriginal),
       isBlock: true,
       type: "set",
       storageClassType: "FindingProviderFieldsSeverityOriginalPropertyList",
     },
     finding_provider_fields_types: {
-      value: cdktn.listMapperHcl(tfInsightFindingProviderFieldsTypesPropertyToHclTerraform, true)(struct!.findingProviderFieldsTypes),
+      value: cdktn.listMapperHcl(awsInsightFindingProviderFieldsTypesPropertyToHclTerraform, true)(struct!.findingProviderFieldsTypes),
       isBlock: true,
       type: "set",
       storageClassType: "FindingProviderFieldsTypesPropertyList",
     },
     first_observed_at: {
-      value: cdktn.listMapperHcl(tfInsightFirstObservedAtPropertyToHclTerraform, true)(struct!.firstObservedAt),
+      value: cdktn.listMapperHcl(awsInsightFirstObservedAtPropertyToHclTerraform, true)(struct!.firstObservedAt),
       isBlock: true,
       type: "set",
       storageClassType: "FirstObservedAtPropertyList",
     },
     generator_id: {
-      value: cdktn.listMapperHcl(tfInsightGeneratorIdPropertyToHclTerraform, true)(struct!.generatorId),
+      value: cdktn.listMapperHcl(awsInsightGeneratorIdPropertyToHclTerraform, true)(struct!.generatorId),
       isBlock: true,
       type: "set",
       storageClassType: "GeneratorIdPropertyList",
     },
     id: {
-      value: cdktn.listMapperHcl(tfInsightIdPropertyToHclTerraform, true)(struct!.id),
+      value: cdktn.listMapperHcl(awsInsightIdPropertyToHclTerraform, true)(struct!.id),
       isBlock: true,
       type: "set",
       storageClassType: "IdPropertyList",
     },
     keyword: {
-      value: cdktn.listMapperHcl(tfInsightKeywordPropertyToHclTerraform, true)(struct!.keyword),
+      value: cdktn.listMapperHcl(awsInsightKeywordPropertyToHclTerraform, true)(struct!.keyword),
       isBlock: true,
       type: "set",
       storageClassType: "KeywordPropertyList",
     },
     last_observed_at: {
-      value: cdktn.listMapperHcl(tfInsightLastObservedAtPropertyToHclTerraform, true)(struct!.lastObservedAt),
+      value: cdktn.listMapperHcl(awsInsightLastObservedAtPropertyToHclTerraform, true)(struct!.lastObservedAt),
       isBlock: true,
       type: "set",
       storageClassType: "LastObservedAtPropertyList",
     },
     malware_name: {
-      value: cdktn.listMapperHcl(tfInsightMalwareNamePropertyToHclTerraform, true)(struct!.malwareName),
+      value: cdktn.listMapperHcl(awsInsightMalwareNamePropertyToHclTerraform, true)(struct!.malwareName),
       isBlock: true,
       type: "set",
       storageClassType: "MalwareNamePropertyList",
     },
     malware_path: {
-      value: cdktn.listMapperHcl(tfInsightMalwarePathPropertyToHclTerraform, true)(struct!.malwarePath),
+      value: cdktn.listMapperHcl(awsInsightMalwarePathPropertyToHclTerraform, true)(struct!.malwarePath),
       isBlock: true,
       type: "set",
       storageClassType: "MalwarePathPropertyList",
     },
     malware_state: {
-      value: cdktn.listMapperHcl(tfInsightMalwareStatePropertyToHclTerraform, true)(struct!.malwareState),
+      value: cdktn.listMapperHcl(awsInsightMalwareStatePropertyToHclTerraform, true)(struct!.malwareState),
       isBlock: true,
       type: "set",
       storageClassType: "MalwareStatePropertyList",
     },
     malware_type: {
-      value: cdktn.listMapperHcl(tfInsightMalwareTypePropertyToHclTerraform, true)(struct!.malwareType),
+      value: cdktn.listMapperHcl(awsInsightMalwareTypePropertyToHclTerraform, true)(struct!.malwareType),
       isBlock: true,
       type: "set",
       storageClassType: "MalwareTypePropertyList",
     },
     network_destination_domain: {
-      value: cdktn.listMapperHcl(tfInsightNetworkDestinationDomainPropertyToHclTerraform, true)(struct!.networkDestinationDomain),
+      value: cdktn.listMapperHcl(awsInsightNetworkDestinationDomainPropertyToHclTerraform, true)(struct!.networkDestinationDomain),
       isBlock: true,
       type: "set",
       storageClassType: "NetworkDestinationDomainPropertyList",
     },
     network_destination_ipv4: {
-      value: cdktn.listMapperHcl(tfInsightNetworkDestinationIpv4PropertyToHclTerraform, true)(struct!.networkDestinationIpv4),
+      value: cdktn.listMapperHcl(awsInsightNetworkDestinationIpv4PropertyToHclTerraform, true)(struct!.networkDestinationIpv4),
       isBlock: true,
       type: "set",
       storageClassType: "NetworkDestinationIpv4PropertyList",
     },
     network_destination_ipv6: {
-      value: cdktn.listMapperHcl(tfInsightNetworkDestinationIpv6PropertyToHclTerraform, true)(struct!.networkDestinationIpv6),
+      value: cdktn.listMapperHcl(awsInsightNetworkDestinationIpv6PropertyToHclTerraform, true)(struct!.networkDestinationIpv6),
       isBlock: true,
       type: "set",
       storageClassType: "NetworkDestinationIpv6PropertyList",
     },
     network_destination_port: {
-      value: cdktn.listMapperHcl(tfInsightNetworkDestinationPortPropertyToHclTerraform, true)(struct!.networkDestinationPort),
+      value: cdktn.listMapperHcl(awsInsightNetworkDestinationPortPropertyToHclTerraform, true)(struct!.networkDestinationPort),
       isBlock: true,
       type: "set",
       storageClassType: "NetworkDestinationPortPropertyList",
     },
     network_direction: {
-      value: cdktn.listMapperHcl(tfInsightNetworkDirectionPropertyToHclTerraform, true)(struct!.networkDirection),
+      value: cdktn.listMapperHcl(awsInsightNetworkDirectionPropertyToHclTerraform, true)(struct!.networkDirection),
       isBlock: true,
       type: "set",
       storageClassType: "NetworkDirectionPropertyList",
     },
     network_protocol: {
-      value: cdktn.listMapperHcl(tfInsightNetworkProtocolPropertyToHclTerraform, true)(struct!.networkProtocol),
+      value: cdktn.listMapperHcl(awsInsightNetworkProtocolPropertyToHclTerraform, true)(struct!.networkProtocol),
       isBlock: true,
       type: "set",
       storageClassType: "NetworkProtocolPropertyList",
     },
     network_source_domain: {
-      value: cdktn.listMapperHcl(tfInsightNetworkSourceDomainPropertyToHclTerraform, true)(struct!.networkSourceDomain),
+      value: cdktn.listMapperHcl(awsInsightNetworkSourceDomainPropertyToHclTerraform, true)(struct!.networkSourceDomain),
       isBlock: true,
       type: "set",
       storageClassType: "NetworkSourceDomainPropertyList",
     },
     network_source_ipv4: {
-      value: cdktn.listMapperHcl(tfInsightNetworkSourceIpv4PropertyToHclTerraform, true)(struct!.networkSourceIpv4),
+      value: cdktn.listMapperHcl(awsInsightNetworkSourceIpv4PropertyToHclTerraform, true)(struct!.networkSourceIpv4),
       isBlock: true,
       type: "set",
       storageClassType: "NetworkSourceIpv4PropertyList",
     },
     network_source_ipv6: {
-      value: cdktn.listMapperHcl(tfInsightNetworkSourceIpv6PropertyToHclTerraform, true)(struct!.networkSourceIpv6),
+      value: cdktn.listMapperHcl(awsInsightNetworkSourceIpv6PropertyToHclTerraform, true)(struct!.networkSourceIpv6),
       isBlock: true,
       type: "set",
       storageClassType: "NetworkSourceIpv6PropertyList",
     },
     network_source_mac: {
-      value: cdktn.listMapperHcl(tfInsightNetworkSourceMacPropertyToHclTerraform, true)(struct!.networkSourceMac),
+      value: cdktn.listMapperHcl(awsInsightNetworkSourceMacPropertyToHclTerraform, true)(struct!.networkSourceMac),
       isBlock: true,
       type: "set",
       storageClassType: "NetworkSourceMacPropertyList",
     },
     network_source_port: {
-      value: cdktn.listMapperHcl(tfInsightNetworkSourcePortPropertyToHclTerraform, true)(struct!.networkSourcePort),
+      value: cdktn.listMapperHcl(awsInsightNetworkSourcePortPropertyToHclTerraform, true)(struct!.networkSourcePort),
       isBlock: true,
       type: "set",
       storageClassType: "NetworkSourcePortPropertyList",
     },
     note_text: {
-      value: cdktn.listMapperHcl(tfInsightNoteTextPropertyToHclTerraform, true)(struct!.noteText),
+      value: cdktn.listMapperHcl(awsInsightNoteTextPropertyToHclTerraform, true)(struct!.noteText),
       isBlock: true,
       type: "set",
       storageClassType: "NoteTextPropertyList",
     },
     note_updated_at: {
-      value: cdktn.listMapperHcl(tfInsightNoteUpdatedAtPropertyToHclTerraform, true)(struct!.noteUpdatedAt),
+      value: cdktn.listMapperHcl(awsInsightNoteUpdatedAtPropertyToHclTerraform, true)(struct!.noteUpdatedAt),
       isBlock: true,
       type: "set",
       storageClassType: "NoteUpdatedAtPropertyList",
     },
     note_updated_by: {
-      value: cdktn.listMapperHcl(tfInsightNoteUpdatedByPropertyToHclTerraform, true)(struct!.noteUpdatedBy),
+      value: cdktn.listMapperHcl(awsInsightNoteUpdatedByPropertyToHclTerraform, true)(struct!.noteUpdatedBy),
       isBlock: true,
       type: "set",
       storageClassType: "NoteUpdatedByPropertyList",
     },
     process_launched_at: {
-      value: cdktn.listMapperHcl(tfInsightProcessLaunchedAtPropertyToHclTerraform, true)(struct!.processLaunchedAt),
+      value: cdktn.listMapperHcl(awsInsightProcessLaunchedAtPropertyToHclTerraform, true)(struct!.processLaunchedAt),
       isBlock: true,
       type: "set",
       storageClassType: "ProcessLaunchedAtPropertyList",
     },
     process_name: {
-      value: cdktn.listMapperHcl(tfInsightProcessNamePropertyToHclTerraform, true)(struct!.processName),
+      value: cdktn.listMapperHcl(awsInsightProcessNamePropertyToHclTerraform, true)(struct!.processName),
       isBlock: true,
       type: "set",
       storageClassType: "ProcessNamePropertyList",
     },
     process_parent_pid: {
-      value: cdktn.listMapperHcl(tfInsightProcessParentPidPropertyToHclTerraform, true)(struct!.processParentPid),
+      value: cdktn.listMapperHcl(awsInsightProcessParentPidPropertyToHclTerraform, true)(struct!.processParentPid),
       isBlock: true,
       type: "set",
       storageClassType: "ProcessParentPidPropertyList",
     },
     process_path: {
-      value: cdktn.listMapperHcl(tfInsightProcessPathPropertyToHclTerraform, true)(struct!.processPath),
+      value: cdktn.listMapperHcl(awsInsightProcessPathPropertyToHclTerraform, true)(struct!.processPath),
       isBlock: true,
       type: "set",
       storageClassType: "ProcessPathPropertyList",
     },
     process_pid: {
-      value: cdktn.listMapperHcl(tfInsightProcessPidPropertyToHclTerraform, true)(struct!.processPid),
+      value: cdktn.listMapperHcl(awsInsightProcessPidPropertyToHclTerraform, true)(struct!.processPid),
       isBlock: true,
       type: "set",
       storageClassType: "ProcessPidPropertyList",
     },
     process_terminated_at: {
-      value: cdktn.listMapperHcl(tfInsightProcessTerminatedAtPropertyToHclTerraform, true)(struct!.processTerminatedAt),
+      value: cdktn.listMapperHcl(awsInsightProcessTerminatedAtPropertyToHclTerraform, true)(struct!.processTerminatedAt),
       isBlock: true,
       type: "set",
       storageClassType: "ProcessTerminatedAtPropertyList",
     },
     product_arn: {
-      value: cdktn.listMapperHcl(tfInsightProductArnPropertyToHclTerraform, true)(struct!.productArn),
+      value: cdktn.listMapperHcl(awsInsightProductArnPropertyToHclTerraform, true)(struct!.productArn),
       isBlock: true,
       type: "set",
       storageClassType: "ProductArnPropertyList",
     },
     product_fields: {
-      value: cdktn.listMapperHcl(tfInsightProductFieldsPropertyToHclTerraform, true)(struct!.productFields),
+      value: cdktn.listMapperHcl(awsInsightProductFieldsPropertyToHclTerraform, true)(struct!.productFields),
       isBlock: true,
       type: "set",
       storageClassType: "ProductFieldsPropertyList",
     },
     product_name: {
-      value: cdktn.listMapperHcl(tfInsightProductNamePropertyToHclTerraform, true)(struct!.productName),
+      value: cdktn.listMapperHcl(awsInsightProductNamePropertyToHclTerraform, true)(struct!.productName),
       isBlock: true,
       type: "set",
       storageClassType: "ProductNamePropertyList",
     },
     recommendation_text: {
-      value: cdktn.listMapperHcl(tfInsightRecommendationTextPropertyToHclTerraform, true)(struct!.recommendationText),
+      value: cdktn.listMapperHcl(awsInsightRecommendationTextPropertyToHclTerraform, true)(struct!.recommendationText),
       isBlock: true,
       type: "set",
       storageClassType: "RecommendationTextPropertyList",
     },
     record_state: {
-      value: cdktn.listMapperHcl(tfInsightRecordStatePropertyToHclTerraform, true)(struct!.recordState),
+      value: cdktn.listMapperHcl(awsInsightRecordStatePropertyToHclTerraform, true)(struct!.recordState),
       isBlock: true,
       type: "set",
       storageClassType: "RecordStatePropertyList",
     },
     related_findings_id: {
-      value: cdktn.listMapperHcl(tfInsightRelatedFindingsIdPropertyToHclTerraform, true)(struct!.relatedFindingsId),
+      value: cdktn.listMapperHcl(awsInsightRelatedFindingsIdPropertyToHclTerraform, true)(struct!.relatedFindingsId),
       isBlock: true,
       type: "set",
       storageClassType: "RelatedFindingsIdPropertyList",
     },
     related_findings_product_arn: {
-      value: cdktn.listMapperHcl(tfInsightRelatedFindingsProductArnPropertyToHclTerraform, true)(struct!.relatedFindingsProductArn),
+      value: cdktn.listMapperHcl(awsInsightRelatedFindingsProductArnPropertyToHclTerraform, true)(struct!.relatedFindingsProductArn),
       isBlock: true,
       type: "set",
       storageClassType: "RelatedFindingsProductArnPropertyList",
     },
     resource_aws_ec2_instance_iam_instance_profile_arn: {
-      value: cdktn.listMapperHcl(tfInsightResourceAwsEc2InstanceIamInstanceProfileArnPropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceIamInstanceProfileArn),
+      value: cdktn.listMapperHcl(awsInsightResourceAwsEc2InstanceIamInstanceProfileArnPropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceIamInstanceProfileArn),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceAwsEc2InstanceIamInstanceProfileArnPropertyList",
     },
     resource_aws_ec2_instance_image_id: {
-      value: cdktn.listMapperHcl(tfInsightResourceAwsEc2InstanceImageIdPropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceImageId),
+      value: cdktn.listMapperHcl(awsInsightResourceAwsEc2InstanceImageIdPropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceImageId),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceAwsEc2InstanceImageIdPropertyList",
     },
     resource_aws_ec2_instance_ipv4_addresses: {
-      value: cdktn.listMapperHcl(tfInsightResourceAwsEc2InstanceIpv4AddressesPropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceIpv4Addresses),
+      value: cdktn.listMapperHcl(awsInsightResourceAwsEc2InstanceIpv4AddressesPropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceIpv4Addresses),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceAwsEc2InstanceIpv4AddressesPropertyList",
     },
     resource_aws_ec2_instance_ipv6_addresses: {
-      value: cdktn.listMapperHcl(tfInsightResourceAwsEc2InstanceIpv6AddressesPropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceIpv6Addresses),
+      value: cdktn.listMapperHcl(awsInsightResourceAwsEc2InstanceIpv6AddressesPropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceIpv6Addresses),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceAwsEc2InstanceIpv6AddressesPropertyList",
     },
     resource_aws_ec2_instance_key_name: {
-      value: cdktn.listMapperHcl(tfInsightResourceAwsEc2InstanceKeyNamePropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceKeyName),
+      value: cdktn.listMapperHcl(awsInsightResourceAwsEc2InstanceKeyNamePropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceKeyName),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceAwsEc2InstanceKeyNamePropertyList",
     },
     resource_aws_ec2_instance_launched_at: {
-      value: cdktn.listMapperHcl(tfInsightResourceAwsEc2InstanceLaunchedAtPropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceLaunchedAt),
+      value: cdktn.listMapperHcl(awsInsightResourceAwsEc2InstanceLaunchedAtPropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceLaunchedAt),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceAwsEc2InstanceLaunchedAtPropertyList",
     },
     resource_aws_ec2_instance_subnet_id: {
-      value: cdktn.listMapperHcl(tfInsightResourceAwsEc2InstanceSubnetIdPropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceSubnetId),
+      value: cdktn.listMapperHcl(awsInsightResourceAwsEc2InstanceSubnetIdPropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceSubnetId),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceAwsEc2InstanceSubnetIdPropertyList",
     },
     resource_aws_ec2_instance_type: {
-      value: cdktn.listMapperHcl(tfInsightResourceAwsEc2InstanceTypePropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceType),
+      value: cdktn.listMapperHcl(awsInsightResourceAwsEc2InstanceTypePropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceType),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceAwsEc2InstanceTypePropertyList",
     },
     resource_aws_ec2_instance_vpc_id: {
-      value: cdktn.listMapperHcl(tfInsightResourceAwsEc2InstanceVpcIdPropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceVpcId),
+      value: cdktn.listMapperHcl(awsInsightResourceAwsEc2InstanceVpcIdPropertyToHclTerraform, true)(struct!.resourceAwsEc2InstanceVpcId),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceAwsEc2InstanceVpcIdPropertyList",
     },
     resource_aws_iam_access_key_created_at: {
-      value: cdktn.listMapperHcl(tfInsightResourceAwsIamAccessKeyCreatedAtPropertyToHclTerraform, true)(struct!.resourceAwsIamAccessKeyCreatedAt),
+      value: cdktn.listMapperHcl(awsInsightResourceAwsIamAccessKeyCreatedAtPropertyToHclTerraform, true)(struct!.resourceAwsIamAccessKeyCreatedAt),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceAwsIamAccessKeyCreatedAtPropertyList",
     },
     resource_aws_iam_access_key_status: {
-      value: cdktn.listMapperHcl(tfInsightResourceAwsIamAccessKeyStatusPropertyToHclTerraform, true)(struct!.resourceAwsIamAccessKeyStatus),
+      value: cdktn.listMapperHcl(awsInsightResourceAwsIamAccessKeyStatusPropertyToHclTerraform, true)(struct!.resourceAwsIamAccessKeyStatus),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceAwsIamAccessKeyStatusPropertyList",
     },
     resource_aws_iam_access_key_user_name: {
-      value: cdktn.listMapperHcl(tfInsightResourceAwsIamAccessKeyUserNamePropertyToHclTerraform, true)(struct!.resourceAwsIamAccessKeyUserName),
+      value: cdktn.listMapperHcl(awsInsightResourceAwsIamAccessKeyUserNamePropertyToHclTerraform, true)(struct!.resourceAwsIamAccessKeyUserName),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceAwsIamAccessKeyUserNamePropertyList",
     },
     resource_aws_s3_bucket_owner_id: {
-      value: cdktn.listMapperHcl(tfInsightResourceAwsS3BucketOwnerIdPropertyToHclTerraform, true)(struct!.resourceAwsS3BucketOwnerId),
+      value: cdktn.listMapperHcl(awsInsightResourceAwsS3BucketOwnerIdPropertyToHclTerraform, true)(struct!.resourceAwsS3BucketOwnerId),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceAwsS3BucketOwnerIdPropertyList",
     },
     resource_aws_s3_bucket_owner_name: {
-      value: cdktn.listMapperHcl(tfInsightResourceAwsS3BucketOwnerNamePropertyToHclTerraform, true)(struct!.resourceAwsS3BucketOwnerName),
+      value: cdktn.listMapperHcl(awsInsightResourceAwsS3BucketOwnerNamePropertyToHclTerraform, true)(struct!.resourceAwsS3BucketOwnerName),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceAwsS3BucketOwnerNamePropertyList",
     },
     resource_container_image_id: {
-      value: cdktn.listMapperHcl(tfInsightResourceContainerImageIdPropertyToHclTerraform, true)(struct!.resourceContainerImageId),
+      value: cdktn.listMapperHcl(awsInsightResourceContainerImageIdPropertyToHclTerraform, true)(struct!.resourceContainerImageId),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceContainerImageIdPropertyList",
     },
     resource_container_image_name: {
-      value: cdktn.listMapperHcl(tfInsightResourceContainerImageNamePropertyToHclTerraform, true)(struct!.resourceContainerImageName),
+      value: cdktn.listMapperHcl(awsInsightResourceContainerImageNamePropertyToHclTerraform, true)(struct!.resourceContainerImageName),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceContainerImageNamePropertyList",
     },
     resource_container_launched_at: {
-      value: cdktn.listMapperHcl(tfInsightResourceContainerLaunchedAtPropertyToHclTerraform, true)(struct!.resourceContainerLaunchedAt),
+      value: cdktn.listMapperHcl(awsInsightResourceContainerLaunchedAtPropertyToHclTerraform, true)(struct!.resourceContainerLaunchedAt),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceContainerLaunchedAtPropertyList",
     },
     resource_container_name: {
-      value: cdktn.listMapperHcl(tfInsightResourceContainerNamePropertyToHclTerraform, true)(struct!.resourceContainerName),
+      value: cdktn.listMapperHcl(awsInsightResourceContainerNamePropertyToHclTerraform, true)(struct!.resourceContainerName),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceContainerNamePropertyList",
     },
     resource_details_other: {
-      value: cdktn.listMapperHcl(tfInsightResourceDetailsOtherPropertyToHclTerraform, true)(struct!.resourceDetailsOther),
+      value: cdktn.listMapperHcl(awsInsightResourceDetailsOtherPropertyToHclTerraform, true)(struct!.resourceDetailsOther),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceDetailsOtherPropertyList",
     },
     resource_id: {
-      value: cdktn.listMapperHcl(tfInsightResourceIdPropertyToHclTerraform, true)(struct!.resourceId),
+      value: cdktn.listMapperHcl(awsInsightResourceIdPropertyToHclTerraform, true)(struct!.resourceId),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceIdPropertyList",
     },
     resource_partition: {
-      value: cdktn.listMapperHcl(tfInsightResourcePartitionPropertyToHclTerraform, true)(struct!.resourcePartition),
+      value: cdktn.listMapperHcl(awsInsightResourcePartitionPropertyToHclTerraform, true)(struct!.resourcePartition),
       isBlock: true,
       type: "set",
       storageClassType: "ResourcePartitionPropertyList",
     },
     resource_region: {
-      value: cdktn.listMapperHcl(tfInsightResourceRegionPropertyToHclTerraform, true)(struct!.resourceRegion),
+      value: cdktn.listMapperHcl(awsInsightResourceRegionPropertyToHclTerraform, true)(struct!.resourceRegion),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceRegionPropertyList",
     },
     resource_tags: {
-      value: cdktn.listMapperHcl(tfInsightResourceTagsPropertyToHclTerraform, true)(struct!.resourceTags),
+      value: cdktn.listMapperHcl(awsInsightResourceTagsPropertyToHclTerraform, true)(struct!.resourceTags),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceTagsPropertyList",
     },
     resource_type: {
-      value: cdktn.listMapperHcl(tfInsightResourceTypePropertyToHclTerraform, true)(struct!.resourceType),
+      value: cdktn.listMapperHcl(awsInsightResourceTypePropertyToHclTerraform, true)(struct!.resourceType),
       isBlock: true,
       type: "set",
       storageClassType: "ResourceTypePropertyList",
     },
     severity_label: {
-      value: cdktn.listMapperHcl(tfInsightSeverityLabelPropertyToHclTerraform, true)(struct!.severityLabel),
+      value: cdktn.listMapperHcl(awsInsightSeverityLabelPropertyToHclTerraform, true)(struct!.severityLabel),
       isBlock: true,
       type: "set",
       storageClassType: "SeverityLabelPropertyList",
     },
     source_url: {
-      value: cdktn.listMapperHcl(tfInsightSourceUrlPropertyToHclTerraform, true)(struct!.sourceUrl),
+      value: cdktn.listMapperHcl(awsInsightSourceUrlPropertyToHclTerraform, true)(struct!.sourceUrl),
       isBlock: true,
       type: "set",
       storageClassType: "SourceUrlPropertyList",
     },
     threat_intel_indicator_category: {
-      value: cdktn.listMapperHcl(tfInsightThreatIntelIndicatorCategoryPropertyToHclTerraform, true)(struct!.threatIntelIndicatorCategory),
+      value: cdktn.listMapperHcl(awsInsightThreatIntelIndicatorCategoryPropertyToHclTerraform, true)(struct!.threatIntelIndicatorCategory),
       isBlock: true,
       type: "set",
       storageClassType: "ThreatIntelIndicatorCategoryPropertyList",
     },
     threat_intel_indicator_last_observed_at: {
-      value: cdktn.listMapperHcl(tfInsightThreatIntelIndicatorLastObservedAtPropertyToHclTerraform, true)(struct!.threatIntelIndicatorLastObservedAt),
+      value: cdktn.listMapperHcl(awsInsightThreatIntelIndicatorLastObservedAtPropertyToHclTerraform, true)(struct!.threatIntelIndicatorLastObservedAt),
       isBlock: true,
       type: "set",
       storageClassType: "ThreatIntelIndicatorLastObservedAtPropertyList",
     },
     threat_intel_indicator_source: {
-      value: cdktn.listMapperHcl(tfInsightThreatIntelIndicatorSourcePropertyToHclTerraform, true)(struct!.threatIntelIndicatorSource),
+      value: cdktn.listMapperHcl(awsInsightThreatIntelIndicatorSourcePropertyToHclTerraform, true)(struct!.threatIntelIndicatorSource),
       isBlock: true,
       type: "set",
       storageClassType: "ThreatIntelIndicatorSourcePropertyList",
     },
     threat_intel_indicator_source_url: {
-      value: cdktn.listMapperHcl(tfInsightThreatIntelIndicatorSourceUrlPropertyToHclTerraform, true)(struct!.threatIntelIndicatorSourceUrl),
+      value: cdktn.listMapperHcl(awsInsightThreatIntelIndicatorSourceUrlPropertyToHclTerraform, true)(struct!.threatIntelIndicatorSourceUrl),
       isBlock: true,
       type: "set",
       storageClassType: "ThreatIntelIndicatorSourceUrlPropertyList",
     },
     threat_intel_indicator_type: {
-      value: cdktn.listMapperHcl(tfInsightThreatIntelIndicatorTypePropertyToHclTerraform, true)(struct!.threatIntelIndicatorType),
+      value: cdktn.listMapperHcl(awsInsightThreatIntelIndicatorTypePropertyToHclTerraform, true)(struct!.threatIntelIndicatorType),
       isBlock: true,
       type: "set",
       storageClassType: "ThreatIntelIndicatorTypePropertyList",
     },
     threat_intel_indicator_value: {
-      value: cdktn.listMapperHcl(tfInsightThreatIntelIndicatorValuePropertyToHclTerraform, true)(struct!.threatIntelIndicatorValue),
+      value: cdktn.listMapperHcl(awsInsightThreatIntelIndicatorValuePropertyToHclTerraform, true)(struct!.threatIntelIndicatorValue),
       isBlock: true,
       type: "set",
       storageClassType: "ThreatIntelIndicatorValuePropertyList",
     },
     title: {
-      value: cdktn.listMapperHcl(tfInsightTitlePropertyToHclTerraform, true)(struct!.title),
+      value: cdktn.listMapperHcl(awsInsightTitlePropertyToHclTerraform, true)(struct!.title),
       isBlock: true,
       type: "set",
       storageClassType: "TitlePropertyList",
     },
     type: {
-      value: cdktn.listMapperHcl(tfInsightTypePropertyToHclTerraform, true)(struct!.type),
+      value: cdktn.listMapperHcl(awsInsightTypePropertyToHclTerraform, true)(struct!.type),
       isBlock: true,
       type: "set",
       storageClassType: "TypePropertyList",
     },
     updated_at: {
-      value: cdktn.listMapperHcl(tfInsightUpdatedAtPropertyToHclTerraform, true)(struct!.updatedAt),
+      value: cdktn.listMapperHcl(awsInsightUpdatedAtPropertyToHclTerraform, true)(struct!.updatedAt),
       isBlock: true,
       type: "set",
       storageClassType: "UpdatedAtPropertyList",
     },
     user_defined_values: {
-      value: cdktn.listMapperHcl(tfInsightUserDefinedValuesPropertyToHclTerraform, true)(struct!.userDefinedValues),
+      value: cdktn.listMapperHcl(awsInsightUserDefinedValuesPropertyToHclTerraform, true)(struct!.userDefinedValues),
       isBlock: true,
       type: "set",
       storageClassType: "UserDefinedValuesPropertyList",
     },
     verification_state: {
-      value: cdktn.listMapperHcl(tfInsightVerificationStatePropertyToHclTerraform, true)(struct!.verificationState),
+      value: cdktn.listMapperHcl(awsInsightVerificationStatePropertyToHclTerraform, true)(struct!.verificationState),
       isBlock: true,
       type: "set",
       storageClassType: "VerificationStatePropertyList",
     },
     workflow_status: {
-      value: cdktn.listMapperHcl(tfInsightWorkflowStatusPropertyToHclTerraform, true)(struct!.workflowStatus),
+      value: cdktn.listMapperHcl(awsInsightWorkflowStatusPropertyToHclTerraform, true)(struct!.workflowStatus),
       isBlock: true,
       type: "set",
       storageClassType: "WorkflowStatusPropertyList",
@@ -4860,14 +4860,14 @@ export function tfInsightFiltersPropertyToHclTerraform(struct?: TfInsight.Filter
 }
 
 
-export namespace TfInsight {
+export namespace AwsInsight {
 export interface AwsAccountIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -4969,11 +4969,11 @@ export class AwsAccountIdPropertyList extends cdktn.ComplexList {
 }
 export interface AwsAccountNameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -5075,11 +5075,11 @@ export class AwsAccountNamePropertyList extends cdktn.ComplexList {
 }
 export interface CompanyNameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -5181,11 +5181,11 @@ export class CompanyNamePropertyList extends cdktn.ComplexList {
 }
 export interface ComplianceAssociatedStandardsIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -5287,11 +5287,11 @@ export class ComplianceAssociatedStandardsIdPropertyList extends cdktn.ComplexLi
 }
 export interface ComplianceSecurityControlIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -5393,11 +5393,11 @@ export class ComplianceSecurityControlIdPropertyList extends cdktn.ComplexList {
 }
 export interface ComplianceSecurityControlParametersNameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -5499,11 +5499,11 @@ export class ComplianceSecurityControlParametersNamePropertyList extends cdktn.C
 }
 export interface ComplianceSecurityControlParametersValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -5605,11 +5605,11 @@ export class ComplianceSecurityControlParametersValuePropertyList extends cdktn.
 }
 export interface ComplianceStatusProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -5711,15 +5711,15 @@ export class ComplianceStatusPropertyList extends cdktn.ComplexList {
 }
 export interface ConfidenceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#eq TfInsight#eq}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#eq AwsInsight#eq}
   */
   readonly eq?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#gte TfInsight#gte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#gte AwsInsight#gte}
   */
   readonly gte?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#lte TfInsight#lte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#lte AwsInsight#lte}
   */
   readonly lte?: string;
 }
@@ -5849,11 +5849,11 @@ export class ConfidencePropertyList extends cdktn.ComplexList {
 }
 export interface FiltersCreatedAtDateRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit TfInsight#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit AwsInsight#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: number;
 }
@@ -5923,17 +5923,17 @@ export class FiltersCreatedAtDateRangePropertyOutputReference extends cdktn.Comp
 }
 export interface CreatedAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end TfInsight#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end AwsInsight#end}
   */
   readonly end?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start TfInsight#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start AwsInsight#start}
   */
   readonly start?: string;
   /**
   * date_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range TfInsight#date_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range AwsInsight#date_range}
   */
   readonly dateRange?: FiltersCreatedAtDateRangeProperty;
 }
@@ -6063,15 +6063,15 @@ export class CreatedAtPropertyList extends cdktn.ComplexList {
 }
 export interface CriticalityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#eq TfInsight#eq}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#eq AwsInsight#eq}
   */
   readonly eq?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#gte TfInsight#gte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#gte AwsInsight#gte}
   */
   readonly gte?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#lte TfInsight#lte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#lte AwsInsight#lte}
   */
   readonly lte?: string;
 }
@@ -6201,11 +6201,11 @@ export class CriticalityPropertyList extends cdktn.ComplexList {
 }
 export interface DescriptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -6307,15 +6307,15 @@ export class DescriptionPropertyList extends cdktn.ComplexList {
 }
 export interface FindingProviderFieldsConfidenceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#eq TfInsight#eq}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#eq AwsInsight#eq}
   */
   readonly eq?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#gte TfInsight#gte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#gte AwsInsight#gte}
   */
   readonly gte?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#lte TfInsight#lte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#lte AwsInsight#lte}
   */
   readonly lte?: string;
 }
@@ -6445,15 +6445,15 @@ export class FindingProviderFieldsConfidencePropertyList extends cdktn.ComplexLi
 }
 export interface FindingProviderFieldsCriticalityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#eq TfInsight#eq}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#eq AwsInsight#eq}
   */
   readonly eq?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#gte TfInsight#gte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#gte AwsInsight#gte}
   */
   readonly gte?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#lte TfInsight#lte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#lte AwsInsight#lte}
   */
   readonly lte?: string;
 }
@@ -6583,11 +6583,11 @@ export class FindingProviderFieldsCriticalityPropertyList extends cdktn.ComplexL
 }
 export interface FindingProviderFieldsRelatedFindingsIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -6689,11 +6689,11 @@ export class FindingProviderFieldsRelatedFindingsIdPropertyList extends cdktn.Co
 }
 export interface FindingProviderFieldsRelatedFindingsProductArnProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -6795,11 +6795,11 @@ export class FindingProviderFieldsRelatedFindingsProductArnPropertyList extends 
 }
 export interface FindingProviderFieldsSeverityLabelProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -6901,11 +6901,11 @@ export class FindingProviderFieldsSeverityLabelPropertyList extends cdktn.Comple
 }
 export interface FindingProviderFieldsSeverityOriginalProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -7007,11 +7007,11 @@ export class FindingProviderFieldsSeverityOriginalPropertyList extends cdktn.Com
 }
 export interface FindingProviderFieldsTypesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -7113,11 +7113,11 @@ export class FindingProviderFieldsTypesPropertyList extends cdktn.ComplexList {
 }
 export interface FiltersFirstObservedAtDateRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit TfInsight#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit AwsInsight#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: number;
 }
@@ -7187,17 +7187,17 @@ export class FiltersFirstObservedAtDateRangePropertyOutputReference extends cdkt
 }
 export interface FirstObservedAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end TfInsight#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end AwsInsight#end}
   */
   readonly end?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start TfInsight#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start AwsInsight#start}
   */
   readonly start?: string;
   /**
   * date_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range TfInsight#date_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range AwsInsight#date_range}
   */
   readonly dateRange?: FiltersFirstObservedAtDateRangeProperty;
 }
@@ -7327,11 +7327,11 @@ export class FirstObservedAtPropertyList extends cdktn.ComplexList {
 }
 export interface GeneratorIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -7433,11 +7433,11 @@ export class GeneratorIdPropertyList extends cdktn.ComplexList {
 }
 export interface IdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -7539,7 +7539,7 @@ export class IdPropertyList extends cdktn.ComplexList {
 }
 export interface KeywordProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -7622,11 +7622,11 @@ export class KeywordPropertyList extends cdktn.ComplexList {
 }
 export interface FiltersLastObservedAtDateRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit TfInsight#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit AwsInsight#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: number;
 }
@@ -7696,17 +7696,17 @@ export class FiltersLastObservedAtDateRangePropertyOutputReference extends cdktn
 }
 export interface LastObservedAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end TfInsight#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end AwsInsight#end}
   */
   readonly end?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start TfInsight#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start AwsInsight#start}
   */
   readonly start?: string;
   /**
   * date_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range TfInsight#date_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range AwsInsight#date_range}
   */
   readonly dateRange?: FiltersLastObservedAtDateRangeProperty;
 }
@@ -7836,11 +7836,11 @@ export class LastObservedAtPropertyList extends cdktn.ComplexList {
 }
 export interface MalwareNameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -7942,11 +7942,11 @@ export class MalwareNamePropertyList extends cdktn.ComplexList {
 }
 export interface MalwarePathProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -8048,11 +8048,11 @@ export class MalwarePathPropertyList extends cdktn.ComplexList {
 }
 export interface MalwareStateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -8154,11 +8154,11 @@ export class MalwareStatePropertyList extends cdktn.ComplexList {
 }
 export interface MalwareTypeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -8260,11 +8260,11 @@ export class MalwareTypePropertyList extends cdktn.ComplexList {
 }
 export interface NetworkDestinationDomainProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -8366,7 +8366,7 @@ export class NetworkDestinationDomainPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkDestinationIpv4Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#cidr TfInsight#cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#cidr AwsInsight#cidr}
   */
   readonly cidr: string;
 }
@@ -8449,7 +8449,7 @@ export class NetworkDestinationIpv4PropertyList extends cdktn.ComplexList {
 }
 export interface NetworkDestinationIpv6Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#cidr TfInsight#cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#cidr AwsInsight#cidr}
   */
   readonly cidr: string;
 }
@@ -8532,15 +8532,15 @@ export class NetworkDestinationIpv6PropertyList extends cdktn.ComplexList {
 }
 export interface NetworkDestinationPortProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#eq TfInsight#eq}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#eq AwsInsight#eq}
   */
   readonly eq?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#gte TfInsight#gte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#gte AwsInsight#gte}
   */
   readonly gte?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#lte TfInsight#lte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#lte AwsInsight#lte}
   */
   readonly lte?: string;
 }
@@ -8670,11 +8670,11 @@ export class NetworkDestinationPortPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkDirectionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -8776,11 +8776,11 @@ export class NetworkDirectionPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkProtocolProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -8882,11 +8882,11 @@ export class NetworkProtocolPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkSourceDomainProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -8988,7 +8988,7 @@ export class NetworkSourceDomainPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkSourceIpv4Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#cidr TfInsight#cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#cidr AwsInsight#cidr}
   */
   readonly cidr: string;
 }
@@ -9071,7 +9071,7 @@ export class NetworkSourceIpv4PropertyList extends cdktn.ComplexList {
 }
 export interface NetworkSourceIpv6Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#cidr TfInsight#cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#cidr AwsInsight#cidr}
   */
   readonly cidr: string;
 }
@@ -9154,11 +9154,11 @@ export class NetworkSourceIpv6PropertyList extends cdktn.ComplexList {
 }
 export interface NetworkSourceMacProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -9260,15 +9260,15 @@ export class NetworkSourceMacPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkSourcePortProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#eq TfInsight#eq}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#eq AwsInsight#eq}
   */
   readonly eq?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#gte TfInsight#gte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#gte AwsInsight#gte}
   */
   readonly gte?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#lte TfInsight#lte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#lte AwsInsight#lte}
   */
   readonly lte?: string;
 }
@@ -9398,11 +9398,11 @@ export class NetworkSourcePortPropertyList extends cdktn.ComplexList {
 }
 export interface NoteTextProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -9504,11 +9504,11 @@ export class NoteTextPropertyList extends cdktn.ComplexList {
 }
 export interface FiltersNoteUpdatedAtDateRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit TfInsight#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit AwsInsight#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: number;
 }
@@ -9578,17 +9578,17 @@ export class FiltersNoteUpdatedAtDateRangePropertyOutputReference extends cdktn.
 }
 export interface NoteUpdatedAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end TfInsight#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end AwsInsight#end}
   */
   readonly end?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start TfInsight#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start AwsInsight#start}
   */
   readonly start?: string;
   /**
   * date_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range TfInsight#date_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range AwsInsight#date_range}
   */
   readonly dateRange?: FiltersNoteUpdatedAtDateRangeProperty;
 }
@@ -9718,11 +9718,11 @@ export class NoteUpdatedAtPropertyList extends cdktn.ComplexList {
 }
 export interface NoteUpdatedByProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -9824,11 +9824,11 @@ export class NoteUpdatedByPropertyList extends cdktn.ComplexList {
 }
 export interface FiltersProcessLaunchedAtDateRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit TfInsight#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit AwsInsight#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: number;
 }
@@ -9898,17 +9898,17 @@ export class FiltersProcessLaunchedAtDateRangePropertyOutputReference extends cd
 }
 export interface ProcessLaunchedAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end TfInsight#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end AwsInsight#end}
   */
   readonly end?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start TfInsight#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start AwsInsight#start}
   */
   readonly start?: string;
   /**
   * date_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range TfInsight#date_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range AwsInsight#date_range}
   */
   readonly dateRange?: FiltersProcessLaunchedAtDateRangeProperty;
 }
@@ -10038,11 +10038,11 @@ export class ProcessLaunchedAtPropertyList extends cdktn.ComplexList {
 }
 export interface ProcessNameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -10144,15 +10144,15 @@ export class ProcessNamePropertyList extends cdktn.ComplexList {
 }
 export interface ProcessParentPidProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#eq TfInsight#eq}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#eq AwsInsight#eq}
   */
   readonly eq?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#gte TfInsight#gte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#gte AwsInsight#gte}
   */
   readonly gte?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#lte TfInsight#lte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#lte AwsInsight#lte}
   */
   readonly lte?: string;
 }
@@ -10282,11 +10282,11 @@ export class ProcessParentPidPropertyList extends cdktn.ComplexList {
 }
 export interface ProcessPathProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -10388,15 +10388,15 @@ export class ProcessPathPropertyList extends cdktn.ComplexList {
 }
 export interface ProcessPidProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#eq TfInsight#eq}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#eq AwsInsight#eq}
   */
   readonly eq?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#gte TfInsight#gte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#gte AwsInsight#gte}
   */
   readonly gte?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#lte TfInsight#lte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#lte AwsInsight#lte}
   */
   readonly lte?: string;
 }
@@ -10526,11 +10526,11 @@ export class ProcessPidPropertyList extends cdktn.ComplexList {
 }
 export interface FiltersProcessTerminatedAtDateRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit TfInsight#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit AwsInsight#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: number;
 }
@@ -10600,17 +10600,17 @@ export class FiltersProcessTerminatedAtDateRangePropertyOutputReference extends 
 }
 export interface ProcessTerminatedAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end TfInsight#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end AwsInsight#end}
   */
   readonly end?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start TfInsight#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start AwsInsight#start}
   */
   readonly start?: string;
   /**
   * date_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range TfInsight#date_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range AwsInsight#date_range}
   */
   readonly dateRange?: FiltersProcessTerminatedAtDateRangeProperty;
 }
@@ -10740,11 +10740,11 @@ export class ProcessTerminatedAtPropertyList extends cdktn.ComplexList {
 }
 export interface ProductArnProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -10846,15 +10846,15 @@ export class ProductArnPropertyList extends cdktn.ComplexList {
 }
 export interface ProductFieldsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#key TfInsight#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#key AwsInsight#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -10975,11 +10975,11 @@ export class ProductFieldsPropertyList extends cdktn.ComplexList {
 }
 export interface ProductNameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -11081,11 +11081,11 @@ export class ProductNamePropertyList extends cdktn.ComplexList {
 }
 export interface RecommendationTextProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -11187,11 +11187,11 @@ export class RecommendationTextPropertyList extends cdktn.ComplexList {
 }
 export interface RecordStateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -11293,11 +11293,11 @@ export class RecordStatePropertyList extends cdktn.ComplexList {
 }
 export interface RelatedFindingsIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -11399,11 +11399,11 @@ export class RelatedFindingsIdPropertyList extends cdktn.ComplexList {
 }
 export interface RelatedFindingsProductArnProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -11505,11 +11505,11 @@ export class RelatedFindingsProductArnPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceAwsEc2InstanceIamInstanceProfileArnProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -11611,11 +11611,11 @@ export class ResourceAwsEc2InstanceIamInstanceProfileArnPropertyList extends cdk
 }
 export interface ResourceAwsEc2InstanceImageIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -11717,7 +11717,7 @@ export class ResourceAwsEc2InstanceImageIdPropertyList extends cdktn.ComplexList
 }
 export interface ResourceAwsEc2InstanceIpv4AddressesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#cidr TfInsight#cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#cidr AwsInsight#cidr}
   */
   readonly cidr: string;
 }
@@ -11800,7 +11800,7 @@ export class ResourceAwsEc2InstanceIpv4AddressesPropertyList extends cdktn.Compl
 }
 export interface ResourceAwsEc2InstanceIpv6AddressesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#cidr TfInsight#cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#cidr AwsInsight#cidr}
   */
   readonly cidr: string;
 }
@@ -11883,11 +11883,11 @@ export class ResourceAwsEc2InstanceIpv6AddressesPropertyList extends cdktn.Compl
 }
 export interface ResourceAwsEc2InstanceKeyNameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -11989,11 +11989,11 @@ export class ResourceAwsEc2InstanceKeyNamePropertyList extends cdktn.ComplexList
 }
 export interface FiltersResourceAwsEc2InstanceLaunchedAtDateRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit TfInsight#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit AwsInsight#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: number;
 }
@@ -12063,17 +12063,17 @@ export class FiltersResourceAwsEc2InstanceLaunchedAtDateRangePropertyOutputRefer
 }
 export interface ResourceAwsEc2InstanceLaunchedAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end TfInsight#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end AwsInsight#end}
   */
   readonly end?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start TfInsight#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start AwsInsight#start}
   */
   readonly start?: string;
   /**
   * date_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range TfInsight#date_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range AwsInsight#date_range}
   */
   readonly dateRange?: FiltersResourceAwsEc2InstanceLaunchedAtDateRangeProperty;
 }
@@ -12203,11 +12203,11 @@ export class ResourceAwsEc2InstanceLaunchedAtPropertyList extends cdktn.ComplexL
 }
 export interface ResourceAwsEc2InstanceSubnetIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -12309,11 +12309,11 @@ export class ResourceAwsEc2InstanceSubnetIdPropertyList extends cdktn.ComplexLis
 }
 export interface ResourceAwsEc2InstanceTypeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -12415,11 +12415,11 @@ export class ResourceAwsEc2InstanceTypePropertyList extends cdktn.ComplexList {
 }
 export interface ResourceAwsEc2InstanceVpcIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -12521,11 +12521,11 @@ export class ResourceAwsEc2InstanceVpcIdPropertyList extends cdktn.ComplexList {
 }
 export interface FiltersResourceAwsIamAccessKeyCreatedAtDateRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit TfInsight#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit AwsInsight#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: number;
 }
@@ -12595,17 +12595,17 @@ export class FiltersResourceAwsIamAccessKeyCreatedAtDateRangePropertyOutputRefer
 }
 export interface ResourceAwsIamAccessKeyCreatedAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end TfInsight#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end AwsInsight#end}
   */
   readonly end?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start TfInsight#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start AwsInsight#start}
   */
   readonly start?: string;
   /**
   * date_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range TfInsight#date_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range AwsInsight#date_range}
   */
   readonly dateRange?: FiltersResourceAwsIamAccessKeyCreatedAtDateRangeProperty;
 }
@@ -12735,11 +12735,11 @@ export class ResourceAwsIamAccessKeyCreatedAtPropertyList extends cdktn.ComplexL
 }
 export interface ResourceAwsIamAccessKeyStatusProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -12841,11 +12841,11 @@ export class ResourceAwsIamAccessKeyStatusPropertyList extends cdktn.ComplexList
 }
 export interface ResourceAwsIamAccessKeyUserNameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -12947,11 +12947,11 @@ export class ResourceAwsIamAccessKeyUserNamePropertyList extends cdktn.ComplexLi
 }
 export interface ResourceAwsS3BucketOwnerIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -13053,11 +13053,11 @@ export class ResourceAwsS3BucketOwnerIdPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceAwsS3BucketOwnerNameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -13159,11 +13159,11 @@ export class ResourceAwsS3BucketOwnerNamePropertyList extends cdktn.ComplexList 
 }
 export interface ResourceContainerImageIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -13265,11 +13265,11 @@ export class ResourceContainerImageIdPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceContainerImageNameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -13371,11 +13371,11 @@ export class ResourceContainerImageNamePropertyList extends cdktn.ComplexList {
 }
 export interface FiltersResourceContainerLaunchedAtDateRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit TfInsight#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit AwsInsight#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: number;
 }
@@ -13445,17 +13445,17 @@ export class FiltersResourceContainerLaunchedAtDateRangePropertyOutputReference 
 }
 export interface ResourceContainerLaunchedAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end TfInsight#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end AwsInsight#end}
   */
   readonly end?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start TfInsight#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start AwsInsight#start}
   */
   readonly start?: string;
   /**
   * date_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range TfInsight#date_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range AwsInsight#date_range}
   */
   readonly dateRange?: FiltersResourceContainerLaunchedAtDateRangeProperty;
 }
@@ -13585,11 +13585,11 @@ export class ResourceContainerLaunchedAtPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceContainerNameProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -13691,15 +13691,15 @@ export class ResourceContainerNamePropertyList extends cdktn.ComplexList {
 }
 export interface ResourceDetailsOtherProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#key TfInsight#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#key AwsInsight#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -13820,11 +13820,11 @@ export class ResourceDetailsOtherPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceIdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -13926,11 +13926,11 @@ export class ResourceIdPropertyList extends cdktn.ComplexList {
 }
 export interface ResourcePartitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -14032,11 +14032,11 @@ export class ResourcePartitionPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceRegionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -14138,15 +14138,15 @@ export class ResourceRegionPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#key TfInsight#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#key AwsInsight#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -14267,11 +14267,11 @@ export class ResourceTagsPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceTypeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -14373,11 +14373,11 @@ export class ResourceTypePropertyList extends cdktn.ComplexList {
 }
 export interface SeverityLabelProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -14479,11 +14479,11 @@ export class SeverityLabelPropertyList extends cdktn.ComplexList {
 }
 export interface SourceUrlProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -14585,11 +14585,11 @@ export class SourceUrlPropertyList extends cdktn.ComplexList {
 }
 export interface ThreatIntelIndicatorCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -14691,11 +14691,11 @@ export class ThreatIntelIndicatorCategoryPropertyList extends cdktn.ComplexList 
 }
 export interface FiltersThreatIntelIndicatorLastObservedAtDateRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit TfInsight#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit AwsInsight#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: number;
 }
@@ -14765,17 +14765,17 @@ export class FiltersThreatIntelIndicatorLastObservedAtDateRangePropertyOutputRef
 }
 export interface ThreatIntelIndicatorLastObservedAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end TfInsight#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end AwsInsight#end}
   */
   readonly end?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start TfInsight#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start AwsInsight#start}
   */
   readonly start?: string;
   /**
   * date_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range TfInsight#date_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range AwsInsight#date_range}
   */
   readonly dateRange?: FiltersThreatIntelIndicatorLastObservedAtDateRangeProperty;
 }
@@ -14905,11 +14905,11 @@ export class ThreatIntelIndicatorLastObservedAtPropertyList extends cdktn.Comple
 }
 export interface ThreatIntelIndicatorSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -15011,11 +15011,11 @@ export class ThreatIntelIndicatorSourcePropertyList extends cdktn.ComplexList {
 }
 export interface ThreatIntelIndicatorSourceUrlProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -15117,11 +15117,11 @@ export class ThreatIntelIndicatorSourceUrlPropertyList extends cdktn.ComplexList
 }
 export interface ThreatIntelIndicatorTypeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -15223,11 +15223,11 @@ export class ThreatIntelIndicatorTypePropertyList extends cdktn.ComplexList {
 }
 export interface ThreatIntelIndicatorValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -15329,11 +15329,11 @@ export class ThreatIntelIndicatorValuePropertyList extends cdktn.ComplexList {
 }
 export interface TitleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -15435,11 +15435,11 @@ export class TitlePropertyList extends cdktn.ComplexList {
 }
 export interface TypeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -15541,11 +15541,11 @@ export class TypePropertyList extends cdktn.ComplexList {
 }
 export interface FiltersUpdatedAtDateRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit TfInsight#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#unit AwsInsight#unit}
   */
   readonly unit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: number;
 }
@@ -15615,17 +15615,17 @@ export class FiltersUpdatedAtDateRangePropertyOutputReference extends cdktn.Comp
 }
 export interface UpdatedAtProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end TfInsight#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#end AwsInsight#end}
   */
   readonly end?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start TfInsight#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#start AwsInsight#start}
   */
   readonly start?: string;
   /**
   * date_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range TfInsight#date_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#date_range AwsInsight#date_range}
   */
   readonly dateRange?: FiltersUpdatedAtDateRangeProperty;
 }
@@ -15755,15 +15755,15 @@ export class UpdatedAtPropertyList extends cdktn.ComplexList {
 }
 export interface UserDefinedValuesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#key TfInsight#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#key AwsInsight#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -15884,11 +15884,11 @@ export class UserDefinedValuesPropertyList extends cdktn.ComplexList {
 }
 export interface VerificationStateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -15990,11 +15990,11 @@ export class VerificationStatePropertyList extends cdktn.ComplexList {
 }
 export interface WorkflowStatusProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison TfInsight#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#comparison AwsInsight#comparison}
   */
   readonly comparison: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value TfInsight#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#value AwsInsight#value}
   */
   readonly value: string;
 }
@@ -16098,133 +16098,133 @@ export interface FiltersProperty {
   /**
   * aws_account_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#aws_account_id TfInsight#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#aws_account_id AwsInsight#aws_account_id}
   */
   readonly awsAccountId?: AwsAccountIdProperty[] | cdktn.IResolvable;
   /**
   * aws_account_name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#aws_account_name TfInsight#aws_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#aws_account_name AwsInsight#aws_account_name}
   */
   readonly awsAccountName?: AwsAccountNameProperty[] | cdktn.IResolvable;
   /**
   * company_name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#company_name TfInsight#company_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#company_name AwsInsight#company_name}
   */
   readonly companyName?: CompanyNameProperty[] | cdktn.IResolvable;
   /**
   * compliance_associated_standards_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#compliance_associated_standards_id TfInsight#compliance_associated_standards_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#compliance_associated_standards_id AwsInsight#compliance_associated_standards_id}
   */
   readonly complianceAssociatedStandardsId?: ComplianceAssociatedStandardsIdProperty[] | cdktn.IResolvable;
   /**
   * compliance_security_control_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#compliance_security_control_id TfInsight#compliance_security_control_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#compliance_security_control_id AwsInsight#compliance_security_control_id}
   */
   readonly complianceSecurityControlId?: ComplianceSecurityControlIdProperty[] | cdktn.IResolvable;
   /**
   * compliance_security_control_parameters_name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#compliance_security_control_parameters_name TfInsight#compliance_security_control_parameters_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#compliance_security_control_parameters_name AwsInsight#compliance_security_control_parameters_name}
   */
   readonly complianceSecurityControlParametersName?: ComplianceSecurityControlParametersNameProperty[] | cdktn.IResolvable;
   /**
   * compliance_security_control_parameters_value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#compliance_security_control_parameters_value TfInsight#compliance_security_control_parameters_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#compliance_security_control_parameters_value AwsInsight#compliance_security_control_parameters_value}
   */
   readonly complianceSecurityControlParametersValue?: ComplianceSecurityControlParametersValueProperty[] | cdktn.IResolvable;
   /**
   * compliance_status block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#compliance_status TfInsight#compliance_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#compliance_status AwsInsight#compliance_status}
   */
   readonly complianceStatus?: ComplianceStatusProperty[] | cdktn.IResolvable;
   /**
   * confidence block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#confidence TfInsight#confidence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#confidence AwsInsight#confidence}
   */
   readonly confidence?: ConfidenceProperty[] | cdktn.IResolvable;
   /**
   * created_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#created_at TfInsight#created_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#created_at AwsInsight#created_at}
   */
   readonly createdAt?: CreatedAtProperty[] | cdktn.IResolvable;
   /**
   * criticality block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#criticality TfInsight#criticality}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#criticality AwsInsight#criticality}
   */
   readonly criticality?: CriticalityProperty[] | cdktn.IResolvable;
   /**
   * description block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#description TfInsight#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#description AwsInsight#description}
   */
   readonly description?: DescriptionProperty[] | cdktn.IResolvable;
   /**
   * finding_provider_fields_confidence block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#finding_provider_fields_confidence TfInsight#finding_provider_fields_confidence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#finding_provider_fields_confidence AwsInsight#finding_provider_fields_confidence}
   */
   readonly findingProviderFieldsConfidence?: FindingProviderFieldsConfidenceProperty[] | cdktn.IResolvable;
   /**
   * finding_provider_fields_criticality block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#finding_provider_fields_criticality TfInsight#finding_provider_fields_criticality}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#finding_provider_fields_criticality AwsInsight#finding_provider_fields_criticality}
   */
   readonly findingProviderFieldsCriticality?: FindingProviderFieldsCriticalityProperty[] | cdktn.IResolvable;
   /**
   * finding_provider_fields_related_findings_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#finding_provider_fields_related_findings_id TfInsight#finding_provider_fields_related_findings_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#finding_provider_fields_related_findings_id AwsInsight#finding_provider_fields_related_findings_id}
   */
   readonly findingProviderFieldsRelatedFindingsId?: FindingProviderFieldsRelatedFindingsIdProperty[] | cdktn.IResolvable;
   /**
   * finding_provider_fields_related_findings_product_arn block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#finding_provider_fields_related_findings_product_arn TfInsight#finding_provider_fields_related_findings_product_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#finding_provider_fields_related_findings_product_arn AwsInsight#finding_provider_fields_related_findings_product_arn}
   */
   readonly findingProviderFieldsRelatedFindingsProductArn?: FindingProviderFieldsRelatedFindingsProductArnProperty[] | cdktn.IResolvable;
   /**
   * finding_provider_fields_severity_label block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#finding_provider_fields_severity_label TfInsight#finding_provider_fields_severity_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#finding_provider_fields_severity_label AwsInsight#finding_provider_fields_severity_label}
   */
   readonly findingProviderFieldsSeverityLabel?: FindingProviderFieldsSeverityLabelProperty[] | cdktn.IResolvable;
   /**
   * finding_provider_fields_severity_original block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#finding_provider_fields_severity_original TfInsight#finding_provider_fields_severity_original}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#finding_provider_fields_severity_original AwsInsight#finding_provider_fields_severity_original}
   */
   readonly findingProviderFieldsSeverityOriginal?: FindingProviderFieldsSeverityOriginalProperty[] | cdktn.IResolvable;
   /**
   * finding_provider_fields_types block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#finding_provider_fields_types TfInsight#finding_provider_fields_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#finding_provider_fields_types AwsInsight#finding_provider_fields_types}
   */
   readonly findingProviderFieldsTypes?: FindingProviderFieldsTypesProperty[] | cdktn.IResolvable;
   /**
   * first_observed_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#first_observed_at TfInsight#first_observed_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#first_observed_at AwsInsight#first_observed_at}
   */
   readonly firstObservedAt?: FirstObservedAtProperty[] | cdktn.IResolvable;
   /**
   * generator_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#generator_id TfInsight#generator_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#generator_id AwsInsight#generator_id}
   */
   readonly generatorId?: GeneratorIdProperty[] | cdktn.IResolvable;
   /**
   * id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#id TfInsight#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#id AwsInsight#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16233,427 +16233,427 @@ export interface FiltersProperty {
   /**
   * keyword block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#keyword TfInsight#keyword}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#keyword AwsInsight#keyword}
   */
   readonly keyword?: KeywordProperty[] | cdktn.IResolvable;
   /**
   * last_observed_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#last_observed_at TfInsight#last_observed_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#last_observed_at AwsInsight#last_observed_at}
   */
   readonly lastObservedAt?: LastObservedAtProperty[] | cdktn.IResolvable;
   /**
   * malware_name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#malware_name TfInsight#malware_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#malware_name AwsInsight#malware_name}
   */
   readonly malwareName?: MalwareNameProperty[] | cdktn.IResolvable;
   /**
   * malware_path block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#malware_path TfInsight#malware_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#malware_path AwsInsight#malware_path}
   */
   readonly malwarePath?: MalwarePathProperty[] | cdktn.IResolvable;
   /**
   * malware_state block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#malware_state TfInsight#malware_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#malware_state AwsInsight#malware_state}
   */
   readonly malwareState?: MalwareStateProperty[] | cdktn.IResolvable;
   /**
   * malware_type block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#malware_type TfInsight#malware_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#malware_type AwsInsight#malware_type}
   */
   readonly malwareType?: MalwareTypeProperty[] | cdktn.IResolvable;
   /**
   * network_destination_domain block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_destination_domain TfInsight#network_destination_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_destination_domain AwsInsight#network_destination_domain}
   */
   readonly networkDestinationDomain?: NetworkDestinationDomainProperty[] | cdktn.IResolvable;
   /**
   * network_destination_ipv4 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_destination_ipv4 TfInsight#network_destination_ipv4}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_destination_ipv4 AwsInsight#network_destination_ipv4}
   */
   readonly networkDestinationIpv4?: NetworkDestinationIpv4Property[] | cdktn.IResolvable;
   /**
   * network_destination_ipv6 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_destination_ipv6 TfInsight#network_destination_ipv6}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_destination_ipv6 AwsInsight#network_destination_ipv6}
   */
   readonly networkDestinationIpv6?: NetworkDestinationIpv6Property[] | cdktn.IResolvable;
   /**
   * network_destination_port block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_destination_port TfInsight#network_destination_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_destination_port AwsInsight#network_destination_port}
   */
   readonly networkDestinationPort?: NetworkDestinationPortProperty[] | cdktn.IResolvable;
   /**
   * network_direction block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_direction TfInsight#network_direction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_direction AwsInsight#network_direction}
   */
   readonly networkDirection?: NetworkDirectionProperty[] | cdktn.IResolvable;
   /**
   * network_protocol block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_protocol TfInsight#network_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_protocol AwsInsight#network_protocol}
   */
   readonly networkProtocol?: NetworkProtocolProperty[] | cdktn.IResolvable;
   /**
   * network_source_domain block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_source_domain TfInsight#network_source_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_source_domain AwsInsight#network_source_domain}
   */
   readonly networkSourceDomain?: NetworkSourceDomainProperty[] | cdktn.IResolvable;
   /**
   * network_source_ipv4 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_source_ipv4 TfInsight#network_source_ipv4}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_source_ipv4 AwsInsight#network_source_ipv4}
   */
   readonly networkSourceIpv4?: NetworkSourceIpv4Property[] | cdktn.IResolvable;
   /**
   * network_source_ipv6 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_source_ipv6 TfInsight#network_source_ipv6}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_source_ipv6 AwsInsight#network_source_ipv6}
   */
   readonly networkSourceIpv6?: NetworkSourceIpv6Property[] | cdktn.IResolvable;
   /**
   * network_source_mac block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_source_mac TfInsight#network_source_mac}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_source_mac AwsInsight#network_source_mac}
   */
   readonly networkSourceMac?: NetworkSourceMacProperty[] | cdktn.IResolvable;
   /**
   * network_source_port block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_source_port TfInsight#network_source_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#network_source_port AwsInsight#network_source_port}
   */
   readonly networkSourcePort?: NetworkSourcePortProperty[] | cdktn.IResolvable;
   /**
   * note_text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#note_text TfInsight#note_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#note_text AwsInsight#note_text}
   */
   readonly noteText?: NoteTextProperty[] | cdktn.IResolvable;
   /**
   * note_updated_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#note_updated_at TfInsight#note_updated_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#note_updated_at AwsInsight#note_updated_at}
   */
   readonly noteUpdatedAt?: NoteUpdatedAtProperty[] | cdktn.IResolvable;
   /**
   * note_updated_by block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#note_updated_by TfInsight#note_updated_by}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#note_updated_by AwsInsight#note_updated_by}
   */
   readonly noteUpdatedBy?: NoteUpdatedByProperty[] | cdktn.IResolvable;
   /**
   * process_launched_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#process_launched_at TfInsight#process_launched_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#process_launched_at AwsInsight#process_launched_at}
   */
   readonly processLaunchedAt?: ProcessLaunchedAtProperty[] | cdktn.IResolvable;
   /**
   * process_name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#process_name TfInsight#process_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#process_name AwsInsight#process_name}
   */
   readonly processName?: ProcessNameProperty[] | cdktn.IResolvable;
   /**
   * process_parent_pid block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#process_parent_pid TfInsight#process_parent_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#process_parent_pid AwsInsight#process_parent_pid}
   */
   readonly processParentPid?: ProcessParentPidProperty[] | cdktn.IResolvable;
   /**
   * process_path block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#process_path TfInsight#process_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#process_path AwsInsight#process_path}
   */
   readonly processPath?: ProcessPathProperty[] | cdktn.IResolvable;
   /**
   * process_pid block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#process_pid TfInsight#process_pid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#process_pid AwsInsight#process_pid}
   */
   readonly processPid?: ProcessPidProperty[] | cdktn.IResolvable;
   /**
   * process_terminated_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#process_terminated_at TfInsight#process_terminated_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#process_terminated_at AwsInsight#process_terminated_at}
   */
   readonly processTerminatedAt?: ProcessTerminatedAtProperty[] | cdktn.IResolvable;
   /**
   * product_arn block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#product_arn TfInsight#product_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#product_arn AwsInsight#product_arn}
   */
   readonly productArn?: ProductArnProperty[] | cdktn.IResolvable;
   /**
   * product_fields block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#product_fields TfInsight#product_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#product_fields AwsInsight#product_fields}
   */
   readonly productFields?: ProductFieldsProperty[] | cdktn.IResolvable;
   /**
   * product_name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#product_name TfInsight#product_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#product_name AwsInsight#product_name}
   */
   readonly productName?: ProductNameProperty[] | cdktn.IResolvable;
   /**
   * recommendation_text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#recommendation_text TfInsight#recommendation_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#recommendation_text AwsInsight#recommendation_text}
   */
   readonly recommendationText?: RecommendationTextProperty[] | cdktn.IResolvable;
   /**
   * record_state block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#record_state TfInsight#record_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#record_state AwsInsight#record_state}
   */
   readonly recordState?: RecordStateProperty[] | cdktn.IResolvable;
   /**
   * related_findings_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#related_findings_id TfInsight#related_findings_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#related_findings_id AwsInsight#related_findings_id}
   */
   readonly relatedFindingsId?: RelatedFindingsIdProperty[] | cdktn.IResolvable;
   /**
   * related_findings_product_arn block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#related_findings_product_arn TfInsight#related_findings_product_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#related_findings_product_arn AwsInsight#related_findings_product_arn}
   */
   readonly relatedFindingsProductArn?: RelatedFindingsProductArnProperty[] | cdktn.IResolvable;
   /**
   * resource_aws_ec2_instance_iam_instance_profile_arn block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_iam_instance_profile_arn TfInsight#resource_aws_ec2_instance_iam_instance_profile_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_iam_instance_profile_arn AwsInsight#resource_aws_ec2_instance_iam_instance_profile_arn}
   */
   readonly resourceAwsEc2InstanceIamInstanceProfileArn?: ResourceAwsEc2InstanceIamInstanceProfileArnProperty[] | cdktn.IResolvable;
   /**
   * resource_aws_ec2_instance_image_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_image_id TfInsight#resource_aws_ec2_instance_image_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_image_id AwsInsight#resource_aws_ec2_instance_image_id}
   */
   readonly resourceAwsEc2InstanceImageId?: ResourceAwsEc2InstanceImageIdProperty[] | cdktn.IResolvable;
   /**
   * resource_aws_ec2_instance_ipv4_addresses block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_ipv4_addresses TfInsight#resource_aws_ec2_instance_ipv4_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_ipv4_addresses AwsInsight#resource_aws_ec2_instance_ipv4_addresses}
   */
   readonly resourceAwsEc2InstanceIpv4Addresses?: ResourceAwsEc2InstanceIpv4AddressesProperty[] | cdktn.IResolvable;
   /**
   * resource_aws_ec2_instance_ipv6_addresses block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_ipv6_addresses TfInsight#resource_aws_ec2_instance_ipv6_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_ipv6_addresses AwsInsight#resource_aws_ec2_instance_ipv6_addresses}
   */
   readonly resourceAwsEc2InstanceIpv6Addresses?: ResourceAwsEc2InstanceIpv6AddressesProperty[] | cdktn.IResolvable;
   /**
   * resource_aws_ec2_instance_key_name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_key_name TfInsight#resource_aws_ec2_instance_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_key_name AwsInsight#resource_aws_ec2_instance_key_name}
   */
   readonly resourceAwsEc2InstanceKeyName?: ResourceAwsEc2InstanceKeyNameProperty[] | cdktn.IResolvable;
   /**
   * resource_aws_ec2_instance_launched_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_launched_at TfInsight#resource_aws_ec2_instance_launched_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_launched_at AwsInsight#resource_aws_ec2_instance_launched_at}
   */
   readonly resourceAwsEc2InstanceLaunchedAt?: ResourceAwsEc2InstanceLaunchedAtProperty[] | cdktn.IResolvable;
   /**
   * resource_aws_ec2_instance_subnet_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_subnet_id TfInsight#resource_aws_ec2_instance_subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_subnet_id AwsInsight#resource_aws_ec2_instance_subnet_id}
   */
   readonly resourceAwsEc2InstanceSubnetId?: ResourceAwsEc2InstanceSubnetIdProperty[] | cdktn.IResolvable;
   /**
   * resource_aws_ec2_instance_type block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_type TfInsight#resource_aws_ec2_instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_type AwsInsight#resource_aws_ec2_instance_type}
   */
   readonly resourceAwsEc2InstanceType?: ResourceAwsEc2InstanceTypeProperty[] | cdktn.IResolvable;
   /**
   * resource_aws_ec2_instance_vpc_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_vpc_id TfInsight#resource_aws_ec2_instance_vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_ec2_instance_vpc_id AwsInsight#resource_aws_ec2_instance_vpc_id}
   */
   readonly resourceAwsEc2InstanceVpcId?: ResourceAwsEc2InstanceVpcIdProperty[] | cdktn.IResolvable;
   /**
   * resource_aws_iam_access_key_created_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_iam_access_key_created_at TfInsight#resource_aws_iam_access_key_created_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_iam_access_key_created_at AwsInsight#resource_aws_iam_access_key_created_at}
   */
   readonly resourceAwsIamAccessKeyCreatedAt?: ResourceAwsIamAccessKeyCreatedAtProperty[] | cdktn.IResolvable;
   /**
   * resource_aws_iam_access_key_status block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_iam_access_key_status TfInsight#resource_aws_iam_access_key_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_iam_access_key_status AwsInsight#resource_aws_iam_access_key_status}
   */
   readonly resourceAwsIamAccessKeyStatus?: ResourceAwsIamAccessKeyStatusProperty[] | cdktn.IResolvable;
   /**
   * resource_aws_iam_access_key_user_name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_iam_access_key_user_name TfInsight#resource_aws_iam_access_key_user_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_iam_access_key_user_name AwsInsight#resource_aws_iam_access_key_user_name}
   */
   readonly resourceAwsIamAccessKeyUserName?: ResourceAwsIamAccessKeyUserNameProperty[] | cdktn.IResolvable;
   /**
   * resource_aws_s3_bucket_owner_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_s3_bucket_owner_id TfInsight#resource_aws_s3_bucket_owner_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_s3_bucket_owner_id AwsInsight#resource_aws_s3_bucket_owner_id}
   */
   readonly resourceAwsS3BucketOwnerId?: ResourceAwsS3BucketOwnerIdProperty[] | cdktn.IResolvable;
   /**
   * resource_aws_s3_bucket_owner_name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_s3_bucket_owner_name TfInsight#resource_aws_s3_bucket_owner_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_aws_s3_bucket_owner_name AwsInsight#resource_aws_s3_bucket_owner_name}
   */
   readonly resourceAwsS3BucketOwnerName?: ResourceAwsS3BucketOwnerNameProperty[] | cdktn.IResolvable;
   /**
   * resource_container_image_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_container_image_id TfInsight#resource_container_image_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_container_image_id AwsInsight#resource_container_image_id}
   */
   readonly resourceContainerImageId?: ResourceContainerImageIdProperty[] | cdktn.IResolvable;
   /**
   * resource_container_image_name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_container_image_name TfInsight#resource_container_image_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_container_image_name AwsInsight#resource_container_image_name}
   */
   readonly resourceContainerImageName?: ResourceContainerImageNameProperty[] | cdktn.IResolvable;
   /**
   * resource_container_launched_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_container_launched_at TfInsight#resource_container_launched_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_container_launched_at AwsInsight#resource_container_launched_at}
   */
   readonly resourceContainerLaunchedAt?: ResourceContainerLaunchedAtProperty[] | cdktn.IResolvable;
   /**
   * resource_container_name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_container_name TfInsight#resource_container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_container_name AwsInsight#resource_container_name}
   */
   readonly resourceContainerName?: ResourceContainerNameProperty[] | cdktn.IResolvable;
   /**
   * resource_details_other block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_details_other TfInsight#resource_details_other}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_details_other AwsInsight#resource_details_other}
   */
   readonly resourceDetailsOther?: ResourceDetailsOtherProperty[] | cdktn.IResolvable;
   /**
   * resource_id block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_id TfInsight#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_id AwsInsight#resource_id}
   */
   readonly resourceId?: ResourceIdProperty[] | cdktn.IResolvable;
   /**
   * resource_partition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_partition TfInsight#resource_partition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_partition AwsInsight#resource_partition}
   */
   readonly resourcePartition?: ResourcePartitionProperty[] | cdktn.IResolvable;
   /**
   * resource_region block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_region TfInsight#resource_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_region AwsInsight#resource_region}
   */
   readonly resourceRegion?: ResourceRegionProperty[] | cdktn.IResolvable;
   /**
   * resource_tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_tags TfInsight#resource_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_tags AwsInsight#resource_tags}
   */
   readonly resourceTags?: ResourceTagsProperty[] | cdktn.IResolvable;
   /**
   * resource_type block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_type TfInsight#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#resource_type AwsInsight#resource_type}
   */
   readonly resourceType?: ResourceTypeProperty[] | cdktn.IResolvable;
   /**
   * severity_label block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#severity_label TfInsight#severity_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#severity_label AwsInsight#severity_label}
   */
   readonly severityLabel?: SeverityLabelProperty[] | cdktn.IResolvable;
   /**
   * source_url block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#source_url TfInsight#source_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#source_url AwsInsight#source_url}
   */
   readonly sourceUrl?: SourceUrlProperty[] | cdktn.IResolvable;
   /**
   * threat_intel_indicator_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#threat_intel_indicator_category TfInsight#threat_intel_indicator_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#threat_intel_indicator_category AwsInsight#threat_intel_indicator_category}
   */
   readonly threatIntelIndicatorCategory?: ThreatIntelIndicatorCategoryProperty[] | cdktn.IResolvable;
   /**
   * threat_intel_indicator_last_observed_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#threat_intel_indicator_last_observed_at TfInsight#threat_intel_indicator_last_observed_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#threat_intel_indicator_last_observed_at AwsInsight#threat_intel_indicator_last_observed_at}
   */
   readonly threatIntelIndicatorLastObservedAt?: ThreatIntelIndicatorLastObservedAtProperty[] | cdktn.IResolvable;
   /**
   * threat_intel_indicator_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#threat_intel_indicator_source TfInsight#threat_intel_indicator_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#threat_intel_indicator_source AwsInsight#threat_intel_indicator_source}
   */
   readonly threatIntelIndicatorSource?: ThreatIntelIndicatorSourceProperty[] | cdktn.IResolvable;
   /**
   * threat_intel_indicator_source_url block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#threat_intel_indicator_source_url TfInsight#threat_intel_indicator_source_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#threat_intel_indicator_source_url AwsInsight#threat_intel_indicator_source_url}
   */
   readonly threatIntelIndicatorSourceUrl?: ThreatIntelIndicatorSourceUrlProperty[] | cdktn.IResolvable;
   /**
   * threat_intel_indicator_type block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#threat_intel_indicator_type TfInsight#threat_intel_indicator_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#threat_intel_indicator_type AwsInsight#threat_intel_indicator_type}
   */
   readonly threatIntelIndicatorType?: ThreatIntelIndicatorTypeProperty[] | cdktn.IResolvable;
   /**
   * threat_intel_indicator_value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#threat_intel_indicator_value TfInsight#threat_intel_indicator_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#threat_intel_indicator_value AwsInsight#threat_intel_indicator_value}
   */
   readonly threatIntelIndicatorValue?: ThreatIntelIndicatorValueProperty[] | cdktn.IResolvable;
   /**
   * title block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#title TfInsight#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#title AwsInsight#title}
   */
   readonly title?: TitleProperty[] | cdktn.IResolvable;
   /**
   * type block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#type TfInsight#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#type AwsInsight#type}
   */
   readonly type?: TypeProperty[] | cdktn.IResolvable;
   /**
   * updated_at block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#updated_at TfInsight#updated_at}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#updated_at AwsInsight#updated_at}
   */
   readonly updatedAt?: UpdatedAtProperty[] | cdktn.IResolvable;
   /**
   * user_defined_values block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#user_defined_values TfInsight#user_defined_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#user_defined_values AwsInsight#user_defined_values}
   */
   readonly userDefinedValues?: UserDefinedValuesProperty[] | cdktn.IResolvable;
   /**
   * verification_state block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#verification_state TfInsight#verification_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#verification_state AwsInsight#verification_state}
   */
   readonly verificationState?: VerificationStateProperty[] | cdktn.IResolvable;
   /**
   * workflow_status block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#workflow_status TfInsight#workflow_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_insight#workflow_status AwsInsight#workflow_status}
   */
   readonly workflowStatus?: WorkflowStatusProperty[] | cdktn.IResolvable;
 }

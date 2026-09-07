@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfWorkspaceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsWorkspaceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#bundle_id TfWorkspace#bundle_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#bundle_id AwsWorkspace#bundle_id}
   */
   readonly bundleId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#directory_id TfWorkspace#directory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#directory_id AwsWorkspace#directory_id}
   */
   readonly directoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#id TfWorkspace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#id AwsWorkspace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,51 +24,51 @@ export interface TfWorkspaceConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#region TfWorkspace#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#region AwsWorkspace#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#root_volume_encryption_enabled TfWorkspace#root_volume_encryption_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#root_volume_encryption_enabled AwsWorkspace#root_volume_encryption_enabled}
   */
   readonly rootVolumeEncryptionEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#tags TfWorkspace#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#tags AwsWorkspace#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#tags_all TfWorkspace#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#tags_all AwsWorkspace#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#user_name TfWorkspace#user_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#user_name AwsWorkspace#user_name}
   */
   readonly userName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#user_volume_encryption_enabled TfWorkspace#user_volume_encryption_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#user_volume_encryption_enabled AwsWorkspace#user_volume_encryption_enabled}
   */
   readonly userVolumeEncryptionEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#volume_encryption_key TfWorkspace#volume_encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#volume_encryption_key AwsWorkspace#volume_encryption_key}
   */
   readonly volumeEncryptionKey?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#timeouts TfWorkspace#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#timeouts AwsWorkspace#timeouts}
   */
-  readonly timeouts?: TfWorkspace.TimeoutsProperty;
+  readonly timeouts?: AwsWorkspace.TimeoutsProperty;
   /**
   * workspace_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#workspace_properties TfWorkspace#workspace_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#workspace_properties AwsWorkspace#workspace_properties}
   */
-  readonly workspaceProperties?: TfWorkspace.WorkspacePropertiesProperty;
+  readonly workspaceProperties?: AwsWorkspace.WorkspacePropertiesProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace aws_workspaces_workspace}
 */
-export class TfWorkspace extends cdktn.TerraformResource {
+export class AwsWorkspace extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class TfWorkspace extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfWorkspace resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsWorkspace resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfWorkspace to import
-  * @param importFromId The id of the existing TfWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfWorkspace to import is found
+  * @param importToId The construct id used in the generated config for the AwsWorkspace to import
+  * @param importFromId The id of the existing AwsWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsWorkspace to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspaces_workspace", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class TfWorkspace extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfWorkspaceConfig
+  * @param options AwsWorkspaceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfWorkspaceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsWorkspaceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workspaces_workspace',
       terraformGeneratorMetadata: {
@@ -301,11 +301,11 @@ export class TfWorkspace extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfWorkspace.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsWorkspace.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfWorkspace.TimeoutsProperty) {
+  public putTimeouts(value: AwsWorkspace.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -317,11 +317,11 @@ export class TfWorkspace extends cdktn.TerraformResource {
   }
 
   // workspace_properties - computed: false, optional: true, required: false
-  private _workspaceProperties = new TfWorkspace.WorkspacePropertiesPropertyOutputReference(this, "workspace_properties");
+  private _workspaceProperties = new AwsWorkspace.WorkspacePropertiesPropertyOutputReference(this, "workspace_properties");
   public get workspaceProperties() {
     return this._workspaceProperties;
   }
-  public putWorkspaceProperties(value: TfWorkspace.WorkspacePropertiesProperty) {
+  public putWorkspaceProperties(value: AwsWorkspace.WorkspacePropertiesProperty) {
     this._workspaceProperties.internalValue = value;
   }
   public resetWorkspaceProperties() {
@@ -348,8 +348,8 @@ export class TfWorkspace extends cdktn.TerraformResource {
       user_name: cdktn.stringToTerraform(this._userName),
       user_volume_encryption_enabled: cdktn.booleanToTerraform(this._userVolumeEncryptionEnabled),
       volume_encryption_key: cdktn.stringToTerraform(this._volumeEncryptionKey),
-      timeouts: tfWorkspaceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      workspace_properties: tfWorkspaceWorkspacePropertiesPropertyToTerraform(this._workspaceProperties.internalValue),
+      timeouts: awsWorkspaceTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      workspace_properties: awsWorkspaceWorkspacePropertiesPropertyToTerraform(this._workspaceProperties.internalValue),
     };
   }
 
@@ -416,16 +416,16 @@ export class TfWorkspace extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfWorkspaceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsWorkspaceTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfWorkspace.TimeoutsProperty",
+        storageClassType: "AwsWorkspace.TimeoutsProperty",
       },
       workspace_properties: {
-        value: tfWorkspaceWorkspacePropertiesPropertyToHclTerraform(this._workspaceProperties.internalValue),
+        value: awsWorkspaceWorkspacePropertiesPropertyToHclTerraform(this._workspaceProperties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfWorkspace.WorkspacePropertiesPropertyList",
+        storageClassType: "AwsWorkspace.WorkspacePropertiesPropertyList",
       },
     };
 
@@ -434,7 +434,7 @@ export class TfWorkspace extends cdktn.TerraformResource {
   }
 }
 
-export function tfWorkspaceTimeoutsPropertyToTerraform(struct?: TfWorkspace.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsWorkspaceTimeoutsPropertyToTerraform(struct?: AwsWorkspace.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -447,7 +447,7 @@ export function tfWorkspaceTimeoutsPropertyToTerraform(struct?: TfWorkspace.Time
 }
 
 
-export function tfWorkspaceTimeoutsPropertyToHclTerraform(struct?: TfWorkspace.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsWorkspaceTimeoutsPropertyToHclTerraform(struct?: AwsWorkspace.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -478,7 +478,7 @@ export function tfWorkspaceTimeoutsPropertyToHclTerraform(struct?: TfWorkspace.T
 }
 
 
-export function tfWorkspaceWorkspacePropertiesPropertyToTerraform(struct?: TfWorkspace.WorkspacePropertiesPropertyOutputReference | TfWorkspace.WorkspacePropertiesProperty): any {
+export function awsWorkspaceWorkspacePropertiesPropertyToTerraform(struct?: AwsWorkspace.WorkspacePropertiesPropertyOutputReference | AwsWorkspace.WorkspacePropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -493,7 +493,7 @@ export function tfWorkspaceWorkspacePropertiesPropertyToTerraform(struct?: TfWor
 }
 
 
-export function tfWorkspaceWorkspacePropertiesPropertyToHclTerraform(struct?: TfWorkspace.WorkspacePropertiesPropertyOutputReference | TfWorkspace.WorkspacePropertiesProperty): any {
+export function awsWorkspaceWorkspacePropertiesPropertyToHclTerraform(struct?: AwsWorkspace.WorkspacePropertiesPropertyOutputReference | AwsWorkspace.WorkspacePropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -536,18 +536,18 @@ export function tfWorkspaceWorkspacePropertiesPropertyToHclTerraform(struct?: Tf
 }
 
 
-export namespace TfWorkspace {
+export namespace AwsWorkspace {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#create TfWorkspace#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#create AwsWorkspace#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#delete TfWorkspace#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#delete AwsWorkspace#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#update TfWorkspace#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#update AwsWorkspace#update}
   */
   readonly update?: string;
 }
@@ -655,23 +655,23 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface WorkspacePropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#compute_type_name TfWorkspace#compute_type_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#compute_type_name AwsWorkspace#compute_type_name}
   */
   readonly computeTypeName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#root_volume_size_gib TfWorkspace#root_volume_size_gib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#root_volume_size_gib AwsWorkspace#root_volume_size_gib}
   */
   readonly rootVolumeSizeGib?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#running_mode TfWorkspace#running_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#running_mode AwsWorkspace#running_mode}
   */
   readonly runningMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#running_mode_auto_stop_timeout_in_minutes TfWorkspace#running_mode_auto_stop_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#running_mode_auto_stop_timeout_in_minutes AwsWorkspace#running_mode_auto_stop_timeout_in_minutes}
   */
   readonly runningModeAutoStopTimeoutInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#user_volume_size_gib TfWorkspace#user_volume_size_gib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspaces_workspace#user_volume_size_gib AwsWorkspace#user_volume_size_gib}
   */
   readonly userVolumeSizeGib?: number;
 }

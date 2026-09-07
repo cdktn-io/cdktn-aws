@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDocumentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDocumentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#content TfDocument#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#content AwsDocument#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#document_format TfDocument#document_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#document_format AwsDocument#document_format}
   */
   readonly documentFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#document_type TfDocument#document_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#document_type AwsDocument#document_type}
   */
   readonly documentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#id TfDocument#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#id AwsDocument#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#name TfDocument#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#name AwsDocument#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#permissions TfDocument#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#permissions AwsDocument#permissions}
   */
   readonly permissions?: { [key: string]: string };
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#region TfDocument#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#region AwsDocument#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#tags TfDocument#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#tags AwsDocument#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#tags_all TfDocument#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#tags_all AwsDocument#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#target_type TfDocument#target_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#target_type AwsDocument#target_type}
   */
   readonly targetType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#version_name TfDocument#version_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#version_name AwsDocument#version_name}
   */
   readonly versionName?: string;
   /**
   * attachments_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#attachments_source TfDocument#attachments_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#attachments_source AwsDocument#attachments_source}
   */
-  readonly attachmentsSource?: TfDocument.AttachmentsSourceProperty[] | cdktn.IResolvable;
+  readonly attachmentsSource?: AwsDocument.AttachmentsSourceProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document aws_ssm_document}
 */
-export class TfDocument extends cdktn.TerraformResource {
+export class AwsDocument extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class TfDocument extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDocument resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDocument resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDocument to import
-  * @param importFromId The id of the existing TfDocument that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDocument to import is found
+  * @param importToId The construct id used in the generated config for the AwsDocument to import
+  * @param importFromId The id of the existing AwsDocument that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDocument to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssm_document", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class TfDocument extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDocumentConfig
+  * @param options AwsDocumentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDocumentConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDocumentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssm_document',
       terraformGeneratorMetadata: {
@@ -249,7 +249,7 @@ export class TfDocument extends cdktn.TerraformResource {
   }
 
   // parameter - computed: true, optional: false, required: false
-  private _parameter = new TfDocument.ParameterPropertyList(this, "parameter", false);
+  private _parameter = new AwsDocument.ParameterPropertyList(this, "parameter", false);
   public get parameter() {
     return this._parameter;
   }
@@ -366,11 +366,11 @@ export class TfDocument extends cdktn.TerraformResource {
   }
 
   // attachments_source - computed: false, optional: true, required: false
-  private _attachmentsSource = new TfDocument.AttachmentsSourcePropertyList(this, "attachments_source", false);
+  private _attachmentsSource = new AwsDocument.AttachmentsSourcePropertyList(this, "attachments_source", false);
   public get attachmentsSource() {
     return this._attachmentsSource;
   }
-  public putAttachmentsSource(value: TfDocument.AttachmentsSourceProperty[] | cdktn.IResolvable) {
+  public putAttachmentsSource(value: AwsDocument.AttachmentsSourceProperty[] | cdktn.IResolvable) {
     this._attachmentsSource.internalValue = value;
   }
   public resetAttachmentsSource() {
@@ -398,7 +398,7 @@ export class TfDocument extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       target_type: cdktn.stringToTerraform(this._targetType),
       version_name: cdktn.stringToTerraform(this._versionName),
-      attachments_source: cdktn.listMapper(tfDocumentAttachmentsSourcePropertyToTerraform, true)(this._attachmentsSource.internalValue),
+      attachments_source: cdktn.listMapper(awsDocumentAttachmentsSourcePropertyToTerraform, true)(this._attachmentsSource.internalValue),
     };
   }
 
@@ -471,10 +471,10 @@ export class TfDocument extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       attachments_source: {
-        value: cdktn.listMapperHcl(tfDocumentAttachmentsSourcePropertyToHclTerraform, true)(this._attachmentsSource.internalValue),
+        value: cdktn.listMapperHcl(awsDocumentAttachmentsSourcePropertyToHclTerraform, true)(this._attachmentsSource.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDocument.AttachmentsSourcePropertyList",
+        storageClassType: "AwsDocument.AttachmentsSourcePropertyList",
       },
     };
 
@@ -483,7 +483,7 @@ export class TfDocument extends cdktn.TerraformResource {
   }
 }
 
-export function tfDocumentParameterPropertyToTerraform(struct?: TfDocument.ParameterProperty): any {
+export function awsDocumentParameterPropertyToTerraform(struct?: AwsDocument.ParameterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -493,7 +493,7 @@ export function tfDocumentParameterPropertyToTerraform(struct?: TfDocument.Param
 }
 
 
-export function tfDocumentParameterPropertyToHclTerraform(struct?: TfDocument.ParameterProperty): any {
+export function awsDocumentParameterPropertyToHclTerraform(struct?: AwsDocument.ParameterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,7 +504,7 @@ export function tfDocumentParameterPropertyToHclTerraform(struct?: TfDocument.Pa
 }
 
 
-export function tfDocumentAttachmentsSourcePropertyToTerraform(struct?: TfDocument.AttachmentsSourceProperty | cdktn.IResolvable): any {
+export function awsDocumentAttachmentsSourcePropertyToTerraform(struct?: AwsDocument.AttachmentsSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -517,7 +517,7 @@ export function tfDocumentAttachmentsSourcePropertyToTerraform(struct?: TfDocume
 }
 
 
-export function tfDocumentAttachmentsSourcePropertyToHclTerraform(struct?: TfDocument.AttachmentsSourceProperty | cdktn.IResolvable): any {
+export function awsDocumentAttachmentsSourcePropertyToHclTerraform(struct?: AwsDocument.AttachmentsSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -548,7 +548,7 @@ export function tfDocumentAttachmentsSourcePropertyToHclTerraform(struct?: TfDoc
 }
 
 
-export namespace TfDocument {
+export namespace AwsDocument {
 export interface ParameterProperty {
 }
 export class ParameterPropertyOutputReference extends cdktn.ComplexObject {
@@ -620,15 +620,15 @@ export class ParameterPropertyList extends cdktn.ComplexList {
 }
 export interface AttachmentsSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#key TfDocument#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#key AwsDocument#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#name TfDocument#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#name AwsDocument#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#values TfDocument#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssm_document#values AwsDocument#values}
   */
   readonly values: string[];
 }

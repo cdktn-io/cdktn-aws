@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEventActionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEventActionConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#region TfEventAction#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#region AwsEventAction#region}
   */
   readonly region?: string;
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#action TfEventAction#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#action AwsEventAction#action}
   */
-  readonly action?: TfEventAction.ActionProperty[] | cdktn.IResolvable;
+  readonly action?: AwsEventAction.ActionProperty[] | cdktn.IResolvable;
   /**
   * event block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#event TfEventAction#event}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#event AwsEventAction#event}
   */
-  readonly event?: TfEventAction.EventProperty[] | cdktn.IResolvable;
+  readonly event?: AwsEventAction.EventProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action aws_dataexchange_event_action}
 */
-export class TfEventAction extends cdktn.TerraformResource {
+export class AwsEventAction extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class TfEventAction extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEventAction resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEventAction resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEventAction to import
-  * @param importFromId The id of the existing TfEventAction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEventAction to import is found
+  * @param importToId The construct id used in the generated config for the AwsEventAction to import
+  * @param importFromId The id of the existing AwsEventAction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEventAction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dataexchange_event_action", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class TfEventAction extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEventActionConfig = {}
+  * @param options AwsEventActionConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfEventActionConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsEventActionConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_dataexchange_event_action',
       terraformGeneratorMetadata: {
@@ -123,11 +123,11 @@ export class TfEventAction extends cdktn.TerraformResource {
   }
 
   // action - computed: false, optional: true, required: false
-  private _action = new TfEventAction.ActionPropertyList(this, "action", false);
+  private _action = new AwsEventAction.ActionPropertyList(this, "action", false);
   public get action() {
     return this._action;
   }
-  public putAction(value: TfEventAction.ActionProperty[] | cdktn.IResolvable) {
+  public putAction(value: AwsEventAction.ActionProperty[] | cdktn.IResolvable) {
     this._action.internalValue = value;
   }
   public resetAction() {
@@ -139,11 +139,11 @@ export class TfEventAction extends cdktn.TerraformResource {
   }
 
   // event - computed: false, optional: true, required: false
-  private _event = new TfEventAction.EventPropertyList(this, "event", false);
+  private _event = new AwsEventAction.EventPropertyList(this, "event", false);
   public get event() {
     return this._event;
   }
-  public putEvent(value: TfEventAction.EventProperty[] | cdktn.IResolvable) {
+  public putEvent(value: AwsEventAction.EventProperty[] | cdktn.IResolvable) {
     this._event.internalValue = value;
   }
   public resetEvent() {
@@ -161,8 +161,8 @@ export class TfEventAction extends cdktn.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       region: cdktn.stringToTerraform(this._region),
-      action: cdktn.listMapper(tfEventActionActionPropertyToTerraform, true)(this._action.internalValue),
-      event: cdktn.listMapper(tfEventActionEventPropertyToTerraform, true)(this._event.internalValue),
+      action: cdktn.listMapper(awsEventActionActionPropertyToTerraform, true)(this._action.internalValue),
+      event: cdktn.listMapper(awsEventActionEventPropertyToTerraform, true)(this._event.internalValue),
     };
   }
 
@@ -175,16 +175,16 @@ export class TfEventAction extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       action: {
-        value: cdktn.listMapperHcl(tfEventActionActionPropertyToHclTerraform, true)(this._action.internalValue),
+        value: cdktn.listMapperHcl(awsEventActionActionPropertyToHclTerraform, true)(this._action.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEventAction.ActionPropertyList",
+        storageClassType: "AwsEventAction.ActionPropertyList",
       },
       event: {
-        value: cdktn.listMapperHcl(tfEventActionEventPropertyToHclTerraform, true)(this._event.internalValue),
+        value: cdktn.listMapperHcl(awsEventActionEventPropertyToHclTerraform, true)(this._event.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEventAction.EventPropertyList",
+        storageClassType: "AwsEventAction.EventPropertyList",
       },
     };
 
@@ -193,7 +193,7 @@ export class TfEventAction extends cdktn.TerraformResource {
   }
 }
 
-export function tfEventActionEncryptionPropertyToTerraform(struct?: TfEventAction.EncryptionProperty | cdktn.IResolvable): any {
+export function awsEventActionEncryptionPropertyToTerraform(struct?: AwsEventAction.EncryptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -205,7 +205,7 @@ export function tfEventActionEncryptionPropertyToTerraform(struct?: TfEventActio
 }
 
 
-export function tfEventActionEncryptionPropertyToHclTerraform(struct?: TfEventAction.EncryptionProperty | cdktn.IResolvable): any {
+export function awsEventActionEncryptionPropertyToHclTerraform(struct?: AwsEventAction.EncryptionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -230,7 +230,7 @@ export function tfEventActionEncryptionPropertyToHclTerraform(struct?: TfEventAc
 }
 
 
-export function tfEventActionRevisionDestinationPropertyToTerraform(struct?: TfEventAction.RevisionDestinationProperty | cdktn.IResolvable): any {
+export function awsEventActionRevisionDestinationPropertyToTerraform(struct?: AwsEventAction.RevisionDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -242,7 +242,7 @@ export function tfEventActionRevisionDestinationPropertyToTerraform(struct?: TfE
 }
 
 
-export function tfEventActionRevisionDestinationPropertyToHclTerraform(struct?: TfEventAction.RevisionDestinationProperty | cdktn.IResolvable): any {
+export function awsEventActionRevisionDestinationPropertyToHclTerraform(struct?: AwsEventAction.RevisionDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -267,32 +267,32 @@ export function tfEventActionRevisionDestinationPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfEventActionExportRevisionToS3PropertyToTerraform(struct?: TfEventAction.ExportRevisionToS3Property | cdktn.IResolvable): any {
+export function awsEventActionExportRevisionToS3PropertyToTerraform(struct?: AwsEventAction.ExportRevisionToS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    encryption: cdktn.listMapper(tfEventActionEncryptionPropertyToTerraform, true)(struct!.encryption),
-    revision_destination: cdktn.listMapper(tfEventActionRevisionDestinationPropertyToTerraform, true)(struct!.revisionDestination),
+    encryption: cdktn.listMapper(awsEventActionEncryptionPropertyToTerraform, true)(struct!.encryption),
+    revision_destination: cdktn.listMapper(awsEventActionRevisionDestinationPropertyToTerraform, true)(struct!.revisionDestination),
   }
 }
 
 
-export function tfEventActionExportRevisionToS3PropertyToHclTerraform(struct?: TfEventAction.ExportRevisionToS3Property | cdktn.IResolvable): any {
+export function awsEventActionExportRevisionToS3PropertyToHclTerraform(struct?: AwsEventAction.ExportRevisionToS3Property | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     encryption: {
-      value: cdktn.listMapperHcl(tfEventActionEncryptionPropertyToHclTerraform, true)(struct!.encryption),
+      value: cdktn.listMapperHcl(awsEventActionEncryptionPropertyToHclTerraform, true)(struct!.encryption),
       isBlock: true,
       type: "list",
       storageClassType: "EncryptionPropertyList",
     },
     revision_destination: {
-      value: cdktn.listMapperHcl(tfEventActionRevisionDestinationPropertyToHclTerraform, true)(struct!.revisionDestination),
+      value: cdktn.listMapperHcl(awsEventActionRevisionDestinationPropertyToHclTerraform, true)(struct!.revisionDestination),
       isBlock: true,
       type: "list",
       storageClassType: "RevisionDestinationPropertyList",
@@ -304,25 +304,25 @@ export function tfEventActionExportRevisionToS3PropertyToHclTerraform(struct?: T
 }
 
 
-export function tfEventActionActionPropertyToTerraform(struct?: TfEventAction.ActionProperty | cdktn.IResolvable): any {
+export function awsEventActionActionPropertyToTerraform(struct?: AwsEventAction.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    export_revision_to_s3: cdktn.listMapper(tfEventActionExportRevisionToS3PropertyToTerraform, true)(struct!.exportRevisionToS3),
+    export_revision_to_s3: cdktn.listMapper(awsEventActionExportRevisionToS3PropertyToTerraform, true)(struct!.exportRevisionToS3),
   }
 }
 
 
-export function tfEventActionActionPropertyToHclTerraform(struct?: TfEventAction.ActionProperty | cdktn.IResolvable): any {
+export function awsEventActionActionPropertyToHclTerraform(struct?: AwsEventAction.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     export_revision_to_s3: {
-      value: cdktn.listMapperHcl(tfEventActionExportRevisionToS3PropertyToHclTerraform, true)(struct!.exportRevisionToS3),
+      value: cdktn.listMapperHcl(awsEventActionExportRevisionToS3PropertyToHclTerraform, true)(struct!.exportRevisionToS3),
       isBlock: true,
       type: "list",
       storageClassType: "ExportRevisionToS3PropertyList",
@@ -334,7 +334,7 @@ export function tfEventActionActionPropertyToHclTerraform(struct?: TfEventAction
 }
 
 
-export function tfEventActionRevisionPublishedPropertyToTerraform(struct?: TfEventAction.RevisionPublishedProperty | cdktn.IResolvable): any {
+export function awsEventActionRevisionPublishedPropertyToTerraform(struct?: AwsEventAction.RevisionPublishedProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,7 +345,7 @@ export function tfEventActionRevisionPublishedPropertyToTerraform(struct?: TfEve
 }
 
 
-export function tfEventActionRevisionPublishedPropertyToHclTerraform(struct?: TfEventAction.RevisionPublishedProperty | cdktn.IResolvable): any {
+export function awsEventActionRevisionPublishedPropertyToHclTerraform(struct?: AwsEventAction.RevisionPublishedProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,25 +364,25 @@ export function tfEventActionRevisionPublishedPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfEventActionEventPropertyToTerraform(struct?: TfEventAction.EventProperty | cdktn.IResolvable): any {
+export function awsEventActionEventPropertyToTerraform(struct?: AwsEventAction.EventProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    revision_published: cdktn.listMapper(tfEventActionRevisionPublishedPropertyToTerraform, true)(struct!.revisionPublished),
+    revision_published: cdktn.listMapper(awsEventActionRevisionPublishedPropertyToTerraform, true)(struct!.revisionPublished),
   }
 }
 
 
-export function tfEventActionEventPropertyToHclTerraform(struct?: TfEventAction.EventProperty | cdktn.IResolvable): any {
+export function awsEventActionEventPropertyToHclTerraform(struct?: AwsEventAction.EventProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     revision_published: {
-      value: cdktn.listMapperHcl(tfEventActionRevisionPublishedPropertyToHclTerraform, true)(struct!.revisionPublished),
+      value: cdktn.listMapperHcl(awsEventActionRevisionPublishedPropertyToHclTerraform, true)(struct!.revisionPublished),
       isBlock: true,
       type: "list",
       storageClassType: "RevisionPublishedPropertyList",
@@ -394,14 +394,14 @@ export function tfEventActionEventPropertyToHclTerraform(struct?: TfEventAction.
 }
 
 
-export namespace TfEventAction {
+export namespace AwsEventAction {
 export interface EncryptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#kms_key_arn TfEventAction#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#kms_key_arn AwsEventAction#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#type TfEventAction#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#type AwsEventAction#type}
   */
   readonly type?: string;
 }
@@ -509,11 +509,11 @@ export class EncryptionPropertyList extends cdktn.ComplexList {
 }
 export interface RevisionDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#bucket TfEventAction#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#bucket AwsEventAction#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#key_pattern TfEventAction#key_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#key_pattern AwsEventAction#key_pattern}
   */
   readonly keyPattern?: string;
 }
@@ -620,13 +620,13 @@ export interface ExportRevisionToS3Property {
   /**
   * encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#encryption TfEventAction#encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#encryption AwsEventAction#encryption}
   */
   readonly encryption?: EncryptionProperty[] | cdktn.IResolvable;
   /**
   * revision_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#revision_destination TfEventAction#revision_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#revision_destination AwsEventAction#revision_destination}
   */
   readonly revisionDestination?: RevisionDestinationProperty[] | cdktn.IResolvable;
 }
@@ -736,7 +736,7 @@ export interface ActionProperty {
   /**
   * export_revision_to_s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#export_revision_to_s3 TfEventAction#export_revision_to_s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#export_revision_to_s3 AwsEventAction#export_revision_to_s3}
   */
   readonly exportRevisionToS3?: ExportRevisionToS3Property[] | cdktn.IResolvable;
 }
@@ -822,7 +822,7 @@ export class ActionPropertyList extends cdktn.ComplexList {
 }
 export interface RevisionPublishedProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#data_set_id TfEventAction#data_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#data_set_id AwsEventAction#data_set_id}
   */
   readonly dataSetId: string;
 }
@@ -907,7 +907,7 @@ export interface EventProperty {
   /**
   * revision_published block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#revision_published TfEventAction#revision_published}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dataexchange_event_action#revision_published AwsEventAction#revision_published}
   */
   readonly revisionPublished?: RevisionPublishedProperty[] | cdktn.IResolvable;
 }

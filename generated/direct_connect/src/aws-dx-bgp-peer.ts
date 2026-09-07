@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBgpPeerConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBgpPeerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#address_family TfBgpPeer#address_family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#address_family AwsBgpPeer#address_family}
   */
   readonly addressFamily: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#amazon_address TfBgpPeer#amazon_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#amazon_address AwsBgpPeer#amazon_address}
   */
   readonly amazonAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#bgp_asn TfBgpPeer#bgp_asn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#bgp_asn AwsBgpPeer#bgp_asn}
   */
   readonly bgpAsn: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#bgp_auth_key TfBgpPeer#bgp_auth_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#bgp_auth_key AwsBgpPeer#bgp_auth_key}
   */
   readonly bgpAuthKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#customer_address TfBgpPeer#customer_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#customer_address AwsBgpPeer#customer_address}
   */
   readonly customerAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#id TfBgpPeer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#id AwsBgpPeer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -36,25 +36,25 @@ export interface TfBgpPeerConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#region TfBgpPeer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#region AwsBgpPeer#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#virtual_interface_id TfBgpPeer#virtual_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#virtual_interface_id AwsBgpPeer#virtual_interface_id}
   */
   readonly virtualInterfaceId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#timeouts TfBgpPeer#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#timeouts AwsBgpPeer#timeouts}
   */
-  readonly timeouts?: TfBgpPeer.TimeoutsProperty;
+  readonly timeouts?: AwsBgpPeer.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer aws_dx_bgp_peer}
 */
-export class TfBgpPeer extends cdktn.TerraformResource {
+export class AwsBgpPeer extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfBgpPeer extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBgpPeer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBgpPeer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBgpPeer to import
-  * @param importFromId The id of the existing TfBgpPeer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBgpPeer to import is found
+  * @param importToId The construct id used in the generated config for the AwsBgpPeer to import
+  * @param importFromId The id of the existing AwsBgpPeer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBgpPeer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dx_bgp_peer", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfBgpPeer extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBgpPeerConfig
+  * @param options AwsBgpPeerConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBgpPeerConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBgpPeerConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dx_bgp_peer',
       terraformGeneratorMetadata: {
@@ -252,11 +252,11 @@ export class TfBgpPeer extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfBgpPeer.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsBgpPeer.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfBgpPeer.TimeoutsProperty) {
+  public putTimeouts(value: AwsBgpPeer.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -281,7 +281,7 @@ export class TfBgpPeer extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       virtual_interface_id: cdktn.stringToTerraform(this._virtualInterfaceId),
-      timeouts: tfBgpPeerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsBgpPeerTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -336,10 +336,10 @@ export class TfBgpPeer extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfBgpPeerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsBgpPeerTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfBgpPeer.TimeoutsProperty",
+        storageClassType: "AwsBgpPeer.TimeoutsProperty",
       },
     };
 
@@ -348,7 +348,7 @@ export class TfBgpPeer extends cdktn.TerraformResource {
   }
 }
 
-export function tfBgpPeerTimeoutsPropertyToTerraform(struct?: TfBgpPeer.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBgpPeerTimeoutsPropertyToTerraform(struct?: AwsBgpPeer.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function tfBgpPeerTimeoutsPropertyToTerraform(struct?: TfBgpPeer.Timeouts
 }
 
 
-export function tfBgpPeerTimeoutsPropertyToHclTerraform(struct?: TfBgpPeer.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBgpPeerTimeoutsPropertyToHclTerraform(struct?: AwsBgpPeer.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,14 +385,14 @@ export function tfBgpPeerTimeoutsPropertyToHclTerraform(struct?: TfBgpPeer.Timeo
 }
 
 
-export namespace TfBgpPeer {
+export namespace AwsBgpPeer {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#create TfBgpPeer#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#create AwsBgpPeer#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#delete TfBgpPeer#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_bgp_peer#delete AwsBgpPeer#delete}
   */
   readonly delete?: string;
 }

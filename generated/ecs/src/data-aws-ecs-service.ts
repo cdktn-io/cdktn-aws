@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfServiceConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsServiceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_service#cluster_arn DataTfService#cluster_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_service#cluster_arn DataAwsService#cluster_arn}
   */
   readonly clusterArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_service#id DataTfService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_service#id DataAwsService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,15 +20,15 @@ export interface DataTfServiceConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_service#region DataTfService#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_service#region DataAwsService#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_service#service_name DataTfService#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_service#service_name DataAwsService#service_name}
   */
   readonly serviceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_service#tags DataTfService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_service#tags DataAwsService#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface DataTfServiceConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_service aws_ecs_service}
 */
-export class DataTfService extends cdktn.TerraformDataSource {
+export class DataAwsService extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataTfService extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfService resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsService resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfService to import
-  * @param importFromId The id of the existing DataTfService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_service#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfService to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsService to import
+  * @param importFromId The id of the existing DataAwsService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ecs_service#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecs_service", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataTfService extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfServiceConfig
+  * @param options DataAwsServiceConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfServiceConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecs_service',
       terraformGeneratorMetadata: {
@@ -106,7 +106,7 @@ export class DataTfService extends cdktn.TerraformDataSource {
   }
 
   // capacity_provider_strategy - computed: true, optional: false, required: false
-  private _capacityProviderStrategy = new DataTfService.CapacityProviderStrategyPropertyList(this, "capacity_provider_strategy", true);
+  private _capacityProviderStrategy = new DataAwsService.CapacityProviderStrategyPropertyList(this, "capacity_provider_strategy", true);
   public get capacityProviderStrategy() {
     return this._capacityProviderStrategy;
   }
@@ -135,19 +135,19 @@ export class DataTfService extends cdktn.TerraformDataSource {
   }
 
   // deployment_configuration - computed: true, optional: false, required: false
-  private _deploymentConfiguration = new DataTfService.DeploymentConfigurationPropertyList(this, "deployment_configuration", false);
+  private _deploymentConfiguration = new DataAwsService.DeploymentConfigurationPropertyList(this, "deployment_configuration", false);
   public get deploymentConfiguration() {
     return this._deploymentConfiguration;
   }
 
   // deployment_controller - computed: true, optional: false, required: false
-  private _deploymentController = new DataTfService.DeploymentControllerPropertyList(this, "deployment_controller", false);
+  private _deploymentController = new DataAwsService.DeploymentControllerPropertyList(this, "deployment_controller", false);
   public get deploymentController() {
     return this._deploymentController;
   }
 
   // deployments - computed: true, optional: false, required: false
-  private _deployments = new DataTfService.DeploymentsPropertyList(this, "deployments", false);
+  private _deployments = new DataAwsService.DeploymentsPropertyList(this, "deployments", false);
   public get deployments() {
     return this._deployments;
   }
@@ -168,7 +168,7 @@ export class DataTfService extends cdktn.TerraformDataSource {
   }
 
   // events - computed: true, optional: false, required: false
-  private _events = new DataTfService.EventsPropertyList(this, "events", false);
+  private _events = new DataAwsService.EventsPropertyList(this, "events", false);
   public get events() {
     return this._events;
   }
@@ -205,19 +205,19 @@ export class DataTfService extends cdktn.TerraformDataSource {
   }
 
   // load_balancer - computed: true, optional: false, required: false
-  private _loadBalancer = new DataTfService.LoadBalancerPropertyList(this, "load_balancer", true);
+  private _loadBalancer = new DataAwsService.LoadBalancerPropertyList(this, "load_balancer", true);
   public get loadBalancer() {
     return this._loadBalancer;
   }
 
   // network_configuration - computed: true, optional: false, required: false
-  private _networkConfiguration = new DataTfService.NetworkConfigurationPropertyList(this, "network_configuration", false);
+  private _networkConfiguration = new DataAwsService.NetworkConfigurationPropertyList(this, "network_configuration", false);
   public get networkConfiguration() {
     return this._networkConfiguration;
   }
 
   // ordered_placement_strategy - computed: true, optional: false, required: false
-  private _orderedPlacementStrategy = new DataTfService.OrderedPlacementStrategyPropertyList(this, "ordered_placement_strategy", false);
+  private _orderedPlacementStrategy = new DataAwsService.OrderedPlacementStrategyPropertyList(this, "ordered_placement_strategy", false);
   public get orderedPlacementStrategy() {
     return this._orderedPlacementStrategy;
   }
@@ -228,7 +228,7 @@ export class DataTfService extends cdktn.TerraformDataSource {
   }
 
   // placement_constraints - computed: true, optional: false, required: false
-  private _placementConstraints = new DataTfService.PlacementConstraintsPropertyList(this, "placement_constraints", true);
+  private _placementConstraints = new DataAwsService.PlacementConstraintsPropertyList(this, "placement_constraints", true);
   public get placementConstraints() {
     return this._placementConstraints;
   }
@@ -288,7 +288,7 @@ export class DataTfService extends cdktn.TerraformDataSource {
   }
 
   // service_registries - computed: true, optional: false, required: false
-  private _serviceRegistries = new DataTfService.ServiceRegistriesPropertyList(this, "service_registries", false);
+  private _serviceRegistries = new DataAwsService.ServiceRegistriesPropertyList(this, "service_registries", false);
   public get serviceRegistries() {
     return this._serviceRegistries;
   }
@@ -320,7 +320,7 @@ export class DataTfService extends cdktn.TerraformDataSource {
   }
 
   // task_sets - computed: true, optional: false, required: false
-  private _taskSets = new DataTfService.TaskSetsPropertyList(this, "task_sets", false);
+  private _taskSets = new DataAwsService.TaskSetsPropertyList(this, "task_sets", false);
   public get taskSets() {
     return this._taskSets;
   }
@@ -378,7 +378,7 @@ export class DataTfService extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfServiceCapacityProviderStrategyPropertyToTerraform(struct?: DataTfService.CapacityProviderStrategyProperty): any {
+export function dataAwsServiceCapacityProviderStrategyPropertyToTerraform(struct?: DataAwsService.CapacityProviderStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function dataTfServiceCapacityProviderStrategyPropertyToTerraform(struct?
 }
 
 
-export function dataTfServiceCapacityProviderStrategyPropertyToHclTerraform(struct?: DataTfService.CapacityProviderStrategyProperty): any {
+export function dataAwsServiceCapacityProviderStrategyPropertyToHclTerraform(struct?: DataAwsService.CapacityProviderStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -399,7 +399,7 @@ export function dataTfServiceCapacityProviderStrategyPropertyToHclTerraform(stru
 }
 
 
-export function dataTfServiceAlarmsPropertyToTerraform(struct?: DataTfService.AlarmsProperty): any {
+export function dataAwsServiceAlarmsPropertyToTerraform(struct?: DataAwsService.AlarmsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function dataTfServiceAlarmsPropertyToTerraform(struct?: DataTfService.Al
 }
 
 
-export function dataTfServiceAlarmsPropertyToHclTerraform(struct?: DataTfService.AlarmsProperty): any {
+export function dataAwsServiceAlarmsPropertyToHclTerraform(struct?: DataAwsService.AlarmsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,7 +420,7 @@ export function dataTfServiceAlarmsPropertyToHclTerraform(struct?: DataTfService
 }
 
 
-export function dataTfServiceCanaryConfigurationPropertyToTerraform(struct?: DataTfService.CanaryConfigurationProperty): any {
+export function dataAwsServiceCanaryConfigurationPropertyToTerraform(struct?: DataAwsService.CanaryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -430,7 +430,7 @@ export function dataTfServiceCanaryConfigurationPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataTfServiceCanaryConfigurationPropertyToHclTerraform(struct?: DataTfService.CanaryConfigurationProperty): any {
+export function dataAwsServiceCanaryConfigurationPropertyToHclTerraform(struct?: DataAwsService.CanaryConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -441,7 +441,7 @@ export function dataTfServiceCanaryConfigurationPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataTfServiceDeploymentCircuitBreakerPropertyToTerraform(struct?: DataTfService.DeploymentCircuitBreakerProperty): any {
+export function dataAwsServiceDeploymentCircuitBreakerPropertyToTerraform(struct?: DataAwsService.DeploymentCircuitBreakerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function dataTfServiceDeploymentCircuitBreakerPropertyToTerraform(struct?
 }
 
 
-export function dataTfServiceDeploymentCircuitBreakerPropertyToHclTerraform(struct?: DataTfService.DeploymentCircuitBreakerProperty): any {
+export function dataAwsServiceDeploymentCircuitBreakerPropertyToHclTerraform(struct?: DataAwsService.DeploymentCircuitBreakerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -462,7 +462,7 @@ export function dataTfServiceDeploymentCircuitBreakerPropertyToHclTerraform(stru
 }
 
 
-export function dataTfServiceLifecycleHookPropertyToTerraform(struct?: DataTfService.LifecycleHookProperty): any {
+export function dataAwsServiceLifecycleHookPropertyToTerraform(struct?: DataAwsService.LifecycleHookProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -472,7 +472,7 @@ export function dataTfServiceLifecycleHookPropertyToTerraform(struct?: DataTfSer
 }
 
 
-export function dataTfServiceLifecycleHookPropertyToHclTerraform(struct?: DataTfService.LifecycleHookProperty): any {
+export function dataAwsServiceLifecycleHookPropertyToHclTerraform(struct?: DataAwsService.LifecycleHookProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,7 +483,7 @@ export function dataTfServiceLifecycleHookPropertyToHclTerraform(struct?: DataTf
 }
 
 
-export function dataTfServiceLinearConfigurationPropertyToTerraform(struct?: DataTfService.LinearConfigurationProperty): any {
+export function dataAwsServiceLinearConfigurationPropertyToTerraform(struct?: DataAwsService.LinearConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -493,7 +493,7 @@ export function dataTfServiceLinearConfigurationPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataTfServiceLinearConfigurationPropertyToHclTerraform(struct?: DataTfService.LinearConfigurationProperty): any {
+export function dataAwsServiceLinearConfigurationPropertyToHclTerraform(struct?: DataAwsService.LinearConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,7 +504,7 @@ export function dataTfServiceLinearConfigurationPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataTfServiceDeploymentConfigurationPropertyToTerraform(struct?: DataTfService.DeploymentConfigurationProperty): any {
+export function dataAwsServiceDeploymentConfigurationPropertyToTerraform(struct?: DataAwsService.DeploymentConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -514,7 +514,7 @@ export function dataTfServiceDeploymentConfigurationPropertyToTerraform(struct?:
 }
 
 
-export function dataTfServiceDeploymentConfigurationPropertyToHclTerraform(struct?: DataTfService.DeploymentConfigurationProperty): any {
+export function dataAwsServiceDeploymentConfigurationPropertyToHclTerraform(struct?: DataAwsService.DeploymentConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -525,7 +525,7 @@ export function dataTfServiceDeploymentConfigurationPropertyToHclTerraform(struc
 }
 
 
-export function dataTfServiceDeploymentControllerPropertyToTerraform(struct?: DataTfService.DeploymentControllerProperty): any {
+export function dataAwsServiceDeploymentControllerPropertyToTerraform(struct?: DataAwsService.DeploymentControllerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -535,7 +535,7 @@ export function dataTfServiceDeploymentControllerPropertyToTerraform(struct?: Da
 }
 
 
-export function dataTfServiceDeploymentControllerPropertyToHclTerraform(struct?: DataTfService.DeploymentControllerProperty): any {
+export function dataAwsServiceDeploymentControllerPropertyToHclTerraform(struct?: DataAwsService.DeploymentControllerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -546,7 +546,7 @@ export function dataTfServiceDeploymentControllerPropertyToHclTerraform(struct?:
 }
 
 
-export function dataTfServiceDeploymentsPropertyToTerraform(struct?: DataTfService.DeploymentsProperty): any {
+export function dataAwsServiceDeploymentsPropertyToTerraform(struct?: DataAwsService.DeploymentsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -556,7 +556,7 @@ export function dataTfServiceDeploymentsPropertyToTerraform(struct?: DataTfServi
 }
 
 
-export function dataTfServiceDeploymentsPropertyToHclTerraform(struct?: DataTfService.DeploymentsProperty): any {
+export function dataAwsServiceDeploymentsPropertyToHclTerraform(struct?: DataAwsService.DeploymentsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -567,7 +567,7 @@ export function dataTfServiceDeploymentsPropertyToHclTerraform(struct?: DataTfSe
 }
 
 
-export function dataTfServiceEventsPropertyToTerraform(struct?: DataTfService.EventsProperty): any {
+export function dataAwsServiceEventsPropertyToTerraform(struct?: DataAwsService.EventsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -577,7 +577,7 @@ export function dataTfServiceEventsPropertyToTerraform(struct?: DataTfService.Ev
 }
 
 
-export function dataTfServiceEventsPropertyToHclTerraform(struct?: DataTfService.EventsProperty): any {
+export function dataAwsServiceEventsPropertyToHclTerraform(struct?: DataAwsService.EventsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -588,7 +588,7 @@ export function dataTfServiceEventsPropertyToHclTerraform(struct?: DataTfService
 }
 
 
-export function dataTfServiceAdvancedConfigurationPropertyToTerraform(struct?: DataTfService.AdvancedConfigurationProperty): any {
+export function dataAwsServiceAdvancedConfigurationPropertyToTerraform(struct?: DataAwsService.AdvancedConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -598,7 +598,7 @@ export function dataTfServiceAdvancedConfigurationPropertyToTerraform(struct?: D
 }
 
 
-export function dataTfServiceAdvancedConfigurationPropertyToHclTerraform(struct?: DataTfService.AdvancedConfigurationProperty): any {
+export function dataAwsServiceAdvancedConfigurationPropertyToHclTerraform(struct?: DataAwsService.AdvancedConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -609,7 +609,7 @@ export function dataTfServiceAdvancedConfigurationPropertyToHclTerraform(struct?
 }
 
 
-export function dataTfServiceLoadBalancerPropertyToTerraform(struct?: DataTfService.LoadBalancerProperty): any {
+export function dataAwsServiceLoadBalancerPropertyToTerraform(struct?: DataAwsService.LoadBalancerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -619,7 +619,7 @@ export function dataTfServiceLoadBalancerPropertyToTerraform(struct?: DataTfServ
 }
 
 
-export function dataTfServiceLoadBalancerPropertyToHclTerraform(struct?: DataTfService.LoadBalancerProperty): any {
+export function dataAwsServiceLoadBalancerPropertyToHclTerraform(struct?: DataAwsService.LoadBalancerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -630,7 +630,7 @@ export function dataTfServiceLoadBalancerPropertyToHclTerraform(struct?: DataTfS
 }
 
 
-export function dataTfServiceNetworkConfigurationPropertyToTerraform(struct?: DataTfService.NetworkConfigurationProperty): any {
+export function dataAwsServiceNetworkConfigurationPropertyToTerraform(struct?: DataAwsService.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -640,7 +640,7 @@ export function dataTfServiceNetworkConfigurationPropertyToTerraform(struct?: Da
 }
 
 
-export function dataTfServiceNetworkConfigurationPropertyToHclTerraform(struct?: DataTfService.NetworkConfigurationProperty): any {
+export function dataAwsServiceNetworkConfigurationPropertyToHclTerraform(struct?: DataAwsService.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -651,7 +651,7 @@ export function dataTfServiceNetworkConfigurationPropertyToHclTerraform(struct?:
 }
 
 
-export function dataTfServiceOrderedPlacementStrategyPropertyToTerraform(struct?: DataTfService.OrderedPlacementStrategyProperty): any {
+export function dataAwsServiceOrderedPlacementStrategyPropertyToTerraform(struct?: DataAwsService.OrderedPlacementStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -661,7 +661,7 @@ export function dataTfServiceOrderedPlacementStrategyPropertyToTerraform(struct?
 }
 
 
-export function dataTfServiceOrderedPlacementStrategyPropertyToHclTerraform(struct?: DataTfService.OrderedPlacementStrategyProperty): any {
+export function dataAwsServiceOrderedPlacementStrategyPropertyToHclTerraform(struct?: DataAwsService.OrderedPlacementStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -672,7 +672,7 @@ export function dataTfServiceOrderedPlacementStrategyPropertyToHclTerraform(stru
 }
 
 
-export function dataTfServicePlacementConstraintsPropertyToTerraform(struct?: DataTfService.PlacementConstraintsProperty): any {
+export function dataAwsServicePlacementConstraintsPropertyToTerraform(struct?: DataAwsService.PlacementConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -682,7 +682,7 @@ export function dataTfServicePlacementConstraintsPropertyToTerraform(struct?: Da
 }
 
 
-export function dataTfServicePlacementConstraintsPropertyToHclTerraform(struct?: DataTfService.PlacementConstraintsProperty): any {
+export function dataAwsServicePlacementConstraintsPropertyToHclTerraform(struct?: DataAwsService.PlacementConstraintsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -693,7 +693,7 @@ export function dataTfServicePlacementConstraintsPropertyToHclTerraform(struct?:
 }
 
 
-export function dataTfServiceServiceRegistriesPropertyToTerraform(struct?: DataTfService.ServiceRegistriesProperty): any {
+export function dataAwsServiceServiceRegistriesPropertyToTerraform(struct?: DataAwsService.ServiceRegistriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -703,7 +703,7 @@ export function dataTfServiceServiceRegistriesPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfServiceServiceRegistriesPropertyToHclTerraform(struct?: DataTfService.ServiceRegistriesProperty): any {
+export function dataAwsServiceServiceRegistriesPropertyToHclTerraform(struct?: DataAwsService.ServiceRegistriesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -714,7 +714,7 @@ export function dataTfServiceServiceRegistriesPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfServiceTaskSetsPropertyToTerraform(struct?: DataTfService.TaskSetsProperty): any {
+export function dataAwsServiceTaskSetsPropertyToTerraform(struct?: DataAwsService.TaskSetsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -724,7 +724,7 @@ export function dataTfServiceTaskSetsPropertyToTerraform(struct?: DataTfService.
 }
 
 
-export function dataTfServiceTaskSetsPropertyToHclTerraform(struct?: DataTfService.TaskSetsProperty): any {
+export function dataAwsServiceTaskSetsPropertyToHclTerraform(struct?: DataAwsService.TaskSetsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -735,7 +735,7 @@ export function dataTfServiceTaskSetsPropertyToHclTerraform(struct?: DataTfServi
 }
 
 
-export namespace DataTfService {
+export namespace DataAwsService {
 export interface CapacityProviderStrategyProperty {
 }
 export class CapacityProviderStrategyPropertyOutputReference extends cdktn.ComplexObject {

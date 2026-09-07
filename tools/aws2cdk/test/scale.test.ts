@@ -38,27 +38,27 @@ describe("mapper-name collisions across a package", () => {
   // The two real aws 6.62.0 cases, reduced to the naming inputs that produce them. Both are a
   // class name that is a strict prefix of a sibling's, which makes plain concatenation ambiguous.
   const waf = [
-    { className: "TfWebAcl", structNames: ["RuleActionAllowProperty", "TagsProperty"] },
-    { className: "TfWebAclRule", structNames: ["ActionAllowProperty"] },
+    { className: "AwsWebAcl", structNames: ["RuleActionAllowProperty", "TagsProperty"] },
+    { className: "AwsWebAclRule", structNames: ["ActionAllowProperty"] },
   ];
 
   it("detects that plain class-name prefixing is not injective", () => {
     const plain = (e: { className: string; structNames: string[] }) =>
       e.structNames.map((s) => `${e.className[0].toLowerCase()}${e.className.slice(1)}${s}`);
-    expect(plain(waf[0])).toContain("tfWebAclRuleActionAllowProperty");
-    expect(plain(waf[1])).toContain("tfWebAclRuleActionAllowProperty");
+    expect(plain(waf[0])).toContain("awsWebAclRuleActionAllowProperty");
+    expect(plain(waf[1])).toContain("awsWebAclRuleActionAllowProperty");
   });
 
   it("disambiguates the whole colliding cluster, and only that cluster", () => {
     const prefixes = mapperPrefixesForGroup([
       ...waf,
-      { className: "TfIpSet", structNames: ["TagsProperty"] },
+      { className: "AwsIpSet", structNames: ["TagsProperty"] },
     ]);
-    expect(prefixes.TfWebAcl).toBe(`TfWebAcl${MAPPER_DISAMBIGUATOR}`);
-    expect(prefixes.TfWebAclRule).toBe(`TfWebAclRule${MAPPER_DISAMBIGUATOR}`);
+    expect(prefixes.AwsWebAcl).toBe(`AwsWebAcl${MAPPER_DISAMBIGUATOR}`);
+    expect(prefixes.AwsWebAclRule).toBe(`AwsWebAclRule${MAPPER_DISAMBIGUATOR}`);
     // untouched — a class outside the cluster keeps the plain prefix, which is why the three M1
     // groups still emit byte-identically to their M1 output.
-    expect(prefixes.TfIpSet).toBe("TfIpSet");
+    expect(prefixes.AwsIpSet).toBe("AwsIpSet");
   });
 
   it("does not depend on the order the classes are presented in", () => {
@@ -66,24 +66,24 @@ describe("mapper-name collisions across a package", () => {
   });
 
   it("re-runs the fallback when disambiguating walks a name onto a third class", () => {
-    // Contrived, but the shape is real: `TfA` and `TfAZz` collide, so both gain `Mapper` — and
-    // `TfAMapperZz`, which collided with nobody, is then in the way. One more round fixes it.
+    // Contrived, but the shape is real: `AwsA` and `AwsAZz` collide, so both gain `Mapper` — and
+    // `AwsAMapperZz`, which collided with nobody, is then in the way. One more round fixes it.
     const prefixes = mapperPrefixesForGroup([
-      { className: "TfA", structNames: ["ZzProperty"] },
-      { className: "TfAZz", structNames: ["Property"] },
-      { className: "TfAMapperZz", structNames: ["Property"] },
+      { className: "AwsA", structNames: ["ZzProperty"] },
+      { className: "AwsAZz", structNames: ["Property"] },
+      { className: "AwsAMapperZz", structNames: ["Property"] },
     ]);
     const names = [
-      `tfA${prefixes.TfA.slice("TfA".length)}ZzProperty`,
-      `${prefixes.TfAZz[0].toLowerCase()}${prefixes.TfAZz.slice(1)}Property`,
-      `${prefixes.TfAMapperZz[0].toLowerCase()}${prefixes.TfAMapperZz.slice(1)}Property`,
+      `awsA${prefixes.AwsA.slice("AwsA".length)}ZzProperty`,
+      `${prefixes.AwsAZz[0].toLowerCase()}${prefixes.AwsAZz.slice(1)}Property`,
+      `${prefixes.AwsAMapperZz[0].toLowerCase()}${prefixes.AwsAMapperZz.slice(1)}Property`,
     ];
     expect(new Set(names).size).toBe(3);
   });
 
   it("leaves the fixture's own packages on plain class-name prefixes", () => {
     expect(read("lambda/src/aws-lambda-function.ts")).toContain(
-      "export function tfFunctionEnvironmentPropertyToTerraform(",
+      "export function awsFunctionEnvironmentPropertyToTerraform(",
     );
     const mapperNames = [...read("lambda/src/aws-lambda-function.ts").matchAll(
       /^export function (\w+)To(?:Hcl)?Terraform\(/gm,
@@ -179,14 +179,17 @@ describe("provider-defined functions", () => {
     );
   });
 
-  it("keeps the functions class on the provider's own name, outside the Tf grammar", () => {
+  it("keeps the functions class on the provider's own classic name", () => {
     const text = read(fnFile);
     // `AwsProviderFunctions` hangs off the provider construct, which is not an L1 resource: both
-    // keep the names `@cdktn/provider-aws` gives them, and are the only exports the grammar excuses.
+    // keep the names `@cdktn/provider-aws` gives them, which is why the grammar asserts carry an
+    // `isProviderExport` escape at all. Since 0.3.0 spells the L1 prefix `Aws`, those classic names
+    // also happen to satisfy `resourceClass` — an accident of spelling, so the escape is asserted
+    // by name and not by the regex disagreeing.
     for (const { name } of topLevelExports(text)) {
       expect(isProviderExport(name)).toBe(true);
-      expect(name).not.toMatch(NAME_GRAMMAR.resourceClass);
     }
+    expect(topLevelExports(text).map((e) => e.name)).toContain("AwsProviderFunctions");
     expect(namespaceMembers(text)).toEqual([]);
   });
 });
@@ -307,8 +310,8 @@ describe("naming grammar over the whole generated tree", () => {
       if (rel === "index.ts") continue;
       const text = fs.readFileSync(path.join(srcDir, rel), "utf-8");
       for (const { kind, name } of topLevelExports(text)) {
-        // AwsProvider/AwsProviderConfig/AwsProviderFunctions are outside the grammar by decision:
-        // the provider construct is not an L1 resource and keeps its classic name (docs/m6-tf-naming.md).
+        // AwsProvider/AwsProviderConfig/AwsProviderFunctions are excused by decision: the provider
+        // construct is not an L1 resource and keeps its classic name (docs/m6-tf-naming.md).
         if (isProviderExport(name)) continue;
         if (kind === "function") expect(name).toMatch(NAME_GRAMMAR.mapperFunction);
         else if (kind === "class") expect(name).toMatch(NAME_GRAMMAR.resourceClass);

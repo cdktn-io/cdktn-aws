@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfApiKeyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsApiKeyConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_api_key#region TfApiKey#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_api_key#region AwsApiKey#region}
   */
   readonly region?: string;
   /**
   * Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are CLOUDFRONT or REGIONAL.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_api_key#scope TfApiKey#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_api_key#scope AwsApiKey#scope}
   */
   readonly scope: string;
   /**
   * The domains that you want to be able to use the API key with, for example example.com. Maximum of 5 domains.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_api_key#token_domains TfApiKey#token_domains}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_api_key#token_domains AwsApiKey#token_domains}
   */
   readonly tokenDomains: string[];
 }
@@ -29,7 +29,7 @@ export interface TfApiKeyConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_api_key aws_wafv2_api_key}
 */
-export class TfApiKey extends cdktn.TerraformResource {
+export class AwsApiKey extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class TfApiKey extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfApiKey resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsApiKey resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfApiKey to import
-  * @param importFromId The id of the existing TfApiKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_api_key#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfApiKey to import is found
+  * @param importToId The construct id used in the generated config for the AwsApiKey to import
+  * @param importFromId The id of the existing AwsApiKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafv2_api_key#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsApiKey to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_wafv2_api_key", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class TfApiKey extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfApiKeyConfig
+  * @param options AwsApiKeyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfApiKeyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsApiKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_wafv2_api_key',
       terraformGeneratorMetadata: {

@@ -101,7 +101,7 @@ loosening the gate.
 ```
 gate C: group "foo" has no stripPrefixes (see docs/curation.md)
 gate C: group "foo" prefix "bar" matches no member — an unused prefix is a curation error
-gate C: group "foo" derives TfThing from both "aws_foo_thing" and "aws_thing"
+gate C: group "foo" derives AwsThing from both "aws_foo_thing" and "aws_thing"
 ```
 
 1. **A new group** arrives with a mechanically proposed list. Read it against the rule — strip
@@ -226,19 +226,21 @@ pnpm check:groups                             # PASS, with "N acknowledged"
 detects now) and they are what release notes get written from.
 
 Finally, check the rename against the group it lands next to: `goPackageName` strips underscores,
-so `msk_connect` and `mskconnect` are the *same* Go package. `assertUniqueGoPackageNames` runs over
-all 257 groups on every generate and throws on a collision, but it is cheaper to notice while
-choosing the slug.
+so `msk_connect` and `mskconnect` are the *same* Go package. Since 0.3.0 the name carries no `aws`
+prefix, so it must also not be a Go keyword (`map`, `range`, `type`) — a package name is a bare
+identifier at every call site. `assertUniqueGoPackageNames` runs over all 257 groups on every
+generate and `goPackageName` throws on either fault, but it is cheaper to notice while choosing the
+slug.
 
 ## (f) The Go note
 
 ```
 slug            msk
 npm             @cdktn/aws-msk
-jsii submodule  aws_msk
-Go packageName  awsmsk                                    (goPackageName: "aws" + slug, "_" stripped)
-Go import path  github.com/cdktn-io/cdktn-aws-go/awsmsk    (GO_MODULE_ROOT + "/" + packageName)
-Go release tag  awsmsk/vX.Y.Z
+jsii submodule  msk
+Go packageName  msk                                    (goPackageName: the slug, "_" stripped)
+Go import path  github.com/cdktn-io/cdktn-aws-go/msk    (GO_MODULE_ROOT + "/" + packageName)
+Go release tag  msk/vX.Y.Z
 ```
 
 The Go import path and the tag prefix are **permanent after the first release**: the module proxy
@@ -295,10 +297,10 @@ node scripts/release.mjs --from <previous release ref>     # --to defaults to HE
 At semver major 2 and above, `jsii-pacmak` appends `/vN` to every module path
 (`determineMajorVersionSuffix`, verified in its source). This is not a per-module decision:
 
-* all 258 import paths change **at once** — `.../awsmsk` becomes `.../awsmsk/v2`;
-* the repository needs `awsmsk/v2/` directories beside the v1 ones;
-* tags become `awsmsk/v2/v2.0.0`;
-* consumers edit their imports by hand. Go's import-path-is-identity rule means `awsmsk/v2` is a
+* all 258 import paths change **at once** — `.../msk` becomes `.../msk/v2`;
+* the repository needs `msk/v2/` directories beside the v1 ones;
+* tags become `msk/v2/v2.0.0`;
+* consumers edit their imports by hand. Go's import-path-is-identity rule means `msk/v2` is a
   *different package*, not the same package at a new version, so there is no automatic migration and
   a program can legally hold both.
 

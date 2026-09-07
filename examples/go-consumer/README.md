@@ -1,7 +1,9 @@
 # `examples/go-consumer`
 
-A Go program that consumes 36 modules of the assembled fleet — `awsprovider` plus 35 group
-modules — and synthesises a `cdk.tf.json` with cdktn's validations **on**.
+A Go program that consumes 36 modules of the assembled fleet — `provider` (imported as
+`awsprovider`, because 0.3.0 dropped the `aws` prefix and the bare package name is also the obvious
+name for the construct) plus 35 group modules — and synthesises a `cdk.tf.json` with cdktn's
+validations **on**.
 
 It exists to answer the one question `VERDICT.md` left open (risk #2): Option A's per-assembly
 consumer cost was extrapolated from a three-module prototype, and the real fleet's tarballs are up
@@ -23,18 +25,19 @@ The fleet root defaults to `../cdktn-aws-go` and honours `CDKTN_AWS_GO_ROOT`, th
 `scripts/check-go-size.mjs` and the manifest tests use.
 
 The fleet root still has to be a checkout, not the released tarballs — that is what workspace mode
-is *for* here, and it is why the script writes a `go.work` of `replace` directives. What it is no
-longer working around is a name skew: the `Tf` names this example calls are published. Repack with
+is *for* here, and it is why the script writes a `go.work` of `replace` directives. Repack with
 `pnpm pacmak:go` and copy each `generated/<group>/dist/go/<packageName>/` into the fleet root (the
 copy commands are printed by `node scripts/release.mjs --from <ref>`) before pointing `--root` at
 it, so that the run measures *this* tree.
 
-A *consumer* needs none of this. The fleet is published: every module under
-`github.com/cdktn-io/cdktn-aws-go` resolves at **v0.2.0** through `proxy.golang.org` — verified
-against the proxy directly (`.../awsprovider/@latest` → `v0.2.0`, tag `awsprovider/v0.2.0`), 258
-`<group>/v0.2.0` tags in all. Outside this repository,
-`go get github.com/cdktn-io/cdktn-aws-go/awss3@v0.2.0` and no workspace at all is the whole story —
-at exactly the `awss3.NewTfBucket` / `awssts.NewDataTfCallerIdentity` names this example calls.
+**This example is ahead of the published fleet.** It calls 0.3.0's names — the `s3` / `sts` /
+`provider` directories and the `s3.NewAwsBucket` / `sts.NewDataAwsCallerIdentity` spelling — and
+0.3.0 is not released yet. What `proxy.golang.org` serves today is **v0.2.0**, under the old
+`awss3` / `awssts` / `awsprovider` directories at the old `awss3.NewTfBucket` spelling: 258
+`aws<group>/v0.2.0` tags. Workspace mode is why that skew costs this example nothing — it never
+resolves a fleet module through the proxy. Once 0.3.0 ships, a follow-up commit truths this
+paragraph up; until then, a consumer outside this repository writes
+`go get github.com/cdktn-io/cdktn-aws-go/awss3@v0.2.0` and the 0.2.0 names.
 
 ## Why `go.work` is generated and not committed
 
@@ -50,8 +53,8 @@ release*, not against the checkout this example is here to measure.
 
 `go.mod` therefore requires each fleet module at `v0.0.0`. That version is a placeholder and is
 never resolved: the `replace` directives answer every one of those requires from disk. A consumer
-outside this repository writes the published version instead (**v0.2.0**) and has no `go.work` at
-all.
+outside this repository writes a published version instead — **v0.2.0** today, at the 0.2.0 import
+paths — and has no `go.work` at all.
 
 ## What it asserts
 

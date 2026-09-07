@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConnectorProfileConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConnectorProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#connection_mode TfConnectorProfile#connection_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#connection_mode AwsConnectorProfile#connection_mode}
   */
   readonly connectionMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#connector_label TfConnectorProfile#connector_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#connector_label AwsConnectorProfile#connector_label}
   */
   readonly connectorLabel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#connector_type TfConnectorProfile#connector_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#connector_type AwsConnectorProfile#connector_type}
   */
   readonly connectorType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#id TfConnectorProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#id AwsConnectorProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#kms_arn TfConnectorProfile#kms_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#kms_arn AwsConnectorProfile#kms_arn}
   */
   readonly kmsArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#name TfConnectorProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#name AwsConnectorProfile#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#region TfConnectorProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#region AwsConnectorProfile#region}
   */
   readonly region?: string;
   /**
   * connector_profile_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#connector_profile_config TfConnectorProfile#connector_profile_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#connector_profile_config AwsConnectorProfile#connector_profile_config}
   */
-  readonly connectorProfileConfig: TfConnectorProfile.ConnectorProfileConfigProperty;
+  readonly connectorProfileConfig: AwsConnectorProfile.ConnectorProfileConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile aws_appflow_connector_profile}
 */
-export class TfConnectorProfile extends cdktn.TerraformResource {
+export class AwsConnectorProfile extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfConnectorProfile extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConnectorProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConnectorProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConnectorProfile to import
-  * @param importFromId The id of the existing TfConnectorProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConnectorProfile to import is found
+  * @param importToId The construct id used in the generated config for the AwsConnectorProfile to import
+  * @param importFromId The id of the existing AwsConnectorProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConnectorProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appflow_connector_profile", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfConnectorProfile extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConnectorProfileConfig
+  * @param options AwsConnectorProfileConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConnectorProfileConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConnectorProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appflow_connector_profile',
       terraformGeneratorMetadata: {
@@ -226,11 +226,11 @@ export class TfConnectorProfile extends cdktn.TerraformResource {
   }
 
   // connector_profile_config - computed: false, optional: false, required: true
-  private _connectorProfileConfig = new TfConnectorProfile.ConnectorProfileConfigPropertyOutputReference(this, "connector_profile_config");
+  private _connectorProfileConfig = new AwsConnectorProfile.ConnectorProfileConfigPropertyOutputReference(this, "connector_profile_config");
   public get connectorProfileConfig() {
     return this._connectorProfileConfig;
   }
-  public putConnectorProfileConfig(value: TfConnectorProfile.ConnectorProfileConfigProperty) {
+  public putConnectorProfileConfig(value: AwsConnectorProfile.ConnectorProfileConfigProperty) {
     this._connectorProfileConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -251,7 +251,7 @@ export class TfConnectorProfile extends cdktn.TerraformResource {
       kms_arn: cdktn.stringToTerraform(this._kmsArn),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      connector_profile_config: tfConnectorProfileConnectorProfileConfigPropertyToTerraform(this._connectorProfileConfig.internalValue),
+      connector_profile_config: awsConnectorProfileConnectorProfileConfigPropertyToTerraform(this._connectorProfileConfig.internalValue),
     };
   }
 
@@ -300,10 +300,10 @@ export class TfConnectorProfile extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       connector_profile_config: {
-        value: tfConnectorProfileConnectorProfileConfigPropertyToHclTerraform(this._connectorProfileConfig.internalValue),
+        value: awsConnectorProfileConnectorProfileConfigPropertyToHclTerraform(this._connectorProfileConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfConnectorProfile.ConnectorProfileConfigPropertyList",
+        storageClassType: "AwsConnectorProfile.ConnectorProfileConfigPropertyList",
       },
     };
 
@@ -312,7 +312,7 @@ export class TfConnectorProfile extends cdktn.TerraformResource {
   }
 }
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsAmplitudePropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsAmplitudePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsAmplitudeProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsAmplitudePropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsAmplitudePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsAmplitudeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,7 +324,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsAmplitudePropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsAmplitudePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsAmplitudeProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsAmplitudePropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsAmplitudePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsAmplitudeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileApiKeyPropertyToTerraform(struct?: TfConnectorProfile.ApiKeyPropertyOutputReference | TfConnectorProfile.ApiKeyProperty): any {
+export function awsConnectorProfileApiKeyPropertyToTerraform(struct?: AwsConnectorProfile.ApiKeyPropertyOutputReference | AwsConnectorProfile.ApiKeyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -361,7 +361,7 @@ export function tfConnectorProfileApiKeyPropertyToTerraform(struct?: TfConnector
 }
 
 
-export function tfConnectorProfileApiKeyPropertyToHclTerraform(struct?: TfConnectorProfile.ApiKeyPropertyOutputReference | TfConnectorProfile.ApiKeyProperty): any {
+export function awsConnectorProfileApiKeyPropertyToHclTerraform(struct?: AwsConnectorProfile.ApiKeyPropertyOutputReference | AwsConnectorProfile.ApiKeyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,7 +386,7 @@ export function tfConnectorProfileApiKeyPropertyToHclTerraform(struct?: TfConnec
 }
 
 
-export function tfConnectorProfileBasicPropertyToTerraform(struct?: TfConnectorProfile.BasicPropertyOutputReference | TfConnectorProfile.BasicProperty): any {
+export function awsConnectorProfileBasicPropertyToTerraform(struct?: AwsConnectorProfile.BasicPropertyOutputReference | AwsConnectorProfile.BasicProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -398,7 +398,7 @@ export function tfConnectorProfileBasicPropertyToTerraform(struct?: TfConnectorP
 }
 
 
-export function tfConnectorProfileBasicPropertyToHclTerraform(struct?: TfConnectorProfile.BasicPropertyOutputReference | TfConnectorProfile.BasicProperty): any {
+export function awsConnectorProfileBasicPropertyToHclTerraform(struct?: AwsConnectorProfile.BasicPropertyOutputReference | AwsConnectorProfile.BasicProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -423,7 +423,7 @@ export function tfConnectorProfileBasicPropertyToHclTerraform(struct?: TfConnect
 }
 
 
-export function tfConnectorProfileCustomPropertyToTerraform(struct?: TfConnectorProfile.CustomPropertyOutputReference | TfConnectorProfile.CustomProperty): any {
+export function awsConnectorProfileCustomPropertyToTerraform(struct?: AwsConnectorProfile.CustomPropertyOutputReference | AwsConnectorProfile.CustomProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -435,7 +435,7 @@ export function tfConnectorProfileCustomPropertyToTerraform(struct?: TfConnector
 }
 
 
-export function tfConnectorProfileCustomPropertyToHclTerraform(struct?: TfConnectorProfile.CustomPropertyOutputReference | TfConnectorProfile.CustomProperty): any {
+export function awsConnectorProfileCustomPropertyToHclTerraform(struct?: AwsConnectorProfile.CustomPropertyOutputReference | AwsConnectorProfile.CustomProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -460,7 +460,7 @@ export function tfConnectorProfileCustomPropertyToHclTerraform(struct?: TfConnec
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -472,7 +472,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -497,7 +497,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileOauth2PropertyToTerraform(struct?: TfConnectorProfile.Oauth2PropertyOutputReference | TfConnectorProfile.Oauth2Property): any {
+export function awsConnectorProfileOauth2PropertyToTerraform(struct?: AwsConnectorProfile.Oauth2PropertyOutputReference | AwsConnectorProfile.Oauth2Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -507,12 +507,12 @@ export function tfConnectorProfileOauth2PropertyToTerraform(struct?: TfConnector
     client_id: cdktn.stringToTerraform(struct!.clientId),
     client_secret: cdktn.stringToTerraform(struct!.clientSecret),
     refresh_token: cdktn.stringToTerraform(struct!.refreshToken),
-    oauth_request: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestPropertyToTerraform(struct!.oauthRequest),
+    oauth_request: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestPropertyToTerraform(struct!.oauthRequest),
   }
 }
 
 
-export function tfConnectorProfileOauth2PropertyToHclTerraform(struct?: TfConnectorProfile.Oauth2PropertyOutputReference | TfConnectorProfile.Oauth2Property): any {
+export function awsConnectorProfileOauth2PropertyToHclTerraform(struct?: AwsConnectorProfile.Oauth2PropertyOutputReference | AwsConnectorProfile.Oauth2Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -543,7 +543,7 @@ export function tfConnectorProfileOauth2PropertyToHclTerraform(struct?: TfConnec
       storageClassType: "string",
     },
     oauth_request: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestPropertyToHclTerraform(struct!.oauthRequest),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestPropertyToHclTerraform(struct!.oauthRequest),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestPropertyList",
@@ -555,22 +555,22 @@ export function tfConnectorProfileOauth2PropertyToHclTerraform(struct?: TfConnec
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     authentication_type: cdktn.stringToTerraform(struct!.authenticationType),
-    api_key: tfConnectorProfileApiKeyPropertyToTerraform(struct!.apiKey),
-    basic: tfConnectorProfileBasicPropertyToTerraform(struct!.basic),
-    custom: tfConnectorProfileCustomPropertyToTerraform(struct!.custom),
-    oauth2: tfConnectorProfileOauth2PropertyToTerraform(struct!.oauth2),
+    api_key: awsConnectorProfileApiKeyPropertyToTerraform(struct!.apiKey),
+    basic: awsConnectorProfileBasicPropertyToTerraform(struct!.basic),
+    custom: awsConnectorProfileCustomPropertyToTerraform(struct!.custom),
+    oauth2: awsConnectorProfileOauth2PropertyToTerraform(struct!.oauth2),
   }
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -583,25 +583,25 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
       storageClassType: "string",
     },
     api_key: {
-      value: tfConnectorProfileApiKeyPropertyToHclTerraform(struct!.apiKey),
+      value: awsConnectorProfileApiKeyPropertyToHclTerraform(struct!.apiKey),
       isBlock: true,
       type: "list",
       storageClassType: "ApiKeyPropertyList",
     },
     basic: {
-      value: tfConnectorProfileBasicPropertyToHclTerraform(struct!.basic),
+      value: awsConnectorProfileBasicPropertyToHclTerraform(struct!.basic),
       isBlock: true,
       type: "list",
       storageClassType: "BasicPropertyList",
     },
     custom: {
-      value: tfConnectorProfileCustomPropertyToHclTerraform(struct!.custom),
+      value: awsConnectorProfileCustomPropertyToHclTerraform(struct!.custom),
       isBlock: true,
       type: "list",
       storageClassType: "CustomPropertyList",
     },
     oauth2: {
-      value: tfConnectorProfileOauth2PropertyToHclTerraform(struct!.oauth2),
+      value: awsConnectorProfileOauth2PropertyToHclTerraform(struct!.oauth2),
       isBlock: true,
       type: "list",
       storageClassType: "Oauth2PropertyList",
@@ -613,7 +613,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDatadogPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsDatadogPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsDatadogProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDatadogPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsDatadogPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsDatadogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -625,7 +625,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDatadogPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsDatadogPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsDatadogProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDatadogPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsDatadogPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsDatadogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -650,7 +650,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDynatracePropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsDynatracePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsDynatraceProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDynatracePropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsDynatracePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsDynatraceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -661,7 +661,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDynatracePropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsDynatracePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsDynatraceProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDynatracePropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsDynatracePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsDynatraceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -680,7 +680,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -692,7 +692,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -717,7 +717,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -727,12 +727,12 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
     client_id: cdktn.stringToTerraform(struct!.clientId),
     client_secret: cdktn.stringToTerraform(struct!.clientSecret),
     refresh_token: cdktn.stringToTerraform(struct!.refreshToken),
-    oauth_request: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestPropertyToTerraform(struct!.oauthRequest),
+    oauth_request: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestPropertyToTerraform(struct!.oauthRequest),
   }
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -763,7 +763,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
       storageClassType: "string",
     },
     oauth_request: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestPropertyToHclTerraform(struct!.oauthRequest),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestPropertyToHclTerraform(struct!.oauthRequest),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestPropertyList",
@@ -775,7 +775,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -787,7 +787,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -812,7 +812,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsHoneycodePropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsHoneycodePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsHoneycodeProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsHoneycodePropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsHoneycodePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsHoneycodeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -820,12 +820,12 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
   return {
     access_token: cdktn.stringToTerraform(struct!.accessToken),
     refresh_token: cdktn.stringToTerraform(struct!.refreshToken),
-    oauth_request: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestPropertyToTerraform(struct!.oauthRequest),
+    oauth_request: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestPropertyToTerraform(struct!.oauthRequest),
   }
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsHoneycodePropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsHoneycodePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsHoneycodeProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsHoneycodePropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsHoneycodePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsHoneycodeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -844,7 +844,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
       storageClassType: "string",
     },
     oauth_request: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestPropertyToHclTerraform(struct!.oauthRequest),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestPropertyToHclTerraform(struct!.oauthRequest),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestPropertyList",
@@ -856,7 +856,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsInforNexusPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsInforNexusPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsInforNexusProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsInforNexusPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsInforNexusPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsInforNexusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -870,7 +870,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsInforNexusPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsInforNexusPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsInforNexusProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsInforNexusPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsInforNexusPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsInforNexusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -907,7 +907,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -919,7 +919,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -944,7 +944,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsMarketoPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsMarketoProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsMarketoPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsMarketoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -953,12 +953,12 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
     access_token: cdktn.stringToTerraform(struct!.accessToken),
     client_id: cdktn.stringToTerraform(struct!.clientId),
     client_secret: cdktn.stringToTerraform(struct!.clientSecret),
-    oauth_request: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestPropertyToTerraform(struct!.oauthRequest),
+    oauth_request: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestPropertyToTerraform(struct!.oauthRequest),
   }
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsMarketoPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsMarketoProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsMarketoPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsMarketoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -983,7 +983,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
       storageClassType: "string",
     },
     oauth_request: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestPropertyToHclTerraform(struct!.oauthRequest),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestPropertyToHclTerraform(struct!.oauthRequest),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestPropertyList",
@@ -995,7 +995,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsRedshiftPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsRedshiftPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsRedshiftProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsRedshiftPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsRedshiftPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsRedshiftProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1007,7 +1007,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsRedshiftPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsRedshiftPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsRedshiftProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsRedshiftPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsRedshiftPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsRedshiftProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1032,7 +1032,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1044,7 +1044,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1069,7 +1069,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSalesforcePropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSalesforcePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSalesforceProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSalesforcePropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSalesforcePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSalesforceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1080,12 +1080,12 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
     jwt_token: cdktn.stringToTerraform(struct!.jwtToken),
     oauth2_grant_type: cdktn.stringToTerraform(struct!.oauth2GrantType),
     refresh_token: cdktn.stringToTerraform(struct!.refreshToken),
-    oauth_request: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestPropertyToTerraform(struct!.oauthRequest),
+    oauth_request: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestPropertyToTerraform(struct!.oauthRequest),
   }
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSalesforcePropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSalesforcePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSalesforceProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSalesforcePropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSalesforcePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSalesforceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1122,7 +1122,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
       storageClassType: "string",
     },
     oauth_request: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestPropertyToHclTerraform(struct!.oauthRequest),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestPropertyToHclTerraform(struct!.oauthRequest),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestPropertyList",
@@ -1134,7 +1134,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileBasicAuthCredentialsPropertyToTerraform(struct?: TfConnectorProfile.BasicAuthCredentialsPropertyOutputReference | TfConnectorProfile.BasicAuthCredentialsProperty): any {
+export function awsConnectorProfileBasicAuthCredentialsPropertyToTerraform(struct?: AwsConnectorProfile.BasicAuthCredentialsPropertyOutputReference | AwsConnectorProfile.BasicAuthCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1146,7 +1146,7 @@ export function tfConnectorProfileBasicAuthCredentialsPropertyToTerraform(struct
 }
 
 
-export function tfConnectorProfileBasicAuthCredentialsPropertyToHclTerraform(struct?: TfConnectorProfile.BasicAuthCredentialsPropertyOutputReference | TfConnectorProfile.BasicAuthCredentialsProperty): any {
+export function awsConnectorProfileBasicAuthCredentialsPropertyToHclTerraform(struct?: AwsConnectorProfile.BasicAuthCredentialsPropertyOutputReference | AwsConnectorProfile.BasicAuthCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1171,7 +1171,7 @@ export function tfConnectorProfileBasicAuthCredentialsPropertyToHclTerraform(str
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1183,7 +1183,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1208,7 +1208,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileOauthCredentialsPropertyToTerraform(struct?: TfConnectorProfile.OauthCredentialsPropertyOutputReference | TfConnectorProfile.OauthCredentialsProperty): any {
+export function awsConnectorProfileOauthCredentialsPropertyToTerraform(struct?: AwsConnectorProfile.OauthCredentialsPropertyOutputReference | AwsConnectorProfile.OauthCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1218,12 +1218,12 @@ export function tfConnectorProfileOauthCredentialsPropertyToTerraform(struct?: T
     client_id: cdktn.stringToTerraform(struct!.clientId),
     client_secret: cdktn.stringToTerraform(struct!.clientSecret),
     refresh_token: cdktn.stringToTerraform(struct!.refreshToken),
-    oauth_request: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestPropertyToTerraform(struct!.oauthRequest),
+    oauth_request: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestPropertyToTerraform(struct!.oauthRequest),
   }
 }
 
 
-export function tfConnectorProfileOauthCredentialsPropertyToHclTerraform(struct?: TfConnectorProfile.OauthCredentialsPropertyOutputReference | TfConnectorProfile.OauthCredentialsProperty): any {
+export function awsConnectorProfileOauthCredentialsPropertyToHclTerraform(struct?: AwsConnectorProfile.OauthCredentialsPropertyOutputReference | AwsConnectorProfile.OauthCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1254,7 +1254,7 @@ export function tfConnectorProfileOauthCredentialsPropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     oauth_request: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestPropertyToHclTerraform(struct!.oauthRequest),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestPropertyToHclTerraform(struct!.oauthRequest),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestPropertyList",
@@ -1266,32 +1266,32 @@ export function tfConnectorProfileOauthCredentialsPropertyToHclTerraform(struct?
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSapoDataPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSapoDataPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSapoDataProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSapoDataPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSapoDataPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSapoDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    basic_auth_credentials: tfConnectorProfileBasicAuthCredentialsPropertyToTerraform(struct!.basicAuthCredentials),
-    oauth_credentials: tfConnectorProfileOauthCredentialsPropertyToTerraform(struct!.oauthCredentials),
+    basic_auth_credentials: awsConnectorProfileBasicAuthCredentialsPropertyToTerraform(struct!.basicAuthCredentials),
+    oauth_credentials: awsConnectorProfileOauthCredentialsPropertyToTerraform(struct!.oauthCredentials),
   }
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSapoDataPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSapoDataPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSapoDataProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSapoDataPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSapoDataPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSapoDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     basic_auth_credentials: {
-      value: tfConnectorProfileBasicAuthCredentialsPropertyToHclTerraform(struct!.basicAuthCredentials),
+      value: awsConnectorProfileBasicAuthCredentialsPropertyToHclTerraform(struct!.basicAuthCredentials),
       isBlock: true,
       type: "list",
       storageClassType: "BasicAuthCredentialsPropertyList",
     },
     oauth_credentials: {
-      value: tfConnectorProfileOauthCredentialsPropertyToHclTerraform(struct!.oauthCredentials),
+      value: awsConnectorProfileOauthCredentialsPropertyToHclTerraform(struct!.oauthCredentials),
       isBlock: true,
       type: "list",
       storageClassType: "OauthCredentialsPropertyList",
@@ -1303,7 +1303,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsServiceNowPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsServiceNowPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsServiceNowProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsServiceNowPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsServiceNowPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsServiceNowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1315,7 +1315,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsServiceNowPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsServiceNowPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsServiceNowProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsServiceNowPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsServiceNowPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsServiceNowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1340,7 +1340,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSingularPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSingularPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSingularProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSingularPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSingularPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSingularProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1351,7 +1351,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSingularPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSingularPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSingularProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSingularPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSingularPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSingularProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1370,7 +1370,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1382,7 +1382,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1407,7 +1407,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSlackPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSlackPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSlackProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSlackPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSlackPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSlackProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1416,12 +1416,12 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
     access_token: cdktn.stringToTerraform(struct!.accessToken),
     client_id: cdktn.stringToTerraform(struct!.clientId),
     client_secret: cdktn.stringToTerraform(struct!.clientSecret),
-    oauth_request: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestPropertyToTerraform(struct!.oauthRequest),
+    oauth_request: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestPropertyToTerraform(struct!.oauthRequest),
   }
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSlackPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSlackPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSlackProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSlackPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSlackPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSlackProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1446,7 +1446,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
       storageClassType: "string",
     },
     oauth_request: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestPropertyToHclTerraform(struct!.oauthRequest),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestPropertyToHclTerraform(struct!.oauthRequest),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestPropertyList",
@@ -1458,7 +1458,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSnowflakePropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSnowflakePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSnowflakeProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSnowflakePropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSnowflakePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSnowflakeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1470,7 +1470,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSnowflakePropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSnowflakePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSnowflakeProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSnowflakePropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSnowflakePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsSnowflakeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1495,7 +1495,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsTrendmicroPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsTrendmicroPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsTrendmicroProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsTrendmicroPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsTrendmicroPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsTrendmicroProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1506,7 +1506,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsTrendmicroPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsTrendmicroPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsTrendmicroProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsTrendmicroPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsTrendmicroPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsTrendmicroProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1525,7 +1525,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsVeevaPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsVeevaPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsVeevaProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsVeevaPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsVeevaPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsVeevaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1537,7 +1537,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsVeevaPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsVeevaPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsVeevaProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsVeevaPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsVeevaPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsVeevaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1562,7 +1562,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1574,7 +1574,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1599,7 +1599,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsZendeskPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsZendeskProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsZendeskPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsZendeskProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1608,12 +1608,12 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
     access_token: cdktn.stringToTerraform(struct!.accessToken),
     client_id: cdktn.stringToTerraform(struct!.clientId),
     client_secret: cdktn.stringToTerraform(struct!.clientSecret),
-    oauth_request: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestPropertyToTerraform(struct!.oauthRequest),
+    oauth_request: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestPropertyToTerraform(struct!.oauthRequest),
   }
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsZendeskPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsZendeskProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsZendeskPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfileCredentialsZendeskProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1638,7 +1638,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
       storageClassType: "string",
     },
     oauth_request: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestPropertyToHclTerraform(struct!.oauthRequest),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestPropertyToHclTerraform(struct!.oauthRequest),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestPropertyList",
@@ -1650,144 +1650,144 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileCredenti
 }
 
 
-export function tfConnectorProfileConnectorProfileCredentialsPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileCredentialsPropertyOutputReference | TfConnectorProfile.ConnectorProfileCredentialsProperty): any {
+export function awsConnectorProfileConnectorProfileCredentialsPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileCredentialsPropertyOutputReference | AwsConnectorProfile.ConnectorProfileCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    amplitude: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsAmplitudePropertyToTerraform(struct!.amplitude),
-    custom_connector: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorPropertyToTerraform(struct!.customConnector),
-    datadog: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDatadogPropertyToTerraform(struct!.datadog),
-    dynatrace: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDynatracePropertyToTerraform(struct!.dynatrace),
-    google_analytics: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsPropertyToTerraform(struct!.googleAnalytics),
-    honeycode: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsHoneycodePropertyToTerraform(struct!.honeycode),
-    infor_nexus: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsInforNexusPropertyToTerraform(struct!.inforNexus),
-    marketo: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoPropertyToTerraform(struct!.marketo),
-    redshift: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsRedshiftPropertyToTerraform(struct!.redshift),
-    salesforce: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSalesforcePropertyToTerraform(struct!.salesforce),
-    sapo_data: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSapoDataPropertyToTerraform(struct!.sapoData),
-    service_now: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsServiceNowPropertyToTerraform(struct!.serviceNow),
-    singular: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSingularPropertyToTerraform(struct!.singular),
-    slack: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSlackPropertyToTerraform(struct!.slack),
-    snowflake: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSnowflakePropertyToTerraform(struct!.snowflake),
-    trendmicro: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsTrendmicroPropertyToTerraform(struct!.trendmicro),
-    veeva: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsVeevaPropertyToTerraform(struct!.veeva),
-    zendesk: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskPropertyToTerraform(struct!.zendesk),
+    amplitude: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsAmplitudePropertyToTerraform(struct!.amplitude),
+    custom_connector: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorPropertyToTerraform(struct!.customConnector),
+    datadog: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDatadogPropertyToTerraform(struct!.datadog),
+    dynatrace: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDynatracePropertyToTerraform(struct!.dynatrace),
+    google_analytics: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsPropertyToTerraform(struct!.googleAnalytics),
+    honeycode: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsHoneycodePropertyToTerraform(struct!.honeycode),
+    infor_nexus: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsInforNexusPropertyToTerraform(struct!.inforNexus),
+    marketo: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoPropertyToTerraform(struct!.marketo),
+    redshift: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsRedshiftPropertyToTerraform(struct!.redshift),
+    salesforce: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSalesforcePropertyToTerraform(struct!.salesforce),
+    sapo_data: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSapoDataPropertyToTerraform(struct!.sapoData),
+    service_now: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsServiceNowPropertyToTerraform(struct!.serviceNow),
+    singular: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSingularPropertyToTerraform(struct!.singular),
+    slack: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSlackPropertyToTerraform(struct!.slack),
+    snowflake: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSnowflakePropertyToTerraform(struct!.snowflake),
+    trendmicro: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsTrendmicroPropertyToTerraform(struct!.trendmicro),
+    veeva: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsVeevaPropertyToTerraform(struct!.veeva),
+    zendesk: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskPropertyToTerraform(struct!.zendesk),
   }
 }
 
 
-export function tfConnectorProfileConnectorProfileCredentialsPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileCredentialsPropertyOutputReference | TfConnectorProfile.ConnectorProfileCredentialsProperty): any {
+export function awsConnectorProfileConnectorProfileCredentialsPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileCredentialsPropertyOutputReference | AwsConnectorProfile.ConnectorProfileCredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     amplitude: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsAmplitudePropertyToHclTerraform(struct!.amplitude),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsAmplitudePropertyToHclTerraform(struct!.amplitude),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsAmplitudePropertyList",
     },
     custom_connector: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorPropertyToHclTerraform(struct!.customConnector),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsCustomConnectorPropertyToHclTerraform(struct!.customConnector),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorPropertyList",
     },
     datadog: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDatadogPropertyToHclTerraform(struct!.datadog),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDatadogPropertyToHclTerraform(struct!.datadog),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsDatadogPropertyList",
     },
     dynatrace: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDynatracePropertyToHclTerraform(struct!.dynatrace),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsDynatracePropertyToHclTerraform(struct!.dynatrace),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsDynatracePropertyList",
     },
     google_analytics: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsPropertyToHclTerraform(struct!.googleAnalytics),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsPropertyToHclTerraform(struct!.googleAnalytics),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsPropertyList",
     },
     honeycode: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsHoneycodePropertyToHclTerraform(struct!.honeycode),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsHoneycodePropertyToHclTerraform(struct!.honeycode),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsHoneycodePropertyList",
     },
     infor_nexus: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsInforNexusPropertyToHclTerraform(struct!.inforNexus),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsInforNexusPropertyToHclTerraform(struct!.inforNexus),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsInforNexusPropertyList",
     },
     marketo: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoPropertyToHclTerraform(struct!.marketo),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsMarketoPropertyToHclTerraform(struct!.marketo),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsMarketoPropertyList",
     },
     redshift: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsRedshiftPropertyToHclTerraform(struct!.redshift),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsRedshiftPropertyToHclTerraform(struct!.redshift),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsRedshiftPropertyList",
     },
     salesforce: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSalesforcePropertyToHclTerraform(struct!.salesforce),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSalesforcePropertyToHclTerraform(struct!.salesforce),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsSalesforcePropertyList",
     },
     sapo_data: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSapoDataPropertyToHclTerraform(struct!.sapoData),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSapoDataPropertyToHclTerraform(struct!.sapoData),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsSapoDataPropertyList",
     },
     service_now: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsServiceNowPropertyToHclTerraform(struct!.serviceNow),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsServiceNowPropertyToHclTerraform(struct!.serviceNow),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsServiceNowPropertyList",
     },
     singular: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSingularPropertyToHclTerraform(struct!.singular),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSingularPropertyToHclTerraform(struct!.singular),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsSingularPropertyList",
     },
     slack: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSlackPropertyToHclTerraform(struct!.slack),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSlackPropertyToHclTerraform(struct!.slack),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsSlackPropertyList",
     },
     snowflake: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSnowflakePropertyToHclTerraform(struct!.snowflake),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsSnowflakePropertyToHclTerraform(struct!.snowflake),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsSnowflakePropertyList",
     },
     trendmicro: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsTrendmicroPropertyToHclTerraform(struct!.trendmicro),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsTrendmicroPropertyToHclTerraform(struct!.trendmicro),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsTrendmicroPropertyList",
     },
     veeva: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsVeevaPropertyToHclTerraform(struct!.veeva),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsVeevaPropertyToHclTerraform(struct!.veeva),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsVeevaPropertyList",
     },
     zendesk: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskPropertyToHclTerraform(struct!.zendesk),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfileCredentialsZendeskPropertyToHclTerraform(struct!.zendesk),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfileCredentialsZendeskPropertyList",
@@ -1799,7 +1799,7 @@ export function tfConnectorProfileConnectorProfileCredentialsPropertyToHclTerraf
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesAmplitudePropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesAmplitudePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesAmplitudeProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesAmplitudePropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesAmplitudePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesAmplitudeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1809,7 +1809,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesAmplitudePropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesAmplitudePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesAmplitudeProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesAmplitudePropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesAmplitudePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesAmplitudeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1820,7 +1820,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileOauth2PropertiesPropertyToTerraform(struct?: TfConnectorProfile.Oauth2PropertiesPropertyOutputReference | TfConnectorProfile.Oauth2PropertiesProperty): any {
+export function awsConnectorProfileOauth2PropertiesPropertyToTerraform(struct?: AwsConnectorProfile.Oauth2PropertiesPropertyOutputReference | AwsConnectorProfile.Oauth2PropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1833,7 +1833,7 @@ export function tfConnectorProfileOauth2PropertiesPropertyToTerraform(struct?: T
 }
 
 
-export function tfConnectorProfileOauth2PropertiesPropertyToHclTerraform(struct?: TfConnectorProfile.Oauth2PropertiesPropertyOutputReference | TfConnectorProfile.Oauth2PropertiesProperty): any {
+export function awsConnectorProfileOauth2PropertiesPropertyToHclTerraform(struct?: AwsConnectorProfile.Oauth2PropertiesPropertyOutputReference | AwsConnectorProfile.Oauth2PropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1864,19 +1864,19 @@ export function tfConnectorProfileOauth2PropertiesPropertyToHclTerraform(struct?
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesCustomConnectorPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesCustomConnectorPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesCustomConnectorProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesCustomConnectorPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesCustomConnectorPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesCustomConnectorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     profile_properties: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.profileProperties),
-    oauth2_properties: tfConnectorProfileOauth2PropertiesPropertyToTerraform(struct!.oauth2Properties),
+    oauth2_properties: awsConnectorProfileOauth2PropertiesPropertyToTerraform(struct!.oauth2Properties),
   }
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesCustomConnectorPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesCustomConnectorPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesCustomConnectorProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesCustomConnectorPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesCustomConnectorPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesCustomConnectorProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1889,7 +1889,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
       storageClassType: "stringMap",
     },
     oauth2_properties: {
-      value: tfConnectorProfileOauth2PropertiesPropertyToHclTerraform(struct!.oauth2Properties),
+      value: awsConnectorProfileOauth2PropertiesPropertyToHclTerraform(struct!.oauth2Properties),
       isBlock: true,
       type: "list",
       storageClassType: "Oauth2PropertiesPropertyList",
@@ -1901,7 +1901,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDatadogPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesDatadogPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesDatadogProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDatadogPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesDatadogPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesDatadogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1912,7 +1912,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDatadogPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesDatadogPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesDatadogProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDatadogPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesDatadogPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesDatadogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1931,7 +1931,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDynatracePropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesDynatracePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesDynatraceProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDynatracePropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesDynatracePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesDynatraceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1942,7 +1942,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDynatracePropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesDynatracePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesDynatraceProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDynatracePropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesDynatracePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesDynatraceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1961,7 +1961,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1971,7 +1971,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1982,7 +1982,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesHoneycodePropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesHoneycodePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesHoneycodeProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesHoneycodePropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesHoneycodePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesHoneycodeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1992,7 +1992,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesHoneycodePropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesHoneycodePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesHoneycodeProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesHoneycodePropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesHoneycodePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesHoneycodeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2003,7 +2003,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesInforNexusPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesInforNexusPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesInforNexusProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesInforNexusPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesInforNexusPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesInforNexusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2014,7 +2014,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesInforNexusPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesInforNexusPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesInforNexusProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesInforNexusPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesInforNexusPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesInforNexusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2033,7 +2033,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesMarketoPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesMarketoPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesMarketoProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesMarketoPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesMarketoPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesMarketoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2044,7 +2044,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesMarketoPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesMarketoPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesMarketoProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesMarketoPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesMarketoPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesMarketoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2063,7 +2063,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesRedshiftPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesRedshiftPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesRedshiftProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesRedshiftPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesRedshiftPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesRedshiftProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2080,7 +2080,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesRedshiftPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesRedshiftPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesRedshiftProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesRedshiftPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesRedshiftPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesRedshiftProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2135,7 +2135,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSalesforcePropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSalesforcePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSalesforceProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSalesforcePropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSalesforcePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSalesforceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2148,7 +2148,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSalesforcePropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSalesforcePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSalesforceProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSalesforcePropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSalesforcePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSalesforceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2179,7 +2179,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileOauthPropertiesPropertyToTerraform(struct?: TfConnectorProfile.OauthPropertiesPropertyOutputReference | TfConnectorProfile.OauthPropertiesProperty): any {
+export function awsConnectorProfileOauthPropertiesPropertyToTerraform(struct?: AwsConnectorProfile.OauthPropertiesPropertyOutputReference | AwsConnectorProfile.OauthPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2192,7 +2192,7 @@ export function tfConnectorProfileOauthPropertiesPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfConnectorProfileOauthPropertiesPropertyToHclTerraform(struct?: TfConnectorProfile.OauthPropertiesPropertyOutputReference | TfConnectorProfile.OauthPropertiesProperty): any {
+export function awsConnectorProfileOauthPropertiesPropertyToHclTerraform(struct?: AwsConnectorProfile.OauthPropertiesPropertyOutputReference | AwsConnectorProfile.OauthPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2223,7 +2223,7 @@ export function tfConnectorProfileOauthPropertiesPropertyToHclTerraform(struct?:
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSapoDataPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSapoDataPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSapoDataProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSapoDataPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSapoDataPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSapoDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2235,12 +2235,12 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
     logon_language: cdktn.stringToTerraform(struct!.logonLanguage),
     port_number: cdktn.numberToTerraform(struct!.portNumber),
     private_link_service_name: cdktn.stringToTerraform(struct!.privateLinkServiceName),
-    oauth_properties: tfConnectorProfileOauthPropertiesPropertyToTerraform(struct!.oauthProperties),
+    oauth_properties: awsConnectorProfileOauthPropertiesPropertyToTerraform(struct!.oauthProperties),
   }
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSapoDataPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSapoDataPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSapoDataProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSapoDataPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSapoDataPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSapoDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2283,7 +2283,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
       storageClassType: "string",
     },
     oauth_properties: {
-      value: tfConnectorProfileOauthPropertiesPropertyToHclTerraform(struct!.oauthProperties),
+      value: awsConnectorProfileOauthPropertiesPropertyToHclTerraform(struct!.oauthProperties),
       isBlock: true,
       type: "list",
       storageClassType: "OauthPropertiesPropertyList",
@@ -2295,7 +2295,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesServiceNowPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesServiceNowPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesServiceNowProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesServiceNowPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesServiceNowPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesServiceNowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2306,7 +2306,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesServiceNowPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesServiceNowPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesServiceNowProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesServiceNowPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesServiceNowPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesServiceNowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2325,7 +2325,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSingularPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSingularPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSingularProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSingularPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSingularPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSingularProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2335,7 +2335,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSingularPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSingularPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSingularProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSingularPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSingularPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSingularProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2346,7 +2346,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSlackPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSlackPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSlackProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSlackPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSlackPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSlackProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2357,7 +2357,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSlackPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSlackPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSlackProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSlackPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSlackPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSlackProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2376,7 +2376,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSnowflakePropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSnowflakePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSnowflakeProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSnowflakePropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSnowflakePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSnowflakeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2393,7 +2393,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSnowflakePropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSnowflakePropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSnowflakeProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSnowflakePropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSnowflakePropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesSnowflakeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2448,7 +2448,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesTrendmicroPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesTrendmicroPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesTrendmicroProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesTrendmicroPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesTrendmicroPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesTrendmicroProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2458,7 +2458,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesTrendmicroPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesTrendmicroPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesTrendmicroProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesTrendmicroPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesTrendmicroPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesTrendmicroProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2469,7 +2469,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesVeevaPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesVeevaPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesVeevaProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesVeevaPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesVeevaPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesVeevaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2480,7 +2480,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesVeevaPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesVeevaPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesVeevaProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesVeevaPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesVeevaPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesVeevaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2499,7 +2499,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesZendeskPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesZendeskPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesZendeskProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesZendeskPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesZendeskPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesZendeskProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2510,7 +2510,7 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesZendeskPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesZendeskPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesZendeskProperty): any {
+export function awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesZendeskPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesZendeskPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigConnectorProfilePropertiesZendeskProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2529,144 +2529,144 @@ export function tfConnectorProfileConnectorProfileConfigConnectorProfileProperti
 }
 
 
-export function tfConnectorProfileConnectorProfilePropertiesPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfilePropertiesPropertyOutputReference | TfConnectorProfile.ConnectorProfilePropertiesProperty): any {
+export function awsConnectorProfileConnectorProfilePropertiesPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfilePropertiesPropertyOutputReference | AwsConnectorProfile.ConnectorProfilePropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    amplitude: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesAmplitudePropertyToTerraform(struct!.amplitude),
-    custom_connector: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesCustomConnectorPropertyToTerraform(struct!.customConnector),
-    datadog: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDatadogPropertyToTerraform(struct!.datadog),
-    dynatrace: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDynatracePropertyToTerraform(struct!.dynatrace),
-    google_analytics: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsPropertyToTerraform(struct!.googleAnalytics),
-    honeycode: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesHoneycodePropertyToTerraform(struct!.honeycode),
-    infor_nexus: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesInforNexusPropertyToTerraform(struct!.inforNexus),
-    marketo: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesMarketoPropertyToTerraform(struct!.marketo),
-    redshift: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesRedshiftPropertyToTerraform(struct!.redshift),
-    salesforce: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSalesforcePropertyToTerraform(struct!.salesforce),
-    sapo_data: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSapoDataPropertyToTerraform(struct!.sapoData),
-    service_now: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesServiceNowPropertyToTerraform(struct!.serviceNow),
-    singular: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSingularPropertyToTerraform(struct!.singular),
-    slack: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSlackPropertyToTerraform(struct!.slack),
-    snowflake: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSnowflakePropertyToTerraform(struct!.snowflake),
-    trendmicro: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesTrendmicroPropertyToTerraform(struct!.trendmicro),
-    veeva: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesVeevaPropertyToTerraform(struct!.veeva),
-    zendesk: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesZendeskPropertyToTerraform(struct!.zendesk),
+    amplitude: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesAmplitudePropertyToTerraform(struct!.amplitude),
+    custom_connector: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesCustomConnectorPropertyToTerraform(struct!.customConnector),
+    datadog: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDatadogPropertyToTerraform(struct!.datadog),
+    dynatrace: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDynatracePropertyToTerraform(struct!.dynatrace),
+    google_analytics: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsPropertyToTerraform(struct!.googleAnalytics),
+    honeycode: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesHoneycodePropertyToTerraform(struct!.honeycode),
+    infor_nexus: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesInforNexusPropertyToTerraform(struct!.inforNexus),
+    marketo: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesMarketoPropertyToTerraform(struct!.marketo),
+    redshift: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesRedshiftPropertyToTerraform(struct!.redshift),
+    salesforce: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSalesforcePropertyToTerraform(struct!.salesforce),
+    sapo_data: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSapoDataPropertyToTerraform(struct!.sapoData),
+    service_now: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesServiceNowPropertyToTerraform(struct!.serviceNow),
+    singular: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSingularPropertyToTerraform(struct!.singular),
+    slack: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSlackPropertyToTerraform(struct!.slack),
+    snowflake: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSnowflakePropertyToTerraform(struct!.snowflake),
+    trendmicro: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesTrendmicroPropertyToTerraform(struct!.trendmicro),
+    veeva: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesVeevaPropertyToTerraform(struct!.veeva),
+    zendesk: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesZendeskPropertyToTerraform(struct!.zendesk),
   }
 }
 
 
-export function tfConnectorProfileConnectorProfilePropertiesPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfilePropertiesPropertyOutputReference | TfConnectorProfile.ConnectorProfilePropertiesProperty): any {
+export function awsConnectorProfileConnectorProfilePropertiesPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfilePropertiesPropertyOutputReference | AwsConnectorProfile.ConnectorProfilePropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     amplitude: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesAmplitudePropertyToHclTerraform(struct!.amplitude),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesAmplitudePropertyToHclTerraform(struct!.amplitude),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesAmplitudePropertyList",
     },
     custom_connector: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesCustomConnectorPropertyToHclTerraform(struct!.customConnector),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesCustomConnectorPropertyToHclTerraform(struct!.customConnector),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesCustomConnectorPropertyList",
     },
     datadog: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDatadogPropertyToHclTerraform(struct!.datadog),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDatadogPropertyToHclTerraform(struct!.datadog),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesDatadogPropertyList",
     },
     dynatrace: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDynatracePropertyToHclTerraform(struct!.dynatrace),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesDynatracePropertyToHclTerraform(struct!.dynatrace),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesDynatracePropertyList",
     },
     google_analytics: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsPropertyToHclTerraform(struct!.googleAnalytics),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsPropertyToHclTerraform(struct!.googleAnalytics),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsPropertyList",
     },
     honeycode: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesHoneycodePropertyToHclTerraform(struct!.honeycode),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesHoneycodePropertyToHclTerraform(struct!.honeycode),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesHoneycodePropertyList",
     },
     infor_nexus: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesInforNexusPropertyToHclTerraform(struct!.inforNexus),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesInforNexusPropertyToHclTerraform(struct!.inforNexus),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesInforNexusPropertyList",
     },
     marketo: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesMarketoPropertyToHclTerraform(struct!.marketo),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesMarketoPropertyToHclTerraform(struct!.marketo),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesMarketoPropertyList",
     },
     redshift: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesRedshiftPropertyToHclTerraform(struct!.redshift),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesRedshiftPropertyToHclTerraform(struct!.redshift),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesRedshiftPropertyList",
     },
     salesforce: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSalesforcePropertyToHclTerraform(struct!.salesforce),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSalesforcePropertyToHclTerraform(struct!.salesforce),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesSalesforcePropertyList",
     },
     sapo_data: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSapoDataPropertyToHclTerraform(struct!.sapoData),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSapoDataPropertyToHclTerraform(struct!.sapoData),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesSapoDataPropertyList",
     },
     service_now: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesServiceNowPropertyToHclTerraform(struct!.serviceNow),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesServiceNowPropertyToHclTerraform(struct!.serviceNow),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesServiceNowPropertyList",
     },
     singular: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSingularPropertyToHclTerraform(struct!.singular),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSingularPropertyToHclTerraform(struct!.singular),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesSingularPropertyList",
     },
     slack: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSlackPropertyToHclTerraform(struct!.slack),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSlackPropertyToHclTerraform(struct!.slack),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesSlackPropertyList",
     },
     snowflake: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSnowflakePropertyToHclTerraform(struct!.snowflake),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesSnowflakePropertyToHclTerraform(struct!.snowflake),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesSnowflakePropertyList",
     },
     trendmicro: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesTrendmicroPropertyToHclTerraform(struct!.trendmicro),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesTrendmicroPropertyToHclTerraform(struct!.trendmicro),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesTrendmicroPropertyList",
     },
     veeva: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesVeevaPropertyToHclTerraform(struct!.veeva),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesVeevaPropertyToHclTerraform(struct!.veeva),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesVeevaPropertyList",
     },
     zendesk: {
-      value: tfConnectorProfileConnectorProfileConfigConnectorProfilePropertiesZendeskPropertyToHclTerraform(struct!.zendesk),
+      value: awsConnectorProfileConnectorProfileConfigConnectorProfilePropertiesZendeskPropertyToHclTerraform(struct!.zendesk),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileConfigConnectorProfilePropertiesZendeskPropertyList",
@@ -2678,32 +2678,32 @@ export function tfConnectorProfileConnectorProfilePropertiesPropertyToHclTerrafo
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigPropertyToTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigProperty): any {
+export function awsConnectorProfileConnectorProfileConfigPropertyToTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    connector_profile_credentials: tfConnectorProfileConnectorProfileCredentialsPropertyToTerraform(struct!.connectorProfileCredentials),
-    connector_profile_properties: tfConnectorProfileConnectorProfilePropertiesPropertyToTerraform(struct!.connectorProfileProperties),
+    connector_profile_credentials: awsConnectorProfileConnectorProfileCredentialsPropertyToTerraform(struct!.connectorProfileCredentials),
+    connector_profile_properties: awsConnectorProfileConnectorProfilePropertiesPropertyToTerraform(struct!.connectorProfileProperties),
   }
 }
 
 
-export function tfConnectorProfileConnectorProfileConfigPropertyToHclTerraform(struct?: TfConnectorProfile.ConnectorProfileConfigPropertyOutputReference | TfConnectorProfile.ConnectorProfileConfigProperty): any {
+export function awsConnectorProfileConnectorProfileConfigPropertyToHclTerraform(struct?: AwsConnectorProfile.ConnectorProfileConfigPropertyOutputReference | AwsConnectorProfile.ConnectorProfileConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     connector_profile_credentials: {
-      value: tfConnectorProfileConnectorProfileCredentialsPropertyToHclTerraform(struct!.connectorProfileCredentials),
+      value: awsConnectorProfileConnectorProfileCredentialsPropertyToHclTerraform(struct!.connectorProfileCredentials),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfileCredentialsPropertyList",
     },
     connector_profile_properties: {
-      value: tfConnectorProfileConnectorProfilePropertiesPropertyToHclTerraform(struct!.connectorProfileProperties),
+      value: awsConnectorProfileConnectorProfilePropertiesPropertyToHclTerraform(struct!.connectorProfileProperties),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectorProfilePropertiesPropertyList",
@@ -2715,14 +2715,14 @@ export function tfConnectorProfileConnectorProfileConfigPropertyToHclTerraform(s
 }
 
 
-export namespace TfConnectorProfile {
+export namespace AwsConnectorProfile {
 export interface ConnectorProfileConfigConnectorProfileCredentialsAmplitudeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#api_key TfConnectorProfile#api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#api_key AwsConnectorProfile#api_key}
   */
   readonly apiKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#secret_key TfConnectorProfile#secret_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#secret_key AwsConnectorProfile#secret_key}
   */
   readonly secretKey: string;
 }
@@ -2792,11 +2792,11 @@ export class ConnectorProfileConfigConnectorProfileCredentialsAmplitudePropertyO
 }
 export interface ApiKeyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#api_key TfConnectorProfile#api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#api_key AwsConnectorProfile#api_key}
   */
   readonly apiKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#api_secret_key TfConnectorProfile#api_secret_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#api_secret_key AwsConnectorProfile#api_secret_key}
   */
   readonly apiSecretKey?: string;
 }
@@ -2869,11 +2869,11 @@ export class ApiKeyPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface BasicProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#password TfConnectorProfile#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#password AwsConnectorProfile#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#username TfConnectorProfile#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#username AwsConnectorProfile#username}
   */
   readonly username: string;
 }
@@ -2943,11 +2943,11 @@ export class BasicPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CustomProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#credentials_map TfConnectorProfile#credentials_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#credentials_map AwsConnectorProfile#credentials_map}
   */
   readonly credentialsMap?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#custom_authentication_type TfConnectorProfile#custom_authentication_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#custom_authentication_type AwsConnectorProfile#custom_authentication_type}
   */
   readonly customAuthenticationType: string;
 }
@@ -3020,11 +3020,11 @@ export class CustomPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code TfConnectorProfile#auth_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code AwsConnectorProfile#auth_code}
   */
   readonly authCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redirect_uri TfConnectorProfile#redirect_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redirect_uri AwsConnectorProfile#redirect_uri}
   */
   readonly redirectUri?: string;
 }
@@ -3100,25 +3100,25 @@ export class ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOau
 }
 export interface Oauth2Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_token TfConnectorProfile#access_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_token AwsConnectorProfile#access_token}
   */
   readonly accessToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_id TfConnectorProfile#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_id AwsConnectorProfile#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_secret TfConnectorProfile#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_secret AwsConnectorProfile#client_secret}
   */
   readonly clientSecret?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#refresh_token TfConnectorProfile#refresh_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#refresh_token AwsConnectorProfile#refresh_token}
   */
   readonly refreshToken?: string;
   /**
   * oauth_request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_request TfConnectorProfile#oauth_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_request AwsConnectorProfile#oauth_request}
   */
   readonly oauthRequest?: ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorOauth2OauthRequestProperty;
 }
@@ -3260,31 +3260,31 @@ export class Oauth2PropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#authentication_type TfConnectorProfile#authentication_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#authentication_type AwsConnectorProfile#authentication_type}
   */
   readonly authenticationType: string;
   /**
   * api_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#api_key TfConnectorProfile#api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#api_key AwsConnectorProfile#api_key}
   */
   readonly apiKey?: ApiKeyProperty;
   /**
   * basic block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#basic TfConnectorProfile#basic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#basic AwsConnectorProfile#basic}
   */
   readonly basic?: BasicProperty;
   /**
   * custom block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#custom TfConnectorProfile#custom}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#custom AwsConnectorProfile#custom}
   */
   readonly custom?: CustomProperty;
   /**
   * oauth2 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth2 TfConnectorProfile#oauth2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth2 AwsConnectorProfile#oauth2}
   */
   readonly oauth2?: Oauth2Property;
 }
@@ -3423,11 +3423,11 @@ export class ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorPro
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsDatadogProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#api_key TfConnectorProfile#api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#api_key AwsConnectorProfile#api_key}
   */
   readonly apiKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#application_key TfConnectorProfile#application_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#application_key AwsConnectorProfile#application_key}
   */
   readonly applicationKey: string;
 }
@@ -3497,7 +3497,7 @@ export class ConnectorProfileConfigConnectorProfileCredentialsDatadogPropertyOut
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsDynatraceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#api_token TfConnectorProfile#api_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#api_token AwsConnectorProfile#api_token}
   */
   readonly apiToken: string;
 }
@@ -3548,11 +3548,11 @@ export class ConnectorProfileConfigConnectorProfileCredentialsDynatracePropertyO
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code TfConnectorProfile#auth_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code AwsConnectorProfile#auth_code}
   */
   readonly authCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redirect_uri TfConnectorProfile#redirect_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redirect_uri AwsConnectorProfile#redirect_uri}
   */
   readonly redirectUri?: string;
 }
@@ -3628,25 +3628,25 @@ export class ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOau
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_token TfConnectorProfile#access_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_token AwsConnectorProfile#access_token}
   */
   readonly accessToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_id TfConnectorProfile#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_id AwsConnectorProfile#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_secret TfConnectorProfile#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_secret AwsConnectorProfile#client_secret}
   */
   readonly clientSecret: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#refresh_token TfConnectorProfile#refresh_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#refresh_token AwsConnectorProfile#refresh_token}
   */
   readonly refreshToken?: string;
   /**
   * oauth_request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_request TfConnectorProfile#oauth_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_request AwsConnectorProfile#oauth_request}
   */
   readonly oauthRequest?: ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsOauthRequestProperty;
 }
@@ -3782,11 +3782,11 @@ export class ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsPro
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code TfConnectorProfile#auth_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code AwsConnectorProfile#auth_code}
   */
   readonly authCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redirect_uri TfConnectorProfile#redirect_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redirect_uri AwsConnectorProfile#redirect_uri}
   */
   readonly redirectUri?: string;
 }
@@ -3862,17 +3862,17 @@ export class ConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequ
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsHoneycodeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_token TfConnectorProfile#access_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_token AwsConnectorProfile#access_token}
   */
   readonly accessToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#refresh_token TfConnectorProfile#refresh_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#refresh_token AwsConnectorProfile#refresh_token}
   */
   readonly refreshToken?: string;
   /**
   * oauth_request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_request TfConnectorProfile#oauth_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_request AwsConnectorProfile#oauth_request}
   */
   readonly oauthRequest?: ConnectorProfileConfigConnectorProfileCredentialsHoneycodeOauthRequestProperty;
 }
@@ -3970,19 +3970,19 @@ export class ConnectorProfileConfigConnectorProfileCredentialsHoneycodePropertyO
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsInforNexusProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_key_id TfConnectorProfile#access_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_key_id AwsConnectorProfile#access_key_id}
   */
   readonly accessKeyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#datakey TfConnectorProfile#datakey}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#datakey AwsConnectorProfile#datakey}
   */
   readonly datakey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#secret_access_key TfConnectorProfile#secret_access_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#secret_access_key AwsConnectorProfile#secret_access_key}
   */
   readonly secretAccessKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#user_id TfConnectorProfile#user_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#user_id AwsConnectorProfile#user_id}
   */
   readonly userId: string;
 }
@@ -4090,11 +4090,11 @@ export class ConnectorProfileConfigConnectorProfileCredentialsInforNexusProperty
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code TfConnectorProfile#auth_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code AwsConnectorProfile#auth_code}
   */
   readonly authCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redirect_uri TfConnectorProfile#redirect_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redirect_uri AwsConnectorProfile#redirect_uri}
   */
   readonly redirectUri?: string;
 }
@@ -4170,21 +4170,21 @@ export class ConnectorProfileConfigConnectorProfileCredentialsMarketoOauthReques
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsMarketoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_token TfConnectorProfile#access_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_token AwsConnectorProfile#access_token}
   */
   readonly accessToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_id TfConnectorProfile#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_id AwsConnectorProfile#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_secret TfConnectorProfile#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_secret AwsConnectorProfile#client_secret}
   */
   readonly clientSecret: string;
   /**
   * oauth_request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_request TfConnectorProfile#oauth_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_request AwsConnectorProfile#oauth_request}
   */
   readonly oauthRequest?: ConnectorProfileConfigConnectorProfileCredentialsMarketoOauthRequestProperty;
 }
@@ -4298,11 +4298,11 @@ export class ConnectorProfileConfigConnectorProfileCredentialsMarketoPropertyOut
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsRedshiftProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#password TfConnectorProfile#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#password AwsConnectorProfile#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#username TfConnectorProfile#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#username AwsConnectorProfile#username}
   */
   readonly username: string;
 }
@@ -4372,11 +4372,11 @@ export class ConnectorProfileConfigConnectorProfileCredentialsRedshiftPropertyOu
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code TfConnectorProfile#auth_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code AwsConnectorProfile#auth_code}
   */
   readonly authCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redirect_uri TfConnectorProfile#redirect_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redirect_uri AwsConnectorProfile#redirect_uri}
   */
   readonly redirectUri?: string;
 }
@@ -4452,29 +4452,29 @@ export class ConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthReq
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsSalesforceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_token TfConnectorProfile#access_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_token AwsConnectorProfile#access_token}
   */
   readonly accessToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_credentials_arn TfConnectorProfile#client_credentials_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_credentials_arn AwsConnectorProfile#client_credentials_arn}
   */
   readonly clientCredentialsArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#jwt_token TfConnectorProfile#jwt_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#jwt_token AwsConnectorProfile#jwt_token}
   */
   readonly jwtToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth2_grant_type TfConnectorProfile#oauth2_grant_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth2_grant_type AwsConnectorProfile#oauth2_grant_type}
   */
   readonly oauth2GrantType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#refresh_token TfConnectorProfile#refresh_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#refresh_token AwsConnectorProfile#refresh_token}
   */
   readonly refreshToken?: string;
   /**
   * oauth_request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_request TfConnectorProfile#oauth_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_request AwsConnectorProfile#oauth_request}
   */
   readonly oauthRequest?: ConnectorProfileConfigConnectorProfileCredentialsSalesforceOauthRequestProperty;
 }
@@ -4638,11 +4638,11 @@ export class ConnectorProfileConfigConnectorProfileCredentialsSalesforceProperty
 }
 export interface BasicAuthCredentialsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#password TfConnectorProfile#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#password AwsConnectorProfile#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#username TfConnectorProfile#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#username AwsConnectorProfile#username}
   */
   readonly username: string;
 }
@@ -4712,11 +4712,11 @@ export class BasicAuthCredentialsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code TfConnectorProfile#auth_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code AwsConnectorProfile#auth_code}
   */
   readonly authCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redirect_uri TfConnectorProfile#redirect_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redirect_uri AwsConnectorProfile#redirect_uri}
   */
   readonly redirectUri?: string;
 }
@@ -4792,25 +4792,25 @@ export class ConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCrede
 }
 export interface OauthCredentialsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_token TfConnectorProfile#access_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_token AwsConnectorProfile#access_token}
   */
   readonly accessToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_id TfConnectorProfile#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_id AwsConnectorProfile#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_secret TfConnectorProfile#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_secret AwsConnectorProfile#client_secret}
   */
   readonly clientSecret: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#refresh_token TfConnectorProfile#refresh_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#refresh_token AwsConnectorProfile#refresh_token}
   */
   readonly refreshToken?: string;
   /**
   * oauth_request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_request TfConnectorProfile#oauth_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_request AwsConnectorProfile#oauth_request}
   */
   readonly oauthRequest?: ConnectorProfileConfigConnectorProfileCredentialsSapoDataOauthCredentialsOauthRequestProperty;
 }
@@ -4948,13 +4948,13 @@ export interface ConnectorProfileConfigConnectorProfileCredentialsSapoDataProper
   /**
   * basic_auth_credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#basic_auth_credentials TfConnectorProfile#basic_auth_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#basic_auth_credentials AwsConnectorProfile#basic_auth_credentials}
   */
   readonly basicAuthCredentials?: BasicAuthCredentialsProperty;
   /**
   * oauth_credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_credentials TfConnectorProfile#oauth_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_credentials AwsConnectorProfile#oauth_credentials}
   */
   readonly oauthCredentials?: OauthCredentialsProperty;
 }
@@ -5030,11 +5030,11 @@ export class ConnectorProfileConfigConnectorProfileCredentialsSapoDataPropertyOu
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsServiceNowProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#password TfConnectorProfile#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#password AwsConnectorProfile#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#username TfConnectorProfile#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#username AwsConnectorProfile#username}
   */
   readonly username: string;
 }
@@ -5104,7 +5104,7 @@ export class ConnectorProfileConfigConnectorProfileCredentialsServiceNowProperty
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsSingularProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#api_key TfConnectorProfile#api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#api_key AwsConnectorProfile#api_key}
   */
   readonly apiKey: string;
 }
@@ -5155,11 +5155,11 @@ export class ConnectorProfileConfigConnectorProfileCredentialsSingularPropertyOu
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code TfConnectorProfile#auth_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code AwsConnectorProfile#auth_code}
   */
   readonly authCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redirect_uri TfConnectorProfile#redirect_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redirect_uri AwsConnectorProfile#redirect_uri}
   */
   readonly redirectUri?: string;
 }
@@ -5235,21 +5235,21 @@ export class ConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestP
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsSlackProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_token TfConnectorProfile#access_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_token AwsConnectorProfile#access_token}
   */
   readonly accessToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_id TfConnectorProfile#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_id AwsConnectorProfile#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_secret TfConnectorProfile#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_secret AwsConnectorProfile#client_secret}
   */
   readonly clientSecret: string;
   /**
   * oauth_request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_request TfConnectorProfile#oauth_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_request AwsConnectorProfile#oauth_request}
   */
   readonly oauthRequest?: ConnectorProfileConfigConnectorProfileCredentialsSlackOauthRequestProperty;
 }
@@ -5363,11 +5363,11 @@ export class ConnectorProfileConfigConnectorProfileCredentialsSlackPropertyOutpu
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsSnowflakeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#password TfConnectorProfile#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#password AwsConnectorProfile#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#username TfConnectorProfile#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#username AwsConnectorProfile#username}
   */
   readonly username: string;
 }
@@ -5437,7 +5437,7 @@ export class ConnectorProfileConfigConnectorProfileCredentialsSnowflakePropertyO
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsTrendmicroProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#api_secret_key TfConnectorProfile#api_secret_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#api_secret_key AwsConnectorProfile#api_secret_key}
   */
   readonly apiSecretKey: string;
 }
@@ -5488,11 +5488,11 @@ export class ConnectorProfileConfigConnectorProfileCredentialsTrendmicroProperty
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsVeevaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#password TfConnectorProfile#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#password AwsConnectorProfile#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#username TfConnectorProfile#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#username AwsConnectorProfile#username}
   */
   readonly username: string;
 }
@@ -5562,11 +5562,11 @@ export class ConnectorProfileConfigConnectorProfileCredentialsVeevaPropertyOutpu
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code TfConnectorProfile#auth_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code AwsConnectorProfile#auth_code}
   */
   readonly authCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redirect_uri TfConnectorProfile#redirect_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redirect_uri AwsConnectorProfile#redirect_uri}
   */
   readonly redirectUri?: string;
 }
@@ -5642,21 +5642,21 @@ export class ConnectorProfileConfigConnectorProfileCredentialsZendeskOauthReques
 }
 export interface ConnectorProfileConfigConnectorProfileCredentialsZendeskProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_token TfConnectorProfile#access_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#access_token AwsConnectorProfile#access_token}
   */
   readonly accessToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_id TfConnectorProfile#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_id AwsConnectorProfile#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_secret TfConnectorProfile#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_secret AwsConnectorProfile#client_secret}
   */
   readonly clientSecret: string;
   /**
   * oauth_request block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_request TfConnectorProfile#oauth_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_request AwsConnectorProfile#oauth_request}
   */
   readonly oauthRequest?: ConnectorProfileConfigConnectorProfileCredentialsZendeskOauthRequestProperty;
 }
@@ -5772,109 +5772,109 @@ export interface ConnectorProfileCredentialsProperty {
   /**
   * amplitude block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#amplitude TfConnectorProfile#amplitude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#amplitude AwsConnectorProfile#amplitude}
   */
   readonly amplitude?: ConnectorProfileConfigConnectorProfileCredentialsAmplitudeProperty;
   /**
   * custom_connector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#custom_connector TfConnectorProfile#custom_connector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#custom_connector AwsConnectorProfile#custom_connector}
   */
   readonly customConnector?: ConnectorProfileConfigConnectorProfileCredentialsCustomConnectorProperty;
   /**
   * datadog block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#datadog TfConnectorProfile#datadog}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#datadog AwsConnectorProfile#datadog}
   */
   readonly datadog?: ConnectorProfileConfigConnectorProfileCredentialsDatadogProperty;
   /**
   * dynatrace block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#dynatrace TfConnectorProfile#dynatrace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#dynatrace AwsConnectorProfile#dynatrace}
   */
   readonly dynatrace?: ConnectorProfileConfigConnectorProfileCredentialsDynatraceProperty;
   /**
   * google_analytics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#google_analytics TfConnectorProfile#google_analytics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#google_analytics AwsConnectorProfile#google_analytics}
   */
   readonly googleAnalytics?: ConnectorProfileConfigConnectorProfileCredentialsGoogleAnalyticsProperty;
   /**
   * honeycode block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#honeycode TfConnectorProfile#honeycode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#honeycode AwsConnectorProfile#honeycode}
   */
   readonly honeycode?: ConnectorProfileConfigConnectorProfileCredentialsHoneycodeProperty;
   /**
   * infor_nexus block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#infor_nexus TfConnectorProfile#infor_nexus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#infor_nexus AwsConnectorProfile#infor_nexus}
   */
   readonly inforNexus?: ConnectorProfileConfigConnectorProfileCredentialsInforNexusProperty;
   /**
   * marketo block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#marketo TfConnectorProfile#marketo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#marketo AwsConnectorProfile#marketo}
   */
   readonly marketo?: ConnectorProfileConfigConnectorProfileCredentialsMarketoProperty;
   /**
   * redshift block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redshift TfConnectorProfile#redshift}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redshift AwsConnectorProfile#redshift}
   */
   readonly redshift?: ConnectorProfileConfigConnectorProfileCredentialsRedshiftProperty;
   /**
   * salesforce block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#salesforce TfConnectorProfile#salesforce}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#salesforce AwsConnectorProfile#salesforce}
   */
   readonly salesforce?: ConnectorProfileConfigConnectorProfileCredentialsSalesforceProperty;
   /**
   * sapo_data block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#sapo_data TfConnectorProfile#sapo_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#sapo_data AwsConnectorProfile#sapo_data}
   */
   readonly sapoData?: ConnectorProfileConfigConnectorProfileCredentialsSapoDataProperty;
   /**
   * service_now block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#service_now TfConnectorProfile#service_now}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#service_now AwsConnectorProfile#service_now}
   */
   readonly serviceNow?: ConnectorProfileConfigConnectorProfileCredentialsServiceNowProperty;
   /**
   * singular block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#singular TfConnectorProfile#singular}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#singular AwsConnectorProfile#singular}
   */
   readonly singular?: ConnectorProfileConfigConnectorProfileCredentialsSingularProperty;
   /**
   * slack block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#slack TfConnectorProfile#slack}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#slack AwsConnectorProfile#slack}
   */
   readonly slack?: ConnectorProfileConfigConnectorProfileCredentialsSlackProperty;
   /**
   * snowflake block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#snowflake TfConnectorProfile#snowflake}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#snowflake AwsConnectorProfile#snowflake}
   */
   readonly snowflake?: ConnectorProfileConfigConnectorProfileCredentialsSnowflakeProperty;
   /**
   * trendmicro block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#trendmicro TfConnectorProfile#trendmicro}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#trendmicro AwsConnectorProfile#trendmicro}
   */
   readonly trendmicro?: ConnectorProfileConfigConnectorProfileCredentialsTrendmicroProperty;
   /**
   * veeva block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#veeva TfConnectorProfile#veeva}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#veeva AwsConnectorProfile#veeva}
   */
   readonly veeva?: ConnectorProfileConfigConnectorProfileCredentialsVeevaProperty;
   /**
   * zendesk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#zendesk TfConnectorProfile#zendesk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#zendesk AwsConnectorProfile#zendesk}
   */
   readonly zendesk?: ConnectorProfileConfigConnectorProfileCredentialsZendeskProperty;
 }
@@ -6330,15 +6330,15 @@ export class ConnectorProfileConfigConnectorProfilePropertiesAmplitudePropertyOu
 }
 export interface Oauth2PropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth2_grant_type TfConnectorProfile#oauth2_grant_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth2_grant_type AwsConnectorProfile#oauth2_grant_type}
   */
   readonly oauth2GrantType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#token_url TfConnectorProfile#token_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#token_url AwsConnectorProfile#token_url}
   */
   readonly tokenUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#token_url_custom_properties TfConnectorProfile#token_url_custom_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#token_url_custom_properties AwsConnectorProfile#token_url_custom_properties}
   */
   readonly tokenUrlCustomProperties?: { [key: string]: string };
 }
@@ -6430,13 +6430,13 @@ export class Oauth2PropertiesPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface ConnectorProfileConfigConnectorProfilePropertiesCustomConnectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#profile_properties TfConnectorProfile#profile_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#profile_properties AwsConnectorProfile#profile_properties}
   */
   readonly profileProperties?: { [key: string]: string };
   /**
   * oauth2_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth2_properties TfConnectorProfile#oauth2_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth2_properties AwsConnectorProfile#oauth2_properties}
   */
   readonly oauth2Properties?: Oauth2PropertiesProperty;
 }
@@ -6512,7 +6512,7 @@ export class ConnectorProfileConfigConnectorProfilePropertiesCustomConnectorProp
 }
 export interface ConnectorProfileConfigConnectorProfilePropertiesDatadogProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url TfConnectorProfile#instance_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url AwsConnectorProfile#instance_url}
   */
   readonly instanceUrl: string;
 }
@@ -6563,7 +6563,7 @@ export class ConnectorProfileConfigConnectorProfilePropertiesDatadogPropertyOutp
 }
 export interface ConnectorProfileConfigConnectorProfilePropertiesDynatraceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url TfConnectorProfile#instance_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url AwsConnectorProfile#instance_url}
   */
   readonly instanceUrl: string;
 }
@@ -6670,7 +6670,7 @@ export class ConnectorProfileConfigConnectorProfilePropertiesHoneycodePropertyOu
 }
 export interface ConnectorProfileConfigConnectorProfilePropertiesInforNexusProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url TfConnectorProfile#instance_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url AwsConnectorProfile#instance_url}
   */
   readonly instanceUrl: string;
 }
@@ -6721,7 +6721,7 @@ export class ConnectorProfileConfigConnectorProfilePropertiesInforNexusPropertyO
 }
 export interface ConnectorProfileConfigConnectorProfilePropertiesMarketoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url TfConnectorProfile#instance_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url AwsConnectorProfile#instance_url}
   */
   readonly instanceUrl: string;
 }
@@ -6772,31 +6772,31 @@ export class ConnectorProfileConfigConnectorProfilePropertiesMarketoPropertyOutp
 }
 export interface ConnectorProfileConfigConnectorProfilePropertiesRedshiftProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#bucket_name TfConnectorProfile#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#bucket_name AwsConnectorProfile#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#bucket_prefix TfConnectorProfile#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#bucket_prefix AwsConnectorProfile#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#cluster_identifier TfConnectorProfile#cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#cluster_identifier AwsConnectorProfile#cluster_identifier}
   */
   readonly clusterIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#data_api_role_arn TfConnectorProfile#data_api_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#data_api_role_arn AwsConnectorProfile#data_api_role_arn}
   */
   readonly dataApiRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#database_name TfConnectorProfile#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#database_name AwsConnectorProfile#database_name}
   */
   readonly databaseName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#database_url TfConnectorProfile#database_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#database_url AwsConnectorProfile#database_url}
   */
   readonly databaseUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#role_arn TfConnectorProfile#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#role_arn AwsConnectorProfile#role_arn}
   */
   readonly roleArn: string;
 }
@@ -6976,15 +6976,15 @@ export class ConnectorProfileConfigConnectorProfilePropertiesRedshiftPropertyOut
 }
 export interface ConnectorProfileConfigConnectorProfilePropertiesSalesforceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url TfConnectorProfile#instance_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url AwsConnectorProfile#instance_url}
   */
   readonly instanceUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#is_sandbox_environment TfConnectorProfile#is_sandbox_environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#is_sandbox_environment AwsConnectorProfile#is_sandbox_environment}
   */
   readonly isSandboxEnvironment?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#use_privatelink_for_metadata_and_authorization TfConnectorProfile#use_privatelink_for_metadata_and_authorization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#use_privatelink_for_metadata_and_authorization AwsConnectorProfile#use_privatelink_for_metadata_and_authorization}
   */
   readonly usePrivatelinkForMetadataAndAuthorization?: boolean | cdktn.IResolvable;
 }
@@ -7082,15 +7082,15 @@ export class ConnectorProfileConfigConnectorProfilePropertiesSalesforcePropertyO
 }
 export interface OauthPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code_url TfConnectorProfile#auth_code_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#auth_code_url AwsConnectorProfile#auth_code_url}
   */
   readonly authCodeUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_scopes TfConnectorProfile#oauth_scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_scopes AwsConnectorProfile#oauth_scopes}
   */
   readonly oauthScopes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#token_url TfConnectorProfile#token_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#token_url AwsConnectorProfile#token_url}
   */
   readonly tokenUrl: string;
 }
@@ -7179,33 +7179,33 @@ export class OauthPropertiesPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface ConnectorProfileConfigConnectorProfilePropertiesSapoDataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#application_host_url TfConnectorProfile#application_host_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#application_host_url AwsConnectorProfile#application_host_url}
   */
   readonly applicationHostUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#application_service_path TfConnectorProfile#application_service_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#application_service_path AwsConnectorProfile#application_service_path}
   */
   readonly applicationServicePath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_number TfConnectorProfile#client_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#client_number AwsConnectorProfile#client_number}
   */
   readonly clientNumber: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#logon_language TfConnectorProfile#logon_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#logon_language AwsConnectorProfile#logon_language}
   */
   readonly logonLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#port_number TfConnectorProfile#port_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#port_number AwsConnectorProfile#port_number}
   */
   readonly portNumber: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#private_link_service_name TfConnectorProfile#private_link_service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#private_link_service_name AwsConnectorProfile#private_link_service_name}
   */
   readonly privateLinkServiceName?: string;
   /**
   * oauth_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_properties TfConnectorProfile#oauth_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#oauth_properties AwsConnectorProfile#oauth_properties}
   */
   readonly oauthProperties?: OauthPropertiesProperty;
 }
@@ -7379,7 +7379,7 @@ export class ConnectorProfileConfigConnectorProfilePropertiesSapoDataPropertyOut
 }
 export interface ConnectorProfileConfigConnectorProfilePropertiesServiceNowProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url TfConnectorProfile#instance_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url AwsConnectorProfile#instance_url}
   */
   readonly instanceUrl: string;
 }
@@ -7458,7 +7458,7 @@ export class ConnectorProfileConfigConnectorProfilePropertiesSingularPropertyOut
 }
 export interface ConnectorProfileConfigConnectorProfilePropertiesSlackProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url TfConnectorProfile#instance_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url AwsConnectorProfile#instance_url}
   */
   readonly instanceUrl: string;
 }
@@ -7509,31 +7509,31 @@ export class ConnectorProfileConfigConnectorProfilePropertiesSlackPropertyOutput
 }
 export interface ConnectorProfileConfigConnectorProfilePropertiesSnowflakeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#account_name TfConnectorProfile#account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#account_name AwsConnectorProfile#account_name}
   */
   readonly accountName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#bucket_name TfConnectorProfile#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#bucket_name AwsConnectorProfile#bucket_name}
   */
   readonly bucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#bucket_prefix TfConnectorProfile#bucket_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#bucket_prefix AwsConnectorProfile#bucket_prefix}
   */
   readonly bucketPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#private_link_service_name TfConnectorProfile#private_link_service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#private_link_service_name AwsConnectorProfile#private_link_service_name}
   */
   readonly privateLinkServiceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#region TfConnectorProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#region AwsConnectorProfile#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#stage TfConnectorProfile#stage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#stage AwsConnectorProfile#stage}
   */
   readonly stage: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#warehouse TfConnectorProfile#warehouse}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#warehouse AwsConnectorProfile#warehouse}
   */
   readonly warehouse: string;
 }
@@ -7738,7 +7738,7 @@ export class ConnectorProfileConfigConnectorProfilePropertiesTrendmicroPropertyO
 }
 export interface ConnectorProfileConfigConnectorProfilePropertiesVeevaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url TfConnectorProfile#instance_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url AwsConnectorProfile#instance_url}
   */
   readonly instanceUrl: string;
 }
@@ -7789,7 +7789,7 @@ export class ConnectorProfileConfigConnectorProfilePropertiesVeevaPropertyOutput
 }
 export interface ConnectorProfileConfigConnectorProfilePropertiesZendeskProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url TfConnectorProfile#instance_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#instance_url AwsConnectorProfile#instance_url}
   */
   readonly instanceUrl: string;
 }
@@ -7842,109 +7842,109 @@ export interface ConnectorProfilePropertiesProperty {
   /**
   * amplitude block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#amplitude TfConnectorProfile#amplitude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#amplitude AwsConnectorProfile#amplitude}
   */
   readonly amplitude?: ConnectorProfileConfigConnectorProfilePropertiesAmplitudeProperty;
   /**
   * custom_connector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#custom_connector TfConnectorProfile#custom_connector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#custom_connector AwsConnectorProfile#custom_connector}
   */
   readonly customConnector?: ConnectorProfileConfigConnectorProfilePropertiesCustomConnectorProperty;
   /**
   * datadog block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#datadog TfConnectorProfile#datadog}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#datadog AwsConnectorProfile#datadog}
   */
   readonly datadog?: ConnectorProfileConfigConnectorProfilePropertiesDatadogProperty;
   /**
   * dynatrace block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#dynatrace TfConnectorProfile#dynatrace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#dynatrace AwsConnectorProfile#dynatrace}
   */
   readonly dynatrace?: ConnectorProfileConfigConnectorProfilePropertiesDynatraceProperty;
   /**
   * google_analytics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#google_analytics TfConnectorProfile#google_analytics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#google_analytics AwsConnectorProfile#google_analytics}
   */
   readonly googleAnalytics?: ConnectorProfileConfigConnectorProfilePropertiesGoogleAnalyticsProperty;
   /**
   * honeycode block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#honeycode TfConnectorProfile#honeycode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#honeycode AwsConnectorProfile#honeycode}
   */
   readonly honeycode?: ConnectorProfileConfigConnectorProfilePropertiesHoneycodeProperty;
   /**
   * infor_nexus block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#infor_nexus TfConnectorProfile#infor_nexus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#infor_nexus AwsConnectorProfile#infor_nexus}
   */
   readonly inforNexus?: ConnectorProfileConfigConnectorProfilePropertiesInforNexusProperty;
   /**
   * marketo block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#marketo TfConnectorProfile#marketo}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#marketo AwsConnectorProfile#marketo}
   */
   readonly marketo?: ConnectorProfileConfigConnectorProfilePropertiesMarketoProperty;
   /**
   * redshift block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redshift TfConnectorProfile#redshift}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#redshift AwsConnectorProfile#redshift}
   */
   readonly redshift?: ConnectorProfileConfigConnectorProfilePropertiesRedshiftProperty;
   /**
   * salesforce block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#salesforce TfConnectorProfile#salesforce}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#salesforce AwsConnectorProfile#salesforce}
   */
   readonly salesforce?: ConnectorProfileConfigConnectorProfilePropertiesSalesforceProperty;
   /**
   * sapo_data block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#sapo_data TfConnectorProfile#sapo_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#sapo_data AwsConnectorProfile#sapo_data}
   */
   readonly sapoData?: ConnectorProfileConfigConnectorProfilePropertiesSapoDataProperty;
   /**
   * service_now block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#service_now TfConnectorProfile#service_now}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#service_now AwsConnectorProfile#service_now}
   */
   readonly serviceNow?: ConnectorProfileConfigConnectorProfilePropertiesServiceNowProperty;
   /**
   * singular block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#singular TfConnectorProfile#singular}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#singular AwsConnectorProfile#singular}
   */
   readonly singular?: ConnectorProfileConfigConnectorProfilePropertiesSingularProperty;
   /**
   * slack block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#slack TfConnectorProfile#slack}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#slack AwsConnectorProfile#slack}
   */
   readonly slack?: ConnectorProfileConfigConnectorProfilePropertiesSlackProperty;
   /**
   * snowflake block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#snowflake TfConnectorProfile#snowflake}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#snowflake AwsConnectorProfile#snowflake}
   */
   readonly snowflake?: ConnectorProfileConfigConnectorProfilePropertiesSnowflakeProperty;
   /**
   * trendmicro block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#trendmicro TfConnectorProfile#trendmicro}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#trendmicro AwsConnectorProfile#trendmicro}
   */
   readonly trendmicro?: ConnectorProfileConfigConnectorProfilePropertiesTrendmicroProperty;
   /**
   * veeva block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#veeva TfConnectorProfile#veeva}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#veeva AwsConnectorProfile#veeva}
   */
   readonly veeva?: ConnectorProfileConfigConnectorProfilePropertiesVeevaProperty;
   /**
   * zendesk block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#zendesk TfConnectorProfile#zendesk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#zendesk AwsConnectorProfile#zendesk}
   */
   readonly zendesk?: ConnectorProfileConfigConnectorProfilePropertiesZendeskProperty;
 }
@@ -8374,13 +8374,13 @@ export interface ConnectorProfileConfigProperty {
   /**
   * connector_profile_credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#connector_profile_credentials TfConnectorProfile#connector_profile_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#connector_profile_credentials AwsConnectorProfile#connector_profile_credentials}
   */
   readonly connectorProfileCredentials: ConnectorProfileCredentialsProperty;
   /**
   * connector_profile_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#connector_profile_properties TfConnectorProfile#connector_profile_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appflow_connector_profile#connector_profile_properties AwsConnectorProfile#connector_profile_properties}
   */
   readonly connectorProfileProperties: ConnectorProfilePropertiesProperty;
 }

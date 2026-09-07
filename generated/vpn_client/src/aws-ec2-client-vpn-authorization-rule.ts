@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAuthorizationRuleConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAuthorizationRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#access_group_id TfAuthorizationRule#access_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#access_group_id AwsAuthorizationRule#access_group_id}
   */
   readonly accessGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#authorize_all_groups TfAuthorizationRule#authorize_all_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#authorize_all_groups AwsAuthorizationRule#authorize_all_groups}
   */
   readonly authorizeAllGroups?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#client_vpn_endpoint_id TfAuthorizationRule#client_vpn_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#client_vpn_endpoint_id AwsAuthorizationRule#client_vpn_endpoint_id}
   */
   readonly clientVpnEndpointId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#description TfAuthorizationRule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#description AwsAuthorizationRule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#id TfAuthorizationRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#id AwsAuthorizationRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -32,25 +32,25 @@ export interface TfAuthorizationRuleConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#region TfAuthorizationRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#region AwsAuthorizationRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#target_network_cidr TfAuthorizationRule#target_network_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#target_network_cidr AwsAuthorizationRule#target_network_cidr}
   */
   readonly targetNetworkCidr: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#timeouts TfAuthorizationRule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#timeouts AwsAuthorizationRule#timeouts}
   */
-  readonly timeouts?: TfAuthorizationRule.TimeoutsProperty;
+  readonly timeouts?: AwsAuthorizationRule.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule aws_ec2_client_vpn_authorization_rule}
 */
-export class TfAuthorizationRule extends cdktn.TerraformResource {
+export class AwsAuthorizationRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfAuthorizationRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAuthorizationRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAuthorizationRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAuthorizationRule to import
-  * @param importFromId The id of the existing TfAuthorizationRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAuthorizationRule to import is found
+  * @param importToId The construct id used in the generated config for the AwsAuthorizationRule to import
+  * @param importFromId The id of the existing AwsAuthorizationRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAuthorizationRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_client_vpn_authorization_rule", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfAuthorizationRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAuthorizationRuleConfig
+  * @param options AwsAuthorizationRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAuthorizationRuleConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAuthorizationRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_client_vpn_authorization_rule',
       terraformGeneratorMetadata: {
@@ -219,11 +219,11 @@ export class TfAuthorizationRule extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfAuthorizationRule.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsAuthorizationRule.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfAuthorizationRule.TimeoutsProperty) {
+  public putTimeouts(value: AwsAuthorizationRule.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -247,7 +247,7 @@ export class TfAuthorizationRule extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       target_network_cidr: cdktn.stringToTerraform(this._targetNetworkCidr),
-      timeouts: tfAuthorizationRuleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsAuthorizationRuleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -296,10 +296,10 @@ export class TfAuthorizationRule extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfAuthorizationRuleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsAuthorizationRuleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfAuthorizationRule.TimeoutsProperty",
+        storageClassType: "AwsAuthorizationRule.TimeoutsProperty",
       },
     };
 
@@ -308,7 +308,7 @@ export class TfAuthorizationRule extends cdktn.TerraformResource {
   }
 }
 
-export function tfAuthorizationRuleTimeoutsPropertyToTerraform(struct?: TfAuthorizationRule.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAuthorizationRuleTimeoutsPropertyToTerraform(struct?: AwsAuthorizationRule.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -320,7 +320,7 @@ export function tfAuthorizationRuleTimeoutsPropertyToTerraform(struct?: TfAuthor
 }
 
 
-export function tfAuthorizationRuleTimeoutsPropertyToHclTerraform(struct?: TfAuthorizationRule.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAuthorizationRuleTimeoutsPropertyToHclTerraform(struct?: AwsAuthorizationRule.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,14 +345,14 @@ export function tfAuthorizationRuleTimeoutsPropertyToHclTerraform(struct?: TfAut
 }
 
 
-export namespace TfAuthorizationRule {
+export namespace AwsAuthorizationRule {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#create TfAuthorizationRule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#create AwsAuthorizationRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#delete TfAuthorizationRule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_authorization_rule#delete AwsAuthorizationRule#delete}
   */
   readonly delete?: string;
 }

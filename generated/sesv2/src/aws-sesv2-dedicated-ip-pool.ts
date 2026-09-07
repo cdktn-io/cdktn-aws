@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDedicatedIpPoolConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDedicatedIpPoolConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_pool#id TfDedicatedIpPool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_pool#id AwsDedicatedIpPool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_pool#pool_name TfDedicatedIpPool#pool_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_pool#pool_name AwsDedicatedIpPool#pool_name}
   */
   readonly poolName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_pool#region TfDedicatedIpPool#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_pool#region AwsDedicatedIpPool#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_pool#scaling_mode TfDedicatedIpPool#scaling_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_pool#scaling_mode AwsDedicatedIpPool#scaling_mode}
   */
   readonly scalingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_pool#tags TfDedicatedIpPool#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_pool#tags AwsDedicatedIpPool#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_pool#tags_all TfDedicatedIpPool#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_pool#tags_all AwsDedicatedIpPool#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface TfDedicatedIpPoolConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_pool aws_sesv2_dedicated_ip_pool}
 */
-export class TfDedicatedIpPool extends cdktn.TerraformResource {
+export class AwsDedicatedIpPool extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfDedicatedIpPool extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDedicatedIpPool resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDedicatedIpPool resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDedicatedIpPool to import
-  * @param importFromId The id of the existing TfDedicatedIpPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_pool#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDedicatedIpPool to import is found
+  * @param importToId The construct id used in the generated config for the AwsDedicatedIpPool to import
+  * @param importFromId The id of the existing AwsDedicatedIpPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sesv2_dedicated_ip_pool#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDedicatedIpPool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sesv2_dedicated_ip_pool", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfDedicatedIpPool extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDedicatedIpPoolConfig
+  * @param options AwsDedicatedIpPoolConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDedicatedIpPoolConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDedicatedIpPoolConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sesv2_dedicated_ip_pool',
       terraformGeneratorMetadata: {

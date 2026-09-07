@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTableReplicationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTableReplicationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_replication#region TfTableReplication#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_replication#region AwsTableReplication#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_replication#role TfTableReplication#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_replication#role AwsTableReplication#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_replication#table_arn TfTableReplication#table_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_replication#table_arn AwsTableReplication#table_arn}
   */
   readonly tableArn: string;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_replication#rule TfTableReplication#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_replication#rule AwsTableReplication#rule}
   */
-  readonly rule?: TfTableReplication.RuleProperty[] | cdktn.IResolvable;
+  readonly rule?: AwsTableReplication.RuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_replication aws_s3tables_table_replication}
 */
-export class TfTableReplication extends cdktn.TerraformResource {
+export class AwsTableReplication extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class TfTableReplication extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTableReplication resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTableReplication resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTableReplication to import
-  * @param importFromId The id of the existing TfTableReplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_replication#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTableReplication to import is found
+  * @param importToId The construct id used in the generated config for the AwsTableReplication to import
+  * @param importFromId The id of the existing AwsTableReplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_replication#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTableReplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3tables_table_replication", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class TfTableReplication extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTableReplicationConfig
+  * @param options AwsTableReplicationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTableReplicationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTableReplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3tables_table_replication',
       terraformGeneratorMetadata: {
@@ -137,11 +137,11 @@ export class TfTableReplication extends cdktn.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule = new TfTableReplication.RulePropertyList(this, "rule", false);
+  private _rule = new AwsTableReplication.RulePropertyList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: TfTableReplication.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: AwsTableReplication.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   public resetRule() {
@@ -161,7 +161,7 @@ export class TfTableReplication extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       role: cdktn.stringToTerraform(this._role),
       table_arn: cdktn.stringToTerraform(this._tableArn),
-      rule: cdktn.listMapper(tfTableReplicationRulePropertyToTerraform, true)(this._rule.internalValue),
+      rule: cdktn.listMapper(awsTableReplicationRulePropertyToTerraform, true)(this._rule.internalValue),
     };
   }
 
@@ -186,10 +186,10 @@ export class TfTableReplication extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       rule: {
-        value: cdktn.listMapperHcl(tfTableReplicationRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(awsTableReplicationRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTableReplication.RulePropertyList",
+        storageClassType: "AwsTableReplication.RulePropertyList",
       },
     };
 
@@ -198,7 +198,7 @@ export class TfTableReplication extends cdktn.TerraformResource {
   }
 }
 
-export function tfTableReplicationDestinationPropertyToTerraform(struct?: TfTableReplication.DestinationProperty | cdktn.IResolvable): any {
+export function awsTableReplicationDestinationPropertyToTerraform(struct?: AwsTableReplication.DestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -209,7 +209,7 @@ export function tfTableReplicationDestinationPropertyToTerraform(struct?: TfTabl
 }
 
 
-export function tfTableReplicationDestinationPropertyToHclTerraform(struct?: TfTableReplication.DestinationProperty | cdktn.IResolvable): any {
+export function awsTableReplicationDestinationPropertyToHclTerraform(struct?: AwsTableReplication.DestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -228,25 +228,25 @@ export function tfTableReplicationDestinationPropertyToHclTerraform(struct?: TfT
 }
 
 
-export function tfTableReplicationRulePropertyToTerraform(struct?: TfTableReplication.RuleProperty | cdktn.IResolvable): any {
+export function awsTableReplicationRulePropertyToTerraform(struct?: AwsTableReplication.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    destination: cdktn.listMapper(tfTableReplicationDestinationPropertyToTerraform, true)(struct!.destination),
+    destination: cdktn.listMapper(awsTableReplicationDestinationPropertyToTerraform, true)(struct!.destination),
   }
 }
 
 
-export function tfTableReplicationRulePropertyToHclTerraform(struct?: TfTableReplication.RuleProperty | cdktn.IResolvable): any {
+export function awsTableReplicationRulePropertyToHclTerraform(struct?: AwsTableReplication.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     destination: {
-      value: cdktn.listMapperHcl(tfTableReplicationDestinationPropertyToHclTerraform, true)(struct!.destination),
+      value: cdktn.listMapperHcl(awsTableReplicationDestinationPropertyToHclTerraform, true)(struct!.destination),
       isBlock: true,
       type: "set",
       storageClassType: "DestinationPropertyList",
@@ -258,10 +258,10 @@ export function tfTableReplicationRulePropertyToHclTerraform(struct?: TfTableRep
 }
 
 
-export namespace TfTableReplication {
+export namespace AwsTableReplication {
 export interface DestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_replication#destination_table_bucket_arn TfTableReplication#destination_table_bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_replication#destination_table_bucket_arn AwsTableReplication#destination_table_bucket_arn}
   */
   readonly destinationTableBucketArn: string;
 }
@@ -346,7 +346,7 @@ export interface RuleProperty {
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_replication#destination TfTableReplication#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3tables_table_replication#destination AwsTableReplication#destination}
   */
   readonly destination?: DestinationProperty[] | cdktn.IResolvable;
 }

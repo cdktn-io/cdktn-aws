@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBucketAnalyticsConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBucketAnalyticsConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#bucket TfBucketAnalyticsConfiguration#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#bucket AwsBucketAnalyticsConfiguration#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#id TfBucketAnalyticsConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#id AwsBucketAnalyticsConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#name TfBucketAnalyticsConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#name AwsBucketAnalyticsConfiguration#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#region TfBucketAnalyticsConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#region AwsBucketAnalyticsConfiguration#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#filter TfBucketAnalyticsConfiguration#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#filter AwsBucketAnalyticsConfiguration#filter}
   */
-  readonly filter?: TfBucketAnalyticsConfiguration.FilterProperty;
+  readonly filter?: AwsBucketAnalyticsConfiguration.FilterProperty;
   /**
   * storage_class_analysis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#storage_class_analysis TfBucketAnalyticsConfiguration#storage_class_analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#storage_class_analysis AwsBucketAnalyticsConfiguration#storage_class_analysis}
   */
-  readonly storageClassAnalysis?: TfBucketAnalyticsConfiguration.StorageClassAnalysisProperty;
+  readonly storageClassAnalysis?: AwsBucketAnalyticsConfiguration.StorageClassAnalysisProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration aws_s3_bucket_analytics_configuration}
 */
-export class TfBucketAnalyticsConfiguration extends cdktn.TerraformResource {
+export class AwsBucketAnalyticsConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfBucketAnalyticsConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBucketAnalyticsConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBucketAnalyticsConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBucketAnalyticsConfiguration to import
-  * @param importFromId The id of the existing TfBucketAnalyticsConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBucketAnalyticsConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsBucketAnalyticsConfiguration to import
+  * @param importFromId The id of the existing AwsBucketAnalyticsConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBucketAnalyticsConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_analytics_configuration", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfBucketAnalyticsConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBucketAnalyticsConfigurationConfig
+  * @param options AwsBucketAnalyticsConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBucketAnalyticsConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBucketAnalyticsConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_analytics_configuration',
       terraformGeneratorMetadata: {
@@ -163,11 +163,11 @@ export class TfBucketAnalyticsConfiguration extends cdktn.TerraformResource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfBucketAnalyticsConfiguration.FilterPropertyOutputReference(this, "filter");
+  private _filter = new AwsBucketAnalyticsConfiguration.FilterPropertyOutputReference(this, "filter");
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfBucketAnalyticsConfiguration.FilterProperty) {
+  public putFilter(value: AwsBucketAnalyticsConfiguration.FilterProperty) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -179,11 +179,11 @@ export class TfBucketAnalyticsConfiguration extends cdktn.TerraformResource {
   }
 
   // storage_class_analysis - computed: false, optional: true, required: false
-  private _storageClassAnalysis = new TfBucketAnalyticsConfiguration.StorageClassAnalysisPropertyOutputReference(this, "storage_class_analysis");
+  private _storageClassAnalysis = new AwsBucketAnalyticsConfiguration.StorageClassAnalysisPropertyOutputReference(this, "storage_class_analysis");
   public get storageClassAnalysis() {
     return this._storageClassAnalysis;
   }
-  public putStorageClassAnalysis(value: TfBucketAnalyticsConfiguration.StorageClassAnalysisProperty) {
+  public putStorageClassAnalysis(value: AwsBucketAnalyticsConfiguration.StorageClassAnalysisProperty) {
     this._storageClassAnalysis.internalValue = value;
   }
   public resetStorageClassAnalysis() {
@@ -204,8 +204,8 @@ export class TfBucketAnalyticsConfiguration extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      filter: tfBucketAnalyticsConfigurationFilterPropertyToTerraform(this._filter.internalValue),
-      storage_class_analysis: tfBucketAnalyticsConfigurationStorageClassAnalysisPropertyToTerraform(this._storageClassAnalysis.internalValue),
+      filter: awsBucketAnalyticsConfigurationFilterPropertyToTerraform(this._filter.internalValue),
+      storage_class_analysis: awsBucketAnalyticsConfigurationStorageClassAnalysisPropertyToTerraform(this._storageClassAnalysis.internalValue),
     };
   }
 
@@ -236,16 +236,16 @@ export class TfBucketAnalyticsConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       filter: {
-        value: tfBucketAnalyticsConfigurationFilterPropertyToHclTerraform(this._filter.internalValue),
+        value: awsBucketAnalyticsConfigurationFilterPropertyToHclTerraform(this._filter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBucketAnalyticsConfiguration.FilterPropertyList",
+        storageClassType: "AwsBucketAnalyticsConfiguration.FilterPropertyList",
       },
       storage_class_analysis: {
-        value: tfBucketAnalyticsConfigurationStorageClassAnalysisPropertyToHclTerraform(this._storageClassAnalysis.internalValue),
+        value: awsBucketAnalyticsConfigurationStorageClassAnalysisPropertyToHclTerraform(this._storageClassAnalysis.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBucketAnalyticsConfiguration.StorageClassAnalysisPropertyList",
+        storageClassType: "AwsBucketAnalyticsConfiguration.StorageClassAnalysisPropertyList",
       },
     };
 
@@ -254,7 +254,7 @@ export class TfBucketAnalyticsConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfBucketAnalyticsConfigurationFilterPropertyToTerraform(struct?: TfBucketAnalyticsConfiguration.FilterPropertyOutputReference | TfBucketAnalyticsConfiguration.FilterProperty): any {
+export function awsBucketAnalyticsConfigurationFilterPropertyToTerraform(struct?: AwsBucketAnalyticsConfiguration.FilterPropertyOutputReference | AwsBucketAnalyticsConfiguration.FilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -266,7 +266,7 @@ export function tfBucketAnalyticsConfigurationFilterPropertyToTerraform(struct?:
 }
 
 
-export function tfBucketAnalyticsConfigurationFilterPropertyToHclTerraform(struct?: TfBucketAnalyticsConfiguration.FilterPropertyOutputReference | TfBucketAnalyticsConfiguration.FilterProperty): any {
+export function awsBucketAnalyticsConfigurationFilterPropertyToHclTerraform(struct?: AwsBucketAnalyticsConfiguration.FilterPropertyOutputReference | AwsBucketAnalyticsConfiguration.FilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -291,7 +291,7 @@ export function tfBucketAnalyticsConfigurationFilterPropertyToHclTerraform(struc
 }
 
 
-export function tfBucketAnalyticsConfigurationS3BucketDestinationPropertyToTerraform(struct?: TfBucketAnalyticsConfiguration.S3BucketDestinationPropertyOutputReference | TfBucketAnalyticsConfiguration.S3BucketDestinationProperty): any {
+export function awsBucketAnalyticsConfigurationS3BucketDestinationPropertyToTerraform(struct?: AwsBucketAnalyticsConfiguration.S3BucketDestinationPropertyOutputReference | AwsBucketAnalyticsConfiguration.S3BucketDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -305,7 +305,7 @@ export function tfBucketAnalyticsConfigurationS3BucketDestinationPropertyToTerra
 }
 
 
-export function tfBucketAnalyticsConfigurationS3BucketDestinationPropertyToHclTerraform(struct?: TfBucketAnalyticsConfiguration.S3BucketDestinationPropertyOutputReference | TfBucketAnalyticsConfiguration.S3BucketDestinationProperty): any {
+export function awsBucketAnalyticsConfigurationS3BucketDestinationPropertyToHclTerraform(struct?: AwsBucketAnalyticsConfiguration.S3BucketDestinationPropertyOutputReference | AwsBucketAnalyticsConfiguration.S3BucketDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -342,25 +342,25 @@ export function tfBucketAnalyticsConfigurationS3BucketDestinationPropertyToHclTe
 }
 
 
-export function tfBucketAnalyticsConfigurationDestinationPropertyToTerraform(struct?: TfBucketAnalyticsConfiguration.DestinationPropertyOutputReference | TfBucketAnalyticsConfiguration.DestinationProperty): any {
+export function awsBucketAnalyticsConfigurationDestinationPropertyToTerraform(struct?: AwsBucketAnalyticsConfiguration.DestinationPropertyOutputReference | AwsBucketAnalyticsConfiguration.DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_bucket_destination: tfBucketAnalyticsConfigurationS3BucketDestinationPropertyToTerraform(struct!.s3BucketDestination),
+    s3_bucket_destination: awsBucketAnalyticsConfigurationS3BucketDestinationPropertyToTerraform(struct!.s3BucketDestination),
   }
 }
 
 
-export function tfBucketAnalyticsConfigurationDestinationPropertyToHclTerraform(struct?: TfBucketAnalyticsConfiguration.DestinationPropertyOutputReference | TfBucketAnalyticsConfiguration.DestinationProperty): any {
+export function awsBucketAnalyticsConfigurationDestinationPropertyToHclTerraform(struct?: AwsBucketAnalyticsConfiguration.DestinationPropertyOutputReference | AwsBucketAnalyticsConfiguration.DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_bucket_destination: {
-      value: tfBucketAnalyticsConfigurationS3BucketDestinationPropertyToHclTerraform(struct!.s3BucketDestination),
+      value: awsBucketAnalyticsConfigurationS3BucketDestinationPropertyToHclTerraform(struct!.s3BucketDestination),
       isBlock: true,
       type: "list",
       storageClassType: "S3BucketDestinationPropertyList",
@@ -372,19 +372,19 @@ export function tfBucketAnalyticsConfigurationDestinationPropertyToHclTerraform(
 }
 
 
-export function tfBucketAnalyticsConfigurationDataExportPropertyToTerraform(struct?: TfBucketAnalyticsConfiguration.DataExportPropertyOutputReference | TfBucketAnalyticsConfiguration.DataExportProperty): any {
+export function awsBucketAnalyticsConfigurationDataExportPropertyToTerraform(struct?: AwsBucketAnalyticsConfiguration.DataExportPropertyOutputReference | AwsBucketAnalyticsConfiguration.DataExportProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     output_schema_version: cdktn.stringToTerraform(struct!.outputSchemaVersion),
-    destination: tfBucketAnalyticsConfigurationDestinationPropertyToTerraform(struct!.destination),
+    destination: awsBucketAnalyticsConfigurationDestinationPropertyToTerraform(struct!.destination),
   }
 }
 
 
-export function tfBucketAnalyticsConfigurationDataExportPropertyToHclTerraform(struct?: TfBucketAnalyticsConfiguration.DataExportPropertyOutputReference | TfBucketAnalyticsConfiguration.DataExportProperty): any {
+export function awsBucketAnalyticsConfigurationDataExportPropertyToHclTerraform(struct?: AwsBucketAnalyticsConfiguration.DataExportPropertyOutputReference | AwsBucketAnalyticsConfiguration.DataExportProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -397,7 +397,7 @@ export function tfBucketAnalyticsConfigurationDataExportPropertyToHclTerraform(s
       storageClassType: "string",
     },
     destination: {
-      value: tfBucketAnalyticsConfigurationDestinationPropertyToHclTerraform(struct!.destination),
+      value: awsBucketAnalyticsConfigurationDestinationPropertyToHclTerraform(struct!.destination),
       isBlock: true,
       type: "list",
       storageClassType: "DestinationPropertyList",
@@ -409,25 +409,25 @@ export function tfBucketAnalyticsConfigurationDataExportPropertyToHclTerraform(s
 }
 
 
-export function tfBucketAnalyticsConfigurationStorageClassAnalysisPropertyToTerraform(struct?: TfBucketAnalyticsConfiguration.StorageClassAnalysisPropertyOutputReference | TfBucketAnalyticsConfiguration.StorageClassAnalysisProperty): any {
+export function awsBucketAnalyticsConfigurationStorageClassAnalysisPropertyToTerraform(struct?: AwsBucketAnalyticsConfiguration.StorageClassAnalysisPropertyOutputReference | AwsBucketAnalyticsConfiguration.StorageClassAnalysisProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    data_export: tfBucketAnalyticsConfigurationDataExportPropertyToTerraform(struct!.dataExport),
+    data_export: awsBucketAnalyticsConfigurationDataExportPropertyToTerraform(struct!.dataExport),
   }
 }
 
 
-export function tfBucketAnalyticsConfigurationStorageClassAnalysisPropertyToHclTerraform(struct?: TfBucketAnalyticsConfiguration.StorageClassAnalysisPropertyOutputReference | TfBucketAnalyticsConfiguration.StorageClassAnalysisProperty): any {
+export function awsBucketAnalyticsConfigurationStorageClassAnalysisPropertyToHclTerraform(struct?: AwsBucketAnalyticsConfiguration.StorageClassAnalysisPropertyOutputReference | AwsBucketAnalyticsConfiguration.StorageClassAnalysisProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     data_export: {
-      value: tfBucketAnalyticsConfigurationDataExportPropertyToHclTerraform(struct!.dataExport),
+      value: awsBucketAnalyticsConfigurationDataExportPropertyToHclTerraform(struct!.dataExport),
       isBlock: true,
       type: "list",
       storageClassType: "DataExportPropertyList",
@@ -439,14 +439,14 @@ export function tfBucketAnalyticsConfigurationStorageClassAnalysisPropertyToHclT
 }
 
 
-export namespace TfBucketAnalyticsConfiguration {
+export namespace AwsBucketAnalyticsConfiguration {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#prefix TfBucketAnalyticsConfiguration#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#prefix AwsBucketAnalyticsConfiguration#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#tags TfBucketAnalyticsConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#tags AwsBucketAnalyticsConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -522,19 +522,19 @@ export class FilterPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface S3BucketDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#bucket_account_id TfBucketAnalyticsConfiguration#bucket_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#bucket_account_id AwsBucketAnalyticsConfiguration#bucket_account_id}
   */
   readonly bucketAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#bucket_arn TfBucketAnalyticsConfiguration#bucket_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#bucket_arn AwsBucketAnalyticsConfiguration#bucket_arn}
   */
   readonly bucketArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#format TfBucketAnalyticsConfiguration#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#format AwsBucketAnalyticsConfiguration#format}
   */
   readonly format?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#prefix TfBucketAnalyticsConfiguration#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#prefix AwsBucketAnalyticsConfiguration#prefix}
   */
   readonly prefix?: string;
 }
@@ -653,7 +653,7 @@ export interface DestinationProperty {
   /**
   * s3_bucket_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#s3_bucket_destination TfBucketAnalyticsConfiguration#s3_bucket_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#s3_bucket_destination AwsBucketAnalyticsConfiguration#s3_bucket_destination}
   */
   readonly s3BucketDestination: S3BucketDestinationProperty;
 }
@@ -704,13 +704,13 @@ export class DestinationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DataExportProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#output_schema_version TfBucketAnalyticsConfiguration#output_schema_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#output_schema_version AwsBucketAnalyticsConfiguration#output_schema_version}
   */
   readonly outputSchemaVersion?: string;
   /**
   * destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#destination TfBucketAnalyticsConfiguration#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#destination AwsBucketAnalyticsConfiguration#destination}
   */
   readonly destination: DestinationProperty;
 }
@@ -785,7 +785,7 @@ export interface StorageClassAnalysisProperty {
   /**
   * data_export block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#data_export TfBucketAnalyticsConfiguration#data_export}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_analytics_configuration#data_export AwsBucketAnalyticsConfiguration#data_export}
   */
   readonly dataExport: DataExportProperty;
 }

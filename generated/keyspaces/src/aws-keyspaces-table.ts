@@ -5,94 +5,94 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTableConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTableConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#default_time_to_live TfTable#default_time_to_live}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#default_time_to_live AwsTable#default_time_to_live}
   */
   readonly defaultTimeToLive?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#id TfTable#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#id AwsTable#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#keyspace_name TfTable#keyspace_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#keyspace_name AwsTable#keyspace_name}
   */
   readonly keyspaceName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#region TfTable#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#region AwsTable#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#table_name TfTable#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#table_name AwsTable#table_name}
   */
   readonly tableName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#tags TfTable#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#tags AwsTable#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#tags_all TfTable#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#tags_all AwsTable#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * capacity_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#capacity_specification TfTable#capacity_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#capacity_specification AwsTable#capacity_specification}
   */
-  readonly capacitySpecification?: TfTable.CapacitySpecificationProperty;
+  readonly capacitySpecification?: AwsTable.CapacitySpecificationProperty;
   /**
   * client_side_timestamps block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#client_side_timestamps TfTable#client_side_timestamps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#client_side_timestamps AwsTable#client_side_timestamps}
   */
-  readonly clientSideTimestamps?: TfTable.ClientSideTimestampsProperty;
+  readonly clientSideTimestamps?: AwsTable.ClientSideTimestampsProperty;
   /**
   * comment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#comment TfTable#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#comment AwsTable#comment}
   */
-  readonly comment?: TfTable.CommentProperty;
+  readonly comment?: AwsTable.CommentProperty;
   /**
   * encryption_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#encryption_specification TfTable#encryption_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#encryption_specification AwsTable#encryption_specification}
   */
-  readonly encryptionSpecification?: TfTable.EncryptionSpecificationProperty;
+  readonly encryptionSpecification?: AwsTable.EncryptionSpecificationProperty;
   /**
   * point_in_time_recovery block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#point_in_time_recovery TfTable#point_in_time_recovery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#point_in_time_recovery AwsTable#point_in_time_recovery}
   */
-  readonly pointInTimeRecovery?: TfTable.PointInTimeRecoveryProperty;
+  readonly pointInTimeRecovery?: AwsTable.PointInTimeRecoveryProperty;
   /**
   * schema_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#schema_definition TfTable#schema_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#schema_definition AwsTable#schema_definition}
   */
-  readonly schemaDefinition: TfTable.SchemaDefinitionProperty;
+  readonly schemaDefinition: AwsTable.SchemaDefinitionProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#timeouts TfTable#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#timeouts AwsTable#timeouts}
   */
-  readonly timeouts?: TfTable.TimeoutsProperty;
+  readonly timeouts?: AwsTable.TimeoutsProperty;
   /**
   * ttl block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#ttl TfTable#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#ttl AwsTable#ttl}
   */
-  readonly ttl?: TfTable.TtlProperty;
+  readonly ttl?: AwsTable.TtlProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table aws_keyspaces_table}
 */
-export class TfTable extends cdktn.TerraformResource {
+export class AwsTable extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -103,11 +103,11 @@ export class TfTable extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTable resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTable resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTable to import
-  * @param importFromId The id of the existing TfTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTable to import is found
+  * @param importToId The construct id used in the generated config for the AwsTable to import
+  * @param importFromId The id of the existing AwsTable that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTable to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_keyspaces_table", importId: importFromId, provider });
@@ -122,9 +122,9 @@ export class TfTable extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTableConfig
+  * @param options AwsTableConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTableConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTableConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_keyspaces_table',
       terraformGeneratorMetadata: {
@@ -273,11 +273,11 @@ export class TfTable extends cdktn.TerraformResource {
   }
 
   // capacity_specification - computed: false, optional: true, required: false
-  private _capacitySpecification = new TfTable.CapacitySpecificationPropertyOutputReference(this, "capacity_specification");
+  private _capacitySpecification = new AwsTable.CapacitySpecificationPropertyOutputReference(this, "capacity_specification");
   public get capacitySpecification() {
     return this._capacitySpecification;
   }
-  public putCapacitySpecification(value: TfTable.CapacitySpecificationProperty) {
+  public putCapacitySpecification(value: AwsTable.CapacitySpecificationProperty) {
     this._capacitySpecification.internalValue = value;
   }
   public resetCapacitySpecification() {
@@ -289,11 +289,11 @@ export class TfTable extends cdktn.TerraformResource {
   }
 
   // client_side_timestamps - computed: false, optional: true, required: false
-  private _clientSideTimestamps = new TfTable.ClientSideTimestampsPropertyOutputReference(this, "client_side_timestamps");
+  private _clientSideTimestamps = new AwsTable.ClientSideTimestampsPropertyOutputReference(this, "client_side_timestamps");
   public get clientSideTimestamps() {
     return this._clientSideTimestamps;
   }
-  public putClientSideTimestamps(value: TfTable.ClientSideTimestampsProperty) {
+  public putClientSideTimestamps(value: AwsTable.ClientSideTimestampsProperty) {
     this._clientSideTimestamps.internalValue = value;
   }
   public resetClientSideTimestamps() {
@@ -305,11 +305,11 @@ export class TfTable extends cdktn.TerraformResource {
   }
 
   // comment - computed: false, optional: true, required: false
-  private _comment = new TfTable.CommentPropertyOutputReference(this, "comment");
+  private _comment = new AwsTable.CommentPropertyOutputReference(this, "comment");
   public get comment() {
     return this._comment;
   }
-  public putComment(value: TfTable.CommentProperty) {
+  public putComment(value: AwsTable.CommentProperty) {
     this._comment.internalValue = value;
   }
   public resetComment() {
@@ -321,11 +321,11 @@ export class TfTable extends cdktn.TerraformResource {
   }
 
   // encryption_specification - computed: false, optional: true, required: false
-  private _encryptionSpecification = new TfTable.EncryptionSpecificationPropertyOutputReference(this, "encryption_specification");
+  private _encryptionSpecification = new AwsTable.EncryptionSpecificationPropertyOutputReference(this, "encryption_specification");
   public get encryptionSpecification() {
     return this._encryptionSpecification;
   }
-  public putEncryptionSpecification(value: TfTable.EncryptionSpecificationProperty) {
+  public putEncryptionSpecification(value: AwsTable.EncryptionSpecificationProperty) {
     this._encryptionSpecification.internalValue = value;
   }
   public resetEncryptionSpecification() {
@@ -337,11 +337,11 @@ export class TfTable extends cdktn.TerraformResource {
   }
 
   // point_in_time_recovery - computed: false, optional: true, required: false
-  private _pointInTimeRecovery = new TfTable.PointInTimeRecoveryPropertyOutputReference(this, "point_in_time_recovery");
+  private _pointInTimeRecovery = new AwsTable.PointInTimeRecoveryPropertyOutputReference(this, "point_in_time_recovery");
   public get pointInTimeRecovery() {
     return this._pointInTimeRecovery;
   }
-  public putPointInTimeRecovery(value: TfTable.PointInTimeRecoveryProperty) {
+  public putPointInTimeRecovery(value: AwsTable.PointInTimeRecoveryProperty) {
     this._pointInTimeRecovery.internalValue = value;
   }
   public resetPointInTimeRecovery() {
@@ -353,11 +353,11 @@ export class TfTable extends cdktn.TerraformResource {
   }
 
   // schema_definition - computed: false, optional: false, required: true
-  private _schemaDefinition = new TfTable.SchemaDefinitionPropertyOutputReference(this, "schema_definition");
+  private _schemaDefinition = new AwsTable.SchemaDefinitionPropertyOutputReference(this, "schema_definition");
   public get schemaDefinition() {
     return this._schemaDefinition;
   }
-  public putSchemaDefinition(value: TfTable.SchemaDefinitionProperty) {
+  public putSchemaDefinition(value: AwsTable.SchemaDefinitionProperty) {
     this._schemaDefinition.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -366,11 +366,11 @@ export class TfTable extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTable.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTable.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTable.TimeoutsProperty) {
+  public putTimeouts(value: AwsTable.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -382,11 +382,11 @@ export class TfTable extends cdktn.TerraformResource {
   }
 
   // ttl - computed: false, optional: true, required: false
-  private _ttl = new TfTable.TtlPropertyOutputReference(this, "ttl");
+  private _ttl = new AwsTable.TtlPropertyOutputReference(this, "ttl");
   public get ttl() {
     return this._ttl;
   }
-  public putTtl(value: TfTable.TtlProperty) {
+  public putTtl(value: AwsTable.TtlProperty) {
     this._ttl.internalValue = value;
   }
   public resetTtl() {
@@ -410,14 +410,14 @@ export class TfTable extends cdktn.TerraformResource {
       table_name: cdktn.stringToTerraform(this._tableName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      capacity_specification: tfTableCapacitySpecificationPropertyToTerraform(this._capacitySpecification.internalValue),
-      client_side_timestamps: tfTableClientSideTimestampsPropertyToTerraform(this._clientSideTimestamps.internalValue),
-      comment: tfTableCommentPropertyToTerraform(this._comment.internalValue),
-      encryption_specification: tfTableEncryptionSpecificationPropertyToTerraform(this._encryptionSpecification.internalValue),
-      point_in_time_recovery: tfTablePointInTimeRecoveryPropertyToTerraform(this._pointInTimeRecovery.internalValue),
-      schema_definition: tfTableSchemaDefinitionPropertyToTerraform(this._schemaDefinition.internalValue),
-      timeouts: tfTableTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      ttl: tfTableTtlPropertyToTerraform(this._ttl.internalValue),
+      capacity_specification: awsTableCapacitySpecificationPropertyToTerraform(this._capacitySpecification.internalValue),
+      client_side_timestamps: awsTableClientSideTimestampsPropertyToTerraform(this._clientSideTimestamps.internalValue),
+      comment: awsTableCommentPropertyToTerraform(this._comment.internalValue),
+      encryption_specification: awsTableEncryptionSpecificationPropertyToTerraform(this._encryptionSpecification.internalValue),
+      point_in_time_recovery: awsTablePointInTimeRecoveryPropertyToTerraform(this._pointInTimeRecovery.internalValue),
+      schema_definition: awsTableSchemaDefinitionPropertyToTerraform(this._schemaDefinition.internalValue),
+      timeouts: awsTableTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      ttl: awsTableTtlPropertyToTerraform(this._ttl.internalValue),
     };
   }
 
@@ -466,52 +466,52 @@ export class TfTable extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       capacity_specification: {
-        value: tfTableCapacitySpecificationPropertyToHclTerraform(this._capacitySpecification.internalValue),
+        value: awsTableCapacitySpecificationPropertyToHclTerraform(this._capacitySpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTable.CapacitySpecificationPropertyList",
+        storageClassType: "AwsTable.CapacitySpecificationPropertyList",
       },
       client_side_timestamps: {
-        value: tfTableClientSideTimestampsPropertyToHclTerraform(this._clientSideTimestamps.internalValue),
+        value: awsTableClientSideTimestampsPropertyToHclTerraform(this._clientSideTimestamps.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTable.ClientSideTimestampsPropertyList",
+        storageClassType: "AwsTable.ClientSideTimestampsPropertyList",
       },
       comment: {
-        value: tfTableCommentPropertyToHclTerraform(this._comment.internalValue),
+        value: awsTableCommentPropertyToHclTerraform(this._comment.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTable.CommentPropertyList",
+        storageClassType: "AwsTable.CommentPropertyList",
       },
       encryption_specification: {
-        value: tfTableEncryptionSpecificationPropertyToHclTerraform(this._encryptionSpecification.internalValue),
+        value: awsTableEncryptionSpecificationPropertyToHclTerraform(this._encryptionSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTable.EncryptionSpecificationPropertyList",
+        storageClassType: "AwsTable.EncryptionSpecificationPropertyList",
       },
       point_in_time_recovery: {
-        value: tfTablePointInTimeRecoveryPropertyToHclTerraform(this._pointInTimeRecovery.internalValue),
+        value: awsTablePointInTimeRecoveryPropertyToHclTerraform(this._pointInTimeRecovery.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTable.PointInTimeRecoveryPropertyList",
+        storageClassType: "AwsTable.PointInTimeRecoveryPropertyList",
       },
       schema_definition: {
-        value: tfTableSchemaDefinitionPropertyToHclTerraform(this._schemaDefinition.internalValue),
+        value: awsTableSchemaDefinitionPropertyToHclTerraform(this._schemaDefinition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTable.SchemaDefinitionPropertyList",
+        storageClassType: "AwsTable.SchemaDefinitionPropertyList",
       },
       timeouts: {
-        value: tfTableTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTableTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTable.TimeoutsProperty",
+        storageClassType: "AwsTable.TimeoutsProperty",
       },
       ttl: {
-        value: tfTableTtlPropertyToHclTerraform(this._ttl.internalValue),
+        value: awsTableTtlPropertyToHclTerraform(this._ttl.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTable.TtlPropertyList",
+        storageClassType: "AwsTable.TtlPropertyList",
       },
     };
 
@@ -520,7 +520,7 @@ export class TfTable extends cdktn.TerraformResource {
   }
 }
 
-export function tfTableCapacitySpecificationPropertyToTerraform(struct?: TfTable.CapacitySpecificationPropertyOutputReference | TfTable.CapacitySpecificationProperty): any {
+export function awsTableCapacitySpecificationPropertyToTerraform(struct?: AwsTable.CapacitySpecificationPropertyOutputReference | AwsTable.CapacitySpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -533,7 +533,7 @@ export function tfTableCapacitySpecificationPropertyToTerraform(struct?: TfTable
 }
 
 
-export function tfTableCapacitySpecificationPropertyToHclTerraform(struct?: TfTable.CapacitySpecificationPropertyOutputReference | TfTable.CapacitySpecificationProperty): any {
+export function awsTableCapacitySpecificationPropertyToHclTerraform(struct?: AwsTable.CapacitySpecificationPropertyOutputReference | AwsTable.CapacitySpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -564,7 +564,7 @@ export function tfTableCapacitySpecificationPropertyToHclTerraform(struct?: TfTa
 }
 
 
-export function tfTableClientSideTimestampsPropertyToTerraform(struct?: TfTable.ClientSideTimestampsPropertyOutputReference | TfTable.ClientSideTimestampsProperty): any {
+export function awsTableClientSideTimestampsPropertyToTerraform(struct?: AwsTable.ClientSideTimestampsPropertyOutputReference | AwsTable.ClientSideTimestampsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -575,7 +575,7 @@ export function tfTableClientSideTimestampsPropertyToTerraform(struct?: TfTable.
 }
 
 
-export function tfTableClientSideTimestampsPropertyToHclTerraform(struct?: TfTable.ClientSideTimestampsPropertyOutputReference | TfTable.ClientSideTimestampsProperty): any {
+export function awsTableClientSideTimestampsPropertyToHclTerraform(struct?: AwsTable.ClientSideTimestampsPropertyOutputReference | AwsTable.ClientSideTimestampsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -594,7 +594,7 @@ export function tfTableClientSideTimestampsPropertyToHclTerraform(struct?: TfTab
 }
 
 
-export function tfTableCommentPropertyToTerraform(struct?: TfTable.CommentPropertyOutputReference | TfTable.CommentProperty): any {
+export function awsTableCommentPropertyToTerraform(struct?: AwsTable.CommentPropertyOutputReference | AwsTable.CommentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -605,7 +605,7 @@ export function tfTableCommentPropertyToTerraform(struct?: TfTable.CommentProper
 }
 
 
-export function tfTableCommentPropertyToHclTerraform(struct?: TfTable.CommentPropertyOutputReference | TfTable.CommentProperty): any {
+export function awsTableCommentPropertyToHclTerraform(struct?: AwsTable.CommentPropertyOutputReference | AwsTable.CommentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -624,7 +624,7 @@ export function tfTableCommentPropertyToHclTerraform(struct?: TfTable.CommentPro
 }
 
 
-export function tfTableEncryptionSpecificationPropertyToTerraform(struct?: TfTable.EncryptionSpecificationPropertyOutputReference | TfTable.EncryptionSpecificationProperty): any {
+export function awsTableEncryptionSpecificationPropertyToTerraform(struct?: AwsTable.EncryptionSpecificationPropertyOutputReference | AwsTable.EncryptionSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -636,7 +636,7 @@ export function tfTableEncryptionSpecificationPropertyToTerraform(struct?: TfTab
 }
 
 
-export function tfTableEncryptionSpecificationPropertyToHclTerraform(struct?: TfTable.EncryptionSpecificationPropertyOutputReference | TfTable.EncryptionSpecificationProperty): any {
+export function awsTableEncryptionSpecificationPropertyToHclTerraform(struct?: AwsTable.EncryptionSpecificationPropertyOutputReference | AwsTable.EncryptionSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -661,7 +661,7 @@ export function tfTableEncryptionSpecificationPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfTablePointInTimeRecoveryPropertyToTerraform(struct?: TfTable.PointInTimeRecoveryPropertyOutputReference | TfTable.PointInTimeRecoveryProperty): any {
+export function awsTablePointInTimeRecoveryPropertyToTerraform(struct?: AwsTable.PointInTimeRecoveryPropertyOutputReference | AwsTable.PointInTimeRecoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -672,7 +672,7 @@ export function tfTablePointInTimeRecoveryPropertyToTerraform(struct?: TfTable.P
 }
 
 
-export function tfTablePointInTimeRecoveryPropertyToHclTerraform(struct?: TfTable.PointInTimeRecoveryPropertyOutputReference | TfTable.PointInTimeRecoveryProperty): any {
+export function awsTablePointInTimeRecoveryPropertyToHclTerraform(struct?: AwsTable.PointInTimeRecoveryPropertyOutputReference | AwsTable.PointInTimeRecoveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -691,7 +691,7 @@ export function tfTablePointInTimeRecoveryPropertyToHclTerraform(struct?: TfTabl
 }
 
 
-export function tfTableClusteringKeyPropertyToTerraform(struct?: TfTable.ClusteringKeyProperty | cdktn.IResolvable): any {
+export function awsTableClusteringKeyPropertyToTerraform(struct?: AwsTable.ClusteringKeyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -703,7 +703,7 @@ export function tfTableClusteringKeyPropertyToTerraform(struct?: TfTable.Cluster
 }
 
 
-export function tfTableClusteringKeyPropertyToHclTerraform(struct?: TfTable.ClusteringKeyProperty | cdktn.IResolvable): any {
+export function awsTableClusteringKeyPropertyToHclTerraform(struct?: AwsTable.ClusteringKeyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -728,7 +728,7 @@ export function tfTableClusteringKeyPropertyToHclTerraform(struct?: TfTable.Clus
 }
 
 
-export function tfTableColumnPropertyToTerraform(struct?: TfTable.ColumnProperty | cdktn.IResolvable): any {
+export function awsTableColumnPropertyToTerraform(struct?: AwsTable.ColumnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -740,7 +740,7 @@ export function tfTableColumnPropertyToTerraform(struct?: TfTable.ColumnProperty
 }
 
 
-export function tfTableColumnPropertyToHclTerraform(struct?: TfTable.ColumnProperty | cdktn.IResolvable): any {
+export function awsTableColumnPropertyToHclTerraform(struct?: AwsTable.ColumnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -765,7 +765,7 @@ export function tfTableColumnPropertyToHclTerraform(struct?: TfTable.ColumnPrope
 }
 
 
-export function tfTablePartitionKeyPropertyToTerraform(struct?: TfTable.PartitionKeyProperty | cdktn.IResolvable): any {
+export function awsTablePartitionKeyPropertyToTerraform(struct?: AwsTable.PartitionKeyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -776,7 +776,7 @@ export function tfTablePartitionKeyPropertyToTerraform(struct?: TfTable.Partitio
 }
 
 
-export function tfTablePartitionKeyPropertyToHclTerraform(struct?: TfTable.PartitionKeyProperty | cdktn.IResolvable): any {
+export function awsTablePartitionKeyPropertyToHclTerraform(struct?: AwsTable.PartitionKeyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -795,7 +795,7 @@ export function tfTablePartitionKeyPropertyToHclTerraform(struct?: TfTable.Parti
 }
 
 
-export function tfTableStaticColumnPropertyToTerraform(struct?: TfTable.StaticColumnProperty | cdktn.IResolvable): any {
+export function awsTableStaticColumnPropertyToTerraform(struct?: AwsTable.StaticColumnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -806,7 +806,7 @@ export function tfTableStaticColumnPropertyToTerraform(struct?: TfTable.StaticCo
 }
 
 
-export function tfTableStaticColumnPropertyToHclTerraform(struct?: TfTable.StaticColumnProperty | cdktn.IResolvable): any {
+export function awsTableStaticColumnPropertyToHclTerraform(struct?: AwsTable.StaticColumnProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -825,46 +825,46 @@ export function tfTableStaticColumnPropertyToHclTerraform(struct?: TfTable.Stati
 }
 
 
-export function tfTableSchemaDefinitionPropertyToTerraform(struct?: TfTable.SchemaDefinitionPropertyOutputReference | TfTable.SchemaDefinitionProperty): any {
+export function awsTableSchemaDefinitionPropertyToTerraform(struct?: AwsTable.SchemaDefinitionPropertyOutputReference | AwsTable.SchemaDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    clustering_key: cdktn.listMapper(tfTableClusteringKeyPropertyToTerraform, true)(struct!.clusteringKey),
-    column: cdktn.listMapper(tfTableColumnPropertyToTerraform, true)(struct!.column),
-    partition_key: cdktn.listMapper(tfTablePartitionKeyPropertyToTerraform, true)(struct!.partitionKey),
-    static_column: cdktn.listMapper(tfTableStaticColumnPropertyToTerraform, true)(struct!.staticColumn),
+    clustering_key: cdktn.listMapper(awsTableClusteringKeyPropertyToTerraform, true)(struct!.clusteringKey),
+    column: cdktn.listMapper(awsTableColumnPropertyToTerraform, true)(struct!.column),
+    partition_key: cdktn.listMapper(awsTablePartitionKeyPropertyToTerraform, true)(struct!.partitionKey),
+    static_column: cdktn.listMapper(awsTableStaticColumnPropertyToTerraform, true)(struct!.staticColumn),
   }
 }
 
 
-export function tfTableSchemaDefinitionPropertyToHclTerraform(struct?: TfTable.SchemaDefinitionPropertyOutputReference | TfTable.SchemaDefinitionProperty): any {
+export function awsTableSchemaDefinitionPropertyToHclTerraform(struct?: AwsTable.SchemaDefinitionPropertyOutputReference | AwsTable.SchemaDefinitionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     clustering_key: {
-      value: cdktn.listMapperHcl(tfTableClusteringKeyPropertyToHclTerraform, true)(struct!.clusteringKey),
+      value: cdktn.listMapperHcl(awsTableClusteringKeyPropertyToHclTerraform, true)(struct!.clusteringKey),
       isBlock: true,
       type: "list",
       storageClassType: "ClusteringKeyPropertyList",
     },
     column: {
-      value: cdktn.listMapperHcl(tfTableColumnPropertyToHclTerraform, true)(struct!.column),
+      value: cdktn.listMapperHcl(awsTableColumnPropertyToHclTerraform, true)(struct!.column),
       isBlock: true,
       type: "set",
       storageClassType: "ColumnPropertyList",
     },
     partition_key: {
-      value: cdktn.listMapperHcl(tfTablePartitionKeyPropertyToHclTerraform, true)(struct!.partitionKey),
+      value: cdktn.listMapperHcl(awsTablePartitionKeyPropertyToHclTerraform, true)(struct!.partitionKey),
       isBlock: true,
       type: "list",
       storageClassType: "PartitionKeyPropertyList",
     },
     static_column: {
-      value: cdktn.listMapperHcl(tfTableStaticColumnPropertyToHclTerraform, true)(struct!.staticColumn),
+      value: cdktn.listMapperHcl(awsTableStaticColumnPropertyToHclTerraform, true)(struct!.staticColumn),
       isBlock: true,
       type: "set",
       storageClassType: "StaticColumnPropertyList",
@@ -876,7 +876,7 @@ export function tfTableSchemaDefinitionPropertyToHclTerraform(struct?: TfTable.S
 }
 
 
-export function tfTableTimeoutsPropertyToTerraform(struct?: TfTable.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTableTimeoutsPropertyToTerraform(struct?: AwsTable.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -889,7 +889,7 @@ export function tfTableTimeoutsPropertyToTerraform(struct?: TfTable.TimeoutsProp
 }
 
 
-export function tfTableTimeoutsPropertyToHclTerraform(struct?: TfTable.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTableTimeoutsPropertyToHclTerraform(struct?: AwsTable.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -920,7 +920,7 @@ export function tfTableTimeoutsPropertyToHclTerraform(struct?: TfTable.TimeoutsP
 }
 
 
-export function tfTableTtlPropertyToTerraform(struct?: TfTable.TtlPropertyOutputReference | TfTable.TtlProperty): any {
+export function awsTableTtlPropertyToTerraform(struct?: AwsTable.TtlPropertyOutputReference | AwsTable.TtlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -931,7 +931,7 @@ export function tfTableTtlPropertyToTerraform(struct?: TfTable.TtlPropertyOutput
 }
 
 
-export function tfTableTtlPropertyToHclTerraform(struct?: TfTable.TtlPropertyOutputReference | TfTable.TtlProperty): any {
+export function awsTableTtlPropertyToHclTerraform(struct?: AwsTable.TtlPropertyOutputReference | AwsTable.TtlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -950,18 +950,18 @@ export function tfTableTtlPropertyToHclTerraform(struct?: TfTable.TtlPropertyOut
 }
 
 
-export namespace TfTable {
+export namespace AwsTable {
 export interface CapacitySpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#read_capacity_units TfTable#read_capacity_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#read_capacity_units AwsTable#read_capacity_units}
   */
   readonly readCapacityUnits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#throughput_mode TfTable#throughput_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#throughput_mode AwsTable#throughput_mode}
   */
   readonly throughputMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#write_capacity_units TfTable#write_capacity_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#write_capacity_units AwsTable#write_capacity_units}
   */
   readonly writeCapacityUnits?: number;
 }
@@ -1059,7 +1059,7 @@ export class CapacitySpecificationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface ClientSideTimestampsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#status TfTable#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#status AwsTable#status}
   */
   readonly status: string;
 }
@@ -1110,7 +1110,7 @@ export class ClientSideTimestampsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface CommentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#message TfTable#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#message AwsTable#message}
   */
   readonly message?: string;
 }
@@ -1164,11 +1164,11 @@ export class CommentPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EncryptionSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#kms_key_identifier TfTable#kms_key_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#kms_key_identifier AwsTable#kms_key_identifier}
   */
   readonly kmsKeyIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#type TfTable#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#type AwsTable#type}
   */
   readonly type?: string;
 }
@@ -1244,7 +1244,7 @@ export class EncryptionSpecificationPropertyOutputReference extends cdktn.Comple
 }
 export interface PointInTimeRecoveryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#status TfTable#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#status AwsTable#status}
   */
   readonly status?: string;
 }
@@ -1298,11 +1298,11 @@ export class PointInTimeRecoveryPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface ClusteringKeyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#name TfTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#name AwsTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#order_by TfTable#order_by}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#order_by AwsTable#order_by}
   */
   readonly orderBy: string;
 }
@@ -1404,11 +1404,11 @@ export class ClusteringKeyPropertyList extends cdktn.ComplexList {
 }
 export interface ColumnProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#name TfTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#name AwsTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#type TfTable#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#type AwsTable#type}
   */
   readonly type: string;
 }
@@ -1510,7 +1510,7 @@ export class ColumnPropertyList extends cdktn.ComplexList {
 }
 export interface PartitionKeyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#name TfTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#name AwsTable#name}
   */
   readonly name: string;
 }
@@ -1593,7 +1593,7 @@ export class PartitionKeyPropertyList extends cdktn.ComplexList {
 }
 export interface StaticColumnProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#name TfTable#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#name AwsTable#name}
   */
   readonly name: string;
 }
@@ -1678,25 +1678,25 @@ export interface SchemaDefinitionProperty {
   /**
   * clustering_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#clustering_key TfTable#clustering_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#clustering_key AwsTable#clustering_key}
   */
   readonly clusteringKey?: ClusteringKeyProperty[] | cdktn.IResolvable;
   /**
   * column block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#column TfTable#column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#column AwsTable#column}
   */
   readonly column: ColumnProperty[] | cdktn.IResolvable;
   /**
   * partition_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#partition_key TfTable#partition_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#partition_key AwsTable#partition_key}
   */
   readonly partitionKey: PartitionKeyProperty[] | cdktn.IResolvable;
   /**
   * static_column block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#static_column TfTable#static_column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#static_column AwsTable#static_column}
   */
   readonly staticColumn?: StaticColumnProperty[] | cdktn.IResolvable;
 }
@@ -1810,15 +1810,15 @@ export class SchemaDefinitionPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#create TfTable#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#create AwsTable#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#delete TfTable#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#delete AwsTable#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#update TfTable#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#update AwsTable#update}
   */
   readonly update?: string;
 }
@@ -1926,7 +1926,7 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TtlProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#status TfTable#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/keyspaces_table#status AwsTable#status}
   */
   readonly status: string;
 }

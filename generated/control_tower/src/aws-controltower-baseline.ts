@@ -5,47 +5,47 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBaselineConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBaselineConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#baseline_identifier TfBaseline#baseline_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#baseline_identifier AwsBaseline#baseline_identifier}
   */
   readonly baselineIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#baseline_version TfBaseline#baseline_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#baseline_version AwsBaseline#baseline_version}
   */
   readonly baselineVersion: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#region TfBaseline#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#region AwsBaseline#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#tags TfBaseline#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#tags AwsBaseline#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#target_identifier TfBaseline#target_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#target_identifier AwsBaseline#target_identifier}
   */
   readonly targetIdentifier: string;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#parameters TfBaseline#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#parameters AwsBaseline#parameters}
   */
-  readonly parameters?: TfBaseline.ParametersProperty[] | cdktn.IResolvable;
+  readonly parameters?: AwsBaseline.ParametersProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#timeouts TfBaseline#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#timeouts AwsBaseline#timeouts}
   */
-  readonly timeouts?: TfBaseline.TimeoutsProperty;
+  readonly timeouts?: AwsBaseline.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline aws_controltower_baseline}
 */
-export class TfBaseline extends cdktn.TerraformResource {
+export class AwsBaseline extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class TfBaseline extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBaseline resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBaseline resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBaseline to import
-  * @param importFromId The id of the existing TfBaseline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBaseline to import is found
+  * @param importToId The construct id used in the generated config for the AwsBaseline to import
+  * @param importFromId The id of the existing AwsBaseline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBaseline to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_controltower_baseline", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class TfBaseline extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBaselineConfig
+  * @param options AwsBaselineConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBaselineConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBaselineConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_controltower_baseline',
       terraformGeneratorMetadata: {
@@ -194,11 +194,11 @@ export class TfBaseline extends cdktn.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters = new TfBaseline.ParametersPropertyList(this, "parameters", false);
+  private _parameters = new AwsBaseline.ParametersPropertyList(this, "parameters", false);
   public get parameters() {
     return this._parameters;
   }
-  public putParameters(value: TfBaseline.ParametersProperty[] | cdktn.IResolvable) {
+  public putParameters(value: AwsBaseline.ParametersProperty[] | cdktn.IResolvable) {
     this._parameters.internalValue = value;
   }
   public resetParameters() {
@@ -210,11 +210,11 @@ export class TfBaseline extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfBaseline.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsBaseline.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfBaseline.TimeoutsProperty) {
+  public putTimeouts(value: AwsBaseline.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -236,8 +236,8 @@ export class TfBaseline extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       target_identifier: cdktn.stringToTerraform(this._targetIdentifier),
-      parameters: cdktn.listMapper(tfBaselineParametersPropertyToTerraform, true)(this._parameters.internalValue),
-      timeouts: tfBaselineTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      parameters: cdktn.listMapper(awsBaselineParametersPropertyToTerraform, true)(this._parameters.internalValue),
+      timeouts: awsBaselineTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -274,16 +274,16 @@ export class TfBaseline extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       parameters: {
-        value: cdktn.listMapperHcl(tfBaselineParametersPropertyToHclTerraform, true)(this._parameters.internalValue),
+        value: cdktn.listMapperHcl(awsBaselineParametersPropertyToHclTerraform, true)(this._parameters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBaseline.ParametersPropertyList",
+        storageClassType: "AwsBaseline.ParametersPropertyList",
       },
       timeouts: {
-        value: tfBaselineTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsBaselineTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfBaseline.TimeoutsProperty",
+        storageClassType: "AwsBaseline.TimeoutsProperty",
       },
     };
 
@@ -292,7 +292,7 @@ export class TfBaseline extends cdktn.TerraformResource {
   }
 }
 
-export function tfBaselineParametersPropertyToTerraform(struct?: TfBaseline.ParametersProperty | cdktn.IResolvable): any {
+export function awsBaselineParametersPropertyToTerraform(struct?: AwsBaseline.ParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function tfBaselineParametersPropertyToTerraform(struct?: TfBaseline.Para
 }
 
 
-export function tfBaselineParametersPropertyToHclTerraform(struct?: TfBaseline.ParametersProperty | cdktn.IResolvable): any {
+export function awsBaselineParametersPropertyToHclTerraform(struct?: AwsBaseline.ParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -329,7 +329,7 @@ export function tfBaselineParametersPropertyToHclTerraform(struct?: TfBaseline.P
 }
 
 
-export function tfBaselineTimeoutsPropertyToTerraform(struct?: TfBaseline.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBaselineTimeoutsPropertyToTerraform(struct?: AwsBaseline.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -342,7 +342,7 @@ export function tfBaselineTimeoutsPropertyToTerraform(struct?: TfBaseline.Timeou
 }
 
 
-export function tfBaselineTimeoutsPropertyToHclTerraform(struct?: TfBaseline.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBaselineTimeoutsPropertyToHclTerraform(struct?: AwsBaseline.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -373,14 +373,14 @@ export function tfBaselineTimeoutsPropertyToHclTerraform(struct?: TfBaseline.Tim
 }
 
 
-export namespace TfBaseline {
+export namespace AwsBaseline {
 export interface ParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#key TfBaseline#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#key AwsBaseline#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#value TfBaseline#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#value AwsBaseline#value}
   */
   readonly value: string;
 }
@@ -484,19 +484,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#create TfBaseline#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#create AwsBaseline#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#delete TfBaseline#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#delete AwsBaseline#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#update TfBaseline#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_baseline#update AwsBaseline#update}
   */
   readonly update?: string;
 }

@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfApiKeysConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsApiKeysConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_api_keys#customer_id DataTfApiKeys#customer_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_api_keys#customer_id DataAwsApiKeys#customer_id}
   */
   readonly customerId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_api_keys#include_values DataTfApiKeys#include_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_api_keys#include_values DataAwsApiKeys#include_values}
   */
   readonly includeValues?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_api_keys#region DataTfApiKeys#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_api_keys#region DataAwsApiKeys#region}
   */
   readonly region?: string;
 }
@@ -25,7 +25,7 @@ export interface DataTfApiKeysConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_api_keys aws_api_gateway_api_keys}
 */
-export class DataTfApiKeys extends cdktn.TerraformDataSource {
+export class DataAwsApiKeys extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class DataTfApiKeys extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfApiKeys resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsApiKeys resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfApiKeys to import
-  * @param importFromId The id of the existing DataTfApiKeys that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_api_keys#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfApiKeys to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsApiKeys to import
+  * @param importFromId The id of the existing DataAwsApiKeys that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/api_gateway_api_keys#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsApiKeys to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_api_keys", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class DataTfApiKeys extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfApiKeysConfig = {}
+  * @param options DataAwsApiKeysConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfApiKeysConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsApiKeysConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_api_gateway_api_keys',
       terraformGeneratorMetadata: {
@@ -120,7 +120,7 @@ export class DataTfApiKeys extends cdktn.TerraformDataSource {
   }
 
   // items - computed: true, optional: false, required: false
-  private _items = new DataTfApiKeys.ItemsPropertyList(this, "items", false);
+  private _items = new DataAwsApiKeys.ItemsPropertyList(this, "items", false);
   public get items() {
     return this._items;
   }
@@ -180,7 +180,7 @@ export class DataTfApiKeys extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfApiKeysItemsPropertyToTerraform(struct?: DataTfApiKeys.ItemsProperty): any {
+export function dataAwsApiKeysItemsPropertyToTerraform(struct?: DataAwsApiKeys.ItemsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -190,7 +190,7 @@ export function dataTfApiKeysItemsPropertyToTerraform(struct?: DataTfApiKeys.Ite
 }
 
 
-export function dataTfApiKeysItemsPropertyToHclTerraform(struct?: DataTfApiKeys.ItemsProperty): any {
+export function dataAwsApiKeysItemsPropertyToHclTerraform(struct?: DataAwsApiKeys.ItemsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -201,7 +201,7 @@ export function dataTfApiKeysItemsPropertyToHclTerraform(struct?: DataTfApiKeys.
 }
 
 
-export namespace DataTfApiKeys {
+export namespace DataAwsApiKeys {
 export interface ItemsProperty {
 }
 export class ItemsPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,67 +5,67 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLabelingJobConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLabelingJobConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#label_attribute_name TfLabelingJob#label_attribute_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#label_attribute_name AwsLabelingJob#label_attribute_name}
   */
   readonly labelAttributeName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#label_category_config_s3_uri TfLabelingJob#label_category_config_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#label_category_config_s3_uri AwsLabelingJob#label_category_config_s3_uri}
   */
   readonly labelCategoryConfigS3Uri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#labeling_job_name TfLabelingJob#labeling_job_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#labeling_job_name AwsLabelingJob#labeling_job_name}
   */
   readonly labelingJobName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#region TfLabelingJob#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#region AwsLabelingJob#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#role_arn TfLabelingJob#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#role_arn AwsLabelingJob#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#stopping_conditions TfLabelingJob#stopping_conditions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#stopping_conditions AwsLabelingJob#stopping_conditions}
   */
-  readonly stoppingConditions?: TfLabelingJob.StoppingConditionsProperty[] | cdktn.IResolvable;
+  readonly stoppingConditions?: AwsLabelingJob.StoppingConditionsProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#tags TfLabelingJob#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#tags AwsLabelingJob#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * human_task_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#human_task_config TfLabelingJob#human_task_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#human_task_config AwsLabelingJob#human_task_config}
   */
-  readonly humanTaskConfig?: TfLabelingJob.HumanTaskConfigProperty[] | cdktn.IResolvable;
+  readonly humanTaskConfig?: AwsLabelingJob.HumanTaskConfigProperty[] | cdktn.IResolvable;
   /**
   * input_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#input_config TfLabelingJob#input_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#input_config AwsLabelingJob#input_config}
   */
-  readonly inputConfig?: TfLabelingJob.InputConfigProperty[] | cdktn.IResolvable;
+  readonly inputConfig?: AwsLabelingJob.InputConfigProperty[] | cdktn.IResolvable;
   /**
   * labeling_job_algorithms_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#labeling_job_algorithms_config TfLabelingJob#labeling_job_algorithms_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#labeling_job_algorithms_config AwsLabelingJob#labeling_job_algorithms_config}
   */
-  readonly labelingJobAlgorithmsConfig?: TfLabelingJob.LabelingJobAlgorithmsConfigProperty[] | cdktn.IResolvable;
+  readonly labelingJobAlgorithmsConfig?: AwsLabelingJob.LabelingJobAlgorithmsConfigProperty[] | cdktn.IResolvable;
   /**
   * output_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#output_config TfLabelingJob#output_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#output_config AwsLabelingJob#output_config}
   */
-  readonly outputConfig?: TfLabelingJob.OutputConfigProperty[] | cdktn.IResolvable;
+  readonly outputConfig?: AwsLabelingJob.OutputConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job aws_sagemaker_labeling_job}
 */
-export class TfLabelingJob extends cdktn.TerraformResource {
+export class AwsLabelingJob extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -76,11 +76,11 @@ export class TfLabelingJob extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLabelingJob resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLabelingJob resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLabelingJob to import
-  * @param importFromId The id of the existing TfLabelingJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLabelingJob to import is found
+  * @param importToId The construct id used in the generated config for the AwsLabelingJob to import
+  * @param importFromId The id of the existing AwsLabelingJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLabelingJob to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_labeling_job", importId: importFromId, provider });
@@ -95,9 +95,9 @@ export class TfLabelingJob extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLabelingJobConfig
+  * @param options AwsLabelingJobConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLabelingJobConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLabelingJobConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_labeling_job',
       terraformGeneratorMetadata: {
@@ -170,7 +170,7 @@ export class TfLabelingJob extends cdktn.TerraformResource {
   }
 
   // label_counters - computed: true, optional: false, required: false
-  private _labelCounters = new TfLabelingJob.LabelCountersPropertyList(this, "label_counters", false);
+  private _labelCounters = new AwsLabelingJob.LabelCountersPropertyList(this, "label_counters", false);
   public get labelCounters() {
     return this._labelCounters;
   }
@@ -228,11 +228,11 @@ export class TfLabelingJob extends cdktn.TerraformResource {
   }
 
   // stopping_conditions - computed: true, optional: true, required: false
-  private _stoppingConditions = new TfLabelingJob.StoppingConditionsPropertyList(this, "stopping_conditions", false);
+  private _stoppingConditions = new AwsLabelingJob.StoppingConditionsPropertyList(this, "stopping_conditions", false);
   public get stoppingConditions() {
     return this._stoppingConditions;
   }
-  public putStoppingConditions(value: TfLabelingJob.StoppingConditionsProperty[] | cdktn.IResolvable) {
+  public putStoppingConditions(value: AwsLabelingJob.StoppingConditionsProperty[] | cdktn.IResolvable) {
     this._stoppingConditions.internalValue = value;
   }
   public resetStoppingConditions() {
@@ -266,11 +266,11 @@ export class TfLabelingJob extends cdktn.TerraformResource {
   }
 
   // human_task_config - computed: false, optional: true, required: false
-  private _humanTaskConfig = new TfLabelingJob.HumanTaskConfigPropertyList(this, "human_task_config", false);
+  private _humanTaskConfig = new AwsLabelingJob.HumanTaskConfigPropertyList(this, "human_task_config", false);
   public get humanTaskConfig() {
     return this._humanTaskConfig;
   }
-  public putHumanTaskConfig(value: TfLabelingJob.HumanTaskConfigProperty[] | cdktn.IResolvable) {
+  public putHumanTaskConfig(value: AwsLabelingJob.HumanTaskConfigProperty[] | cdktn.IResolvable) {
     this._humanTaskConfig.internalValue = value;
   }
   public resetHumanTaskConfig() {
@@ -282,11 +282,11 @@ export class TfLabelingJob extends cdktn.TerraformResource {
   }
 
   // input_config - computed: false, optional: true, required: false
-  private _inputConfig = new TfLabelingJob.InputConfigPropertyList(this, "input_config", false);
+  private _inputConfig = new AwsLabelingJob.InputConfigPropertyList(this, "input_config", false);
   public get inputConfig() {
     return this._inputConfig;
   }
-  public putInputConfig(value: TfLabelingJob.InputConfigProperty[] | cdktn.IResolvable) {
+  public putInputConfig(value: AwsLabelingJob.InputConfigProperty[] | cdktn.IResolvable) {
     this._inputConfig.internalValue = value;
   }
   public resetInputConfig() {
@@ -298,11 +298,11 @@ export class TfLabelingJob extends cdktn.TerraformResource {
   }
 
   // labeling_job_algorithms_config - computed: false, optional: true, required: false
-  private _labelingJobAlgorithmsConfig = new TfLabelingJob.LabelingJobAlgorithmsConfigPropertyList(this, "labeling_job_algorithms_config", false);
+  private _labelingJobAlgorithmsConfig = new AwsLabelingJob.LabelingJobAlgorithmsConfigPropertyList(this, "labeling_job_algorithms_config", false);
   public get labelingJobAlgorithmsConfig() {
     return this._labelingJobAlgorithmsConfig;
   }
-  public putLabelingJobAlgorithmsConfig(value: TfLabelingJob.LabelingJobAlgorithmsConfigProperty[] | cdktn.IResolvable) {
+  public putLabelingJobAlgorithmsConfig(value: AwsLabelingJob.LabelingJobAlgorithmsConfigProperty[] | cdktn.IResolvable) {
     this._labelingJobAlgorithmsConfig.internalValue = value;
   }
   public resetLabelingJobAlgorithmsConfig() {
@@ -314,11 +314,11 @@ export class TfLabelingJob extends cdktn.TerraformResource {
   }
 
   // output_config - computed: false, optional: true, required: false
-  private _outputConfig = new TfLabelingJob.OutputConfigPropertyList(this, "output_config", false);
+  private _outputConfig = new AwsLabelingJob.OutputConfigPropertyList(this, "output_config", false);
   public get outputConfig() {
     return this._outputConfig;
   }
-  public putOutputConfig(value: TfLabelingJob.OutputConfigProperty[] | cdktn.IResolvable) {
+  public putOutputConfig(value: AwsLabelingJob.OutputConfigProperty[] | cdktn.IResolvable) {
     this._outputConfig.internalValue = value;
   }
   public resetOutputConfig() {
@@ -340,12 +340,12 @@ export class TfLabelingJob extends cdktn.TerraformResource {
       labeling_job_name: cdktn.stringToTerraform(this._labelingJobName),
       region: cdktn.stringToTerraform(this._region),
       role_arn: cdktn.stringToTerraform(this._roleArn),
-      stopping_conditions: cdktn.listMapper(tfLabelingJobStoppingConditionsPropertyToTerraform, false)(this._stoppingConditions.internalValue),
+      stopping_conditions: cdktn.listMapper(awsLabelingJobStoppingConditionsPropertyToTerraform, false)(this._stoppingConditions.internalValue),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      human_task_config: cdktn.listMapper(tfLabelingJobHumanTaskConfigPropertyToTerraform, true)(this._humanTaskConfig.internalValue),
-      input_config: cdktn.listMapper(tfLabelingJobInputConfigPropertyToTerraform, true)(this._inputConfig.internalValue),
-      labeling_job_algorithms_config: cdktn.listMapper(tfLabelingJobLabelingJobAlgorithmsConfigPropertyToTerraform, true)(this._labelingJobAlgorithmsConfig.internalValue),
-      output_config: cdktn.listMapper(tfLabelingJobOutputConfigPropertyToTerraform, true)(this._outputConfig.internalValue),
+      human_task_config: cdktn.listMapper(awsLabelingJobHumanTaskConfigPropertyToTerraform, true)(this._humanTaskConfig.internalValue),
+      input_config: cdktn.listMapper(awsLabelingJobInputConfigPropertyToTerraform, true)(this._inputConfig.internalValue),
+      labeling_job_algorithms_config: cdktn.listMapper(awsLabelingJobLabelingJobAlgorithmsConfigPropertyToTerraform, true)(this._labelingJobAlgorithmsConfig.internalValue),
+      output_config: cdktn.listMapper(awsLabelingJobOutputConfigPropertyToTerraform, true)(this._outputConfig.internalValue),
     };
   }
 
@@ -382,10 +382,10 @@ export class TfLabelingJob extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       stopping_conditions: {
-        value: cdktn.listMapperHcl(tfLabelingJobStoppingConditionsPropertyToHclTerraform, false)(this._stoppingConditions.internalValue),
+        value: cdktn.listMapperHcl(awsLabelingJobStoppingConditionsPropertyToHclTerraform, false)(this._stoppingConditions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLabelingJob.StoppingConditionsPropertyList",
+        storageClassType: "AwsLabelingJob.StoppingConditionsPropertyList",
       },
       tags: {
         value: cdktn.hashMapperHcl(cdktn.stringToHclTerraform)(this._tags),
@@ -394,28 +394,28 @@ export class TfLabelingJob extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       human_task_config: {
-        value: cdktn.listMapperHcl(tfLabelingJobHumanTaskConfigPropertyToHclTerraform, true)(this._humanTaskConfig.internalValue),
+        value: cdktn.listMapperHcl(awsLabelingJobHumanTaskConfigPropertyToHclTerraform, true)(this._humanTaskConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLabelingJob.HumanTaskConfigPropertyList",
+        storageClassType: "AwsLabelingJob.HumanTaskConfigPropertyList",
       },
       input_config: {
-        value: cdktn.listMapperHcl(tfLabelingJobInputConfigPropertyToHclTerraform, true)(this._inputConfig.internalValue),
+        value: cdktn.listMapperHcl(awsLabelingJobInputConfigPropertyToHclTerraform, true)(this._inputConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLabelingJob.InputConfigPropertyList",
+        storageClassType: "AwsLabelingJob.InputConfigPropertyList",
       },
       labeling_job_algorithms_config: {
-        value: cdktn.listMapperHcl(tfLabelingJobLabelingJobAlgorithmsConfigPropertyToHclTerraform, true)(this._labelingJobAlgorithmsConfig.internalValue),
+        value: cdktn.listMapperHcl(awsLabelingJobLabelingJobAlgorithmsConfigPropertyToHclTerraform, true)(this._labelingJobAlgorithmsConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLabelingJob.LabelingJobAlgorithmsConfigPropertyList",
+        storageClassType: "AwsLabelingJob.LabelingJobAlgorithmsConfigPropertyList",
       },
       output_config: {
-        value: cdktn.listMapperHcl(tfLabelingJobOutputConfigPropertyToHclTerraform, true)(this._outputConfig.internalValue),
+        value: cdktn.listMapperHcl(awsLabelingJobOutputConfigPropertyToHclTerraform, true)(this._outputConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLabelingJob.OutputConfigPropertyList",
+        storageClassType: "AwsLabelingJob.OutputConfigPropertyList",
       },
     };
 
@@ -424,7 +424,7 @@ export class TfLabelingJob extends cdktn.TerraformResource {
   }
 }
 
-export function tfLabelingJobLabelCountersPropertyToTerraform(struct?: TfLabelingJob.LabelCountersProperty): any {
+export function awsLabelingJobLabelCountersPropertyToTerraform(struct?: AwsLabelingJob.LabelCountersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -434,7 +434,7 @@ export function tfLabelingJobLabelCountersPropertyToTerraform(struct?: TfLabelin
 }
 
 
-export function tfLabelingJobLabelCountersPropertyToHclTerraform(struct?: TfLabelingJob.LabelCountersProperty): any {
+export function awsLabelingJobLabelCountersPropertyToHclTerraform(struct?: AwsLabelingJob.LabelCountersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -445,7 +445,7 @@ export function tfLabelingJobLabelCountersPropertyToHclTerraform(struct?: TfLabe
 }
 
 
-export function tfLabelingJobStoppingConditionsPropertyToTerraform(struct?: TfLabelingJob.StoppingConditionsProperty | cdktn.IResolvable): any {
+export function awsLabelingJobStoppingConditionsPropertyToTerraform(struct?: AwsLabelingJob.StoppingConditionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -457,7 +457,7 @@ export function tfLabelingJobStoppingConditionsPropertyToTerraform(struct?: TfLa
 }
 
 
-export function tfLabelingJobStoppingConditionsPropertyToHclTerraform(struct?: TfLabelingJob.StoppingConditionsProperty | cdktn.IResolvable): any {
+export function awsLabelingJobStoppingConditionsPropertyToHclTerraform(struct?: AwsLabelingJob.StoppingConditionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -482,7 +482,7 @@ export function tfLabelingJobStoppingConditionsPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfLabelingJobAnnotationConsolidationConfigPropertyToTerraform(struct?: TfLabelingJob.AnnotationConsolidationConfigProperty | cdktn.IResolvable): any {
+export function awsLabelingJobAnnotationConsolidationConfigPropertyToTerraform(struct?: AwsLabelingJob.AnnotationConsolidationConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -493,7 +493,7 @@ export function tfLabelingJobAnnotationConsolidationConfigPropertyToTerraform(st
 }
 
 
-export function tfLabelingJobAnnotationConsolidationConfigPropertyToHclTerraform(struct?: TfLabelingJob.AnnotationConsolidationConfigProperty | cdktn.IResolvable): any {
+export function awsLabelingJobAnnotationConsolidationConfigPropertyToHclTerraform(struct?: AwsLabelingJob.AnnotationConsolidationConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -512,7 +512,7 @@ export function tfLabelingJobAnnotationConsolidationConfigPropertyToHclTerraform
 }
 
 
-export function tfLabelingJobAmountInUsdPropertyToTerraform(struct?: TfLabelingJob.AmountInUsdProperty | cdktn.IResolvable): any {
+export function awsLabelingJobAmountInUsdPropertyToTerraform(struct?: AwsLabelingJob.AmountInUsdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -525,7 +525,7 @@ export function tfLabelingJobAmountInUsdPropertyToTerraform(struct?: TfLabelingJ
 }
 
 
-export function tfLabelingJobAmountInUsdPropertyToHclTerraform(struct?: TfLabelingJob.AmountInUsdProperty | cdktn.IResolvable): any {
+export function awsLabelingJobAmountInUsdPropertyToHclTerraform(struct?: AwsLabelingJob.AmountInUsdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -556,25 +556,25 @@ export function tfLabelingJobAmountInUsdPropertyToHclTerraform(struct?: TfLabeli
 }
 
 
-export function tfLabelingJobPublicWorkforceTaskPricePropertyToTerraform(struct?: TfLabelingJob.PublicWorkforceTaskPriceProperty | cdktn.IResolvable): any {
+export function awsLabelingJobPublicWorkforceTaskPricePropertyToTerraform(struct?: AwsLabelingJob.PublicWorkforceTaskPriceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    amount_in_usd: cdktn.listMapper(tfLabelingJobAmountInUsdPropertyToTerraform, true)(struct!.amountInUsd),
+    amount_in_usd: cdktn.listMapper(awsLabelingJobAmountInUsdPropertyToTerraform, true)(struct!.amountInUsd),
   }
 }
 
 
-export function tfLabelingJobPublicWorkforceTaskPricePropertyToHclTerraform(struct?: TfLabelingJob.PublicWorkforceTaskPriceProperty | cdktn.IResolvable): any {
+export function awsLabelingJobPublicWorkforceTaskPricePropertyToHclTerraform(struct?: AwsLabelingJob.PublicWorkforceTaskPriceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     amount_in_usd: {
-      value: cdktn.listMapperHcl(tfLabelingJobAmountInUsdPropertyToHclTerraform, true)(struct!.amountInUsd),
+      value: cdktn.listMapperHcl(awsLabelingJobAmountInUsdPropertyToHclTerraform, true)(struct!.amountInUsd),
       isBlock: true,
       type: "list",
       storageClassType: "AmountInUsdPropertyList",
@@ -586,7 +586,7 @@ export function tfLabelingJobPublicWorkforceTaskPricePropertyToHclTerraform(stru
 }
 
 
-export function tfLabelingJobUiConfigPropertyToTerraform(struct?: TfLabelingJob.UiConfigProperty | cdktn.IResolvable): any {
+export function awsLabelingJobUiConfigPropertyToTerraform(struct?: AwsLabelingJob.UiConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -598,7 +598,7 @@ export function tfLabelingJobUiConfigPropertyToTerraform(struct?: TfLabelingJob.
 }
 
 
-export function tfLabelingJobUiConfigPropertyToHclTerraform(struct?: TfLabelingJob.UiConfigProperty | cdktn.IResolvable): any {
+export function awsLabelingJobUiConfigPropertyToHclTerraform(struct?: AwsLabelingJob.UiConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -623,7 +623,7 @@ export function tfLabelingJobUiConfigPropertyToHclTerraform(struct?: TfLabelingJ
 }
 
 
-export function tfLabelingJobHumanTaskConfigPropertyToTerraform(struct?: TfLabelingJob.HumanTaskConfigProperty | cdktn.IResolvable): any {
+export function awsLabelingJobHumanTaskConfigPropertyToTerraform(struct?: AwsLabelingJob.HumanTaskConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -638,14 +638,14 @@ export function tfLabelingJobHumanTaskConfigPropertyToTerraform(struct?: TfLabel
     task_time_limit_in_seconds: cdktn.numberToTerraform(struct!.taskTimeLimitInSeconds),
     task_title: cdktn.stringToTerraform(struct!.taskTitle),
     workteam_arn: cdktn.stringToTerraform(struct!.workteamArn),
-    annotation_consolidation_config: cdktn.listMapper(tfLabelingJobAnnotationConsolidationConfigPropertyToTerraform, true)(struct!.annotationConsolidationConfig),
-    public_workforce_task_price: cdktn.listMapper(tfLabelingJobPublicWorkforceTaskPricePropertyToTerraform, true)(struct!.publicWorkforceTaskPrice),
-    ui_config: cdktn.listMapper(tfLabelingJobUiConfigPropertyToTerraform, true)(struct!.uiConfig),
+    annotation_consolidation_config: cdktn.listMapper(awsLabelingJobAnnotationConsolidationConfigPropertyToTerraform, true)(struct!.annotationConsolidationConfig),
+    public_workforce_task_price: cdktn.listMapper(awsLabelingJobPublicWorkforceTaskPricePropertyToTerraform, true)(struct!.publicWorkforceTaskPrice),
+    ui_config: cdktn.listMapper(awsLabelingJobUiConfigPropertyToTerraform, true)(struct!.uiConfig),
   }
 }
 
 
-export function tfLabelingJobHumanTaskConfigPropertyToHclTerraform(struct?: TfLabelingJob.HumanTaskConfigProperty | cdktn.IResolvable): any {
+export function awsLabelingJobHumanTaskConfigPropertyToHclTerraform(struct?: AwsLabelingJob.HumanTaskConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -706,19 +706,19 @@ export function tfLabelingJobHumanTaskConfigPropertyToHclTerraform(struct?: TfLa
       storageClassType: "string",
     },
     annotation_consolidation_config: {
-      value: cdktn.listMapperHcl(tfLabelingJobAnnotationConsolidationConfigPropertyToHclTerraform, true)(struct!.annotationConsolidationConfig),
+      value: cdktn.listMapperHcl(awsLabelingJobAnnotationConsolidationConfigPropertyToHclTerraform, true)(struct!.annotationConsolidationConfig),
       isBlock: true,
       type: "list",
       storageClassType: "AnnotationConsolidationConfigPropertyList",
     },
     public_workforce_task_price: {
-      value: cdktn.listMapperHcl(tfLabelingJobPublicWorkforceTaskPricePropertyToHclTerraform, true)(struct!.publicWorkforceTaskPrice),
+      value: cdktn.listMapperHcl(awsLabelingJobPublicWorkforceTaskPricePropertyToHclTerraform, true)(struct!.publicWorkforceTaskPrice),
       isBlock: true,
       type: "list",
       storageClassType: "PublicWorkforceTaskPricePropertyList",
     },
     ui_config: {
-      value: cdktn.listMapperHcl(tfLabelingJobUiConfigPropertyToHclTerraform, true)(struct!.uiConfig),
+      value: cdktn.listMapperHcl(awsLabelingJobUiConfigPropertyToHclTerraform, true)(struct!.uiConfig),
       isBlock: true,
       type: "list",
       storageClassType: "UiConfigPropertyList",
@@ -730,7 +730,7 @@ export function tfLabelingJobHumanTaskConfigPropertyToHclTerraform(struct?: TfLa
 }
 
 
-export function tfLabelingJobDataAttributesPropertyToTerraform(struct?: TfLabelingJob.DataAttributesProperty | cdktn.IResolvable): any {
+export function awsLabelingJobDataAttributesPropertyToTerraform(struct?: AwsLabelingJob.DataAttributesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -741,7 +741,7 @@ export function tfLabelingJobDataAttributesPropertyToTerraform(struct?: TfLabeli
 }
 
 
-export function tfLabelingJobDataAttributesPropertyToHclTerraform(struct?: TfLabelingJob.DataAttributesProperty | cdktn.IResolvable): any {
+export function awsLabelingJobDataAttributesPropertyToHclTerraform(struct?: AwsLabelingJob.DataAttributesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -760,7 +760,7 @@ export function tfLabelingJobDataAttributesPropertyToHclTerraform(struct?: TfLab
 }
 
 
-export function tfLabelingJobS3DataSourcePropertyToTerraform(struct?: TfLabelingJob.S3DataSourceProperty | cdktn.IResolvable): any {
+export function awsLabelingJobS3DataSourcePropertyToTerraform(struct?: AwsLabelingJob.S3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -771,7 +771,7 @@ export function tfLabelingJobS3DataSourcePropertyToTerraform(struct?: TfLabeling
 }
 
 
-export function tfLabelingJobS3DataSourcePropertyToHclTerraform(struct?: TfLabelingJob.S3DataSourceProperty | cdktn.IResolvable): any {
+export function awsLabelingJobS3DataSourcePropertyToHclTerraform(struct?: AwsLabelingJob.S3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -790,7 +790,7 @@ export function tfLabelingJobS3DataSourcePropertyToHclTerraform(struct?: TfLabel
 }
 
 
-export function tfLabelingJobSnsDataSourcePropertyToTerraform(struct?: TfLabelingJob.SnsDataSourceProperty | cdktn.IResolvable): any {
+export function awsLabelingJobSnsDataSourcePropertyToTerraform(struct?: AwsLabelingJob.SnsDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -801,7 +801,7 @@ export function tfLabelingJobSnsDataSourcePropertyToTerraform(struct?: TfLabelin
 }
 
 
-export function tfLabelingJobSnsDataSourcePropertyToHclTerraform(struct?: TfLabelingJob.SnsDataSourceProperty | cdktn.IResolvable): any {
+export function awsLabelingJobSnsDataSourcePropertyToHclTerraform(struct?: AwsLabelingJob.SnsDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -820,32 +820,32 @@ export function tfLabelingJobSnsDataSourcePropertyToHclTerraform(struct?: TfLabe
 }
 
 
-export function tfLabelingJobDataSourcePropertyToTerraform(struct?: TfLabelingJob.DataSourceProperty | cdktn.IResolvable): any {
+export function awsLabelingJobDataSourcePropertyToTerraform(struct?: AwsLabelingJob.DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_data_source: cdktn.listMapper(tfLabelingJobS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
-    sns_data_source: cdktn.listMapper(tfLabelingJobSnsDataSourcePropertyToTerraform, true)(struct!.snsDataSource),
+    s3_data_source: cdktn.listMapper(awsLabelingJobS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
+    sns_data_source: cdktn.listMapper(awsLabelingJobSnsDataSourcePropertyToTerraform, true)(struct!.snsDataSource),
   }
 }
 
 
-export function tfLabelingJobDataSourcePropertyToHclTerraform(struct?: TfLabelingJob.DataSourceProperty | cdktn.IResolvable): any {
+export function awsLabelingJobDataSourcePropertyToHclTerraform(struct?: AwsLabelingJob.DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_data_source: {
-      value: cdktn.listMapperHcl(tfLabelingJobS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
+      value: cdktn.listMapperHcl(awsLabelingJobS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
       isBlock: true,
       type: "list",
       storageClassType: "S3DataSourcePropertyList",
     },
     sns_data_source: {
-      value: cdktn.listMapperHcl(tfLabelingJobSnsDataSourcePropertyToHclTerraform, true)(struct!.snsDataSource),
+      value: cdktn.listMapperHcl(awsLabelingJobSnsDataSourcePropertyToHclTerraform, true)(struct!.snsDataSource),
       isBlock: true,
       type: "list",
       storageClassType: "SnsDataSourcePropertyList",
@@ -857,32 +857,32 @@ export function tfLabelingJobDataSourcePropertyToHclTerraform(struct?: TfLabelin
 }
 
 
-export function tfLabelingJobInputConfigPropertyToTerraform(struct?: TfLabelingJob.InputConfigProperty | cdktn.IResolvable): any {
+export function awsLabelingJobInputConfigPropertyToTerraform(struct?: AwsLabelingJob.InputConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    data_attributes: cdktn.listMapper(tfLabelingJobDataAttributesPropertyToTerraform, true)(struct!.dataAttributes),
-    data_source: cdktn.listMapper(tfLabelingJobDataSourcePropertyToTerraform, true)(struct!.dataSource),
+    data_attributes: cdktn.listMapper(awsLabelingJobDataAttributesPropertyToTerraform, true)(struct!.dataAttributes),
+    data_source: cdktn.listMapper(awsLabelingJobDataSourcePropertyToTerraform, true)(struct!.dataSource),
   }
 }
 
 
-export function tfLabelingJobInputConfigPropertyToHclTerraform(struct?: TfLabelingJob.InputConfigProperty | cdktn.IResolvable): any {
+export function awsLabelingJobInputConfigPropertyToHclTerraform(struct?: AwsLabelingJob.InputConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     data_attributes: {
-      value: cdktn.listMapperHcl(tfLabelingJobDataAttributesPropertyToHclTerraform, true)(struct!.dataAttributes),
+      value: cdktn.listMapperHcl(awsLabelingJobDataAttributesPropertyToHclTerraform, true)(struct!.dataAttributes),
       isBlock: true,
       type: "list",
       storageClassType: "DataAttributesPropertyList",
     },
     data_source: {
-      value: cdktn.listMapperHcl(tfLabelingJobDataSourcePropertyToHclTerraform, true)(struct!.dataSource),
+      value: cdktn.listMapperHcl(awsLabelingJobDataSourcePropertyToHclTerraform, true)(struct!.dataSource),
       isBlock: true,
       type: "list",
       storageClassType: "DataSourcePropertyList",
@@ -894,7 +894,7 @@ export function tfLabelingJobInputConfigPropertyToHclTerraform(struct?: TfLabeli
 }
 
 
-export function tfLabelingJobVpcConfigPropertyToTerraform(struct?: TfLabelingJob.VpcConfigProperty | cdktn.IResolvable): any {
+export function awsLabelingJobVpcConfigPropertyToTerraform(struct?: AwsLabelingJob.VpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -906,7 +906,7 @@ export function tfLabelingJobVpcConfigPropertyToTerraform(struct?: TfLabelingJob
 }
 
 
-export function tfLabelingJobVpcConfigPropertyToHclTerraform(struct?: TfLabelingJob.VpcConfigProperty | cdktn.IResolvable): any {
+export function awsLabelingJobVpcConfigPropertyToHclTerraform(struct?: AwsLabelingJob.VpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -931,19 +931,19 @@ export function tfLabelingJobVpcConfigPropertyToHclTerraform(struct?: TfLabeling
 }
 
 
-export function tfLabelingJobLabelingJobResourceConfigPropertyToTerraform(struct?: TfLabelingJob.LabelingJobResourceConfigProperty | cdktn.IResolvable): any {
+export function awsLabelingJobLabelingJobResourceConfigPropertyToTerraform(struct?: AwsLabelingJob.LabelingJobResourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     volume_kms_key_id: cdktn.stringToTerraform(struct!.volumeKmsKeyId),
-    vpc_config: cdktn.listMapper(tfLabelingJobVpcConfigPropertyToTerraform, true)(struct!.vpcConfig),
+    vpc_config: cdktn.listMapper(awsLabelingJobVpcConfigPropertyToTerraform, true)(struct!.vpcConfig),
   }
 }
 
 
-export function tfLabelingJobLabelingJobResourceConfigPropertyToHclTerraform(struct?: TfLabelingJob.LabelingJobResourceConfigProperty | cdktn.IResolvable): any {
+export function awsLabelingJobLabelingJobResourceConfigPropertyToHclTerraform(struct?: AwsLabelingJob.LabelingJobResourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -956,7 +956,7 @@ export function tfLabelingJobLabelingJobResourceConfigPropertyToHclTerraform(str
       storageClassType: "string",
     },
     vpc_config: {
-      value: cdktn.listMapperHcl(tfLabelingJobVpcConfigPropertyToHclTerraform, true)(struct!.vpcConfig),
+      value: cdktn.listMapperHcl(awsLabelingJobVpcConfigPropertyToHclTerraform, true)(struct!.vpcConfig),
       isBlock: true,
       type: "list",
       storageClassType: "VpcConfigPropertyList",
@@ -968,7 +968,7 @@ export function tfLabelingJobLabelingJobResourceConfigPropertyToHclTerraform(str
 }
 
 
-export function tfLabelingJobLabelingJobAlgorithmsConfigPropertyToTerraform(struct?: TfLabelingJob.LabelingJobAlgorithmsConfigProperty | cdktn.IResolvable): any {
+export function awsLabelingJobLabelingJobAlgorithmsConfigPropertyToTerraform(struct?: AwsLabelingJob.LabelingJobAlgorithmsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -976,12 +976,12 @@ export function tfLabelingJobLabelingJobAlgorithmsConfigPropertyToTerraform(stru
   return {
     initial_active_learning_model_arn: cdktn.stringToTerraform(struct!.initialActiveLearningModelArn),
     labeling_job_algorithm_specification_arn: cdktn.stringToTerraform(struct!.labelingJobAlgorithmSpecificationArn),
-    labeling_job_resource_config: cdktn.listMapper(tfLabelingJobLabelingJobResourceConfigPropertyToTerraform, true)(struct!.labelingJobResourceConfig),
+    labeling_job_resource_config: cdktn.listMapper(awsLabelingJobLabelingJobResourceConfigPropertyToTerraform, true)(struct!.labelingJobResourceConfig),
   }
 }
 
 
-export function tfLabelingJobLabelingJobAlgorithmsConfigPropertyToHclTerraform(struct?: TfLabelingJob.LabelingJobAlgorithmsConfigProperty | cdktn.IResolvable): any {
+export function awsLabelingJobLabelingJobAlgorithmsConfigPropertyToHclTerraform(struct?: AwsLabelingJob.LabelingJobAlgorithmsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1000,7 +1000,7 @@ export function tfLabelingJobLabelingJobAlgorithmsConfigPropertyToHclTerraform(s
       storageClassType: "string",
     },
     labeling_job_resource_config: {
-      value: cdktn.listMapperHcl(tfLabelingJobLabelingJobResourceConfigPropertyToHclTerraform, true)(struct!.labelingJobResourceConfig),
+      value: cdktn.listMapperHcl(awsLabelingJobLabelingJobResourceConfigPropertyToHclTerraform, true)(struct!.labelingJobResourceConfig),
       isBlock: true,
       type: "list",
       storageClassType: "LabelingJobResourceConfigPropertyList",
@@ -1012,7 +1012,7 @@ export function tfLabelingJobLabelingJobAlgorithmsConfigPropertyToHclTerraform(s
 }
 
 
-export function tfLabelingJobOutputConfigPropertyToTerraform(struct?: TfLabelingJob.OutputConfigProperty | cdktn.IResolvable): any {
+export function awsLabelingJobOutputConfigPropertyToTerraform(struct?: AwsLabelingJob.OutputConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1025,7 +1025,7 @@ export function tfLabelingJobOutputConfigPropertyToTerraform(struct?: TfLabeling
 }
 
 
-export function tfLabelingJobOutputConfigPropertyToHclTerraform(struct?: TfLabelingJob.OutputConfigProperty | cdktn.IResolvable): any {
+export function awsLabelingJobOutputConfigPropertyToHclTerraform(struct?: AwsLabelingJob.OutputConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1056,7 +1056,7 @@ export function tfLabelingJobOutputConfigPropertyToHclTerraform(struct?: TfLabel
 }
 
 
-export namespace TfLabelingJob {
+export namespace AwsLabelingJob {
 export interface LabelCountersProperty {
 }
 export class LabelCountersPropertyOutputReference extends cdktn.ComplexObject {
@@ -1133,11 +1133,11 @@ export class LabelCountersPropertyList extends cdktn.ComplexList {
 }
 export interface StoppingConditionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#max_human_labeled_object_count TfLabelingJob#max_human_labeled_object_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#max_human_labeled_object_count AwsLabelingJob#max_human_labeled_object_count}
   */
   readonly maxHumanLabeledObjectCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#max_percentage_of_input_dataset_labeled TfLabelingJob#max_percentage_of_input_dataset_labeled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#max_percentage_of_input_dataset_labeled AwsLabelingJob#max_percentage_of_input_dataset_labeled}
   */
   readonly maxPercentageOfInputDatasetLabeled?: number;
 }
@@ -1245,7 +1245,7 @@ export class StoppingConditionsPropertyList extends cdktn.ComplexList {
 }
 export interface AnnotationConsolidationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#annotation_consolidation_lambda_arn TfLabelingJob#annotation_consolidation_lambda_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#annotation_consolidation_lambda_arn AwsLabelingJob#annotation_consolidation_lambda_arn}
   */
   readonly annotationConsolidationLambdaArn: string;
 }
@@ -1328,15 +1328,15 @@ export class AnnotationConsolidationConfigPropertyList extends cdktn.ComplexList
 }
 export interface AmountInUsdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#cents TfLabelingJob#cents}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#cents AwsLabelingJob#cents}
   */
   readonly cents?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#dollars TfLabelingJob#dollars}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#dollars AwsLabelingJob#dollars}
   */
   readonly dollars?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#tenth_fractions_of_a_cent TfLabelingJob#tenth_fractions_of_a_cent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#tenth_fractions_of_a_cent AwsLabelingJob#tenth_fractions_of_a_cent}
   */
   readonly tenthFractionsOfACent?: number;
 }
@@ -1468,7 +1468,7 @@ export interface PublicWorkforceTaskPriceProperty {
   /**
   * amount_in_usd block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#amount_in_usd TfLabelingJob#amount_in_usd}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#amount_in_usd AwsLabelingJob#amount_in_usd}
   */
   readonly amountInUsd?: AmountInUsdProperty[] | cdktn.IResolvable;
 }
@@ -1554,11 +1554,11 @@ export class PublicWorkforceTaskPricePropertyList extends cdktn.ComplexList {
 }
 export interface UiConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#human_task_ui_arn TfLabelingJob#human_task_ui_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#human_task_ui_arn AwsLabelingJob#human_task_ui_arn}
   */
   readonly humanTaskUiArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#ui_template_s3_uri TfLabelingJob#ui_template_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#ui_template_s3_uri AwsLabelingJob#ui_template_s3_uri}
   */
   readonly uiTemplateS3Uri?: string;
 }
@@ -1666,57 +1666,57 @@ export class UiConfigPropertyList extends cdktn.ComplexList {
 }
 export interface HumanTaskConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#max_concurrent_task_count TfLabelingJob#max_concurrent_task_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#max_concurrent_task_count AwsLabelingJob#max_concurrent_task_count}
   */
   readonly maxConcurrentTaskCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#number_of_human_workers_per_data_object TfLabelingJob#number_of_human_workers_per_data_object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#number_of_human_workers_per_data_object AwsLabelingJob#number_of_human_workers_per_data_object}
   */
   readonly numberOfHumanWorkersPerDataObject: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#pre_human_task_lambda_arn TfLabelingJob#pre_human_task_lambda_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#pre_human_task_lambda_arn AwsLabelingJob#pre_human_task_lambda_arn}
   */
   readonly preHumanTaskLambdaArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#task_availability_lifetime_in_seconds TfLabelingJob#task_availability_lifetime_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#task_availability_lifetime_in_seconds AwsLabelingJob#task_availability_lifetime_in_seconds}
   */
   readonly taskAvailabilityLifetimeInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#task_description TfLabelingJob#task_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#task_description AwsLabelingJob#task_description}
   */
   readonly taskDescription: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#task_keywords TfLabelingJob#task_keywords}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#task_keywords AwsLabelingJob#task_keywords}
   */
   readonly taskKeywords?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#task_time_limit_in_seconds TfLabelingJob#task_time_limit_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#task_time_limit_in_seconds AwsLabelingJob#task_time_limit_in_seconds}
   */
   readonly taskTimeLimitInSeconds: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#task_title TfLabelingJob#task_title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#task_title AwsLabelingJob#task_title}
   */
   readonly taskTitle: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#workteam_arn TfLabelingJob#workteam_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#workteam_arn AwsLabelingJob#workteam_arn}
   */
   readonly workteamArn: string;
   /**
   * annotation_consolidation_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#annotation_consolidation_config TfLabelingJob#annotation_consolidation_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#annotation_consolidation_config AwsLabelingJob#annotation_consolidation_config}
   */
   readonly annotationConsolidationConfig?: AnnotationConsolidationConfigProperty[] | cdktn.IResolvable;
   /**
   * public_workforce_task_price block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#public_workforce_task_price TfLabelingJob#public_workforce_task_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#public_workforce_task_price AwsLabelingJob#public_workforce_task_price}
   */
   readonly publicWorkforceTaskPrice?: PublicWorkforceTaskPriceProperty[] | cdktn.IResolvable;
   /**
   * ui_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#ui_config TfLabelingJob#ui_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#ui_config AwsLabelingJob#ui_config}
   */
   readonly uiConfig?: UiConfigProperty[] | cdktn.IResolvable;
 }
@@ -2029,7 +2029,7 @@ export class HumanTaskConfigPropertyList extends cdktn.ComplexList {
 }
 export interface DataAttributesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#content_classifiers TfLabelingJob#content_classifiers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#content_classifiers AwsLabelingJob#content_classifiers}
   */
   readonly contentClassifiers?: string[];
 }
@@ -2115,7 +2115,7 @@ export class DataAttributesPropertyList extends cdktn.ComplexList {
 }
 export interface S3DataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#manifest_s3_uri TfLabelingJob#manifest_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#manifest_s3_uri AwsLabelingJob#manifest_s3_uri}
   */
   readonly manifestS3Uri: string;
 }
@@ -2198,7 +2198,7 @@ export class S3DataSourcePropertyList extends cdktn.ComplexList {
 }
 export interface SnsDataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#sns_topic_arn TfLabelingJob#sns_topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#sns_topic_arn AwsLabelingJob#sns_topic_arn}
   */
   readonly snsTopicArn: string;
 }
@@ -2283,13 +2283,13 @@ export interface DataSourceProperty {
   /**
   * s3_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#s3_data_source TfLabelingJob#s3_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#s3_data_source AwsLabelingJob#s3_data_source}
   */
   readonly s3DataSource?: S3DataSourceProperty[] | cdktn.IResolvable;
   /**
   * sns_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#sns_data_source TfLabelingJob#sns_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#sns_data_source AwsLabelingJob#sns_data_source}
   */
   readonly snsDataSource?: SnsDataSourceProperty[] | cdktn.IResolvable;
 }
@@ -2399,13 +2399,13 @@ export interface InputConfigProperty {
   /**
   * data_attributes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#data_attributes TfLabelingJob#data_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#data_attributes AwsLabelingJob#data_attributes}
   */
   readonly dataAttributes?: DataAttributesProperty[] | cdktn.IResolvable;
   /**
   * data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#data_source TfLabelingJob#data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#data_source AwsLabelingJob#data_source}
   */
   readonly dataSource?: DataSourceProperty[] | cdktn.IResolvable;
 }
@@ -2513,11 +2513,11 @@ export class InputConfigPropertyList extends cdktn.ComplexList {
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#security_group_ids TfLabelingJob#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#security_group_ids AwsLabelingJob#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#subnets TfLabelingJob#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#subnets AwsLabelingJob#subnets}
   */
   readonly subnets: string[];
 }
@@ -2619,13 +2619,13 @@ export class VpcConfigPropertyList extends cdktn.ComplexList {
 }
 export interface LabelingJobResourceConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#volume_kms_key_id TfLabelingJob#volume_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#volume_kms_key_id AwsLabelingJob#volume_kms_key_id}
   */
   readonly volumeKmsKeyId?: string;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#vpc_config TfLabelingJob#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#vpc_config AwsLabelingJob#vpc_config}
   */
   readonly vpcConfig?: VpcConfigProperty[] | cdktn.IResolvable;
 }
@@ -2733,17 +2733,17 @@ export class LabelingJobResourceConfigPropertyList extends cdktn.ComplexList {
 }
 export interface LabelingJobAlgorithmsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#initial_active_learning_model_arn TfLabelingJob#initial_active_learning_model_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#initial_active_learning_model_arn AwsLabelingJob#initial_active_learning_model_arn}
   */
   readonly initialActiveLearningModelArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#labeling_job_algorithm_specification_arn TfLabelingJob#labeling_job_algorithm_specification_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#labeling_job_algorithm_specification_arn AwsLabelingJob#labeling_job_algorithm_specification_arn}
   */
   readonly labelingJobAlgorithmSpecificationArn: string;
   /**
   * labeling_job_resource_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#labeling_job_resource_config TfLabelingJob#labeling_job_resource_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#labeling_job_resource_config AwsLabelingJob#labeling_job_resource_config}
   */
   readonly labelingJobResourceConfig?: LabelingJobResourceConfigProperty[] | cdktn.IResolvable;
 }
@@ -2870,15 +2870,15 @@ export class LabelingJobAlgorithmsConfigPropertyList extends cdktn.ComplexList {
 }
 export interface OutputConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#kms_key_id TfLabelingJob#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#kms_key_id AwsLabelingJob#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#s3_output_path TfLabelingJob#s3_output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#s3_output_path AwsLabelingJob#s3_output_path}
   */
   readonly s3OutputPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#sns_topic_arn TfLabelingJob#sns_topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_labeling_job#sns_topic_arn AwsLabelingJob#sns_topic_arn}
   */
   readonly snsTopicArn?: string;
 }

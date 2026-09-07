@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfMultiRegionAccessPointsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsMultiRegionAccessPointsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_points#account_id DataTfMultiRegionAccessPoints#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_points#account_id DataAwsMultiRegionAccessPoints#account_id}
   */
   readonly accountId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_points#region DataTfMultiRegionAccessPoints#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_points#region DataAwsMultiRegionAccessPoints#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataTfMultiRegionAccessPointsConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_points aws_s3control_multi_region_access_points}
 */
-export class DataTfMultiRegionAccessPoints extends cdktn.TerraformDataSource {
+export class DataAwsMultiRegionAccessPoints extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataTfMultiRegionAccessPoints extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfMultiRegionAccessPoints resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsMultiRegionAccessPoints resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfMultiRegionAccessPoints to import
-  * @param importFromId The id of the existing DataTfMultiRegionAccessPoints that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_points#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfMultiRegionAccessPoints to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsMultiRegionAccessPoints to import
+  * @param importFromId The id of the existing DataAwsMultiRegionAccessPoints that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_multi_region_access_points#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsMultiRegionAccessPoints to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3control_multi_region_access_points", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataTfMultiRegionAccessPoints extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfMultiRegionAccessPointsConfig = {}
+  * @param options DataAwsMultiRegionAccessPointsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfMultiRegionAccessPointsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsMultiRegionAccessPointsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_s3control_multi_region_access_points',
       terraformGeneratorMetadata: {
@@ -78,7 +78,7 @@ export class DataTfMultiRegionAccessPoints extends cdktn.TerraformDataSource {
   // ==========
 
   // access_points - computed: true, optional: false, required: false
-  private _accessPoints = new DataTfMultiRegionAccessPoints.AccessPointsPropertyList(this, "access_points", false);
+  private _accessPoints = new DataAwsMultiRegionAccessPoints.AccessPointsPropertyList(this, "access_points", false);
   public get accessPoints() {
     return this._accessPoints;
   }
@@ -147,7 +147,7 @@ export class DataTfMultiRegionAccessPoints extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfMultiRegionAccessPointsPublicAccessBlockPropertyToTerraform(struct?: DataTfMultiRegionAccessPoints.PublicAccessBlockProperty): any {
+export function dataAwsMultiRegionAccessPointsPublicAccessBlockPropertyToTerraform(struct?: DataAwsMultiRegionAccessPoints.PublicAccessBlockProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -157,7 +157,7 @@ export function dataTfMultiRegionAccessPointsPublicAccessBlockPropertyToTerrafor
 }
 
 
-export function dataTfMultiRegionAccessPointsPublicAccessBlockPropertyToHclTerraform(struct?: DataTfMultiRegionAccessPoints.PublicAccessBlockProperty): any {
+export function dataAwsMultiRegionAccessPointsPublicAccessBlockPropertyToHclTerraform(struct?: DataAwsMultiRegionAccessPoints.PublicAccessBlockProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -168,7 +168,7 @@ export function dataTfMultiRegionAccessPointsPublicAccessBlockPropertyToHclTerra
 }
 
 
-export function dataTfMultiRegionAccessPointsRegionsPropertyToTerraform(struct?: DataTfMultiRegionAccessPoints.RegionsProperty): any {
+export function dataAwsMultiRegionAccessPointsRegionsPropertyToTerraform(struct?: DataAwsMultiRegionAccessPoints.RegionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -178,7 +178,7 @@ export function dataTfMultiRegionAccessPointsRegionsPropertyToTerraform(struct?:
 }
 
 
-export function dataTfMultiRegionAccessPointsRegionsPropertyToHclTerraform(struct?: DataTfMultiRegionAccessPoints.RegionsProperty): any {
+export function dataAwsMultiRegionAccessPointsRegionsPropertyToHclTerraform(struct?: DataAwsMultiRegionAccessPoints.RegionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -189,7 +189,7 @@ export function dataTfMultiRegionAccessPointsRegionsPropertyToHclTerraform(struc
 }
 
 
-export function dataTfMultiRegionAccessPointsAccessPointsPropertyToTerraform(struct?: DataTfMultiRegionAccessPoints.AccessPointsProperty): any {
+export function dataAwsMultiRegionAccessPointsAccessPointsPropertyToTerraform(struct?: DataAwsMultiRegionAccessPoints.AccessPointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -199,7 +199,7 @@ export function dataTfMultiRegionAccessPointsAccessPointsPropertyToTerraform(str
 }
 
 
-export function dataTfMultiRegionAccessPointsAccessPointsPropertyToHclTerraform(struct?: DataTfMultiRegionAccessPoints.AccessPointsProperty): any {
+export function dataAwsMultiRegionAccessPointsAccessPointsPropertyToHclTerraform(struct?: DataAwsMultiRegionAccessPoints.AccessPointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -210,7 +210,7 @@ export function dataTfMultiRegionAccessPointsAccessPointsPropertyToHclTerraform(
 }
 
 
-export namespace DataTfMultiRegionAccessPoints {
+export namespace DataAwsMultiRegionAccessPoints {
 export interface PublicAccessBlockProperty {
 }
 export class PublicAccessBlockPropertyOutputReference extends cdktn.ComplexObject {

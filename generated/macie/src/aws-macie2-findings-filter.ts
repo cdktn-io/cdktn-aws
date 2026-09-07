@@ -5,66 +5,66 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFindingsFilterConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFindingsFilterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#action TfFindingsFilter#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#action AwsFindingsFilter#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#description TfFindingsFilter#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#description AwsFindingsFilter#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#id TfFindingsFilter#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#id AwsFindingsFilter#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#name TfFindingsFilter#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#name AwsFindingsFilter#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#name_prefix TfFindingsFilter#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#name_prefix AwsFindingsFilter#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#position TfFindingsFilter#position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#position AwsFindingsFilter#position}
   */
   readonly position?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#region TfFindingsFilter#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#region AwsFindingsFilter#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#tags TfFindingsFilter#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#tags AwsFindingsFilter#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#tags_all TfFindingsFilter#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#tags_all AwsFindingsFilter#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * finding_criteria block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#finding_criteria TfFindingsFilter#finding_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#finding_criteria AwsFindingsFilter#finding_criteria}
   */
-  readonly findingCriteria: TfFindingsFilter.FindingCriteriaProperty;
+  readonly findingCriteria: AwsFindingsFilter.FindingCriteriaProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#timeouts TfFindingsFilter#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#timeouts AwsFindingsFilter#timeouts}
   */
-  readonly timeouts?: TfFindingsFilter.TimeoutsProperty;
+  readonly timeouts?: AwsFindingsFilter.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter aws_macie2_findings_filter}
 */
-export class TfFindingsFilter extends cdktn.TerraformResource {
+export class AwsFindingsFilter extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class TfFindingsFilter extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFindingsFilter resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFindingsFilter resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFindingsFilter to import
-  * @param importFromId The id of the existing TfFindingsFilter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFindingsFilter to import is found
+  * @param importToId The construct id used in the generated config for the AwsFindingsFilter to import
+  * @param importFromId The id of the existing AwsFindingsFilter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFindingsFilter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_macie2_findings_filter", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class TfFindingsFilter extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFindingsFilterConfig
+  * @param options AwsFindingsFilterConfig
   */
-  public constructor(scope: Construct, id: string, config: TfFindingsFilterConfig) {
+  public constructor(scope: Construct, id: string, config: AwsFindingsFilterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_macie2_findings_filter',
       terraformGeneratorMetadata: {
@@ -276,11 +276,11 @@ export class TfFindingsFilter extends cdktn.TerraformResource {
   }
 
   // finding_criteria - computed: false, optional: false, required: true
-  private _findingCriteria = new TfFindingsFilter.FindingCriteriaPropertyOutputReference(this, "finding_criteria");
+  private _findingCriteria = new AwsFindingsFilter.FindingCriteriaPropertyOutputReference(this, "finding_criteria");
   public get findingCriteria() {
     return this._findingCriteria;
   }
-  public putFindingCriteria(value: TfFindingsFilter.FindingCriteriaProperty) {
+  public putFindingCriteria(value: AwsFindingsFilter.FindingCriteriaProperty) {
     this._findingCriteria.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -289,11 +289,11 @@ export class TfFindingsFilter extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfFindingsFilter.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsFindingsFilter.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfFindingsFilter.TimeoutsProperty) {
+  public putTimeouts(value: AwsFindingsFilter.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -319,8 +319,8 @@ export class TfFindingsFilter extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      finding_criteria: tfFindingsFilterFindingCriteriaPropertyToTerraform(this._findingCriteria.internalValue),
-      timeouts: tfFindingsFilterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      finding_criteria: awsFindingsFilterFindingCriteriaPropertyToTerraform(this._findingCriteria.internalValue),
+      timeouts: awsFindingsFilterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -381,16 +381,16 @@ export class TfFindingsFilter extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       finding_criteria: {
-        value: tfFindingsFilterFindingCriteriaPropertyToHclTerraform(this._findingCriteria.internalValue),
+        value: awsFindingsFilterFindingCriteriaPropertyToHclTerraform(this._findingCriteria.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFindingsFilter.FindingCriteriaPropertyList",
+        storageClassType: "AwsFindingsFilter.FindingCriteriaPropertyList",
       },
       timeouts: {
-        value: tfFindingsFilterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsFindingsFilterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfFindingsFilter.TimeoutsProperty",
+        storageClassType: "AwsFindingsFilter.TimeoutsProperty",
       },
     };
 
@@ -399,7 +399,7 @@ export class TfFindingsFilter extends cdktn.TerraformResource {
   }
 }
 
-export function tfFindingsFilterCriterionPropertyToTerraform(struct?: TfFindingsFilter.CriterionProperty | cdktn.IResolvable): any {
+export function awsFindingsFilterCriterionPropertyToTerraform(struct?: AwsFindingsFilter.CriterionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,7 +417,7 @@ export function tfFindingsFilterCriterionPropertyToTerraform(struct?: TfFindings
 }
 
 
-export function tfFindingsFilterCriterionPropertyToHclTerraform(struct?: TfFindingsFilter.CriterionProperty | cdktn.IResolvable): any {
+export function awsFindingsFilterCriterionPropertyToHclTerraform(struct?: AwsFindingsFilter.CriterionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -478,25 +478,25 @@ export function tfFindingsFilterCriterionPropertyToHclTerraform(struct?: TfFindi
 }
 
 
-export function tfFindingsFilterFindingCriteriaPropertyToTerraform(struct?: TfFindingsFilter.FindingCriteriaPropertyOutputReference | TfFindingsFilter.FindingCriteriaProperty): any {
+export function awsFindingsFilterFindingCriteriaPropertyToTerraform(struct?: AwsFindingsFilter.FindingCriteriaPropertyOutputReference | AwsFindingsFilter.FindingCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    criterion: cdktn.listMapper(tfFindingsFilterCriterionPropertyToTerraform, true)(struct!.criterion),
+    criterion: cdktn.listMapper(awsFindingsFilterCriterionPropertyToTerraform, true)(struct!.criterion),
   }
 }
 
 
-export function tfFindingsFilterFindingCriteriaPropertyToHclTerraform(struct?: TfFindingsFilter.FindingCriteriaPropertyOutputReference | TfFindingsFilter.FindingCriteriaProperty): any {
+export function awsFindingsFilterFindingCriteriaPropertyToHclTerraform(struct?: AwsFindingsFilter.FindingCriteriaPropertyOutputReference | AwsFindingsFilter.FindingCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     criterion: {
-      value: cdktn.listMapperHcl(tfFindingsFilterCriterionPropertyToHclTerraform, true)(struct!.criterion),
+      value: cdktn.listMapperHcl(awsFindingsFilterCriterionPropertyToHclTerraform, true)(struct!.criterion),
       isBlock: true,
       type: "set",
       storageClassType: "CriterionPropertyList",
@@ -508,7 +508,7 @@ export function tfFindingsFilterFindingCriteriaPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfFindingsFilterTimeoutsPropertyToTerraform(struct?: TfFindingsFilter.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsFindingsFilterTimeoutsPropertyToTerraform(struct?: AwsFindingsFilter.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -519,7 +519,7 @@ export function tfFindingsFilterTimeoutsPropertyToTerraform(struct?: TfFindingsF
 }
 
 
-export function tfFindingsFilterTimeoutsPropertyToHclTerraform(struct?: TfFindingsFilter.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsFindingsFilterTimeoutsPropertyToHclTerraform(struct?: AwsFindingsFilter.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -538,38 +538,38 @@ export function tfFindingsFilterTimeoutsPropertyToHclTerraform(struct?: TfFindin
 }
 
 
-export namespace TfFindingsFilter {
+export namespace AwsFindingsFilter {
 export interface CriterionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#eq TfFindingsFilter#eq}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#eq AwsFindingsFilter#eq}
   */
   readonly eq?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#eq_exact_match TfFindingsFilter#eq_exact_match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#eq_exact_match AwsFindingsFilter#eq_exact_match}
   */
   readonly eqExactMatch?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#field TfFindingsFilter#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#field AwsFindingsFilter#field}
   */
   readonly field: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#gt TfFindingsFilter#gt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#gt AwsFindingsFilter#gt}
   */
   readonly gt?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#gte TfFindingsFilter#gte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#gte AwsFindingsFilter#gte}
   */
   readonly gte?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#lt TfFindingsFilter#lt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#lt AwsFindingsFilter#lt}
   */
   readonly lt?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#lte TfFindingsFilter#lte}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#lte AwsFindingsFilter#lte}
   */
   readonly lte?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#neq TfFindingsFilter#neq}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#neq AwsFindingsFilter#neq}
   */
   readonly neq?: string[];
 }
@@ -808,7 +808,7 @@ export interface FindingCriteriaProperty {
   /**
   * criterion block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#criterion TfFindingsFilter#criterion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#criterion AwsFindingsFilter#criterion}
   */
   readonly criterion?: CriterionProperty[] | cdktn.IResolvable;
 }
@@ -862,7 +862,7 @@ export class FindingCriteriaPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#create TfFindingsFilter#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/macie2_findings_filter#create AwsFindingsFilter#create}
   */
   readonly create?: string;
 }

@@ -136,7 +136,7 @@ with ${groups.length} service submodules.
 \`\`\`ts
 import { lambda, s3 } from '@cdktn/aws';
 
-new lambda.TfFunction(this, 'fn', { functionName: 'f', role: r.arn });
+new lambda.AwsFunction(this, 'fn', { functionName: 'f', role: r.arn });
 \`\`\`
 
 Assembled by \`scripts/build-monolith.mjs\` from the committed \`generated/<group>/src\` trees.

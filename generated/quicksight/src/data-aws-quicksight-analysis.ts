@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfAnalysisConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsAnalysisConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_analysis#analysis_id DataTfAnalysis#analysis_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_analysis#analysis_id DataAwsAnalysis#analysis_id}
   */
   readonly analysisId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_analysis#aws_account_id DataTfAnalysis#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_analysis#aws_account_id DataAwsAnalysis#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_analysis#id DataTfAnalysis#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_analysis#id DataAwsAnalysis#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface DataTfAnalysisConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_analysis#region DataTfAnalysis#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_analysis#region DataAwsAnalysis#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_analysis#tags DataTfAnalysis#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_analysis#tags DataAwsAnalysis#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface DataTfAnalysisConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_analysis aws_quicksight_analysis}
 */
-export class DataTfAnalysis extends cdktn.TerraformDataSource {
+export class DataAwsAnalysis extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataTfAnalysis extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfAnalysis resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsAnalysis resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfAnalysis to import
-  * @param importFromId The id of the existing DataTfAnalysis that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_analysis#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfAnalysis to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsAnalysis to import
+  * @param importFromId The id of the existing DataAwsAnalysis that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/quicksight_analysis#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsAnalysis to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_analysis", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataTfAnalysis extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfAnalysisConfig
+  * @param options DataAwsAnalysisConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfAnalysisConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsAnalysisConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_analysis',
       terraformGeneratorMetadata: {
@@ -171,7 +171,7 @@ export class DataTfAnalysis extends cdktn.TerraformDataSource {
   }
 
   // permissions - computed: true, optional: false, required: false
-  private _permissions = new DataTfAnalysis.PermissionsPropertyList(this, "permissions", false);
+  private _permissions = new DataAwsAnalysis.PermissionsPropertyList(this, "permissions", false);
   public get permissions() {
     return this._permissions;
   }
@@ -271,7 +271,7 @@ export class DataTfAnalysis extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfAnalysisPermissionsPropertyToTerraform(struct?: DataTfAnalysis.PermissionsProperty): any {
+export function dataAwsAnalysisPermissionsPropertyToTerraform(struct?: DataAwsAnalysis.PermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -281,7 +281,7 @@ export function dataTfAnalysisPermissionsPropertyToTerraform(struct?: DataTfAnal
 }
 
 
-export function dataTfAnalysisPermissionsPropertyToHclTerraform(struct?: DataTfAnalysis.PermissionsProperty): any {
+export function dataAwsAnalysisPermissionsPropertyToHclTerraform(struct?: DataAwsAnalysis.PermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -292,7 +292,7 @@ export function dataTfAnalysisPermissionsPropertyToHclTerraform(struct?: DataTfA
 }
 
 
-export namespace DataTfAnalysis {
+export namespace DataAwsAnalysis {
 export interface PermissionsProperty {
 }
 export class PermissionsPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,38 +5,38 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfRouteConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsRouteConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route#id DataTfRoute#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route#id DataAwsRoute#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route#mesh_name DataTfRoute#mesh_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route#mesh_name DataAwsRoute#mesh_name}
   */
   readonly meshName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route#mesh_owner DataTfRoute#mesh_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route#mesh_owner DataAwsRoute#mesh_owner}
   */
   readonly meshOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route#name DataTfRoute#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route#name DataAwsRoute#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route#region DataTfRoute#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route#region DataAwsRoute#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route#tags DataTfRoute#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route#tags DataAwsRoute#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route#virtual_router_name DataTfRoute#virtual_router_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route#virtual_router_name DataAwsRoute#virtual_router_name}
   */
   readonly virtualRouterName: string;
 }
@@ -44,7 +44,7 @@ export interface DataTfRouteConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route aws_appmesh_route}
 */
-export class DataTfRoute extends cdktn.TerraformDataSource {
+export class DataAwsRoute extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class DataTfRoute extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfRoute resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsRoute resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfRoute to import
-  * @param importFromId The id of the existing DataTfRoute that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfRoute to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsRoute to import
+  * @param importFromId The id of the existing DataAwsRoute that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appmesh_route#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsRoute to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appmesh_route", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class DataTfRoute extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfRouteConfig
+  * @param options DataAwsRouteConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfRouteConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsRouteConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appmesh_route',
       terraformGeneratorMetadata: {
@@ -200,7 +200,7 @@ export class DataTfRoute extends cdktn.TerraformDataSource {
   }
 
   // spec - computed: true, optional: false, required: false
-  private _spec = new DataTfRoute.SpecPropertyList(this, "spec", false);
+  private _spec = new DataAwsRoute.SpecPropertyList(this, "spec", false);
   public get spec() {
     return this._spec;
   }
@@ -301,7 +301,7 @@ export class DataTfRoute extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfRouteSpecGrpcRouteActionWeightedTargetPropertyToTerraform(struct?: DataTfRoute.SpecGrpcRouteActionWeightedTargetProperty): any {
+export function dataAwsRouteSpecGrpcRouteActionWeightedTargetPropertyToTerraform(struct?: DataAwsRoute.SpecGrpcRouteActionWeightedTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -311,7 +311,7 @@ export function dataTfRouteSpecGrpcRouteActionWeightedTargetPropertyToTerraform(
 }
 
 
-export function dataTfRouteSpecGrpcRouteActionWeightedTargetPropertyToHclTerraform(struct?: DataTfRoute.SpecGrpcRouteActionWeightedTargetProperty): any {
+export function dataAwsRouteSpecGrpcRouteActionWeightedTargetPropertyToHclTerraform(struct?: DataAwsRoute.SpecGrpcRouteActionWeightedTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function dataTfRouteSpecGrpcRouteActionWeightedTargetPropertyToHclTerrafo
 }
 
 
-export function dataTfRouteSpecGrpcRouteActionPropertyToTerraform(struct?: DataTfRoute.SpecGrpcRouteActionProperty): any {
+export function dataAwsRouteSpecGrpcRouteActionPropertyToTerraform(struct?: DataAwsRoute.SpecGrpcRouteActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function dataTfRouteSpecGrpcRouteActionPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfRouteSpecGrpcRouteActionPropertyToHclTerraform(struct?: DataTfRoute.SpecGrpcRouteActionProperty): any {
+export function dataAwsRouteSpecGrpcRouteActionPropertyToHclTerraform(struct?: DataAwsRoute.SpecGrpcRouteActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,7 +343,7 @@ export function dataTfRouteSpecGrpcRouteActionPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfRouteSpecGrpcRouteMatchMetadataMatchRangePropertyToTerraform(struct?: DataTfRoute.SpecGrpcRouteMatchMetadataMatchRangeProperty): any {
+export function dataAwsRouteSpecGrpcRouteMatchMetadataMatchRangePropertyToTerraform(struct?: DataAwsRoute.SpecGrpcRouteMatchMetadataMatchRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function dataTfRouteSpecGrpcRouteMatchMetadataMatchRangePropertyToTerrafo
 }
 
 
-export function dataTfRouteSpecGrpcRouteMatchMetadataMatchRangePropertyToHclTerraform(struct?: DataTfRoute.SpecGrpcRouteMatchMetadataMatchRangeProperty): any {
+export function dataAwsRouteSpecGrpcRouteMatchMetadataMatchRangePropertyToHclTerraform(struct?: DataAwsRoute.SpecGrpcRouteMatchMetadataMatchRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,7 +364,7 @@ export function dataTfRouteSpecGrpcRouteMatchMetadataMatchRangePropertyToHclTerr
 }
 
 
-export function dataTfRouteSpecGrpcRouteMatchMetadataMatchPropertyToTerraform(struct?: DataTfRoute.SpecGrpcRouteMatchMetadataMatchProperty): any {
+export function dataAwsRouteSpecGrpcRouteMatchMetadataMatchPropertyToTerraform(struct?: DataAwsRoute.SpecGrpcRouteMatchMetadataMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,7 +374,7 @@ export function dataTfRouteSpecGrpcRouteMatchMetadataMatchPropertyToTerraform(st
 }
 
 
-export function dataTfRouteSpecGrpcRouteMatchMetadataMatchPropertyToHclTerraform(struct?: DataTfRoute.SpecGrpcRouteMatchMetadataMatchProperty): any {
+export function dataAwsRouteSpecGrpcRouteMatchMetadataMatchPropertyToHclTerraform(struct?: DataAwsRoute.SpecGrpcRouteMatchMetadataMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function dataTfRouteSpecGrpcRouteMatchMetadataMatchPropertyToHclTerraform
 }
 
 
-export function dataTfRouteMetadataPropertyToTerraform(struct?: DataTfRoute.MetadataProperty): any {
+export function dataAwsRouteMetadataPropertyToTerraform(struct?: DataAwsRoute.MetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -395,7 +395,7 @@ export function dataTfRouteMetadataPropertyToTerraform(struct?: DataTfRoute.Meta
 }
 
 
-export function dataTfRouteMetadataPropertyToHclTerraform(struct?: DataTfRoute.MetadataProperty): any {
+export function dataAwsRouteMetadataPropertyToHclTerraform(struct?: DataAwsRoute.MetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -406,7 +406,7 @@ export function dataTfRouteMetadataPropertyToHclTerraform(struct?: DataTfRoute.M
 }
 
 
-export function dataTfRouteSpecGrpcRouteMatchPropertyToTerraform(struct?: DataTfRoute.SpecGrpcRouteMatchProperty): any {
+export function dataAwsRouteSpecGrpcRouteMatchPropertyToTerraform(struct?: DataAwsRoute.SpecGrpcRouteMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,7 +416,7 @@ export function dataTfRouteSpecGrpcRouteMatchPropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfRouteSpecGrpcRouteMatchPropertyToHclTerraform(struct?: DataTfRoute.SpecGrpcRouteMatchProperty): any {
+export function dataAwsRouteSpecGrpcRouteMatchPropertyToHclTerraform(struct?: DataAwsRoute.SpecGrpcRouteMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -427,7 +427,7 @@ export function dataTfRouteSpecGrpcRouteMatchPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataTfRouteSpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct?: DataTfRoute.SpecGrpcRouteRetryPolicyPerRetryTimeoutProperty): any {
+export function dataAwsRouteSpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct?: DataAwsRoute.SpecGrpcRouteRetryPolicyPerRetryTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -437,7 +437,7 @@ export function dataTfRouteSpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyToTerr
 }
 
 
-export function dataTfRouteSpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct?: DataTfRoute.SpecGrpcRouteRetryPolicyPerRetryTimeoutProperty): any {
+export function dataAwsRouteSpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct?: DataAwsRoute.SpecGrpcRouteRetryPolicyPerRetryTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,7 +448,7 @@ export function dataTfRouteSpecGrpcRouteRetryPolicyPerRetryTimeoutPropertyToHclT
 }
 
 
-export function dataTfRouteSpecGrpcRouteRetryPolicyPropertyToTerraform(struct?: DataTfRoute.SpecGrpcRouteRetryPolicyProperty): any {
+export function dataAwsRouteSpecGrpcRouteRetryPolicyPropertyToTerraform(struct?: DataAwsRoute.SpecGrpcRouteRetryPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -458,7 +458,7 @@ export function dataTfRouteSpecGrpcRouteRetryPolicyPropertyToTerraform(struct?: 
 }
 
 
-export function dataTfRouteSpecGrpcRouteRetryPolicyPropertyToHclTerraform(struct?: DataTfRoute.SpecGrpcRouteRetryPolicyProperty): any {
+export function dataAwsRouteSpecGrpcRouteRetryPolicyPropertyToHclTerraform(struct?: DataAwsRoute.SpecGrpcRouteRetryPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,7 +469,7 @@ export function dataTfRouteSpecGrpcRouteRetryPolicyPropertyToHclTerraform(struct
 }
 
 
-export function dataTfRouteSpecGrpcRouteTimeoutIdlePropertyToTerraform(struct?: DataTfRoute.SpecGrpcRouteTimeoutIdleProperty): any {
+export function dataAwsRouteSpecGrpcRouteTimeoutIdlePropertyToTerraform(struct?: DataAwsRoute.SpecGrpcRouteTimeoutIdleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -479,7 +479,7 @@ export function dataTfRouteSpecGrpcRouteTimeoutIdlePropertyToTerraform(struct?: 
 }
 
 
-export function dataTfRouteSpecGrpcRouteTimeoutIdlePropertyToHclTerraform(struct?: DataTfRoute.SpecGrpcRouteTimeoutIdleProperty): any {
+export function dataAwsRouteSpecGrpcRouteTimeoutIdlePropertyToHclTerraform(struct?: DataAwsRoute.SpecGrpcRouteTimeoutIdleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -490,7 +490,7 @@ export function dataTfRouteSpecGrpcRouteTimeoutIdlePropertyToHclTerraform(struct
 }
 
 
-export function dataTfRouteSpecGrpcRouteTimeoutPerRequestPropertyToTerraform(struct?: DataTfRoute.SpecGrpcRouteTimeoutPerRequestProperty): any {
+export function dataAwsRouteSpecGrpcRouteTimeoutPerRequestPropertyToTerraform(struct?: DataAwsRoute.SpecGrpcRouteTimeoutPerRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,7 +500,7 @@ export function dataTfRouteSpecGrpcRouteTimeoutPerRequestPropertyToTerraform(str
 }
 
 
-export function dataTfRouteSpecGrpcRouteTimeoutPerRequestPropertyToHclTerraform(struct?: DataTfRoute.SpecGrpcRouteTimeoutPerRequestProperty): any {
+export function dataAwsRouteSpecGrpcRouteTimeoutPerRequestPropertyToHclTerraform(struct?: DataAwsRoute.SpecGrpcRouteTimeoutPerRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -511,7 +511,7 @@ export function dataTfRouteSpecGrpcRouteTimeoutPerRequestPropertyToHclTerraform(
 }
 
 
-export function dataTfRouteSpecGrpcRouteTimeoutPropertyToTerraform(struct?: DataTfRoute.SpecGrpcRouteTimeoutProperty): any {
+export function dataAwsRouteSpecGrpcRouteTimeoutPropertyToTerraform(struct?: DataAwsRoute.SpecGrpcRouteTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -521,7 +521,7 @@ export function dataTfRouteSpecGrpcRouteTimeoutPropertyToTerraform(struct?: Data
 }
 
 
-export function dataTfRouteSpecGrpcRouteTimeoutPropertyToHclTerraform(struct?: DataTfRoute.SpecGrpcRouteTimeoutProperty): any {
+export function dataAwsRouteSpecGrpcRouteTimeoutPropertyToHclTerraform(struct?: DataAwsRoute.SpecGrpcRouteTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -532,7 +532,7 @@ export function dataTfRouteSpecGrpcRouteTimeoutPropertyToHclTerraform(struct?: D
 }
 
 
-export function dataTfRouteGrpcRoutePropertyToTerraform(struct?: DataTfRoute.GrpcRouteProperty): any {
+export function dataAwsRouteGrpcRoutePropertyToTerraform(struct?: DataAwsRoute.GrpcRouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -542,7 +542,7 @@ export function dataTfRouteGrpcRoutePropertyToTerraform(struct?: DataTfRoute.Grp
 }
 
 
-export function dataTfRouteGrpcRoutePropertyToHclTerraform(struct?: DataTfRoute.GrpcRouteProperty): any {
+export function dataAwsRouteGrpcRoutePropertyToHclTerraform(struct?: DataAwsRoute.GrpcRouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -553,7 +553,7 @@ export function dataTfRouteGrpcRoutePropertyToHclTerraform(struct?: DataTfRoute.
 }
 
 
-export function dataTfRouteSpecHttp2RouteActionWeightedTargetPropertyToTerraform(struct?: DataTfRoute.SpecHttp2RouteActionWeightedTargetProperty): any {
+export function dataAwsRouteSpecHttp2RouteActionWeightedTargetPropertyToTerraform(struct?: DataAwsRoute.SpecHttp2RouteActionWeightedTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -563,7 +563,7 @@ export function dataTfRouteSpecHttp2RouteActionWeightedTargetPropertyToTerraform
 }
 
 
-export function dataTfRouteSpecHttp2RouteActionWeightedTargetPropertyToHclTerraform(struct?: DataTfRoute.SpecHttp2RouteActionWeightedTargetProperty): any {
+export function dataAwsRouteSpecHttp2RouteActionWeightedTargetPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttp2RouteActionWeightedTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,7 +574,7 @@ export function dataTfRouteSpecHttp2RouteActionWeightedTargetPropertyToHclTerraf
 }
 
 
-export function dataTfRouteSpecHttp2RouteActionPropertyToTerraform(struct?: DataTfRoute.SpecHttp2RouteActionProperty): any {
+export function dataAwsRouteSpecHttp2RouteActionPropertyToTerraform(struct?: DataAwsRoute.SpecHttp2RouteActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -584,7 +584,7 @@ export function dataTfRouteSpecHttp2RouteActionPropertyToTerraform(struct?: Data
 }
 
 
-export function dataTfRouteSpecHttp2RouteActionPropertyToHclTerraform(struct?: DataTfRoute.SpecHttp2RouteActionProperty): any {
+export function dataAwsRouteSpecHttp2RouteActionPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttp2RouteActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -595,7 +595,7 @@ export function dataTfRouteSpecHttp2RouteActionPropertyToHclTerraform(struct?: D
 }
 
 
-export function dataTfRouteSpecHttp2RouteMatchHeaderMatchRangePropertyToTerraform(struct?: DataTfRoute.SpecHttp2RouteMatchHeaderMatchRangeProperty): any {
+export function dataAwsRouteSpecHttp2RouteMatchHeaderMatchRangePropertyToTerraform(struct?: DataAwsRoute.SpecHttp2RouteMatchHeaderMatchRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -605,7 +605,7 @@ export function dataTfRouteSpecHttp2RouteMatchHeaderMatchRangePropertyToTerrafor
 }
 
 
-export function dataTfRouteSpecHttp2RouteMatchHeaderMatchRangePropertyToHclTerraform(struct?: DataTfRoute.SpecHttp2RouteMatchHeaderMatchRangeProperty): any {
+export function dataAwsRouteSpecHttp2RouteMatchHeaderMatchRangePropertyToHclTerraform(struct?: DataAwsRoute.SpecHttp2RouteMatchHeaderMatchRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -616,7 +616,7 @@ export function dataTfRouteSpecHttp2RouteMatchHeaderMatchRangePropertyToHclTerra
 }
 
 
-export function dataTfRouteSpecHttp2RouteMatchHeaderMatchPropertyToTerraform(struct?: DataTfRoute.SpecHttp2RouteMatchHeaderMatchProperty): any {
+export function dataAwsRouteSpecHttp2RouteMatchHeaderMatchPropertyToTerraform(struct?: DataAwsRoute.SpecHttp2RouteMatchHeaderMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -626,7 +626,7 @@ export function dataTfRouteSpecHttp2RouteMatchHeaderMatchPropertyToTerraform(str
 }
 
 
-export function dataTfRouteSpecHttp2RouteMatchHeaderMatchPropertyToHclTerraform(struct?: DataTfRoute.SpecHttp2RouteMatchHeaderMatchProperty): any {
+export function dataAwsRouteSpecHttp2RouteMatchHeaderMatchPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttp2RouteMatchHeaderMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -637,7 +637,7 @@ export function dataTfRouteSpecHttp2RouteMatchHeaderMatchPropertyToHclTerraform(
 }
 
 
-export function dataTfRouteSpecHttp2RouteMatchHeaderPropertyToTerraform(struct?: DataTfRoute.SpecHttp2RouteMatchHeaderProperty): any {
+export function dataAwsRouteSpecHttp2RouteMatchHeaderPropertyToTerraform(struct?: DataAwsRoute.SpecHttp2RouteMatchHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -647,7 +647,7 @@ export function dataTfRouteSpecHttp2RouteMatchHeaderPropertyToTerraform(struct?:
 }
 
 
-export function dataTfRouteSpecHttp2RouteMatchHeaderPropertyToHclTerraform(struct?: DataTfRoute.SpecHttp2RouteMatchHeaderProperty): any {
+export function dataAwsRouteSpecHttp2RouteMatchHeaderPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttp2RouteMatchHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -658,7 +658,7 @@ export function dataTfRouteSpecHttp2RouteMatchHeaderPropertyToHclTerraform(struc
 }
 
 
-export function dataTfRouteSpecHttp2RouteMatchPathPropertyToTerraform(struct?: DataTfRoute.SpecHttp2RouteMatchPathProperty): any {
+export function dataAwsRouteSpecHttp2RouteMatchPathPropertyToTerraform(struct?: DataAwsRoute.SpecHttp2RouteMatchPathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -668,7 +668,7 @@ export function dataTfRouteSpecHttp2RouteMatchPathPropertyToTerraform(struct?: D
 }
 
 
-export function dataTfRouteSpecHttp2RouteMatchPathPropertyToHclTerraform(struct?: DataTfRoute.SpecHttp2RouteMatchPathProperty): any {
+export function dataAwsRouteSpecHttp2RouteMatchPathPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttp2RouteMatchPathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -679,7 +679,7 @@ export function dataTfRouteSpecHttp2RouteMatchPathPropertyToHclTerraform(struct?
 }
 
 
-export function dataTfRouteSpecHttp2RouteMatchQueryParameterMatchPropertyToTerraform(struct?: DataTfRoute.SpecHttp2RouteMatchQueryParameterMatchProperty): any {
+export function dataAwsRouteSpecHttp2RouteMatchQueryParameterMatchPropertyToTerraform(struct?: DataAwsRoute.SpecHttp2RouteMatchQueryParameterMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -689,7 +689,7 @@ export function dataTfRouteSpecHttp2RouteMatchQueryParameterMatchPropertyToTerra
 }
 
 
-export function dataTfRouteSpecHttp2RouteMatchQueryParameterMatchPropertyToHclTerraform(struct?: DataTfRoute.SpecHttp2RouteMatchQueryParameterMatchProperty): any {
+export function dataAwsRouteSpecHttp2RouteMatchQueryParameterMatchPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttp2RouteMatchQueryParameterMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -700,7 +700,7 @@ export function dataTfRouteSpecHttp2RouteMatchQueryParameterMatchPropertyToHclTe
 }
 
 
-export function dataTfRouteSpecHttp2RouteMatchQueryParameterPropertyToTerraform(struct?: DataTfRoute.SpecHttp2RouteMatchQueryParameterProperty): any {
+export function dataAwsRouteSpecHttp2RouteMatchQueryParameterPropertyToTerraform(struct?: DataAwsRoute.SpecHttp2RouteMatchQueryParameterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -710,7 +710,7 @@ export function dataTfRouteSpecHttp2RouteMatchQueryParameterPropertyToTerraform(
 }
 
 
-export function dataTfRouteSpecHttp2RouteMatchQueryParameterPropertyToHclTerraform(struct?: DataTfRoute.SpecHttp2RouteMatchQueryParameterProperty): any {
+export function dataAwsRouteSpecHttp2RouteMatchQueryParameterPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttp2RouteMatchQueryParameterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -721,7 +721,7 @@ export function dataTfRouteSpecHttp2RouteMatchQueryParameterPropertyToHclTerrafo
 }
 
 
-export function dataTfRouteSpecHttp2RouteMatchPropertyToTerraform(struct?: DataTfRoute.SpecHttp2RouteMatchProperty): any {
+export function dataAwsRouteSpecHttp2RouteMatchPropertyToTerraform(struct?: DataAwsRoute.SpecHttp2RouteMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -731,7 +731,7 @@ export function dataTfRouteSpecHttp2RouteMatchPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfRouteSpecHttp2RouteMatchPropertyToHclTerraform(struct?: DataTfRoute.SpecHttp2RouteMatchProperty): any {
+export function dataAwsRouteSpecHttp2RouteMatchPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttp2RouteMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -742,7 +742,7 @@ export function dataTfRouteSpecHttp2RouteMatchPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfRouteSpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct?: DataTfRoute.SpecHttp2RouteRetryPolicyPerRetryTimeoutProperty): any {
+export function dataAwsRouteSpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct?: DataAwsRoute.SpecHttp2RouteRetryPolicyPerRetryTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -752,7 +752,7 @@ export function dataTfRouteSpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyToTer
 }
 
 
-export function dataTfRouteSpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct?: DataTfRoute.SpecHttp2RouteRetryPolicyPerRetryTimeoutProperty): any {
+export function dataAwsRouteSpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttp2RouteRetryPolicyPerRetryTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -763,7 +763,7 @@ export function dataTfRouteSpecHttp2RouteRetryPolicyPerRetryTimeoutPropertyToHcl
 }
 
 
-export function dataTfRouteSpecHttp2RouteRetryPolicyPropertyToTerraform(struct?: DataTfRoute.SpecHttp2RouteRetryPolicyProperty): any {
+export function dataAwsRouteSpecHttp2RouteRetryPolicyPropertyToTerraform(struct?: DataAwsRoute.SpecHttp2RouteRetryPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -773,7 +773,7 @@ export function dataTfRouteSpecHttp2RouteRetryPolicyPropertyToTerraform(struct?:
 }
 
 
-export function dataTfRouteSpecHttp2RouteRetryPolicyPropertyToHclTerraform(struct?: DataTfRoute.SpecHttp2RouteRetryPolicyProperty): any {
+export function dataAwsRouteSpecHttp2RouteRetryPolicyPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttp2RouteRetryPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -784,7 +784,7 @@ export function dataTfRouteSpecHttp2RouteRetryPolicyPropertyToHclTerraform(struc
 }
 
 
-export function dataTfRouteSpecHttp2RouteTimeoutIdlePropertyToTerraform(struct?: DataTfRoute.SpecHttp2RouteTimeoutIdleProperty): any {
+export function dataAwsRouteSpecHttp2RouteTimeoutIdlePropertyToTerraform(struct?: DataAwsRoute.SpecHttp2RouteTimeoutIdleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -794,7 +794,7 @@ export function dataTfRouteSpecHttp2RouteTimeoutIdlePropertyToTerraform(struct?:
 }
 
 
-export function dataTfRouteSpecHttp2RouteTimeoutIdlePropertyToHclTerraform(struct?: DataTfRoute.SpecHttp2RouteTimeoutIdleProperty): any {
+export function dataAwsRouteSpecHttp2RouteTimeoutIdlePropertyToHclTerraform(struct?: DataAwsRoute.SpecHttp2RouteTimeoutIdleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -805,7 +805,7 @@ export function dataTfRouteSpecHttp2RouteTimeoutIdlePropertyToHclTerraform(struc
 }
 
 
-export function dataTfRouteSpecHttp2RouteTimeoutPerRequestPropertyToTerraform(struct?: DataTfRoute.SpecHttp2RouteTimeoutPerRequestProperty): any {
+export function dataAwsRouteSpecHttp2RouteTimeoutPerRequestPropertyToTerraform(struct?: DataAwsRoute.SpecHttp2RouteTimeoutPerRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -815,7 +815,7 @@ export function dataTfRouteSpecHttp2RouteTimeoutPerRequestPropertyToTerraform(st
 }
 
 
-export function dataTfRouteSpecHttp2RouteTimeoutPerRequestPropertyToHclTerraform(struct?: DataTfRoute.SpecHttp2RouteTimeoutPerRequestProperty): any {
+export function dataAwsRouteSpecHttp2RouteTimeoutPerRequestPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttp2RouteTimeoutPerRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -826,7 +826,7 @@ export function dataTfRouteSpecHttp2RouteTimeoutPerRequestPropertyToHclTerraform
 }
 
 
-export function dataTfRouteSpecHttp2RouteTimeoutPropertyToTerraform(struct?: DataTfRoute.SpecHttp2RouteTimeoutProperty): any {
+export function dataAwsRouteSpecHttp2RouteTimeoutPropertyToTerraform(struct?: DataAwsRoute.SpecHttp2RouteTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -836,7 +836,7 @@ export function dataTfRouteSpecHttp2RouteTimeoutPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataTfRouteSpecHttp2RouteTimeoutPropertyToHclTerraform(struct?: DataTfRoute.SpecHttp2RouteTimeoutProperty): any {
+export function dataAwsRouteSpecHttp2RouteTimeoutPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttp2RouteTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -847,7 +847,7 @@ export function dataTfRouteSpecHttp2RouteTimeoutPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataTfRouteHttp2RoutePropertyToTerraform(struct?: DataTfRoute.Http2RouteProperty): any {
+export function dataAwsRouteHttp2RoutePropertyToTerraform(struct?: DataAwsRoute.Http2RouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -857,7 +857,7 @@ export function dataTfRouteHttp2RoutePropertyToTerraform(struct?: DataTfRoute.Ht
 }
 
 
-export function dataTfRouteHttp2RoutePropertyToHclTerraform(struct?: DataTfRoute.Http2RouteProperty): any {
+export function dataAwsRouteHttp2RoutePropertyToHclTerraform(struct?: DataAwsRoute.Http2RouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -868,7 +868,7 @@ export function dataTfRouteHttp2RoutePropertyToHclTerraform(struct?: DataTfRoute
 }
 
 
-export function dataTfRouteSpecHttpRouteActionWeightedTargetPropertyToTerraform(struct?: DataTfRoute.SpecHttpRouteActionWeightedTargetProperty): any {
+export function dataAwsRouteSpecHttpRouteActionWeightedTargetPropertyToTerraform(struct?: DataAwsRoute.SpecHttpRouteActionWeightedTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -878,7 +878,7 @@ export function dataTfRouteSpecHttpRouteActionWeightedTargetPropertyToTerraform(
 }
 
 
-export function dataTfRouteSpecHttpRouteActionWeightedTargetPropertyToHclTerraform(struct?: DataTfRoute.SpecHttpRouteActionWeightedTargetProperty): any {
+export function dataAwsRouteSpecHttpRouteActionWeightedTargetPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttpRouteActionWeightedTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -889,7 +889,7 @@ export function dataTfRouteSpecHttpRouteActionWeightedTargetPropertyToHclTerrafo
 }
 
 
-export function dataTfRouteSpecHttpRouteActionPropertyToTerraform(struct?: DataTfRoute.SpecHttpRouteActionProperty): any {
+export function dataAwsRouteSpecHttpRouteActionPropertyToTerraform(struct?: DataAwsRoute.SpecHttpRouteActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -899,7 +899,7 @@ export function dataTfRouteSpecHttpRouteActionPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfRouteSpecHttpRouteActionPropertyToHclTerraform(struct?: DataTfRoute.SpecHttpRouteActionProperty): any {
+export function dataAwsRouteSpecHttpRouteActionPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttpRouteActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -910,7 +910,7 @@ export function dataTfRouteSpecHttpRouteActionPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfRouteSpecHttpRouteMatchHeaderMatchRangePropertyToTerraform(struct?: DataTfRoute.SpecHttpRouteMatchHeaderMatchRangeProperty): any {
+export function dataAwsRouteSpecHttpRouteMatchHeaderMatchRangePropertyToTerraform(struct?: DataAwsRoute.SpecHttpRouteMatchHeaderMatchRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -920,7 +920,7 @@ export function dataTfRouteSpecHttpRouteMatchHeaderMatchRangePropertyToTerraform
 }
 
 
-export function dataTfRouteSpecHttpRouteMatchHeaderMatchRangePropertyToHclTerraform(struct?: DataTfRoute.SpecHttpRouteMatchHeaderMatchRangeProperty): any {
+export function dataAwsRouteSpecHttpRouteMatchHeaderMatchRangePropertyToHclTerraform(struct?: DataAwsRoute.SpecHttpRouteMatchHeaderMatchRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -931,7 +931,7 @@ export function dataTfRouteSpecHttpRouteMatchHeaderMatchRangePropertyToHclTerraf
 }
 
 
-export function dataTfRouteSpecHttpRouteMatchHeaderMatchPropertyToTerraform(struct?: DataTfRoute.SpecHttpRouteMatchHeaderMatchProperty): any {
+export function dataAwsRouteSpecHttpRouteMatchHeaderMatchPropertyToTerraform(struct?: DataAwsRoute.SpecHttpRouteMatchHeaderMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -941,7 +941,7 @@ export function dataTfRouteSpecHttpRouteMatchHeaderMatchPropertyToTerraform(stru
 }
 
 
-export function dataTfRouteSpecHttpRouteMatchHeaderMatchPropertyToHclTerraform(struct?: DataTfRoute.SpecHttpRouteMatchHeaderMatchProperty): any {
+export function dataAwsRouteSpecHttpRouteMatchHeaderMatchPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttpRouteMatchHeaderMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -952,7 +952,7 @@ export function dataTfRouteSpecHttpRouteMatchHeaderMatchPropertyToHclTerraform(s
 }
 
 
-export function dataTfRouteSpecHttpRouteMatchHeaderPropertyToTerraform(struct?: DataTfRoute.SpecHttpRouteMatchHeaderProperty): any {
+export function dataAwsRouteSpecHttpRouteMatchHeaderPropertyToTerraform(struct?: DataAwsRoute.SpecHttpRouteMatchHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -962,7 +962,7 @@ export function dataTfRouteSpecHttpRouteMatchHeaderPropertyToTerraform(struct?: 
 }
 
 
-export function dataTfRouteSpecHttpRouteMatchHeaderPropertyToHclTerraform(struct?: DataTfRoute.SpecHttpRouteMatchHeaderProperty): any {
+export function dataAwsRouteSpecHttpRouteMatchHeaderPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttpRouteMatchHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -973,7 +973,7 @@ export function dataTfRouteSpecHttpRouteMatchHeaderPropertyToHclTerraform(struct
 }
 
 
-export function dataTfRouteSpecHttpRouteMatchPathPropertyToTerraform(struct?: DataTfRoute.SpecHttpRouteMatchPathProperty): any {
+export function dataAwsRouteSpecHttpRouteMatchPathPropertyToTerraform(struct?: DataAwsRoute.SpecHttpRouteMatchPathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -983,7 +983,7 @@ export function dataTfRouteSpecHttpRouteMatchPathPropertyToTerraform(struct?: Da
 }
 
 
-export function dataTfRouteSpecHttpRouteMatchPathPropertyToHclTerraform(struct?: DataTfRoute.SpecHttpRouteMatchPathProperty): any {
+export function dataAwsRouteSpecHttpRouteMatchPathPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttpRouteMatchPathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -994,7 +994,7 @@ export function dataTfRouteSpecHttpRouteMatchPathPropertyToHclTerraform(struct?:
 }
 
 
-export function dataTfRouteSpecHttpRouteMatchQueryParameterMatchPropertyToTerraform(struct?: DataTfRoute.SpecHttpRouteMatchQueryParameterMatchProperty): any {
+export function dataAwsRouteSpecHttpRouteMatchQueryParameterMatchPropertyToTerraform(struct?: DataAwsRoute.SpecHttpRouteMatchQueryParameterMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1004,7 +1004,7 @@ export function dataTfRouteSpecHttpRouteMatchQueryParameterMatchPropertyToTerraf
 }
 
 
-export function dataTfRouteSpecHttpRouteMatchQueryParameterMatchPropertyToHclTerraform(struct?: DataTfRoute.SpecHttpRouteMatchQueryParameterMatchProperty): any {
+export function dataAwsRouteSpecHttpRouteMatchQueryParameterMatchPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttpRouteMatchQueryParameterMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1015,7 +1015,7 @@ export function dataTfRouteSpecHttpRouteMatchQueryParameterMatchPropertyToHclTer
 }
 
 
-export function dataTfRouteSpecHttpRouteMatchQueryParameterPropertyToTerraform(struct?: DataTfRoute.SpecHttpRouteMatchQueryParameterProperty): any {
+export function dataAwsRouteSpecHttpRouteMatchQueryParameterPropertyToTerraform(struct?: DataAwsRoute.SpecHttpRouteMatchQueryParameterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1025,7 +1025,7 @@ export function dataTfRouteSpecHttpRouteMatchQueryParameterPropertyToTerraform(s
 }
 
 
-export function dataTfRouteSpecHttpRouteMatchQueryParameterPropertyToHclTerraform(struct?: DataTfRoute.SpecHttpRouteMatchQueryParameterProperty): any {
+export function dataAwsRouteSpecHttpRouteMatchQueryParameterPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttpRouteMatchQueryParameterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1036,7 +1036,7 @@ export function dataTfRouteSpecHttpRouteMatchQueryParameterPropertyToHclTerrafor
 }
 
 
-export function dataTfRouteSpecHttpRouteMatchPropertyToTerraform(struct?: DataTfRoute.SpecHttpRouteMatchProperty): any {
+export function dataAwsRouteSpecHttpRouteMatchPropertyToTerraform(struct?: DataAwsRoute.SpecHttpRouteMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1046,7 +1046,7 @@ export function dataTfRouteSpecHttpRouteMatchPropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfRouteSpecHttpRouteMatchPropertyToHclTerraform(struct?: DataTfRoute.SpecHttpRouteMatchProperty): any {
+export function dataAwsRouteSpecHttpRouteMatchPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttpRouteMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1057,7 +1057,7 @@ export function dataTfRouteSpecHttpRouteMatchPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataTfRouteSpecHttpRouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct?: DataTfRoute.SpecHttpRouteRetryPolicyPerRetryTimeoutProperty): any {
+export function dataAwsRouteSpecHttpRouteRetryPolicyPerRetryTimeoutPropertyToTerraform(struct?: DataAwsRoute.SpecHttpRouteRetryPolicyPerRetryTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1067,7 +1067,7 @@ export function dataTfRouteSpecHttpRouteRetryPolicyPerRetryTimeoutPropertyToTerr
 }
 
 
-export function dataTfRouteSpecHttpRouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct?: DataTfRoute.SpecHttpRouteRetryPolicyPerRetryTimeoutProperty): any {
+export function dataAwsRouteSpecHttpRouteRetryPolicyPerRetryTimeoutPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttpRouteRetryPolicyPerRetryTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1078,7 +1078,7 @@ export function dataTfRouteSpecHttpRouteRetryPolicyPerRetryTimeoutPropertyToHclT
 }
 
 
-export function dataTfRouteSpecHttpRouteRetryPolicyPropertyToTerraform(struct?: DataTfRoute.SpecHttpRouteRetryPolicyProperty): any {
+export function dataAwsRouteSpecHttpRouteRetryPolicyPropertyToTerraform(struct?: DataAwsRoute.SpecHttpRouteRetryPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1088,7 +1088,7 @@ export function dataTfRouteSpecHttpRouteRetryPolicyPropertyToTerraform(struct?: 
 }
 
 
-export function dataTfRouteSpecHttpRouteRetryPolicyPropertyToHclTerraform(struct?: DataTfRoute.SpecHttpRouteRetryPolicyProperty): any {
+export function dataAwsRouteSpecHttpRouteRetryPolicyPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttpRouteRetryPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1099,7 +1099,7 @@ export function dataTfRouteSpecHttpRouteRetryPolicyPropertyToHclTerraform(struct
 }
 
 
-export function dataTfRouteSpecHttpRouteTimeoutIdlePropertyToTerraform(struct?: DataTfRoute.SpecHttpRouteTimeoutIdleProperty): any {
+export function dataAwsRouteSpecHttpRouteTimeoutIdlePropertyToTerraform(struct?: DataAwsRoute.SpecHttpRouteTimeoutIdleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1109,7 +1109,7 @@ export function dataTfRouteSpecHttpRouteTimeoutIdlePropertyToTerraform(struct?: 
 }
 
 
-export function dataTfRouteSpecHttpRouteTimeoutIdlePropertyToHclTerraform(struct?: DataTfRoute.SpecHttpRouteTimeoutIdleProperty): any {
+export function dataAwsRouteSpecHttpRouteTimeoutIdlePropertyToHclTerraform(struct?: DataAwsRoute.SpecHttpRouteTimeoutIdleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1120,7 +1120,7 @@ export function dataTfRouteSpecHttpRouteTimeoutIdlePropertyToHclTerraform(struct
 }
 
 
-export function dataTfRouteSpecHttpRouteTimeoutPerRequestPropertyToTerraform(struct?: DataTfRoute.SpecHttpRouteTimeoutPerRequestProperty): any {
+export function dataAwsRouteSpecHttpRouteTimeoutPerRequestPropertyToTerraform(struct?: DataAwsRoute.SpecHttpRouteTimeoutPerRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1130,7 +1130,7 @@ export function dataTfRouteSpecHttpRouteTimeoutPerRequestPropertyToTerraform(str
 }
 
 
-export function dataTfRouteSpecHttpRouteTimeoutPerRequestPropertyToHclTerraform(struct?: DataTfRoute.SpecHttpRouteTimeoutPerRequestProperty): any {
+export function dataAwsRouteSpecHttpRouteTimeoutPerRequestPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttpRouteTimeoutPerRequestProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1141,7 +1141,7 @@ export function dataTfRouteSpecHttpRouteTimeoutPerRequestPropertyToHclTerraform(
 }
 
 
-export function dataTfRouteSpecHttpRouteTimeoutPropertyToTerraform(struct?: DataTfRoute.SpecHttpRouteTimeoutProperty): any {
+export function dataAwsRouteSpecHttpRouteTimeoutPropertyToTerraform(struct?: DataAwsRoute.SpecHttpRouteTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1151,7 +1151,7 @@ export function dataTfRouteSpecHttpRouteTimeoutPropertyToTerraform(struct?: Data
 }
 
 
-export function dataTfRouteSpecHttpRouteTimeoutPropertyToHclTerraform(struct?: DataTfRoute.SpecHttpRouteTimeoutProperty): any {
+export function dataAwsRouteSpecHttpRouteTimeoutPropertyToHclTerraform(struct?: DataAwsRoute.SpecHttpRouteTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1162,7 +1162,7 @@ export function dataTfRouteSpecHttpRouteTimeoutPropertyToHclTerraform(struct?: D
 }
 
 
-export function dataTfRouteHttpRoutePropertyToTerraform(struct?: DataTfRoute.HttpRouteProperty): any {
+export function dataAwsRouteHttpRoutePropertyToTerraform(struct?: DataAwsRoute.HttpRouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1172,7 +1172,7 @@ export function dataTfRouteHttpRoutePropertyToTerraform(struct?: DataTfRoute.Htt
 }
 
 
-export function dataTfRouteHttpRoutePropertyToHclTerraform(struct?: DataTfRoute.HttpRouteProperty): any {
+export function dataAwsRouteHttpRoutePropertyToHclTerraform(struct?: DataAwsRoute.HttpRouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1183,7 +1183,7 @@ export function dataTfRouteHttpRoutePropertyToHclTerraform(struct?: DataTfRoute.
 }
 
 
-export function dataTfRouteSpecTcpRouteActionWeightedTargetPropertyToTerraform(struct?: DataTfRoute.SpecTcpRouteActionWeightedTargetProperty): any {
+export function dataAwsRouteSpecTcpRouteActionWeightedTargetPropertyToTerraform(struct?: DataAwsRoute.SpecTcpRouteActionWeightedTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1193,7 +1193,7 @@ export function dataTfRouteSpecTcpRouteActionWeightedTargetPropertyToTerraform(s
 }
 
 
-export function dataTfRouteSpecTcpRouteActionWeightedTargetPropertyToHclTerraform(struct?: DataTfRoute.SpecTcpRouteActionWeightedTargetProperty): any {
+export function dataAwsRouteSpecTcpRouteActionWeightedTargetPropertyToHclTerraform(struct?: DataAwsRoute.SpecTcpRouteActionWeightedTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1204,7 +1204,7 @@ export function dataTfRouteSpecTcpRouteActionWeightedTargetPropertyToHclTerrafor
 }
 
 
-export function dataTfRouteSpecTcpRouteActionPropertyToTerraform(struct?: DataTfRoute.SpecTcpRouteActionProperty): any {
+export function dataAwsRouteSpecTcpRouteActionPropertyToTerraform(struct?: DataAwsRoute.SpecTcpRouteActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1214,7 +1214,7 @@ export function dataTfRouteSpecTcpRouteActionPropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfRouteSpecTcpRouteActionPropertyToHclTerraform(struct?: DataTfRoute.SpecTcpRouteActionProperty): any {
+export function dataAwsRouteSpecTcpRouteActionPropertyToHclTerraform(struct?: DataAwsRoute.SpecTcpRouteActionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1225,7 +1225,7 @@ export function dataTfRouteSpecTcpRouteActionPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataTfRouteSpecTcpRouteMatchPropertyToTerraform(struct?: DataTfRoute.SpecTcpRouteMatchProperty): any {
+export function dataAwsRouteSpecTcpRouteMatchPropertyToTerraform(struct?: DataAwsRoute.SpecTcpRouteMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1235,7 +1235,7 @@ export function dataTfRouteSpecTcpRouteMatchPropertyToTerraform(struct?: DataTfR
 }
 
 
-export function dataTfRouteSpecTcpRouteMatchPropertyToHclTerraform(struct?: DataTfRoute.SpecTcpRouteMatchProperty): any {
+export function dataAwsRouteSpecTcpRouteMatchPropertyToHclTerraform(struct?: DataAwsRoute.SpecTcpRouteMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1246,7 +1246,7 @@ export function dataTfRouteSpecTcpRouteMatchPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataTfRouteSpecTcpRouteTimeoutIdlePropertyToTerraform(struct?: DataTfRoute.SpecTcpRouteTimeoutIdleProperty): any {
+export function dataAwsRouteSpecTcpRouteTimeoutIdlePropertyToTerraform(struct?: DataAwsRoute.SpecTcpRouteTimeoutIdleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1256,7 +1256,7 @@ export function dataTfRouteSpecTcpRouteTimeoutIdlePropertyToTerraform(struct?: D
 }
 
 
-export function dataTfRouteSpecTcpRouteTimeoutIdlePropertyToHclTerraform(struct?: DataTfRoute.SpecTcpRouteTimeoutIdleProperty): any {
+export function dataAwsRouteSpecTcpRouteTimeoutIdlePropertyToHclTerraform(struct?: DataAwsRoute.SpecTcpRouteTimeoutIdleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1267,7 +1267,7 @@ export function dataTfRouteSpecTcpRouteTimeoutIdlePropertyToHclTerraform(struct?
 }
 
 
-export function dataTfRouteSpecTcpRouteTimeoutPropertyToTerraform(struct?: DataTfRoute.SpecTcpRouteTimeoutProperty): any {
+export function dataAwsRouteSpecTcpRouteTimeoutPropertyToTerraform(struct?: DataAwsRoute.SpecTcpRouteTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1277,7 +1277,7 @@ export function dataTfRouteSpecTcpRouteTimeoutPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfRouteSpecTcpRouteTimeoutPropertyToHclTerraform(struct?: DataTfRoute.SpecTcpRouteTimeoutProperty): any {
+export function dataAwsRouteSpecTcpRouteTimeoutPropertyToHclTerraform(struct?: DataAwsRoute.SpecTcpRouteTimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1288,7 +1288,7 @@ export function dataTfRouteSpecTcpRouteTimeoutPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfRouteTcpRoutePropertyToTerraform(struct?: DataTfRoute.TcpRouteProperty): any {
+export function dataAwsRouteTcpRoutePropertyToTerraform(struct?: DataAwsRoute.TcpRouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1298,7 +1298,7 @@ export function dataTfRouteTcpRoutePropertyToTerraform(struct?: DataTfRoute.TcpR
 }
 
 
-export function dataTfRouteTcpRoutePropertyToHclTerraform(struct?: DataTfRoute.TcpRouteProperty): any {
+export function dataAwsRouteTcpRoutePropertyToHclTerraform(struct?: DataAwsRoute.TcpRouteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1309,7 +1309,7 @@ export function dataTfRouteTcpRoutePropertyToHclTerraform(struct?: DataTfRoute.T
 }
 
 
-export function dataTfRouteSpecPropertyToTerraform(struct?: DataTfRoute.SpecProperty): any {
+export function dataAwsRouteSpecPropertyToTerraform(struct?: DataAwsRoute.SpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1319,7 +1319,7 @@ export function dataTfRouteSpecPropertyToTerraform(struct?: DataTfRoute.SpecProp
 }
 
 
-export function dataTfRouteSpecPropertyToHclTerraform(struct?: DataTfRoute.SpecProperty): any {
+export function dataAwsRouteSpecPropertyToHclTerraform(struct?: DataAwsRoute.SpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1330,7 +1330,7 @@ export function dataTfRouteSpecPropertyToHclTerraform(struct?: DataTfRoute.SpecP
 }
 
 
-export namespace DataTfRoute {
+export namespace DataAwsRoute {
 export interface SpecGrpcRouteActionWeightedTargetProperty {
 }
 export class SpecGrpcRouteActionWeightedTargetPropertyOutputReference extends cdktn.ComplexObject {

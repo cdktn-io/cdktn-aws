@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSenderIdConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSenderIdConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#deletion_protection_enabled TfSenderId#deletion_protection_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#deletion_protection_enabled AwsSenderId#deletion_protection_enabled}
   */
   readonly deletionProtectionEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#iso_country_code TfSenderId#iso_country_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#iso_country_code AwsSenderId#iso_country_code}
   */
   readonly isoCountryCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#message_types TfSenderId#message_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#message_types AwsSenderId#message_types}
   */
   readonly messageTypes?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#region TfSenderId#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#region AwsSenderId#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#sender_id TfSenderId#sender_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#sender_id AwsSenderId#sender_id}
   */
   readonly senderId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#tags TfSenderId#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#tags AwsSenderId#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#timeouts TfSenderId#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#timeouts AwsSenderId#timeouts}
   */
-  readonly timeouts?: TfSenderId.TimeoutsProperty;
+  readonly timeouts?: AwsSenderId.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id aws_pinpointsmsvoicev2_sender_id}
 */
-export class TfSenderId extends cdktn.TerraformResource {
+export class AwsSenderId extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class TfSenderId extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSenderId resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSenderId resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSenderId to import
-  * @param importFromId The id of the existing TfSenderId that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSenderId to import is found
+  * @param importToId The construct id used in the generated config for the AwsSenderId to import
+  * @param importFromId The id of the existing AwsSenderId that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSenderId to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_pinpointsmsvoicev2_sender_id", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class TfSenderId extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSenderIdConfig
+  * @param options AwsSenderIdConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSenderIdConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSenderIdConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_pinpointsmsvoicev2_sender_id',
       terraformGeneratorMetadata: {
@@ -221,11 +221,11 @@ export class TfSenderId extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfSenderId.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsSenderId.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfSenderId.TimeoutsProperty) {
+  public putTimeouts(value: AwsSenderId.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -248,7 +248,7 @@ export class TfSenderId extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       sender_id: cdktn.stringToTerraform(this._senderId),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: tfSenderIdTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsSenderIdTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -291,10 +291,10 @@ export class TfSenderId extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfSenderIdTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsSenderIdTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfSenderId.TimeoutsProperty",
+        storageClassType: "AwsSenderId.TimeoutsProperty",
       },
     };
 
@@ -303,7 +303,7 @@ export class TfSenderId extends cdktn.TerraformResource {
   }
 }
 
-export function tfSenderIdTimeoutsPropertyToTerraform(struct?: TfSenderId.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSenderIdTimeoutsPropertyToTerraform(struct?: AwsSenderId.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -316,7 +316,7 @@ export function tfSenderIdTimeoutsPropertyToTerraform(struct?: TfSenderId.Timeou
 }
 
 
-export function tfSenderIdTimeoutsPropertyToHclTerraform(struct?: TfSenderId.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSenderIdTimeoutsPropertyToHclTerraform(struct?: AwsSenderId.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,24 +347,24 @@ export function tfSenderIdTimeoutsPropertyToHclTerraform(struct?: TfSenderId.Tim
 }
 
 
-export namespace TfSenderId {
+export namespace AwsSenderId {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#create TfSenderId#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#create AwsSenderId#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#delete TfSenderId#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#delete AwsSenderId#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#update TfSenderId#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_sender_id#update AwsSenderId#update}
   */
   readonly update?: string;
 }

@@ -5,53 +5,53 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfShardGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsShardGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#compute_redundancy TfShardGroup#compute_redundancy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#compute_redundancy AwsShardGroup#compute_redundancy}
   */
   readonly computeRedundancy?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#db_cluster_identifier TfShardGroup#db_cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#db_cluster_identifier AwsShardGroup#db_cluster_identifier}
   */
   readonly dbClusterIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#db_shard_group_identifier TfShardGroup#db_shard_group_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#db_shard_group_identifier AwsShardGroup#db_shard_group_identifier}
   */
   readonly dbShardGroupIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#max_acu TfShardGroup#max_acu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#max_acu AwsShardGroup#max_acu}
   */
   readonly maxAcu: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#min_acu TfShardGroup#min_acu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#min_acu AwsShardGroup#min_acu}
   */
   readonly minAcu?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#publicly_accessible TfShardGroup#publicly_accessible}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#publicly_accessible AwsShardGroup#publicly_accessible}
   */
   readonly publiclyAccessible?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#region TfShardGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#region AwsShardGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#tags TfShardGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#tags AwsShardGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#timeouts TfShardGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#timeouts AwsShardGroup#timeouts}
   */
-  readonly timeouts?: TfShardGroup.TimeoutsProperty;
+  readonly timeouts?: AwsShardGroup.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group aws_rds_shard_group}
 */
-export class TfShardGroup extends cdktn.TerraformResource {
+export class AwsShardGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -62,11 +62,11 @@ export class TfShardGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfShardGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsShardGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfShardGroup to import
-  * @param importFromId The id of the existing TfShardGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfShardGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsShardGroup to import
+  * @param importFromId The id of the existing AwsShardGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsShardGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_rds_shard_group", importId: importFromId, provider });
@@ -81,9 +81,9 @@ export class TfShardGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfShardGroupConfig
+  * @param options AwsShardGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfShardGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsShardGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_rds_shard_group',
       terraformGeneratorMetadata: {
@@ -255,11 +255,11 @@ export class TfShardGroup extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfShardGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsShardGroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfShardGroup.TimeoutsProperty) {
+  public putTimeouts(value: AwsShardGroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -284,7 +284,7 @@ export class TfShardGroup extends cdktn.TerraformResource {
       publicly_accessible: cdktn.booleanToTerraform(this._publiclyAccessible),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: tfShardGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsShardGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -339,10 +339,10 @@ export class TfShardGroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfShardGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsShardGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfShardGroup.TimeoutsProperty",
+        storageClassType: "AwsShardGroup.TimeoutsProperty",
       },
     };
 
@@ -351,7 +351,7 @@ export class TfShardGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfShardGroupTimeoutsPropertyToTerraform(struct?: TfShardGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsShardGroupTimeoutsPropertyToTerraform(struct?: AwsShardGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,7 +364,7 @@ export function tfShardGroupTimeoutsPropertyToTerraform(struct?: TfShardGroup.Ti
 }
 
 
-export function tfShardGroupTimeoutsPropertyToHclTerraform(struct?: TfShardGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsShardGroupTimeoutsPropertyToHclTerraform(struct?: AwsShardGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -395,24 +395,24 @@ export function tfShardGroupTimeoutsPropertyToHclTerraform(struct?: TfShardGroup
 }
 
 
-export namespace TfShardGroup {
+export namespace AwsShardGroup {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#create TfShardGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#create AwsShardGroup#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#delete TfShardGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#delete AwsShardGroup#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#update TfShardGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rds_shard_group#update AwsShardGroup#update}
   */
   readonly update?: string;
 }

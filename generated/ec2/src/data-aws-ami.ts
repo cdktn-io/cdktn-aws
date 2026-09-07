@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfAmiConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsAmiConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#allow_unsafe_filter DataTfAmi#allow_unsafe_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#allow_unsafe_filter DataAwsAmi#allow_unsafe_filter}
   */
   readonly allowUnsafeFilter?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#executable_users DataTfAmi#executable_users}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#executable_users DataAwsAmi#executable_users}
   */
   readonly executableUsers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#id DataTfAmi#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#id DataAwsAmi#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#include_deprecated DataTfAmi#include_deprecated}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#include_deprecated DataAwsAmi#include_deprecated}
   */
   readonly includeDeprecated?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#most_recent DataTfAmi#most_recent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#most_recent DataAwsAmi#most_recent}
   */
   readonly mostRecent?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#name_regex DataTfAmi#name_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#name_regex DataAwsAmi#name_regex}
   */
   readonly nameRegex?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#owners DataTfAmi#owners}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#owners DataAwsAmi#owners}
   */
   readonly owners?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#region DataTfAmi#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#region DataAwsAmi#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#tags DataTfAmi#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#tags DataAwsAmi#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#uefi_data DataTfAmi#uefi_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#uefi_data DataAwsAmi#uefi_data}
   */
   readonly uefiData?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#filter DataTfAmi#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#filter DataAwsAmi#filter}
   */
-  readonly filter?: DataTfAmi.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsAmi.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#timeouts DataTfAmi#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#timeouts DataAwsAmi#timeouts}
   */
-  readonly timeouts?: DataTfAmi.TimeoutsProperty;
+  readonly timeouts?: DataAwsAmi.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami aws_ami}
 */
-export class DataTfAmi extends cdktn.TerraformDataSource {
+export class DataAwsAmi extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class DataTfAmi extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfAmi resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsAmi resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfAmi to import
-  * @param importFromId The id of the existing DataTfAmi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfAmi to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsAmi to import
+  * @param importFromId The id of the existing DataAwsAmi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsAmi to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ami", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class DataTfAmi extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfAmiConfig = {}
+  * @param options DataAwsAmiConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfAmiConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsAmiConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ami',
       terraformGeneratorMetadata: {
@@ -161,7 +161,7 @@ export class DataTfAmi extends cdktn.TerraformDataSource {
   }
 
   // block_device_mappings - computed: true, optional: false, required: false
-  private _blockDeviceMappings = new DataTfAmi.BlockDeviceMappingsPropertyList(this, "block_device_mappings", true);
+  private _blockDeviceMappings = new DataAwsAmi.BlockDeviceMappingsPropertyList(this, "block_device_mappings", true);
   public get blockDeviceMappings() {
     return this._blockDeviceMappings;
   }
@@ -348,7 +348,7 @@ export class DataTfAmi extends cdktn.TerraformDataSource {
   }
 
   // product_codes - computed: true, optional: false, required: false
-  private _productCodes = new DataTfAmi.ProductCodesPropertyList(this, "product_codes", true);
+  private _productCodes = new DataAwsAmi.ProductCodesPropertyList(this, "product_codes", true);
   public get productCodes() {
     return this._productCodes;
   }
@@ -458,11 +458,11 @@ export class DataTfAmi extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfAmi.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsAmi.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfAmi.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsAmi.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -474,11 +474,11 @@ export class DataTfAmi extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataTfAmi.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataAwsAmi.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataTfAmi.TimeoutsProperty) {
+  public putTimeouts(value: DataAwsAmi.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -505,8 +505,8 @@ export class DataTfAmi extends cdktn.TerraformDataSource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       uefi_data: cdktn.stringToTerraform(this._uefiData),
-      filter: cdktn.listMapper(dataTfAmiFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataTfAmiTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataAwsAmiFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataAwsAmiTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -573,16 +573,16 @@ export class DataTfAmi extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfAmiFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsAmiFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfAmi.FilterPropertyList",
+        storageClassType: "DataAwsAmi.FilterPropertyList",
       },
       timeouts: {
-        value: dataTfAmiTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataAwsAmiTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataTfAmi.TimeoutsProperty",
+        storageClassType: "DataAwsAmi.TimeoutsProperty",
       },
     };
 
@@ -591,7 +591,7 @@ export class DataTfAmi extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfAmiBlockDeviceMappingsPropertyToTerraform(struct?: DataTfAmi.BlockDeviceMappingsProperty): any {
+export function dataAwsAmiBlockDeviceMappingsPropertyToTerraform(struct?: DataAwsAmi.BlockDeviceMappingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -601,7 +601,7 @@ export function dataTfAmiBlockDeviceMappingsPropertyToTerraform(struct?: DataTfA
 }
 
 
-export function dataTfAmiBlockDeviceMappingsPropertyToHclTerraform(struct?: DataTfAmi.BlockDeviceMappingsProperty): any {
+export function dataAwsAmiBlockDeviceMappingsPropertyToHclTerraform(struct?: DataAwsAmi.BlockDeviceMappingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -612,7 +612,7 @@ export function dataTfAmiBlockDeviceMappingsPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataTfAmiProductCodesPropertyToTerraform(struct?: DataTfAmi.ProductCodesProperty): any {
+export function dataAwsAmiProductCodesPropertyToTerraform(struct?: DataAwsAmi.ProductCodesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -622,7 +622,7 @@ export function dataTfAmiProductCodesPropertyToTerraform(struct?: DataTfAmi.Prod
 }
 
 
-export function dataTfAmiProductCodesPropertyToHclTerraform(struct?: DataTfAmi.ProductCodesProperty): any {
+export function dataAwsAmiProductCodesPropertyToHclTerraform(struct?: DataAwsAmi.ProductCodesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -633,7 +633,7 @@ export function dataTfAmiProductCodesPropertyToHclTerraform(struct?: DataTfAmi.P
 }
 
 
-export function dataTfAmiFilterPropertyToTerraform(struct?: DataTfAmi.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsAmiFilterPropertyToTerraform(struct?: DataAwsAmi.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -645,7 +645,7 @@ export function dataTfAmiFilterPropertyToTerraform(struct?: DataTfAmi.FilterProp
 }
 
 
-export function dataTfAmiFilterPropertyToHclTerraform(struct?: DataTfAmi.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsAmiFilterPropertyToHclTerraform(struct?: DataAwsAmi.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -670,7 +670,7 @@ export function dataTfAmiFilterPropertyToHclTerraform(struct?: DataTfAmi.FilterP
 }
 
 
-export function dataTfAmiTimeoutsPropertyToTerraform(struct?: DataTfAmi.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsAmiTimeoutsPropertyToTerraform(struct?: DataAwsAmi.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -681,7 +681,7 @@ export function dataTfAmiTimeoutsPropertyToTerraform(struct?: DataTfAmi.Timeouts
 }
 
 
-export function dataTfAmiTimeoutsPropertyToHclTerraform(struct?: DataTfAmi.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsAmiTimeoutsPropertyToHclTerraform(struct?: DataAwsAmi.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -700,7 +700,7 @@ export function dataTfAmiTimeoutsPropertyToHclTerraform(struct?: DataTfAmi.Timeo
 }
 
 
-export namespace DataTfAmi {
+export namespace DataAwsAmi {
 export interface BlockDeviceMappingsProperty {
 }
 export class BlockDeviceMappingsPropertyOutputReference extends cdktn.ComplexObject {
@@ -832,11 +832,11 @@ export class ProductCodesPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#name DataTfAmi#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#name DataAwsAmi#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#values DataTfAmi#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#values DataAwsAmi#values}
   */
   readonly values: string[];
 }
@@ -938,7 +938,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#read DataTfAmi#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ami#read DataAwsAmi#read}
   */
   readonly read?: string;
 }

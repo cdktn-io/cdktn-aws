@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFleetStackAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFleetStackAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet_stack_association#fleet_name TfFleetStackAssociation#fleet_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet_stack_association#fleet_name AwsFleetStackAssociation#fleet_name}
   */
   readonly fleetName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet_stack_association#id TfFleetStackAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet_stack_association#id AwsFleetStackAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface TfFleetStackAssociationConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet_stack_association#region TfFleetStackAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet_stack_association#region AwsFleetStackAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet_stack_association#stack_name TfFleetStackAssociation#stack_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet_stack_association#stack_name AwsFleetStackAssociation#stack_name}
   */
   readonly stackName: string;
 }
@@ -32,7 +32,7 @@ export interface TfFleetStackAssociationConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet_stack_association aws_appstream_fleet_stack_association}
 */
-export class TfFleetStackAssociation extends cdktn.TerraformResource {
+export class AwsFleetStackAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfFleetStackAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFleetStackAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFleetStackAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFleetStackAssociation to import
-  * @param importFromId The id of the existing TfFleetStackAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet_stack_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFleetStackAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsFleetStackAssociation to import
+  * @param importFromId The id of the existing AwsFleetStackAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appstream_fleet_stack_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFleetStackAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appstream_fleet_stack_association", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfFleetStackAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFleetStackAssociationConfig
+  * @param options AwsFleetStackAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfFleetStackAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsFleetStackAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appstream_fleet_stack_association',
       terraformGeneratorMetadata: {

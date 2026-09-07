@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfUserSettingsAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsUserSettingsAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings_association#portal_arn TfUserSettingsAssociation#portal_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings_association#portal_arn AwsUserSettingsAssociation#portal_arn}
   */
   readonly portalArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings_association#region TfUserSettingsAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings_association#region AwsUserSettingsAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings_association#user_settings_arn TfUserSettingsAssociation#user_settings_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings_association#user_settings_arn AwsUserSettingsAssociation#user_settings_arn}
   */
   readonly userSettingsArn: string;
 }
@@ -25,7 +25,7 @@ export interface TfUserSettingsAssociationConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings_association aws_workspacesweb_user_settings_association}
 */
-export class TfUserSettingsAssociation extends cdktn.TerraformResource {
+export class AwsUserSettingsAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class TfUserSettingsAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfUserSettingsAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsUserSettingsAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfUserSettingsAssociation to import
-  * @param importFromId The id of the existing TfUserSettingsAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfUserSettingsAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsUserSettingsAssociation to import
+  * @param importFromId The id of the existing AwsUserSettingsAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsUserSettingsAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspacesweb_user_settings_association", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class TfUserSettingsAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfUserSettingsAssociationConfig
+  * @param options AwsUserSettingsAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfUserSettingsAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsUserSettingsAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workspacesweb_user_settings_association',
       terraformGeneratorMetadata: {

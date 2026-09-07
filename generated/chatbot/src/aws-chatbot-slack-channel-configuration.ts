@@ -5,61 +5,61 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSlackChannelConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSlackChannelConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#configuration_name TfSlackChannelConfiguration#configuration_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#configuration_name AwsSlackChannelConfiguration#configuration_name}
   */
   readonly configurationName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#guardrail_policy_arns TfSlackChannelConfiguration#guardrail_policy_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#guardrail_policy_arns AwsSlackChannelConfiguration#guardrail_policy_arns}
   */
   readonly guardrailPolicyArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#iam_role_arn TfSlackChannelConfiguration#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#iam_role_arn AwsSlackChannelConfiguration#iam_role_arn}
   */
   readonly iamRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#logging_level TfSlackChannelConfiguration#logging_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#logging_level AwsSlackChannelConfiguration#logging_level}
   */
   readonly loggingLevel?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#region TfSlackChannelConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#region AwsSlackChannelConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#slack_channel_id TfSlackChannelConfiguration#slack_channel_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#slack_channel_id AwsSlackChannelConfiguration#slack_channel_id}
   */
   readonly slackChannelId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#slack_team_id TfSlackChannelConfiguration#slack_team_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#slack_team_id AwsSlackChannelConfiguration#slack_team_id}
   */
   readonly slackTeamId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#sns_topic_arns TfSlackChannelConfiguration#sns_topic_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#sns_topic_arns AwsSlackChannelConfiguration#sns_topic_arns}
   */
   readonly snsTopicArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#tags TfSlackChannelConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#tags AwsSlackChannelConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#user_authorization_required TfSlackChannelConfiguration#user_authorization_required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#user_authorization_required AwsSlackChannelConfiguration#user_authorization_required}
   */
   readonly userAuthorizationRequired?: boolean | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#timeouts TfSlackChannelConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#timeouts AwsSlackChannelConfiguration#timeouts}
   */
-  readonly timeouts?: TfSlackChannelConfiguration.TimeoutsProperty;
+  readonly timeouts?: AwsSlackChannelConfiguration.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration aws_chatbot_slack_channel_configuration}
 */
-export class TfSlackChannelConfiguration extends cdktn.TerraformResource {
+export class AwsSlackChannelConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -70,11 +70,11 @@ export class TfSlackChannelConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSlackChannelConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSlackChannelConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSlackChannelConfiguration to import
-  * @param importFromId The id of the existing TfSlackChannelConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSlackChannelConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsSlackChannelConfiguration to import
+  * @param importFromId The id of the existing AwsSlackChannelConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSlackChannelConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_chatbot_slack_channel_configuration", importId: importFromId, provider });
@@ -89,9 +89,9 @@ export class TfSlackChannelConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSlackChannelConfigurationConfig
+  * @param options AwsSlackChannelConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSlackChannelConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSlackChannelConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_chatbot_slack_channel_configuration',
       terraformGeneratorMetadata: {
@@ -294,11 +294,11 @@ export class TfSlackChannelConfiguration extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfSlackChannelConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsSlackChannelConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfSlackChannelConfiguration.TimeoutsProperty) {
+  public putTimeouts(value: AwsSlackChannelConfiguration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -325,7 +325,7 @@ export class TfSlackChannelConfiguration extends cdktn.TerraformResource {
       sns_topic_arns: cdktn.listMapper(cdktn.stringToTerraform, false)(this._snsTopicArns),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       user_authorization_required: cdktn.booleanToTerraform(this._userAuthorizationRequired),
-      timeouts: tfSlackChannelConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsSlackChannelConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -392,10 +392,10 @@ export class TfSlackChannelConfiguration extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       timeouts: {
-        value: tfSlackChannelConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsSlackChannelConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfSlackChannelConfiguration.TimeoutsProperty",
+        storageClassType: "AwsSlackChannelConfiguration.TimeoutsProperty",
       },
     };
 
@@ -404,7 +404,7 @@ export class TfSlackChannelConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfSlackChannelConfigurationTimeoutsPropertyToTerraform(struct?: TfSlackChannelConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSlackChannelConfigurationTimeoutsPropertyToTerraform(struct?: AwsSlackChannelConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,7 +417,7 @@ export function tfSlackChannelConfigurationTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function tfSlackChannelConfigurationTimeoutsPropertyToHclTerraform(struct?: TfSlackChannelConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSlackChannelConfigurationTimeoutsPropertyToHclTerraform(struct?: AwsSlackChannelConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,24 +448,24 @@ export function tfSlackChannelConfigurationTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace TfSlackChannelConfiguration {
+export namespace AwsSlackChannelConfiguration {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#create TfSlackChannelConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#create AwsSlackChannelConfiguration#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#delete TfSlackChannelConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#delete AwsSlackChannelConfiguration#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#update TfSlackChannelConfiguration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chatbot_slack_channel_configuration#update AwsSlackChannelConfiguration#update}
   */
   readonly update?: string;
 }

@@ -5,47 +5,47 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#description TfPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#description AwsPolicy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#name TfPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#name AwsPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#policy_engine_id TfPolicy#policy_engine_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#policy_engine_id AwsPolicy#policy_engine_id}
   */
   readonly policyEngineId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#region TfPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#region AwsPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#validation_mode TfPolicy#validation_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#validation_mode AwsPolicy#validation_mode}
   */
   readonly validationMode?: string;
   /**
   * definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#definition TfPolicy#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#definition AwsPolicy#definition}
   */
-  readonly definition?: TfPolicy.DefinitionProperty[] | cdktn.IResolvable;
+  readonly definition?: AwsPolicy.DefinitionProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#timeouts TfPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#timeouts AwsPolicy#timeouts}
   */
-  readonly timeouts?: TfPolicy.TimeoutsProperty;
+  readonly timeouts?: AwsPolicy.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy aws_bedrockagentcore_policy}
 */
-export class TfPolicy extends cdktn.TerraformResource {
+export class AwsPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class TfPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPolicy to import
-  * @param importFromId The id of the existing TfPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsPolicy to import
+  * @param importFromId The id of the existing AwsPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_policy", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class TfPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPolicyConfig
+  * @param options AwsPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_policy',
       terraformGeneratorMetadata: {
@@ -191,11 +191,11 @@ export class TfPolicy extends cdktn.TerraformResource {
   }
 
   // definition - computed: false, optional: true, required: false
-  private _definition = new TfPolicy.DefinitionPropertyList(this, "definition", false);
+  private _definition = new AwsPolicy.DefinitionPropertyList(this, "definition", false);
   public get definition() {
     return this._definition;
   }
-  public putDefinition(value: TfPolicy.DefinitionProperty[] | cdktn.IResolvable) {
+  public putDefinition(value: AwsPolicy.DefinitionProperty[] | cdktn.IResolvable) {
     this._definition.internalValue = value;
   }
   public resetDefinition() {
@@ -207,11 +207,11 @@ export class TfPolicy extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfPolicy.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsPolicy.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfPolicy.TimeoutsProperty) {
+  public putTimeouts(value: AwsPolicy.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -233,8 +233,8 @@ export class TfPolicy extends cdktn.TerraformResource {
       policy_engine_id: cdktn.stringToTerraform(this._policyEngineId),
       region: cdktn.stringToTerraform(this._region),
       validation_mode: cdktn.stringToTerraform(this._validationMode),
-      definition: cdktn.listMapper(tfPolicyDefinitionPropertyToTerraform, true)(this._definition.internalValue),
-      timeouts: tfPolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      definition: cdktn.listMapper(awsPolicyDefinitionPropertyToTerraform, true)(this._definition.internalValue),
+      timeouts: awsPolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -271,16 +271,16 @@ export class TfPolicy extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       definition: {
-        value: cdktn.listMapperHcl(tfPolicyDefinitionPropertyToHclTerraform, true)(this._definition.internalValue),
+        value: cdktn.listMapperHcl(awsPolicyDefinitionPropertyToHclTerraform, true)(this._definition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPolicy.DefinitionPropertyList",
+        storageClassType: "AwsPolicy.DefinitionPropertyList",
       },
       timeouts: {
-        value: tfPolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsPolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfPolicy.TimeoutsProperty",
+        storageClassType: "AwsPolicy.TimeoutsProperty",
       },
     };
 
@@ -289,7 +289,7 @@ export class TfPolicy extends cdktn.TerraformResource {
   }
 }
 
-export function tfPolicyCedarPropertyToTerraform(struct?: TfPolicy.CedarProperty | cdktn.IResolvable): any {
+export function awsPolicyCedarPropertyToTerraform(struct?: AwsPolicy.CedarProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -300,7 +300,7 @@ export function tfPolicyCedarPropertyToTerraform(struct?: TfPolicy.CedarProperty
 }
 
 
-export function tfPolicyCedarPropertyToHclTerraform(struct?: TfPolicy.CedarProperty | cdktn.IResolvable): any {
+export function awsPolicyCedarPropertyToHclTerraform(struct?: AwsPolicy.CedarProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -319,25 +319,25 @@ export function tfPolicyCedarPropertyToHclTerraform(struct?: TfPolicy.CedarPrope
 }
 
 
-export function tfPolicyDefinitionPropertyToTerraform(struct?: TfPolicy.DefinitionProperty | cdktn.IResolvable): any {
+export function awsPolicyDefinitionPropertyToTerraform(struct?: AwsPolicy.DefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cedar: cdktn.listMapper(tfPolicyCedarPropertyToTerraform, true)(struct!.cedar),
+    cedar: cdktn.listMapper(awsPolicyCedarPropertyToTerraform, true)(struct!.cedar),
   }
 }
 
 
-export function tfPolicyDefinitionPropertyToHclTerraform(struct?: TfPolicy.DefinitionProperty | cdktn.IResolvable): any {
+export function awsPolicyDefinitionPropertyToHclTerraform(struct?: AwsPolicy.DefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cedar: {
-      value: cdktn.listMapperHcl(tfPolicyCedarPropertyToHclTerraform, true)(struct!.cedar),
+      value: cdktn.listMapperHcl(awsPolicyCedarPropertyToHclTerraform, true)(struct!.cedar),
       isBlock: true,
       type: "list",
       storageClassType: "CedarPropertyList",
@@ -349,7 +349,7 @@ export function tfPolicyDefinitionPropertyToHclTerraform(struct?: TfPolicy.Defin
 }
 
 
-export function tfPolicyTimeoutsPropertyToTerraform(struct?: TfPolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPolicyTimeoutsPropertyToTerraform(struct?: AwsPolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -362,7 +362,7 @@ export function tfPolicyTimeoutsPropertyToTerraform(struct?: TfPolicy.TimeoutsPr
 }
 
 
-export function tfPolicyTimeoutsPropertyToHclTerraform(struct?: TfPolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPolicyTimeoutsPropertyToHclTerraform(struct?: AwsPolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,10 +393,10 @@ export function tfPolicyTimeoutsPropertyToHclTerraform(struct?: TfPolicy.Timeout
 }
 
 
-export namespace TfPolicy {
+export namespace AwsPolicy {
 export interface CedarProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#statement TfPolicy#statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#statement AwsPolicy#statement}
   */
   readonly statement: string;
 }
@@ -481,7 +481,7 @@ export interface DefinitionProperty {
   /**
   * cedar block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#cedar TfPolicy#cedar}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#cedar AwsPolicy#cedar}
   */
   readonly cedar?: CedarProperty[] | cdktn.IResolvable;
 }
@@ -569,19 +569,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#create TfPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#create AwsPolicy#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#delete TfPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#delete AwsPolicy#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#update TfPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_policy#update AwsPolicy#update}
   */
   readonly update?: string;
 }

@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLocationFsxOpenzfsFileSystemConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLocationFsxOpenzfsFileSystemConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#fsx_filesystem_arn TfLocationFsxOpenzfsFileSystem#fsx_filesystem_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#fsx_filesystem_arn AwsLocationFsxOpenzfsFileSystem#fsx_filesystem_arn}
   */
   readonly fsxFilesystemArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#id TfLocationFsxOpenzfsFileSystem#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#id AwsLocationFsxOpenzfsFileSystem#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,37 +20,37 @@ export interface TfLocationFsxOpenzfsFileSystemConfig extends cdktn.TerraformMet
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#region TfLocationFsxOpenzfsFileSystem#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#region AwsLocationFsxOpenzfsFileSystem#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#security_group_arns TfLocationFsxOpenzfsFileSystem#security_group_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#security_group_arns AwsLocationFsxOpenzfsFileSystem#security_group_arns}
   */
   readonly securityGroupArns: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#subdirectory TfLocationFsxOpenzfsFileSystem#subdirectory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#subdirectory AwsLocationFsxOpenzfsFileSystem#subdirectory}
   */
   readonly subdirectory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#tags TfLocationFsxOpenzfsFileSystem#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#tags AwsLocationFsxOpenzfsFileSystem#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#tags_all TfLocationFsxOpenzfsFileSystem#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#tags_all AwsLocationFsxOpenzfsFileSystem#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * protocol block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#protocol TfLocationFsxOpenzfsFileSystem#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#protocol AwsLocationFsxOpenzfsFileSystem#protocol}
   */
-  readonly protocol: TfLocationFsxOpenzfsFileSystem.ProtocolProperty;
+  readonly protocol: AwsLocationFsxOpenzfsFileSystem.ProtocolProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system aws_datasync_location_fsx_openzfs_file_system}
 */
-export class TfLocationFsxOpenzfsFileSystem extends cdktn.TerraformResource {
+export class AwsLocationFsxOpenzfsFileSystem extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfLocationFsxOpenzfsFileSystem extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLocationFsxOpenzfsFileSystem resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLocationFsxOpenzfsFileSystem resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLocationFsxOpenzfsFileSystem to import
-  * @param importFromId The id of the existing TfLocationFsxOpenzfsFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLocationFsxOpenzfsFileSystem to import is found
+  * @param importToId The construct id used in the generated config for the AwsLocationFsxOpenzfsFileSystem to import
+  * @param importFromId The id of the existing AwsLocationFsxOpenzfsFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLocationFsxOpenzfsFileSystem to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datasync_location_fsx_openzfs_file_system", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfLocationFsxOpenzfsFileSystem extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLocationFsxOpenzfsFileSystemConfig
+  * @param options AwsLocationFsxOpenzfsFileSystemConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLocationFsxOpenzfsFileSystemConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLocationFsxOpenzfsFileSystemConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datasync_location_fsx_openzfs_file_system',
       terraformGeneratorMetadata: {
@@ -234,11 +234,11 @@ export class TfLocationFsxOpenzfsFileSystem extends cdktn.TerraformResource {
   }
 
   // protocol - computed: false, optional: false, required: true
-  private _protocol = new TfLocationFsxOpenzfsFileSystem.ProtocolPropertyOutputReference(this, "protocol");
+  private _protocol = new AwsLocationFsxOpenzfsFileSystem.ProtocolPropertyOutputReference(this, "protocol");
   public get protocol() {
     return this._protocol;
   }
-  public putProtocol(value: TfLocationFsxOpenzfsFileSystem.ProtocolProperty) {
+  public putProtocol(value: AwsLocationFsxOpenzfsFileSystem.ProtocolProperty) {
     this._protocol.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -259,7 +259,7 @@ export class TfLocationFsxOpenzfsFileSystem extends cdktn.TerraformResource {
       subdirectory: cdktn.stringToTerraform(this._subdirectory),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      protocol: tfLocationFsxOpenzfsFileSystemProtocolPropertyToTerraform(this._protocol.internalValue),
+      protocol: awsLocationFsxOpenzfsFileSystemProtocolPropertyToTerraform(this._protocol.internalValue),
     };
   }
 
@@ -308,10 +308,10 @@ export class TfLocationFsxOpenzfsFileSystem extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       protocol: {
-        value: tfLocationFsxOpenzfsFileSystemProtocolPropertyToHclTerraform(this._protocol.internalValue),
+        value: awsLocationFsxOpenzfsFileSystemProtocolPropertyToHclTerraform(this._protocol.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLocationFsxOpenzfsFileSystem.ProtocolPropertyList",
+        storageClassType: "AwsLocationFsxOpenzfsFileSystem.ProtocolPropertyList",
       },
     };
 
@@ -320,7 +320,7 @@ export class TfLocationFsxOpenzfsFileSystem extends cdktn.TerraformResource {
   }
 }
 
-export function tfLocationFsxOpenzfsFileSystemMountOptionsPropertyToTerraform(struct?: TfLocationFsxOpenzfsFileSystem.MountOptionsPropertyOutputReference | TfLocationFsxOpenzfsFileSystem.MountOptionsProperty): any {
+export function awsLocationFsxOpenzfsFileSystemMountOptionsPropertyToTerraform(struct?: AwsLocationFsxOpenzfsFileSystem.MountOptionsPropertyOutputReference | AwsLocationFsxOpenzfsFileSystem.MountOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -331,7 +331,7 @@ export function tfLocationFsxOpenzfsFileSystemMountOptionsPropertyToTerraform(st
 }
 
 
-export function tfLocationFsxOpenzfsFileSystemMountOptionsPropertyToHclTerraform(struct?: TfLocationFsxOpenzfsFileSystem.MountOptionsPropertyOutputReference | TfLocationFsxOpenzfsFileSystem.MountOptionsProperty): any {
+export function awsLocationFsxOpenzfsFileSystemMountOptionsPropertyToHclTerraform(struct?: AwsLocationFsxOpenzfsFileSystem.MountOptionsPropertyOutputReference | AwsLocationFsxOpenzfsFileSystem.MountOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,25 +350,25 @@ export function tfLocationFsxOpenzfsFileSystemMountOptionsPropertyToHclTerraform
 }
 
 
-export function tfLocationFsxOpenzfsFileSystemNfsPropertyToTerraform(struct?: TfLocationFsxOpenzfsFileSystem.NfsPropertyOutputReference | TfLocationFsxOpenzfsFileSystem.NfsProperty): any {
+export function awsLocationFsxOpenzfsFileSystemNfsPropertyToTerraform(struct?: AwsLocationFsxOpenzfsFileSystem.NfsPropertyOutputReference | AwsLocationFsxOpenzfsFileSystem.NfsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    mount_options: tfLocationFsxOpenzfsFileSystemMountOptionsPropertyToTerraform(struct!.mountOptions),
+    mount_options: awsLocationFsxOpenzfsFileSystemMountOptionsPropertyToTerraform(struct!.mountOptions),
   }
 }
 
 
-export function tfLocationFsxOpenzfsFileSystemNfsPropertyToHclTerraform(struct?: TfLocationFsxOpenzfsFileSystem.NfsPropertyOutputReference | TfLocationFsxOpenzfsFileSystem.NfsProperty): any {
+export function awsLocationFsxOpenzfsFileSystemNfsPropertyToHclTerraform(struct?: AwsLocationFsxOpenzfsFileSystem.NfsPropertyOutputReference | AwsLocationFsxOpenzfsFileSystem.NfsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     mount_options: {
-      value: tfLocationFsxOpenzfsFileSystemMountOptionsPropertyToHclTerraform(struct!.mountOptions),
+      value: awsLocationFsxOpenzfsFileSystemMountOptionsPropertyToHclTerraform(struct!.mountOptions),
       isBlock: true,
       type: "list",
       storageClassType: "MountOptionsPropertyList",
@@ -380,25 +380,25 @@ export function tfLocationFsxOpenzfsFileSystemNfsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfLocationFsxOpenzfsFileSystemProtocolPropertyToTerraform(struct?: TfLocationFsxOpenzfsFileSystem.ProtocolPropertyOutputReference | TfLocationFsxOpenzfsFileSystem.ProtocolProperty): any {
+export function awsLocationFsxOpenzfsFileSystemProtocolPropertyToTerraform(struct?: AwsLocationFsxOpenzfsFileSystem.ProtocolPropertyOutputReference | AwsLocationFsxOpenzfsFileSystem.ProtocolProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    nfs: tfLocationFsxOpenzfsFileSystemNfsPropertyToTerraform(struct!.nfs),
+    nfs: awsLocationFsxOpenzfsFileSystemNfsPropertyToTerraform(struct!.nfs),
   }
 }
 
 
-export function tfLocationFsxOpenzfsFileSystemProtocolPropertyToHclTerraform(struct?: TfLocationFsxOpenzfsFileSystem.ProtocolPropertyOutputReference | TfLocationFsxOpenzfsFileSystem.ProtocolProperty): any {
+export function awsLocationFsxOpenzfsFileSystemProtocolPropertyToHclTerraform(struct?: AwsLocationFsxOpenzfsFileSystem.ProtocolPropertyOutputReference | AwsLocationFsxOpenzfsFileSystem.ProtocolProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     nfs: {
-      value: tfLocationFsxOpenzfsFileSystemNfsPropertyToHclTerraform(struct!.nfs),
+      value: awsLocationFsxOpenzfsFileSystemNfsPropertyToHclTerraform(struct!.nfs),
       isBlock: true,
       type: "list",
       storageClassType: "NfsPropertyList",
@@ -410,10 +410,10 @@ export function tfLocationFsxOpenzfsFileSystemProtocolPropertyToHclTerraform(str
 }
 
 
-export namespace TfLocationFsxOpenzfsFileSystem {
+export namespace AwsLocationFsxOpenzfsFileSystem {
 export interface MountOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#version TfLocationFsxOpenzfsFileSystem#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#version AwsLocationFsxOpenzfsFileSystem#version}
   */
   readonly version?: string;
 }
@@ -469,7 +469,7 @@ export interface NfsProperty {
   /**
   * mount_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#mount_options TfLocationFsxOpenzfsFileSystem#mount_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#mount_options AwsLocationFsxOpenzfsFileSystem#mount_options}
   */
   readonly mountOptions: MountOptionsProperty;
 }
@@ -522,7 +522,7 @@ export interface ProtocolProperty {
   /**
   * nfs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#nfs TfLocationFsxOpenzfsFileSystem#nfs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datasync_location_fsx_openzfs_file_system#nfs AwsLocationFsxOpenzfsFileSystem#nfs}
   */
   readonly nfs: NfsProperty;
 }

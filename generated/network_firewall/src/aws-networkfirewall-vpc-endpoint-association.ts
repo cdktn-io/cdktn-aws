@@ -5,47 +5,47 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfVpcEndpointAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsVpcEndpointAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#description TfVpcEndpointAssociation#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#description AwsVpcEndpointAssociation#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#firewall_arn TfVpcEndpointAssociation#firewall_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#firewall_arn AwsVpcEndpointAssociation#firewall_arn}
   */
   readonly firewallArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#region TfVpcEndpointAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#region AwsVpcEndpointAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#tags TfVpcEndpointAssociation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#tags AwsVpcEndpointAssociation#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#vpc_id TfVpcEndpointAssociation#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#vpc_id AwsVpcEndpointAssociation#vpc_id}
   */
   readonly vpcId: string;
   /**
   * subnet_mapping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#subnet_mapping TfVpcEndpointAssociation#subnet_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#subnet_mapping AwsVpcEndpointAssociation#subnet_mapping}
   */
-  readonly subnetMapping?: TfVpcEndpointAssociation.SubnetMappingProperty[] | cdktn.IResolvable;
+  readonly subnetMapping?: AwsVpcEndpointAssociation.SubnetMappingProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#timeouts TfVpcEndpointAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#timeouts AwsVpcEndpointAssociation#timeouts}
   */
-  readonly timeouts?: TfVpcEndpointAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsVpcEndpointAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association aws_networkfirewall_vpc_endpoint_association}
 */
-export class TfVpcEndpointAssociation extends cdktn.TerraformResource {
+export class AwsVpcEndpointAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -56,11 +56,11 @@ export class TfVpcEndpointAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfVpcEndpointAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsVpcEndpointAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfVpcEndpointAssociation to import
-  * @param importFromId The id of the existing TfVpcEndpointAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfVpcEndpointAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsVpcEndpointAssociation to import
+  * @param importFromId The id of the existing AwsVpcEndpointAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVpcEndpointAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkfirewall_vpc_endpoint_association", importId: importFromId, provider });
@@ -75,9 +75,9 @@ export class TfVpcEndpointAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfVpcEndpointAssociationConfig
+  * @param options AwsVpcEndpointAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfVpcEndpointAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsVpcEndpointAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkfirewall_vpc_endpoint_association',
       terraformGeneratorMetadata: {
@@ -184,7 +184,7 @@ export class TfVpcEndpointAssociation extends cdktn.TerraformResource {
   }
 
   // vpc_endpoint_association_status - computed: true, optional: false, required: false
-  private _vpcEndpointAssociationStatus = new TfVpcEndpointAssociation.VpcEndpointAssociationStatusPropertyList(this, "vpc_endpoint_association_status", false);
+  private _vpcEndpointAssociationStatus = new AwsVpcEndpointAssociation.VpcEndpointAssociationStatusPropertyList(this, "vpc_endpoint_association_status", false);
   public get vpcEndpointAssociationStatus() {
     return this._vpcEndpointAssociationStatus;
   }
@@ -203,11 +203,11 @@ export class TfVpcEndpointAssociation extends cdktn.TerraformResource {
   }
 
   // subnet_mapping - computed: false, optional: true, required: false
-  private _subnetMapping = new TfVpcEndpointAssociation.SubnetMappingPropertyList(this, "subnet_mapping", false);
+  private _subnetMapping = new AwsVpcEndpointAssociation.SubnetMappingPropertyList(this, "subnet_mapping", false);
   public get subnetMapping() {
     return this._subnetMapping;
   }
-  public putSubnetMapping(value: TfVpcEndpointAssociation.SubnetMappingProperty[] | cdktn.IResolvable) {
+  public putSubnetMapping(value: AwsVpcEndpointAssociation.SubnetMappingProperty[] | cdktn.IResolvable) {
     this._subnetMapping.internalValue = value;
   }
   public resetSubnetMapping() {
@@ -219,11 +219,11 @@ export class TfVpcEndpointAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfVpcEndpointAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsVpcEndpointAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfVpcEndpointAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsVpcEndpointAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -245,8 +245,8 @@ export class TfVpcEndpointAssociation extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      subnet_mapping: cdktn.listMapper(tfVpcEndpointAssociationSubnetMappingPropertyToTerraform, true)(this._subnetMapping.internalValue),
-      timeouts: tfVpcEndpointAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      subnet_mapping: cdktn.listMapper(awsVpcEndpointAssociationSubnetMappingPropertyToTerraform, true)(this._subnetMapping.internalValue),
+      timeouts: awsVpcEndpointAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -283,16 +283,16 @@ export class TfVpcEndpointAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       subnet_mapping: {
-        value: cdktn.listMapperHcl(tfVpcEndpointAssociationSubnetMappingPropertyToHclTerraform, true)(this._subnetMapping.internalValue),
+        value: cdktn.listMapperHcl(awsVpcEndpointAssociationSubnetMappingPropertyToHclTerraform, true)(this._subnetMapping.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfVpcEndpointAssociation.SubnetMappingPropertyList",
+        storageClassType: "AwsVpcEndpointAssociation.SubnetMappingPropertyList",
       },
       timeouts: {
-        value: tfVpcEndpointAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsVpcEndpointAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfVpcEndpointAssociation.TimeoutsProperty",
+        storageClassType: "AwsVpcEndpointAssociation.TimeoutsProperty",
       },
     };
 
@@ -301,7 +301,7 @@ export class TfVpcEndpointAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfVpcEndpointAssociationAttachmentPropertyToTerraform(struct?: TfVpcEndpointAssociation.AttachmentProperty): any {
+export function awsVpcEndpointAssociationAttachmentPropertyToTerraform(struct?: AwsVpcEndpointAssociation.AttachmentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -311,7 +311,7 @@ export function tfVpcEndpointAssociationAttachmentPropertyToTerraform(struct?: T
 }
 
 
-export function tfVpcEndpointAssociationAttachmentPropertyToHclTerraform(struct?: TfVpcEndpointAssociation.AttachmentProperty): any {
+export function awsVpcEndpointAssociationAttachmentPropertyToHclTerraform(struct?: AwsVpcEndpointAssociation.AttachmentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function tfVpcEndpointAssociationAttachmentPropertyToHclTerraform(struct?
 }
 
 
-export function tfVpcEndpointAssociationAssociationSyncStatePropertyToTerraform(struct?: TfVpcEndpointAssociation.AssociationSyncStateProperty): any {
+export function awsVpcEndpointAssociationAssociationSyncStatePropertyToTerraform(struct?: AwsVpcEndpointAssociation.AssociationSyncStateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function tfVpcEndpointAssociationAssociationSyncStatePropertyToTerraform(
 }
 
 
-export function tfVpcEndpointAssociationAssociationSyncStatePropertyToHclTerraform(struct?: TfVpcEndpointAssociation.AssociationSyncStateProperty): any {
+export function awsVpcEndpointAssociationAssociationSyncStatePropertyToHclTerraform(struct?: AwsVpcEndpointAssociation.AssociationSyncStateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,7 +343,7 @@ export function tfVpcEndpointAssociationAssociationSyncStatePropertyToHclTerrafo
 }
 
 
-export function tfVpcEndpointAssociationVpcEndpointAssociationStatusPropertyToTerraform(struct?: TfVpcEndpointAssociation.VpcEndpointAssociationStatusProperty): any {
+export function awsVpcEndpointAssociationVpcEndpointAssociationStatusPropertyToTerraform(struct?: AwsVpcEndpointAssociation.VpcEndpointAssociationStatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function tfVpcEndpointAssociationVpcEndpointAssociationStatusPropertyToTe
 }
 
 
-export function tfVpcEndpointAssociationVpcEndpointAssociationStatusPropertyToHclTerraform(struct?: TfVpcEndpointAssociation.VpcEndpointAssociationStatusProperty): any {
+export function awsVpcEndpointAssociationVpcEndpointAssociationStatusPropertyToHclTerraform(struct?: AwsVpcEndpointAssociation.VpcEndpointAssociationStatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,7 +364,7 @@ export function tfVpcEndpointAssociationVpcEndpointAssociationStatusPropertyToHc
 }
 
 
-export function tfVpcEndpointAssociationSubnetMappingPropertyToTerraform(struct?: TfVpcEndpointAssociation.SubnetMappingProperty | cdktn.IResolvable): any {
+export function awsVpcEndpointAssociationSubnetMappingPropertyToTerraform(struct?: AwsVpcEndpointAssociation.SubnetMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -376,7 +376,7 @@ export function tfVpcEndpointAssociationSubnetMappingPropertyToTerraform(struct?
 }
 
 
-export function tfVpcEndpointAssociationSubnetMappingPropertyToHclTerraform(struct?: TfVpcEndpointAssociation.SubnetMappingProperty | cdktn.IResolvable): any {
+export function awsVpcEndpointAssociationSubnetMappingPropertyToHclTerraform(struct?: AwsVpcEndpointAssociation.SubnetMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -401,7 +401,7 @@ export function tfVpcEndpointAssociationSubnetMappingPropertyToHclTerraform(stru
 }
 
 
-export function tfVpcEndpointAssociationTimeoutsPropertyToTerraform(struct?: TfVpcEndpointAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsVpcEndpointAssociationTimeoutsPropertyToTerraform(struct?: AwsVpcEndpointAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,7 +413,7 @@ export function tfVpcEndpointAssociationTimeoutsPropertyToTerraform(struct?: TfV
 }
 
 
-export function tfVpcEndpointAssociationTimeoutsPropertyToHclTerraform(struct?: TfVpcEndpointAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsVpcEndpointAssociationTimeoutsPropertyToHclTerraform(struct?: AwsVpcEndpointAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -438,7 +438,7 @@ export function tfVpcEndpointAssociationTimeoutsPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace TfVpcEndpointAssociation {
+export namespace AwsVpcEndpointAssociation {
 export interface AttachmentProperty {
 }
 export class AttachmentPropertyOutputReference extends cdktn.ComplexObject {
@@ -625,11 +625,11 @@ export class VpcEndpointAssociationStatusPropertyList extends cdktn.ComplexList 
 }
 export interface SubnetMappingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#ip_address_type TfVpcEndpointAssociation#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#ip_address_type AwsVpcEndpointAssociation#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#subnet_id TfVpcEndpointAssociation#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#subnet_id AwsVpcEndpointAssociation#subnet_id}
   */
   readonly subnetId: string;
 }
@@ -736,13 +736,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#create TfVpcEndpointAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#create AwsVpcEndpointAssociation#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#delete TfVpcEndpointAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/networkfirewall_vpc_endpoint_association#delete AwsVpcEndpointAssociation#delete}
   */
   readonly delete?: string;
 }

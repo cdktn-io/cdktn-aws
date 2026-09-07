@@ -5,71 +5,71 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfResourceConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsResourceConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#allow_association_to_shareable_service_network TfResourceConfiguration#allow_association_to_shareable_service_network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#allow_association_to_shareable_service_network AwsResourceConfiguration#allow_association_to_shareable_service_network}
   */
   readonly allowAssociationToShareableServiceNetwork?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#custom_domain_name TfResourceConfiguration#custom_domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#custom_domain_name AwsResourceConfiguration#custom_domain_name}
   */
   readonly customDomainName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#domain_verification_id TfResourceConfiguration#domain_verification_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#domain_verification_id AwsResourceConfiguration#domain_verification_id}
   */
   readonly domainVerificationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#name TfResourceConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#name AwsResourceConfiguration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#port_ranges TfResourceConfiguration#port_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#port_ranges AwsResourceConfiguration#port_ranges}
   */
   readonly portRanges?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#protocol TfResourceConfiguration#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#protocol AwsResourceConfiguration#protocol}
   */
   readonly protocol?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#region TfResourceConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#region AwsResourceConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#resource_configuration_group_id TfResourceConfiguration#resource_configuration_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#resource_configuration_group_id AwsResourceConfiguration#resource_configuration_group_id}
   */
   readonly resourceConfigurationGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#resource_gateway_identifier TfResourceConfiguration#resource_gateway_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#resource_gateway_identifier AwsResourceConfiguration#resource_gateway_identifier}
   */
   readonly resourceGatewayIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#tags TfResourceConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#tags AwsResourceConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#type TfResourceConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#type AwsResourceConfiguration#type}
   */
   readonly type?: string;
   /**
   * resource_configuration_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#resource_configuration_definition TfResourceConfiguration#resource_configuration_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#resource_configuration_definition AwsResourceConfiguration#resource_configuration_definition}
   */
-  readonly resourceConfigurationDefinition?: TfResourceConfiguration.ResourceConfigurationDefinitionProperty[] | cdktn.IResolvable;
+  readonly resourceConfigurationDefinition?: AwsResourceConfiguration.ResourceConfigurationDefinitionProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#timeouts TfResourceConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#timeouts AwsResourceConfiguration#timeouts}
   */
-  readonly timeouts?: TfResourceConfiguration.TimeoutsProperty;
+  readonly timeouts?: AwsResourceConfiguration.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration aws_vpclattice_resource_configuration}
 */
-export class TfResourceConfiguration extends cdktn.TerraformResource {
+export class AwsResourceConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -80,11 +80,11 @@ export class TfResourceConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfResourceConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsResourceConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfResourceConfiguration to import
-  * @param importFromId The id of the existing TfResourceConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfResourceConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsResourceConfiguration to import
+  * @param importFromId The id of the existing AwsResourceConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsResourceConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpclattice_resource_configuration", importId: importFromId, provider });
@@ -99,9 +99,9 @@ export class TfResourceConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfResourceConfigurationConfig
+  * @param options AwsResourceConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfResourceConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsResourceConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpclattice_resource_configuration',
       terraformGeneratorMetadata: {
@@ -336,11 +336,11 @@ export class TfResourceConfiguration extends cdktn.TerraformResource {
   }
 
   // resource_configuration_definition - computed: false, optional: true, required: false
-  private _resourceConfigurationDefinition = new TfResourceConfiguration.ResourceConfigurationDefinitionPropertyList(this, "resource_configuration_definition", false);
+  private _resourceConfigurationDefinition = new AwsResourceConfiguration.ResourceConfigurationDefinitionPropertyList(this, "resource_configuration_definition", false);
   public get resourceConfigurationDefinition() {
     return this._resourceConfigurationDefinition;
   }
-  public putResourceConfigurationDefinition(value: TfResourceConfiguration.ResourceConfigurationDefinitionProperty[] | cdktn.IResolvable) {
+  public putResourceConfigurationDefinition(value: AwsResourceConfiguration.ResourceConfigurationDefinitionProperty[] | cdktn.IResolvable) {
     this._resourceConfigurationDefinition.internalValue = value;
   }
   public resetResourceConfigurationDefinition() {
@@ -352,11 +352,11 @@ export class TfResourceConfiguration extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfResourceConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsResourceConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfResourceConfiguration.TimeoutsProperty) {
+  public putTimeouts(value: AwsResourceConfiguration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -384,8 +384,8 @@ export class TfResourceConfiguration extends cdktn.TerraformResource {
       resource_gateway_identifier: cdktn.stringToTerraform(this._resourceGatewayIdentifier),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       type: cdktn.stringToTerraform(this._type),
-      resource_configuration_definition: cdktn.listMapper(tfResourceConfigurationResourceConfigurationDefinitionPropertyToTerraform, true)(this._resourceConfigurationDefinition.internalValue),
-      timeouts: tfResourceConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      resource_configuration_definition: cdktn.listMapper(awsResourceConfigurationResourceConfigurationDefinitionPropertyToTerraform, true)(this._resourceConfigurationDefinition.internalValue),
+      timeouts: awsResourceConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -458,16 +458,16 @@ export class TfResourceConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       resource_configuration_definition: {
-        value: cdktn.listMapperHcl(tfResourceConfigurationResourceConfigurationDefinitionPropertyToHclTerraform, true)(this._resourceConfigurationDefinition.internalValue),
+        value: cdktn.listMapperHcl(awsResourceConfigurationResourceConfigurationDefinitionPropertyToHclTerraform, true)(this._resourceConfigurationDefinition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfResourceConfiguration.ResourceConfigurationDefinitionPropertyList",
+        storageClassType: "AwsResourceConfiguration.ResourceConfigurationDefinitionPropertyList",
       },
       timeouts: {
-        value: tfResourceConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsResourceConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfResourceConfiguration.TimeoutsProperty",
+        storageClassType: "AwsResourceConfiguration.TimeoutsProperty",
       },
     };
 
@@ -476,7 +476,7 @@ export class TfResourceConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfResourceConfigurationArnResourcePropertyToTerraform(struct?: TfResourceConfiguration.ArnResourceProperty | cdktn.IResolvable): any {
+export function awsResourceConfigurationArnResourcePropertyToTerraform(struct?: AwsResourceConfiguration.ArnResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -487,7 +487,7 @@ export function tfResourceConfigurationArnResourcePropertyToTerraform(struct?: T
 }
 
 
-export function tfResourceConfigurationArnResourcePropertyToHclTerraform(struct?: TfResourceConfiguration.ArnResourceProperty | cdktn.IResolvable): any {
+export function awsResourceConfigurationArnResourcePropertyToHclTerraform(struct?: AwsResourceConfiguration.ArnResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -506,7 +506,7 @@ export function tfResourceConfigurationArnResourcePropertyToHclTerraform(struct?
 }
 
 
-export function tfResourceConfigurationDnsResourcePropertyToTerraform(struct?: TfResourceConfiguration.DnsResourceProperty | cdktn.IResolvable): any {
+export function awsResourceConfigurationDnsResourcePropertyToTerraform(struct?: AwsResourceConfiguration.DnsResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -518,7 +518,7 @@ export function tfResourceConfigurationDnsResourcePropertyToTerraform(struct?: T
 }
 
 
-export function tfResourceConfigurationDnsResourcePropertyToHclTerraform(struct?: TfResourceConfiguration.DnsResourceProperty | cdktn.IResolvable): any {
+export function awsResourceConfigurationDnsResourcePropertyToHclTerraform(struct?: AwsResourceConfiguration.DnsResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -543,7 +543,7 @@ export function tfResourceConfigurationDnsResourcePropertyToHclTerraform(struct?
 }
 
 
-export function tfResourceConfigurationIpResourcePropertyToTerraform(struct?: TfResourceConfiguration.IpResourceProperty | cdktn.IResolvable): any {
+export function awsResourceConfigurationIpResourcePropertyToTerraform(struct?: AwsResourceConfiguration.IpResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -554,7 +554,7 @@ export function tfResourceConfigurationIpResourcePropertyToTerraform(struct?: Tf
 }
 
 
-export function tfResourceConfigurationIpResourcePropertyToHclTerraform(struct?: TfResourceConfiguration.IpResourceProperty | cdktn.IResolvable): any {
+export function awsResourceConfigurationIpResourcePropertyToHclTerraform(struct?: AwsResourceConfiguration.IpResourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -573,39 +573,39 @@ export function tfResourceConfigurationIpResourcePropertyToHclTerraform(struct?:
 }
 
 
-export function tfResourceConfigurationResourceConfigurationDefinitionPropertyToTerraform(struct?: TfResourceConfiguration.ResourceConfigurationDefinitionProperty | cdktn.IResolvable): any {
+export function awsResourceConfigurationResourceConfigurationDefinitionPropertyToTerraform(struct?: AwsResourceConfiguration.ResourceConfigurationDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    arn_resource: cdktn.listMapper(tfResourceConfigurationArnResourcePropertyToTerraform, true)(struct!.arnResource),
-    dns_resource: cdktn.listMapper(tfResourceConfigurationDnsResourcePropertyToTerraform, true)(struct!.dnsResource),
-    ip_resource: cdktn.listMapper(tfResourceConfigurationIpResourcePropertyToTerraform, true)(struct!.ipResource),
+    arn_resource: cdktn.listMapper(awsResourceConfigurationArnResourcePropertyToTerraform, true)(struct!.arnResource),
+    dns_resource: cdktn.listMapper(awsResourceConfigurationDnsResourcePropertyToTerraform, true)(struct!.dnsResource),
+    ip_resource: cdktn.listMapper(awsResourceConfigurationIpResourcePropertyToTerraform, true)(struct!.ipResource),
   }
 }
 
 
-export function tfResourceConfigurationResourceConfigurationDefinitionPropertyToHclTerraform(struct?: TfResourceConfiguration.ResourceConfigurationDefinitionProperty | cdktn.IResolvable): any {
+export function awsResourceConfigurationResourceConfigurationDefinitionPropertyToHclTerraform(struct?: AwsResourceConfiguration.ResourceConfigurationDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     arn_resource: {
-      value: cdktn.listMapperHcl(tfResourceConfigurationArnResourcePropertyToHclTerraform, true)(struct!.arnResource),
+      value: cdktn.listMapperHcl(awsResourceConfigurationArnResourcePropertyToHclTerraform, true)(struct!.arnResource),
       isBlock: true,
       type: "list",
       storageClassType: "ArnResourcePropertyList",
     },
     dns_resource: {
-      value: cdktn.listMapperHcl(tfResourceConfigurationDnsResourcePropertyToHclTerraform, true)(struct!.dnsResource),
+      value: cdktn.listMapperHcl(awsResourceConfigurationDnsResourcePropertyToHclTerraform, true)(struct!.dnsResource),
       isBlock: true,
       type: "list",
       storageClassType: "DnsResourcePropertyList",
     },
     ip_resource: {
-      value: cdktn.listMapperHcl(tfResourceConfigurationIpResourcePropertyToHclTerraform, true)(struct!.ipResource),
+      value: cdktn.listMapperHcl(awsResourceConfigurationIpResourcePropertyToHclTerraform, true)(struct!.ipResource),
       isBlock: true,
       type: "list",
       storageClassType: "IpResourcePropertyList",
@@ -617,7 +617,7 @@ export function tfResourceConfigurationResourceConfigurationDefinitionPropertyTo
 }
 
 
-export function tfResourceConfigurationTimeoutsPropertyToTerraform(struct?: TfResourceConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsResourceConfigurationTimeoutsPropertyToTerraform(struct?: AwsResourceConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -630,7 +630,7 @@ export function tfResourceConfigurationTimeoutsPropertyToTerraform(struct?: TfRe
 }
 
 
-export function tfResourceConfigurationTimeoutsPropertyToHclTerraform(struct?: TfResourceConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsResourceConfigurationTimeoutsPropertyToHclTerraform(struct?: AwsResourceConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -661,10 +661,10 @@ export function tfResourceConfigurationTimeoutsPropertyToHclTerraform(struct?: T
 }
 
 
-export namespace TfResourceConfiguration {
+export namespace AwsResourceConfiguration {
 export interface ArnResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#arn TfResourceConfiguration#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#arn AwsResourceConfiguration#arn}
   */
   readonly arn: string;
 }
@@ -747,11 +747,11 @@ export class ArnResourcePropertyList extends cdktn.ComplexList {
 }
 export interface DnsResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#domain_name TfResourceConfiguration#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#domain_name AwsResourceConfiguration#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#ip_address_type TfResourceConfiguration#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#ip_address_type AwsResourceConfiguration#ip_address_type}
   */
   readonly ipAddressType: string;
 }
@@ -853,7 +853,7 @@ export class DnsResourcePropertyList extends cdktn.ComplexList {
 }
 export interface IpResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#ip_address TfResourceConfiguration#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#ip_address AwsResourceConfiguration#ip_address}
   */
   readonly ipAddress: string;
 }
@@ -938,19 +938,19 @@ export interface ResourceConfigurationDefinitionProperty {
   /**
   * arn_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#arn_resource TfResourceConfiguration#arn_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#arn_resource AwsResourceConfiguration#arn_resource}
   */
   readonly arnResource?: ArnResourceProperty[] | cdktn.IResolvable;
   /**
   * dns_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#dns_resource TfResourceConfiguration#dns_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#dns_resource AwsResourceConfiguration#dns_resource}
   */
   readonly dnsResource?: DnsResourceProperty[] | cdktn.IResolvable;
   /**
   * ip_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#ip_resource TfResourceConfiguration#ip_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#ip_resource AwsResourceConfiguration#ip_resource}
   */
   readonly ipResource?: IpResourceProperty[] | cdktn.IResolvable;
 }
@@ -1082,19 +1082,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#create TfResourceConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#create AwsResourceConfiguration#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#delete TfResourceConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#delete AwsResourceConfiguration#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#update TfResourceConfiguration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpclattice_resource_configuration#update AwsResourceConfiguration#update}
   */
   readonly update?: string;
 }

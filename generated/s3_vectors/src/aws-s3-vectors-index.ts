@@ -5,53 +5,53 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfIndexConfig extends cdktn.TerraformMetaArguments {
+export interface AwsIndexConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#data_type TfIndex#data_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#data_type AwsIndex#data_type}
   */
   readonly dataType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#dimension TfIndex#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#dimension AwsIndex#dimension}
   */
   readonly dimension: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#distance_metric TfIndex#distance_metric}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#distance_metric AwsIndex#distance_metric}
   */
   readonly distanceMetric: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#encryption_configuration TfIndex#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#encryption_configuration AwsIndex#encryption_configuration}
   */
-  readonly encryptionConfiguration?: TfIndex.EncryptionConfigurationProperty[] | cdktn.IResolvable;
+  readonly encryptionConfiguration?: AwsIndex.EncryptionConfigurationProperty[] | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#index_name TfIndex#index_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#index_name AwsIndex#index_name}
   */
   readonly indexName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#region TfIndex#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#region AwsIndex#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#tags TfIndex#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#tags AwsIndex#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#vector_bucket_name TfIndex#vector_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#vector_bucket_name AwsIndex#vector_bucket_name}
   */
   readonly vectorBucketName: string;
   /**
   * metadata_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#metadata_configuration TfIndex#metadata_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#metadata_configuration AwsIndex#metadata_configuration}
   */
-  readonly metadataConfiguration?: TfIndex.MetadataConfigurationProperty[] | cdktn.IResolvable;
+  readonly metadataConfiguration?: AwsIndex.MetadataConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index aws_s3vectors_index}
 */
-export class TfIndex extends cdktn.TerraformResource {
+export class AwsIndex extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -62,11 +62,11 @@ export class TfIndex extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfIndex resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsIndex resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfIndex to import
-  * @param importFromId The id of the existing TfIndex that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfIndex to import is found
+  * @param importToId The construct id used in the generated config for the AwsIndex to import
+  * @param importFromId The id of the existing AwsIndex that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsIndex to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3vectors_index", importId: importFromId, provider });
@@ -81,9 +81,9 @@ export class TfIndex extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfIndexConfig
+  * @param options AwsIndexConfig
   */
-  public constructor(scope: Construct, id: string, config: TfIndexConfig) {
+  public constructor(scope: Construct, id: string, config: AwsIndexConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3vectors_index',
       terraformGeneratorMetadata: {
@@ -159,11 +159,11 @@ export class TfIndex extends cdktn.TerraformResource {
   }
 
   // encryption_configuration - computed: true, optional: true, required: false
-  private _encryptionConfiguration = new TfIndex.EncryptionConfigurationPropertyList(this, "encryption_configuration", false);
+  private _encryptionConfiguration = new AwsIndex.EncryptionConfigurationPropertyList(this, "encryption_configuration", false);
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
-  public putEncryptionConfiguration(value: TfIndex.EncryptionConfigurationProperty[] | cdktn.IResolvable) {
+  public putEncryptionConfiguration(value: AwsIndex.EncryptionConfigurationProperty[] | cdktn.IResolvable) {
     this._encryptionConfiguration.internalValue = value;
   }
   public resetEncryptionConfiguration() {
@@ -244,11 +244,11 @@ export class TfIndex extends cdktn.TerraformResource {
   }
 
   // metadata_configuration - computed: false, optional: true, required: false
-  private _metadataConfiguration = new TfIndex.MetadataConfigurationPropertyList(this, "metadata_configuration", false);
+  private _metadataConfiguration = new AwsIndex.MetadataConfigurationPropertyList(this, "metadata_configuration", false);
   public get metadataConfiguration() {
     return this._metadataConfiguration;
   }
-  public putMetadataConfiguration(value: TfIndex.MetadataConfigurationProperty[] | cdktn.IResolvable) {
+  public putMetadataConfiguration(value: AwsIndex.MetadataConfigurationProperty[] | cdktn.IResolvable) {
     this._metadataConfiguration.internalValue = value;
   }
   public resetMetadataConfiguration() {
@@ -268,12 +268,12 @@ export class TfIndex extends cdktn.TerraformResource {
       data_type: cdktn.stringToTerraform(this._dataType),
       dimension: cdktn.numberToTerraform(this._dimension),
       distance_metric: cdktn.stringToTerraform(this._distanceMetric),
-      encryption_configuration: cdktn.listMapper(tfIndexEncryptionConfigurationPropertyToTerraform, false)(this._encryptionConfiguration.internalValue),
+      encryption_configuration: cdktn.listMapper(awsIndexEncryptionConfigurationPropertyToTerraform, false)(this._encryptionConfiguration.internalValue),
       index_name: cdktn.stringToTerraform(this._indexName),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       vector_bucket_name: cdktn.stringToTerraform(this._vectorBucketName),
-      metadata_configuration: cdktn.listMapper(tfIndexMetadataConfigurationPropertyToTerraform, true)(this._metadataConfiguration.internalValue),
+      metadata_configuration: cdktn.listMapper(awsIndexMetadataConfigurationPropertyToTerraform, true)(this._metadataConfiguration.internalValue),
     };
   }
 
@@ -298,10 +298,10 @@ export class TfIndex extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       encryption_configuration: {
-        value: cdktn.listMapperHcl(tfIndexEncryptionConfigurationPropertyToHclTerraform, false)(this._encryptionConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsIndexEncryptionConfigurationPropertyToHclTerraform, false)(this._encryptionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfIndex.EncryptionConfigurationPropertyList",
+        storageClassType: "AwsIndex.EncryptionConfigurationPropertyList",
       },
       index_name: {
         value: cdktn.stringToHclTerraform(this._indexName),
@@ -328,10 +328,10 @@ export class TfIndex extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       metadata_configuration: {
-        value: cdktn.listMapperHcl(tfIndexMetadataConfigurationPropertyToHclTerraform, true)(this._metadataConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsIndexMetadataConfigurationPropertyToHclTerraform, true)(this._metadataConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfIndex.MetadataConfigurationPropertyList",
+        storageClassType: "AwsIndex.MetadataConfigurationPropertyList",
       },
     };
 
@@ -340,7 +340,7 @@ export class TfIndex extends cdktn.TerraformResource {
   }
 }
 
-export function tfIndexEncryptionConfigurationPropertyToTerraform(struct?: TfIndex.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function awsIndexEncryptionConfigurationPropertyToTerraform(struct?: AwsIndex.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -352,7 +352,7 @@ export function tfIndexEncryptionConfigurationPropertyToTerraform(struct?: TfInd
 }
 
 
-export function tfIndexEncryptionConfigurationPropertyToHclTerraform(struct?: TfIndex.EncryptionConfigurationProperty | cdktn.IResolvable): any {
+export function awsIndexEncryptionConfigurationPropertyToHclTerraform(struct?: AwsIndex.EncryptionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -377,7 +377,7 @@ export function tfIndexEncryptionConfigurationPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfIndexMetadataConfigurationPropertyToTerraform(struct?: TfIndex.MetadataConfigurationProperty | cdktn.IResolvable): any {
+export function awsIndexMetadataConfigurationPropertyToTerraform(struct?: AwsIndex.MetadataConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function tfIndexMetadataConfigurationPropertyToTerraform(struct?: TfIndex
 }
 
 
-export function tfIndexMetadataConfigurationPropertyToHclTerraform(struct?: TfIndex.MetadataConfigurationProperty | cdktn.IResolvable): any {
+export function awsIndexMetadataConfigurationPropertyToHclTerraform(struct?: AwsIndex.MetadataConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -407,14 +407,14 @@ export function tfIndexMetadataConfigurationPropertyToHclTerraform(struct?: TfIn
 }
 
 
-export namespace TfIndex {
+export namespace AwsIndex {
 export interface EncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#kms_key_arn TfIndex#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#kms_key_arn AwsIndex#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#sse_type TfIndex#sse_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#sse_type AwsIndex#sse_type}
   */
   readonly sseType?: string;
 }
@@ -522,7 +522,7 @@ export class EncryptionConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface MetadataConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#non_filterable_metadata_keys TfIndex#non_filterable_metadata_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3vectors_index#non_filterable_metadata_keys AwsIndex#non_filterable_metadata_keys}
   */
   readonly nonFilterableMetadataKeys: string[];
 }

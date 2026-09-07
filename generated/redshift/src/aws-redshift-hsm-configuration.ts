@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfHsmConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsHsmConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#description TfHsmConfiguration#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#description AwsHsmConfiguration#description}
   */
   readonly description: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#hsm_configuration_identifier TfHsmConfiguration#hsm_configuration_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#hsm_configuration_identifier AwsHsmConfiguration#hsm_configuration_identifier}
   */
   readonly hsmConfigurationIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#hsm_ip_address TfHsmConfiguration#hsm_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#hsm_ip_address AwsHsmConfiguration#hsm_ip_address}
   */
   readonly hsmIpAddress: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#hsm_partition_name TfHsmConfiguration#hsm_partition_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#hsm_partition_name AwsHsmConfiguration#hsm_partition_name}
   */
   readonly hsmPartitionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#hsm_partition_password TfHsmConfiguration#hsm_partition_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#hsm_partition_password AwsHsmConfiguration#hsm_partition_password}
   */
   readonly hsmPartitionPassword: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#hsm_server_public_certificate TfHsmConfiguration#hsm_server_public_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#hsm_server_public_certificate AwsHsmConfiguration#hsm_server_public_certificate}
   */
   readonly hsmServerPublicCertificate: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#id TfHsmConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#id AwsHsmConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -40,15 +40,15 @@ export interface TfHsmConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#region TfHsmConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#region AwsHsmConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#tags TfHsmConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#tags AwsHsmConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#tags_all TfHsmConfiguration#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#tags_all AwsHsmConfiguration#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -56,7 +56,7 @@ export interface TfHsmConfigurationConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration aws_redshift_hsm_configuration}
 */
-export class TfHsmConfiguration extends cdktn.TerraformResource {
+export class AwsHsmConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -67,11 +67,11 @@ export class TfHsmConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfHsmConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsHsmConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfHsmConfiguration to import
-  * @param importFromId The id of the existing TfHsmConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfHsmConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsHsmConfiguration to import
+  * @param importFromId The id of the existing AwsHsmConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_hsm_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsHsmConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshift_hsm_configuration", importId: importFromId, provider });
@@ -86,9 +86,9 @@ export class TfHsmConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfHsmConfigurationConfig
+  * @param options AwsHsmConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfHsmConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsHsmConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshift_hsm_configuration',
       terraformGeneratorMetadata: {

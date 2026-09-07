@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfKxVolumeConfig extends cdktn.TerraformMetaArguments {
+export interface AwsKxVolumeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#availability_zones TfKxVolume#availability_zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#availability_zones AwsKxVolume#availability_zones}
   */
   readonly availabilityZones: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#az_mode TfKxVolume#az_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#az_mode AwsKxVolume#az_mode}
   */
   readonly azMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#description TfKxVolume#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#description AwsKxVolume#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#environment_id TfKxVolume#environment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#environment_id AwsKxVolume#environment_id}
   */
   readonly environmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#id TfKxVolume#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#id AwsKxVolume#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#name TfKxVolume#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#name AwsKxVolume#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#region TfKxVolume#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#region AwsKxVolume#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#tags TfKxVolume#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#tags AwsKxVolume#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#tags_all TfKxVolume#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#tags_all AwsKxVolume#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#type TfKxVolume#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#type AwsKxVolume#type}
   */
   readonly type: string;
   /**
   * nas1_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#nas1_configuration TfKxVolume#nas1_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#nas1_configuration AwsKxVolume#nas1_configuration}
   */
-  readonly nas1Configuration?: TfKxVolume.Nas1ConfigurationProperty[] | cdktn.IResolvable;
+  readonly nas1Configuration?: AwsKxVolume.Nas1ConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#timeouts TfKxVolume#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#timeouts AwsKxVolume#timeouts}
   */
-  readonly timeouts?: TfKxVolume.TimeoutsProperty;
+  readonly timeouts?: AwsKxVolume.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume aws_finspace_kx_volume}
 */
-export class TfKxVolume extends cdktn.TerraformResource {
+export class AwsKxVolume extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class TfKxVolume extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfKxVolume resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsKxVolume resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfKxVolume to import
-  * @param importFromId The id of the existing TfKxVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfKxVolume to import is found
+  * @param importToId The construct id used in the generated config for the AwsKxVolume to import
+  * @param importFromId The id of the existing AwsKxVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsKxVolume to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_finspace_kx_volume", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class TfKxVolume extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfKxVolumeConfig
+  * @param options AwsKxVolumeConfig
   */
-  public constructor(scope: Construct, id: string, config: TfKxVolumeConfig) {
+  public constructor(scope: Construct, id: string, config: AwsKxVolumeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_finspace_kx_volume',
       terraformGeneratorMetadata: {
@@ -140,7 +140,7 @@ export class TfKxVolume extends cdktn.TerraformResource {
   }
 
   // attached_clusters - computed: true, optional: false, required: false
-  private _attachedClusters = new TfKxVolume.AttachedClustersPropertyList(this, "attached_clusters", false);
+  private _attachedClusters = new AwsKxVolume.AttachedClustersPropertyList(this, "attached_clusters", false);
   public get attachedClusters() {
     return this._attachedClusters;
   }
@@ -311,11 +311,11 @@ export class TfKxVolume extends cdktn.TerraformResource {
   }
 
   // nas1_configuration - computed: false, optional: true, required: false
-  private _nas1Configuration = new TfKxVolume.Nas1ConfigurationPropertyList(this, "nas1_configuration", false);
+  private _nas1Configuration = new AwsKxVolume.Nas1ConfigurationPropertyList(this, "nas1_configuration", false);
   public get nas1Configuration() {
     return this._nas1Configuration;
   }
-  public putNas1Configuration(value: TfKxVolume.Nas1ConfigurationProperty[] | cdktn.IResolvable) {
+  public putNas1Configuration(value: AwsKxVolume.Nas1ConfigurationProperty[] | cdktn.IResolvable) {
     this._nas1Configuration.internalValue = value;
   }
   public resetNas1Configuration() {
@@ -327,11 +327,11 @@ export class TfKxVolume extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfKxVolume.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsKxVolume.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfKxVolume.TimeoutsProperty) {
+  public putTimeouts(value: AwsKxVolume.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -358,8 +358,8 @@ export class TfKxVolume extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      nas1_configuration: cdktn.listMapper(tfKxVolumeNas1ConfigurationPropertyToTerraform, true)(this._nas1Configuration.internalValue),
-      timeouts: tfKxVolumeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      nas1_configuration: cdktn.listMapper(awsKxVolumeNas1ConfigurationPropertyToTerraform, true)(this._nas1Configuration.internalValue),
+      timeouts: awsKxVolumeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -426,16 +426,16 @@ export class TfKxVolume extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       nas1_configuration: {
-        value: cdktn.listMapperHcl(tfKxVolumeNas1ConfigurationPropertyToHclTerraform, true)(this._nas1Configuration.internalValue),
+        value: cdktn.listMapperHcl(awsKxVolumeNas1ConfigurationPropertyToHclTerraform, true)(this._nas1Configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfKxVolume.Nas1ConfigurationPropertyList",
+        storageClassType: "AwsKxVolume.Nas1ConfigurationPropertyList",
       },
       timeouts: {
-        value: tfKxVolumeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsKxVolumeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfKxVolume.TimeoutsProperty",
+        storageClassType: "AwsKxVolume.TimeoutsProperty",
       },
     };
 
@@ -444,7 +444,7 @@ export class TfKxVolume extends cdktn.TerraformResource {
   }
 }
 
-export function tfKxVolumeAttachedClustersPropertyToTerraform(struct?: TfKxVolume.AttachedClustersProperty): any {
+export function awsKxVolumeAttachedClustersPropertyToTerraform(struct?: AwsKxVolume.AttachedClustersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -454,7 +454,7 @@ export function tfKxVolumeAttachedClustersPropertyToTerraform(struct?: TfKxVolum
 }
 
 
-export function tfKxVolumeAttachedClustersPropertyToHclTerraform(struct?: TfKxVolume.AttachedClustersProperty): any {
+export function awsKxVolumeAttachedClustersPropertyToHclTerraform(struct?: AwsKxVolume.AttachedClustersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -465,7 +465,7 @@ export function tfKxVolumeAttachedClustersPropertyToHclTerraform(struct?: TfKxVo
 }
 
 
-export function tfKxVolumeNas1ConfigurationPropertyToTerraform(struct?: TfKxVolume.Nas1ConfigurationProperty | cdktn.IResolvable): any {
+export function awsKxVolumeNas1ConfigurationPropertyToTerraform(struct?: AwsKxVolume.Nas1ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -477,7 +477,7 @@ export function tfKxVolumeNas1ConfigurationPropertyToTerraform(struct?: TfKxVolu
 }
 
 
-export function tfKxVolumeNas1ConfigurationPropertyToHclTerraform(struct?: TfKxVolume.Nas1ConfigurationProperty | cdktn.IResolvable): any {
+export function awsKxVolumeNas1ConfigurationPropertyToHclTerraform(struct?: AwsKxVolume.Nas1ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -502,7 +502,7 @@ export function tfKxVolumeNas1ConfigurationPropertyToHclTerraform(struct?: TfKxV
 }
 
 
-export function tfKxVolumeTimeoutsPropertyToTerraform(struct?: TfKxVolume.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsKxVolumeTimeoutsPropertyToTerraform(struct?: AwsKxVolume.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -515,7 +515,7 @@ export function tfKxVolumeTimeoutsPropertyToTerraform(struct?: TfKxVolume.Timeou
 }
 
 
-export function tfKxVolumeTimeoutsPropertyToHclTerraform(struct?: TfKxVolume.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsKxVolumeTimeoutsPropertyToHclTerraform(struct?: AwsKxVolume.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -546,7 +546,7 @@ export function tfKxVolumeTimeoutsPropertyToHclTerraform(struct?: TfKxVolume.Tim
 }
 
 
-export namespace TfKxVolume {
+export namespace AwsKxVolume {
 export interface AttachedClustersProperty {
 }
 export class AttachedClustersPropertyOutputReference extends cdktn.ComplexObject {
@@ -613,11 +613,11 @@ export class AttachedClustersPropertyList extends cdktn.ComplexList {
 }
 export interface Nas1ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#size TfKxVolume#size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#size AwsKxVolume#size}
   */
   readonly size: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#type TfKxVolume#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#type AwsKxVolume#type}
   */
   readonly type: string;
 }
@@ -719,15 +719,15 @@ export class Nas1ConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#create TfKxVolume#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#create AwsKxVolume#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#delete TfKxVolume#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#delete AwsKxVolume#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#update TfKxVolume#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/finspace_kx_volume#update AwsKxVolume#update}
   */
   readonly update?: string;
 }

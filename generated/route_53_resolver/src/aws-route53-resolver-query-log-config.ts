@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfResolverQueryLogConfigConfig extends cdktn.TerraformMetaArguments {
+export interface AwsResolverQueryLogConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config#destination_arn TfResolverQueryLogConfig#destination_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config#destination_arn AwsResolverQueryLogConfig#destination_arn}
   */
   readonly destinationArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config#id TfResolverQueryLogConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config#id AwsResolverQueryLogConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config#name TfResolverQueryLogConfig#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config#name AwsResolverQueryLogConfig#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config#region TfResolverQueryLogConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config#region AwsResolverQueryLogConfig#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config#tags TfResolverQueryLogConfig#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config#tags AwsResolverQueryLogConfig#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config#tags_all TfResolverQueryLogConfig#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config#tags_all AwsResolverQueryLogConfig#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -40,7 +40,7 @@ export interface TfResolverQueryLogConfigConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config aws_route53_resolver_query_log_config}
 */
-export class TfResolverQueryLogConfig extends cdktn.TerraformResource {
+export class AwsResolverQueryLogConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfResolverQueryLogConfig extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfResolverQueryLogConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsResolverQueryLogConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfResolverQueryLogConfig to import
-  * @param importFromId The id of the existing TfResolverQueryLogConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfResolverQueryLogConfig to import is found
+  * @param importToId The construct id used in the generated config for the AwsResolverQueryLogConfig to import
+  * @param importFromId The id of the existing AwsResolverQueryLogConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/route53_resolver_query_log_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsResolverQueryLogConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53_resolver_query_log_config", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfResolverQueryLogConfig extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfResolverQueryLogConfigConfig
+  * @param options AwsResolverQueryLogConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: TfResolverQueryLogConfigConfig) {
+  public constructor(scope: Construct, id: string, config: AwsResolverQueryLogConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_route53_resolver_query_log_config',
       terraformGeneratorMetadata: {

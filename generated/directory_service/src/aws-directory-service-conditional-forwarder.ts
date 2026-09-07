@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConditionalForwarderConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConditionalForwarderConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_conditional_forwarder#directory_id TfConditionalForwarder#directory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_conditional_forwarder#directory_id AwsConditionalForwarder#directory_id}
   */
   readonly directoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_conditional_forwarder#dns_ips TfConditionalForwarder#dns_ips}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_conditional_forwarder#dns_ips AwsConditionalForwarder#dns_ips}
   */
   readonly dnsIps: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_conditional_forwarder#id TfConditionalForwarder#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_conditional_forwarder#id AwsConditionalForwarder#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface TfConditionalForwarderConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_conditional_forwarder#region TfConditionalForwarder#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_conditional_forwarder#region AwsConditionalForwarder#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_conditional_forwarder#remote_domain_name TfConditionalForwarder#remote_domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_conditional_forwarder#remote_domain_name AwsConditionalForwarder#remote_domain_name}
   */
   readonly remoteDomainName: string;
 }
@@ -36,7 +36,7 @@ export interface TfConditionalForwarderConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_conditional_forwarder aws_directory_service_conditional_forwarder}
 */
-export class TfConditionalForwarder extends cdktn.TerraformResource {
+export class AwsConditionalForwarder extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfConditionalForwarder extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConditionalForwarder resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConditionalForwarder resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConditionalForwarder to import
-  * @param importFromId The id of the existing TfConditionalForwarder that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_conditional_forwarder#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConditionalForwarder to import is found
+  * @param importToId The construct id used in the generated config for the AwsConditionalForwarder to import
+  * @param importFromId The id of the existing AwsConditionalForwarder that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_conditional_forwarder#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConditionalForwarder to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_directory_service_conditional_forwarder", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfConditionalForwarder extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConditionalForwarderConfig
+  * @param options AwsConditionalForwarderConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConditionalForwarderConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConditionalForwarderConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_directory_service_conditional_forwarder',
       terraformGeneratorMetadata: {

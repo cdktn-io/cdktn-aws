@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFlowDefinitionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFlowDefinitionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#flow_definition_name TfFlowDefinition#flow_definition_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#flow_definition_name AwsFlowDefinition#flow_definition_name}
   */
   readonly flowDefinitionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#id TfFlowDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#id AwsFlowDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,51 +20,51 @@ export interface TfFlowDefinitionConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#region TfFlowDefinition#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#region AwsFlowDefinition#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#role_arn TfFlowDefinition#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#role_arn AwsFlowDefinition#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#tags TfFlowDefinition#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#tags AwsFlowDefinition#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#tags_all TfFlowDefinition#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#tags_all AwsFlowDefinition#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * human_loop_activation_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#human_loop_activation_config TfFlowDefinition#human_loop_activation_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#human_loop_activation_config AwsFlowDefinition#human_loop_activation_config}
   */
-  readonly humanLoopActivationConfig?: TfFlowDefinition.HumanLoopActivationConfigProperty;
+  readonly humanLoopActivationConfig?: AwsFlowDefinition.HumanLoopActivationConfigProperty;
   /**
   * human_loop_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#human_loop_config TfFlowDefinition#human_loop_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#human_loop_config AwsFlowDefinition#human_loop_config}
   */
-  readonly humanLoopConfig: TfFlowDefinition.HumanLoopConfigProperty;
+  readonly humanLoopConfig: AwsFlowDefinition.HumanLoopConfigProperty;
   /**
   * human_loop_request_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#human_loop_request_source TfFlowDefinition#human_loop_request_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#human_loop_request_source AwsFlowDefinition#human_loop_request_source}
   */
-  readonly humanLoopRequestSource?: TfFlowDefinition.HumanLoopRequestSourceProperty;
+  readonly humanLoopRequestSource?: AwsFlowDefinition.HumanLoopRequestSourceProperty;
   /**
   * output_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#output_config TfFlowDefinition#output_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#output_config AwsFlowDefinition#output_config}
   */
-  readonly outputConfig: TfFlowDefinition.OutputConfigProperty;
+  readonly outputConfig: AwsFlowDefinition.OutputConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition aws_sagemaker_flow_definition}
 */
-export class TfFlowDefinition extends cdktn.TerraformResource {
+export class AwsFlowDefinition extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -75,11 +75,11 @@ export class TfFlowDefinition extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFlowDefinition resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFlowDefinition resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFlowDefinition to import
-  * @param importFromId The id of the existing TfFlowDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFlowDefinition to import is found
+  * @param importToId The construct id used in the generated config for the AwsFlowDefinition to import
+  * @param importFromId The id of the existing AwsFlowDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFlowDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_flow_definition", importId: importFromId, provider });
@@ -94,9 +94,9 @@ export class TfFlowDefinition extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFlowDefinitionConfig
+  * @param options AwsFlowDefinitionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfFlowDefinitionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsFlowDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_flow_definition',
       terraformGeneratorMetadata: {
@@ -224,11 +224,11 @@ export class TfFlowDefinition extends cdktn.TerraformResource {
   }
 
   // human_loop_activation_config - computed: false, optional: true, required: false
-  private _humanLoopActivationConfig = new TfFlowDefinition.HumanLoopActivationConfigPropertyOutputReference(this, "human_loop_activation_config");
+  private _humanLoopActivationConfig = new AwsFlowDefinition.HumanLoopActivationConfigPropertyOutputReference(this, "human_loop_activation_config");
   public get humanLoopActivationConfig() {
     return this._humanLoopActivationConfig;
   }
-  public putHumanLoopActivationConfig(value: TfFlowDefinition.HumanLoopActivationConfigProperty) {
+  public putHumanLoopActivationConfig(value: AwsFlowDefinition.HumanLoopActivationConfigProperty) {
     this._humanLoopActivationConfig.internalValue = value;
   }
   public resetHumanLoopActivationConfig() {
@@ -240,11 +240,11 @@ export class TfFlowDefinition extends cdktn.TerraformResource {
   }
 
   // human_loop_config - computed: false, optional: false, required: true
-  private _humanLoopConfig = new TfFlowDefinition.HumanLoopConfigPropertyOutputReference(this, "human_loop_config");
+  private _humanLoopConfig = new AwsFlowDefinition.HumanLoopConfigPropertyOutputReference(this, "human_loop_config");
   public get humanLoopConfig() {
     return this._humanLoopConfig;
   }
-  public putHumanLoopConfig(value: TfFlowDefinition.HumanLoopConfigProperty) {
+  public putHumanLoopConfig(value: AwsFlowDefinition.HumanLoopConfigProperty) {
     this._humanLoopConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -253,11 +253,11 @@ export class TfFlowDefinition extends cdktn.TerraformResource {
   }
 
   // human_loop_request_source - computed: false, optional: true, required: false
-  private _humanLoopRequestSource = new TfFlowDefinition.HumanLoopRequestSourcePropertyOutputReference(this, "human_loop_request_source");
+  private _humanLoopRequestSource = new AwsFlowDefinition.HumanLoopRequestSourcePropertyOutputReference(this, "human_loop_request_source");
   public get humanLoopRequestSource() {
     return this._humanLoopRequestSource;
   }
-  public putHumanLoopRequestSource(value: TfFlowDefinition.HumanLoopRequestSourceProperty) {
+  public putHumanLoopRequestSource(value: AwsFlowDefinition.HumanLoopRequestSourceProperty) {
     this._humanLoopRequestSource.internalValue = value;
   }
   public resetHumanLoopRequestSource() {
@@ -269,11 +269,11 @@ export class TfFlowDefinition extends cdktn.TerraformResource {
   }
 
   // output_config - computed: false, optional: false, required: true
-  private _outputConfig = new TfFlowDefinition.OutputConfigPropertyOutputReference(this, "output_config");
+  private _outputConfig = new AwsFlowDefinition.OutputConfigPropertyOutputReference(this, "output_config");
   public get outputConfig() {
     return this._outputConfig;
   }
-  public putOutputConfig(value: TfFlowDefinition.OutputConfigProperty) {
+  public putOutputConfig(value: AwsFlowDefinition.OutputConfigProperty) {
     this._outputConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -293,10 +293,10 @@ export class TfFlowDefinition extends cdktn.TerraformResource {
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      human_loop_activation_config: tfFlowDefinitionHumanLoopActivationConfigPropertyToTerraform(this._humanLoopActivationConfig.internalValue),
-      human_loop_config: tfFlowDefinitionHumanLoopConfigPropertyToTerraform(this._humanLoopConfig.internalValue),
-      human_loop_request_source: tfFlowDefinitionHumanLoopRequestSourcePropertyToTerraform(this._humanLoopRequestSource.internalValue),
-      output_config: tfFlowDefinitionOutputConfigPropertyToTerraform(this._outputConfig.internalValue),
+      human_loop_activation_config: awsFlowDefinitionHumanLoopActivationConfigPropertyToTerraform(this._humanLoopActivationConfig.internalValue),
+      human_loop_config: awsFlowDefinitionHumanLoopConfigPropertyToTerraform(this._humanLoopConfig.internalValue),
+      human_loop_request_source: awsFlowDefinitionHumanLoopRequestSourcePropertyToTerraform(this._humanLoopRequestSource.internalValue),
+      output_config: awsFlowDefinitionOutputConfigPropertyToTerraform(this._outputConfig.internalValue),
     };
   }
 
@@ -339,28 +339,28 @@ export class TfFlowDefinition extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       human_loop_activation_config: {
-        value: tfFlowDefinitionHumanLoopActivationConfigPropertyToHclTerraform(this._humanLoopActivationConfig.internalValue),
+        value: awsFlowDefinitionHumanLoopActivationConfigPropertyToHclTerraform(this._humanLoopActivationConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFlowDefinition.HumanLoopActivationConfigPropertyList",
+        storageClassType: "AwsFlowDefinition.HumanLoopActivationConfigPropertyList",
       },
       human_loop_config: {
-        value: tfFlowDefinitionHumanLoopConfigPropertyToHclTerraform(this._humanLoopConfig.internalValue),
+        value: awsFlowDefinitionHumanLoopConfigPropertyToHclTerraform(this._humanLoopConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFlowDefinition.HumanLoopConfigPropertyList",
+        storageClassType: "AwsFlowDefinition.HumanLoopConfigPropertyList",
       },
       human_loop_request_source: {
-        value: tfFlowDefinitionHumanLoopRequestSourcePropertyToHclTerraform(this._humanLoopRequestSource.internalValue),
+        value: awsFlowDefinitionHumanLoopRequestSourcePropertyToHclTerraform(this._humanLoopRequestSource.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFlowDefinition.HumanLoopRequestSourcePropertyList",
+        storageClassType: "AwsFlowDefinition.HumanLoopRequestSourcePropertyList",
       },
       output_config: {
-        value: tfFlowDefinitionOutputConfigPropertyToHclTerraform(this._outputConfig.internalValue),
+        value: awsFlowDefinitionOutputConfigPropertyToHclTerraform(this._outputConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFlowDefinition.OutputConfigPropertyList",
+        storageClassType: "AwsFlowDefinition.OutputConfigPropertyList",
       },
     };
 
@@ -369,7 +369,7 @@ export class TfFlowDefinition extends cdktn.TerraformResource {
   }
 }
 
-export function tfFlowDefinitionHumanLoopActivationConditionsConfigPropertyToTerraform(struct?: TfFlowDefinition.HumanLoopActivationConditionsConfigPropertyOutputReference | TfFlowDefinition.HumanLoopActivationConditionsConfigProperty): any {
+export function awsFlowDefinitionHumanLoopActivationConditionsConfigPropertyToTerraform(struct?: AwsFlowDefinition.HumanLoopActivationConditionsConfigPropertyOutputReference | AwsFlowDefinition.HumanLoopActivationConditionsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,7 +380,7 @@ export function tfFlowDefinitionHumanLoopActivationConditionsConfigPropertyToTer
 }
 
 
-export function tfFlowDefinitionHumanLoopActivationConditionsConfigPropertyToHclTerraform(struct?: TfFlowDefinition.HumanLoopActivationConditionsConfigPropertyOutputReference | TfFlowDefinition.HumanLoopActivationConditionsConfigProperty): any {
+export function awsFlowDefinitionHumanLoopActivationConditionsConfigPropertyToHclTerraform(struct?: AwsFlowDefinition.HumanLoopActivationConditionsConfigPropertyOutputReference | AwsFlowDefinition.HumanLoopActivationConditionsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -399,25 +399,25 @@ export function tfFlowDefinitionHumanLoopActivationConditionsConfigPropertyToHcl
 }
 
 
-export function tfFlowDefinitionHumanLoopActivationConfigPropertyToTerraform(struct?: TfFlowDefinition.HumanLoopActivationConfigPropertyOutputReference | TfFlowDefinition.HumanLoopActivationConfigProperty): any {
+export function awsFlowDefinitionHumanLoopActivationConfigPropertyToTerraform(struct?: AwsFlowDefinition.HumanLoopActivationConfigPropertyOutputReference | AwsFlowDefinition.HumanLoopActivationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    human_loop_activation_conditions_config: tfFlowDefinitionHumanLoopActivationConditionsConfigPropertyToTerraform(struct!.humanLoopActivationConditionsConfig),
+    human_loop_activation_conditions_config: awsFlowDefinitionHumanLoopActivationConditionsConfigPropertyToTerraform(struct!.humanLoopActivationConditionsConfig),
   }
 }
 
 
-export function tfFlowDefinitionHumanLoopActivationConfigPropertyToHclTerraform(struct?: TfFlowDefinition.HumanLoopActivationConfigPropertyOutputReference | TfFlowDefinition.HumanLoopActivationConfigProperty): any {
+export function awsFlowDefinitionHumanLoopActivationConfigPropertyToHclTerraform(struct?: AwsFlowDefinition.HumanLoopActivationConfigPropertyOutputReference | AwsFlowDefinition.HumanLoopActivationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     human_loop_activation_conditions_config: {
-      value: tfFlowDefinitionHumanLoopActivationConditionsConfigPropertyToHclTerraform(struct!.humanLoopActivationConditionsConfig),
+      value: awsFlowDefinitionHumanLoopActivationConditionsConfigPropertyToHclTerraform(struct!.humanLoopActivationConditionsConfig),
       isBlock: true,
       type: "list",
       storageClassType: "HumanLoopActivationConditionsConfigPropertyList",
@@ -429,7 +429,7 @@ export function tfFlowDefinitionHumanLoopActivationConfigPropertyToHclTerraform(
 }
 
 
-export function tfFlowDefinitionAmountInUsdPropertyToTerraform(struct?: TfFlowDefinition.AmountInUsdPropertyOutputReference | TfFlowDefinition.AmountInUsdProperty): any {
+export function awsFlowDefinitionAmountInUsdPropertyToTerraform(struct?: AwsFlowDefinition.AmountInUsdPropertyOutputReference | AwsFlowDefinition.AmountInUsdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,7 +442,7 @@ export function tfFlowDefinitionAmountInUsdPropertyToTerraform(struct?: TfFlowDe
 }
 
 
-export function tfFlowDefinitionAmountInUsdPropertyToHclTerraform(struct?: TfFlowDefinition.AmountInUsdPropertyOutputReference | TfFlowDefinition.AmountInUsdProperty): any {
+export function awsFlowDefinitionAmountInUsdPropertyToHclTerraform(struct?: AwsFlowDefinition.AmountInUsdPropertyOutputReference | AwsFlowDefinition.AmountInUsdProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -473,25 +473,25 @@ export function tfFlowDefinitionAmountInUsdPropertyToHclTerraform(struct?: TfFlo
 }
 
 
-export function tfFlowDefinitionPublicWorkforceTaskPricePropertyToTerraform(struct?: TfFlowDefinition.PublicWorkforceTaskPricePropertyOutputReference | TfFlowDefinition.PublicWorkforceTaskPriceProperty): any {
+export function awsFlowDefinitionPublicWorkforceTaskPricePropertyToTerraform(struct?: AwsFlowDefinition.PublicWorkforceTaskPricePropertyOutputReference | AwsFlowDefinition.PublicWorkforceTaskPriceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    amount_in_usd: tfFlowDefinitionAmountInUsdPropertyToTerraform(struct!.amountInUsd),
+    amount_in_usd: awsFlowDefinitionAmountInUsdPropertyToTerraform(struct!.amountInUsd),
   }
 }
 
 
-export function tfFlowDefinitionPublicWorkforceTaskPricePropertyToHclTerraform(struct?: TfFlowDefinition.PublicWorkforceTaskPricePropertyOutputReference | TfFlowDefinition.PublicWorkforceTaskPriceProperty): any {
+export function awsFlowDefinitionPublicWorkforceTaskPricePropertyToHclTerraform(struct?: AwsFlowDefinition.PublicWorkforceTaskPricePropertyOutputReference | AwsFlowDefinition.PublicWorkforceTaskPriceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     amount_in_usd: {
-      value: tfFlowDefinitionAmountInUsdPropertyToHclTerraform(struct!.amountInUsd),
+      value: awsFlowDefinitionAmountInUsdPropertyToHclTerraform(struct!.amountInUsd),
       isBlock: true,
       type: "list",
       storageClassType: "AmountInUsdPropertyList",
@@ -503,7 +503,7 @@ export function tfFlowDefinitionPublicWorkforceTaskPricePropertyToHclTerraform(s
 }
 
 
-export function tfFlowDefinitionHumanLoopConfigPropertyToTerraform(struct?: TfFlowDefinition.HumanLoopConfigPropertyOutputReference | TfFlowDefinition.HumanLoopConfigProperty): any {
+export function awsFlowDefinitionHumanLoopConfigPropertyToTerraform(struct?: AwsFlowDefinition.HumanLoopConfigPropertyOutputReference | AwsFlowDefinition.HumanLoopConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -517,12 +517,12 @@ export function tfFlowDefinitionHumanLoopConfigPropertyToTerraform(struct?: TfFl
     task_time_limit_in_seconds: cdktn.numberToTerraform(struct!.taskTimeLimitInSeconds),
     task_title: cdktn.stringToTerraform(struct!.taskTitle),
     workteam_arn: cdktn.stringToTerraform(struct!.workteamArn),
-    public_workforce_task_price: tfFlowDefinitionPublicWorkforceTaskPricePropertyToTerraform(struct!.publicWorkforceTaskPrice),
+    public_workforce_task_price: awsFlowDefinitionPublicWorkforceTaskPricePropertyToTerraform(struct!.publicWorkforceTaskPrice),
   }
 }
 
 
-export function tfFlowDefinitionHumanLoopConfigPropertyToHclTerraform(struct?: TfFlowDefinition.HumanLoopConfigPropertyOutputReference | TfFlowDefinition.HumanLoopConfigProperty): any {
+export function awsFlowDefinitionHumanLoopConfigPropertyToHclTerraform(struct?: AwsFlowDefinition.HumanLoopConfigPropertyOutputReference | AwsFlowDefinition.HumanLoopConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -577,7 +577,7 @@ export function tfFlowDefinitionHumanLoopConfigPropertyToHclTerraform(struct?: T
       storageClassType: "string",
     },
     public_workforce_task_price: {
-      value: tfFlowDefinitionPublicWorkforceTaskPricePropertyToHclTerraform(struct!.publicWorkforceTaskPrice),
+      value: awsFlowDefinitionPublicWorkforceTaskPricePropertyToHclTerraform(struct!.publicWorkforceTaskPrice),
       isBlock: true,
       type: "list",
       storageClassType: "PublicWorkforceTaskPricePropertyList",
@@ -589,7 +589,7 @@ export function tfFlowDefinitionHumanLoopConfigPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfFlowDefinitionHumanLoopRequestSourcePropertyToTerraform(struct?: TfFlowDefinition.HumanLoopRequestSourcePropertyOutputReference | TfFlowDefinition.HumanLoopRequestSourceProperty): any {
+export function awsFlowDefinitionHumanLoopRequestSourcePropertyToTerraform(struct?: AwsFlowDefinition.HumanLoopRequestSourcePropertyOutputReference | AwsFlowDefinition.HumanLoopRequestSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -600,7 +600,7 @@ export function tfFlowDefinitionHumanLoopRequestSourcePropertyToTerraform(struct
 }
 
 
-export function tfFlowDefinitionHumanLoopRequestSourcePropertyToHclTerraform(struct?: TfFlowDefinition.HumanLoopRequestSourcePropertyOutputReference | TfFlowDefinition.HumanLoopRequestSourceProperty): any {
+export function awsFlowDefinitionHumanLoopRequestSourcePropertyToHclTerraform(struct?: AwsFlowDefinition.HumanLoopRequestSourcePropertyOutputReference | AwsFlowDefinition.HumanLoopRequestSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -619,7 +619,7 @@ export function tfFlowDefinitionHumanLoopRequestSourcePropertyToHclTerraform(str
 }
 
 
-export function tfFlowDefinitionOutputConfigPropertyToTerraform(struct?: TfFlowDefinition.OutputConfigPropertyOutputReference | TfFlowDefinition.OutputConfigProperty): any {
+export function awsFlowDefinitionOutputConfigPropertyToTerraform(struct?: AwsFlowDefinition.OutputConfigPropertyOutputReference | AwsFlowDefinition.OutputConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -631,7 +631,7 @@ export function tfFlowDefinitionOutputConfigPropertyToTerraform(struct?: TfFlowD
 }
 
 
-export function tfFlowDefinitionOutputConfigPropertyToHclTerraform(struct?: TfFlowDefinition.OutputConfigPropertyOutputReference | TfFlowDefinition.OutputConfigProperty): any {
+export function awsFlowDefinitionOutputConfigPropertyToHclTerraform(struct?: AwsFlowDefinition.OutputConfigPropertyOutputReference | AwsFlowDefinition.OutputConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -656,10 +656,10 @@ export function tfFlowDefinitionOutputConfigPropertyToHclTerraform(struct?: TfFl
 }
 
 
-export namespace TfFlowDefinition {
+export namespace AwsFlowDefinition {
 export interface HumanLoopActivationConditionsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#human_loop_activation_conditions TfFlowDefinition#human_loop_activation_conditions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#human_loop_activation_conditions AwsFlowDefinition#human_loop_activation_conditions}
   */
   readonly humanLoopActivationConditions: string;
 }
@@ -712,7 +712,7 @@ export interface HumanLoopActivationConfigProperty {
   /**
   * human_loop_activation_conditions_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#human_loop_activation_conditions_config TfFlowDefinition#human_loop_activation_conditions_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#human_loop_activation_conditions_config AwsFlowDefinition#human_loop_activation_conditions_config}
   */
   readonly humanLoopActivationConditionsConfig?: HumanLoopActivationConditionsConfigProperty;
 }
@@ -766,15 +766,15 @@ export class HumanLoopActivationConfigPropertyOutputReference extends cdktn.Comp
 }
 export interface AmountInUsdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#cents TfFlowDefinition#cents}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#cents AwsFlowDefinition#cents}
   */
   readonly cents?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#dollars TfFlowDefinition#dollars}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#dollars AwsFlowDefinition#dollars}
   */
   readonly dollars?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#tenth_fractions_of_a_cent TfFlowDefinition#tenth_fractions_of_a_cent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#tenth_fractions_of_a_cent AwsFlowDefinition#tenth_fractions_of_a_cent}
   */
   readonly tenthFractionsOfACent?: number;
 }
@@ -874,7 +874,7 @@ export interface PublicWorkforceTaskPriceProperty {
   /**
   * amount_in_usd block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#amount_in_usd TfFlowDefinition#amount_in_usd}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#amount_in_usd AwsFlowDefinition#amount_in_usd}
   */
   readonly amountInUsd?: AmountInUsdProperty;
 }
@@ -928,41 +928,41 @@ export class PublicWorkforceTaskPricePropertyOutputReference extends cdktn.Compl
 }
 export interface HumanLoopConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#human_task_ui_arn TfFlowDefinition#human_task_ui_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#human_task_ui_arn AwsFlowDefinition#human_task_ui_arn}
   */
   readonly humanTaskUiArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#task_availability_lifetime_in_seconds TfFlowDefinition#task_availability_lifetime_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#task_availability_lifetime_in_seconds AwsFlowDefinition#task_availability_lifetime_in_seconds}
   */
   readonly taskAvailabilityLifetimeInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#task_count TfFlowDefinition#task_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#task_count AwsFlowDefinition#task_count}
   */
   readonly taskCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#task_description TfFlowDefinition#task_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#task_description AwsFlowDefinition#task_description}
   */
   readonly taskDescription: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#task_keywords TfFlowDefinition#task_keywords}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#task_keywords AwsFlowDefinition#task_keywords}
   */
   readonly taskKeywords?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#task_time_limit_in_seconds TfFlowDefinition#task_time_limit_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#task_time_limit_in_seconds AwsFlowDefinition#task_time_limit_in_seconds}
   */
   readonly taskTimeLimitInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#task_title TfFlowDefinition#task_title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#task_title AwsFlowDefinition#task_title}
   */
   readonly taskTitle: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#workteam_arn TfFlowDefinition#workteam_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#workteam_arn AwsFlowDefinition#workteam_arn}
   */
   readonly workteamArn: string;
   /**
   * public_workforce_task_price block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#public_workforce_task_price TfFlowDefinition#public_workforce_task_price}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#public_workforce_task_price AwsFlowDefinition#public_workforce_task_price}
   */
   readonly publicWorkforceTaskPrice?: PublicWorkforceTaskPriceProperty;
 }
@@ -1177,7 +1177,7 @@ export class HumanLoopConfigPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface HumanLoopRequestSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#aws_managed_human_loop_request_source TfFlowDefinition#aws_managed_human_loop_request_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#aws_managed_human_loop_request_source AwsFlowDefinition#aws_managed_human_loop_request_source}
   */
   readonly awsManagedHumanLoopRequestSource: string;
 }
@@ -1228,11 +1228,11 @@ export class HumanLoopRequestSourcePropertyOutputReference extends cdktn.Complex
 }
 export interface OutputConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#kms_key_id TfFlowDefinition#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#kms_key_id AwsFlowDefinition#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#s3_output_path TfFlowDefinition#s3_output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_flow_definition#s3_output_path AwsFlowDefinition#s3_output_path}
   */
   readonly s3OutputPath: string;
 }

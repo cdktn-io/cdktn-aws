@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfUserPoolUiCustomizationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsUserPoolUiCustomizationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool_ui_customization#client_id TfUserPoolUiCustomization#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool_ui_customization#client_id AwsUserPoolUiCustomization#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool_ui_customization#css TfUserPoolUiCustomization#css}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool_ui_customization#css AwsUserPoolUiCustomization#css}
   */
   readonly css?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool_ui_customization#id TfUserPoolUiCustomization#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool_ui_customization#id AwsUserPoolUiCustomization#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool_ui_customization#image_file TfUserPoolUiCustomization#image_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool_ui_customization#image_file AwsUserPoolUiCustomization#image_file}
   */
   readonly imageFile?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool_ui_customization#region TfUserPoolUiCustomization#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool_ui_customization#region AwsUserPoolUiCustomization#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool_ui_customization#user_pool_id TfUserPoolUiCustomization#user_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool_ui_customization#user_pool_id AwsUserPoolUiCustomization#user_pool_id}
   */
   readonly userPoolId: string;
 }
@@ -40,7 +40,7 @@ export interface TfUserPoolUiCustomizationConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool_ui_customization aws_cognito_user_pool_ui_customization}
 */
-export class TfUserPoolUiCustomization extends cdktn.TerraformResource {
+export class AwsUserPoolUiCustomization extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class TfUserPoolUiCustomization extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfUserPoolUiCustomization resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsUserPoolUiCustomization resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfUserPoolUiCustomization to import
-  * @param importFromId The id of the existing TfUserPoolUiCustomization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool_ui_customization#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfUserPoolUiCustomization to import is found
+  * @param importToId The construct id used in the generated config for the AwsUserPoolUiCustomization to import
+  * @param importFromId The id of the existing AwsUserPoolUiCustomization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cognito_user_pool_ui_customization#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsUserPoolUiCustomization to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cognito_user_pool_ui_customization", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class TfUserPoolUiCustomization extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfUserPoolUiCustomizationConfig
+  * @param options AwsUserPoolUiCustomizationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfUserPoolUiCustomizationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsUserPoolUiCustomizationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_user_pool_ui_customization',
       terraformGeneratorMetadata: {

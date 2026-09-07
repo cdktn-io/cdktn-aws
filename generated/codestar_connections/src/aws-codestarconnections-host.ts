@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfHostConfig extends cdktn.TerraformMetaArguments {
+export interface AwsHostConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#id TfHost#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#id AwsHost#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#name TfHost#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#name AwsHost#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#provider_endpoint TfHost#provider_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#provider_endpoint AwsHost#provider_endpoint}
   */
   readonly providerEndpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#provider_type TfHost#provider_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#provider_type AwsHost#provider_type}
   */
   readonly providerType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#region TfHost#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#region AwsHost#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#timeouts TfHost#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#timeouts AwsHost#timeouts}
   */
-  readonly timeouts?: TfHost.TimeoutsProperty;
+  readonly timeouts?: AwsHost.TimeoutsProperty;
   /**
   * vpc_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#vpc_configuration TfHost#vpc_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#vpc_configuration AwsHost#vpc_configuration}
   */
-  readonly vpcConfiguration?: TfHost.VpcConfigurationProperty;
+  readonly vpcConfiguration?: AwsHost.VpcConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host aws_codestarconnections_host}
 */
-export class TfHost extends cdktn.TerraformResource {
+export class AwsHost extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfHost extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfHost resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsHost resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfHost to import
-  * @param importFromId The id of the existing TfHost that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfHost to import is found
+  * @param importToId The construct id used in the generated config for the AwsHost to import
+  * @param importFromId The id of the existing AwsHost that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsHost to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codestarconnections_host", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfHost extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfHostConfig
+  * @param options AwsHostConfig
   */
-  public constructor(scope: Construct, id: string, config: TfHostConfig) {
+  public constructor(scope: Construct, id: string, config: AwsHostConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codestarconnections_host',
       terraformGeneratorMetadata: {
@@ -191,11 +191,11 @@ export class TfHost extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfHost.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsHost.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfHost.TimeoutsProperty) {
+  public putTimeouts(value: AwsHost.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -207,11 +207,11 @@ export class TfHost extends cdktn.TerraformResource {
   }
 
   // vpc_configuration - computed: false, optional: true, required: false
-  private _vpcConfiguration = new TfHost.VpcConfigurationPropertyOutputReference(this, "vpc_configuration");
+  private _vpcConfiguration = new AwsHost.VpcConfigurationPropertyOutputReference(this, "vpc_configuration");
   public get vpcConfiguration() {
     return this._vpcConfiguration;
   }
-  public putVpcConfiguration(value: TfHost.VpcConfigurationProperty) {
+  public putVpcConfiguration(value: AwsHost.VpcConfigurationProperty) {
     this._vpcConfiguration.internalValue = value;
   }
   public resetVpcConfiguration() {
@@ -233,8 +233,8 @@ export class TfHost extends cdktn.TerraformResource {
       provider_endpoint: cdktn.stringToTerraform(this._providerEndpoint),
       provider_type: cdktn.stringToTerraform(this._providerType),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfHostTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_configuration: tfHostVpcConfigurationPropertyToTerraform(this._vpcConfiguration.internalValue),
+      timeouts: awsHostTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_configuration: awsHostVpcConfigurationPropertyToTerraform(this._vpcConfiguration.internalValue),
     };
   }
 
@@ -271,16 +271,16 @@ export class TfHost extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfHostTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsHostTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfHost.TimeoutsProperty",
+        storageClassType: "AwsHost.TimeoutsProperty",
       },
       vpc_configuration: {
-        value: tfHostVpcConfigurationPropertyToHclTerraform(this._vpcConfiguration.internalValue),
+        value: awsHostVpcConfigurationPropertyToHclTerraform(this._vpcConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfHost.VpcConfigurationPropertyList",
+        storageClassType: "AwsHost.VpcConfigurationPropertyList",
       },
     };
 
@@ -289,7 +289,7 @@ export class TfHost extends cdktn.TerraformResource {
   }
 }
 
-export function tfHostTimeoutsPropertyToTerraform(struct?: TfHost.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsHostTimeoutsPropertyToTerraform(struct?: AwsHost.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function tfHostTimeoutsPropertyToTerraform(struct?: TfHost.TimeoutsProper
 }
 
 
-export function tfHostTimeoutsPropertyToHclTerraform(struct?: TfHost.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsHostTimeoutsPropertyToHclTerraform(struct?: AwsHost.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -333,7 +333,7 @@ export function tfHostTimeoutsPropertyToHclTerraform(struct?: TfHost.TimeoutsPro
 }
 
 
-export function tfHostVpcConfigurationPropertyToTerraform(struct?: TfHost.VpcConfigurationPropertyOutputReference | TfHost.VpcConfigurationProperty): any {
+export function awsHostVpcConfigurationPropertyToTerraform(struct?: AwsHost.VpcConfigurationPropertyOutputReference | AwsHost.VpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function tfHostVpcConfigurationPropertyToTerraform(struct?: TfHost.VpcCon
 }
 
 
-export function tfHostVpcConfigurationPropertyToHclTerraform(struct?: TfHost.VpcConfigurationPropertyOutputReference | TfHost.VpcConfigurationProperty): any {
+export function awsHostVpcConfigurationPropertyToHclTerraform(struct?: AwsHost.VpcConfigurationPropertyOutputReference | AwsHost.VpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -384,18 +384,18 @@ export function tfHostVpcConfigurationPropertyToHclTerraform(struct?: TfHost.Vpc
 }
 
 
-export namespace TfHost {
+export namespace AwsHost {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#create TfHost#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#create AwsHost#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#delete TfHost#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#delete AwsHost#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#update TfHost#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#update AwsHost#update}
   */
   readonly update?: string;
 }
@@ -503,19 +503,19 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#security_group_ids TfHost#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#security_group_ids AwsHost#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#subnet_ids TfHost#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#subnet_ids AwsHost#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#tls_certificate TfHost#tls_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#tls_certificate AwsHost#tls_certificate}
   */
   readonly tlsCertificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#vpc_id TfHost#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codestarconnections_host#vpc_id AwsHost#vpc_id}
   */
   readonly vpcId: string;
 }

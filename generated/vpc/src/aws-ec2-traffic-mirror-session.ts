@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEc2TrafficMirrorSessionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEc2TrafficMirrorSessionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#description TfEc2TrafficMirrorSession#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#description AwsEc2TrafficMirrorSession#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#id TfEc2TrafficMirrorSession#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#id AwsEc2TrafficMirrorSession#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#network_interface_id TfEc2TrafficMirrorSession#network_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#network_interface_id AwsEc2TrafficMirrorSession#network_interface_id}
   */
   readonly networkInterfaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#packet_length TfEc2TrafficMirrorSession#packet_length}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#packet_length AwsEc2TrafficMirrorSession#packet_length}
   */
   readonly packetLength?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#region TfEc2TrafficMirrorSession#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#region AwsEc2TrafficMirrorSession#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#session_number TfEc2TrafficMirrorSession#session_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#session_number AwsEc2TrafficMirrorSession#session_number}
   */
   readonly sessionNumber: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#tags TfEc2TrafficMirrorSession#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#tags AwsEc2TrafficMirrorSession#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#tags_all TfEc2TrafficMirrorSession#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#tags_all AwsEc2TrafficMirrorSession#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#traffic_mirror_filter_id TfEc2TrafficMirrorSession#traffic_mirror_filter_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#traffic_mirror_filter_id AwsEc2TrafficMirrorSession#traffic_mirror_filter_id}
   */
   readonly trafficMirrorFilterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#traffic_mirror_target_id TfEc2TrafficMirrorSession#traffic_mirror_target_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#traffic_mirror_target_id AwsEc2TrafficMirrorSession#traffic_mirror_target_id}
   */
   readonly trafficMirrorTargetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#virtual_network_id TfEc2TrafficMirrorSession#virtual_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#virtual_network_id AwsEc2TrafficMirrorSession#virtual_network_id}
   */
   readonly virtualNetworkId?: number;
 }
@@ -60,7 +60,7 @@ export interface TfEc2TrafficMirrorSessionConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session aws_ec2_traffic_mirror_session}
 */
-export class TfEc2TrafficMirrorSession extends cdktn.TerraformResource {
+export class AwsEc2TrafficMirrorSession extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class TfEc2TrafficMirrorSession extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEc2TrafficMirrorSession resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEc2TrafficMirrorSession resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEc2TrafficMirrorSession to import
-  * @param importFromId The id of the existing TfEc2TrafficMirrorSession that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEc2TrafficMirrorSession to import is found
+  * @param importToId The construct id used in the generated config for the AwsEc2TrafficMirrorSession to import
+  * @param importFromId The id of the existing AwsEc2TrafficMirrorSession that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_traffic_mirror_session#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEc2TrafficMirrorSession to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_traffic_mirror_session", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class TfEc2TrafficMirrorSession extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEc2TrafficMirrorSessionConfig
+  * @param options AwsEc2TrafficMirrorSessionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEc2TrafficMirrorSessionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEc2TrafficMirrorSessionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_traffic_mirror_session',
       terraformGeneratorMetadata: {

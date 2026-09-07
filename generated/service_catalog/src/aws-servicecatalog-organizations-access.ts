@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfOrganizationsAccessConfig extends cdktn.TerraformMetaArguments {
+export interface AwsOrganizationsAccessConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_organizations_access#enabled TfOrganizationsAccess#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_organizations_access#enabled AwsOrganizationsAccess#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_organizations_access#id TfOrganizationsAccess#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_organizations_access#id AwsOrganizationsAccess#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,15 +20,15 @@ export interface TfOrganizationsAccessConfig extends cdktn.TerraformMetaArgument
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_organizations_access#timeouts TfOrganizationsAccess#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_organizations_access#timeouts AwsOrganizationsAccess#timeouts}
   */
-  readonly timeouts?: TfOrganizationsAccess.TimeoutsProperty;
+  readonly timeouts?: AwsOrganizationsAccess.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_organizations_access aws_servicecatalog_organizations_access}
 */
-export class TfOrganizationsAccess extends cdktn.TerraformResource {
+export class AwsOrganizationsAccess extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfOrganizationsAccess extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfOrganizationsAccess resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsOrganizationsAccess resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfOrganizationsAccess to import
-  * @param importFromId The id of the existing TfOrganizationsAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_organizations_access#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfOrganizationsAccess to import is found
+  * @param importToId The construct id used in the generated config for the AwsOrganizationsAccess to import
+  * @param importFromId The id of the existing AwsOrganizationsAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_organizations_access#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsOrganizationsAccess to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_organizations_access", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfOrganizationsAccess extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfOrganizationsAccessConfig
+  * @param options AwsOrganizationsAccessConfig
   */
-  public constructor(scope: Construct, id: string, config: TfOrganizationsAccessConfig) {
+  public constructor(scope: Construct, id: string, config: AwsOrganizationsAccessConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_organizations_access',
       terraformGeneratorMetadata: {
@@ -115,11 +115,11 @@ export class TfOrganizationsAccess extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfOrganizationsAccess.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsOrganizationsAccess.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfOrganizationsAccess.TimeoutsProperty) {
+  public putTimeouts(value: AwsOrganizationsAccess.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -138,7 +138,7 @@ export class TfOrganizationsAccess extends cdktn.TerraformResource {
     return {
       enabled: cdktn.booleanToTerraform(this._enabled),
       id: cdktn.stringToTerraform(this._id),
-      timeouts: tfOrganizationsAccessTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsOrganizationsAccessTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -157,10 +157,10 @@ export class TfOrganizationsAccess extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfOrganizationsAccessTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsOrganizationsAccessTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfOrganizationsAccess.TimeoutsProperty",
+        storageClassType: "AwsOrganizationsAccess.TimeoutsProperty",
       },
     };
 
@@ -169,7 +169,7 @@ export class TfOrganizationsAccess extends cdktn.TerraformResource {
   }
 }
 
-export function tfOrganizationsAccessTimeoutsPropertyToTerraform(struct?: TfOrganizationsAccess.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsOrganizationsAccessTimeoutsPropertyToTerraform(struct?: AwsOrganizationsAccess.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -180,7 +180,7 @@ export function tfOrganizationsAccessTimeoutsPropertyToTerraform(struct?: TfOrga
 }
 
 
-export function tfOrganizationsAccessTimeoutsPropertyToHclTerraform(struct?: TfOrganizationsAccess.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsOrganizationsAccessTimeoutsPropertyToHclTerraform(struct?: AwsOrganizationsAccess.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -199,10 +199,10 @@ export function tfOrganizationsAccessTimeoutsPropertyToHclTerraform(struct?: TfO
 }
 
 
-export namespace TfOrganizationsAccess {
+export namespace AwsOrganizationsAccess {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_organizations_access#read TfOrganizationsAccess#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_organizations_access#read AwsOrganizationsAccess#read}
   */
   readonly read?: string;
 }

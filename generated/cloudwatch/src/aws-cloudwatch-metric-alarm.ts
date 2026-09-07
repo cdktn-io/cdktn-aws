@@ -5,130 +5,130 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfMetricAlarmConfig extends cdktn.TerraformMetaArguments {
+export interface AwsMetricAlarmConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#actions_enabled TfMetricAlarm#actions_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#actions_enabled AwsMetricAlarm#actions_enabled}
   */
   readonly actionsEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#alarm_actions TfMetricAlarm#alarm_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#alarm_actions AwsMetricAlarm#alarm_actions}
   */
   readonly alarmActions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#alarm_description TfMetricAlarm#alarm_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#alarm_description AwsMetricAlarm#alarm_description}
   */
   readonly alarmDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#alarm_name TfMetricAlarm#alarm_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#alarm_name AwsMetricAlarm#alarm_name}
   */
   readonly alarmName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#comparison_operator TfMetricAlarm#comparison_operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#comparison_operator AwsMetricAlarm#comparison_operator}
   */
   readonly comparisonOperator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#datapoints_to_alarm TfMetricAlarm#datapoints_to_alarm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#datapoints_to_alarm AwsMetricAlarm#datapoints_to_alarm}
   */
   readonly datapointsToAlarm?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#dimensions TfMetricAlarm#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#dimensions AwsMetricAlarm#dimensions}
   */
   readonly dimensions?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#evaluate_low_sample_count_percentiles TfMetricAlarm#evaluate_low_sample_count_percentiles}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#evaluate_low_sample_count_percentiles AwsMetricAlarm#evaluate_low_sample_count_percentiles}
   */
   readonly evaluateLowSampleCountPercentiles?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#evaluation_interval TfMetricAlarm#evaluation_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#evaluation_interval AwsMetricAlarm#evaluation_interval}
   */
   readonly evaluationInterval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#evaluation_periods TfMetricAlarm#evaluation_periods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#evaluation_periods AwsMetricAlarm#evaluation_periods}
   */
   readonly evaluationPeriods?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#extended_statistic TfMetricAlarm#extended_statistic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#extended_statistic AwsMetricAlarm#extended_statistic}
   */
   readonly extendedStatistic?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#id TfMetricAlarm#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#id AwsMetricAlarm#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#insufficient_data_actions TfMetricAlarm#insufficient_data_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#insufficient_data_actions AwsMetricAlarm#insufficient_data_actions}
   */
   readonly insufficientDataActions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#metric_name TfMetricAlarm#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#metric_name AwsMetricAlarm#metric_name}
   */
   readonly metricName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#namespace TfMetricAlarm#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#namespace AwsMetricAlarm#namespace}
   */
   readonly namespace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#ok_actions TfMetricAlarm#ok_actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#ok_actions AwsMetricAlarm#ok_actions}
   */
   readonly okActions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#period TfMetricAlarm#period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#period AwsMetricAlarm#period}
   */
   readonly period?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#region TfMetricAlarm#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#region AwsMetricAlarm#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#statistic TfMetricAlarm#statistic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#statistic AwsMetricAlarm#statistic}
   */
   readonly statistic?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#tags TfMetricAlarm#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#tags AwsMetricAlarm#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#tags_all TfMetricAlarm#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#tags_all AwsMetricAlarm#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#threshold TfMetricAlarm#threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#threshold AwsMetricAlarm#threshold}
   */
   readonly threshold?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#threshold_metric_id TfMetricAlarm#threshold_metric_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#threshold_metric_id AwsMetricAlarm#threshold_metric_id}
   */
   readonly thresholdMetricId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#treat_missing_data TfMetricAlarm#treat_missing_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#treat_missing_data AwsMetricAlarm#treat_missing_data}
   */
   readonly treatMissingData?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#unit TfMetricAlarm#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#unit AwsMetricAlarm#unit}
   */
   readonly unit?: string;
   /**
   * evaluation_criteria block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#evaluation_criteria TfMetricAlarm#evaluation_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#evaluation_criteria AwsMetricAlarm#evaluation_criteria}
   */
-  readonly evaluationCriteria?: TfMetricAlarm.EvaluationCriteriaProperty;
+  readonly evaluationCriteria?: AwsMetricAlarm.EvaluationCriteriaProperty;
   /**
   * metric_query block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#metric_query TfMetricAlarm#metric_query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#metric_query AwsMetricAlarm#metric_query}
   */
-  readonly metricQuery?: TfMetricAlarm.MetricQueryProperty[] | cdktn.IResolvable;
+  readonly metricQuery?: AwsMetricAlarm.MetricQueryProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm aws_cloudwatch_metric_alarm}
 */
-export class TfMetricAlarm extends cdktn.TerraformResource {
+export class AwsMetricAlarm extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -139,11 +139,11 @@ export class TfMetricAlarm extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfMetricAlarm resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsMetricAlarm resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfMetricAlarm to import
-  * @param importFromId The id of the existing TfMetricAlarm that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfMetricAlarm to import is found
+  * @param importToId The construct id used in the generated config for the AwsMetricAlarm to import
+  * @param importFromId The id of the existing AwsMetricAlarm that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMetricAlarm to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_metric_alarm", importId: importFromId, provider });
@@ -158,9 +158,9 @@ export class TfMetricAlarm extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfMetricAlarmConfig
+  * @param options AwsMetricAlarmConfig
   */
-  public constructor(scope: Construct, id: string, config: TfMetricAlarmConfig) {
+  public constructor(scope: Construct, id: string, config: AwsMetricAlarmConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_metric_alarm',
       terraformGeneratorMetadata: {
@@ -612,11 +612,11 @@ export class TfMetricAlarm extends cdktn.TerraformResource {
   }
 
   // evaluation_criteria - computed: false, optional: true, required: false
-  private _evaluationCriteria = new TfMetricAlarm.EvaluationCriteriaPropertyOutputReference(this, "evaluation_criteria");
+  private _evaluationCriteria = new AwsMetricAlarm.EvaluationCriteriaPropertyOutputReference(this, "evaluation_criteria");
   public get evaluationCriteria() {
     return this._evaluationCriteria;
   }
-  public putEvaluationCriteria(value: TfMetricAlarm.EvaluationCriteriaProperty) {
+  public putEvaluationCriteria(value: AwsMetricAlarm.EvaluationCriteriaProperty) {
     this._evaluationCriteria.internalValue = value;
   }
   public resetEvaluationCriteria() {
@@ -628,11 +628,11 @@ export class TfMetricAlarm extends cdktn.TerraformResource {
   }
 
   // metric_query - computed: false, optional: true, required: false
-  private _metricQuery = new TfMetricAlarm.MetricQueryPropertyList(this, "metric_query", true);
+  private _metricQuery = new AwsMetricAlarm.MetricQueryPropertyList(this, "metric_query", true);
   public get metricQuery() {
     return this._metricQuery;
   }
-  public putMetricQuery(value: TfMetricAlarm.MetricQueryProperty[] | cdktn.IResolvable) {
+  public putMetricQuery(value: AwsMetricAlarm.MetricQueryProperty[] | cdktn.IResolvable) {
     this._metricQuery.internalValue = value;
   }
   public resetMetricQuery() {
@@ -674,8 +674,8 @@ export class TfMetricAlarm extends cdktn.TerraformResource {
       threshold_metric_id: cdktn.stringToTerraform(this._thresholdMetricId),
       treat_missing_data: cdktn.stringToTerraform(this._treatMissingData),
       unit: cdktn.stringToTerraform(this._unit),
-      evaluation_criteria: tfMetricAlarmEvaluationCriteriaPropertyToTerraform(this._evaluationCriteria.internalValue),
-      metric_query: cdktn.listMapper(tfMetricAlarmMetricQueryPropertyToTerraform, true)(this._metricQuery.internalValue),
+      evaluation_criteria: awsMetricAlarmEvaluationCriteriaPropertyToTerraform(this._evaluationCriteria.internalValue),
+      metric_query: cdktn.listMapper(awsMetricAlarmMetricQueryPropertyToTerraform, true)(this._metricQuery.internalValue),
     };
   }
 
@@ -832,16 +832,16 @@ export class TfMetricAlarm extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       evaluation_criteria: {
-        value: tfMetricAlarmEvaluationCriteriaPropertyToHclTerraform(this._evaluationCriteria.internalValue),
+        value: awsMetricAlarmEvaluationCriteriaPropertyToHclTerraform(this._evaluationCriteria.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMetricAlarm.EvaluationCriteriaPropertyList",
+        storageClassType: "AwsMetricAlarm.EvaluationCriteriaPropertyList",
       },
       metric_query: {
-        value: cdktn.listMapperHcl(tfMetricAlarmMetricQueryPropertyToHclTerraform, true)(this._metricQuery.internalValue),
+        value: cdktn.listMapperHcl(awsMetricAlarmMetricQueryPropertyToHclTerraform, true)(this._metricQuery.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfMetricAlarm.MetricQueryPropertyList",
+        storageClassType: "AwsMetricAlarm.MetricQueryPropertyList",
       },
     };
 
@@ -850,7 +850,7 @@ export class TfMetricAlarm extends cdktn.TerraformResource {
   }
 }
 
-export function tfMetricAlarmPromqlCriteriaPropertyToTerraform(struct?: TfMetricAlarm.PromqlCriteriaPropertyOutputReference | TfMetricAlarm.PromqlCriteriaProperty): any {
+export function awsMetricAlarmPromqlCriteriaPropertyToTerraform(struct?: AwsMetricAlarm.PromqlCriteriaPropertyOutputReference | AwsMetricAlarm.PromqlCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -863,7 +863,7 @@ export function tfMetricAlarmPromqlCriteriaPropertyToTerraform(struct?: TfMetric
 }
 
 
-export function tfMetricAlarmPromqlCriteriaPropertyToHclTerraform(struct?: TfMetricAlarm.PromqlCriteriaPropertyOutputReference | TfMetricAlarm.PromqlCriteriaProperty): any {
+export function awsMetricAlarmPromqlCriteriaPropertyToHclTerraform(struct?: AwsMetricAlarm.PromqlCriteriaPropertyOutputReference | AwsMetricAlarm.PromqlCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -894,25 +894,25 @@ export function tfMetricAlarmPromqlCriteriaPropertyToHclTerraform(struct?: TfMet
 }
 
 
-export function tfMetricAlarmEvaluationCriteriaPropertyToTerraform(struct?: TfMetricAlarm.EvaluationCriteriaPropertyOutputReference | TfMetricAlarm.EvaluationCriteriaProperty): any {
+export function awsMetricAlarmEvaluationCriteriaPropertyToTerraform(struct?: AwsMetricAlarm.EvaluationCriteriaPropertyOutputReference | AwsMetricAlarm.EvaluationCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    promql_criteria: tfMetricAlarmPromqlCriteriaPropertyToTerraform(struct!.promqlCriteria),
+    promql_criteria: awsMetricAlarmPromqlCriteriaPropertyToTerraform(struct!.promqlCriteria),
   }
 }
 
 
-export function tfMetricAlarmEvaluationCriteriaPropertyToHclTerraform(struct?: TfMetricAlarm.EvaluationCriteriaPropertyOutputReference | TfMetricAlarm.EvaluationCriteriaProperty): any {
+export function awsMetricAlarmEvaluationCriteriaPropertyToHclTerraform(struct?: AwsMetricAlarm.EvaluationCriteriaPropertyOutputReference | AwsMetricAlarm.EvaluationCriteriaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     promql_criteria: {
-      value: tfMetricAlarmPromqlCriteriaPropertyToHclTerraform(struct!.promqlCriteria),
+      value: awsMetricAlarmPromqlCriteriaPropertyToHclTerraform(struct!.promqlCriteria),
       isBlock: true,
       type: "list",
       storageClassType: "PromqlCriteriaPropertyList",
@@ -924,7 +924,7 @@ export function tfMetricAlarmEvaluationCriteriaPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfMetricAlarmMetricPropertyToTerraform(struct?: TfMetricAlarm.MetricPropertyOutputReference | TfMetricAlarm.MetricProperty): any {
+export function awsMetricAlarmMetricPropertyToTerraform(struct?: AwsMetricAlarm.MetricPropertyOutputReference | AwsMetricAlarm.MetricProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -940,7 +940,7 @@ export function tfMetricAlarmMetricPropertyToTerraform(struct?: TfMetricAlarm.Me
 }
 
 
-export function tfMetricAlarmMetricPropertyToHclTerraform(struct?: TfMetricAlarm.MetricPropertyOutputReference | TfMetricAlarm.MetricProperty): any {
+export function awsMetricAlarmMetricPropertyToHclTerraform(struct?: AwsMetricAlarm.MetricPropertyOutputReference | AwsMetricAlarm.MetricProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -989,7 +989,7 @@ export function tfMetricAlarmMetricPropertyToHclTerraform(struct?: TfMetricAlarm
 }
 
 
-export function tfMetricAlarmMetricQueryPropertyToTerraform(struct?: TfMetricAlarm.MetricQueryProperty | cdktn.IResolvable): any {
+export function awsMetricAlarmMetricQueryPropertyToTerraform(struct?: AwsMetricAlarm.MetricQueryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1001,12 +1001,12 @@ export function tfMetricAlarmMetricQueryPropertyToTerraform(struct?: TfMetricAla
     label: cdktn.stringToTerraform(struct!.label),
     period: cdktn.numberToTerraform(struct!.period),
     return_data: cdktn.booleanToTerraform(struct!.returnData),
-    metric: tfMetricAlarmMetricPropertyToTerraform(struct!.metric),
+    metric: awsMetricAlarmMetricPropertyToTerraform(struct!.metric),
   }
 }
 
 
-export function tfMetricAlarmMetricQueryPropertyToHclTerraform(struct?: TfMetricAlarm.MetricQueryProperty | cdktn.IResolvable): any {
+export function awsMetricAlarmMetricQueryPropertyToHclTerraform(struct?: AwsMetricAlarm.MetricQueryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1049,7 +1049,7 @@ export function tfMetricAlarmMetricQueryPropertyToHclTerraform(struct?: TfMetric
       storageClassType: "boolean",
     },
     metric: {
-      value: tfMetricAlarmMetricPropertyToHclTerraform(struct!.metric),
+      value: awsMetricAlarmMetricPropertyToHclTerraform(struct!.metric),
       isBlock: true,
       type: "list",
       storageClassType: "MetricPropertyList",
@@ -1061,18 +1061,18 @@ export function tfMetricAlarmMetricQueryPropertyToHclTerraform(struct?: TfMetric
 }
 
 
-export namespace TfMetricAlarm {
+export namespace AwsMetricAlarm {
 export interface PromqlCriteriaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#pending_period TfMetricAlarm#pending_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#pending_period AwsMetricAlarm#pending_period}
   */
   readonly pendingPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#query TfMetricAlarm#query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#query AwsMetricAlarm#query}
   */
   readonly query: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#recovery_period TfMetricAlarm#recovery_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#recovery_period AwsMetricAlarm#recovery_period}
   */
   readonly recoveryPeriod?: number;
 }
@@ -1169,7 +1169,7 @@ export interface EvaluationCriteriaProperty {
   /**
   * promql_criteria block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#promql_criteria TfMetricAlarm#promql_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#promql_criteria AwsMetricAlarm#promql_criteria}
   */
   readonly promqlCriteria: PromqlCriteriaProperty;
 }
@@ -1220,27 +1220,27 @@ export class EvaluationCriteriaPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface MetricProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#dimensions TfMetricAlarm#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#dimensions AwsMetricAlarm#dimensions}
   */
   readonly dimensions?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#metric_name TfMetricAlarm#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#metric_name AwsMetricAlarm#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#namespace TfMetricAlarm#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#namespace AwsMetricAlarm#namespace}
   */
   readonly namespace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#period TfMetricAlarm#period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#period AwsMetricAlarm#period}
   */
   readonly period: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#stat TfMetricAlarm#stat}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#stat AwsMetricAlarm#stat}
   */
   readonly stat: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#unit TfMetricAlarm#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#unit AwsMetricAlarm#unit}
   */
   readonly unit?: string;
 }
@@ -1395,36 +1395,36 @@ export class MetricPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MetricQueryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#account_id TfMetricAlarm#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#account_id AwsMetricAlarm#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#expression TfMetricAlarm#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#expression AwsMetricAlarm#expression}
   */
   readonly expression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#id TfMetricAlarm#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#id AwsMetricAlarm#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#label TfMetricAlarm#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#label AwsMetricAlarm#label}
   */
   readonly label?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#period TfMetricAlarm#period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#period AwsMetricAlarm#period}
   */
   readonly period?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#return_data TfMetricAlarm#return_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#return_data AwsMetricAlarm#return_data}
   */
   readonly returnData?: boolean | cdktn.IResolvable;
   /**
   * metric block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#metric TfMetricAlarm#metric}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_metric_alarm#metric AwsMetricAlarm#metric}
   */
   readonly metric?: MetricProperty;
 }

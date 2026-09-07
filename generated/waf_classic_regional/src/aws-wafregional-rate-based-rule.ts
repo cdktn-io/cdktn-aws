@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRateBasedRuleConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRateBasedRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#id TfRateBasedRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#id AwsRateBasedRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#metric_name TfRateBasedRule#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#metric_name AwsRateBasedRule#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#name TfRateBasedRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#name AwsRateBasedRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#rate_key TfRateBasedRule#rate_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#rate_key AwsRateBasedRule#rate_key}
   */
   readonly rateKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#rate_limit TfRateBasedRule#rate_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#rate_limit AwsRateBasedRule#rate_limit}
   */
   readonly rateLimit: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#region TfRateBasedRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#region AwsRateBasedRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#tags TfRateBasedRule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#tags AwsRateBasedRule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#tags_all TfRateBasedRule#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#tags_all AwsRateBasedRule#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * predicate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#predicate TfRateBasedRule#predicate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#predicate AwsRateBasedRule#predicate}
   */
-  readonly predicate?: TfRateBasedRule.PredicateProperty[] | cdktn.IResolvable;
+  readonly predicate?: AwsRateBasedRule.PredicateProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule aws_wafregional_rate_based_rule}
 */
-export class TfRateBasedRule extends cdktn.TerraformResource {
+export class AwsRateBasedRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfRateBasedRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRateBasedRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRateBasedRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRateBasedRule to import
-  * @param importFromId The id of the existing TfRateBasedRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRateBasedRule to import is found
+  * @param importToId The construct id used in the generated config for the AwsRateBasedRule to import
+  * @param importFromId The id of the existing AwsRateBasedRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRateBasedRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_wafregional_rate_based_rule", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfRateBasedRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRateBasedRuleConfig
+  * @param options AwsRateBasedRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRateBasedRuleConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRateBasedRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_wafregional_rate_based_rule',
       terraformGeneratorMetadata: {
@@ -239,11 +239,11 @@ export class TfRateBasedRule extends cdktn.TerraformResource {
   }
 
   // predicate - computed: false, optional: true, required: false
-  private _predicate = new TfRateBasedRule.PredicatePropertyList(this, "predicate", true);
+  private _predicate = new AwsRateBasedRule.PredicatePropertyList(this, "predicate", true);
   public get predicate() {
     return this._predicate;
   }
-  public putPredicate(value: TfRateBasedRule.PredicateProperty[] | cdktn.IResolvable) {
+  public putPredicate(value: AwsRateBasedRule.PredicateProperty[] | cdktn.IResolvable) {
     this._predicate.internalValue = value;
   }
   public resetPredicate() {
@@ -268,7 +268,7 @@ export class TfRateBasedRule extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      predicate: cdktn.listMapper(tfRateBasedRulePredicatePropertyToTerraform, true)(this._predicate.internalValue),
+      predicate: cdktn.listMapper(awsRateBasedRulePredicatePropertyToTerraform, true)(this._predicate.internalValue),
     };
   }
 
@@ -323,10 +323,10 @@ export class TfRateBasedRule extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       predicate: {
-        value: cdktn.listMapperHcl(tfRateBasedRulePredicatePropertyToHclTerraform, true)(this._predicate.internalValue),
+        value: cdktn.listMapperHcl(awsRateBasedRulePredicatePropertyToHclTerraform, true)(this._predicate.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfRateBasedRule.PredicatePropertyList",
+        storageClassType: "AwsRateBasedRule.PredicatePropertyList",
       },
     };
 
@@ -335,7 +335,7 @@ export class TfRateBasedRule extends cdktn.TerraformResource {
   }
 }
 
-export function tfRateBasedRulePredicatePropertyToTerraform(struct?: TfRateBasedRule.PredicateProperty | cdktn.IResolvable): any {
+export function awsRateBasedRulePredicatePropertyToTerraform(struct?: AwsRateBasedRule.PredicateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -348,7 +348,7 @@ export function tfRateBasedRulePredicatePropertyToTerraform(struct?: TfRateBased
 }
 
 
-export function tfRateBasedRulePredicatePropertyToHclTerraform(struct?: TfRateBasedRule.PredicateProperty | cdktn.IResolvable): any {
+export function awsRateBasedRulePredicatePropertyToHclTerraform(struct?: AwsRateBasedRule.PredicateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,18 +379,18 @@ export function tfRateBasedRulePredicatePropertyToHclTerraform(struct?: TfRateBa
 }
 
 
-export namespace TfRateBasedRule {
+export namespace AwsRateBasedRule {
 export interface PredicateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#data_id TfRateBasedRule#data_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#data_id AwsRateBasedRule#data_id}
   */
   readonly dataId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#negated TfRateBasedRule#negated}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#negated AwsRateBasedRule#negated}
   */
   readonly negated: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#type TfRateBasedRule#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/wafregional_rate_based_rule#type AwsRateBasedRule#type}
   */
   readonly type: string;
 }

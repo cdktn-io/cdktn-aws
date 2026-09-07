@@ -5,86 +5,86 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfResolverConfig extends cdktn.TerraformMetaArguments {
+export interface AwsResolverConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#api_id TfResolver#api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#api_id AwsResolver#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#code TfResolver#code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#code AwsResolver#code}
   */
   readonly code?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#data_source TfResolver#data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#data_source AwsResolver#data_source}
   */
   readonly dataSource?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#field TfResolver#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#field AwsResolver#field}
   */
   readonly field: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#id TfResolver#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#id AwsResolver#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#kind TfResolver#kind}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#kind AwsResolver#kind}
   */
   readonly kind?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#max_batch_size TfResolver#max_batch_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#max_batch_size AwsResolver#max_batch_size}
   */
   readonly maxBatchSize?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#region TfResolver#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#region AwsResolver#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#request_template TfResolver#request_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#request_template AwsResolver#request_template}
   */
   readonly requestTemplate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#response_template TfResolver#response_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#response_template AwsResolver#response_template}
   */
   readonly responseTemplate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#type TfResolver#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#type AwsResolver#type}
   */
   readonly type: string;
   /**
   * caching_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#caching_config TfResolver#caching_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#caching_config AwsResolver#caching_config}
   */
-  readonly cachingConfig?: TfResolver.CachingConfigProperty;
+  readonly cachingConfig?: AwsResolver.CachingConfigProperty;
   /**
   * pipeline_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#pipeline_config TfResolver#pipeline_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#pipeline_config AwsResolver#pipeline_config}
   */
-  readonly pipelineConfig?: TfResolver.PipelineConfigProperty;
+  readonly pipelineConfig?: AwsResolver.PipelineConfigProperty;
   /**
   * runtime block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#runtime TfResolver#runtime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#runtime AwsResolver#runtime}
   */
-  readonly runtime?: TfResolver.RuntimeProperty;
+  readonly runtime?: AwsResolver.RuntimeProperty;
   /**
   * sync_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#sync_config TfResolver#sync_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#sync_config AwsResolver#sync_config}
   */
-  readonly syncConfig?: TfResolver.SyncConfigProperty;
+  readonly syncConfig?: AwsResolver.SyncConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver aws_appsync_resolver}
 */
-export class TfResolver extends cdktn.TerraformResource {
+export class AwsResolver extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -95,11 +95,11 @@ export class TfResolver extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfResolver resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsResolver resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfResolver to import
-  * @param importFromId The id of the existing TfResolver that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfResolver to import is found
+  * @param importToId The construct id used in the generated config for the AwsResolver to import
+  * @param importFromId The id of the existing AwsResolver that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsResolver to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appsync_resolver", importId: importFromId, provider });
@@ -114,9 +114,9 @@ export class TfResolver extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfResolverConfig
+  * @param options AwsResolverConfig
   */
-  public constructor(scope: Construct, id: string, config: TfResolverConfig) {
+  public constructor(scope: Construct, id: string, config: AwsResolverConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appsync_resolver',
       terraformGeneratorMetadata: {
@@ -326,11 +326,11 @@ export class TfResolver extends cdktn.TerraformResource {
   }
 
   // caching_config - computed: false, optional: true, required: false
-  private _cachingConfig = new TfResolver.CachingConfigPropertyOutputReference(this, "caching_config");
+  private _cachingConfig = new AwsResolver.CachingConfigPropertyOutputReference(this, "caching_config");
   public get cachingConfig() {
     return this._cachingConfig;
   }
-  public putCachingConfig(value: TfResolver.CachingConfigProperty) {
+  public putCachingConfig(value: AwsResolver.CachingConfigProperty) {
     this._cachingConfig.internalValue = value;
   }
   public resetCachingConfig() {
@@ -342,11 +342,11 @@ export class TfResolver extends cdktn.TerraformResource {
   }
 
   // pipeline_config - computed: false, optional: true, required: false
-  private _pipelineConfig = new TfResolver.PipelineConfigPropertyOutputReference(this, "pipeline_config");
+  private _pipelineConfig = new AwsResolver.PipelineConfigPropertyOutputReference(this, "pipeline_config");
   public get pipelineConfig() {
     return this._pipelineConfig;
   }
-  public putPipelineConfig(value: TfResolver.PipelineConfigProperty) {
+  public putPipelineConfig(value: AwsResolver.PipelineConfigProperty) {
     this._pipelineConfig.internalValue = value;
   }
   public resetPipelineConfig() {
@@ -358,11 +358,11 @@ export class TfResolver extends cdktn.TerraformResource {
   }
 
   // runtime - computed: false, optional: true, required: false
-  private _runtime = new TfResolver.RuntimePropertyOutputReference(this, "runtime");
+  private _runtime = new AwsResolver.RuntimePropertyOutputReference(this, "runtime");
   public get runtime() {
     return this._runtime;
   }
-  public putRuntime(value: TfResolver.RuntimeProperty) {
+  public putRuntime(value: AwsResolver.RuntimeProperty) {
     this._runtime.internalValue = value;
   }
   public resetRuntime() {
@@ -374,11 +374,11 @@ export class TfResolver extends cdktn.TerraformResource {
   }
 
   // sync_config - computed: false, optional: true, required: false
-  private _syncConfig = new TfResolver.SyncConfigPropertyOutputReference(this, "sync_config");
+  private _syncConfig = new AwsResolver.SyncConfigPropertyOutputReference(this, "sync_config");
   public get syncConfig() {
     return this._syncConfig;
   }
-  public putSyncConfig(value: TfResolver.SyncConfigProperty) {
+  public putSyncConfig(value: AwsResolver.SyncConfigProperty) {
     this._syncConfig.internalValue = value;
   }
   public resetSyncConfig() {
@@ -406,10 +406,10 @@ export class TfResolver extends cdktn.TerraformResource {
       request_template: cdktn.stringToTerraform(this._requestTemplate),
       response_template: cdktn.stringToTerraform(this._responseTemplate),
       type: cdktn.stringToTerraform(this._type),
-      caching_config: tfResolverCachingConfigPropertyToTerraform(this._cachingConfig.internalValue),
-      pipeline_config: tfResolverPipelineConfigPropertyToTerraform(this._pipelineConfig.internalValue),
-      runtime: tfResolverRuntimePropertyToTerraform(this._runtime.internalValue),
-      sync_config: tfResolverSyncConfigPropertyToTerraform(this._syncConfig.internalValue),
+      caching_config: awsResolverCachingConfigPropertyToTerraform(this._cachingConfig.internalValue),
+      pipeline_config: awsResolverPipelineConfigPropertyToTerraform(this._pipelineConfig.internalValue),
+      runtime: awsResolverRuntimePropertyToTerraform(this._runtime.internalValue),
+      sync_config: awsResolverSyncConfigPropertyToTerraform(this._syncConfig.internalValue),
     };
   }
 
@@ -482,28 +482,28 @@ export class TfResolver extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       caching_config: {
-        value: tfResolverCachingConfigPropertyToHclTerraform(this._cachingConfig.internalValue),
+        value: awsResolverCachingConfigPropertyToHclTerraform(this._cachingConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfResolver.CachingConfigPropertyList",
+        storageClassType: "AwsResolver.CachingConfigPropertyList",
       },
       pipeline_config: {
-        value: tfResolverPipelineConfigPropertyToHclTerraform(this._pipelineConfig.internalValue),
+        value: awsResolverPipelineConfigPropertyToHclTerraform(this._pipelineConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfResolver.PipelineConfigPropertyList",
+        storageClassType: "AwsResolver.PipelineConfigPropertyList",
       },
       runtime: {
-        value: tfResolverRuntimePropertyToHclTerraform(this._runtime.internalValue),
+        value: awsResolverRuntimePropertyToHclTerraform(this._runtime.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfResolver.RuntimePropertyList",
+        storageClassType: "AwsResolver.RuntimePropertyList",
       },
       sync_config: {
-        value: tfResolverSyncConfigPropertyToHclTerraform(this._syncConfig.internalValue),
+        value: awsResolverSyncConfigPropertyToHclTerraform(this._syncConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfResolver.SyncConfigPropertyList",
+        storageClassType: "AwsResolver.SyncConfigPropertyList",
       },
     };
 
@@ -512,7 +512,7 @@ export class TfResolver extends cdktn.TerraformResource {
   }
 }
 
-export function tfResolverCachingConfigPropertyToTerraform(struct?: TfResolver.CachingConfigPropertyOutputReference | TfResolver.CachingConfigProperty): any {
+export function awsResolverCachingConfigPropertyToTerraform(struct?: AwsResolver.CachingConfigPropertyOutputReference | AwsResolver.CachingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -524,7 +524,7 @@ export function tfResolverCachingConfigPropertyToTerraform(struct?: TfResolver.C
 }
 
 
-export function tfResolverCachingConfigPropertyToHclTerraform(struct?: TfResolver.CachingConfigPropertyOutputReference | TfResolver.CachingConfigProperty): any {
+export function awsResolverCachingConfigPropertyToHclTerraform(struct?: AwsResolver.CachingConfigPropertyOutputReference | AwsResolver.CachingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -549,7 +549,7 @@ export function tfResolverCachingConfigPropertyToHclTerraform(struct?: TfResolve
 }
 
 
-export function tfResolverPipelineConfigPropertyToTerraform(struct?: TfResolver.PipelineConfigPropertyOutputReference | TfResolver.PipelineConfigProperty): any {
+export function awsResolverPipelineConfigPropertyToTerraform(struct?: AwsResolver.PipelineConfigPropertyOutputReference | AwsResolver.PipelineConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -560,7 +560,7 @@ export function tfResolverPipelineConfigPropertyToTerraform(struct?: TfResolver.
 }
 
 
-export function tfResolverPipelineConfigPropertyToHclTerraform(struct?: TfResolver.PipelineConfigPropertyOutputReference | TfResolver.PipelineConfigProperty): any {
+export function awsResolverPipelineConfigPropertyToHclTerraform(struct?: AwsResolver.PipelineConfigPropertyOutputReference | AwsResolver.PipelineConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -579,7 +579,7 @@ export function tfResolverPipelineConfigPropertyToHclTerraform(struct?: TfResolv
 }
 
 
-export function tfResolverRuntimePropertyToTerraform(struct?: TfResolver.RuntimePropertyOutputReference | TfResolver.RuntimeProperty): any {
+export function awsResolverRuntimePropertyToTerraform(struct?: AwsResolver.RuntimePropertyOutputReference | AwsResolver.RuntimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -591,7 +591,7 @@ export function tfResolverRuntimePropertyToTerraform(struct?: TfResolver.Runtime
 }
 
 
-export function tfResolverRuntimePropertyToHclTerraform(struct?: TfResolver.RuntimePropertyOutputReference | TfResolver.RuntimeProperty): any {
+export function awsResolverRuntimePropertyToHclTerraform(struct?: AwsResolver.RuntimePropertyOutputReference | AwsResolver.RuntimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -616,7 +616,7 @@ export function tfResolverRuntimePropertyToHclTerraform(struct?: TfResolver.Runt
 }
 
 
-export function tfResolverLambdaConflictHandlerConfigPropertyToTerraform(struct?: TfResolver.LambdaConflictHandlerConfigPropertyOutputReference | TfResolver.LambdaConflictHandlerConfigProperty): any {
+export function awsResolverLambdaConflictHandlerConfigPropertyToTerraform(struct?: AwsResolver.LambdaConflictHandlerConfigPropertyOutputReference | AwsResolver.LambdaConflictHandlerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -627,7 +627,7 @@ export function tfResolverLambdaConflictHandlerConfigPropertyToTerraform(struct?
 }
 
 
-export function tfResolverLambdaConflictHandlerConfigPropertyToHclTerraform(struct?: TfResolver.LambdaConflictHandlerConfigPropertyOutputReference | TfResolver.LambdaConflictHandlerConfigProperty): any {
+export function awsResolverLambdaConflictHandlerConfigPropertyToHclTerraform(struct?: AwsResolver.LambdaConflictHandlerConfigPropertyOutputReference | AwsResolver.LambdaConflictHandlerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -646,7 +646,7 @@ export function tfResolverLambdaConflictHandlerConfigPropertyToHclTerraform(stru
 }
 
 
-export function tfResolverSyncConfigPropertyToTerraform(struct?: TfResolver.SyncConfigPropertyOutputReference | TfResolver.SyncConfigProperty): any {
+export function awsResolverSyncConfigPropertyToTerraform(struct?: AwsResolver.SyncConfigPropertyOutputReference | AwsResolver.SyncConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -654,12 +654,12 @@ export function tfResolverSyncConfigPropertyToTerraform(struct?: TfResolver.Sync
   return {
     conflict_detection: cdktn.stringToTerraform(struct!.conflictDetection),
     conflict_handler: cdktn.stringToTerraform(struct!.conflictHandler),
-    lambda_conflict_handler_config: tfResolverLambdaConflictHandlerConfigPropertyToTerraform(struct!.lambdaConflictHandlerConfig),
+    lambda_conflict_handler_config: awsResolverLambdaConflictHandlerConfigPropertyToTerraform(struct!.lambdaConflictHandlerConfig),
   }
 }
 
 
-export function tfResolverSyncConfigPropertyToHclTerraform(struct?: TfResolver.SyncConfigPropertyOutputReference | TfResolver.SyncConfigProperty): any {
+export function awsResolverSyncConfigPropertyToHclTerraform(struct?: AwsResolver.SyncConfigPropertyOutputReference | AwsResolver.SyncConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -678,7 +678,7 @@ export function tfResolverSyncConfigPropertyToHclTerraform(struct?: TfResolver.S
       storageClassType: "string",
     },
     lambda_conflict_handler_config: {
-      value: tfResolverLambdaConflictHandlerConfigPropertyToHclTerraform(struct!.lambdaConflictHandlerConfig),
+      value: awsResolverLambdaConflictHandlerConfigPropertyToHclTerraform(struct!.lambdaConflictHandlerConfig),
       isBlock: true,
       type: "list",
       storageClassType: "LambdaConflictHandlerConfigPropertyList",
@@ -690,14 +690,14 @@ export function tfResolverSyncConfigPropertyToHclTerraform(struct?: TfResolver.S
 }
 
 
-export namespace TfResolver {
+export namespace AwsResolver {
 export interface CachingConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#caching_keys TfResolver#caching_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#caching_keys AwsResolver#caching_keys}
   */
   readonly cachingKeys?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#ttl TfResolver#ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#ttl AwsResolver#ttl}
   */
   readonly ttl?: number;
 }
@@ -773,7 +773,7 @@ export class CachingConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PipelineConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#functions TfResolver#functions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#functions AwsResolver#functions}
   */
   readonly functions?: string[];
 }
@@ -827,11 +827,11 @@ export class PipelineConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RuntimeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#name TfResolver#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#name AwsResolver#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#runtime_version TfResolver#runtime_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#runtime_version AwsResolver#runtime_version}
   */
   readonly runtimeVersion: string;
 }
@@ -901,7 +901,7 @@ export class RuntimePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LambdaConflictHandlerConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#lambda_conflict_handler_arn TfResolver#lambda_conflict_handler_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#lambda_conflict_handler_arn AwsResolver#lambda_conflict_handler_arn}
   */
   readonly lambdaConflictHandlerArn?: string;
 }
@@ -955,17 +955,17 @@ export class LambdaConflictHandlerConfigPropertyOutputReference extends cdktn.Co
 }
 export interface SyncConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#conflict_detection TfResolver#conflict_detection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#conflict_detection AwsResolver#conflict_detection}
   */
   readonly conflictDetection?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#conflict_handler TfResolver#conflict_handler}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#conflict_handler AwsResolver#conflict_handler}
   */
   readonly conflictHandler?: string;
   /**
   * lambda_conflict_handler_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#lambda_conflict_handler_config TfResolver#lambda_conflict_handler_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_resolver#lambda_conflict_handler_config AwsResolver#lambda_conflict_handler_config}
   */
   readonly lambdaConflictHandlerConfig?: LambdaConflictHandlerConfigProperty;
 }

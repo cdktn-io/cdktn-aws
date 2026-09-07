@@ -5,96 +5,96 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#delete_all_policy_resources TfPolicy#delete_all_policy_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#delete_all_policy_resources AwsPolicy#delete_all_policy_resources}
   */
   readonly deleteAllPolicyResources?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#delete_unused_fm_managed_resources TfPolicy#delete_unused_fm_managed_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#delete_unused_fm_managed_resources AwsPolicy#delete_unused_fm_managed_resources}
   */
   readonly deleteUnusedFmManagedResources?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#description TfPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#description AwsPolicy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#exclude_resource_tags TfPolicy#exclude_resource_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#exclude_resource_tags AwsPolicy#exclude_resource_tags}
   */
   readonly excludeResourceTags: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#id TfPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#id AwsPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#name TfPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#name AwsPolicy#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#region TfPolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#region AwsPolicy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#remediation_enabled TfPolicy#remediation_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#remediation_enabled AwsPolicy#remediation_enabled}
   */
   readonly remediationEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#resource_set_ids TfPolicy#resource_set_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#resource_set_ids AwsPolicy#resource_set_ids}
   */
   readonly resourceSetIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#resource_tag_logical_operator TfPolicy#resource_tag_logical_operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#resource_tag_logical_operator AwsPolicy#resource_tag_logical_operator}
   */
   readonly resourceTagLogicalOperator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#resource_tags TfPolicy#resource_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#resource_tags AwsPolicy#resource_tags}
   */
   readonly resourceTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#resource_type TfPolicy#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#resource_type AwsPolicy#resource_type}
   */
   readonly resourceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#resource_type_list TfPolicy#resource_type_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#resource_type_list AwsPolicy#resource_type_list}
   */
   readonly resourceTypeList?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#tags TfPolicy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#tags AwsPolicy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#tags_all TfPolicy#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#tags_all AwsPolicy#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * exclude_map block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#exclude_map TfPolicy#exclude_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#exclude_map AwsPolicy#exclude_map}
   */
-  readonly excludeMap?: TfPolicy.ExcludeMapProperty;
+  readonly excludeMap?: AwsPolicy.ExcludeMapProperty;
   /**
   * include_map block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#include_map TfPolicy#include_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#include_map AwsPolicy#include_map}
   */
-  readonly includeMap?: TfPolicy.IncludeMapProperty;
+  readonly includeMap?: AwsPolicy.IncludeMapProperty;
   /**
   * security_service_policy_data block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#security_service_policy_data TfPolicy#security_service_policy_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#security_service_policy_data AwsPolicy#security_service_policy_data}
   */
-  readonly securityServicePolicyData: TfPolicy.SecurityServicePolicyDataProperty;
+  readonly securityServicePolicyData: AwsPolicy.SecurityServicePolicyDataProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy aws_fms_policy}
 */
-export class TfPolicy extends cdktn.TerraformResource {
+export class AwsPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -105,11 +105,11 @@ export class TfPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPolicy to import
-  * @param importFromId The id of the existing TfPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsPolicy to import
+  * @param importFromId The id of the existing AwsPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fms_policy", importId: importFromId, provider });
@@ -124,9 +124,9 @@ export class TfPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPolicyConfig
+  * @param options AwsPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_fms_policy',
       terraformGeneratorMetadata: {
@@ -411,11 +411,11 @@ export class TfPolicy extends cdktn.TerraformResource {
   }
 
   // exclude_map - computed: false, optional: true, required: false
-  private _excludeMap = new TfPolicy.ExcludeMapPropertyOutputReference(this, "exclude_map");
+  private _excludeMap = new AwsPolicy.ExcludeMapPropertyOutputReference(this, "exclude_map");
   public get excludeMap() {
     return this._excludeMap;
   }
-  public putExcludeMap(value: TfPolicy.ExcludeMapProperty) {
+  public putExcludeMap(value: AwsPolicy.ExcludeMapProperty) {
     this._excludeMap.internalValue = value;
   }
   public resetExcludeMap() {
@@ -427,11 +427,11 @@ export class TfPolicy extends cdktn.TerraformResource {
   }
 
   // include_map - computed: false, optional: true, required: false
-  private _includeMap = new TfPolicy.IncludeMapPropertyOutputReference(this, "include_map");
+  private _includeMap = new AwsPolicy.IncludeMapPropertyOutputReference(this, "include_map");
   public get includeMap() {
     return this._includeMap;
   }
-  public putIncludeMap(value: TfPolicy.IncludeMapProperty) {
+  public putIncludeMap(value: AwsPolicy.IncludeMapProperty) {
     this._includeMap.internalValue = value;
   }
   public resetIncludeMap() {
@@ -443,11 +443,11 @@ export class TfPolicy extends cdktn.TerraformResource {
   }
 
   // security_service_policy_data - computed: false, optional: false, required: true
-  private _securityServicePolicyData = new TfPolicy.SecurityServicePolicyDataPropertyOutputReference(this, "security_service_policy_data");
+  private _securityServicePolicyData = new AwsPolicy.SecurityServicePolicyDataPropertyOutputReference(this, "security_service_policy_data");
   public get securityServicePolicyData() {
     return this._securityServicePolicyData;
   }
-  public putSecurityServicePolicyData(value: TfPolicy.SecurityServicePolicyDataProperty) {
+  public putSecurityServicePolicyData(value: AwsPolicy.SecurityServicePolicyDataProperty) {
     this._securityServicePolicyData.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -476,9 +476,9 @@ export class TfPolicy extends cdktn.TerraformResource {
       resource_type_list: cdktn.listMapper(cdktn.stringToTerraform, false)(this._resourceTypeList),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      exclude_map: tfPolicyExcludeMapPropertyToTerraform(this._excludeMap.internalValue),
-      include_map: tfPolicyIncludeMapPropertyToTerraform(this._includeMap.internalValue),
-      security_service_policy_data: tfPolicySecurityServicePolicyDataPropertyToTerraform(this._securityServicePolicyData.internalValue),
+      exclude_map: awsPolicyExcludeMapPropertyToTerraform(this._excludeMap.internalValue),
+      include_map: awsPolicyIncludeMapPropertyToTerraform(this._includeMap.internalValue),
+      security_service_policy_data: awsPolicySecurityServicePolicyDataPropertyToTerraform(this._securityServicePolicyData.internalValue),
     };
   }
 
@@ -575,22 +575,22 @@ export class TfPolicy extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       exclude_map: {
-        value: tfPolicyExcludeMapPropertyToHclTerraform(this._excludeMap.internalValue),
+        value: awsPolicyExcludeMapPropertyToHclTerraform(this._excludeMap.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPolicy.ExcludeMapPropertyList",
+        storageClassType: "AwsPolicy.ExcludeMapPropertyList",
       },
       include_map: {
-        value: tfPolicyIncludeMapPropertyToHclTerraform(this._includeMap.internalValue),
+        value: awsPolicyIncludeMapPropertyToHclTerraform(this._includeMap.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPolicy.IncludeMapPropertyList",
+        storageClassType: "AwsPolicy.IncludeMapPropertyList",
       },
       security_service_policy_data: {
-        value: tfPolicySecurityServicePolicyDataPropertyToHclTerraform(this._securityServicePolicyData.internalValue),
+        value: awsPolicySecurityServicePolicyDataPropertyToHclTerraform(this._securityServicePolicyData.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPolicy.SecurityServicePolicyDataPropertyList",
+        storageClassType: "AwsPolicy.SecurityServicePolicyDataPropertyList",
       },
     };
 
@@ -599,7 +599,7 @@ export class TfPolicy extends cdktn.TerraformResource {
   }
 }
 
-export function tfPolicyExcludeMapPropertyToTerraform(struct?: TfPolicy.ExcludeMapPropertyOutputReference | TfPolicy.ExcludeMapProperty): any {
+export function awsPolicyExcludeMapPropertyToTerraform(struct?: AwsPolicy.ExcludeMapPropertyOutputReference | AwsPolicy.ExcludeMapProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -611,7 +611,7 @@ export function tfPolicyExcludeMapPropertyToTerraform(struct?: TfPolicy.ExcludeM
 }
 
 
-export function tfPolicyExcludeMapPropertyToHclTerraform(struct?: TfPolicy.ExcludeMapPropertyOutputReference | TfPolicy.ExcludeMapProperty): any {
+export function awsPolicyExcludeMapPropertyToHclTerraform(struct?: AwsPolicy.ExcludeMapPropertyOutputReference | AwsPolicy.ExcludeMapProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -636,7 +636,7 @@ export function tfPolicyExcludeMapPropertyToHclTerraform(struct?: TfPolicy.Exclu
 }
 
 
-export function tfPolicyIncludeMapPropertyToTerraform(struct?: TfPolicy.IncludeMapPropertyOutputReference | TfPolicy.IncludeMapProperty): any {
+export function awsPolicyIncludeMapPropertyToTerraform(struct?: AwsPolicy.IncludeMapPropertyOutputReference | AwsPolicy.IncludeMapProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -648,7 +648,7 @@ export function tfPolicyIncludeMapPropertyToTerraform(struct?: TfPolicy.IncludeM
 }
 
 
-export function tfPolicyIncludeMapPropertyToHclTerraform(struct?: TfPolicy.IncludeMapPropertyOutputReference | TfPolicy.IncludeMapProperty): any {
+export function awsPolicyIncludeMapPropertyToHclTerraform(struct?: AwsPolicy.IncludeMapPropertyOutputReference | AwsPolicy.IncludeMapProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -673,7 +673,7 @@ export function tfPolicyIncludeMapPropertyToHclTerraform(struct?: TfPolicy.Inclu
 }
 
 
-export function tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryIcmpTypeCodePropertyToTerraform(struct?: TfPolicy.SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryIcmpTypeCodeProperty | cdktn.IResolvable): any {
+export function awsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryIcmpTypeCodePropertyToTerraform(struct?: AwsPolicy.SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryIcmpTypeCodeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -685,7 +685,7 @@ export function tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPol
 }
 
 
-export function tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryIcmpTypeCodePropertyToHclTerraform(struct?: TfPolicy.SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryIcmpTypeCodeProperty | cdktn.IResolvable): any {
+export function awsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryIcmpTypeCodePropertyToHclTerraform(struct?: AwsPolicy.SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryIcmpTypeCodeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -710,7 +710,7 @@ export function tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPol
 }
 
 
-export function tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryPortRangePropertyToTerraform(struct?: TfPolicy.SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryPortRangeProperty | cdktn.IResolvable): any {
+export function awsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryPortRangePropertyToTerraform(struct?: AwsPolicy.SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryPortRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -722,7 +722,7 @@ export function tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPol
 }
 
 
-export function tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryPortRangePropertyToHclTerraform(struct?: TfPolicy.SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryPortRangeProperty | cdktn.IResolvable): any {
+export function awsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryPortRangePropertyToHclTerraform(struct?: AwsPolicy.SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryPortRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -747,7 +747,7 @@ export function tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPol
 }
 
 
-export function tfPolicyFirstEntryPropertyToTerraform(struct?: TfPolicy.FirstEntryProperty | cdktn.IResolvable): any {
+export function awsPolicyFirstEntryPropertyToTerraform(struct?: AwsPolicy.FirstEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -758,13 +758,13 @@ export function tfPolicyFirstEntryPropertyToTerraform(struct?: TfPolicy.FirstEnt
     ipv6_cidr_block: cdktn.stringToTerraform(struct!.ipv6CidrBlock),
     protocol: cdktn.stringToTerraform(struct!.protocol),
     rule_action: cdktn.stringToTerraform(struct!.ruleAction),
-    icmp_type_code: cdktn.listMapper(tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryIcmpTypeCodePropertyToTerraform, true)(struct!.icmpTypeCode),
-    port_range: cdktn.listMapper(tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryPortRangePropertyToTerraform, true)(struct!.portRange),
+    icmp_type_code: cdktn.listMapper(awsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryIcmpTypeCodePropertyToTerraform, true)(struct!.icmpTypeCode),
+    port_range: cdktn.listMapper(awsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryPortRangePropertyToTerraform, true)(struct!.portRange),
   }
 }
 
 
-export function tfPolicyFirstEntryPropertyToHclTerraform(struct?: TfPolicy.FirstEntryProperty | cdktn.IResolvable): any {
+export function awsPolicyFirstEntryPropertyToHclTerraform(struct?: AwsPolicy.FirstEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -801,13 +801,13 @@ export function tfPolicyFirstEntryPropertyToHclTerraform(struct?: TfPolicy.First
       storageClassType: "string",
     },
     icmp_type_code: {
-      value: cdktn.listMapperHcl(tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryIcmpTypeCodePropertyToHclTerraform, true)(struct!.icmpTypeCode),
+      value: cdktn.listMapperHcl(awsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryIcmpTypeCodePropertyToHclTerraform, true)(struct!.icmpTypeCode),
       isBlock: true,
       type: "list",
       storageClassType: "SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryIcmpTypeCodePropertyList",
     },
     port_range: {
-      value: cdktn.listMapperHcl(tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryPortRangePropertyToHclTerraform, true)(struct!.portRange),
+      value: cdktn.listMapperHcl(awsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryPortRangePropertyToHclTerraform, true)(struct!.portRange),
       isBlock: true,
       type: "list",
       storageClassType: "SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryPortRangePropertyList",
@@ -819,7 +819,7 @@ export function tfPolicyFirstEntryPropertyToHclTerraform(struct?: TfPolicy.First
 }
 
 
-export function tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryIcmpTypeCodePropertyToTerraform(struct?: TfPolicy.SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryIcmpTypeCodeProperty | cdktn.IResolvable): any {
+export function awsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryIcmpTypeCodePropertyToTerraform(struct?: AwsPolicy.SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryIcmpTypeCodeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -831,7 +831,7 @@ export function tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPol
 }
 
 
-export function tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryIcmpTypeCodePropertyToHclTerraform(struct?: TfPolicy.SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryIcmpTypeCodeProperty | cdktn.IResolvable): any {
+export function awsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryIcmpTypeCodePropertyToHclTerraform(struct?: AwsPolicy.SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryIcmpTypeCodeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -856,7 +856,7 @@ export function tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPol
 }
 
 
-export function tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryPortRangePropertyToTerraform(struct?: TfPolicy.SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryPortRangeProperty | cdktn.IResolvable): any {
+export function awsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryPortRangePropertyToTerraform(struct?: AwsPolicy.SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryPortRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -868,7 +868,7 @@ export function tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPol
 }
 
 
-export function tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryPortRangePropertyToHclTerraform(struct?: TfPolicy.SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryPortRangeProperty | cdktn.IResolvable): any {
+export function awsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryPortRangePropertyToHclTerraform(struct?: AwsPolicy.SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryPortRangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -893,7 +893,7 @@ export function tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPol
 }
 
 
-export function tfPolicyLastEntryPropertyToTerraform(struct?: TfPolicy.LastEntryProperty | cdktn.IResolvable): any {
+export function awsPolicyLastEntryPropertyToTerraform(struct?: AwsPolicy.LastEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -904,13 +904,13 @@ export function tfPolicyLastEntryPropertyToTerraform(struct?: TfPolicy.LastEntry
     ipv6_cidr_block: cdktn.stringToTerraform(struct!.ipv6CidrBlock),
     protocol: cdktn.stringToTerraform(struct!.protocol),
     rule_action: cdktn.stringToTerraform(struct!.ruleAction),
-    icmp_type_code: cdktn.listMapper(tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryIcmpTypeCodePropertyToTerraform, true)(struct!.icmpTypeCode),
-    port_range: cdktn.listMapper(tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryPortRangePropertyToTerraform, true)(struct!.portRange),
+    icmp_type_code: cdktn.listMapper(awsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryIcmpTypeCodePropertyToTerraform, true)(struct!.icmpTypeCode),
+    port_range: cdktn.listMapper(awsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryPortRangePropertyToTerraform, true)(struct!.portRange),
   }
 }
 
 
-export function tfPolicyLastEntryPropertyToHclTerraform(struct?: TfPolicy.LastEntryProperty | cdktn.IResolvable): any {
+export function awsPolicyLastEntryPropertyToHclTerraform(struct?: AwsPolicy.LastEntryProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -947,13 +947,13 @@ export function tfPolicyLastEntryPropertyToHclTerraform(struct?: TfPolicy.LastEn
       storageClassType: "string",
     },
     icmp_type_code: {
-      value: cdktn.listMapperHcl(tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryIcmpTypeCodePropertyToHclTerraform, true)(struct!.icmpTypeCode),
+      value: cdktn.listMapperHcl(awsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryIcmpTypeCodePropertyToHclTerraform, true)(struct!.icmpTypeCode),
       isBlock: true,
       type: "list",
       storageClassType: "SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryIcmpTypeCodePropertyList",
     },
     port_range: {
-      value: cdktn.listMapperHcl(tfPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryPortRangePropertyToHclTerraform, true)(struct!.portRange),
+      value: cdktn.listMapperHcl(awsPolicySecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryPortRangePropertyToHclTerraform, true)(struct!.portRange),
       isBlock: true,
       type: "list",
       storageClassType: "SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryPortRangePropertyList",
@@ -965,7 +965,7 @@ export function tfPolicyLastEntryPropertyToHclTerraform(struct?: TfPolicy.LastEn
 }
 
 
-export function tfPolicyNetworkAclEntrySetPropertyToTerraform(struct?: TfPolicy.NetworkAclEntrySetPropertyOutputReference | TfPolicy.NetworkAclEntrySetProperty): any {
+export function awsPolicyNetworkAclEntrySetPropertyToTerraform(struct?: AwsPolicy.NetworkAclEntrySetPropertyOutputReference | AwsPolicy.NetworkAclEntrySetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -973,13 +973,13 @@ export function tfPolicyNetworkAclEntrySetPropertyToTerraform(struct?: TfPolicy.
   return {
     force_remediate_for_first_entries: cdktn.booleanToTerraform(struct!.forceRemediateForFirstEntries),
     force_remediate_for_last_entries: cdktn.booleanToTerraform(struct!.forceRemediateForLastEntries),
-    first_entry: cdktn.listMapper(tfPolicyFirstEntryPropertyToTerraform, true)(struct!.firstEntry),
-    last_entry: cdktn.listMapper(tfPolicyLastEntryPropertyToTerraform, true)(struct!.lastEntry),
+    first_entry: cdktn.listMapper(awsPolicyFirstEntryPropertyToTerraform, true)(struct!.firstEntry),
+    last_entry: cdktn.listMapper(awsPolicyLastEntryPropertyToTerraform, true)(struct!.lastEntry),
   }
 }
 
 
-export function tfPolicyNetworkAclEntrySetPropertyToHclTerraform(struct?: TfPolicy.NetworkAclEntrySetPropertyOutputReference | TfPolicy.NetworkAclEntrySetProperty): any {
+export function awsPolicyNetworkAclEntrySetPropertyToHclTerraform(struct?: AwsPolicy.NetworkAclEntrySetPropertyOutputReference | AwsPolicy.NetworkAclEntrySetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -998,13 +998,13 @@ export function tfPolicyNetworkAclEntrySetPropertyToHclTerraform(struct?: TfPoli
       storageClassType: "boolean",
     },
     first_entry: {
-      value: cdktn.listMapperHcl(tfPolicyFirstEntryPropertyToHclTerraform, true)(struct!.firstEntry),
+      value: cdktn.listMapperHcl(awsPolicyFirstEntryPropertyToHclTerraform, true)(struct!.firstEntry),
       isBlock: true,
       type: "set",
       storageClassType: "FirstEntryPropertyList",
     },
     last_entry: {
-      value: cdktn.listMapperHcl(tfPolicyLastEntryPropertyToHclTerraform, true)(struct!.lastEntry),
+      value: cdktn.listMapperHcl(awsPolicyLastEntryPropertyToHclTerraform, true)(struct!.lastEntry),
       isBlock: true,
       type: "set",
       storageClassType: "LastEntryPropertyList",
@@ -1016,25 +1016,25 @@ export function tfPolicyNetworkAclEntrySetPropertyToHclTerraform(struct?: TfPoli
 }
 
 
-export function tfPolicyNetworkAclCommonPolicyPropertyToTerraform(struct?: TfPolicy.NetworkAclCommonPolicyPropertyOutputReference | TfPolicy.NetworkAclCommonPolicyProperty): any {
+export function awsPolicyNetworkAclCommonPolicyPropertyToTerraform(struct?: AwsPolicy.NetworkAclCommonPolicyPropertyOutputReference | AwsPolicy.NetworkAclCommonPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    network_acl_entry_set: tfPolicyNetworkAclEntrySetPropertyToTerraform(struct!.networkAclEntrySet),
+    network_acl_entry_set: awsPolicyNetworkAclEntrySetPropertyToTerraform(struct!.networkAclEntrySet),
   }
 }
 
 
-export function tfPolicyNetworkAclCommonPolicyPropertyToHclTerraform(struct?: TfPolicy.NetworkAclCommonPolicyPropertyOutputReference | TfPolicy.NetworkAclCommonPolicyProperty): any {
+export function awsPolicyNetworkAclCommonPolicyPropertyToHclTerraform(struct?: AwsPolicy.NetworkAclCommonPolicyPropertyOutputReference | AwsPolicy.NetworkAclCommonPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     network_acl_entry_set: {
-      value: tfPolicyNetworkAclEntrySetPropertyToHclTerraform(struct!.networkAclEntrySet),
+      value: awsPolicyNetworkAclEntrySetPropertyToHclTerraform(struct!.networkAclEntrySet),
       isBlock: true,
       type: "list",
       storageClassType: "NetworkAclEntrySetPropertyList",
@@ -1046,7 +1046,7 @@ export function tfPolicyNetworkAclCommonPolicyPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfPolicyNetworkFirewallPolicyPropertyToTerraform(struct?: TfPolicy.NetworkFirewallPolicyPropertyOutputReference | TfPolicy.NetworkFirewallPolicyProperty): any {
+export function awsPolicyNetworkFirewallPolicyPropertyToTerraform(struct?: AwsPolicy.NetworkFirewallPolicyPropertyOutputReference | AwsPolicy.NetworkFirewallPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1057,7 +1057,7 @@ export function tfPolicyNetworkFirewallPolicyPropertyToTerraform(struct?: TfPoli
 }
 
 
-export function tfPolicyNetworkFirewallPolicyPropertyToHclTerraform(struct?: TfPolicy.NetworkFirewallPolicyPropertyOutputReference | TfPolicy.NetworkFirewallPolicyProperty): any {
+export function awsPolicyNetworkFirewallPolicyPropertyToHclTerraform(struct?: AwsPolicy.NetworkFirewallPolicyPropertyOutputReference | AwsPolicy.NetworkFirewallPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1076,7 +1076,7 @@ export function tfPolicyNetworkFirewallPolicyPropertyToHclTerraform(struct?: TfP
 }
 
 
-export function tfPolicyThirdPartyFirewallPolicyPropertyToTerraform(struct?: TfPolicy.ThirdPartyFirewallPolicyPropertyOutputReference | TfPolicy.ThirdPartyFirewallPolicyProperty): any {
+export function awsPolicyThirdPartyFirewallPolicyPropertyToTerraform(struct?: AwsPolicy.ThirdPartyFirewallPolicyPropertyOutputReference | AwsPolicy.ThirdPartyFirewallPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1087,7 +1087,7 @@ export function tfPolicyThirdPartyFirewallPolicyPropertyToTerraform(struct?: TfP
 }
 
 
-export function tfPolicyThirdPartyFirewallPolicyPropertyToHclTerraform(struct?: TfPolicy.ThirdPartyFirewallPolicyPropertyOutputReference | TfPolicy.ThirdPartyFirewallPolicyProperty): any {
+export function awsPolicyThirdPartyFirewallPolicyPropertyToHclTerraform(struct?: AwsPolicy.ThirdPartyFirewallPolicyPropertyOutputReference | AwsPolicy.ThirdPartyFirewallPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1106,39 +1106,39 @@ export function tfPolicyThirdPartyFirewallPolicyPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfPolicyPolicyOptionPropertyToTerraform(struct?: TfPolicy.PolicyOptionPropertyOutputReference | TfPolicy.PolicyOptionProperty): any {
+export function awsPolicyPolicyOptionPropertyToTerraform(struct?: AwsPolicy.PolicyOptionPropertyOutputReference | AwsPolicy.PolicyOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    network_acl_common_policy: tfPolicyNetworkAclCommonPolicyPropertyToTerraform(struct!.networkAclCommonPolicy),
-    network_firewall_policy: tfPolicyNetworkFirewallPolicyPropertyToTerraform(struct!.networkFirewallPolicy),
-    third_party_firewall_policy: tfPolicyThirdPartyFirewallPolicyPropertyToTerraform(struct!.thirdPartyFirewallPolicy),
+    network_acl_common_policy: awsPolicyNetworkAclCommonPolicyPropertyToTerraform(struct!.networkAclCommonPolicy),
+    network_firewall_policy: awsPolicyNetworkFirewallPolicyPropertyToTerraform(struct!.networkFirewallPolicy),
+    third_party_firewall_policy: awsPolicyThirdPartyFirewallPolicyPropertyToTerraform(struct!.thirdPartyFirewallPolicy),
   }
 }
 
 
-export function tfPolicyPolicyOptionPropertyToHclTerraform(struct?: TfPolicy.PolicyOptionPropertyOutputReference | TfPolicy.PolicyOptionProperty): any {
+export function awsPolicyPolicyOptionPropertyToHclTerraform(struct?: AwsPolicy.PolicyOptionPropertyOutputReference | AwsPolicy.PolicyOptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     network_acl_common_policy: {
-      value: tfPolicyNetworkAclCommonPolicyPropertyToHclTerraform(struct!.networkAclCommonPolicy),
+      value: awsPolicyNetworkAclCommonPolicyPropertyToHclTerraform(struct!.networkAclCommonPolicy),
       isBlock: true,
       type: "list",
       storageClassType: "NetworkAclCommonPolicyPropertyList",
     },
     network_firewall_policy: {
-      value: tfPolicyNetworkFirewallPolicyPropertyToHclTerraform(struct!.networkFirewallPolicy),
+      value: awsPolicyNetworkFirewallPolicyPropertyToHclTerraform(struct!.networkFirewallPolicy),
       isBlock: true,
       type: "list",
       storageClassType: "NetworkFirewallPolicyPropertyList",
     },
     third_party_firewall_policy: {
-      value: tfPolicyThirdPartyFirewallPolicyPropertyToHclTerraform(struct!.thirdPartyFirewallPolicy),
+      value: awsPolicyThirdPartyFirewallPolicyPropertyToHclTerraform(struct!.thirdPartyFirewallPolicy),
       isBlock: true,
       type: "list",
       storageClassType: "ThirdPartyFirewallPolicyPropertyList",
@@ -1150,7 +1150,7 @@ export function tfPolicyPolicyOptionPropertyToHclTerraform(struct?: TfPolicy.Pol
 }
 
 
-export function tfPolicySecurityServicePolicyDataPropertyToTerraform(struct?: TfPolicy.SecurityServicePolicyDataPropertyOutputReference | TfPolicy.SecurityServicePolicyDataProperty): any {
+export function awsPolicySecurityServicePolicyDataPropertyToTerraform(struct?: AwsPolicy.SecurityServicePolicyDataPropertyOutputReference | AwsPolicy.SecurityServicePolicyDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1158,12 +1158,12 @@ export function tfPolicySecurityServicePolicyDataPropertyToTerraform(struct?: Tf
   return {
     managed_service_data: cdktn.stringToTerraform(struct!.managedServiceData),
     type: cdktn.stringToTerraform(struct!.type),
-    policy_option: tfPolicyPolicyOptionPropertyToTerraform(struct!.policyOption),
+    policy_option: awsPolicyPolicyOptionPropertyToTerraform(struct!.policyOption),
   }
 }
 
 
-export function tfPolicySecurityServicePolicyDataPropertyToHclTerraform(struct?: TfPolicy.SecurityServicePolicyDataPropertyOutputReference | TfPolicy.SecurityServicePolicyDataProperty): any {
+export function awsPolicySecurityServicePolicyDataPropertyToHclTerraform(struct?: AwsPolicy.SecurityServicePolicyDataPropertyOutputReference | AwsPolicy.SecurityServicePolicyDataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1182,7 +1182,7 @@ export function tfPolicySecurityServicePolicyDataPropertyToHclTerraform(struct?:
       storageClassType: "string",
     },
     policy_option: {
-      value: tfPolicyPolicyOptionPropertyToHclTerraform(struct!.policyOption),
+      value: awsPolicyPolicyOptionPropertyToHclTerraform(struct!.policyOption),
       isBlock: true,
       type: "list",
       storageClassType: "PolicyOptionPropertyList",
@@ -1194,14 +1194,14 @@ export function tfPolicySecurityServicePolicyDataPropertyToHclTerraform(struct?:
 }
 
 
-export namespace TfPolicy {
+export namespace AwsPolicy {
 export interface ExcludeMapProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#account TfPolicy#account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#account AwsPolicy#account}
   */
   readonly account?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#orgunit TfPolicy#orgunit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#orgunit AwsPolicy#orgunit}
   */
   readonly orgunit?: string[];
 }
@@ -1277,11 +1277,11 @@ export class ExcludeMapPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface IncludeMapProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#account TfPolicy#account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#account AwsPolicy#account}
   */
   readonly account?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#orgunit TfPolicy#orgunit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#orgunit AwsPolicy#orgunit}
   */
   readonly orgunit?: string[];
 }
@@ -1357,11 +1357,11 @@ export class IncludeMapPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryIcmpTypeCodeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#code TfPolicy#code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#code AwsPolicy#code}
   */
   readonly code?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#type TfPolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#type AwsPolicy#type}
   */
   readonly type?: number;
 }
@@ -1469,11 +1469,11 @@ export class SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkA
 }
 export interface SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryPortRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#from TfPolicy#from}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#from AwsPolicy#from}
   */
   readonly from?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#to TfPolicy#to}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#to AwsPolicy#to}
   */
   readonly to?: number;
 }
@@ -1581,35 +1581,35 @@ export class SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkA
 }
 export interface FirstEntryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#cidr_block TfPolicy#cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#cidr_block AwsPolicy#cidr_block}
   */
   readonly cidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#egress TfPolicy#egress}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#egress AwsPolicy#egress}
   */
   readonly egress: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#ipv6_cidr_block TfPolicy#ipv6_cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#ipv6_cidr_block AwsPolicy#ipv6_cidr_block}
   */
   readonly ipv6CidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#protocol TfPolicy#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#protocol AwsPolicy#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#rule_action TfPolicy#rule_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#rule_action AwsPolicy#rule_action}
   */
   readonly ruleAction: string;
   /**
   * icmp_type_code block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#icmp_type_code TfPolicy#icmp_type_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#icmp_type_code AwsPolicy#icmp_type_code}
   */
   readonly icmpTypeCode?: SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryIcmpTypeCodeProperty[] | cdktn.IResolvable;
   /**
   * port_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#port_range TfPolicy#port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#port_range AwsPolicy#port_range}
   */
   readonly portRange?: SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetFirstEntryPortRangeProperty[] | cdktn.IResolvable;
 }
@@ -1818,11 +1818,11 @@ export class FirstEntryPropertyList extends cdktn.ComplexList {
 }
 export interface SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryIcmpTypeCodeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#code TfPolicy#code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#code AwsPolicy#code}
   */
   readonly code?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#type TfPolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#type AwsPolicy#type}
   */
   readonly type?: number;
 }
@@ -1930,11 +1930,11 @@ export class SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkA
 }
 export interface SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryPortRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#from TfPolicy#from}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#from AwsPolicy#from}
   */
   readonly from?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#to TfPolicy#to}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#to AwsPolicy#to}
   */
   readonly to?: number;
 }
@@ -2042,35 +2042,35 @@ export class SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkA
 }
 export interface LastEntryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#cidr_block TfPolicy#cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#cidr_block AwsPolicy#cidr_block}
   */
   readonly cidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#egress TfPolicy#egress}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#egress AwsPolicy#egress}
   */
   readonly egress: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#ipv6_cidr_block TfPolicy#ipv6_cidr_block}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#ipv6_cidr_block AwsPolicy#ipv6_cidr_block}
   */
   readonly ipv6CidrBlock?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#protocol TfPolicy#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#protocol AwsPolicy#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#rule_action TfPolicy#rule_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#rule_action AwsPolicy#rule_action}
   */
   readonly ruleAction: string;
   /**
   * icmp_type_code block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#icmp_type_code TfPolicy#icmp_type_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#icmp_type_code AwsPolicy#icmp_type_code}
   */
   readonly icmpTypeCode?: SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryIcmpTypeCodeProperty[] | cdktn.IResolvable;
   /**
   * port_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#port_range TfPolicy#port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#port_range AwsPolicy#port_range}
   */
   readonly portRange?: SecurityServicePolicyDataPolicyOptionNetworkAclCommonPolicyNetworkAclEntrySetLastEntryPortRangeProperty[] | cdktn.IResolvable;
 }
@@ -2279,23 +2279,23 @@ export class LastEntryPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkAclEntrySetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#force_remediate_for_first_entries TfPolicy#force_remediate_for_first_entries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#force_remediate_for_first_entries AwsPolicy#force_remediate_for_first_entries}
   */
   readonly forceRemediateForFirstEntries: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#force_remediate_for_last_entries TfPolicy#force_remediate_for_last_entries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#force_remediate_for_last_entries AwsPolicy#force_remediate_for_last_entries}
   */
   readonly forceRemediateForLastEntries: boolean | cdktn.IResolvable;
   /**
   * first_entry block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#first_entry TfPolicy#first_entry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#first_entry AwsPolicy#first_entry}
   */
   readonly firstEntry?: FirstEntryProperty[] | cdktn.IResolvable;
   /**
   * last_entry block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#last_entry TfPolicy#last_entry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#last_entry AwsPolicy#last_entry}
   */
   readonly lastEntry?: LastEntryProperty[] | cdktn.IResolvable;
 }
@@ -2411,7 +2411,7 @@ export interface NetworkAclCommonPolicyProperty {
   /**
   * network_acl_entry_set block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#network_acl_entry_set TfPolicy#network_acl_entry_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#network_acl_entry_set AwsPolicy#network_acl_entry_set}
   */
   readonly networkAclEntrySet?: NetworkAclEntrySetProperty;
 }
@@ -2465,7 +2465,7 @@ export class NetworkAclCommonPolicyPropertyOutputReference extends cdktn.Complex
 }
 export interface NetworkFirewallPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#firewall_deployment_model TfPolicy#firewall_deployment_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#firewall_deployment_model AwsPolicy#firewall_deployment_model}
   */
   readonly firewallDeploymentModel?: string;
 }
@@ -2519,7 +2519,7 @@ export class NetworkFirewallPolicyPropertyOutputReference extends cdktn.ComplexO
 }
 export interface ThirdPartyFirewallPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#firewall_deployment_model TfPolicy#firewall_deployment_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#firewall_deployment_model AwsPolicy#firewall_deployment_model}
   */
   readonly firewallDeploymentModel?: string;
 }
@@ -2575,19 +2575,19 @@ export interface PolicyOptionProperty {
   /**
   * network_acl_common_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#network_acl_common_policy TfPolicy#network_acl_common_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#network_acl_common_policy AwsPolicy#network_acl_common_policy}
   */
   readonly networkAclCommonPolicy?: NetworkAclCommonPolicyProperty;
   /**
   * network_firewall_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#network_firewall_policy TfPolicy#network_firewall_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#network_firewall_policy AwsPolicy#network_firewall_policy}
   */
   readonly networkFirewallPolicy?: NetworkFirewallPolicyProperty;
   /**
   * third_party_firewall_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#third_party_firewall_policy TfPolicy#third_party_firewall_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#third_party_firewall_policy AwsPolicy#third_party_firewall_policy}
   */
   readonly thirdPartyFirewallPolicy?: ThirdPartyFirewallPolicyProperty;
 }
@@ -2685,17 +2685,17 @@ export class PolicyOptionPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SecurityServicePolicyDataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#managed_service_data TfPolicy#managed_service_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#managed_service_data AwsPolicy#managed_service_data}
   */
   readonly managedServiceData?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#type TfPolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#type AwsPolicy#type}
   */
   readonly type: string;
   /**
   * policy_option block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#policy_option TfPolicy#policy_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fms_policy#policy_option AwsPolicy#policy_option}
   */
   readonly policyOption?: PolicyOptionProperty;
 }

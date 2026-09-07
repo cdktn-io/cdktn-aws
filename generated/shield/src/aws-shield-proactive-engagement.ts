@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfProactiveEngagementConfig extends cdktn.TerraformMetaArguments {
+export interface AwsProactiveEngagementConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_proactive_engagement#enabled TfProactiveEngagement#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_proactive_engagement#enabled AwsProactiveEngagement#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
   * emergency_contact block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_proactive_engagement#emergency_contact TfProactiveEngagement#emergency_contact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_proactive_engagement#emergency_contact AwsProactiveEngagement#emergency_contact}
   */
-  readonly emergencyContact?: TfProactiveEngagement.EmergencyContactProperty[] | cdktn.IResolvable;
+  readonly emergencyContact?: AwsProactiveEngagement.EmergencyContactProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_proactive_engagement aws_shield_proactive_engagement}
 */
-export class TfProactiveEngagement extends cdktn.TerraformResource {
+export class AwsProactiveEngagement extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class TfProactiveEngagement extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfProactiveEngagement resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsProactiveEngagement resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfProactiveEngagement to import
-  * @param importFromId The id of the existing TfProactiveEngagement that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_proactive_engagement#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfProactiveEngagement to import is found
+  * @param importToId The construct id used in the generated config for the AwsProactiveEngagement to import
+  * @param importFromId The id of the existing AwsProactiveEngagement that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_proactive_engagement#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsProactiveEngagement to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_shield_proactive_engagement", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class TfProactiveEngagement extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfProactiveEngagementConfig
+  * @param options AwsProactiveEngagementConfig
   */
-  public constructor(scope: Construct, id: string, config: TfProactiveEngagementConfig) {
+  public constructor(scope: Construct, id: string, config: AwsProactiveEngagementConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_shield_proactive_engagement',
       terraformGeneratorMetadata: {
@@ -96,11 +96,11 @@ export class TfProactiveEngagement extends cdktn.TerraformResource {
   }
 
   // emergency_contact - computed: false, optional: true, required: false
-  private _emergencyContact = new TfProactiveEngagement.EmergencyContactPropertyList(this, "emergency_contact", false);
+  private _emergencyContact = new AwsProactiveEngagement.EmergencyContactPropertyList(this, "emergency_contact", false);
   public get emergencyContact() {
     return this._emergencyContact;
   }
-  public putEmergencyContact(value: TfProactiveEngagement.EmergencyContactProperty[] | cdktn.IResolvable) {
+  public putEmergencyContact(value: AwsProactiveEngagement.EmergencyContactProperty[] | cdktn.IResolvable) {
     this._emergencyContact.internalValue = value;
   }
   public resetEmergencyContact() {
@@ -118,7 +118,7 @@ export class TfProactiveEngagement extends cdktn.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enabled: cdktn.booleanToTerraform(this._enabled),
-      emergency_contact: cdktn.listMapper(tfProactiveEngagementEmergencyContactPropertyToTerraform, true)(this._emergencyContact.internalValue),
+      emergency_contact: cdktn.listMapper(awsProactiveEngagementEmergencyContactPropertyToTerraform, true)(this._emergencyContact.internalValue),
     };
   }
 
@@ -131,10 +131,10 @@ export class TfProactiveEngagement extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       emergency_contact: {
-        value: cdktn.listMapperHcl(tfProactiveEngagementEmergencyContactPropertyToHclTerraform, true)(this._emergencyContact.internalValue),
+        value: cdktn.listMapperHcl(awsProactiveEngagementEmergencyContactPropertyToHclTerraform, true)(this._emergencyContact.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfProactiveEngagement.EmergencyContactPropertyList",
+        storageClassType: "AwsProactiveEngagement.EmergencyContactPropertyList",
       },
     };
 
@@ -143,7 +143,7 @@ export class TfProactiveEngagement extends cdktn.TerraformResource {
   }
 }
 
-export function tfProactiveEngagementEmergencyContactPropertyToTerraform(struct?: TfProactiveEngagement.EmergencyContactProperty | cdktn.IResolvable): any {
+export function awsProactiveEngagementEmergencyContactPropertyToTerraform(struct?: AwsProactiveEngagement.EmergencyContactProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -156,7 +156,7 @@ export function tfProactiveEngagementEmergencyContactPropertyToTerraform(struct?
 }
 
 
-export function tfProactiveEngagementEmergencyContactPropertyToHclTerraform(struct?: TfProactiveEngagement.EmergencyContactProperty | cdktn.IResolvable): any {
+export function awsProactiveEngagementEmergencyContactPropertyToHclTerraform(struct?: AwsProactiveEngagement.EmergencyContactProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -187,18 +187,18 @@ export function tfProactiveEngagementEmergencyContactPropertyToHclTerraform(stru
 }
 
 
-export namespace TfProactiveEngagement {
+export namespace AwsProactiveEngagement {
 export interface EmergencyContactProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_proactive_engagement#contact_notes TfProactiveEngagement#contact_notes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_proactive_engagement#contact_notes AwsProactiveEngagement#contact_notes}
   */
   readonly contactNotes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_proactive_engagement#email_address TfProactiveEngagement#email_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_proactive_engagement#email_address AwsProactiveEngagement#email_address}
   */
   readonly emailAddress: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_proactive_engagement#phone_number TfProactiveEngagement#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/shield_proactive_engagement#phone_number AwsProactiveEngagement#phone_number}
   */
   readonly phoneNumber?: string;
 }

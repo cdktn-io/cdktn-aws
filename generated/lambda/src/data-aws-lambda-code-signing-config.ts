@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfCodeSigningConfigConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsCodeSigningConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_code_signing_config#arn DataTfCodeSigningConfig#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_code_signing_config#arn DataAwsCodeSigningConfig#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_code_signing_config#id DataTfCodeSigningConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_code_signing_config#id DataAwsCodeSigningConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface DataTfCodeSigningConfigConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_code_signing_config#region DataTfCodeSigningConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_code_signing_config#region DataAwsCodeSigningConfig#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataTfCodeSigningConfigConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_code_signing_config aws_lambda_code_signing_config}
 */
-export class DataTfCodeSigningConfig extends cdktn.TerraformDataSource {
+export class DataAwsCodeSigningConfig extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataTfCodeSigningConfig extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfCodeSigningConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsCodeSigningConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfCodeSigningConfig to import
-  * @param importFromId The id of the existing DataTfCodeSigningConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_code_signing_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfCodeSigningConfig to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsCodeSigningConfig to import
+  * @param importFromId The id of the existing DataAwsCodeSigningConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_code_signing_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsCodeSigningConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambda_code_signing_config", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataTfCodeSigningConfig extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfCodeSigningConfigConfig
+  * @param options DataAwsCodeSigningConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfCodeSigningConfigConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsCodeSigningConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambda_code_signing_config',
       terraformGeneratorMetadata: {
@@ -86,7 +86,7 @@ export class DataTfCodeSigningConfig extends cdktn.TerraformDataSource {
   // ==========
 
   // allowed_publishers - computed: true, optional: false, required: false
-  private _allowedPublishers = new DataTfCodeSigningConfig.AllowedPublishersPropertyList(this, "allowed_publishers", false);
+  private _allowedPublishers = new DataAwsCodeSigningConfig.AllowedPublishersPropertyList(this, "allowed_publishers", false);
   public get allowedPublishers() {
     return this._allowedPublishers;
   }
@@ -136,7 +136,7 @@ export class DataTfCodeSigningConfig extends cdktn.TerraformDataSource {
   }
 
   // policies - computed: true, optional: false, required: false
-  private _policies = new DataTfCodeSigningConfig.PoliciesPropertyList(this, "policies", false);
+  private _policies = new DataAwsCodeSigningConfig.PoliciesPropertyList(this, "policies", false);
   public get policies() {
     return this._policies;
   }
@@ -196,7 +196,7 @@ export class DataTfCodeSigningConfig extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfCodeSigningConfigAllowedPublishersPropertyToTerraform(struct?: DataTfCodeSigningConfig.AllowedPublishersProperty): any {
+export function dataAwsCodeSigningConfigAllowedPublishersPropertyToTerraform(struct?: DataAwsCodeSigningConfig.AllowedPublishersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -206,7 +206,7 @@ export function dataTfCodeSigningConfigAllowedPublishersPropertyToTerraform(stru
 }
 
 
-export function dataTfCodeSigningConfigAllowedPublishersPropertyToHclTerraform(struct?: DataTfCodeSigningConfig.AllowedPublishersProperty): any {
+export function dataAwsCodeSigningConfigAllowedPublishersPropertyToHclTerraform(struct?: DataAwsCodeSigningConfig.AllowedPublishersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -217,7 +217,7 @@ export function dataTfCodeSigningConfigAllowedPublishersPropertyToHclTerraform(s
 }
 
 
-export function dataTfCodeSigningConfigPoliciesPropertyToTerraform(struct?: DataTfCodeSigningConfig.PoliciesProperty): any {
+export function dataAwsCodeSigningConfigPoliciesPropertyToTerraform(struct?: DataAwsCodeSigningConfig.PoliciesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -227,7 +227,7 @@ export function dataTfCodeSigningConfigPoliciesPropertyToTerraform(struct?: Data
 }
 
 
-export function dataTfCodeSigningConfigPoliciesPropertyToHclTerraform(struct?: DataTfCodeSigningConfig.PoliciesProperty): any {
+export function dataAwsCodeSigningConfigPoliciesPropertyToHclTerraform(struct?: DataAwsCodeSigningConfig.PoliciesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -238,7 +238,7 @@ export function dataTfCodeSigningConfigPoliciesPropertyToHclTerraform(struct?: D
 }
 
 
-export namespace DataTfCodeSigningConfig {
+export namespace DataAwsCodeSigningConfig {
 export interface AllowedPublishersProperty {
 }
 export class AllowedPublishersPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfCiphertextConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsCiphertextConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_ciphertext#context DataTfCiphertext#context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_ciphertext#context DataAwsCiphertext#context}
   */
   readonly context?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_ciphertext#id DataTfCiphertext#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_ciphertext#id DataAwsCiphertext#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_ciphertext#key_id DataTfCiphertext#key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_ciphertext#key_id DataAwsCiphertext#key_id}
   */
   readonly keyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_ciphertext#plaintext DataTfCiphertext#plaintext}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_ciphertext#plaintext DataAwsCiphertext#plaintext}
   */
   readonly plaintext: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_ciphertext#region DataTfCiphertext#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_ciphertext#region DataAwsCiphertext#region}
   */
   readonly region?: string;
 }
@@ -36,7 +36,7 @@ export interface DataTfCiphertextConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_ciphertext aws_kms_ciphertext}
 */
-export class DataTfCiphertext extends cdktn.TerraformDataSource {
+export class DataAwsCiphertext extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataTfCiphertext extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfCiphertext resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsCiphertext resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfCiphertext to import
-  * @param importFromId The id of the existing DataTfCiphertext that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_ciphertext#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfCiphertext to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsCiphertext to import
+  * @param importFromId The id of the existing DataAwsCiphertext that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/kms_ciphertext#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsCiphertext to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kms_ciphertext", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataTfCiphertext extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfCiphertextConfig
+  * @param options DataAwsCiphertextConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfCiphertextConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsCiphertextConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kms_ciphertext',
       terraformGeneratorMetadata: {

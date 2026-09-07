@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBuildConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBuildConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#id TfBuild#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#id AwsBuild#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#name TfBuild#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#name AwsBuild#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#operating_system TfBuild#operating_system}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#operating_system AwsBuild#operating_system}
   */
   readonly operatingSystem: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#region TfBuild#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#region AwsBuild#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#tags TfBuild#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#tags AwsBuild#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#tags_all TfBuild#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#tags_all AwsBuild#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#version TfBuild#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#version AwsBuild#version}
   */
   readonly version?: string;
   /**
   * storage_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#storage_location TfBuild#storage_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#storage_location AwsBuild#storage_location}
   */
-  readonly storageLocation: TfBuild.StorageLocationProperty;
+  readonly storageLocation: AwsBuild.StorageLocationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build aws_gamelift_build}
 */
-export class TfBuild extends cdktn.TerraformResource {
+export class AwsBuild extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfBuild extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBuild resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBuild resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBuild to import
-  * @param importFromId The id of the existing TfBuild that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBuild to import is found
+  * @param importToId The construct id used in the generated config for the AwsBuild to import
+  * @param importFromId The id of the existing AwsBuild that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBuild to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_gamelift_build", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfBuild extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBuildConfig
+  * @param options AwsBuildConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBuildConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBuildConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_gamelift_build',
       terraformGeneratorMetadata: {
@@ -224,11 +224,11 @@ export class TfBuild extends cdktn.TerraformResource {
   }
 
   // storage_location - computed: false, optional: false, required: true
-  private _storageLocation = new TfBuild.StorageLocationPropertyOutputReference(this, "storage_location");
+  private _storageLocation = new AwsBuild.StorageLocationPropertyOutputReference(this, "storage_location");
   public get storageLocation() {
     return this._storageLocation;
   }
-  public putStorageLocation(value: TfBuild.StorageLocationProperty) {
+  public putStorageLocation(value: AwsBuild.StorageLocationProperty) {
     this._storageLocation.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -249,7 +249,7 @@ export class TfBuild extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       version: cdktn.stringToTerraform(this._version),
-      storage_location: tfBuildStorageLocationPropertyToTerraform(this._storageLocation.internalValue),
+      storage_location: awsBuildStorageLocationPropertyToTerraform(this._storageLocation.internalValue),
     };
   }
 
@@ -298,10 +298,10 @@ export class TfBuild extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       storage_location: {
-        value: tfBuildStorageLocationPropertyToHclTerraform(this._storageLocation.internalValue),
+        value: awsBuildStorageLocationPropertyToHclTerraform(this._storageLocation.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBuild.StorageLocationPropertyList",
+        storageClassType: "AwsBuild.StorageLocationPropertyList",
       },
     };
 
@@ -310,7 +310,7 @@ export class TfBuild extends cdktn.TerraformResource {
   }
 }
 
-export function tfBuildStorageLocationPropertyToTerraform(struct?: TfBuild.StorageLocationPropertyOutputReference | TfBuild.StorageLocationProperty): any {
+export function awsBuildStorageLocationPropertyToTerraform(struct?: AwsBuild.StorageLocationPropertyOutputReference | AwsBuild.StorageLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,7 +324,7 @@ export function tfBuildStorageLocationPropertyToTerraform(struct?: TfBuild.Stora
 }
 
 
-export function tfBuildStorageLocationPropertyToHclTerraform(struct?: TfBuild.StorageLocationPropertyOutputReference | TfBuild.StorageLocationProperty): any {
+export function awsBuildStorageLocationPropertyToHclTerraform(struct?: AwsBuild.StorageLocationPropertyOutputReference | AwsBuild.StorageLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -361,22 +361,22 @@ export function tfBuildStorageLocationPropertyToHclTerraform(struct?: TfBuild.St
 }
 
 
-export namespace TfBuild {
+export namespace AwsBuild {
 export interface StorageLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#bucket TfBuild#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#bucket AwsBuild#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#key TfBuild#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#key AwsBuild#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#object_version TfBuild#object_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#object_version AwsBuild#object_version}
   */
   readonly objectVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#role_arn TfBuild#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_build#role_arn AwsBuild#role_arn}
   */
   readonly roleArn: string;
 }

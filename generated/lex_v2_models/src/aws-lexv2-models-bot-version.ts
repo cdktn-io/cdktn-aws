@@ -5,41 +5,41 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBotVersionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBotVersionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#bot_id TfBotVersion#bot_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#bot_id AwsBotVersion#bot_id}
   */
   readonly botId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#bot_version TfBotVersion#bot_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#bot_version AwsBotVersion#bot_version}
   */
   readonly botVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#description TfBotVersion#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#description AwsBotVersion#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#locale_specification TfBotVersion#locale_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#locale_specification AwsBotVersion#locale_specification}
   */
-  readonly localeSpecification: { [key: string]: TfBotVersion.LocaleSpecificationProperty } | cdktn.IResolvable;
+  readonly localeSpecification: { [key: string]: AwsBotVersion.LocaleSpecificationProperty } | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#region TfBotVersion#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#region AwsBotVersion#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#timeouts TfBotVersion#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#timeouts AwsBotVersion#timeouts}
   */
-  readonly timeouts?: TfBotVersion.TimeoutsProperty;
+  readonly timeouts?: AwsBotVersion.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version aws_lexv2models_bot_version}
 */
-export class TfBotVersion extends cdktn.TerraformResource {
+export class AwsBotVersion extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -50,11 +50,11 @@ export class TfBotVersion extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBotVersion resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBotVersion resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBotVersion to import
-  * @param importFromId The id of the existing TfBotVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBotVersion to import is found
+  * @param importToId The construct id used in the generated config for the AwsBotVersion to import
+  * @param importFromId The id of the existing AwsBotVersion that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBotVersion to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lexv2models_bot_version", importId: importFromId, provider });
@@ -69,9 +69,9 @@ export class TfBotVersion extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBotVersionConfig
+  * @param options AwsBotVersionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBotVersionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBotVersionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lexv2models_bot_version',
       terraformGeneratorMetadata: {
@@ -150,11 +150,11 @@ export class TfBotVersion extends cdktn.TerraformResource {
   }
 
   // locale_specification - computed: false, optional: false, required: true
-  private _localeSpecification = new TfBotVersion.LocaleSpecificationPropertyMap(this, "locale_specification");
+  private _localeSpecification = new AwsBotVersion.LocaleSpecificationPropertyMap(this, "locale_specification");
   public get localeSpecification() {
     return this._localeSpecification;
   }
-  public putLocaleSpecification(value: { [key: string]: TfBotVersion.LocaleSpecificationProperty } | cdktn.IResolvable) {
+  public putLocaleSpecification(value: { [key: string]: AwsBotVersion.LocaleSpecificationProperty } | cdktn.IResolvable) {
     this._localeSpecification.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -179,11 +179,11 @@ export class TfBotVersion extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfBotVersion.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsBotVersion.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfBotVersion.TimeoutsProperty) {
+  public putTimeouts(value: AwsBotVersion.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -203,9 +203,9 @@ export class TfBotVersion extends cdktn.TerraformResource {
       bot_id: cdktn.stringToTerraform(this._botId),
       bot_version: cdktn.stringToTerraform(this._botVersion),
       description: cdktn.stringToTerraform(this._description),
-      locale_specification: cdktn.hashMapper(tfBotVersionLocaleSpecificationPropertyToTerraform)(this._localeSpecification.internalValue),
+      locale_specification: cdktn.hashMapper(awsBotVersionLocaleSpecificationPropertyToTerraform)(this._localeSpecification.internalValue),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfBotVersionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsBotVersionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -230,10 +230,10 @@ export class TfBotVersion extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       locale_specification: {
-        value: cdktn.hashMapperHcl(tfBotVersionLocaleSpecificationPropertyToHclTerraform)(this._localeSpecification.internalValue),
+        value: cdktn.hashMapperHcl(awsBotVersionLocaleSpecificationPropertyToHclTerraform)(this._localeSpecification.internalValue),
         isBlock: true,
         type: "map",
-        storageClassType: "TfBotVersion.LocaleSpecificationPropertyMap",
+        storageClassType: "AwsBotVersion.LocaleSpecificationPropertyMap",
       },
       region: {
         value: cdktn.stringToHclTerraform(this._region),
@@ -242,10 +242,10 @@ export class TfBotVersion extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfBotVersionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsBotVersionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfBotVersion.TimeoutsProperty",
+        storageClassType: "AwsBotVersion.TimeoutsProperty",
       },
     };
 
@@ -254,7 +254,7 @@ export class TfBotVersion extends cdktn.TerraformResource {
   }
 }
 
-export function tfBotVersionLocaleSpecificationPropertyToTerraform(struct?: TfBotVersion.LocaleSpecificationProperty | cdktn.IResolvable): any {
+export function awsBotVersionLocaleSpecificationPropertyToTerraform(struct?: AwsBotVersion.LocaleSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,7 +265,7 @@ export function tfBotVersionLocaleSpecificationPropertyToTerraform(struct?: TfBo
 }
 
 
-export function tfBotVersionLocaleSpecificationPropertyToHclTerraform(struct?: TfBotVersion.LocaleSpecificationProperty | cdktn.IResolvable): any {
+export function awsBotVersionLocaleSpecificationPropertyToHclTerraform(struct?: AwsBotVersion.LocaleSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,7 +284,7 @@ export function tfBotVersionLocaleSpecificationPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfBotVersionTimeoutsPropertyToTerraform(struct?: TfBotVersion.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBotVersionTimeoutsPropertyToTerraform(struct?: AwsBotVersion.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -296,7 +296,7 @@ export function tfBotVersionTimeoutsPropertyToTerraform(struct?: TfBotVersion.Ti
 }
 
 
-export function tfBotVersionTimeoutsPropertyToHclTerraform(struct?: TfBotVersion.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBotVersionTimeoutsPropertyToHclTerraform(struct?: AwsBotVersion.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -321,10 +321,10 @@ export function tfBotVersionTimeoutsPropertyToHclTerraform(struct?: TfBotVersion
 }
 
 
-export namespace TfBotVersion {
+export namespace AwsBotVersion {
 export interface LocaleSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#source_bot_version TfBotVersion#source_bot_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#source_bot_version AwsBotVersion#source_bot_version}
   */
   readonly sourceBotVersion: string;
 }
@@ -407,13 +407,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#create TfBotVersion#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#create AwsBotVersion#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#delete TfBotVersion#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lexv2models_bot_version#delete AwsBotVersion#delete}
   */
   readonly delete?: string;
 }

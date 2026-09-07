@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfApnsSandboxChannelConfig extends cdktn.TerraformMetaArguments {
+export interface AwsApnsSandboxChannelConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#application_id TfApnsSandboxChannel#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#application_id AwsApnsSandboxChannel#application_id}
   */
   readonly applicationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#bundle_id TfApnsSandboxChannel#bundle_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#bundle_id AwsApnsSandboxChannel#bundle_id}
   */
   readonly bundleId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#certificate TfApnsSandboxChannel#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#certificate AwsApnsSandboxChannel#certificate}
   */
   readonly certificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#default_authentication_method TfApnsSandboxChannel#default_authentication_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#default_authentication_method AwsApnsSandboxChannel#default_authentication_method}
   */
   readonly defaultAuthenticationMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#enabled TfApnsSandboxChannel#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#enabled AwsApnsSandboxChannel#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#id TfApnsSandboxChannel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#id AwsApnsSandboxChannel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#private_key TfApnsSandboxChannel#private_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#private_key AwsApnsSandboxChannel#private_key}
   */
   readonly privateKey?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#region TfApnsSandboxChannel#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#region AwsApnsSandboxChannel#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#team_id TfApnsSandboxChannel#team_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#team_id AwsApnsSandboxChannel#team_id}
   */
   readonly teamId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#token_key TfApnsSandboxChannel#token_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#token_key AwsApnsSandboxChannel#token_key}
   */
   readonly tokenKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#token_key_id TfApnsSandboxChannel#token_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#token_key_id AwsApnsSandboxChannel#token_key_id}
   */
   readonly tokenKeyId?: string;
 }
@@ -60,7 +60,7 @@ export interface TfApnsSandboxChannelConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel aws_pinpoint_apns_sandbox_channel}
 */
-export class TfApnsSandboxChannel extends cdktn.TerraformResource {
+export class AwsApnsSandboxChannel extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class TfApnsSandboxChannel extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfApnsSandboxChannel resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsApnsSandboxChannel resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfApnsSandboxChannel to import
-  * @param importFromId The id of the existing TfApnsSandboxChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfApnsSandboxChannel to import is found
+  * @param importToId The construct id used in the generated config for the AwsApnsSandboxChannel to import
+  * @param importFromId The id of the existing AwsApnsSandboxChannel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_apns_sandbox_channel#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsApnsSandboxChannel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_pinpoint_apns_sandbox_channel", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class TfApnsSandboxChannel extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfApnsSandboxChannelConfig
+  * @param options AwsApnsSandboxChannelConfig
   */
-  public constructor(scope: Construct, id: string, config: TfApnsSandboxChannelConfig) {
+  public constructor(scope: Construct, id: string, config: AwsApnsSandboxChannelConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_pinpoint_apns_sandbox_channel',
       terraformGeneratorMetadata: {

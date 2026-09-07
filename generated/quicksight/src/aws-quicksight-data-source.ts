@@ -5,80 +5,80 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataSourceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDataSourceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#aws_account_id TfDataSource#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#aws_account_id AwsDataSource#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#data_source_id TfDataSource#data_source_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#data_source_id AwsDataSource#data_source_id}
   */
   readonly dataSourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#id TfDataSource#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#id AwsDataSource#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#name TfDataSource#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#name AwsDataSource#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#region TfDataSource#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#region AwsDataSource#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#tags TfDataSource#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#tags AwsDataSource#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#tags_all TfDataSource#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#tags_all AwsDataSource#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#type TfDataSource#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#type AwsDataSource#type}
   */
   readonly type: string;
   /**
   * credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#credentials TfDataSource#credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#credentials AwsDataSource#credentials}
   */
-  readonly credentials?: TfDataSource.CredentialsProperty;
+  readonly credentials?: AwsDataSource.CredentialsProperty;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#parameters TfDataSource#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#parameters AwsDataSource#parameters}
   */
-  readonly parameters: TfDataSource.ParametersProperty;
+  readonly parameters: AwsDataSource.ParametersProperty;
   /**
   * permission block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#permission TfDataSource#permission}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#permission AwsDataSource#permission}
   */
-  readonly permission?: TfDataSource.PermissionProperty[] | cdktn.IResolvable;
+  readonly permission?: AwsDataSource.PermissionProperty[] | cdktn.IResolvable;
   /**
   * ssl_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#ssl_properties TfDataSource#ssl_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#ssl_properties AwsDataSource#ssl_properties}
   */
-  readonly sslProperties?: TfDataSource.SslPropertiesProperty;
+  readonly sslProperties?: AwsDataSource.SslPropertiesProperty;
   /**
   * vpc_connection_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#vpc_connection_properties TfDataSource#vpc_connection_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#vpc_connection_properties AwsDataSource#vpc_connection_properties}
   */
-  readonly vpcConnectionProperties?: TfDataSource.VpcConnectionPropertiesProperty;
+  readonly vpcConnectionProperties?: AwsDataSource.VpcConnectionPropertiesProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source aws_quicksight_data_source}
 */
-export class TfDataSource extends cdktn.TerraformResource {
+export class AwsDataSource extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -89,11 +89,11 @@ export class TfDataSource extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataSource resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDataSource resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataSource to import
-  * @param importFromId The id of the existing TfDataSource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataSource to import is found
+  * @param importToId The construct id used in the generated config for the AwsDataSource to import
+  * @param importFromId The id of the existing AwsDataSource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDataSource to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_data_source", importId: importFromId, provider });
@@ -108,9 +108,9 @@ export class TfDataSource extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataSourceConfig
+  * @param options AwsDataSourceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataSourceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDataSourceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_data_source',
       terraformGeneratorMetadata: {
@@ -270,11 +270,11 @@ export class TfDataSource extends cdktn.TerraformResource {
   }
 
   // credentials - computed: false, optional: true, required: false
-  private _credentials = new TfDataSource.CredentialsPropertyOutputReference(this, "credentials");
+  private _credentials = new AwsDataSource.CredentialsPropertyOutputReference(this, "credentials");
   public get credentials() {
     return this._credentials;
   }
-  public putCredentials(value: TfDataSource.CredentialsProperty) {
+  public putCredentials(value: AwsDataSource.CredentialsProperty) {
     this._credentials.internalValue = value;
   }
   public resetCredentials() {
@@ -286,11 +286,11 @@ export class TfDataSource extends cdktn.TerraformResource {
   }
 
   // parameters - computed: false, optional: false, required: true
-  private _parameters = new TfDataSource.ParametersPropertyOutputReference(this, "parameters");
+  private _parameters = new AwsDataSource.ParametersPropertyOutputReference(this, "parameters");
   public get parameters() {
     return this._parameters;
   }
-  public putParameters(value: TfDataSource.ParametersProperty) {
+  public putParameters(value: AwsDataSource.ParametersProperty) {
     this._parameters.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -299,11 +299,11 @@ export class TfDataSource extends cdktn.TerraformResource {
   }
 
   // permission - computed: false, optional: true, required: false
-  private _permission = new TfDataSource.PermissionPropertyList(this, "permission", true);
+  private _permission = new AwsDataSource.PermissionPropertyList(this, "permission", true);
   public get permission() {
     return this._permission;
   }
-  public putPermission(value: TfDataSource.PermissionProperty[] | cdktn.IResolvable) {
+  public putPermission(value: AwsDataSource.PermissionProperty[] | cdktn.IResolvable) {
     this._permission.internalValue = value;
   }
   public resetPermission() {
@@ -315,11 +315,11 @@ export class TfDataSource extends cdktn.TerraformResource {
   }
 
   // ssl_properties - computed: false, optional: true, required: false
-  private _sslProperties = new TfDataSource.SslPropertiesPropertyOutputReference(this, "ssl_properties");
+  private _sslProperties = new AwsDataSource.SslPropertiesPropertyOutputReference(this, "ssl_properties");
   public get sslProperties() {
     return this._sslProperties;
   }
-  public putSslProperties(value: TfDataSource.SslPropertiesProperty) {
+  public putSslProperties(value: AwsDataSource.SslPropertiesProperty) {
     this._sslProperties.internalValue = value;
   }
   public resetSslProperties() {
@@ -331,11 +331,11 @@ export class TfDataSource extends cdktn.TerraformResource {
   }
 
   // vpc_connection_properties - computed: false, optional: true, required: false
-  private _vpcConnectionProperties = new TfDataSource.VpcConnectionPropertiesPropertyOutputReference(this, "vpc_connection_properties");
+  private _vpcConnectionProperties = new AwsDataSource.VpcConnectionPropertiesPropertyOutputReference(this, "vpc_connection_properties");
   public get vpcConnectionProperties() {
     return this._vpcConnectionProperties;
   }
-  public putVpcConnectionProperties(value: TfDataSource.VpcConnectionPropertiesProperty) {
+  public putVpcConnectionProperties(value: AwsDataSource.VpcConnectionPropertiesProperty) {
     this._vpcConnectionProperties.internalValue = value;
   }
   public resetVpcConnectionProperties() {
@@ -360,11 +360,11 @@ export class TfDataSource extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       type: cdktn.stringToTerraform(this._type),
-      credentials: tfDataSourceCredentialsPropertyToTerraform(this._credentials.internalValue),
-      parameters: tfDataSourceParametersPropertyToTerraform(this._parameters.internalValue),
-      permission: cdktn.listMapper(tfDataSourcePermissionPropertyToTerraform, true)(this._permission.internalValue),
-      ssl_properties: tfDataSourceSslPropertiesPropertyToTerraform(this._sslProperties.internalValue),
-      vpc_connection_properties: tfDataSourceVpcConnectionPropertiesPropertyToTerraform(this._vpcConnectionProperties.internalValue),
+      credentials: awsDataSourceCredentialsPropertyToTerraform(this._credentials.internalValue),
+      parameters: awsDataSourceParametersPropertyToTerraform(this._parameters.internalValue),
+      permission: cdktn.listMapper(awsDataSourcePermissionPropertyToTerraform, true)(this._permission.internalValue),
+      ssl_properties: awsDataSourceSslPropertiesPropertyToTerraform(this._sslProperties.internalValue),
+      vpc_connection_properties: awsDataSourceVpcConnectionPropertiesPropertyToTerraform(this._vpcConnectionProperties.internalValue),
     };
   }
 
@@ -419,34 +419,34 @@ export class TfDataSource extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       credentials: {
-        value: tfDataSourceCredentialsPropertyToHclTerraform(this._credentials.internalValue),
+        value: awsDataSourceCredentialsPropertyToHclTerraform(this._credentials.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataSource.CredentialsPropertyList",
+        storageClassType: "AwsDataSource.CredentialsPropertyList",
       },
       parameters: {
-        value: tfDataSourceParametersPropertyToHclTerraform(this._parameters.internalValue),
+        value: awsDataSourceParametersPropertyToHclTerraform(this._parameters.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataSource.ParametersPropertyList",
+        storageClassType: "AwsDataSource.ParametersPropertyList",
       },
       permission: {
-        value: cdktn.listMapperHcl(tfDataSourcePermissionPropertyToHclTerraform, true)(this._permission.internalValue),
+        value: cdktn.listMapperHcl(awsDataSourcePermissionPropertyToHclTerraform, true)(this._permission.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfDataSource.PermissionPropertyList",
+        storageClassType: "AwsDataSource.PermissionPropertyList",
       },
       ssl_properties: {
-        value: tfDataSourceSslPropertiesPropertyToHclTerraform(this._sslProperties.internalValue),
+        value: awsDataSourceSslPropertiesPropertyToHclTerraform(this._sslProperties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataSource.SslPropertiesPropertyList",
+        storageClassType: "AwsDataSource.SslPropertiesPropertyList",
       },
       vpc_connection_properties: {
-        value: tfDataSourceVpcConnectionPropertiesPropertyToHclTerraform(this._vpcConnectionProperties.internalValue),
+        value: awsDataSourceVpcConnectionPropertiesPropertyToHclTerraform(this._vpcConnectionProperties.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataSource.VpcConnectionPropertiesPropertyList",
+        storageClassType: "AwsDataSource.VpcConnectionPropertiesPropertyList",
       },
     };
 
@@ -455,7 +455,7 @@ export class TfDataSource extends cdktn.TerraformResource {
   }
 }
 
-export function tfDataSourceCredentialPairPropertyToTerraform(struct?: TfDataSource.CredentialPairPropertyOutputReference | TfDataSource.CredentialPairProperty): any {
+export function awsDataSourceCredentialPairPropertyToTerraform(struct?: AwsDataSource.CredentialPairPropertyOutputReference | AwsDataSource.CredentialPairProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -467,7 +467,7 @@ export function tfDataSourceCredentialPairPropertyToTerraform(struct?: TfDataSou
 }
 
 
-export function tfDataSourceCredentialPairPropertyToHclTerraform(struct?: TfDataSource.CredentialPairPropertyOutputReference | TfDataSource.CredentialPairProperty): any {
+export function awsDataSourceCredentialPairPropertyToHclTerraform(struct?: AwsDataSource.CredentialPairPropertyOutputReference | AwsDataSource.CredentialPairProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -492,7 +492,7 @@ export function tfDataSourceCredentialPairPropertyToHclTerraform(struct?: TfData
 }
 
 
-export function tfDataSourceCredentialsPropertyToTerraform(struct?: TfDataSource.CredentialsPropertyOutputReference | TfDataSource.CredentialsProperty): any {
+export function awsDataSourceCredentialsPropertyToTerraform(struct?: AwsDataSource.CredentialsPropertyOutputReference | AwsDataSource.CredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,12 +500,12 @@ export function tfDataSourceCredentialsPropertyToTerraform(struct?: TfDataSource
   return {
     copy_source_arn: cdktn.stringToTerraform(struct!.copySourceArn),
     secret_arn: cdktn.stringToTerraform(struct!.secretArn),
-    credential_pair: tfDataSourceCredentialPairPropertyToTerraform(struct!.credentialPair),
+    credential_pair: awsDataSourceCredentialPairPropertyToTerraform(struct!.credentialPair),
   }
 }
 
 
-export function tfDataSourceCredentialsPropertyToHclTerraform(struct?: TfDataSource.CredentialsPropertyOutputReference | TfDataSource.CredentialsProperty): any {
+export function awsDataSourceCredentialsPropertyToHclTerraform(struct?: AwsDataSource.CredentialsPropertyOutputReference | AwsDataSource.CredentialsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -524,7 +524,7 @@ export function tfDataSourceCredentialsPropertyToHclTerraform(struct?: TfDataSou
       storageClassType: "string",
     },
     credential_pair: {
-      value: tfDataSourceCredentialPairPropertyToHclTerraform(struct!.credentialPair),
+      value: awsDataSourceCredentialPairPropertyToHclTerraform(struct!.credentialPair),
       isBlock: true,
       type: "list",
       storageClassType: "CredentialPairPropertyList",
@@ -536,7 +536,7 @@ export function tfDataSourceCredentialsPropertyToHclTerraform(struct?: TfDataSou
 }
 
 
-export function tfDataSourceAmazonElasticsearchPropertyToTerraform(struct?: TfDataSource.AmazonElasticsearchPropertyOutputReference | TfDataSource.AmazonElasticsearchProperty): any {
+export function awsDataSourceAmazonElasticsearchPropertyToTerraform(struct?: AwsDataSource.AmazonElasticsearchPropertyOutputReference | AwsDataSource.AmazonElasticsearchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -547,7 +547,7 @@ export function tfDataSourceAmazonElasticsearchPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDataSourceAmazonElasticsearchPropertyToHclTerraform(struct?: TfDataSource.AmazonElasticsearchPropertyOutputReference | TfDataSource.AmazonElasticsearchProperty): any {
+export function awsDataSourceAmazonElasticsearchPropertyToHclTerraform(struct?: AwsDataSource.AmazonElasticsearchPropertyOutputReference | AwsDataSource.AmazonElasticsearchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -566,7 +566,7 @@ export function tfDataSourceAmazonElasticsearchPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDataSourceAthenaPropertyToTerraform(struct?: TfDataSource.AthenaPropertyOutputReference | TfDataSource.AthenaProperty): any {
+export function awsDataSourceAthenaPropertyToTerraform(struct?: AwsDataSource.AthenaPropertyOutputReference | AwsDataSource.AthenaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -578,7 +578,7 @@ export function tfDataSourceAthenaPropertyToTerraform(struct?: TfDataSource.Athe
 }
 
 
-export function tfDataSourceAthenaPropertyToHclTerraform(struct?: TfDataSource.AthenaPropertyOutputReference | TfDataSource.AthenaProperty): any {
+export function awsDataSourceAthenaPropertyToHclTerraform(struct?: AwsDataSource.AthenaPropertyOutputReference | AwsDataSource.AthenaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -603,7 +603,7 @@ export function tfDataSourceAthenaPropertyToHclTerraform(struct?: TfDataSource.A
 }
 
 
-export function tfDataSourceAuroraPropertyToTerraform(struct?: TfDataSource.AuroraPropertyOutputReference | TfDataSource.AuroraProperty): any {
+export function awsDataSourceAuroraPropertyToTerraform(struct?: AwsDataSource.AuroraPropertyOutputReference | AwsDataSource.AuroraProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -616,7 +616,7 @@ export function tfDataSourceAuroraPropertyToTerraform(struct?: TfDataSource.Auro
 }
 
 
-export function tfDataSourceAuroraPropertyToHclTerraform(struct?: TfDataSource.AuroraPropertyOutputReference | TfDataSource.AuroraProperty): any {
+export function awsDataSourceAuroraPropertyToHclTerraform(struct?: AwsDataSource.AuroraPropertyOutputReference | AwsDataSource.AuroraProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -647,7 +647,7 @@ export function tfDataSourceAuroraPropertyToHclTerraform(struct?: TfDataSource.A
 }
 
 
-export function tfDataSourceAuroraPostgresqlPropertyToTerraform(struct?: TfDataSource.AuroraPostgresqlPropertyOutputReference | TfDataSource.AuroraPostgresqlProperty): any {
+export function awsDataSourceAuroraPostgresqlPropertyToTerraform(struct?: AwsDataSource.AuroraPostgresqlPropertyOutputReference | AwsDataSource.AuroraPostgresqlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -660,7 +660,7 @@ export function tfDataSourceAuroraPostgresqlPropertyToTerraform(struct?: TfDataS
 }
 
 
-export function tfDataSourceAuroraPostgresqlPropertyToHclTerraform(struct?: TfDataSource.AuroraPostgresqlPropertyOutputReference | TfDataSource.AuroraPostgresqlProperty): any {
+export function awsDataSourceAuroraPostgresqlPropertyToHclTerraform(struct?: AwsDataSource.AuroraPostgresqlPropertyOutputReference | AwsDataSource.AuroraPostgresqlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -691,7 +691,7 @@ export function tfDataSourceAuroraPostgresqlPropertyToHclTerraform(struct?: TfDa
 }
 
 
-export function tfDataSourceAwsIotAnalyticsPropertyToTerraform(struct?: TfDataSource.AwsIotAnalyticsPropertyOutputReference | TfDataSource.AwsIotAnalyticsProperty): any {
+export function awsDataSourceAwsIotAnalyticsPropertyToTerraform(struct?: AwsDataSource.AwsIotAnalyticsPropertyOutputReference | AwsDataSource.AwsIotAnalyticsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -702,7 +702,7 @@ export function tfDataSourceAwsIotAnalyticsPropertyToTerraform(struct?: TfDataSo
 }
 
 
-export function tfDataSourceAwsIotAnalyticsPropertyToHclTerraform(struct?: TfDataSource.AwsIotAnalyticsPropertyOutputReference | TfDataSource.AwsIotAnalyticsProperty): any {
+export function awsDataSourceAwsIotAnalyticsPropertyToHclTerraform(struct?: AwsDataSource.AwsIotAnalyticsPropertyOutputReference | AwsDataSource.AwsIotAnalyticsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -721,7 +721,7 @@ export function tfDataSourceAwsIotAnalyticsPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDataSourceDatabricksPropertyToTerraform(struct?: TfDataSource.DatabricksPropertyOutputReference | TfDataSource.DatabricksProperty): any {
+export function awsDataSourceDatabricksPropertyToTerraform(struct?: AwsDataSource.DatabricksPropertyOutputReference | AwsDataSource.DatabricksProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -734,7 +734,7 @@ export function tfDataSourceDatabricksPropertyToTerraform(struct?: TfDataSource.
 }
 
 
-export function tfDataSourceDatabricksPropertyToHclTerraform(struct?: TfDataSource.DatabricksPropertyOutputReference | TfDataSource.DatabricksProperty): any {
+export function awsDataSourceDatabricksPropertyToHclTerraform(struct?: AwsDataSource.DatabricksPropertyOutputReference | AwsDataSource.DatabricksProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -765,7 +765,7 @@ export function tfDataSourceDatabricksPropertyToHclTerraform(struct?: TfDataSour
 }
 
 
-export function tfDataSourceJiraPropertyToTerraform(struct?: TfDataSource.JiraPropertyOutputReference | TfDataSource.JiraProperty): any {
+export function awsDataSourceJiraPropertyToTerraform(struct?: AwsDataSource.JiraPropertyOutputReference | AwsDataSource.JiraProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -776,7 +776,7 @@ export function tfDataSourceJiraPropertyToTerraform(struct?: TfDataSource.JiraPr
 }
 
 
-export function tfDataSourceJiraPropertyToHclTerraform(struct?: TfDataSource.JiraPropertyOutputReference | TfDataSource.JiraProperty): any {
+export function awsDataSourceJiraPropertyToHclTerraform(struct?: AwsDataSource.JiraPropertyOutputReference | AwsDataSource.JiraProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -795,7 +795,7 @@ export function tfDataSourceJiraPropertyToHclTerraform(struct?: TfDataSource.Jir
 }
 
 
-export function tfDataSourceMariaDbPropertyToTerraform(struct?: TfDataSource.MariaDbPropertyOutputReference | TfDataSource.MariaDbProperty): any {
+export function awsDataSourceMariaDbPropertyToTerraform(struct?: AwsDataSource.MariaDbPropertyOutputReference | AwsDataSource.MariaDbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -808,7 +808,7 @@ export function tfDataSourceMariaDbPropertyToTerraform(struct?: TfDataSource.Mar
 }
 
 
-export function tfDataSourceMariaDbPropertyToHclTerraform(struct?: TfDataSource.MariaDbPropertyOutputReference | TfDataSource.MariaDbProperty): any {
+export function awsDataSourceMariaDbPropertyToHclTerraform(struct?: AwsDataSource.MariaDbPropertyOutputReference | AwsDataSource.MariaDbProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -839,7 +839,7 @@ export function tfDataSourceMariaDbPropertyToHclTerraform(struct?: TfDataSource.
 }
 
 
-export function tfDataSourceMysqlPropertyToTerraform(struct?: TfDataSource.MysqlPropertyOutputReference | TfDataSource.MysqlProperty): any {
+export function awsDataSourceMysqlPropertyToTerraform(struct?: AwsDataSource.MysqlPropertyOutputReference | AwsDataSource.MysqlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -852,7 +852,7 @@ export function tfDataSourceMysqlPropertyToTerraform(struct?: TfDataSource.Mysql
 }
 
 
-export function tfDataSourceMysqlPropertyToHclTerraform(struct?: TfDataSource.MysqlPropertyOutputReference | TfDataSource.MysqlProperty): any {
+export function awsDataSourceMysqlPropertyToHclTerraform(struct?: AwsDataSource.MysqlPropertyOutputReference | AwsDataSource.MysqlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -883,7 +883,7 @@ export function tfDataSourceMysqlPropertyToHclTerraform(struct?: TfDataSource.My
 }
 
 
-export function tfDataSourceOraclePropertyToTerraform(struct?: TfDataSource.OraclePropertyOutputReference | TfDataSource.OracleProperty): any {
+export function awsDataSourceOraclePropertyToTerraform(struct?: AwsDataSource.OraclePropertyOutputReference | AwsDataSource.OracleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -896,7 +896,7 @@ export function tfDataSourceOraclePropertyToTerraform(struct?: TfDataSource.Orac
 }
 
 
-export function tfDataSourceOraclePropertyToHclTerraform(struct?: TfDataSource.OraclePropertyOutputReference | TfDataSource.OracleProperty): any {
+export function awsDataSourceOraclePropertyToHclTerraform(struct?: AwsDataSource.OraclePropertyOutputReference | AwsDataSource.OracleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -927,7 +927,7 @@ export function tfDataSourceOraclePropertyToHclTerraform(struct?: TfDataSource.O
 }
 
 
-export function tfDataSourcePostgresqlPropertyToTerraform(struct?: TfDataSource.PostgresqlPropertyOutputReference | TfDataSource.PostgresqlProperty): any {
+export function awsDataSourcePostgresqlPropertyToTerraform(struct?: AwsDataSource.PostgresqlPropertyOutputReference | AwsDataSource.PostgresqlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -940,7 +940,7 @@ export function tfDataSourcePostgresqlPropertyToTerraform(struct?: TfDataSource.
 }
 
 
-export function tfDataSourcePostgresqlPropertyToHclTerraform(struct?: TfDataSource.PostgresqlPropertyOutputReference | TfDataSource.PostgresqlProperty): any {
+export function awsDataSourcePostgresqlPropertyToHclTerraform(struct?: AwsDataSource.PostgresqlPropertyOutputReference | AwsDataSource.PostgresqlProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -971,7 +971,7 @@ export function tfDataSourcePostgresqlPropertyToHclTerraform(struct?: TfDataSour
 }
 
 
-export function tfDataSourcePrestoPropertyToTerraform(struct?: TfDataSource.PrestoPropertyOutputReference | TfDataSource.PrestoProperty): any {
+export function awsDataSourcePrestoPropertyToTerraform(struct?: AwsDataSource.PrestoPropertyOutputReference | AwsDataSource.PrestoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -984,7 +984,7 @@ export function tfDataSourcePrestoPropertyToTerraform(struct?: TfDataSource.Pres
 }
 
 
-export function tfDataSourcePrestoPropertyToHclTerraform(struct?: TfDataSource.PrestoPropertyOutputReference | TfDataSource.PrestoProperty): any {
+export function awsDataSourcePrestoPropertyToHclTerraform(struct?: AwsDataSource.PrestoPropertyOutputReference | AwsDataSource.PrestoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1015,7 +1015,7 @@ export function tfDataSourcePrestoPropertyToHclTerraform(struct?: TfDataSource.P
 }
 
 
-export function tfDataSourceRdsPropertyToTerraform(struct?: TfDataSource.RdsPropertyOutputReference | TfDataSource.RdsProperty): any {
+export function awsDataSourceRdsPropertyToTerraform(struct?: AwsDataSource.RdsPropertyOutputReference | AwsDataSource.RdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1027,7 +1027,7 @@ export function tfDataSourceRdsPropertyToTerraform(struct?: TfDataSource.RdsProp
 }
 
 
-export function tfDataSourceRdsPropertyToHclTerraform(struct?: TfDataSource.RdsPropertyOutputReference | TfDataSource.RdsProperty): any {
+export function awsDataSourceRdsPropertyToHclTerraform(struct?: AwsDataSource.RdsPropertyOutputReference | AwsDataSource.RdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1052,7 +1052,7 @@ export function tfDataSourceRdsPropertyToHclTerraform(struct?: TfDataSource.RdsP
 }
 
 
-export function tfDataSourceRedshiftPropertyToTerraform(struct?: TfDataSource.RedshiftPropertyOutputReference | TfDataSource.RedshiftProperty): any {
+export function awsDataSourceRedshiftPropertyToTerraform(struct?: AwsDataSource.RedshiftPropertyOutputReference | AwsDataSource.RedshiftProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1066,7 +1066,7 @@ export function tfDataSourceRedshiftPropertyToTerraform(struct?: TfDataSource.Re
 }
 
 
-export function tfDataSourceRedshiftPropertyToHclTerraform(struct?: TfDataSource.RedshiftPropertyOutputReference | TfDataSource.RedshiftProperty): any {
+export function awsDataSourceRedshiftPropertyToHclTerraform(struct?: AwsDataSource.RedshiftPropertyOutputReference | AwsDataSource.RedshiftProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1103,7 +1103,7 @@ export function tfDataSourceRedshiftPropertyToHclTerraform(struct?: TfDataSource
 }
 
 
-export function tfDataSourceManifestFileLocationPropertyToTerraform(struct?: TfDataSource.ManifestFileLocationPropertyOutputReference | TfDataSource.ManifestFileLocationProperty): any {
+export function awsDataSourceManifestFileLocationPropertyToTerraform(struct?: AwsDataSource.ManifestFileLocationPropertyOutputReference | AwsDataSource.ManifestFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1115,7 +1115,7 @@ export function tfDataSourceManifestFileLocationPropertyToTerraform(struct?: TfD
 }
 
 
-export function tfDataSourceManifestFileLocationPropertyToHclTerraform(struct?: TfDataSource.ManifestFileLocationPropertyOutputReference | TfDataSource.ManifestFileLocationProperty): any {
+export function awsDataSourceManifestFileLocationPropertyToHclTerraform(struct?: AwsDataSource.ManifestFileLocationPropertyOutputReference | AwsDataSource.ManifestFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1140,19 +1140,19 @@ export function tfDataSourceManifestFileLocationPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfDataSourceS3PropertyToTerraform(struct?: TfDataSource.S3PropertyOutputReference | TfDataSource.S3Property): any {
+export function awsDataSourceS3PropertyToTerraform(struct?: AwsDataSource.S3PropertyOutputReference | AwsDataSource.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     role_arn: cdktn.stringToTerraform(struct!.roleArn),
-    manifest_file_location: tfDataSourceManifestFileLocationPropertyToTerraform(struct!.manifestFileLocation),
+    manifest_file_location: awsDataSourceManifestFileLocationPropertyToTerraform(struct!.manifestFileLocation),
   }
 }
 
 
-export function tfDataSourceS3PropertyToHclTerraform(struct?: TfDataSource.S3PropertyOutputReference | TfDataSource.S3Property): any {
+export function awsDataSourceS3PropertyToHclTerraform(struct?: AwsDataSource.S3PropertyOutputReference | AwsDataSource.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1165,7 +1165,7 @@ export function tfDataSourceS3PropertyToHclTerraform(struct?: TfDataSource.S3Pro
       storageClassType: "string",
     },
     manifest_file_location: {
-      value: tfDataSourceManifestFileLocationPropertyToHclTerraform(struct!.manifestFileLocation),
+      value: awsDataSourceManifestFileLocationPropertyToHclTerraform(struct!.manifestFileLocation),
       isBlock: true,
       type: "list",
       storageClassType: "ManifestFileLocationPropertyList",
@@ -1177,7 +1177,7 @@ export function tfDataSourceS3PropertyToHclTerraform(struct?: TfDataSource.S3Pro
 }
 
 
-export function tfDataSourceServiceNowPropertyToTerraform(struct?: TfDataSource.ServiceNowPropertyOutputReference | TfDataSource.ServiceNowProperty): any {
+export function awsDataSourceServiceNowPropertyToTerraform(struct?: AwsDataSource.ServiceNowPropertyOutputReference | AwsDataSource.ServiceNowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1188,7 +1188,7 @@ export function tfDataSourceServiceNowPropertyToTerraform(struct?: TfDataSource.
 }
 
 
-export function tfDataSourceServiceNowPropertyToHclTerraform(struct?: TfDataSource.ServiceNowPropertyOutputReference | TfDataSource.ServiceNowProperty): any {
+export function awsDataSourceServiceNowPropertyToHclTerraform(struct?: AwsDataSource.ServiceNowPropertyOutputReference | AwsDataSource.ServiceNowProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1207,7 +1207,7 @@ export function tfDataSourceServiceNowPropertyToHclTerraform(struct?: TfDataSour
 }
 
 
-export function tfDataSourceSnowflakePropertyToTerraform(struct?: TfDataSource.SnowflakePropertyOutputReference | TfDataSource.SnowflakeProperty): any {
+export function awsDataSourceSnowflakePropertyToTerraform(struct?: AwsDataSource.SnowflakePropertyOutputReference | AwsDataSource.SnowflakeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1220,7 +1220,7 @@ export function tfDataSourceSnowflakePropertyToTerraform(struct?: TfDataSource.S
 }
 
 
-export function tfDataSourceSnowflakePropertyToHclTerraform(struct?: TfDataSource.SnowflakePropertyOutputReference | TfDataSource.SnowflakeProperty): any {
+export function awsDataSourceSnowflakePropertyToHclTerraform(struct?: AwsDataSource.SnowflakePropertyOutputReference | AwsDataSource.SnowflakeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1251,7 +1251,7 @@ export function tfDataSourceSnowflakePropertyToHclTerraform(struct?: TfDataSourc
 }
 
 
-export function tfDataSourceSparkPropertyToTerraform(struct?: TfDataSource.SparkPropertyOutputReference | TfDataSource.SparkProperty): any {
+export function awsDataSourceSparkPropertyToTerraform(struct?: AwsDataSource.SparkPropertyOutputReference | AwsDataSource.SparkProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1263,7 +1263,7 @@ export function tfDataSourceSparkPropertyToTerraform(struct?: TfDataSource.Spark
 }
 
 
-export function tfDataSourceSparkPropertyToHclTerraform(struct?: TfDataSource.SparkPropertyOutputReference | TfDataSource.SparkProperty): any {
+export function awsDataSourceSparkPropertyToHclTerraform(struct?: AwsDataSource.SparkPropertyOutputReference | AwsDataSource.SparkProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1288,7 +1288,7 @@ export function tfDataSourceSparkPropertyToHclTerraform(struct?: TfDataSource.Sp
 }
 
 
-export function tfDataSourceSqlServerPropertyToTerraform(struct?: TfDataSource.SqlServerPropertyOutputReference | TfDataSource.SqlServerProperty): any {
+export function awsDataSourceSqlServerPropertyToTerraform(struct?: AwsDataSource.SqlServerPropertyOutputReference | AwsDataSource.SqlServerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1301,7 +1301,7 @@ export function tfDataSourceSqlServerPropertyToTerraform(struct?: TfDataSource.S
 }
 
 
-export function tfDataSourceSqlServerPropertyToHclTerraform(struct?: TfDataSource.SqlServerPropertyOutputReference | TfDataSource.SqlServerProperty): any {
+export function awsDataSourceSqlServerPropertyToHclTerraform(struct?: AwsDataSource.SqlServerPropertyOutputReference | AwsDataSource.SqlServerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1332,7 +1332,7 @@ export function tfDataSourceSqlServerPropertyToHclTerraform(struct?: TfDataSourc
 }
 
 
-export function tfDataSourceTeradataPropertyToTerraform(struct?: TfDataSource.TeradataPropertyOutputReference | TfDataSource.TeradataProperty): any {
+export function awsDataSourceTeradataPropertyToTerraform(struct?: AwsDataSource.TeradataPropertyOutputReference | AwsDataSource.TeradataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1345,7 +1345,7 @@ export function tfDataSourceTeradataPropertyToTerraform(struct?: TfDataSource.Te
 }
 
 
-export function tfDataSourceTeradataPropertyToHclTerraform(struct?: TfDataSource.TeradataPropertyOutputReference | TfDataSource.TeradataProperty): any {
+export function awsDataSourceTeradataPropertyToHclTerraform(struct?: AwsDataSource.TeradataPropertyOutputReference | AwsDataSource.TeradataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1376,7 +1376,7 @@ export function tfDataSourceTeradataPropertyToHclTerraform(struct?: TfDataSource
 }
 
 
-export function tfDataSourceTwitterPropertyToTerraform(struct?: TfDataSource.TwitterPropertyOutputReference | TfDataSource.TwitterProperty): any {
+export function awsDataSourceTwitterPropertyToTerraform(struct?: AwsDataSource.TwitterPropertyOutputReference | AwsDataSource.TwitterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1388,7 +1388,7 @@ export function tfDataSourceTwitterPropertyToTerraform(struct?: TfDataSource.Twi
 }
 
 
-export function tfDataSourceTwitterPropertyToHclTerraform(struct?: TfDataSource.TwitterPropertyOutputReference | TfDataSource.TwitterProperty): any {
+export function awsDataSourceTwitterPropertyToHclTerraform(struct?: AwsDataSource.TwitterPropertyOutputReference | AwsDataSource.TwitterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1413,165 +1413,165 @@ export function tfDataSourceTwitterPropertyToHclTerraform(struct?: TfDataSource.
 }
 
 
-export function tfDataSourceParametersPropertyToTerraform(struct?: TfDataSource.ParametersPropertyOutputReference | TfDataSource.ParametersProperty): any {
+export function awsDataSourceParametersPropertyToTerraform(struct?: AwsDataSource.ParametersPropertyOutputReference | AwsDataSource.ParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    amazon_elasticsearch: tfDataSourceAmazonElasticsearchPropertyToTerraform(struct!.amazonElasticsearch),
-    athena: tfDataSourceAthenaPropertyToTerraform(struct!.athena),
-    aurora: tfDataSourceAuroraPropertyToTerraform(struct!.aurora),
-    aurora_postgresql: tfDataSourceAuroraPostgresqlPropertyToTerraform(struct!.auroraPostgresql),
-    aws_iot_analytics: tfDataSourceAwsIotAnalyticsPropertyToTerraform(struct!.awsIotAnalytics),
-    databricks: tfDataSourceDatabricksPropertyToTerraform(struct!.databricks),
-    jira: tfDataSourceJiraPropertyToTerraform(struct!.jira),
-    maria_db: tfDataSourceMariaDbPropertyToTerraform(struct!.mariaDb),
-    mysql: tfDataSourceMysqlPropertyToTerraform(struct!.mysql),
-    oracle: tfDataSourceOraclePropertyToTerraform(struct!.oracle),
-    postgresql: tfDataSourcePostgresqlPropertyToTerraform(struct!.postgresql),
-    presto: tfDataSourcePrestoPropertyToTerraform(struct!.presto),
-    rds: tfDataSourceRdsPropertyToTerraform(struct!.rds),
-    redshift: tfDataSourceRedshiftPropertyToTerraform(struct!.redshift),
-    s3: tfDataSourceS3PropertyToTerraform(struct!.s3),
-    service_now: tfDataSourceServiceNowPropertyToTerraform(struct!.serviceNow),
-    snowflake: tfDataSourceSnowflakePropertyToTerraform(struct!.snowflake),
-    spark: tfDataSourceSparkPropertyToTerraform(struct!.spark),
-    sql_server: tfDataSourceSqlServerPropertyToTerraform(struct!.sqlServer),
-    teradata: tfDataSourceTeradataPropertyToTerraform(struct!.teradata),
-    twitter: tfDataSourceTwitterPropertyToTerraform(struct!.twitter),
+    amazon_elasticsearch: awsDataSourceAmazonElasticsearchPropertyToTerraform(struct!.amazonElasticsearch),
+    athena: awsDataSourceAthenaPropertyToTerraform(struct!.athena),
+    aurora: awsDataSourceAuroraPropertyToTerraform(struct!.aurora),
+    aurora_postgresql: awsDataSourceAuroraPostgresqlPropertyToTerraform(struct!.auroraPostgresql),
+    aws_iot_analytics: awsDataSourceAwsIotAnalyticsPropertyToTerraform(struct!.awsIotAnalytics),
+    databricks: awsDataSourceDatabricksPropertyToTerraform(struct!.databricks),
+    jira: awsDataSourceJiraPropertyToTerraform(struct!.jira),
+    maria_db: awsDataSourceMariaDbPropertyToTerraform(struct!.mariaDb),
+    mysql: awsDataSourceMysqlPropertyToTerraform(struct!.mysql),
+    oracle: awsDataSourceOraclePropertyToTerraform(struct!.oracle),
+    postgresql: awsDataSourcePostgresqlPropertyToTerraform(struct!.postgresql),
+    presto: awsDataSourcePrestoPropertyToTerraform(struct!.presto),
+    rds: awsDataSourceRdsPropertyToTerraform(struct!.rds),
+    redshift: awsDataSourceRedshiftPropertyToTerraform(struct!.redshift),
+    s3: awsDataSourceS3PropertyToTerraform(struct!.s3),
+    service_now: awsDataSourceServiceNowPropertyToTerraform(struct!.serviceNow),
+    snowflake: awsDataSourceSnowflakePropertyToTerraform(struct!.snowflake),
+    spark: awsDataSourceSparkPropertyToTerraform(struct!.spark),
+    sql_server: awsDataSourceSqlServerPropertyToTerraform(struct!.sqlServer),
+    teradata: awsDataSourceTeradataPropertyToTerraform(struct!.teradata),
+    twitter: awsDataSourceTwitterPropertyToTerraform(struct!.twitter),
   }
 }
 
 
-export function tfDataSourceParametersPropertyToHclTerraform(struct?: TfDataSource.ParametersPropertyOutputReference | TfDataSource.ParametersProperty): any {
+export function awsDataSourceParametersPropertyToHclTerraform(struct?: AwsDataSource.ParametersPropertyOutputReference | AwsDataSource.ParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     amazon_elasticsearch: {
-      value: tfDataSourceAmazonElasticsearchPropertyToHclTerraform(struct!.amazonElasticsearch),
+      value: awsDataSourceAmazonElasticsearchPropertyToHclTerraform(struct!.amazonElasticsearch),
       isBlock: true,
       type: "list",
       storageClassType: "AmazonElasticsearchPropertyList",
     },
     athena: {
-      value: tfDataSourceAthenaPropertyToHclTerraform(struct!.athena),
+      value: awsDataSourceAthenaPropertyToHclTerraform(struct!.athena),
       isBlock: true,
       type: "list",
       storageClassType: "AthenaPropertyList",
     },
     aurora: {
-      value: tfDataSourceAuroraPropertyToHclTerraform(struct!.aurora),
+      value: awsDataSourceAuroraPropertyToHclTerraform(struct!.aurora),
       isBlock: true,
       type: "list",
       storageClassType: "AuroraPropertyList",
     },
     aurora_postgresql: {
-      value: tfDataSourceAuroraPostgresqlPropertyToHclTerraform(struct!.auroraPostgresql),
+      value: awsDataSourceAuroraPostgresqlPropertyToHclTerraform(struct!.auroraPostgresql),
       isBlock: true,
       type: "list",
       storageClassType: "AuroraPostgresqlPropertyList",
     },
     aws_iot_analytics: {
-      value: tfDataSourceAwsIotAnalyticsPropertyToHclTerraform(struct!.awsIotAnalytics),
+      value: awsDataSourceAwsIotAnalyticsPropertyToHclTerraform(struct!.awsIotAnalytics),
       isBlock: true,
       type: "list",
       storageClassType: "AwsIotAnalyticsPropertyList",
     },
     databricks: {
-      value: tfDataSourceDatabricksPropertyToHclTerraform(struct!.databricks),
+      value: awsDataSourceDatabricksPropertyToHclTerraform(struct!.databricks),
       isBlock: true,
       type: "list",
       storageClassType: "DatabricksPropertyList",
     },
     jira: {
-      value: tfDataSourceJiraPropertyToHclTerraform(struct!.jira),
+      value: awsDataSourceJiraPropertyToHclTerraform(struct!.jira),
       isBlock: true,
       type: "list",
       storageClassType: "JiraPropertyList",
     },
     maria_db: {
-      value: tfDataSourceMariaDbPropertyToHclTerraform(struct!.mariaDb),
+      value: awsDataSourceMariaDbPropertyToHclTerraform(struct!.mariaDb),
       isBlock: true,
       type: "list",
       storageClassType: "MariaDbPropertyList",
     },
     mysql: {
-      value: tfDataSourceMysqlPropertyToHclTerraform(struct!.mysql),
+      value: awsDataSourceMysqlPropertyToHclTerraform(struct!.mysql),
       isBlock: true,
       type: "list",
       storageClassType: "MysqlPropertyList",
     },
     oracle: {
-      value: tfDataSourceOraclePropertyToHclTerraform(struct!.oracle),
+      value: awsDataSourceOraclePropertyToHclTerraform(struct!.oracle),
       isBlock: true,
       type: "list",
       storageClassType: "OraclePropertyList",
     },
     postgresql: {
-      value: tfDataSourcePostgresqlPropertyToHclTerraform(struct!.postgresql),
+      value: awsDataSourcePostgresqlPropertyToHclTerraform(struct!.postgresql),
       isBlock: true,
       type: "list",
       storageClassType: "PostgresqlPropertyList",
     },
     presto: {
-      value: tfDataSourcePrestoPropertyToHclTerraform(struct!.presto),
+      value: awsDataSourcePrestoPropertyToHclTerraform(struct!.presto),
       isBlock: true,
       type: "list",
       storageClassType: "PrestoPropertyList",
     },
     rds: {
-      value: tfDataSourceRdsPropertyToHclTerraform(struct!.rds),
+      value: awsDataSourceRdsPropertyToHclTerraform(struct!.rds),
       isBlock: true,
       type: "list",
       storageClassType: "RdsPropertyList",
     },
     redshift: {
-      value: tfDataSourceRedshiftPropertyToHclTerraform(struct!.redshift),
+      value: awsDataSourceRedshiftPropertyToHclTerraform(struct!.redshift),
       isBlock: true,
       type: "list",
       storageClassType: "RedshiftPropertyList",
     },
     s3: {
-      value: tfDataSourceS3PropertyToHclTerraform(struct!.s3),
+      value: awsDataSourceS3PropertyToHclTerraform(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "S3PropertyList",
     },
     service_now: {
-      value: tfDataSourceServiceNowPropertyToHclTerraform(struct!.serviceNow),
+      value: awsDataSourceServiceNowPropertyToHclTerraform(struct!.serviceNow),
       isBlock: true,
       type: "list",
       storageClassType: "ServiceNowPropertyList",
     },
     snowflake: {
-      value: tfDataSourceSnowflakePropertyToHclTerraform(struct!.snowflake),
+      value: awsDataSourceSnowflakePropertyToHclTerraform(struct!.snowflake),
       isBlock: true,
       type: "list",
       storageClassType: "SnowflakePropertyList",
     },
     spark: {
-      value: tfDataSourceSparkPropertyToHclTerraform(struct!.spark),
+      value: awsDataSourceSparkPropertyToHclTerraform(struct!.spark),
       isBlock: true,
       type: "list",
       storageClassType: "SparkPropertyList",
     },
     sql_server: {
-      value: tfDataSourceSqlServerPropertyToHclTerraform(struct!.sqlServer),
+      value: awsDataSourceSqlServerPropertyToHclTerraform(struct!.sqlServer),
       isBlock: true,
       type: "list",
       storageClassType: "SqlServerPropertyList",
     },
     teradata: {
-      value: tfDataSourceTeradataPropertyToHclTerraform(struct!.teradata),
+      value: awsDataSourceTeradataPropertyToHclTerraform(struct!.teradata),
       isBlock: true,
       type: "list",
       storageClassType: "TeradataPropertyList",
     },
     twitter: {
-      value: tfDataSourceTwitterPropertyToHclTerraform(struct!.twitter),
+      value: awsDataSourceTwitterPropertyToHclTerraform(struct!.twitter),
       isBlock: true,
       type: "list",
       storageClassType: "TwitterPropertyList",
@@ -1583,7 +1583,7 @@ export function tfDataSourceParametersPropertyToHclTerraform(struct?: TfDataSour
 }
 
 
-export function tfDataSourcePermissionPropertyToTerraform(struct?: TfDataSource.PermissionProperty | cdktn.IResolvable): any {
+export function awsDataSourcePermissionPropertyToTerraform(struct?: AwsDataSource.PermissionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1595,7 +1595,7 @@ export function tfDataSourcePermissionPropertyToTerraform(struct?: TfDataSource.
 }
 
 
-export function tfDataSourcePermissionPropertyToHclTerraform(struct?: TfDataSource.PermissionProperty | cdktn.IResolvable): any {
+export function awsDataSourcePermissionPropertyToHclTerraform(struct?: AwsDataSource.PermissionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1620,7 +1620,7 @@ export function tfDataSourcePermissionPropertyToHclTerraform(struct?: TfDataSour
 }
 
 
-export function tfDataSourceSslPropertiesPropertyToTerraform(struct?: TfDataSource.SslPropertiesPropertyOutputReference | TfDataSource.SslPropertiesProperty): any {
+export function awsDataSourceSslPropertiesPropertyToTerraform(struct?: AwsDataSource.SslPropertiesPropertyOutputReference | AwsDataSource.SslPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1631,7 +1631,7 @@ export function tfDataSourceSslPropertiesPropertyToTerraform(struct?: TfDataSour
 }
 
 
-export function tfDataSourceSslPropertiesPropertyToHclTerraform(struct?: TfDataSource.SslPropertiesPropertyOutputReference | TfDataSource.SslPropertiesProperty): any {
+export function awsDataSourceSslPropertiesPropertyToHclTerraform(struct?: AwsDataSource.SslPropertiesPropertyOutputReference | AwsDataSource.SslPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1650,7 +1650,7 @@ export function tfDataSourceSslPropertiesPropertyToHclTerraform(struct?: TfDataS
 }
 
 
-export function tfDataSourceVpcConnectionPropertiesPropertyToTerraform(struct?: TfDataSource.VpcConnectionPropertiesPropertyOutputReference | TfDataSource.VpcConnectionPropertiesProperty): any {
+export function awsDataSourceVpcConnectionPropertiesPropertyToTerraform(struct?: AwsDataSource.VpcConnectionPropertiesPropertyOutputReference | AwsDataSource.VpcConnectionPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1661,7 +1661,7 @@ export function tfDataSourceVpcConnectionPropertiesPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataSourceVpcConnectionPropertiesPropertyToHclTerraform(struct?: TfDataSource.VpcConnectionPropertiesPropertyOutputReference | TfDataSource.VpcConnectionPropertiesProperty): any {
+export function awsDataSourceVpcConnectionPropertiesPropertyToHclTerraform(struct?: AwsDataSource.VpcConnectionPropertiesPropertyOutputReference | AwsDataSource.VpcConnectionPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1680,14 +1680,14 @@ export function tfDataSourceVpcConnectionPropertiesPropertyToHclTerraform(struct
 }
 
 
-export namespace TfDataSource {
+export namespace AwsDataSource {
 export interface CredentialPairProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#password TfDataSource#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#password AwsDataSource#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#username TfDataSource#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#username AwsDataSource#username}
   */
   readonly username: string;
 }
@@ -1757,17 +1757,17 @@ export class CredentialPairPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CredentialsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#copy_source_arn TfDataSource#copy_source_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#copy_source_arn AwsDataSource#copy_source_arn}
   */
   readonly copySourceArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#secret_arn TfDataSource#secret_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#secret_arn AwsDataSource#secret_arn}
   */
   readonly secretArn?: string;
   /**
   * credential_pair block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#credential_pair TfDataSource#credential_pair}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#credential_pair AwsDataSource#credential_pair}
   */
   readonly credentialPair?: CredentialPairProperty;
 }
@@ -1865,7 +1865,7 @@ export class CredentialsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AmazonElasticsearchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#domain TfDataSource#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#domain AwsDataSource#domain}
   */
   readonly domain: string;
 }
@@ -1916,11 +1916,11 @@ export class AmazonElasticsearchPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface AthenaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#role_arn TfDataSource#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#role_arn AwsDataSource#role_arn}
   */
   readonly roleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#work_group TfDataSource#work_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#work_group AwsDataSource#work_group}
   */
   readonly workGroup?: string;
 }
@@ -1996,15 +1996,15 @@ export class AthenaPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AuroraProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database TfDataSource#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database AwsDataSource#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host TfDataSource#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host AwsDataSource#host}
   */
   readonly host: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port TfDataSource#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port AwsDataSource#port}
   */
   readonly port: number;
 }
@@ -2093,15 +2093,15 @@ export class AuroraPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AuroraPostgresqlProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database TfDataSource#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database AwsDataSource#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host TfDataSource#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host AwsDataSource#host}
   */
   readonly host: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port TfDataSource#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port AwsDataSource#port}
   */
   readonly port: number;
 }
@@ -2190,7 +2190,7 @@ export class AuroraPostgresqlPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface AwsIotAnalyticsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#data_set_name TfDataSource#data_set_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#data_set_name AwsDataSource#data_set_name}
   */
   readonly dataSetName: string;
 }
@@ -2241,15 +2241,15 @@ export class AwsIotAnalyticsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface DatabricksProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host TfDataSource#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host AwsDataSource#host}
   */
   readonly host: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port TfDataSource#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port AwsDataSource#port}
   */
   readonly port: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#sql_endpoint_path TfDataSource#sql_endpoint_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#sql_endpoint_path AwsDataSource#sql_endpoint_path}
   */
   readonly sqlEndpointPath: string;
 }
@@ -2338,7 +2338,7 @@ export class DatabricksPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface JiraProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#site_base_url TfDataSource#site_base_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#site_base_url AwsDataSource#site_base_url}
   */
   readonly siteBaseUrl: string;
 }
@@ -2389,15 +2389,15 @@ export class JiraPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MariaDbProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database TfDataSource#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database AwsDataSource#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host TfDataSource#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host AwsDataSource#host}
   */
   readonly host: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port TfDataSource#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port AwsDataSource#port}
   */
   readonly port: number;
 }
@@ -2486,15 +2486,15 @@ export class MariaDbPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface MysqlProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database TfDataSource#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database AwsDataSource#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host TfDataSource#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host AwsDataSource#host}
   */
   readonly host: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port TfDataSource#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port AwsDataSource#port}
   */
   readonly port: number;
 }
@@ -2583,15 +2583,15 @@ export class MysqlPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OracleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database TfDataSource#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database AwsDataSource#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host TfDataSource#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host AwsDataSource#host}
   */
   readonly host: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port TfDataSource#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port AwsDataSource#port}
   */
   readonly port: number;
 }
@@ -2680,15 +2680,15 @@ export class OraclePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PostgresqlProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database TfDataSource#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database AwsDataSource#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host TfDataSource#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host AwsDataSource#host}
   */
   readonly host: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port TfDataSource#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port AwsDataSource#port}
   */
   readonly port: number;
 }
@@ -2777,15 +2777,15 @@ export class PostgresqlPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PrestoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#catalog TfDataSource#catalog}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#catalog AwsDataSource#catalog}
   */
   readonly catalog: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host TfDataSource#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host AwsDataSource#host}
   */
   readonly host: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port TfDataSource#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port AwsDataSource#port}
   */
   readonly port: number;
 }
@@ -2874,11 +2874,11 @@ export class PrestoPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RdsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database TfDataSource#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database AwsDataSource#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#instance_id TfDataSource#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#instance_id AwsDataSource#instance_id}
   */
   readonly instanceId: string;
 }
@@ -2948,19 +2948,19 @@ export class RdsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RedshiftProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#cluster_id TfDataSource#cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#cluster_id AwsDataSource#cluster_id}
   */
   readonly clusterId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database TfDataSource#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database AwsDataSource#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host TfDataSource#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host AwsDataSource#host}
   */
   readonly host?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port TfDataSource#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port AwsDataSource#port}
   */
   readonly port?: number;
 }
@@ -3077,11 +3077,11 @@ export class RedshiftPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ManifestFileLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#bucket TfDataSource#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#bucket AwsDataSource#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#key TfDataSource#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#key AwsDataSource#key}
   */
   readonly key: string;
 }
@@ -3151,13 +3151,13 @@ export class ManifestFileLocationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface S3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#role_arn TfDataSource#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#role_arn AwsDataSource#role_arn}
   */
   readonly roleArn?: string;
   /**
   * manifest_file_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#manifest_file_location TfDataSource#manifest_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#manifest_file_location AwsDataSource#manifest_file_location}
   */
   readonly manifestFileLocation: ManifestFileLocationProperty;
 }
@@ -3230,7 +3230,7 @@ export class S3PropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ServiceNowProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#site_base_url TfDataSource#site_base_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#site_base_url AwsDataSource#site_base_url}
   */
   readonly siteBaseUrl: string;
 }
@@ -3281,15 +3281,15 @@ export class ServiceNowPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SnowflakeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database TfDataSource#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database AwsDataSource#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host TfDataSource#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host AwsDataSource#host}
   */
   readonly host: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#warehouse TfDataSource#warehouse}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#warehouse AwsDataSource#warehouse}
   */
   readonly warehouse: string;
 }
@@ -3378,11 +3378,11 @@ export class SnowflakePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SparkProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host TfDataSource#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host AwsDataSource#host}
   */
   readonly host: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port TfDataSource#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port AwsDataSource#port}
   */
   readonly port: number;
 }
@@ -3452,15 +3452,15 @@ export class SparkPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SqlServerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database TfDataSource#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database AwsDataSource#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host TfDataSource#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host AwsDataSource#host}
   */
   readonly host: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port TfDataSource#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port AwsDataSource#port}
   */
   readonly port: number;
 }
@@ -3549,15 +3549,15 @@ export class SqlServerPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TeradataProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database TfDataSource#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#database AwsDataSource#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host TfDataSource#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#host AwsDataSource#host}
   */
   readonly host: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port TfDataSource#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#port AwsDataSource#port}
   */
   readonly port: number;
 }
@@ -3646,11 +3646,11 @@ export class TeradataPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TwitterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#max_rows TfDataSource#max_rows}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#max_rows AwsDataSource#max_rows}
   */
   readonly maxRows: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#query TfDataSource#query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#query AwsDataSource#query}
   */
   readonly query: string;
 }
@@ -3722,127 +3722,127 @@ export interface ParametersProperty {
   /**
   * amazon_elasticsearch block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#amazon_elasticsearch TfDataSource#amazon_elasticsearch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#amazon_elasticsearch AwsDataSource#amazon_elasticsearch}
   */
   readonly amazonElasticsearch?: AmazonElasticsearchProperty;
   /**
   * athena block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#athena TfDataSource#athena}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#athena AwsDataSource#athena}
   */
   readonly athena?: AthenaProperty;
   /**
   * aurora block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#aurora TfDataSource#aurora}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#aurora AwsDataSource#aurora}
   */
   readonly aurora?: AuroraProperty;
   /**
   * aurora_postgresql block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#aurora_postgresql TfDataSource#aurora_postgresql}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#aurora_postgresql AwsDataSource#aurora_postgresql}
   */
   readonly auroraPostgresql?: AuroraPostgresqlProperty;
   /**
   * aws_iot_analytics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#aws_iot_analytics TfDataSource#aws_iot_analytics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#aws_iot_analytics AwsDataSource#aws_iot_analytics}
   */
   readonly awsIotAnalytics?: AwsIotAnalyticsProperty;
   /**
   * databricks block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#databricks TfDataSource#databricks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#databricks AwsDataSource#databricks}
   */
   readonly databricks?: DatabricksProperty;
   /**
   * jira block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#jira TfDataSource#jira}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#jira AwsDataSource#jira}
   */
   readonly jira?: JiraProperty;
   /**
   * maria_db block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#maria_db TfDataSource#maria_db}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#maria_db AwsDataSource#maria_db}
   */
   readonly mariaDb?: MariaDbProperty;
   /**
   * mysql block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#mysql TfDataSource#mysql}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#mysql AwsDataSource#mysql}
   */
   readonly mysql?: MysqlProperty;
   /**
   * oracle block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#oracle TfDataSource#oracle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#oracle AwsDataSource#oracle}
   */
   readonly oracle?: OracleProperty;
   /**
   * postgresql block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#postgresql TfDataSource#postgresql}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#postgresql AwsDataSource#postgresql}
   */
   readonly postgresql?: PostgresqlProperty;
   /**
   * presto block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#presto TfDataSource#presto}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#presto AwsDataSource#presto}
   */
   readonly presto?: PrestoProperty;
   /**
   * rds block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#rds TfDataSource#rds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#rds AwsDataSource#rds}
   */
   readonly rds?: RdsProperty;
   /**
   * redshift block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#redshift TfDataSource#redshift}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#redshift AwsDataSource#redshift}
   */
   readonly redshift?: RedshiftProperty;
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#s3 TfDataSource#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#s3 AwsDataSource#s3}
   */
   readonly s3?: S3Property;
   /**
   * service_now block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#service_now TfDataSource#service_now}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#service_now AwsDataSource#service_now}
   */
   readonly serviceNow?: ServiceNowProperty;
   /**
   * snowflake block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#snowflake TfDataSource#snowflake}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#snowflake AwsDataSource#snowflake}
   */
   readonly snowflake?: SnowflakeProperty;
   /**
   * spark block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#spark TfDataSource#spark}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#spark AwsDataSource#spark}
   */
   readonly spark?: SparkProperty;
   /**
   * sql_server block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#sql_server TfDataSource#sql_server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#sql_server AwsDataSource#sql_server}
   */
   readonly sqlServer?: SqlServerProperty;
   /**
   * teradata block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#teradata TfDataSource#teradata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#teradata AwsDataSource#teradata}
   */
   readonly teradata?: TeradataProperty;
   /**
   * twitter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#twitter TfDataSource#twitter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#twitter AwsDataSource#twitter}
   */
   readonly twitter?: TwitterProperty;
 }
@@ -4336,11 +4336,11 @@ export class ParametersPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PermissionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#actions TfDataSource#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#actions AwsDataSource#actions}
   */
   readonly actions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#principal TfDataSource#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#principal AwsDataSource#principal}
   */
   readonly principal: string;
 }
@@ -4442,7 +4442,7 @@ export class PermissionPropertyList extends cdktn.ComplexList {
 }
 export interface SslPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#disable_ssl TfDataSource#disable_ssl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#disable_ssl AwsDataSource#disable_ssl}
   */
   readonly disableSsl: boolean | cdktn.IResolvable;
 }
@@ -4493,7 +4493,7 @@ export class SslPropertiesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConnectionPropertiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#vpc_connection_arn TfDataSource#vpc_connection_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_data_source#vpc_connection_arn AwsDataSource#vpc_connection_arn}
   */
   readonly vpcConnectionArn: string;
 }

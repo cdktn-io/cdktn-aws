@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRuntimeManagementConfigConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRuntimeManagementConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_runtime_management_config#function_name TfRuntimeManagementConfig#function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_runtime_management_config#function_name AwsRuntimeManagementConfig#function_name}
   */
   readonly functionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_runtime_management_config#qualifier TfRuntimeManagementConfig#qualifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_runtime_management_config#qualifier AwsRuntimeManagementConfig#qualifier}
   */
   readonly qualifier?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_runtime_management_config#region TfRuntimeManagementConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_runtime_management_config#region AwsRuntimeManagementConfig#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_runtime_management_config#runtime_version_arn TfRuntimeManagementConfig#runtime_version_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_runtime_management_config#runtime_version_arn AwsRuntimeManagementConfig#runtime_version_arn}
   */
   readonly runtimeVersionArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_runtime_management_config#update_runtime_on TfRuntimeManagementConfig#update_runtime_on}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_runtime_management_config#update_runtime_on AwsRuntimeManagementConfig#update_runtime_on}
   */
   readonly updateRuntimeOn?: string;
 }
@@ -33,7 +33,7 @@ export interface TfRuntimeManagementConfigConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_runtime_management_config aws_lambda_runtime_management_config}
 */
-export class TfRuntimeManagementConfig extends cdktn.TerraformResource {
+export class AwsRuntimeManagementConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class TfRuntimeManagementConfig extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRuntimeManagementConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRuntimeManagementConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRuntimeManagementConfig to import
-  * @param importFromId The id of the existing TfRuntimeManagementConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_runtime_management_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRuntimeManagementConfig to import is found
+  * @param importToId The construct id used in the generated config for the AwsRuntimeManagementConfig to import
+  * @param importFromId The id of the existing AwsRuntimeManagementConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambda_runtime_management_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRuntimeManagementConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambda_runtime_management_config", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class TfRuntimeManagementConfig extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRuntimeManagementConfigConfig
+  * @param options AwsRuntimeManagementConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRuntimeManagementConfigConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRuntimeManagementConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambda_runtime_management_config',
       terraformGeneratorMetadata: {

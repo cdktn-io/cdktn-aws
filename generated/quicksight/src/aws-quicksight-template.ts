@@ -5,74 +5,74 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTemplateConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTemplateConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#aws_account_id TfTemplate#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#aws_account_id AwsTemplate#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#id TfTemplate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#id AwsTemplate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#name TfTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#name AwsTemplate#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#region TfTemplate#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#region AwsTemplate#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#tags TfTemplate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#tags AwsTemplate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#tags_all TfTemplate#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#tags_all AwsTemplate#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#template_id TfTemplate#template_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#template_id AwsTemplate#template_id}
   */
   readonly templateId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#version_description TfTemplate#version_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#version_description AwsTemplate#version_description}
   */
   readonly versionDescription: string;
   /**
   * definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#definition TfTemplate#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#definition AwsTemplate#definition}
   */
   readonly definition?: any;
   /**
   * permissions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#permissions TfTemplate#permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#permissions AwsTemplate#permissions}
   */
-  readonly permissions?: TfTemplate.PermissionsProperty[] | cdktn.IResolvable;
+  readonly permissions?: AwsTemplate.PermissionsProperty[] | cdktn.IResolvable;
   /**
   * source_entity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#source_entity TfTemplate#source_entity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#source_entity AwsTemplate#source_entity}
   */
-  readonly sourceEntity?: TfTemplate.SourceEntityProperty;
+  readonly sourceEntity?: AwsTemplate.SourceEntityProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#timeouts TfTemplate#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#timeouts AwsTemplate#timeouts}
   */
-  readonly timeouts?: TfTemplate.TimeoutsProperty;
+  readonly timeouts?: AwsTemplate.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template aws_quicksight_template}
 */
-export class TfTemplate extends cdktn.TerraformResource {
+export class AwsTemplate extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -83,11 +83,11 @@ export class TfTemplate extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTemplate resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTemplate resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTemplate to import
-  * @param importFromId The id of the existing TfTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTemplate to import is found
+  * @param importToId The construct id used in the generated config for the AwsTemplate to import
+  * @param importFromId The id of the existing AwsTemplate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTemplate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_template", importId: importFromId, provider });
@@ -102,9 +102,9 @@ export class TfTemplate extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTemplateConfig
+  * @param options AwsTemplateConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTemplateConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTemplateConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_template',
       terraformGeneratorMetadata: {
@@ -304,11 +304,11 @@ export class TfTemplate extends cdktn.TerraformResource {
   }
 
   // permissions - computed: false, optional: true, required: false
-  private _permissions = new TfTemplate.PermissionsPropertyList(this, "permissions", true);
+  private _permissions = new AwsTemplate.PermissionsPropertyList(this, "permissions", true);
   public get permissions() {
     return this._permissions;
   }
-  public putPermissions(value: TfTemplate.PermissionsProperty[] | cdktn.IResolvable) {
+  public putPermissions(value: AwsTemplate.PermissionsProperty[] | cdktn.IResolvable) {
     this._permissions.internalValue = value;
   }
   public resetPermissions() {
@@ -320,11 +320,11 @@ export class TfTemplate extends cdktn.TerraformResource {
   }
 
   // source_entity - computed: false, optional: true, required: false
-  private _sourceEntity = new TfTemplate.SourceEntityPropertyOutputReference(this, "source_entity");
+  private _sourceEntity = new AwsTemplate.SourceEntityPropertyOutputReference(this, "source_entity");
   public get sourceEntity() {
     return this._sourceEntity;
   }
-  public putSourceEntity(value: TfTemplate.SourceEntityProperty) {
+  public putSourceEntity(value: AwsTemplate.SourceEntityProperty) {
     this._sourceEntity.internalValue = value;
   }
   public resetSourceEntity() {
@@ -336,11 +336,11 @@ export class TfTemplate extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTemplate.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTemplate.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTemplate.TimeoutsProperty) {
+  public putTimeouts(value: AwsTemplate.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -366,9 +366,9 @@ export class TfTemplate extends cdktn.TerraformResource {
       template_id: cdktn.stringToTerraform(this._templateId),
       version_description: cdktn.stringToTerraform(this._versionDescription),
       definition: cdktn.anyToTerraform(this._definition),
-      permissions: cdktn.listMapper(tfTemplatePermissionsPropertyToTerraform, true)(this._permissions.internalValue),
-      source_entity: tfTemplateSourceEntityPropertyToTerraform(this._sourceEntity.internalValue),
-      timeouts: tfTemplateTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      permissions: cdktn.listMapper(awsTemplatePermissionsPropertyToTerraform, true)(this._permissions.internalValue),
+      source_entity: awsTemplateSourceEntityPropertyToTerraform(this._sourceEntity.internalValue),
+      timeouts: awsTemplateTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -429,22 +429,22 @@ export class TfTemplate extends cdktn.TerraformResource {
         storageClassType: "any",
       },
       permissions: {
-        value: cdktn.listMapperHcl(tfTemplatePermissionsPropertyToHclTerraform, true)(this._permissions.internalValue),
+        value: cdktn.listMapperHcl(awsTemplatePermissionsPropertyToHclTerraform, true)(this._permissions.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfTemplate.PermissionsPropertyList",
+        storageClassType: "AwsTemplate.PermissionsPropertyList",
       },
       source_entity: {
-        value: tfTemplateSourceEntityPropertyToHclTerraform(this._sourceEntity.internalValue),
+        value: awsTemplateSourceEntityPropertyToHclTerraform(this._sourceEntity.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTemplate.SourceEntityPropertyList",
+        storageClassType: "AwsTemplate.SourceEntityPropertyList",
       },
       timeouts: {
-        value: tfTemplateTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTemplateTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTemplate.TimeoutsProperty",
+        storageClassType: "AwsTemplate.TimeoutsProperty",
       },
     };
 
@@ -453,7 +453,7 @@ export class TfTemplate extends cdktn.TerraformResource {
   }
 }
 
-export function tfTemplatePermissionsPropertyToTerraform(struct?: TfTemplate.PermissionsProperty | cdktn.IResolvable): any {
+export function awsTemplatePermissionsPropertyToTerraform(struct?: AwsTemplate.PermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -465,7 +465,7 @@ export function tfTemplatePermissionsPropertyToTerraform(struct?: TfTemplate.Per
 }
 
 
-export function tfTemplatePermissionsPropertyToHclTerraform(struct?: TfTemplate.PermissionsProperty | cdktn.IResolvable): any {
+export function awsTemplatePermissionsPropertyToHclTerraform(struct?: AwsTemplate.PermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -490,7 +490,7 @@ export function tfTemplatePermissionsPropertyToHclTerraform(struct?: TfTemplate.
 }
 
 
-export function tfTemplateDataSetReferencesPropertyToTerraform(struct?: TfTemplate.DataSetReferencesProperty | cdktn.IResolvable): any {
+export function awsTemplateDataSetReferencesPropertyToTerraform(struct?: AwsTemplate.DataSetReferencesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -502,7 +502,7 @@ export function tfTemplateDataSetReferencesPropertyToTerraform(struct?: TfTempla
 }
 
 
-export function tfTemplateDataSetReferencesPropertyToHclTerraform(struct?: TfTemplate.DataSetReferencesProperty | cdktn.IResolvable): any {
+export function awsTemplateDataSetReferencesPropertyToHclTerraform(struct?: AwsTemplate.DataSetReferencesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -527,19 +527,19 @@ export function tfTemplateDataSetReferencesPropertyToHclTerraform(struct?: TfTem
 }
 
 
-export function tfTemplateSourceAnalysisPropertyToTerraform(struct?: TfTemplate.SourceAnalysisPropertyOutputReference | TfTemplate.SourceAnalysisProperty): any {
+export function awsTemplateSourceAnalysisPropertyToTerraform(struct?: AwsTemplate.SourceAnalysisPropertyOutputReference | AwsTemplate.SourceAnalysisProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     arn: cdktn.stringToTerraform(struct!.arn),
-    data_set_references: cdktn.listMapper(tfTemplateDataSetReferencesPropertyToTerraform, true)(struct!.dataSetReferences),
+    data_set_references: cdktn.listMapper(awsTemplateDataSetReferencesPropertyToTerraform, true)(struct!.dataSetReferences),
   }
 }
 
 
-export function tfTemplateSourceAnalysisPropertyToHclTerraform(struct?: TfTemplate.SourceAnalysisPropertyOutputReference | TfTemplate.SourceAnalysisProperty): any {
+export function awsTemplateSourceAnalysisPropertyToHclTerraform(struct?: AwsTemplate.SourceAnalysisPropertyOutputReference | AwsTemplate.SourceAnalysisProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -552,7 +552,7 @@ export function tfTemplateSourceAnalysisPropertyToHclTerraform(struct?: TfTempla
       storageClassType: "string",
     },
     data_set_references: {
-      value: cdktn.listMapperHcl(tfTemplateDataSetReferencesPropertyToHclTerraform, true)(struct!.dataSetReferences),
+      value: cdktn.listMapperHcl(awsTemplateDataSetReferencesPropertyToHclTerraform, true)(struct!.dataSetReferences),
       isBlock: true,
       type: "list",
       storageClassType: "DataSetReferencesPropertyList",
@@ -564,7 +564,7 @@ export function tfTemplateSourceAnalysisPropertyToHclTerraform(struct?: TfTempla
 }
 
 
-export function tfTemplateSourceTemplatePropertyToTerraform(struct?: TfTemplate.SourceTemplatePropertyOutputReference | TfTemplate.SourceTemplateProperty): any {
+export function awsTemplateSourceTemplatePropertyToTerraform(struct?: AwsTemplate.SourceTemplatePropertyOutputReference | AwsTemplate.SourceTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -575,7 +575,7 @@ export function tfTemplateSourceTemplatePropertyToTerraform(struct?: TfTemplate.
 }
 
 
-export function tfTemplateSourceTemplatePropertyToHclTerraform(struct?: TfTemplate.SourceTemplatePropertyOutputReference | TfTemplate.SourceTemplateProperty): any {
+export function awsTemplateSourceTemplatePropertyToHclTerraform(struct?: AwsTemplate.SourceTemplatePropertyOutputReference | AwsTemplate.SourceTemplateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -594,32 +594,32 @@ export function tfTemplateSourceTemplatePropertyToHclTerraform(struct?: TfTempla
 }
 
 
-export function tfTemplateSourceEntityPropertyToTerraform(struct?: TfTemplate.SourceEntityPropertyOutputReference | TfTemplate.SourceEntityProperty): any {
+export function awsTemplateSourceEntityPropertyToTerraform(struct?: AwsTemplate.SourceEntityPropertyOutputReference | AwsTemplate.SourceEntityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    source_analysis: tfTemplateSourceAnalysisPropertyToTerraform(struct!.sourceAnalysis),
-    source_template: tfTemplateSourceTemplatePropertyToTerraform(struct!.sourceTemplate),
+    source_analysis: awsTemplateSourceAnalysisPropertyToTerraform(struct!.sourceAnalysis),
+    source_template: awsTemplateSourceTemplatePropertyToTerraform(struct!.sourceTemplate),
   }
 }
 
 
-export function tfTemplateSourceEntityPropertyToHclTerraform(struct?: TfTemplate.SourceEntityPropertyOutputReference | TfTemplate.SourceEntityProperty): any {
+export function awsTemplateSourceEntityPropertyToHclTerraform(struct?: AwsTemplate.SourceEntityPropertyOutputReference | AwsTemplate.SourceEntityProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     source_analysis: {
-      value: tfTemplateSourceAnalysisPropertyToHclTerraform(struct!.sourceAnalysis),
+      value: awsTemplateSourceAnalysisPropertyToHclTerraform(struct!.sourceAnalysis),
       isBlock: true,
       type: "list",
       storageClassType: "SourceAnalysisPropertyList",
     },
     source_template: {
-      value: tfTemplateSourceTemplatePropertyToHclTerraform(struct!.sourceTemplate),
+      value: awsTemplateSourceTemplatePropertyToHclTerraform(struct!.sourceTemplate),
       isBlock: true,
       type: "list",
       storageClassType: "SourceTemplatePropertyList",
@@ -631,7 +631,7 @@ export function tfTemplateSourceEntityPropertyToHclTerraform(struct?: TfTemplate
 }
 
 
-export function tfTemplateTimeoutsPropertyToTerraform(struct?: TfTemplate.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTemplateTimeoutsPropertyToTerraform(struct?: AwsTemplate.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -644,7 +644,7 @@ export function tfTemplateTimeoutsPropertyToTerraform(struct?: TfTemplate.Timeou
 }
 
 
-export function tfTemplateTimeoutsPropertyToHclTerraform(struct?: TfTemplate.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTemplateTimeoutsPropertyToHclTerraform(struct?: AwsTemplate.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -675,14 +675,14 @@ export function tfTemplateTimeoutsPropertyToHclTerraform(struct?: TfTemplate.Tim
 }
 
 
-export namespace TfTemplate {
+export namespace AwsTemplate {
 export interface PermissionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#actions TfTemplate#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#actions AwsTemplate#actions}
   */
   readonly actions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#principal TfTemplate#principal}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#principal AwsTemplate#principal}
   */
   readonly principal: string;
 }
@@ -784,11 +784,11 @@ export class PermissionsPropertyList extends cdktn.ComplexList {
 }
 export interface DataSetReferencesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#data_set_arn TfTemplate#data_set_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#data_set_arn AwsTemplate#data_set_arn}
   */
   readonly dataSetArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#data_set_placeholder TfTemplate#data_set_placeholder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#data_set_placeholder AwsTemplate#data_set_placeholder}
   */
   readonly dataSetPlaceholder: string;
 }
@@ -890,13 +890,13 @@ export class DataSetReferencesPropertyList extends cdktn.ComplexList {
 }
 export interface SourceAnalysisProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#arn TfTemplate#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#arn AwsTemplate#arn}
   */
   readonly arn: string;
   /**
   * data_set_references block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#data_set_references TfTemplate#data_set_references}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#data_set_references AwsTemplate#data_set_references}
   */
   readonly dataSetReferences: DataSetReferencesProperty[] | cdktn.IResolvable;
 }
@@ -966,7 +966,7 @@ export class SourceAnalysisPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SourceTemplateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#arn TfTemplate#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#arn AwsTemplate#arn}
   */
   readonly arn: string;
 }
@@ -1019,13 +1019,13 @@ export interface SourceEntityProperty {
   /**
   * source_analysis block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#source_analysis TfTemplate#source_analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#source_analysis AwsTemplate#source_analysis}
   */
   readonly sourceAnalysis?: SourceAnalysisProperty;
   /**
   * source_template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#source_template TfTemplate#source_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#source_template AwsTemplate#source_template}
   */
   readonly sourceTemplate?: SourceTemplateProperty;
 }
@@ -1101,15 +1101,15 @@ export class SourceEntityPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#create TfTemplate#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#create AwsTemplate#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#delete TfTemplate#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#delete AwsTemplate#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#update TfTemplate#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template#update AwsTemplate#update}
   */
   readonly update?: string;
 }

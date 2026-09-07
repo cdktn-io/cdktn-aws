@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAppBundleConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAppBundleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_bundle#customer_managed_key_arn TfAppBundle#customer_managed_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_bundle#customer_managed_key_arn AwsAppBundle#customer_managed_key_arn}
   */
   readonly customerManagedKeyArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_bundle#region TfAppBundle#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_bundle#region AwsAppBundle#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_bundle#tags TfAppBundle#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_bundle#tags AwsAppBundle#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -25,7 +25,7 @@ export interface TfAppBundleConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_bundle aws_appfabric_app_bundle}
 */
-export class TfAppBundle extends cdktn.TerraformResource {
+export class AwsAppBundle extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class TfAppBundle extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAppBundle resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAppBundle resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAppBundle to import
-  * @param importFromId The id of the existing TfAppBundle that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_bundle#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAppBundle to import is found
+  * @param importToId The construct id used in the generated config for the AwsAppBundle to import
+  * @param importFromId The id of the existing AwsAppBundle that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appfabric_app_bundle#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAppBundle to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appfabric_app_bundle", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class TfAppBundle extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAppBundleConfig = {}
+  * @param options AwsAppBundleConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfAppBundleConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsAppBundleConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_appfabric_app_bundle',
       terraformGeneratorMetadata: {

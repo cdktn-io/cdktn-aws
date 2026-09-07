@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDeploymentStrategyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDeploymentStrategyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#deployment_duration_in_minutes TfDeploymentStrategy#deployment_duration_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#deployment_duration_in_minutes AwsDeploymentStrategy#deployment_duration_in_minutes}
   */
   readonly deploymentDurationInMinutes: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#description TfDeploymentStrategy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#description AwsDeploymentStrategy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#final_bake_time_in_minutes TfDeploymentStrategy#final_bake_time_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#final_bake_time_in_minutes AwsDeploymentStrategy#final_bake_time_in_minutes}
   */
   readonly finalBakeTimeInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#growth_factor TfDeploymentStrategy#growth_factor}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#growth_factor AwsDeploymentStrategy#growth_factor}
   */
   readonly growthFactor: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#growth_type TfDeploymentStrategy#growth_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#growth_type AwsDeploymentStrategy#growth_type}
   */
   readonly growthType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#id TfDeploymentStrategy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#id AwsDeploymentStrategy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#name TfDeploymentStrategy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#name AwsDeploymentStrategy#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#region TfDeploymentStrategy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#region AwsDeploymentStrategy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#replicate_to TfDeploymentStrategy#replicate_to}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#replicate_to AwsDeploymentStrategy#replicate_to}
   */
   readonly replicateTo: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#tags TfDeploymentStrategy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#tags AwsDeploymentStrategy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#tags_all TfDeploymentStrategy#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#tags_all AwsDeploymentStrategy#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -60,7 +60,7 @@ export interface TfDeploymentStrategyConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy aws_appconfig_deployment_strategy}
 */
-export class TfDeploymentStrategy extends cdktn.TerraformResource {
+export class AwsDeploymentStrategy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class TfDeploymentStrategy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDeploymentStrategy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDeploymentStrategy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDeploymentStrategy to import
-  * @param importFromId The id of the existing TfDeploymentStrategy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDeploymentStrategy to import is found
+  * @param importToId The construct id used in the generated config for the AwsDeploymentStrategy to import
+  * @param importFromId The id of the existing AwsDeploymentStrategy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appconfig_deployment_strategy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDeploymentStrategy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appconfig_deployment_strategy", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class TfDeploymentStrategy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDeploymentStrategyConfig
+  * @param options AwsDeploymentStrategyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDeploymentStrategyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDeploymentStrategyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appconfig_deployment_strategy',
       terraformGeneratorMetadata: {

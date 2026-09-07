@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfContributorInsightRuleConfig extends cdktn.TerraformMetaArguments {
+export interface AwsContributorInsightRuleConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_contributor_insight_rule#region TfContributorInsightRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_contributor_insight_rule#region AwsContributorInsightRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_contributor_insight_rule#rule_definition TfContributorInsightRule#rule_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_contributor_insight_rule#rule_definition AwsContributorInsightRule#rule_definition}
   */
   readonly ruleDefinition: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_contributor_insight_rule#rule_name TfContributorInsightRule#rule_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_contributor_insight_rule#rule_name AwsContributorInsightRule#rule_name}
   */
   readonly ruleName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_contributor_insight_rule#rule_state TfContributorInsightRule#rule_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_contributor_insight_rule#rule_state AwsContributorInsightRule#rule_state}
   */
   readonly ruleState?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_contributor_insight_rule#tags TfContributorInsightRule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_contributor_insight_rule#tags AwsContributorInsightRule#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -33,7 +33,7 @@ export interface TfContributorInsightRuleConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_contributor_insight_rule aws_cloudwatch_contributor_insight_rule}
 */
-export class TfContributorInsightRule extends cdktn.TerraformResource {
+export class AwsContributorInsightRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class TfContributorInsightRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfContributorInsightRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsContributorInsightRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfContributorInsightRule to import
-  * @param importFromId The id of the existing TfContributorInsightRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_contributor_insight_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfContributorInsightRule to import is found
+  * @param importToId The construct id used in the generated config for the AwsContributorInsightRule to import
+  * @param importFromId The id of the existing AwsContributorInsightRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudwatch_contributor_insight_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsContributorInsightRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudwatch_contributor_insight_rule", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class TfContributorInsightRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfContributorInsightRuleConfig
+  * @param options AwsContributorInsightRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: TfContributorInsightRuleConfig) {
+  public constructor(scope: Construct, id: string, config: AwsContributorInsightRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudwatch_contributor_insight_rule',
       terraformGeneratorMetadata: {

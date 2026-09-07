@@ -21,7 +21,7 @@ const ASSUME_ROLE: provider.AwsProvider.AssumeRoleProperty = {
   sessionName: 'cdktn-aws-migrate-example',
 };
 
-const CORS: s3.TfBucket.CorsRuleProperty[] = [
+const CORS: s3.AwsBucket.CorsRuleProperty[] = [
   { allowedMethods: ['GET'], allowedOrigins: ['https://example.com'], maxAgeSeconds: 3000 },
 ];
 
@@ -38,9 +38,9 @@ export class ExampleStack extends TerraformStack {
       assumeRole: [ASSUME_ROLE],
     });
 
-    const identity = new sts.DataTfCallerIdentity(this, 'identity', {});
+    const identity = new sts.DataAwsCallerIdentity(this, 'identity', {});
 
-    const bucket = new s3.TfBucket(this, 'assets', {
+    const bucket = new s3.AwsBucket(this, 'assets', {
       bucket: 'cdktn-aws-migrate-example-assets',
       corsRule: CORS,
       versioning: { enabled: true },
@@ -49,12 +49,12 @@ export class ExampleStack extends TerraformStack {
 
     // `aws_s3_bucket_versioning`. The classic library called it `S3BucketVersioningA` — not a typo:
     // `aws_s3_bucket`'s own `versioning` block had taken `S3BucketVersioning` first.
-    new s3.TfBucketVersioning(this, 'assets-versioning', {
+    new s3.AwsBucketVersioning(this, 'assets-versioning', {
       bucket: bucket.bucket!,
       versioningConfiguration: { status: 'Enabled' },
     });
 
-    const role = new iam.TfRole(this, 'handler-role', {
+    const role = new iam.AwsRole(this, 'handler-role', {
       name: 'cdktn-aws-migrate-example',
       assumeRolePolicy: JSON.stringify({
         Version: '2012-10-17',
@@ -68,7 +68,7 @@ export class ExampleStack extends TerraformStack {
       }),
     });
 
-    new lambda.TfFunction(this, 'handler', {
+    new lambda.AwsFunction(this, 'handler', {
       functionName: 'cdktn-aws-migrate-example',
       role: role.arn,
       runtime: 'nodejs22.x',
@@ -81,7 +81,7 @@ export class ExampleStack extends TerraformStack {
     });
 
     // `aws_alb` is an alias of `aws_lb`, and both libraries give it a class of its own.
-    new elb.TfAlb(this, 'edge', {
+    new elb.AwsAlb(this, 'edge', {
       name: 'cdktn-aws-migrate-example',
       internal: true,
       subnets: ['subnet-0123456789abcdef0'],

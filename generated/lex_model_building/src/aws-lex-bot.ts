@@ -5,94 +5,94 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBotConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBotConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#child_directed TfBot#child_directed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#child_directed AwsBot#child_directed}
   */
   readonly childDirected: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#create_version TfBot#create_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#create_version AwsBot#create_version}
   */
   readonly createVersion?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#description TfBot#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#description AwsBot#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#detect_sentiment TfBot#detect_sentiment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#detect_sentiment AwsBot#detect_sentiment}
   */
   readonly detectSentiment?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#enable_model_improvements TfBot#enable_model_improvements}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#enable_model_improvements AwsBot#enable_model_improvements}
   */
   readonly enableModelImprovements?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#id TfBot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#id AwsBot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#idle_session_ttl_in_seconds TfBot#idle_session_ttl_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#idle_session_ttl_in_seconds AwsBot#idle_session_ttl_in_seconds}
   */
   readonly idleSessionTtlInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#locale TfBot#locale}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#locale AwsBot#locale}
   */
   readonly locale?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#name TfBot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#name AwsBot#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#nlu_intent_confidence_threshold TfBot#nlu_intent_confidence_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#nlu_intent_confidence_threshold AwsBot#nlu_intent_confidence_threshold}
   */
   readonly nluIntentConfidenceThreshold?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#process_behavior TfBot#process_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#process_behavior AwsBot#process_behavior}
   */
   readonly processBehavior?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#region TfBot#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#region AwsBot#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#voice_id TfBot#voice_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#voice_id AwsBot#voice_id}
   */
   readonly voiceId?: string;
   /**
   * abort_statement block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#abort_statement TfBot#abort_statement}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#abort_statement AwsBot#abort_statement}
   */
-  readonly abortStatement: TfBot.AbortStatementProperty;
+  readonly abortStatement: AwsBot.AbortStatementProperty;
   /**
   * clarification_prompt block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#clarification_prompt TfBot#clarification_prompt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#clarification_prompt AwsBot#clarification_prompt}
   */
-  readonly clarificationPrompt?: TfBot.ClarificationPromptProperty;
+  readonly clarificationPrompt?: AwsBot.ClarificationPromptProperty;
   /**
   * intent block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#intent TfBot#intent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#intent AwsBot#intent}
   */
-  readonly intent: TfBot.IntentProperty[] | cdktn.IResolvable;
+  readonly intent: AwsBot.IntentProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#timeouts TfBot#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#timeouts AwsBot#timeouts}
   */
-  readonly timeouts?: TfBot.TimeoutsProperty;
+  readonly timeouts?: AwsBot.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot aws_lex_bot}
 */
-export class TfBot extends cdktn.TerraformResource {
+export class AwsBot extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -103,11 +103,11 @@ export class TfBot extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBot resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBot resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBot to import
-  * @param importFromId The id of the existing TfBot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBot to import is found
+  * @param importToId The construct id used in the generated config for the AwsBot to import
+  * @param importFromId The id of the existing AwsBot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lex_bot", importId: importFromId, provider });
@@ -122,9 +122,9 @@ export class TfBot extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBotConfig
+  * @param options AwsBotConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBotConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBotConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lex_bot',
       terraformGeneratorMetadata: {
@@ -401,11 +401,11 @@ export class TfBot extends cdktn.TerraformResource {
   }
 
   // abort_statement - computed: false, optional: false, required: true
-  private _abortStatement = new TfBot.AbortStatementPropertyOutputReference(this, "abort_statement");
+  private _abortStatement = new AwsBot.AbortStatementPropertyOutputReference(this, "abort_statement");
   public get abortStatement() {
     return this._abortStatement;
   }
-  public putAbortStatement(value: TfBot.AbortStatementProperty) {
+  public putAbortStatement(value: AwsBot.AbortStatementProperty) {
     this._abortStatement.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -414,11 +414,11 @@ export class TfBot extends cdktn.TerraformResource {
   }
 
   // clarification_prompt - computed: false, optional: true, required: false
-  private _clarificationPrompt = new TfBot.ClarificationPromptPropertyOutputReference(this, "clarification_prompt");
+  private _clarificationPrompt = new AwsBot.ClarificationPromptPropertyOutputReference(this, "clarification_prompt");
   public get clarificationPrompt() {
     return this._clarificationPrompt;
   }
-  public putClarificationPrompt(value: TfBot.ClarificationPromptProperty) {
+  public putClarificationPrompt(value: AwsBot.ClarificationPromptProperty) {
     this._clarificationPrompt.internalValue = value;
   }
   public resetClarificationPrompt() {
@@ -430,11 +430,11 @@ export class TfBot extends cdktn.TerraformResource {
   }
 
   // intent - computed: false, optional: false, required: true
-  private _intent = new TfBot.IntentPropertyList(this, "intent", true);
+  private _intent = new AwsBot.IntentPropertyList(this, "intent", true);
   public get intent() {
     return this._intent;
   }
-  public putIntent(value: TfBot.IntentProperty[] | cdktn.IResolvable) {
+  public putIntent(value: AwsBot.IntentProperty[] | cdktn.IResolvable) {
     this._intent.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -443,11 +443,11 @@ export class TfBot extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfBot.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsBot.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfBot.TimeoutsProperty) {
+  public putTimeouts(value: AwsBot.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -477,10 +477,10 @@ export class TfBot extends cdktn.TerraformResource {
       process_behavior: cdktn.stringToTerraform(this._processBehavior),
       region: cdktn.stringToTerraform(this._region),
       voice_id: cdktn.stringToTerraform(this._voiceId),
-      abort_statement: tfBotAbortStatementPropertyToTerraform(this._abortStatement.internalValue),
-      clarification_prompt: tfBotClarificationPromptPropertyToTerraform(this._clarificationPrompt.internalValue),
-      intent: cdktn.listMapper(tfBotIntentPropertyToTerraform, true)(this._intent.internalValue),
-      timeouts: tfBotTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      abort_statement: awsBotAbortStatementPropertyToTerraform(this._abortStatement.internalValue),
+      clarification_prompt: awsBotClarificationPromptPropertyToTerraform(this._clarificationPrompt.internalValue),
+      intent: cdktn.listMapper(awsBotIntentPropertyToTerraform, true)(this._intent.internalValue),
+      timeouts: awsBotTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -565,28 +565,28 @@ export class TfBot extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       abort_statement: {
-        value: tfBotAbortStatementPropertyToHclTerraform(this._abortStatement.internalValue),
+        value: awsBotAbortStatementPropertyToHclTerraform(this._abortStatement.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBot.AbortStatementPropertyList",
+        storageClassType: "AwsBot.AbortStatementPropertyList",
       },
       clarification_prompt: {
-        value: tfBotClarificationPromptPropertyToHclTerraform(this._clarificationPrompt.internalValue),
+        value: awsBotClarificationPromptPropertyToHclTerraform(this._clarificationPrompt.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBot.ClarificationPromptPropertyList",
+        storageClassType: "AwsBot.ClarificationPromptPropertyList",
       },
       intent: {
-        value: cdktn.listMapperHcl(tfBotIntentPropertyToHclTerraform, true)(this._intent.internalValue),
+        value: cdktn.listMapperHcl(awsBotIntentPropertyToHclTerraform, true)(this._intent.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfBot.IntentPropertyList",
+        storageClassType: "AwsBot.IntentPropertyList",
       },
       timeouts: {
-        value: tfBotTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsBotTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfBot.TimeoutsProperty",
+        storageClassType: "AwsBot.TimeoutsProperty",
       },
     };
 
@@ -595,7 +595,7 @@ export class TfBot extends cdktn.TerraformResource {
   }
 }
 
-export function tfBotAbortStatementMessagePropertyToTerraform(struct?: TfBot.AbortStatementMessageProperty | cdktn.IResolvable): any {
+export function awsBotAbortStatementMessagePropertyToTerraform(struct?: AwsBot.AbortStatementMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -608,7 +608,7 @@ export function tfBotAbortStatementMessagePropertyToTerraform(struct?: TfBot.Abo
 }
 
 
-export function tfBotAbortStatementMessagePropertyToHclTerraform(struct?: TfBot.AbortStatementMessageProperty | cdktn.IResolvable): any {
+export function awsBotAbortStatementMessagePropertyToHclTerraform(struct?: AwsBot.AbortStatementMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -639,19 +639,19 @@ export function tfBotAbortStatementMessagePropertyToHclTerraform(struct?: TfBot.
 }
 
 
-export function tfBotAbortStatementPropertyToTerraform(struct?: TfBot.AbortStatementPropertyOutputReference | TfBot.AbortStatementProperty): any {
+export function awsBotAbortStatementPropertyToTerraform(struct?: AwsBot.AbortStatementPropertyOutputReference | AwsBot.AbortStatementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     response_card: cdktn.stringToTerraform(struct!.responseCard),
-    message: cdktn.listMapper(tfBotAbortStatementMessagePropertyToTerraform, true)(struct!.message),
+    message: cdktn.listMapper(awsBotAbortStatementMessagePropertyToTerraform, true)(struct!.message),
   }
 }
 
 
-export function tfBotAbortStatementPropertyToHclTerraform(struct?: TfBot.AbortStatementPropertyOutputReference | TfBot.AbortStatementProperty): any {
+export function awsBotAbortStatementPropertyToHclTerraform(struct?: AwsBot.AbortStatementPropertyOutputReference | AwsBot.AbortStatementProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -664,7 +664,7 @@ export function tfBotAbortStatementPropertyToHclTerraform(struct?: TfBot.AbortSt
       storageClassType: "string",
     },
     message: {
-      value: cdktn.listMapperHcl(tfBotAbortStatementMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsBotAbortStatementMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "set",
       storageClassType: "AbortStatementMessagePropertyList",
@@ -676,7 +676,7 @@ export function tfBotAbortStatementPropertyToHclTerraform(struct?: TfBot.AbortSt
 }
 
 
-export function tfBotClarificationPromptMessagePropertyToTerraform(struct?: TfBot.ClarificationPromptMessageProperty | cdktn.IResolvable): any {
+export function awsBotClarificationPromptMessagePropertyToTerraform(struct?: AwsBot.ClarificationPromptMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -689,7 +689,7 @@ export function tfBotClarificationPromptMessagePropertyToTerraform(struct?: TfBo
 }
 
 
-export function tfBotClarificationPromptMessagePropertyToHclTerraform(struct?: TfBot.ClarificationPromptMessageProperty | cdktn.IResolvable): any {
+export function awsBotClarificationPromptMessagePropertyToHclTerraform(struct?: AwsBot.ClarificationPromptMessageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -720,7 +720,7 @@ export function tfBotClarificationPromptMessagePropertyToHclTerraform(struct?: T
 }
 
 
-export function tfBotClarificationPromptPropertyToTerraform(struct?: TfBot.ClarificationPromptPropertyOutputReference | TfBot.ClarificationPromptProperty): any {
+export function awsBotClarificationPromptPropertyToTerraform(struct?: AwsBot.ClarificationPromptPropertyOutputReference | AwsBot.ClarificationPromptProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -728,12 +728,12 @@ export function tfBotClarificationPromptPropertyToTerraform(struct?: TfBot.Clari
   return {
     max_attempts: cdktn.numberToTerraform(struct!.maxAttempts),
     response_card: cdktn.stringToTerraform(struct!.responseCard),
-    message: cdktn.listMapper(tfBotClarificationPromptMessagePropertyToTerraform, true)(struct!.message),
+    message: cdktn.listMapper(awsBotClarificationPromptMessagePropertyToTerraform, true)(struct!.message),
   }
 }
 
 
-export function tfBotClarificationPromptPropertyToHclTerraform(struct?: TfBot.ClarificationPromptPropertyOutputReference | TfBot.ClarificationPromptProperty): any {
+export function awsBotClarificationPromptPropertyToHclTerraform(struct?: AwsBot.ClarificationPromptPropertyOutputReference | AwsBot.ClarificationPromptProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -752,7 +752,7 @@ export function tfBotClarificationPromptPropertyToHclTerraform(struct?: TfBot.Cl
       storageClassType: "string",
     },
     message: {
-      value: cdktn.listMapperHcl(tfBotClarificationPromptMessagePropertyToHclTerraform, true)(struct!.message),
+      value: cdktn.listMapperHcl(awsBotClarificationPromptMessagePropertyToHclTerraform, true)(struct!.message),
       isBlock: true,
       type: "set",
       storageClassType: "ClarificationPromptMessagePropertyList",
@@ -764,7 +764,7 @@ export function tfBotClarificationPromptPropertyToHclTerraform(struct?: TfBot.Cl
 }
 
 
-export function tfBotIntentPropertyToTerraform(struct?: TfBot.IntentProperty | cdktn.IResolvable): any {
+export function awsBotIntentPropertyToTerraform(struct?: AwsBot.IntentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -776,7 +776,7 @@ export function tfBotIntentPropertyToTerraform(struct?: TfBot.IntentProperty | c
 }
 
 
-export function tfBotIntentPropertyToHclTerraform(struct?: TfBot.IntentProperty | cdktn.IResolvable): any {
+export function awsBotIntentPropertyToHclTerraform(struct?: AwsBot.IntentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -801,7 +801,7 @@ export function tfBotIntentPropertyToHclTerraform(struct?: TfBot.IntentProperty 
 }
 
 
-export function tfBotTimeoutsPropertyToTerraform(struct?: TfBot.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBotTimeoutsPropertyToTerraform(struct?: AwsBot.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -814,7 +814,7 @@ export function tfBotTimeoutsPropertyToTerraform(struct?: TfBot.TimeoutsProperty
 }
 
 
-export function tfBotTimeoutsPropertyToHclTerraform(struct?: TfBot.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBotTimeoutsPropertyToHclTerraform(struct?: AwsBot.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -845,18 +845,18 @@ export function tfBotTimeoutsPropertyToHclTerraform(struct?: TfBot.TimeoutsPrope
 }
 
 
-export namespace TfBot {
+export namespace AwsBot {
 export interface AbortStatementMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#content TfBot#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#content AwsBot#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#content_type TfBot#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#content_type AwsBot#content_type}
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#group_number TfBot#group_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#group_number AwsBot#group_number}
   */
   readonly groupNumber?: number;
 }
@@ -980,13 +980,13 @@ export class AbortStatementMessagePropertyList extends cdktn.ComplexList {
 }
 export interface AbortStatementProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#response_card TfBot#response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#response_card AwsBot#response_card}
   */
   readonly responseCard?: string;
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#message TfBot#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#message AwsBot#message}
   */
   readonly message: AbortStatementMessageProperty[] | cdktn.IResolvable;
 }
@@ -1059,15 +1059,15 @@ export class AbortStatementPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ClarificationPromptMessageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#content TfBot#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#content AwsBot#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#content_type TfBot#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#content_type AwsBot#content_type}
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#group_number TfBot#group_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#group_number AwsBot#group_number}
   */
   readonly groupNumber?: number;
 }
@@ -1191,17 +1191,17 @@ export class ClarificationPromptMessagePropertyList extends cdktn.ComplexList {
 }
 export interface ClarificationPromptProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#max_attempts TfBot#max_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#max_attempts AwsBot#max_attempts}
   */
   readonly maxAttempts: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#response_card TfBot#response_card}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#response_card AwsBot#response_card}
   */
   readonly responseCard?: string;
   /**
   * message block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#message TfBot#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#message AwsBot#message}
   */
   readonly message: ClarificationPromptMessageProperty[] | cdktn.IResolvable;
 }
@@ -1293,11 +1293,11 @@ export class ClarificationPromptPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface IntentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#intent_name TfBot#intent_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#intent_name AwsBot#intent_name}
   */
   readonly intentName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#intent_version TfBot#intent_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#intent_version AwsBot#intent_version}
   */
   readonly intentVersion: string;
 }
@@ -1399,15 +1399,15 @@ export class IntentPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#create TfBot#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#create AwsBot#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#delete TfBot#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#delete AwsBot#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#update TfBot#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lex_bot#update AwsBot#update}
   */
   readonly update?: string;
 }

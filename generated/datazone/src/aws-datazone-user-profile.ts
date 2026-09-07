@@ -5,41 +5,41 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfUserProfileConfig extends cdktn.TerraformMetaArguments {
+export interface AwsUserProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#domain_identifier TfUserProfile#domain_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#domain_identifier AwsUserProfile#domain_identifier}
   */
   readonly domainIdentifier: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#region TfUserProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#region AwsUserProfile#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#status TfUserProfile#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#status AwsUserProfile#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#user_identifier TfUserProfile#user_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#user_identifier AwsUserProfile#user_identifier}
   */
   readonly userIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#user_type TfUserProfile#user_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#user_type AwsUserProfile#user_type}
   */
   readonly userType?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#timeouts TfUserProfile#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#timeouts AwsUserProfile#timeouts}
   */
-  readonly timeouts?: TfUserProfile.TimeoutsProperty;
+  readonly timeouts?: AwsUserProfile.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile aws_datazone_user_profile}
 */
-export class TfUserProfile extends cdktn.TerraformResource {
+export class AwsUserProfile extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -50,11 +50,11 @@ export class TfUserProfile extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfUserProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsUserProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfUserProfile to import
-  * @param importFromId The id of the existing TfUserProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfUserProfile to import is found
+  * @param importToId The construct id used in the generated config for the AwsUserProfile to import
+  * @param importFromId The id of the existing AwsUserProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsUserProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datazone_user_profile", importId: importFromId, provider });
@@ -69,9 +69,9 @@ export class TfUserProfile extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfUserProfileConfig
+  * @param options AwsUserProfileConfig
   */
-  public constructor(scope: Construct, id: string, config: TfUserProfileConfig) {
+  public constructor(scope: Construct, id: string, config: AwsUserProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datazone_user_profile',
       terraformGeneratorMetadata: {
@@ -100,7 +100,7 @@ export class TfUserProfile extends cdktn.TerraformResource {
   // ==========
 
   // details - computed: true, optional: false, required: false
-  private _details = new TfUserProfile.DetailsPropertyList(this, "details", false);
+  private _details = new AwsUserProfile.DetailsPropertyList(this, "details", false);
   public get details() {
     return this._details;
   }
@@ -190,11 +190,11 @@ export class TfUserProfile extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfUserProfile.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsUserProfile.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfUserProfile.TimeoutsProperty) {
+  public putTimeouts(value: AwsUserProfile.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -216,7 +216,7 @@ export class TfUserProfile extends cdktn.TerraformResource {
       status: cdktn.stringToTerraform(this._status),
       user_identifier: cdktn.stringToTerraform(this._userIdentifier),
       user_type: cdktn.stringToTerraform(this._userType),
-      timeouts: tfUserProfileTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsUserProfileTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -253,10 +253,10 @@ export class TfUserProfile extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfUserProfileTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsUserProfileTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfUserProfile.TimeoutsProperty",
+        storageClassType: "AwsUserProfile.TimeoutsProperty",
       },
     };
 
@@ -265,7 +265,7 @@ export class TfUserProfile extends cdktn.TerraformResource {
   }
 }
 
-export function tfUserProfileIamPropertyToTerraform(struct?: TfUserProfile.IamProperty): any {
+export function awsUserProfileIamPropertyToTerraform(struct?: AwsUserProfile.IamProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function tfUserProfileIamPropertyToTerraform(struct?: TfUserProfile.IamPr
 }
 
 
-export function tfUserProfileIamPropertyToHclTerraform(struct?: TfUserProfile.IamProperty): any {
+export function awsUserProfileIamPropertyToHclTerraform(struct?: AwsUserProfile.IamProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,7 +286,7 @@ export function tfUserProfileIamPropertyToHclTerraform(struct?: TfUserProfile.Ia
 }
 
 
-export function tfUserProfileSsoPropertyToTerraform(struct?: TfUserProfile.SsoProperty): any {
+export function awsUserProfileSsoPropertyToTerraform(struct?: AwsUserProfile.SsoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -296,7 +296,7 @@ export function tfUserProfileSsoPropertyToTerraform(struct?: TfUserProfile.SsoPr
 }
 
 
-export function tfUserProfileSsoPropertyToHclTerraform(struct?: TfUserProfile.SsoProperty): any {
+export function awsUserProfileSsoPropertyToHclTerraform(struct?: AwsUserProfile.SsoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,7 +307,7 @@ export function tfUserProfileSsoPropertyToHclTerraform(struct?: TfUserProfile.Ss
 }
 
 
-export function tfUserProfileDetailsPropertyToTerraform(struct?: TfUserProfile.DetailsProperty): any {
+export function awsUserProfileDetailsPropertyToTerraform(struct?: AwsUserProfile.DetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function tfUserProfileDetailsPropertyToTerraform(struct?: TfUserProfile.D
 }
 
 
-export function tfUserProfileDetailsPropertyToHclTerraform(struct?: TfUserProfile.DetailsProperty): any {
+export function awsUserProfileDetailsPropertyToHclTerraform(struct?: AwsUserProfile.DetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function tfUserProfileDetailsPropertyToHclTerraform(struct?: TfUserProfil
 }
 
 
-export function tfUserProfileTimeoutsPropertyToTerraform(struct?: TfUserProfile.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsUserProfileTimeoutsPropertyToTerraform(struct?: AwsUserProfile.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -340,7 +340,7 @@ export function tfUserProfileTimeoutsPropertyToTerraform(struct?: TfUserProfile.
 }
 
 
-export function tfUserProfileTimeoutsPropertyToHclTerraform(struct?: TfUserProfile.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsUserProfileTimeoutsPropertyToHclTerraform(struct?: AwsUserProfile.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -365,7 +365,7 @@ export function tfUserProfileTimeoutsPropertyToHclTerraform(struct?: TfUserProfi
 }
 
 
-export namespace TfUserProfile {
+export namespace AwsUserProfile {
 export interface IamProperty {
 }
 export class IamPropertyOutputReference extends cdktn.ComplexObject {
@@ -549,13 +549,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#create TfUserProfile#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#create AwsUserProfile#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#update TfUserProfile#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_user_profile#update AwsUserProfile#update}
   */
   readonly update?: string;
 }

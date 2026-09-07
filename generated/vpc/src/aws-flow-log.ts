@@ -5,98 +5,98 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFlowLogConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFlowLogConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#deliver_cross_account_role TfFlowLog#deliver_cross_account_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#deliver_cross_account_role AwsFlowLog#deliver_cross_account_role}
   */
   readonly deliverCrossAccountRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#eni_id TfFlowLog#eni_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#eni_id AwsFlowLog#eni_id}
   */
   readonly eniId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#iam_role_arn TfFlowLog#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#iam_role_arn AwsFlowLog#iam_role_arn}
   */
   readonly iamRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#id TfFlowLog#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#id AwsFlowLog#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#log_destination TfFlowLog#log_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#log_destination AwsFlowLog#log_destination}
   */
   readonly logDestination?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#log_destination_type TfFlowLog#log_destination_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#log_destination_type AwsFlowLog#log_destination_type}
   */
   readonly logDestinationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#log_format TfFlowLog#log_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#log_format AwsFlowLog#log_format}
   */
   readonly logFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#max_aggregation_interval TfFlowLog#max_aggregation_interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#max_aggregation_interval AwsFlowLog#max_aggregation_interval}
   */
   readonly maxAggregationInterval?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#region TfFlowLog#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#region AwsFlowLog#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#regional_nat_gateway_id TfFlowLog#regional_nat_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#regional_nat_gateway_id AwsFlowLog#regional_nat_gateway_id}
   */
   readonly regionalNatGatewayId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#subnet_id TfFlowLog#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#subnet_id AwsFlowLog#subnet_id}
   */
   readonly subnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#tags TfFlowLog#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#tags AwsFlowLog#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#tags_all TfFlowLog#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#tags_all AwsFlowLog#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#traffic_type TfFlowLog#traffic_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#traffic_type AwsFlowLog#traffic_type}
   */
   readonly trafficType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#transit_gateway_attachment_id TfFlowLog#transit_gateway_attachment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#transit_gateway_attachment_id AwsFlowLog#transit_gateway_attachment_id}
   */
   readonly transitGatewayAttachmentId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#transit_gateway_id TfFlowLog#transit_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#transit_gateway_id AwsFlowLog#transit_gateway_id}
   */
   readonly transitGatewayId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#vpc_id TfFlowLog#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#vpc_id AwsFlowLog#vpc_id}
   */
   readonly vpcId?: string;
   /**
   * destination_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#destination_options TfFlowLog#destination_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#destination_options AwsFlowLog#destination_options}
   */
-  readonly destinationOptions?: TfFlowLog.DestinationOptionsProperty;
+  readonly destinationOptions?: AwsFlowLog.DestinationOptionsProperty;
   /**
   * tag_field_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#tag_field_specification TfFlowLog#tag_field_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#tag_field_specification AwsFlowLog#tag_field_specification}
   */
-  readonly tagFieldSpecification?: TfFlowLog.TagFieldSpecificationProperty[] | cdktn.IResolvable;
+  readonly tagFieldSpecification?: AwsFlowLog.TagFieldSpecificationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log aws_flow_log}
 */
-export class TfFlowLog extends cdktn.TerraformResource {
+export class AwsFlowLog extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -107,11 +107,11 @@ export class TfFlowLog extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFlowLog resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFlowLog resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFlowLog to import
-  * @param importFromId The id of the existing TfFlowLog that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFlowLog to import is found
+  * @param importToId The construct id used in the generated config for the AwsFlowLog to import
+  * @param importFromId The id of the existing AwsFlowLog that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFlowLog to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_flow_log", importId: importFromId, provider });
@@ -126,9 +126,9 @@ export class TfFlowLog extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFlowLogConfig = {}
+  * @param options AwsFlowLogConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfFlowLogConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsFlowLogConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_flow_log',
       terraformGeneratorMetadata: {
@@ -447,11 +447,11 @@ export class TfFlowLog extends cdktn.TerraformResource {
   }
 
   // destination_options - computed: false, optional: true, required: false
-  private _destinationOptions = new TfFlowLog.DestinationOptionsPropertyOutputReference(this, "destination_options");
+  private _destinationOptions = new AwsFlowLog.DestinationOptionsPropertyOutputReference(this, "destination_options");
   public get destinationOptions() {
     return this._destinationOptions;
   }
-  public putDestinationOptions(value: TfFlowLog.DestinationOptionsProperty) {
+  public putDestinationOptions(value: AwsFlowLog.DestinationOptionsProperty) {
     this._destinationOptions.internalValue = value;
   }
   public resetDestinationOptions() {
@@ -463,11 +463,11 @@ export class TfFlowLog extends cdktn.TerraformResource {
   }
 
   // tag_field_specification - computed: false, optional: true, required: false
-  private _tagFieldSpecification = new TfFlowLog.TagFieldSpecificationPropertyList(this, "tag_field_specification", true);
+  private _tagFieldSpecification = new AwsFlowLog.TagFieldSpecificationPropertyList(this, "tag_field_specification", true);
   public get tagFieldSpecification() {
     return this._tagFieldSpecification;
   }
-  public putTagFieldSpecification(value: TfFlowLog.TagFieldSpecificationProperty[] | cdktn.IResolvable) {
+  public putTagFieldSpecification(value: AwsFlowLog.TagFieldSpecificationProperty[] | cdktn.IResolvable) {
     this._tagFieldSpecification.internalValue = value;
   }
   public resetTagFieldSpecification() {
@@ -501,8 +501,8 @@ export class TfFlowLog extends cdktn.TerraformResource {
       transit_gateway_attachment_id: cdktn.stringToTerraform(this._transitGatewayAttachmentId),
       transit_gateway_id: cdktn.stringToTerraform(this._transitGatewayId),
       vpc_id: cdktn.stringToTerraform(this._vpcId),
-      destination_options: tfFlowLogDestinationOptionsPropertyToTerraform(this._destinationOptions.internalValue),
-      tag_field_specification: cdktn.listMapper(tfFlowLogTagFieldSpecificationPropertyToTerraform, true)(this._tagFieldSpecification.internalValue),
+      destination_options: awsFlowLogDestinationOptionsPropertyToTerraform(this._destinationOptions.internalValue),
+      tag_field_specification: cdktn.listMapper(awsFlowLogTagFieldSpecificationPropertyToTerraform, true)(this._tagFieldSpecification.internalValue),
     };
   }
 
@@ -611,16 +611,16 @@ export class TfFlowLog extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       destination_options: {
-        value: tfFlowLogDestinationOptionsPropertyToHclTerraform(this._destinationOptions.internalValue),
+        value: awsFlowLogDestinationOptionsPropertyToHclTerraform(this._destinationOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFlowLog.DestinationOptionsPropertyList",
+        storageClassType: "AwsFlowLog.DestinationOptionsPropertyList",
       },
       tag_field_specification: {
-        value: cdktn.listMapperHcl(tfFlowLogTagFieldSpecificationPropertyToHclTerraform, true)(this._tagFieldSpecification.internalValue),
+        value: cdktn.listMapperHcl(awsFlowLogTagFieldSpecificationPropertyToHclTerraform, true)(this._tagFieldSpecification.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfFlowLog.TagFieldSpecificationPropertyList",
+        storageClassType: "AwsFlowLog.TagFieldSpecificationPropertyList",
       },
     };
 
@@ -629,7 +629,7 @@ export class TfFlowLog extends cdktn.TerraformResource {
   }
 }
 
-export function tfFlowLogDestinationOptionsPropertyToTerraform(struct?: TfFlowLog.DestinationOptionsPropertyOutputReference | TfFlowLog.DestinationOptionsProperty): any {
+export function awsFlowLogDestinationOptionsPropertyToTerraform(struct?: AwsFlowLog.DestinationOptionsPropertyOutputReference | AwsFlowLog.DestinationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -642,7 +642,7 @@ export function tfFlowLogDestinationOptionsPropertyToTerraform(struct?: TfFlowLo
 }
 
 
-export function tfFlowLogDestinationOptionsPropertyToHclTerraform(struct?: TfFlowLog.DestinationOptionsPropertyOutputReference | TfFlowLog.DestinationOptionsProperty): any {
+export function awsFlowLogDestinationOptionsPropertyToHclTerraform(struct?: AwsFlowLog.DestinationOptionsPropertyOutputReference | AwsFlowLog.DestinationOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -673,7 +673,7 @@ export function tfFlowLogDestinationOptionsPropertyToHclTerraform(struct?: TfFlo
 }
 
 
-export function tfFlowLogTagFieldSpecificationPropertyToTerraform(struct?: TfFlowLog.TagFieldSpecificationProperty | cdktn.IResolvable): any {
+export function awsFlowLogTagFieldSpecificationPropertyToTerraform(struct?: AwsFlowLog.TagFieldSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -685,7 +685,7 @@ export function tfFlowLogTagFieldSpecificationPropertyToTerraform(struct?: TfFlo
 }
 
 
-export function tfFlowLogTagFieldSpecificationPropertyToHclTerraform(struct?: TfFlowLog.TagFieldSpecificationProperty | cdktn.IResolvable): any {
+export function awsFlowLogTagFieldSpecificationPropertyToHclTerraform(struct?: AwsFlowLog.TagFieldSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -710,18 +710,18 @@ export function tfFlowLogTagFieldSpecificationPropertyToHclTerraform(struct?: Tf
 }
 
 
-export namespace TfFlowLog {
+export namespace AwsFlowLog {
 export interface DestinationOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#file_format TfFlowLog#file_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#file_format AwsFlowLog#file_format}
   */
   readonly fileFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#hive_compatible_partitions TfFlowLog#hive_compatible_partitions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#hive_compatible_partitions AwsFlowLog#hive_compatible_partitions}
   */
   readonly hiveCompatiblePartitions?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#per_hour_partition TfFlowLog#per_hour_partition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#per_hour_partition AwsFlowLog#per_hour_partition}
   */
   readonly perHourPartition?: boolean | cdktn.IResolvable;
 }
@@ -819,11 +819,11 @@ export class DestinationOptionsPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface TagFieldSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#resource_type TfFlowLog#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#resource_type AwsFlowLog#resource_type}
   */
   readonly resourceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#tag_keys TfFlowLog#tag_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/flow_log#tag_keys AwsFlowLog#tag_keys}
   */
   readonly tagKeys: string[];
 }

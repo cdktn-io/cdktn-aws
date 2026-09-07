@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfWindowsFileSystemConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsWindowsFileSystemConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_windows_file_system#id DataTfWindowsFileSystem#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_windows_file_system#id DataAwsWindowsFileSystem#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,11 +16,11 @@ export interface DataTfWindowsFileSystemConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_windows_file_system#region DataTfWindowsFileSystem#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_windows_file_system#region DataAwsWindowsFileSystem#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_windows_file_system#tags DataTfWindowsFileSystem#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_windows_file_system#tags DataAwsWindowsFileSystem#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -28,7 +28,7 @@ export interface DataTfWindowsFileSystemConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_windows_file_system aws_fsx_windows_file_system}
 */
-export class DataTfWindowsFileSystem extends cdktn.TerraformDataSource {
+export class DataAwsWindowsFileSystem extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataTfWindowsFileSystem extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfWindowsFileSystem resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsWindowsFileSystem resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfWindowsFileSystem to import
-  * @param importFromId The id of the existing DataTfWindowsFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_windows_file_system#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfWindowsFileSystem to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsWindowsFileSystem to import
+  * @param importFromId The id of the existing DataAwsWindowsFileSystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/fsx_windows_file_system#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsWindowsFileSystem to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fsx_windows_file_system", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataTfWindowsFileSystem extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfWindowsFileSystemConfig
+  * @param options DataAwsWindowsFileSystemConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfWindowsFileSystemConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsWindowsFileSystemConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_fsx_windows_file_system',
       terraformGeneratorMetadata: {
@@ -101,7 +101,7 @@ export class DataTfWindowsFileSystem extends cdktn.TerraformDataSource {
   }
 
   // audit_log_configuration - computed: true, optional: false, required: false
-  private _auditLogConfiguration = new DataTfWindowsFileSystem.AuditLogConfigurationPropertyList(this, "audit_log_configuration", false);
+  private _auditLogConfiguration = new DataAwsWindowsFileSystem.AuditLogConfigurationPropertyList(this, "audit_log_configuration", false);
   public get auditLogConfiguration() {
     return this._auditLogConfiguration;
   }
@@ -132,7 +132,7 @@ export class DataTfWindowsFileSystem extends cdktn.TerraformDataSource {
   }
 
   // disk_iops_configuration - computed: true, optional: false, required: false
-  private _diskIopsConfiguration = new DataTfWindowsFileSystem.DiskIopsConfigurationPropertyList(this, "disk_iops_configuration", false);
+  private _diskIopsConfiguration = new DataAwsWindowsFileSystem.DiskIopsConfigurationPropertyList(this, "disk_iops_configuration", false);
   public get diskIopsConfiguration() {
     return this._diskIopsConfiguration;
   }
@@ -296,7 +296,7 @@ export class DataTfWindowsFileSystem extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfWindowsFileSystemAuditLogConfigurationPropertyToTerraform(struct?: DataTfWindowsFileSystem.AuditLogConfigurationProperty): any {
+export function dataAwsWindowsFileSystemAuditLogConfigurationPropertyToTerraform(struct?: DataAwsWindowsFileSystem.AuditLogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -306,7 +306,7 @@ export function dataTfWindowsFileSystemAuditLogConfigurationPropertyToTerraform(
 }
 
 
-export function dataTfWindowsFileSystemAuditLogConfigurationPropertyToHclTerraform(struct?: DataTfWindowsFileSystem.AuditLogConfigurationProperty): any {
+export function dataAwsWindowsFileSystemAuditLogConfigurationPropertyToHclTerraform(struct?: DataAwsWindowsFileSystem.AuditLogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -317,7 +317,7 @@ export function dataTfWindowsFileSystemAuditLogConfigurationPropertyToHclTerrafo
 }
 
 
-export function dataTfWindowsFileSystemDiskIopsConfigurationPropertyToTerraform(struct?: DataTfWindowsFileSystem.DiskIopsConfigurationProperty): any {
+export function dataAwsWindowsFileSystemDiskIopsConfigurationPropertyToTerraform(struct?: DataAwsWindowsFileSystem.DiskIopsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,7 +327,7 @@ export function dataTfWindowsFileSystemDiskIopsConfigurationPropertyToTerraform(
 }
 
 
-export function dataTfWindowsFileSystemDiskIopsConfigurationPropertyToHclTerraform(struct?: DataTfWindowsFileSystem.DiskIopsConfigurationProperty): any {
+export function dataAwsWindowsFileSystemDiskIopsConfigurationPropertyToHclTerraform(struct?: DataAwsWindowsFileSystem.DiskIopsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -338,7 +338,7 @@ export function dataTfWindowsFileSystemDiskIopsConfigurationPropertyToHclTerrafo
 }
 
 
-export namespace DataTfWindowsFileSystem {
+export namespace DataAwsWindowsFileSystem {
 export interface AuditLogConfigurationProperty {
 }
 export class AuditLogConfigurationPropertyOutputReference extends cdktn.ComplexObject {

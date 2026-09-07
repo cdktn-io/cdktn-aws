@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfVoiceConnectorLoggingConfig extends cdktn.TerraformMetaArguments {
+export interface AwsVoiceConnectorLoggingConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_logging#enable_media_metric_logs TfVoiceConnectorLogging#enable_media_metric_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_logging#enable_media_metric_logs AwsVoiceConnectorLogging#enable_media_metric_logs}
   */
   readonly enableMediaMetricLogs?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_logging#enable_sip_logs TfVoiceConnectorLogging#enable_sip_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_logging#enable_sip_logs AwsVoiceConnectorLogging#enable_sip_logs}
   */
   readonly enableSipLogs?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_logging#id TfVoiceConnectorLogging#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_logging#id AwsVoiceConnectorLogging#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,11 +24,11 @@ export interface TfVoiceConnectorLoggingConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_logging#region TfVoiceConnectorLogging#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_logging#region AwsVoiceConnectorLogging#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_logging#voice_connector_id TfVoiceConnectorLogging#voice_connector_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_logging#voice_connector_id AwsVoiceConnectorLogging#voice_connector_id}
   */
   readonly voiceConnectorId: string;
 }
@@ -36,7 +36,7 @@ export interface TfVoiceConnectorLoggingConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_logging aws_chime_voice_connector_logging}
 */
-export class TfVoiceConnectorLogging extends cdktn.TerraformResource {
+export class AwsVoiceConnectorLogging extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfVoiceConnectorLogging extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfVoiceConnectorLogging resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsVoiceConnectorLogging resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfVoiceConnectorLogging to import
-  * @param importFromId The id of the existing TfVoiceConnectorLogging that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_logging#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfVoiceConnectorLogging to import is found
+  * @param importToId The construct id used in the generated config for the AwsVoiceConnectorLogging to import
+  * @param importFromId The id of the existing AwsVoiceConnectorLogging that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/chime_voice_connector_logging#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVoiceConnectorLogging to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_chime_voice_connector_logging", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfVoiceConnectorLogging extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfVoiceConnectorLoggingConfig
+  * @param options AwsVoiceConnectorLoggingConfig
   */
-  public constructor(scope: Construct, id: string, config: TfVoiceConnectorLoggingConfig) {
+  public constructor(scope: Construct, id: string, config: AwsVoiceConnectorLoggingConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_chime_voice_connector_logging',
       terraformGeneratorMetadata: {

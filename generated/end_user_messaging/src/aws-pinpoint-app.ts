@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAppConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAppConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#id TfApp#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#id AwsApp#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#name TfApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#name AwsApp#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#name_prefix TfApp#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#name_prefix AwsApp#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#region TfApp#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#region AwsApp#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#tags TfApp#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#tags AwsApp#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#tags_all TfApp#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#tags_all AwsApp#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * campaign_hook block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#campaign_hook TfApp#campaign_hook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#campaign_hook AwsApp#campaign_hook}
   */
-  readonly campaignHook?: TfApp.CampaignHookProperty;
+  readonly campaignHook?: AwsApp.CampaignHookProperty;
   /**
   * limits block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#limits TfApp#limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#limits AwsApp#limits}
   */
-  readonly limits?: TfApp.LimitsProperty;
+  readonly limits?: AwsApp.LimitsProperty;
   /**
   * quiet_time block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#quiet_time TfApp#quiet_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#quiet_time AwsApp#quiet_time}
   */
-  readonly quietTime?: TfApp.QuietTimeProperty;
+  readonly quietTime?: AwsApp.QuietTimeProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app aws_pinpoint_app}
 */
-export class TfApp extends cdktn.TerraformResource {
+export class AwsApp extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfApp extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfApp resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsApp resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfApp to import
-  * @param importFromId The id of the existing TfApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfApp to import is found
+  * @param importToId The construct id used in the generated config for the AwsApp to import
+  * @param importFromId The id of the existing AwsApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsApp to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_pinpoint_app", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfApp extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAppConfig = {}
+  * @param options AwsAppConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfAppConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsAppConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_pinpoint_app',
       terraformGeneratorMetadata: {
@@ -228,11 +228,11 @@ export class TfApp extends cdktn.TerraformResource {
   }
 
   // campaign_hook - computed: false, optional: true, required: false
-  private _campaignHook = new TfApp.CampaignHookPropertyOutputReference(this, "campaign_hook");
+  private _campaignHook = new AwsApp.CampaignHookPropertyOutputReference(this, "campaign_hook");
   public get campaignHook() {
     return this._campaignHook;
   }
-  public putCampaignHook(value: TfApp.CampaignHookProperty) {
+  public putCampaignHook(value: AwsApp.CampaignHookProperty) {
     this._campaignHook.internalValue = value;
   }
   public resetCampaignHook() {
@@ -244,11 +244,11 @@ export class TfApp extends cdktn.TerraformResource {
   }
 
   // limits - computed: false, optional: true, required: false
-  private _limits = new TfApp.LimitsPropertyOutputReference(this, "limits");
+  private _limits = new AwsApp.LimitsPropertyOutputReference(this, "limits");
   public get limits() {
     return this._limits;
   }
-  public putLimits(value: TfApp.LimitsProperty) {
+  public putLimits(value: AwsApp.LimitsProperty) {
     this._limits.internalValue = value;
   }
   public resetLimits() {
@@ -260,11 +260,11 @@ export class TfApp extends cdktn.TerraformResource {
   }
 
   // quiet_time - computed: false, optional: true, required: false
-  private _quietTime = new TfApp.QuietTimePropertyOutputReference(this, "quiet_time");
+  private _quietTime = new AwsApp.QuietTimePropertyOutputReference(this, "quiet_time");
   public get quietTime() {
     return this._quietTime;
   }
-  public putQuietTime(value: TfApp.QuietTimeProperty) {
+  public putQuietTime(value: AwsApp.QuietTimeProperty) {
     this._quietTime.internalValue = value;
   }
   public resetQuietTime() {
@@ -287,9 +287,9 @@ export class TfApp extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      campaign_hook: tfAppCampaignHookPropertyToTerraform(this._campaignHook.internalValue),
-      limits: tfAppLimitsPropertyToTerraform(this._limits.internalValue),
-      quiet_time: tfAppQuietTimePropertyToTerraform(this._quietTime.internalValue),
+      campaign_hook: awsAppCampaignHookPropertyToTerraform(this._campaignHook.internalValue),
+      limits: awsAppLimitsPropertyToTerraform(this._limits.internalValue),
+      quiet_time: awsAppQuietTimePropertyToTerraform(this._quietTime.internalValue),
     };
   }
 
@@ -332,22 +332,22 @@ export class TfApp extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       campaign_hook: {
-        value: tfAppCampaignHookPropertyToHclTerraform(this._campaignHook.internalValue),
+        value: awsAppCampaignHookPropertyToHclTerraform(this._campaignHook.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfApp.CampaignHookPropertyList",
+        storageClassType: "AwsApp.CampaignHookPropertyList",
       },
       limits: {
-        value: tfAppLimitsPropertyToHclTerraform(this._limits.internalValue),
+        value: awsAppLimitsPropertyToHclTerraform(this._limits.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfApp.LimitsPropertyList",
+        storageClassType: "AwsApp.LimitsPropertyList",
       },
       quiet_time: {
-        value: tfAppQuietTimePropertyToHclTerraform(this._quietTime.internalValue),
+        value: awsAppQuietTimePropertyToHclTerraform(this._quietTime.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfApp.QuietTimePropertyList",
+        storageClassType: "AwsApp.QuietTimePropertyList",
       },
     };
 
@@ -356,7 +356,7 @@ export class TfApp extends cdktn.TerraformResource {
   }
 }
 
-export function tfAppCampaignHookPropertyToTerraform(struct?: TfApp.CampaignHookPropertyOutputReference | TfApp.CampaignHookProperty): any {
+export function awsAppCampaignHookPropertyToTerraform(struct?: AwsApp.CampaignHookPropertyOutputReference | AwsApp.CampaignHookProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -369,7 +369,7 @@ export function tfAppCampaignHookPropertyToTerraform(struct?: TfApp.CampaignHook
 }
 
 
-export function tfAppCampaignHookPropertyToHclTerraform(struct?: TfApp.CampaignHookPropertyOutputReference | TfApp.CampaignHookProperty): any {
+export function awsAppCampaignHookPropertyToHclTerraform(struct?: AwsApp.CampaignHookPropertyOutputReference | AwsApp.CampaignHookProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -400,7 +400,7 @@ export function tfAppCampaignHookPropertyToHclTerraform(struct?: TfApp.CampaignH
 }
 
 
-export function tfAppLimitsPropertyToTerraform(struct?: TfApp.LimitsPropertyOutputReference | TfApp.LimitsProperty): any {
+export function awsAppLimitsPropertyToTerraform(struct?: AwsApp.LimitsPropertyOutputReference | AwsApp.LimitsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,7 +414,7 @@ export function tfAppLimitsPropertyToTerraform(struct?: TfApp.LimitsPropertyOutp
 }
 
 
-export function tfAppLimitsPropertyToHclTerraform(struct?: TfApp.LimitsPropertyOutputReference | TfApp.LimitsProperty): any {
+export function awsAppLimitsPropertyToHclTerraform(struct?: AwsApp.LimitsPropertyOutputReference | AwsApp.LimitsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function tfAppLimitsPropertyToHclTerraform(struct?: TfApp.LimitsPropertyO
 }
 
 
-export function tfAppQuietTimePropertyToTerraform(struct?: TfApp.QuietTimePropertyOutputReference | TfApp.QuietTimeProperty): any {
+export function awsAppQuietTimePropertyToTerraform(struct?: AwsApp.QuietTimePropertyOutputReference | AwsApp.QuietTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -463,7 +463,7 @@ export function tfAppQuietTimePropertyToTerraform(struct?: TfApp.QuietTimeProper
 }
 
 
-export function tfAppQuietTimePropertyToHclTerraform(struct?: TfApp.QuietTimePropertyOutputReference | TfApp.QuietTimeProperty): any {
+export function awsAppQuietTimePropertyToHclTerraform(struct?: AwsApp.QuietTimePropertyOutputReference | AwsApp.QuietTimeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -488,18 +488,18 @@ export function tfAppQuietTimePropertyToHclTerraform(struct?: TfApp.QuietTimePro
 }
 
 
-export namespace TfApp {
+export namespace AwsApp {
 export interface CampaignHookProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#lambda_function_name TfApp#lambda_function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#lambda_function_name AwsApp#lambda_function_name}
   */
   readonly lambdaFunctionName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#mode TfApp#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#mode AwsApp#mode}
   */
   readonly mode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#web_url TfApp#web_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#web_url AwsApp#web_url}
   */
   readonly webUrl?: string;
 }
@@ -597,19 +597,19 @@ export class CampaignHookPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LimitsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#daily TfApp#daily}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#daily AwsApp#daily}
   */
   readonly daily?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#maximum_duration TfApp#maximum_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#maximum_duration AwsApp#maximum_duration}
   */
   readonly maximumDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#messages_per_second TfApp#messages_per_second}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#messages_per_second AwsApp#messages_per_second}
   */
   readonly messagesPerSecond?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#total TfApp#total}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#total AwsApp#total}
   */
   readonly total?: number;
 }
@@ -729,11 +729,11 @@ export class LimitsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface QuietTimeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#end TfApp#end}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#end AwsApp#end}
   */
   readonly end?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#start TfApp#start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpoint_app#start AwsApp#start}
   */
   readonly start?: string;
 }

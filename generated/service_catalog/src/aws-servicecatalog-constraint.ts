@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConstraintConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConstraintConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#accept_language TfConstraint#accept_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#accept_language AwsConstraint#accept_language}
   */
   readonly acceptLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#description TfConstraint#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#description AwsConstraint#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#id TfConstraint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#id AwsConstraint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#parameters TfConstraint#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#parameters AwsConstraint#parameters}
   */
   readonly parameters: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#portfolio_id TfConstraint#portfolio_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#portfolio_id AwsConstraint#portfolio_id}
   */
   readonly portfolioId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#product_id TfConstraint#product_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#product_id AwsConstraint#product_id}
   */
   readonly productId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#region TfConstraint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#region AwsConstraint#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#type TfConstraint#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#type AwsConstraint#type}
   */
   readonly type: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#timeouts TfConstraint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#timeouts AwsConstraint#timeouts}
   */
-  readonly timeouts?: TfConstraint.TimeoutsProperty;
+  readonly timeouts?: AwsConstraint.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint aws_servicecatalog_constraint}
 */
-export class TfConstraint extends cdktn.TerraformResource {
+export class AwsConstraint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfConstraint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConstraint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConstraint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConstraint to import
-  * @param importFromId The id of the existing TfConstraint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConstraint to import is found
+  * @param importToId The construct id used in the generated config for the AwsConstraint to import
+  * @param importFromId The id of the existing AwsConstraint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConstraint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_servicecatalog_constraint", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfConstraint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConstraintConfig
+  * @param options AwsConstraintConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConstraintConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConstraintConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_servicecatalog_constraint',
       terraformGeneratorMetadata: {
@@ -244,11 +244,11 @@ export class TfConstraint extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfConstraint.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsConstraint.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfConstraint.TimeoutsProperty) {
+  public putTimeouts(value: AwsConstraint.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -273,7 +273,7 @@ export class TfConstraint extends cdktn.TerraformResource {
       product_id: cdktn.stringToTerraform(this._productId),
       region: cdktn.stringToTerraform(this._region),
       type: cdktn.stringToTerraform(this._type),
-      timeouts: tfConstraintTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsConstraintTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -328,10 +328,10 @@ export class TfConstraint extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfConstraintTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsConstraintTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfConstraint.TimeoutsProperty",
+        storageClassType: "AwsConstraint.TimeoutsProperty",
       },
     };
 
@@ -340,7 +340,7 @@ export class TfConstraint extends cdktn.TerraformResource {
   }
 }
 
-export function tfConstraintTimeoutsPropertyToTerraform(struct?: TfConstraint.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsConstraintTimeoutsPropertyToTerraform(struct?: AwsConstraint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,7 +354,7 @@ export function tfConstraintTimeoutsPropertyToTerraform(struct?: TfConstraint.Ti
 }
 
 
-export function tfConstraintTimeoutsPropertyToHclTerraform(struct?: TfConstraint.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsConstraintTimeoutsPropertyToHclTerraform(struct?: AwsConstraint.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -391,22 +391,22 @@ export function tfConstraintTimeoutsPropertyToHclTerraform(struct?: TfConstraint
 }
 
 
-export namespace TfConstraint {
+export namespace AwsConstraint {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#create TfConstraint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#create AwsConstraint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#delete TfConstraint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#delete AwsConstraint#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#read TfConstraint#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#read AwsConstraint#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#update TfConstraint#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/servicecatalog_constraint#update AwsConstraint#update}
   */
   readonly update?: string;
 }

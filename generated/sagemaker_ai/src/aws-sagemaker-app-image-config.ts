@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAppImageConfigConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAppImageConfigConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#app_image_config_name TfAppImageConfig#app_image_config_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#app_image_config_name AwsAppImageConfig#app_image_config_name}
   */
   readonly appImageConfigName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#id TfAppImageConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#id AwsAppImageConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,41 +20,41 @@ export interface TfAppImageConfigConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#region TfAppImageConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#region AwsAppImageConfig#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#tags TfAppImageConfig#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#tags AwsAppImageConfig#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#tags_all TfAppImageConfig#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#tags_all AwsAppImageConfig#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * code_editor_app_image_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#code_editor_app_image_config TfAppImageConfig#code_editor_app_image_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#code_editor_app_image_config AwsAppImageConfig#code_editor_app_image_config}
   */
-  readonly codeEditorAppImageConfig?: TfAppImageConfig.CodeEditorAppImageConfigProperty;
+  readonly codeEditorAppImageConfig?: AwsAppImageConfig.CodeEditorAppImageConfigProperty;
   /**
   * jupyter_lab_image_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#jupyter_lab_image_config TfAppImageConfig#jupyter_lab_image_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#jupyter_lab_image_config AwsAppImageConfig#jupyter_lab_image_config}
   */
-  readonly jupyterLabImageConfig?: TfAppImageConfig.JupyterLabImageConfigProperty;
+  readonly jupyterLabImageConfig?: AwsAppImageConfig.JupyterLabImageConfigProperty;
   /**
   * kernel_gateway_image_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#kernel_gateway_image_config TfAppImageConfig#kernel_gateway_image_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#kernel_gateway_image_config AwsAppImageConfig#kernel_gateway_image_config}
   */
-  readonly kernelGatewayImageConfig?: TfAppImageConfig.KernelGatewayImageConfigProperty;
+  readonly kernelGatewayImageConfig?: AwsAppImageConfig.KernelGatewayImageConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config aws_sagemaker_app_image_config}
 */
-export class TfAppImageConfig extends cdktn.TerraformResource {
+export class AwsAppImageConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfAppImageConfig extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAppImageConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAppImageConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAppImageConfig to import
-  * @param importFromId The id of the existing TfAppImageConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAppImageConfig to import is found
+  * @param importToId The construct id used in the generated config for the AwsAppImageConfig to import
+  * @param importFromId The id of the existing AwsAppImageConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAppImageConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_app_image_config", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfAppImageConfig extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAppImageConfigConfig
+  * @param options AwsAppImageConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAppImageConfigConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAppImageConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_app_image_config',
       terraformGeneratorMetadata: {
@@ -199,11 +199,11 @@ export class TfAppImageConfig extends cdktn.TerraformResource {
   }
 
   // code_editor_app_image_config - computed: false, optional: true, required: false
-  private _codeEditorAppImageConfig = new TfAppImageConfig.CodeEditorAppImageConfigPropertyOutputReference(this, "code_editor_app_image_config");
+  private _codeEditorAppImageConfig = new AwsAppImageConfig.CodeEditorAppImageConfigPropertyOutputReference(this, "code_editor_app_image_config");
   public get codeEditorAppImageConfig() {
     return this._codeEditorAppImageConfig;
   }
-  public putCodeEditorAppImageConfig(value: TfAppImageConfig.CodeEditorAppImageConfigProperty) {
+  public putCodeEditorAppImageConfig(value: AwsAppImageConfig.CodeEditorAppImageConfigProperty) {
     this._codeEditorAppImageConfig.internalValue = value;
   }
   public resetCodeEditorAppImageConfig() {
@@ -215,11 +215,11 @@ export class TfAppImageConfig extends cdktn.TerraformResource {
   }
 
   // jupyter_lab_image_config - computed: false, optional: true, required: false
-  private _jupyterLabImageConfig = new TfAppImageConfig.JupyterLabImageConfigPropertyOutputReference(this, "jupyter_lab_image_config");
+  private _jupyterLabImageConfig = new AwsAppImageConfig.JupyterLabImageConfigPropertyOutputReference(this, "jupyter_lab_image_config");
   public get jupyterLabImageConfig() {
     return this._jupyterLabImageConfig;
   }
-  public putJupyterLabImageConfig(value: TfAppImageConfig.JupyterLabImageConfigProperty) {
+  public putJupyterLabImageConfig(value: AwsAppImageConfig.JupyterLabImageConfigProperty) {
     this._jupyterLabImageConfig.internalValue = value;
   }
   public resetJupyterLabImageConfig() {
@@ -231,11 +231,11 @@ export class TfAppImageConfig extends cdktn.TerraformResource {
   }
 
   // kernel_gateway_image_config - computed: false, optional: true, required: false
-  private _kernelGatewayImageConfig = new TfAppImageConfig.KernelGatewayImageConfigPropertyOutputReference(this, "kernel_gateway_image_config");
+  private _kernelGatewayImageConfig = new AwsAppImageConfig.KernelGatewayImageConfigPropertyOutputReference(this, "kernel_gateway_image_config");
   public get kernelGatewayImageConfig() {
     return this._kernelGatewayImageConfig;
   }
-  public putKernelGatewayImageConfig(value: TfAppImageConfig.KernelGatewayImageConfigProperty) {
+  public putKernelGatewayImageConfig(value: AwsAppImageConfig.KernelGatewayImageConfigProperty) {
     this._kernelGatewayImageConfig.internalValue = value;
   }
   public resetKernelGatewayImageConfig() {
@@ -257,9 +257,9 @@ export class TfAppImageConfig extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      code_editor_app_image_config: tfAppImageConfigCodeEditorAppImageConfigPropertyToTerraform(this._codeEditorAppImageConfig.internalValue),
-      jupyter_lab_image_config: tfAppImageConfigJupyterLabImageConfigPropertyToTerraform(this._jupyterLabImageConfig.internalValue),
-      kernel_gateway_image_config: tfAppImageConfigKernelGatewayImageConfigPropertyToTerraform(this._kernelGatewayImageConfig.internalValue),
+      code_editor_app_image_config: awsAppImageConfigCodeEditorAppImageConfigPropertyToTerraform(this._codeEditorAppImageConfig.internalValue),
+      jupyter_lab_image_config: awsAppImageConfigJupyterLabImageConfigPropertyToTerraform(this._jupyterLabImageConfig.internalValue),
+      kernel_gateway_image_config: awsAppImageConfigKernelGatewayImageConfigPropertyToTerraform(this._kernelGatewayImageConfig.internalValue),
     };
   }
 
@@ -296,22 +296,22 @@ export class TfAppImageConfig extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       code_editor_app_image_config: {
-        value: tfAppImageConfigCodeEditorAppImageConfigPropertyToHclTerraform(this._codeEditorAppImageConfig.internalValue),
+        value: awsAppImageConfigCodeEditorAppImageConfigPropertyToHclTerraform(this._codeEditorAppImageConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAppImageConfig.CodeEditorAppImageConfigPropertyList",
+        storageClassType: "AwsAppImageConfig.CodeEditorAppImageConfigPropertyList",
       },
       jupyter_lab_image_config: {
-        value: tfAppImageConfigJupyterLabImageConfigPropertyToHclTerraform(this._jupyterLabImageConfig.internalValue),
+        value: awsAppImageConfigJupyterLabImageConfigPropertyToHclTerraform(this._jupyterLabImageConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAppImageConfig.JupyterLabImageConfigPropertyList",
+        storageClassType: "AwsAppImageConfig.JupyterLabImageConfigPropertyList",
       },
       kernel_gateway_image_config: {
-        value: tfAppImageConfigKernelGatewayImageConfigPropertyToHclTerraform(this._kernelGatewayImageConfig.internalValue),
+        value: awsAppImageConfigKernelGatewayImageConfigPropertyToHclTerraform(this._kernelGatewayImageConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAppImageConfig.KernelGatewayImageConfigPropertyList",
+        storageClassType: "AwsAppImageConfig.KernelGatewayImageConfigPropertyList",
       },
     };
 
@@ -320,7 +320,7 @@ export class TfAppImageConfig extends cdktn.TerraformResource {
   }
 }
 
-export function tfAppImageConfigCodeEditorAppImageConfigContainerConfigPropertyToTerraform(struct?: TfAppImageConfig.CodeEditorAppImageConfigContainerConfigPropertyOutputReference | TfAppImageConfig.CodeEditorAppImageConfigContainerConfigProperty): any {
+export function awsAppImageConfigCodeEditorAppImageConfigContainerConfigPropertyToTerraform(struct?: AwsAppImageConfig.CodeEditorAppImageConfigContainerConfigPropertyOutputReference | AwsAppImageConfig.CodeEditorAppImageConfigContainerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -333,7 +333,7 @@ export function tfAppImageConfigCodeEditorAppImageConfigContainerConfigPropertyT
 }
 
 
-export function tfAppImageConfigCodeEditorAppImageConfigContainerConfigPropertyToHclTerraform(struct?: TfAppImageConfig.CodeEditorAppImageConfigContainerConfigPropertyOutputReference | TfAppImageConfig.CodeEditorAppImageConfigContainerConfigProperty): any {
+export function awsAppImageConfigCodeEditorAppImageConfigContainerConfigPropertyToHclTerraform(struct?: AwsAppImageConfig.CodeEditorAppImageConfigContainerConfigPropertyOutputReference | AwsAppImageConfig.CodeEditorAppImageConfigContainerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,7 +364,7 @@ export function tfAppImageConfigCodeEditorAppImageConfigContainerConfigPropertyT
 }
 
 
-export function tfAppImageConfigCodeEditorAppImageConfigFileSystemConfigPropertyToTerraform(struct?: TfAppImageConfig.CodeEditorAppImageConfigFileSystemConfigPropertyOutputReference | TfAppImageConfig.CodeEditorAppImageConfigFileSystemConfigProperty): any {
+export function awsAppImageConfigCodeEditorAppImageConfigFileSystemConfigPropertyToTerraform(struct?: AwsAppImageConfig.CodeEditorAppImageConfigFileSystemConfigPropertyOutputReference | AwsAppImageConfig.CodeEditorAppImageConfigFileSystemConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -377,7 +377,7 @@ export function tfAppImageConfigCodeEditorAppImageConfigFileSystemConfigProperty
 }
 
 
-export function tfAppImageConfigCodeEditorAppImageConfigFileSystemConfigPropertyToHclTerraform(struct?: TfAppImageConfig.CodeEditorAppImageConfigFileSystemConfigPropertyOutputReference | TfAppImageConfig.CodeEditorAppImageConfigFileSystemConfigProperty): any {
+export function awsAppImageConfigCodeEditorAppImageConfigFileSystemConfigPropertyToHclTerraform(struct?: AwsAppImageConfig.CodeEditorAppImageConfigFileSystemConfigPropertyOutputReference | AwsAppImageConfig.CodeEditorAppImageConfigFileSystemConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,32 +408,32 @@ export function tfAppImageConfigCodeEditorAppImageConfigFileSystemConfigProperty
 }
 
 
-export function tfAppImageConfigCodeEditorAppImageConfigPropertyToTerraform(struct?: TfAppImageConfig.CodeEditorAppImageConfigPropertyOutputReference | TfAppImageConfig.CodeEditorAppImageConfigProperty): any {
+export function awsAppImageConfigCodeEditorAppImageConfigPropertyToTerraform(struct?: AwsAppImageConfig.CodeEditorAppImageConfigPropertyOutputReference | AwsAppImageConfig.CodeEditorAppImageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    container_config: tfAppImageConfigCodeEditorAppImageConfigContainerConfigPropertyToTerraform(struct!.containerConfig),
-    file_system_config: tfAppImageConfigCodeEditorAppImageConfigFileSystemConfigPropertyToTerraform(struct!.fileSystemConfig),
+    container_config: awsAppImageConfigCodeEditorAppImageConfigContainerConfigPropertyToTerraform(struct!.containerConfig),
+    file_system_config: awsAppImageConfigCodeEditorAppImageConfigFileSystemConfigPropertyToTerraform(struct!.fileSystemConfig),
   }
 }
 
 
-export function tfAppImageConfigCodeEditorAppImageConfigPropertyToHclTerraform(struct?: TfAppImageConfig.CodeEditorAppImageConfigPropertyOutputReference | TfAppImageConfig.CodeEditorAppImageConfigProperty): any {
+export function awsAppImageConfigCodeEditorAppImageConfigPropertyToHclTerraform(struct?: AwsAppImageConfig.CodeEditorAppImageConfigPropertyOutputReference | AwsAppImageConfig.CodeEditorAppImageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     container_config: {
-      value: tfAppImageConfigCodeEditorAppImageConfigContainerConfigPropertyToHclTerraform(struct!.containerConfig),
+      value: awsAppImageConfigCodeEditorAppImageConfigContainerConfigPropertyToHclTerraform(struct!.containerConfig),
       isBlock: true,
       type: "list",
       storageClassType: "CodeEditorAppImageConfigContainerConfigPropertyList",
     },
     file_system_config: {
-      value: tfAppImageConfigCodeEditorAppImageConfigFileSystemConfigPropertyToHclTerraform(struct!.fileSystemConfig),
+      value: awsAppImageConfigCodeEditorAppImageConfigFileSystemConfigPropertyToHclTerraform(struct!.fileSystemConfig),
       isBlock: true,
       type: "list",
       storageClassType: "CodeEditorAppImageConfigFileSystemConfigPropertyList",
@@ -445,7 +445,7 @@ export function tfAppImageConfigCodeEditorAppImageConfigPropertyToHclTerraform(s
 }
 
 
-export function tfAppImageConfigJupyterLabImageConfigContainerConfigPropertyToTerraform(struct?: TfAppImageConfig.JupyterLabImageConfigContainerConfigPropertyOutputReference | TfAppImageConfig.JupyterLabImageConfigContainerConfigProperty): any {
+export function awsAppImageConfigJupyterLabImageConfigContainerConfigPropertyToTerraform(struct?: AwsAppImageConfig.JupyterLabImageConfigContainerConfigPropertyOutputReference | AwsAppImageConfig.JupyterLabImageConfigContainerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -458,7 +458,7 @@ export function tfAppImageConfigJupyterLabImageConfigContainerConfigPropertyToTe
 }
 
 
-export function tfAppImageConfigJupyterLabImageConfigContainerConfigPropertyToHclTerraform(struct?: TfAppImageConfig.JupyterLabImageConfigContainerConfigPropertyOutputReference | TfAppImageConfig.JupyterLabImageConfigContainerConfigProperty): any {
+export function awsAppImageConfigJupyterLabImageConfigContainerConfigPropertyToHclTerraform(struct?: AwsAppImageConfig.JupyterLabImageConfigContainerConfigPropertyOutputReference | AwsAppImageConfig.JupyterLabImageConfigContainerConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -489,7 +489,7 @@ export function tfAppImageConfigJupyterLabImageConfigContainerConfigPropertyToHc
 }
 
 
-export function tfAppImageConfigJupyterLabImageConfigFileSystemConfigPropertyToTerraform(struct?: TfAppImageConfig.JupyterLabImageConfigFileSystemConfigPropertyOutputReference | TfAppImageConfig.JupyterLabImageConfigFileSystemConfigProperty): any {
+export function awsAppImageConfigJupyterLabImageConfigFileSystemConfigPropertyToTerraform(struct?: AwsAppImageConfig.JupyterLabImageConfigFileSystemConfigPropertyOutputReference | AwsAppImageConfig.JupyterLabImageConfigFileSystemConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -502,7 +502,7 @@ export function tfAppImageConfigJupyterLabImageConfigFileSystemConfigPropertyToT
 }
 
 
-export function tfAppImageConfigJupyterLabImageConfigFileSystemConfigPropertyToHclTerraform(struct?: TfAppImageConfig.JupyterLabImageConfigFileSystemConfigPropertyOutputReference | TfAppImageConfig.JupyterLabImageConfigFileSystemConfigProperty): any {
+export function awsAppImageConfigJupyterLabImageConfigFileSystemConfigPropertyToHclTerraform(struct?: AwsAppImageConfig.JupyterLabImageConfigFileSystemConfigPropertyOutputReference | AwsAppImageConfig.JupyterLabImageConfigFileSystemConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -533,32 +533,32 @@ export function tfAppImageConfigJupyterLabImageConfigFileSystemConfigPropertyToH
 }
 
 
-export function tfAppImageConfigJupyterLabImageConfigPropertyToTerraform(struct?: TfAppImageConfig.JupyterLabImageConfigPropertyOutputReference | TfAppImageConfig.JupyterLabImageConfigProperty): any {
+export function awsAppImageConfigJupyterLabImageConfigPropertyToTerraform(struct?: AwsAppImageConfig.JupyterLabImageConfigPropertyOutputReference | AwsAppImageConfig.JupyterLabImageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    container_config: tfAppImageConfigJupyterLabImageConfigContainerConfigPropertyToTerraform(struct!.containerConfig),
-    file_system_config: tfAppImageConfigJupyterLabImageConfigFileSystemConfigPropertyToTerraform(struct!.fileSystemConfig),
+    container_config: awsAppImageConfigJupyterLabImageConfigContainerConfigPropertyToTerraform(struct!.containerConfig),
+    file_system_config: awsAppImageConfigJupyterLabImageConfigFileSystemConfigPropertyToTerraform(struct!.fileSystemConfig),
   }
 }
 
 
-export function tfAppImageConfigJupyterLabImageConfigPropertyToHclTerraform(struct?: TfAppImageConfig.JupyterLabImageConfigPropertyOutputReference | TfAppImageConfig.JupyterLabImageConfigProperty): any {
+export function awsAppImageConfigJupyterLabImageConfigPropertyToHclTerraform(struct?: AwsAppImageConfig.JupyterLabImageConfigPropertyOutputReference | AwsAppImageConfig.JupyterLabImageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     container_config: {
-      value: tfAppImageConfigJupyterLabImageConfigContainerConfigPropertyToHclTerraform(struct!.containerConfig),
+      value: awsAppImageConfigJupyterLabImageConfigContainerConfigPropertyToHclTerraform(struct!.containerConfig),
       isBlock: true,
       type: "list",
       storageClassType: "JupyterLabImageConfigContainerConfigPropertyList",
     },
     file_system_config: {
-      value: tfAppImageConfigJupyterLabImageConfigFileSystemConfigPropertyToHclTerraform(struct!.fileSystemConfig),
+      value: awsAppImageConfigJupyterLabImageConfigFileSystemConfigPropertyToHclTerraform(struct!.fileSystemConfig),
       isBlock: true,
       type: "list",
       storageClassType: "JupyterLabImageConfigFileSystemConfigPropertyList",
@@ -570,7 +570,7 @@ export function tfAppImageConfigJupyterLabImageConfigPropertyToHclTerraform(stru
 }
 
 
-export function tfAppImageConfigKernelGatewayImageConfigFileSystemConfigPropertyToTerraform(struct?: TfAppImageConfig.KernelGatewayImageConfigFileSystemConfigPropertyOutputReference | TfAppImageConfig.KernelGatewayImageConfigFileSystemConfigProperty): any {
+export function awsAppImageConfigKernelGatewayImageConfigFileSystemConfigPropertyToTerraform(struct?: AwsAppImageConfig.KernelGatewayImageConfigFileSystemConfigPropertyOutputReference | AwsAppImageConfig.KernelGatewayImageConfigFileSystemConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -583,7 +583,7 @@ export function tfAppImageConfigKernelGatewayImageConfigFileSystemConfigProperty
 }
 
 
-export function tfAppImageConfigKernelGatewayImageConfigFileSystemConfigPropertyToHclTerraform(struct?: TfAppImageConfig.KernelGatewayImageConfigFileSystemConfigPropertyOutputReference | TfAppImageConfig.KernelGatewayImageConfigFileSystemConfigProperty): any {
+export function awsAppImageConfigKernelGatewayImageConfigFileSystemConfigPropertyToHclTerraform(struct?: AwsAppImageConfig.KernelGatewayImageConfigFileSystemConfigPropertyOutputReference | AwsAppImageConfig.KernelGatewayImageConfigFileSystemConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -614,7 +614,7 @@ export function tfAppImageConfigKernelGatewayImageConfigFileSystemConfigProperty
 }
 
 
-export function tfAppImageConfigKernelSpecPropertyToTerraform(struct?: TfAppImageConfig.KernelSpecProperty | cdktn.IResolvable): any {
+export function awsAppImageConfigKernelSpecPropertyToTerraform(struct?: AwsAppImageConfig.KernelSpecProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -626,7 +626,7 @@ export function tfAppImageConfigKernelSpecPropertyToTerraform(struct?: TfAppImag
 }
 
 
-export function tfAppImageConfigKernelSpecPropertyToHclTerraform(struct?: TfAppImageConfig.KernelSpecProperty | cdktn.IResolvable): any {
+export function awsAppImageConfigKernelSpecPropertyToHclTerraform(struct?: AwsAppImageConfig.KernelSpecProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -651,32 +651,32 @@ export function tfAppImageConfigKernelSpecPropertyToHclTerraform(struct?: TfAppI
 }
 
 
-export function tfAppImageConfigKernelGatewayImageConfigPropertyToTerraform(struct?: TfAppImageConfig.KernelGatewayImageConfigPropertyOutputReference | TfAppImageConfig.KernelGatewayImageConfigProperty): any {
+export function awsAppImageConfigKernelGatewayImageConfigPropertyToTerraform(struct?: AwsAppImageConfig.KernelGatewayImageConfigPropertyOutputReference | AwsAppImageConfig.KernelGatewayImageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    file_system_config: tfAppImageConfigKernelGatewayImageConfigFileSystemConfigPropertyToTerraform(struct!.fileSystemConfig),
-    kernel_spec: cdktn.listMapper(tfAppImageConfigKernelSpecPropertyToTerraform, true)(struct!.kernelSpec),
+    file_system_config: awsAppImageConfigKernelGatewayImageConfigFileSystemConfigPropertyToTerraform(struct!.fileSystemConfig),
+    kernel_spec: cdktn.listMapper(awsAppImageConfigKernelSpecPropertyToTerraform, true)(struct!.kernelSpec),
   }
 }
 
 
-export function tfAppImageConfigKernelGatewayImageConfigPropertyToHclTerraform(struct?: TfAppImageConfig.KernelGatewayImageConfigPropertyOutputReference | TfAppImageConfig.KernelGatewayImageConfigProperty): any {
+export function awsAppImageConfigKernelGatewayImageConfigPropertyToHclTerraform(struct?: AwsAppImageConfig.KernelGatewayImageConfigPropertyOutputReference | AwsAppImageConfig.KernelGatewayImageConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     file_system_config: {
-      value: tfAppImageConfigKernelGatewayImageConfigFileSystemConfigPropertyToHclTerraform(struct!.fileSystemConfig),
+      value: awsAppImageConfigKernelGatewayImageConfigFileSystemConfigPropertyToHclTerraform(struct!.fileSystemConfig),
       isBlock: true,
       type: "list",
       storageClassType: "KernelGatewayImageConfigFileSystemConfigPropertyList",
     },
     kernel_spec: {
-      value: cdktn.listMapperHcl(tfAppImageConfigKernelSpecPropertyToHclTerraform, true)(struct!.kernelSpec),
+      value: cdktn.listMapperHcl(awsAppImageConfigKernelSpecPropertyToHclTerraform, true)(struct!.kernelSpec),
       isBlock: true,
       type: "list",
       storageClassType: "KernelSpecPropertyList",
@@ -688,18 +688,18 @@ export function tfAppImageConfigKernelGatewayImageConfigPropertyToHclTerraform(s
 }
 
 
-export namespace TfAppImageConfig {
+export namespace AwsAppImageConfig {
 export interface CodeEditorAppImageConfigContainerConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#container_arguments TfAppImageConfig#container_arguments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#container_arguments AwsAppImageConfig#container_arguments}
   */
   readonly containerArguments?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#container_entrypoint TfAppImageConfig#container_entrypoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#container_entrypoint AwsAppImageConfig#container_entrypoint}
   */
   readonly containerEntrypoint?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#container_environment_variables TfAppImageConfig#container_environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#container_environment_variables AwsAppImageConfig#container_environment_variables}
   */
   readonly containerEnvironmentVariables?: { [key: string]: string };
 }
@@ -797,15 +797,15 @@ export class CodeEditorAppImageConfigContainerConfigPropertyOutputReference exte
 }
 export interface CodeEditorAppImageConfigFileSystemConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#default_gid TfAppImageConfig#default_gid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#default_gid AwsAppImageConfig#default_gid}
   */
   readonly defaultGid?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#default_uid TfAppImageConfig#default_uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#default_uid AwsAppImageConfig#default_uid}
   */
   readonly defaultUid?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#mount_path TfAppImageConfig#mount_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#mount_path AwsAppImageConfig#mount_path}
   */
   readonly mountPath?: string;
 }
@@ -905,13 +905,13 @@ export interface CodeEditorAppImageConfigProperty {
   /**
   * container_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#container_config TfAppImageConfig#container_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#container_config AwsAppImageConfig#container_config}
   */
   readonly containerConfig?: CodeEditorAppImageConfigContainerConfigProperty;
   /**
   * file_system_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#file_system_config TfAppImageConfig#file_system_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#file_system_config AwsAppImageConfig#file_system_config}
   */
   readonly fileSystemConfig?: CodeEditorAppImageConfigFileSystemConfigProperty;
 }
@@ -987,15 +987,15 @@ export class CodeEditorAppImageConfigPropertyOutputReference extends cdktn.Compl
 }
 export interface JupyterLabImageConfigContainerConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#container_arguments TfAppImageConfig#container_arguments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#container_arguments AwsAppImageConfig#container_arguments}
   */
   readonly containerArguments?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#container_entrypoint TfAppImageConfig#container_entrypoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#container_entrypoint AwsAppImageConfig#container_entrypoint}
   */
   readonly containerEntrypoint?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#container_environment_variables TfAppImageConfig#container_environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#container_environment_variables AwsAppImageConfig#container_environment_variables}
   */
   readonly containerEnvironmentVariables?: { [key: string]: string };
 }
@@ -1093,15 +1093,15 @@ export class JupyterLabImageConfigContainerConfigPropertyOutputReference extends
 }
 export interface JupyterLabImageConfigFileSystemConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#default_gid TfAppImageConfig#default_gid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#default_gid AwsAppImageConfig#default_gid}
   */
   readonly defaultGid?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#default_uid TfAppImageConfig#default_uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#default_uid AwsAppImageConfig#default_uid}
   */
   readonly defaultUid?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#mount_path TfAppImageConfig#mount_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#mount_path AwsAppImageConfig#mount_path}
   */
   readonly mountPath?: string;
 }
@@ -1201,13 +1201,13 @@ export interface JupyterLabImageConfigProperty {
   /**
   * container_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#container_config TfAppImageConfig#container_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#container_config AwsAppImageConfig#container_config}
   */
   readonly containerConfig?: JupyterLabImageConfigContainerConfigProperty;
   /**
   * file_system_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#file_system_config TfAppImageConfig#file_system_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#file_system_config AwsAppImageConfig#file_system_config}
   */
   readonly fileSystemConfig?: JupyterLabImageConfigFileSystemConfigProperty;
 }
@@ -1283,15 +1283,15 @@ export class JupyterLabImageConfigPropertyOutputReference extends cdktn.ComplexO
 }
 export interface KernelGatewayImageConfigFileSystemConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#default_gid TfAppImageConfig#default_gid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#default_gid AwsAppImageConfig#default_gid}
   */
   readonly defaultGid?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#default_uid TfAppImageConfig#default_uid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#default_uid AwsAppImageConfig#default_uid}
   */
   readonly defaultUid?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#mount_path TfAppImageConfig#mount_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#mount_path AwsAppImageConfig#mount_path}
   */
   readonly mountPath?: string;
 }
@@ -1389,11 +1389,11 @@ export class KernelGatewayImageConfigFileSystemConfigPropertyOutputReference ext
 }
 export interface KernelSpecProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#display_name TfAppImageConfig#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#display_name AwsAppImageConfig#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#name TfAppImageConfig#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#name AwsAppImageConfig#name}
   */
   readonly name: string;
 }
@@ -1500,13 +1500,13 @@ export interface KernelGatewayImageConfigProperty {
   /**
   * file_system_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#file_system_config TfAppImageConfig#file_system_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#file_system_config AwsAppImageConfig#file_system_config}
   */
   readonly fileSystemConfig?: KernelGatewayImageConfigFileSystemConfigProperty;
   /**
   * kernel_spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#kernel_spec TfAppImageConfig#kernel_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_app_image_config#kernel_spec AwsAppImageConfig#kernel_spec}
   */
   readonly kernelSpec: KernelSpecProperty[] | cdktn.IResolvable;
 }

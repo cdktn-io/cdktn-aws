@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLandingZoneConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLandingZoneConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#id TfLandingZone#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#id AwsLandingZone#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#manifest_json TfLandingZone#manifest_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#manifest_json AwsLandingZone#manifest_json}
   */
   readonly manifestJson: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#region TfLandingZone#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#region AwsLandingZone#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#remediation_types TfLandingZone#remediation_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#remediation_types AwsLandingZone#remediation_types}
   */
   readonly remediationTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#tags TfLandingZone#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#tags AwsLandingZone#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#tags_all TfLandingZone#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#tags_all AwsLandingZone#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#version TfLandingZone#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#version AwsLandingZone#version}
   */
   readonly version: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#timeouts TfLandingZone#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#timeouts AwsLandingZone#timeouts}
   */
-  readonly timeouts?: TfLandingZone.TimeoutsProperty;
+  readonly timeouts?: AwsLandingZone.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone aws_controltower_landing_zone}
 */
-export class TfLandingZone extends cdktn.TerraformResource {
+export class AwsLandingZone extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfLandingZone extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLandingZone resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLandingZone resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLandingZone to import
-  * @param importFromId The id of the existing TfLandingZone that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLandingZone to import is found
+  * @param importToId The construct id used in the generated config for the AwsLandingZone to import
+  * @param importFromId The id of the existing AwsLandingZone that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLandingZone to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_controltower_landing_zone", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfLandingZone extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLandingZoneConfig
+  * @param options AwsLandingZoneConfig
   */
-  public constructor(scope: Construct, id: string, config: TfLandingZoneConfig) {
+  public constructor(scope: Construct, id: string, config: AwsLandingZoneConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_controltower_landing_zone',
       terraformGeneratorMetadata: {
@@ -118,7 +118,7 @@ export class TfLandingZone extends cdktn.TerraformResource {
   }
 
   // drift_status - computed: true, optional: false, required: false
-  private _driftStatus = new TfLandingZone.DriftStatusPropertyList(this, "drift_status", false);
+  private _driftStatus = new AwsLandingZone.DriftStatusPropertyList(this, "drift_status", false);
   public get driftStatus() {
     return this._driftStatus;
   }
@@ -235,11 +235,11 @@ export class TfLandingZone extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfLandingZone.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsLandingZone.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfLandingZone.TimeoutsProperty) {
+  public putTimeouts(value: AwsLandingZone.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -263,7 +263,7 @@ export class TfLandingZone extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       version: cdktn.stringToTerraform(this._version),
-      timeouts: tfLandingZoneTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsLandingZoneTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -312,10 +312,10 @@ export class TfLandingZone extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfLandingZoneTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsLandingZoneTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfLandingZone.TimeoutsProperty",
+        storageClassType: "AwsLandingZone.TimeoutsProperty",
       },
     };
 
@@ -324,7 +324,7 @@ export class TfLandingZone extends cdktn.TerraformResource {
   }
 }
 
-export function tfLandingZoneDriftStatusPropertyToTerraform(struct?: TfLandingZone.DriftStatusProperty): any {
+export function awsLandingZoneDriftStatusPropertyToTerraform(struct?: AwsLandingZone.DriftStatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,7 +334,7 @@ export function tfLandingZoneDriftStatusPropertyToTerraform(struct?: TfLandingZo
 }
 
 
-export function tfLandingZoneDriftStatusPropertyToHclTerraform(struct?: TfLandingZone.DriftStatusProperty): any {
+export function awsLandingZoneDriftStatusPropertyToHclTerraform(struct?: AwsLandingZone.DriftStatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,7 +345,7 @@ export function tfLandingZoneDriftStatusPropertyToHclTerraform(struct?: TfLandin
 }
 
 
-export function tfLandingZoneTimeoutsPropertyToTerraform(struct?: TfLandingZone.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsLandingZoneTimeoutsPropertyToTerraform(struct?: AwsLandingZone.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -358,7 +358,7 @@ export function tfLandingZoneTimeoutsPropertyToTerraform(struct?: TfLandingZone.
 }
 
 
-export function tfLandingZoneTimeoutsPropertyToHclTerraform(struct?: TfLandingZone.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsLandingZoneTimeoutsPropertyToHclTerraform(struct?: AwsLandingZone.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -389,7 +389,7 @@ export function tfLandingZoneTimeoutsPropertyToHclTerraform(struct?: TfLandingZo
 }
 
 
-export namespace TfLandingZone {
+export namespace AwsLandingZone {
 export interface DriftStatusProperty {
 }
 export class DriftStatusPropertyOutputReference extends cdktn.ComplexObject {
@@ -446,15 +446,15 @@ export class DriftStatusPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#create TfLandingZone#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#create AwsLandingZone#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#delete TfLandingZone#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#delete AwsLandingZone#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#update TfLandingZone#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/controltower_landing_zone#update AwsLandingZone#update}
   */
   readonly update?: string;
 }

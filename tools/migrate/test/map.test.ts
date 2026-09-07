@@ -31,17 +31,17 @@ describe("the symbol index", () => {
     const s3Bucket = index.byModule.get("s3-bucket")!;
     expect(s3Bucket.symbols.get("S3BucketCorsRule")).toEqual({
       group: "s3",
-      member: "TfBucket.CorsRuleProperty",
+      member: "AwsBucket.CorsRuleProperty",
     });
     expect(s3Bucket.symbols.get("S3BucketCorsRuleOutputReference")?.member).toBe(
-      "TfBucket.CorsRulePropertyOutputReference",
+      "AwsBucket.CorsRulePropertyOutputReference",
     );
-    expect(s3Bucket.symbols.get("S3BucketCorsRuleList")?.member).toBe("TfBucket.CorsRulePropertyList");
+    expect(s3Bucket.symbols.get("S3BucketCorsRuleList")?.member).toBe("AwsBucket.CorsRulePropertyList");
     expect(s3Bucket.symbols.get("s3BucketCorsRuleToTerraform")?.member).toBe(
-      "tfBucketMapperCorsRulePropertyToTerraform",
+      "awsBucketMapperCorsRulePropertyToTerraform",
     );
     expect(s3Bucket.symbols.get("s3BucketCorsRuleToHclTerraform")?.member).toBe(
-      "tfBucketMapperCorsRulePropertyToHclTerraform",
+      "awsBucketMapperCorsRulePropertyToHclTerraform",
     );
   });
 
@@ -49,10 +49,10 @@ describe("the symbol index", () => {
     // The one entry where the rule is wrong: the config struct lost the pool race to a nested one.
     expect(
       index.byModule.get("wafv2-web-acl-association")!.symbols.get("Wafv2WebAclAssociationConfigA"),
-    ).toEqual({ group: "waf", member: "TfWebAclAssociationConfig" });
+    ).toEqual({ group: "waf", member: "AwsWebAclAssociationConfig" });
     expect(index.byModule.get("s3-bucket")!.symbols.get("S3BucketConfig")).toEqual({
       group: "s3",
-      member: "TfBucketConfig",
+      member: "AwsBucketConfig",
     });
   });
 
@@ -76,7 +76,7 @@ describe("the symbol index", () => {
     ).toBe("wafv2-web-acl-rule");
     expect(index.byModule.get("wafv2-web-acl-rule")?.symbols.get("Wafv2WebAclRuleActionA")).toEqual({
       group: "waf",
-      member: "TfWebAclRule.ActionProperty",
+      member: "AwsWebAclRule.ActionProperty",
     });
   });
 });
@@ -153,28 +153,28 @@ describe("package.json", () => {
     });
 
     it.each([
-      ["classic first", { "@cdktn/provider-aws": "25.3.0", "@cdktn/aws": "~0.2.1" }],
-      ["target first", { "@cdktn/aws": "~0.2.1", "@cdktn/provider-aws": "25.3.0" }],
+      ["classic first", { "@cdktn/provider-aws": "25.3.0", "@cdktn/aws": "~0.3.1" }],
+      ["target first", { "@cdktn/aws": "~0.3.1", "@cdktn/provider-aws": "25.3.0" }],
     ])("keeps a compatible range as it is, in either key order (%s)", (_name, deps) => {
       const result = partiallyMigrated(deps);
       expect(result.unmapped).toEqual([]);
-      expect(result.changes[0].to).toBe("~0.2.1");
-      expect(JSON.parse(result.after).dependencies).toEqual({ "@cdktn/aws": "~0.2.1" });
+      expect(result.changes[0].to).toBe("~0.3.1");
+      expect(JSON.parse(result.after).dependencies).toEqual({ "@cdktn/aws": "~0.3.1" });
     });
 
     it("answers the range question narrowly, and never with a guess", () => {
       // Yes only for the set TARGET_RANGE itself allows. A wrong yes pins a consumer to a library
       // the rewritten source does not compile against, so anything else is a human's problem.
-      expect(satisfiesTarget("^0.2.0")).toBe(true);
-      expect(satisfiesTarget("~0.2.0")).toBe(true);
-      expect(satisfiesTarget("0.2.5")).toBe(true);
-      expect(satisfiesTarget("~0.1.0")).toBe(false);
-      expect(satisfiesTarget("^0.3.0")).toBe(false);
-      expect(satisfiesTarget("0.2.0 || 0.3.0")).toBe(false);
-      expect(satisfiesTarget(">=0.2.0")).toBe(false);
+      expect(satisfiesTarget("^0.3.0")).toBe(true);
+      expect(satisfiesTarget("~0.3.0")).toBe(true);
+      expect(satisfiesTarget("0.3.5")).toBe(true);
+      expect(satisfiesTarget("~0.2.0")).toBe(false);
+      expect(satisfiesTarget("^0.4.0")).toBe(false);
+      expect(satisfiesTarget("0.3.0 || 0.4.0")).toBe(false);
+      expect(satisfiesTarget(">=0.3.0")).toBe(false);
       expect(satisfiesTarget("workspace:*")).toBe(false);
       // …and it moves with the constant, which is what a TARGET_RANGE bump has to be able to rely on.
-      expect(satisfiesTarget("^0.3.0", "^0.3.0")).toBe(true);
+      expect(satisfiesTarget("^0.4.0", "^0.4.0")).toBe(true);
     });
   });
 
@@ -189,7 +189,7 @@ describe("the target range", () => {
   const read = (...parts: string[]) => fs.readFileSync(path.join(repo, ...parts), "utf-8");
 
   it("is spelled out in exactly one place in the tool", () => {
-    // `report.ts` hardcoded `@cdktn/aws@^0.2.0` in its "becomes" column and printed it whatever the
+    // `report.ts` hardcoded the range in its "becomes" column and printed it whatever the
     // manifest actually got. One constant, and this is what keeps it one.
     const others = fs
       .readdirSync(src)
@@ -199,7 +199,7 @@ describe("the target range", () => {
   });
 
   it("is the range the guide, the README and the worked example all quote", () => {
-    // The next bump is `^0.3.0` on a follow-up branch. It is one line in `map.ts` — and this test is
+    // The next bump (`^0.4.0`, whenever it comes) is one line in `map.ts` — and this test is
     // what makes leaving the prose or the golden example behind a red suite rather than a surprise.
     const version = TARGET_RANGE.replace(/^[~^]/, "");
     // Every `@cdktn/aws@…` these three name — the guide also states the bare version in prose — is
@@ -248,15 +248,15 @@ describe("the report", () => {
   });
 
   it("prints the range the manifest actually ends up with, not the constant", () => {
-    // The column was hardcoded to `@cdktn/aws@^0.2.0` whatever the manifest got.
+    // The column was hardcoded to the constant whatever the manifest got.
     const report = renderReport({
       files: [],
       manifests: [
-        { file: "package.json", block: "dependencies", from: "25.3.0", to: "~0.2.1", keptClassic: false },
+        { file: "package.json", block: "dependencies", from: "25.3.0", to: "~0.3.1", keptClassic: false },
       ],
       wrote: true,
     });
-    expect(report).toContain("| package.json | dependencies | `@cdktn/provider-aws@25.3.0` | `@cdktn/aws@~0.2.1` |");
+    expect(report).toContain("| package.json | dependencies | `@cdktn/provider-aws@25.3.0` | `@cdktn/aws@~0.3.1` |");
   });
 
   it("counts a manifest finding towards the unmapped total, which is the exit code", () => {

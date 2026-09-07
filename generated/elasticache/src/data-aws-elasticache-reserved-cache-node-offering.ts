@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfReservedCacheNodeOfferingConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsReservedCacheNodeOfferingConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_reserved_cache_node_offering#cache_node_type DataTfReservedCacheNodeOffering#cache_node_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_reserved_cache_node_offering#cache_node_type DataAwsReservedCacheNodeOffering#cache_node_type}
   */
   readonly cacheNodeType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_reserved_cache_node_offering#duration DataTfReservedCacheNodeOffering#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_reserved_cache_node_offering#duration DataAwsReservedCacheNodeOffering#duration}
   */
   readonly duration: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_reserved_cache_node_offering#offering_type DataTfReservedCacheNodeOffering#offering_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_reserved_cache_node_offering#offering_type DataAwsReservedCacheNodeOffering#offering_type}
   */
   readonly offeringType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_reserved_cache_node_offering#product_description DataTfReservedCacheNodeOffering#product_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_reserved_cache_node_offering#product_description DataAwsReservedCacheNodeOffering#product_description}
   */
   readonly productDescription: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_reserved_cache_node_offering#region DataTfReservedCacheNodeOffering#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_reserved_cache_node_offering#region DataAwsReservedCacheNodeOffering#region}
   */
   readonly region?: string;
 }
@@ -33,7 +33,7 @@ export interface DataTfReservedCacheNodeOfferingConfig extends cdktn.TerraformMe
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_reserved_cache_node_offering aws_elasticache_reserved_cache_node_offering}
 */
-export class DataTfReservedCacheNodeOffering extends cdktn.TerraformDataSource {
+export class DataAwsReservedCacheNodeOffering extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class DataTfReservedCacheNodeOffering extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfReservedCacheNodeOffering resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsReservedCacheNodeOffering resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfReservedCacheNodeOffering to import
-  * @param importFromId The id of the existing DataTfReservedCacheNodeOffering that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_reserved_cache_node_offering#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfReservedCacheNodeOffering to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsReservedCacheNodeOffering to import
+  * @param importFromId The id of the existing DataAwsReservedCacheNodeOffering that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/elasticache_reserved_cache_node_offering#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsReservedCacheNodeOffering to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elasticache_reserved_cache_node_offering", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class DataTfReservedCacheNodeOffering extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfReservedCacheNodeOfferingConfig
+  * @param options DataAwsReservedCacheNodeOfferingConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfReservedCacheNodeOfferingConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsReservedCacheNodeOfferingConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elasticache_reserved_cache_node_offering',
       terraformGeneratorMetadata: {

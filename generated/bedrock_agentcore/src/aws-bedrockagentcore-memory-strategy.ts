@@ -5,71 +5,71 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfMemoryStrategyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsMemoryStrategyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#description TfMemoryStrategy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#description AwsMemoryStrategy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#memory_execution_role_arn TfMemoryStrategy#memory_execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#memory_execution_role_arn AwsMemoryStrategy#memory_execution_role_arn}
   */
   readonly memoryExecutionRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#memory_id TfMemoryStrategy#memory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#memory_id AwsMemoryStrategy#memory_id}
   */
   readonly memoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#name TfMemoryStrategy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#name AwsMemoryStrategy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#namespace_templates TfMemoryStrategy#namespace_templates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#namespace_templates AwsMemoryStrategy#namespace_templates}
   */
   readonly namespaceTemplates?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#namespaces TfMemoryStrategy#namespaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#namespaces AwsMemoryStrategy#namespaces}
   */
   readonly namespaces?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#region TfMemoryStrategy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#region AwsMemoryStrategy#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#type TfMemoryStrategy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#type AwsMemoryStrategy#type}
   */
   readonly type: string;
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#configuration TfMemoryStrategy#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#configuration AwsMemoryStrategy#configuration}
   */
-  readonly configuration?: TfMemoryStrategy.ConfigurationProperty[] | cdktn.IResolvable;
+  readonly configuration?: AwsMemoryStrategy.ConfigurationProperty[] | cdktn.IResolvable;
   /**
   * memory_record_schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#memory_record_schema TfMemoryStrategy#memory_record_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#memory_record_schema AwsMemoryStrategy#memory_record_schema}
   */
-  readonly memoryRecordSchema?: TfMemoryStrategy.MemoryRecordSchemaProperty[] | cdktn.IResolvable;
+  readonly memoryRecordSchema?: AwsMemoryStrategy.MemoryRecordSchemaProperty[] | cdktn.IResolvable;
   /**
   * reflection_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#reflection_configuration TfMemoryStrategy#reflection_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#reflection_configuration AwsMemoryStrategy#reflection_configuration}
   */
-  readonly reflectionConfiguration?: TfMemoryStrategy.ReflectionConfigurationProperty[] | cdktn.IResolvable;
+  readonly reflectionConfiguration?: AwsMemoryStrategy.ReflectionConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#timeouts TfMemoryStrategy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#timeouts AwsMemoryStrategy#timeouts}
   */
-  readonly timeouts?: TfMemoryStrategy.TimeoutsProperty;
+  readonly timeouts?: AwsMemoryStrategy.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy aws_bedrockagentcore_memory_strategy}
 */
-export class TfMemoryStrategy extends cdktn.TerraformResource {
+export class AwsMemoryStrategy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -80,11 +80,11 @@ export class TfMemoryStrategy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfMemoryStrategy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsMemoryStrategy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfMemoryStrategy to import
-  * @param importFromId The id of the existing TfMemoryStrategy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfMemoryStrategy to import is found
+  * @param importToId The construct id used in the generated config for the AwsMemoryStrategy to import
+  * @param importFromId The id of the existing AwsMemoryStrategy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMemoryStrategy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_memory_strategy", importId: importFromId, provider });
@@ -99,9 +99,9 @@ export class TfMemoryStrategy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfMemoryStrategyConfig
+  * @param options AwsMemoryStrategyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfMemoryStrategyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsMemoryStrategyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_memory_strategy',
       terraformGeneratorMetadata: {
@@ -260,11 +260,11 @@ export class TfMemoryStrategy extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new TfMemoryStrategy.ConfigurationPropertyList(this, "configuration", false);
+  private _configuration = new AwsMemoryStrategy.ConfigurationPropertyList(this, "configuration", false);
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: TfMemoryStrategy.ConfigurationProperty[] | cdktn.IResolvable) {
+  public putConfiguration(value: AwsMemoryStrategy.ConfigurationProperty[] | cdktn.IResolvable) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -276,11 +276,11 @@ export class TfMemoryStrategy extends cdktn.TerraformResource {
   }
 
   // memory_record_schema - computed: false, optional: true, required: false
-  private _memoryRecordSchema = new TfMemoryStrategy.MemoryRecordSchemaPropertyList(this, "memory_record_schema", false);
+  private _memoryRecordSchema = new AwsMemoryStrategy.MemoryRecordSchemaPropertyList(this, "memory_record_schema", false);
   public get memoryRecordSchema() {
     return this._memoryRecordSchema;
   }
-  public putMemoryRecordSchema(value: TfMemoryStrategy.MemoryRecordSchemaProperty[] | cdktn.IResolvable) {
+  public putMemoryRecordSchema(value: AwsMemoryStrategy.MemoryRecordSchemaProperty[] | cdktn.IResolvable) {
     this._memoryRecordSchema.internalValue = value;
   }
   public resetMemoryRecordSchema() {
@@ -292,11 +292,11 @@ export class TfMemoryStrategy extends cdktn.TerraformResource {
   }
 
   // reflection_configuration - computed: false, optional: true, required: false
-  private _reflectionConfiguration = new TfMemoryStrategy.ReflectionConfigurationPropertyList(this, "reflection_configuration", false);
+  private _reflectionConfiguration = new AwsMemoryStrategy.ReflectionConfigurationPropertyList(this, "reflection_configuration", false);
   public get reflectionConfiguration() {
     return this._reflectionConfiguration;
   }
-  public putReflectionConfiguration(value: TfMemoryStrategy.ReflectionConfigurationProperty[] | cdktn.IResolvable) {
+  public putReflectionConfiguration(value: AwsMemoryStrategy.ReflectionConfigurationProperty[] | cdktn.IResolvable) {
     this._reflectionConfiguration.internalValue = value;
   }
   public resetReflectionConfiguration() {
@@ -308,11 +308,11 @@ export class TfMemoryStrategy extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfMemoryStrategy.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsMemoryStrategy.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfMemoryStrategy.TimeoutsProperty) {
+  public putTimeouts(value: AwsMemoryStrategy.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -337,10 +337,10 @@ export class TfMemoryStrategy extends cdktn.TerraformResource {
       namespaces: cdktn.listMapper(cdktn.stringToTerraform, false)(this._namespaces),
       region: cdktn.stringToTerraform(this._region),
       type: cdktn.stringToTerraform(this._type),
-      configuration: cdktn.listMapper(tfMemoryStrategyConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
-      memory_record_schema: cdktn.listMapper(tfMemoryStrategyMemoryRecordSchemaPropertyToTerraform, true)(this._memoryRecordSchema.internalValue),
-      reflection_configuration: cdktn.listMapper(tfMemoryStrategyReflectionConfigurationPropertyToTerraform, true)(this._reflectionConfiguration.internalValue),
-      timeouts: tfMemoryStrategyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      configuration: cdktn.listMapper(awsMemoryStrategyConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
+      memory_record_schema: cdktn.listMapper(awsMemoryStrategyMemoryRecordSchemaPropertyToTerraform, true)(this._memoryRecordSchema.internalValue),
+      reflection_configuration: cdktn.listMapper(awsMemoryStrategyReflectionConfigurationPropertyToTerraform, true)(this._reflectionConfiguration.internalValue),
+      timeouts: awsMemoryStrategyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -395,28 +395,28 @@ export class TfMemoryStrategy extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       configuration: {
-        value: cdktn.listMapperHcl(tfMemoryStrategyConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
+        value: cdktn.listMapperHcl(awsMemoryStrategyConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMemoryStrategy.ConfigurationPropertyList",
+        storageClassType: "AwsMemoryStrategy.ConfigurationPropertyList",
       },
       memory_record_schema: {
-        value: cdktn.listMapperHcl(tfMemoryStrategyMemoryRecordSchemaPropertyToHclTerraform, true)(this._memoryRecordSchema.internalValue),
+        value: cdktn.listMapperHcl(awsMemoryStrategyMemoryRecordSchemaPropertyToHclTerraform, true)(this._memoryRecordSchema.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMemoryStrategy.MemoryRecordSchemaPropertyList",
+        storageClassType: "AwsMemoryStrategy.MemoryRecordSchemaPropertyList",
       },
       reflection_configuration: {
-        value: cdktn.listMapperHcl(tfMemoryStrategyReflectionConfigurationPropertyToHclTerraform, true)(this._reflectionConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsMemoryStrategyReflectionConfigurationPropertyToHclTerraform, true)(this._reflectionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMemoryStrategy.ReflectionConfigurationPropertyList",
+        storageClassType: "AwsMemoryStrategy.ReflectionConfigurationPropertyList",
       },
       timeouts: {
-        value: tfMemoryStrategyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsMemoryStrategyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfMemoryStrategy.TimeoutsProperty",
+        storageClassType: "AwsMemoryStrategy.TimeoutsProperty",
       },
     };
 
@@ -425,7 +425,7 @@ export class TfMemoryStrategy extends cdktn.TerraformResource {
   }
 }
 
-export function tfMemoryStrategyConsolidationPropertyToTerraform(struct?: TfMemoryStrategy.ConsolidationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyConsolidationPropertyToTerraform(struct?: AwsMemoryStrategy.ConsolidationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -437,7 +437,7 @@ export function tfMemoryStrategyConsolidationPropertyToTerraform(struct?: TfMemo
 }
 
 
-export function tfMemoryStrategyConsolidationPropertyToHclTerraform(struct?: TfMemoryStrategy.ConsolidationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyConsolidationPropertyToHclTerraform(struct?: AwsMemoryStrategy.ConsolidationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -462,7 +462,7 @@ export function tfMemoryStrategyConsolidationPropertyToHclTerraform(struct?: TfM
 }
 
 
-export function tfMemoryStrategyExtractionPropertyToTerraform(struct?: TfMemoryStrategy.ExtractionProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyExtractionPropertyToTerraform(struct?: AwsMemoryStrategy.ExtractionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -474,7 +474,7 @@ export function tfMemoryStrategyExtractionPropertyToTerraform(struct?: TfMemoryS
 }
 
 
-export function tfMemoryStrategyExtractionPropertyToHclTerraform(struct?: TfMemoryStrategy.ExtractionProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyExtractionPropertyToHclTerraform(struct?: AwsMemoryStrategy.ExtractionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -499,7 +499,7 @@ export function tfMemoryStrategyExtractionPropertyToHclTerraform(struct?: TfMemo
 }
 
 
-export function tfMemoryStrategyReflectionPropertyToTerraform(struct?: TfMemoryStrategy.ReflectionProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyReflectionPropertyToTerraform(struct?: AwsMemoryStrategy.ReflectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -512,7 +512,7 @@ export function tfMemoryStrategyReflectionPropertyToTerraform(struct?: TfMemoryS
 }
 
 
-export function tfMemoryStrategyReflectionPropertyToHclTerraform(struct?: TfMemoryStrategy.ReflectionProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyReflectionPropertyToHclTerraform(struct?: AwsMemoryStrategy.ReflectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -543,7 +543,7 @@ export function tfMemoryStrategyReflectionPropertyToHclTerraform(struct?: TfMemo
 }
 
 
-export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsActualMessageBasedTriggerPropertyToTerraform(struct?: TfMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsActualMessageBasedTriggerProperty): any {
+export function awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsActualMessageBasedTriggerPropertyToTerraform(struct?: AwsMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsActualMessageBasedTriggerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -553,7 +553,7 @@ export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerCond
 }
 
 
-export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsActualMessageBasedTriggerPropertyToHclTerraform(struct?: TfMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsActualMessageBasedTriggerProperty): any {
+export function awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsActualMessageBasedTriggerPropertyToHclTerraform(struct?: AwsMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsActualMessageBasedTriggerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -564,7 +564,7 @@ export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerCond
 }
 
 
-export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsActualTimeBasedTriggerPropertyToTerraform(struct?: TfMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsActualTimeBasedTriggerProperty): any {
+export function awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsActualTimeBasedTriggerPropertyToTerraform(struct?: AwsMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsActualTimeBasedTriggerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,7 +574,7 @@ export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerCond
 }
 
 
-export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsActualTimeBasedTriggerPropertyToHclTerraform(struct?: TfMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsActualTimeBasedTriggerProperty): any {
+export function awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsActualTimeBasedTriggerPropertyToHclTerraform(struct?: AwsMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsActualTimeBasedTriggerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -585,7 +585,7 @@ export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerCond
 }
 
 
-export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsActualTokenBasedTriggerPropertyToTerraform(struct?: TfMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsActualTokenBasedTriggerProperty): any {
+export function awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsActualTokenBasedTriggerPropertyToTerraform(struct?: AwsMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsActualTokenBasedTriggerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -595,7 +595,7 @@ export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerCond
 }
 
 
-export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsActualTokenBasedTriggerPropertyToHclTerraform(struct?: TfMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsActualTokenBasedTriggerProperty): any {
+export function awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsActualTokenBasedTriggerPropertyToHclTerraform(struct?: AwsMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsActualTokenBasedTriggerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -606,7 +606,7 @@ export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerCond
 }
 
 
-export function tfMemoryStrategyTriggerConditionsActualPropertyToTerraform(struct?: TfMemoryStrategy.TriggerConditionsActualProperty): any {
+export function awsMemoryStrategyTriggerConditionsActualPropertyToTerraform(struct?: AwsMemoryStrategy.TriggerConditionsActualProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -616,7 +616,7 @@ export function tfMemoryStrategyTriggerConditionsActualPropertyToTerraform(struc
 }
 
 
-export function tfMemoryStrategyTriggerConditionsActualPropertyToHclTerraform(struct?: TfMemoryStrategy.TriggerConditionsActualProperty): any {
+export function awsMemoryStrategyTriggerConditionsActualPropertyToHclTerraform(struct?: AwsMemoryStrategy.TriggerConditionsActualProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -627,7 +627,7 @@ export function tfMemoryStrategyTriggerConditionsActualPropertyToHclTerraform(st
 }
 
 
-export function tfMemoryStrategyInvocationConfigurationPropertyToTerraform(struct?: TfMemoryStrategy.InvocationConfigurationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyInvocationConfigurationPropertyToTerraform(struct?: AwsMemoryStrategy.InvocationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -639,7 +639,7 @@ export function tfMemoryStrategyInvocationConfigurationPropertyToTerraform(struc
 }
 
 
-export function tfMemoryStrategyInvocationConfigurationPropertyToHclTerraform(struct?: TfMemoryStrategy.InvocationConfigurationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyInvocationConfigurationPropertyToHclTerraform(struct?: AwsMemoryStrategy.InvocationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -664,7 +664,7 @@ export function tfMemoryStrategyInvocationConfigurationPropertyToHclTerraform(st
 }
 
 
-export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsMessageBasedTriggerPropertyToTerraform(struct?: TfMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsMessageBasedTriggerProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsMessageBasedTriggerPropertyToTerraform(struct?: AwsMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsMessageBasedTriggerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -675,7 +675,7 @@ export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerCond
 }
 
 
-export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsMessageBasedTriggerPropertyToHclTerraform(struct?: TfMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsMessageBasedTriggerProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsMessageBasedTriggerPropertyToHclTerraform(struct?: AwsMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsMessageBasedTriggerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -694,7 +694,7 @@ export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerCond
 }
 
 
-export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsTimeBasedTriggerPropertyToTerraform(struct?: TfMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsTimeBasedTriggerProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsTimeBasedTriggerPropertyToTerraform(struct?: AwsMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsTimeBasedTriggerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -705,7 +705,7 @@ export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerCond
 }
 
 
-export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsTimeBasedTriggerPropertyToHclTerraform(struct?: TfMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsTimeBasedTriggerProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsTimeBasedTriggerPropertyToHclTerraform(struct?: AwsMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsTimeBasedTriggerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -724,7 +724,7 @@ export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerCond
 }
 
 
-export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsTokenBasedTriggerPropertyToTerraform(struct?: TfMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsTokenBasedTriggerProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsTokenBasedTriggerPropertyToTerraform(struct?: AwsMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsTokenBasedTriggerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -735,7 +735,7 @@ export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerCond
 }
 
 
-export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsTokenBasedTriggerPropertyToHclTerraform(struct?: TfMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsTokenBasedTriggerProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsTokenBasedTriggerPropertyToHclTerraform(struct?: AwsMemoryStrategy.ConfigurationSelfManagedConfigurationTriggerConditionsTokenBasedTriggerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -754,39 +754,39 @@ export function tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerCond
 }
 
 
-export function tfMemoryStrategyTriggerConditionsPropertyToTerraform(struct?: TfMemoryStrategy.TriggerConditionsProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyTriggerConditionsPropertyToTerraform(struct?: AwsMemoryStrategy.TriggerConditionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    message_based_trigger: cdktn.listMapper(tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsMessageBasedTriggerPropertyToTerraform, true)(struct!.messageBasedTrigger),
-    time_based_trigger: cdktn.listMapper(tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsTimeBasedTriggerPropertyToTerraform, true)(struct!.timeBasedTrigger),
-    token_based_trigger: cdktn.listMapper(tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsTokenBasedTriggerPropertyToTerraform, true)(struct!.tokenBasedTrigger),
+    message_based_trigger: cdktn.listMapper(awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsMessageBasedTriggerPropertyToTerraform, true)(struct!.messageBasedTrigger),
+    time_based_trigger: cdktn.listMapper(awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsTimeBasedTriggerPropertyToTerraform, true)(struct!.timeBasedTrigger),
+    token_based_trigger: cdktn.listMapper(awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsTokenBasedTriggerPropertyToTerraform, true)(struct!.tokenBasedTrigger),
   }
 }
 
 
-export function tfMemoryStrategyTriggerConditionsPropertyToHclTerraform(struct?: TfMemoryStrategy.TriggerConditionsProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyTriggerConditionsPropertyToHclTerraform(struct?: AwsMemoryStrategy.TriggerConditionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     message_based_trigger: {
-      value: cdktn.listMapperHcl(tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsMessageBasedTriggerPropertyToHclTerraform, true)(struct!.messageBasedTrigger),
+      value: cdktn.listMapperHcl(awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsMessageBasedTriggerPropertyToHclTerraform, true)(struct!.messageBasedTrigger),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigurationSelfManagedConfigurationTriggerConditionsMessageBasedTriggerPropertyList",
     },
     time_based_trigger: {
-      value: cdktn.listMapperHcl(tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsTimeBasedTriggerPropertyToHclTerraform, true)(struct!.timeBasedTrigger),
+      value: cdktn.listMapperHcl(awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsTimeBasedTriggerPropertyToHclTerraform, true)(struct!.timeBasedTrigger),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigurationSelfManagedConfigurationTriggerConditionsTimeBasedTriggerPropertyList",
     },
     token_based_trigger: {
-      value: cdktn.listMapperHcl(tfMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsTokenBasedTriggerPropertyToHclTerraform, true)(struct!.tokenBasedTrigger),
+      value: cdktn.listMapperHcl(awsMemoryStrategyConfigurationSelfManagedConfigurationTriggerConditionsTokenBasedTriggerPropertyToHclTerraform, true)(struct!.tokenBasedTrigger),
       isBlock: true,
       type: "list",
       storageClassType: "ConfigurationSelfManagedConfigurationTriggerConditionsTokenBasedTriggerPropertyList",
@@ -798,20 +798,20 @@ export function tfMemoryStrategyTriggerConditionsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfMemoryStrategySelfManagedConfigurationPropertyToTerraform(struct?: TfMemoryStrategy.SelfManagedConfigurationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategySelfManagedConfigurationPropertyToTerraform(struct?: AwsMemoryStrategy.SelfManagedConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     historical_context_window_size: cdktn.numberToTerraform(struct!.historicalContextWindowSize),
-    invocation_configuration: cdktn.listMapper(tfMemoryStrategyInvocationConfigurationPropertyToTerraform, true)(struct!.invocationConfiguration),
-    trigger_conditions: cdktn.listMapper(tfMemoryStrategyTriggerConditionsPropertyToTerraform, true)(struct!.triggerConditions),
+    invocation_configuration: cdktn.listMapper(awsMemoryStrategyInvocationConfigurationPropertyToTerraform, true)(struct!.invocationConfiguration),
+    trigger_conditions: cdktn.listMapper(awsMemoryStrategyTriggerConditionsPropertyToTerraform, true)(struct!.triggerConditions),
   }
 }
 
 
-export function tfMemoryStrategySelfManagedConfigurationPropertyToHclTerraform(struct?: TfMemoryStrategy.SelfManagedConfigurationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategySelfManagedConfigurationPropertyToHclTerraform(struct?: AwsMemoryStrategy.SelfManagedConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -824,13 +824,13 @@ export function tfMemoryStrategySelfManagedConfigurationPropertyToHclTerraform(s
       storageClassType: "number",
     },
     invocation_configuration: {
-      value: cdktn.listMapperHcl(tfMemoryStrategyInvocationConfigurationPropertyToHclTerraform, true)(struct!.invocationConfiguration),
+      value: cdktn.listMapperHcl(awsMemoryStrategyInvocationConfigurationPropertyToHclTerraform, true)(struct!.invocationConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "InvocationConfigurationPropertyList",
     },
     trigger_conditions: {
-      value: cdktn.listMapperHcl(tfMemoryStrategyTriggerConditionsPropertyToHclTerraform, true)(struct!.triggerConditions),
+      value: cdktn.listMapperHcl(awsMemoryStrategyTriggerConditionsPropertyToHclTerraform, true)(struct!.triggerConditions),
       isBlock: true,
       type: "list",
       storageClassType: "TriggerConditionsPropertyList",
@@ -842,22 +842,22 @@ export function tfMemoryStrategySelfManagedConfigurationPropertyToHclTerraform(s
 }
 
 
-export function tfMemoryStrategyConfigurationPropertyToTerraform(struct?: TfMemoryStrategy.ConfigurationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyConfigurationPropertyToTerraform(struct?: AwsMemoryStrategy.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    consolidation: cdktn.listMapper(tfMemoryStrategyConsolidationPropertyToTerraform, true)(struct!.consolidation),
-    extraction: cdktn.listMapper(tfMemoryStrategyExtractionPropertyToTerraform, true)(struct!.extraction),
-    reflection: cdktn.listMapper(tfMemoryStrategyReflectionPropertyToTerraform, true)(struct!.reflection),
-    self_managed_configuration: cdktn.listMapper(tfMemoryStrategySelfManagedConfigurationPropertyToTerraform, true)(struct!.selfManagedConfiguration),
+    consolidation: cdktn.listMapper(awsMemoryStrategyConsolidationPropertyToTerraform, true)(struct!.consolidation),
+    extraction: cdktn.listMapper(awsMemoryStrategyExtractionPropertyToTerraform, true)(struct!.extraction),
+    reflection: cdktn.listMapper(awsMemoryStrategyReflectionPropertyToTerraform, true)(struct!.reflection),
+    self_managed_configuration: cdktn.listMapper(awsMemoryStrategySelfManagedConfigurationPropertyToTerraform, true)(struct!.selfManagedConfiguration),
   }
 }
 
 
-export function tfMemoryStrategyConfigurationPropertyToHclTerraform(struct?: TfMemoryStrategy.ConfigurationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyConfigurationPropertyToHclTerraform(struct?: AwsMemoryStrategy.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -870,25 +870,25 @@ export function tfMemoryStrategyConfigurationPropertyToHclTerraform(struct?: TfM
       storageClassType: "string",
     },
     consolidation: {
-      value: cdktn.listMapperHcl(tfMemoryStrategyConsolidationPropertyToHclTerraform, true)(struct!.consolidation),
+      value: cdktn.listMapperHcl(awsMemoryStrategyConsolidationPropertyToHclTerraform, true)(struct!.consolidation),
       isBlock: true,
       type: "list",
       storageClassType: "ConsolidationPropertyList",
     },
     extraction: {
-      value: cdktn.listMapperHcl(tfMemoryStrategyExtractionPropertyToHclTerraform, true)(struct!.extraction),
+      value: cdktn.listMapperHcl(awsMemoryStrategyExtractionPropertyToHclTerraform, true)(struct!.extraction),
       isBlock: true,
       type: "list",
       storageClassType: "ExtractionPropertyList",
     },
     reflection: {
-      value: cdktn.listMapperHcl(tfMemoryStrategyReflectionPropertyToHclTerraform, true)(struct!.reflection),
+      value: cdktn.listMapperHcl(awsMemoryStrategyReflectionPropertyToHclTerraform, true)(struct!.reflection),
       isBlock: true,
       type: "list",
       storageClassType: "ReflectionPropertyList",
     },
     self_managed_configuration: {
-      value: cdktn.listMapperHcl(tfMemoryStrategySelfManagedConfigurationPropertyToHclTerraform, true)(struct!.selfManagedConfiguration),
+      value: cdktn.listMapperHcl(awsMemoryStrategySelfManagedConfigurationPropertyToHclTerraform, true)(struct!.selfManagedConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SelfManagedConfigurationPropertyList",
@@ -900,7 +900,7 @@ export function tfMemoryStrategyConfigurationPropertyToHclTerraform(struct?: TfM
 }
 
 
-export function tfMemoryStrategyNumberValidationPropertyToTerraform(struct?: TfMemoryStrategy.NumberValidationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyNumberValidationPropertyToTerraform(struct?: AwsMemoryStrategy.NumberValidationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -912,7 +912,7 @@ export function tfMemoryStrategyNumberValidationPropertyToTerraform(struct?: TfM
 }
 
 
-export function tfMemoryStrategyNumberValidationPropertyToHclTerraform(struct?: TfMemoryStrategy.NumberValidationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyNumberValidationPropertyToHclTerraform(struct?: AwsMemoryStrategy.NumberValidationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -937,7 +937,7 @@ export function tfMemoryStrategyNumberValidationPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfMemoryStrategyStringListValidationPropertyToTerraform(struct?: TfMemoryStrategy.StringListValidationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyStringListValidationPropertyToTerraform(struct?: AwsMemoryStrategy.StringListValidationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -949,7 +949,7 @@ export function tfMemoryStrategyStringListValidationPropertyToTerraform(struct?:
 }
 
 
-export function tfMemoryStrategyStringListValidationPropertyToHclTerraform(struct?: TfMemoryStrategy.StringListValidationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyStringListValidationPropertyToHclTerraform(struct?: AwsMemoryStrategy.StringListValidationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -974,7 +974,7 @@ export function tfMemoryStrategyStringListValidationPropertyToHclTerraform(struc
 }
 
 
-export function tfMemoryStrategyStringValidationPropertyToTerraform(struct?: TfMemoryStrategy.StringValidationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyStringValidationPropertyToTerraform(struct?: AwsMemoryStrategy.StringValidationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -985,7 +985,7 @@ export function tfMemoryStrategyStringValidationPropertyToTerraform(struct?: TfM
 }
 
 
-export function tfMemoryStrategyStringValidationPropertyToHclTerraform(struct?: TfMemoryStrategy.StringValidationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyStringValidationPropertyToHclTerraform(struct?: AwsMemoryStrategy.StringValidationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1004,39 +1004,39 @@ export function tfMemoryStrategyStringValidationPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfMemoryStrategyValidationPropertyToTerraform(struct?: TfMemoryStrategy.ValidationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyValidationPropertyToTerraform(struct?: AwsMemoryStrategy.ValidationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    number_validation: cdktn.listMapper(tfMemoryStrategyNumberValidationPropertyToTerraform, true)(struct!.numberValidation),
-    string_list_validation: cdktn.listMapper(tfMemoryStrategyStringListValidationPropertyToTerraform, true)(struct!.stringListValidation),
-    string_validation: cdktn.listMapper(tfMemoryStrategyStringValidationPropertyToTerraform, true)(struct!.stringValidation),
+    number_validation: cdktn.listMapper(awsMemoryStrategyNumberValidationPropertyToTerraform, true)(struct!.numberValidation),
+    string_list_validation: cdktn.listMapper(awsMemoryStrategyStringListValidationPropertyToTerraform, true)(struct!.stringListValidation),
+    string_validation: cdktn.listMapper(awsMemoryStrategyStringValidationPropertyToTerraform, true)(struct!.stringValidation),
   }
 }
 
 
-export function tfMemoryStrategyValidationPropertyToHclTerraform(struct?: TfMemoryStrategy.ValidationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyValidationPropertyToHclTerraform(struct?: AwsMemoryStrategy.ValidationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     number_validation: {
-      value: cdktn.listMapperHcl(tfMemoryStrategyNumberValidationPropertyToHclTerraform, true)(struct!.numberValidation),
+      value: cdktn.listMapperHcl(awsMemoryStrategyNumberValidationPropertyToHclTerraform, true)(struct!.numberValidation),
       isBlock: true,
       type: "list",
       storageClassType: "NumberValidationPropertyList",
     },
     string_list_validation: {
-      value: cdktn.listMapperHcl(tfMemoryStrategyStringListValidationPropertyToHclTerraform, true)(struct!.stringListValidation),
+      value: cdktn.listMapperHcl(awsMemoryStrategyStringListValidationPropertyToHclTerraform, true)(struct!.stringListValidation),
       isBlock: true,
       type: "list",
       storageClassType: "StringListValidationPropertyList",
     },
     string_validation: {
-      value: cdktn.listMapperHcl(tfMemoryStrategyStringValidationPropertyToHclTerraform, true)(struct!.stringValidation),
+      value: cdktn.listMapperHcl(awsMemoryStrategyStringValidationPropertyToHclTerraform, true)(struct!.stringValidation),
       isBlock: true,
       type: "list",
       storageClassType: "StringValidationPropertyList",
@@ -1048,7 +1048,7 @@ export function tfMemoryStrategyValidationPropertyToHclTerraform(struct?: TfMemo
 }
 
 
-export function tfMemoryStrategyLlmExtractionConfigPropertyToTerraform(struct?: TfMemoryStrategy.LlmExtractionConfigProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyLlmExtractionConfigPropertyToTerraform(struct?: AwsMemoryStrategy.LlmExtractionConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1056,12 +1056,12 @@ export function tfMemoryStrategyLlmExtractionConfigPropertyToTerraform(struct?: 
   return {
     definition: cdktn.stringToTerraform(struct!.definition),
     llm_extraction_instruction: cdktn.stringToTerraform(struct!.llmExtractionInstruction),
-    validation: cdktn.listMapper(tfMemoryStrategyValidationPropertyToTerraform, true)(struct!.validation),
+    validation: cdktn.listMapper(awsMemoryStrategyValidationPropertyToTerraform, true)(struct!.validation),
   }
 }
 
 
-export function tfMemoryStrategyLlmExtractionConfigPropertyToHclTerraform(struct?: TfMemoryStrategy.LlmExtractionConfigProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyLlmExtractionConfigPropertyToHclTerraform(struct?: AwsMemoryStrategy.LlmExtractionConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1080,7 +1080,7 @@ export function tfMemoryStrategyLlmExtractionConfigPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     validation: {
-      value: cdktn.listMapperHcl(tfMemoryStrategyValidationPropertyToHclTerraform, true)(struct!.validation),
+      value: cdktn.listMapperHcl(awsMemoryStrategyValidationPropertyToHclTerraform, true)(struct!.validation),
       isBlock: true,
       type: "list",
       storageClassType: "ValidationPropertyList",
@@ -1092,25 +1092,25 @@ export function tfMemoryStrategyLlmExtractionConfigPropertyToHclTerraform(struct
 }
 
 
-export function tfMemoryStrategyExtractionConfigPropertyToTerraform(struct?: TfMemoryStrategy.ExtractionConfigProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyExtractionConfigPropertyToTerraform(struct?: AwsMemoryStrategy.ExtractionConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    llm_extraction_config: cdktn.listMapper(tfMemoryStrategyLlmExtractionConfigPropertyToTerraform, true)(struct!.llmExtractionConfig),
+    llm_extraction_config: cdktn.listMapper(awsMemoryStrategyLlmExtractionConfigPropertyToTerraform, true)(struct!.llmExtractionConfig),
   }
 }
 
 
-export function tfMemoryStrategyExtractionConfigPropertyToHclTerraform(struct?: TfMemoryStrategy.ExtractionConfigProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyExtractionConfigPropertyToHclTerraform(struct?: AwsMemoryStrategy.ExtractionConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     llm_extraction_config: {
-      value: cdktn.listMapperHcl(tfMemoryStrategyLlmExtractionConfigPropertyToHclTerraform, true)(struct!.llmExtractionConfig),
+      value: cdktn.listMapperHcl(awsMemoryStrategyLlmExtractionConfigPropertyToHclTerraform, true)(struct!.llmExtractionConfig),
       isBlock: true,
       type: "list",
       storageClassType: "LlmExtractionConfigPropertyList",
@@ -1122,7 +1122,7 @@ export function tfMemoryStrategyExtractionConfigPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfMemoryStrategyMetadataSchemaPropertyToTerraform(struct?: TfMemoryStrategy.MetadataSchemaProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyMetadataSchemaPropertyToTerraform(struct?: AwsMemoryStrategy.MetadataSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1131,12 +1131,12 @@ export function tfMemoryStrategyMetadataSchemaPropertyToTerraform(struct?: TfMem
     extraction_type: cdktn.stringToTerraform(struct!.extractionType),
     key: cdktn.stringToTerraform(struct!.key),
     type: cdktn.stringToTerraform(struct!.type),
-    extraction_config: cdktn.listMapper(tfMemoryStrategyExtractionConfigPropertyToTerraform, true)(struct!.extractionConfig),
+    extraction_config: cdktn.listMapper(awsMemoryStrategyExtractionConfigPropertyToTerraform, true)(struct!.extractionConfig),
   }
 }
 
 
-export function tfMemoryStrategyMetadataSchemaPropertyToHclTerraform(struct?: TfMemoryStrategy.MetadataSchemaProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyMetadataSchemaPropertyToHclTerraform(struct?: AwsMemoryStrategy.MetadataSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1161,7 +1161,7 @@ export function tfMemoryStrategyMetadataSchemaPropertyToHclTerraform(struct?: Tf
       storageClassType: "string",
     },
     extraction_config: {
-      value: cdktn.listMapperHcl(tfMemoryStrategyExtractionConfigPropertyToHclTerraform, true)(struct!.extractionConfig),
+      value: cdktn.listMapperHcl(awsMemoryStrategyExtractionConfigPropertyToHclTerraform, true)(struct!.extractionConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ExtractionConfigPropertyList",
@@ -1173,25 +1173,25 @@ export function tfMemoryStrategyMetadataSchemaPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfMemoryStrategyMemoryRecordSchemaPropertyToTerraform(struct?: TfMemoryStrategy.MemoryRecordSchemaProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyMemoryRecordSchemaPropertyToTerraform(struct?: AwsMemoryStrategy.MemoryRecordSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    metadata_schema: cdktn.listMapper(tfMemoryStrategyMetadataSchemaPropertyToTerraform, true)(struct!.metadataSchema),
+    metadata_schema: cdktn.listMapper(awsMemoryStrategyMetadataSchemaPropertyToTerraform, true)(struct!.metadataSchema),
   }
 }
 
 
-export function tfMemoryStrategyMemoryRecordSchemaPropertyToHclTerraform(struct?: TfMemoryStrategy.MemoryRecordSchemaProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyMemoryRecordSchemaPropertyToHclTerraform(struct?: AwsMemoryStrategy.MemoryRecordSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     metadata_schema: {
-      value: cdktn.listMapperHcl(tfMemoryStrategyMetadataSchemaPropertyToHclTerraform, true)(struct!.metadataSchema),
+      value: cdktn.listMapperHcl(awsMemoryStrategyMetadataSchemaPropertyToHclTerraform, true)(struct!.metadataSchema),
       isBlock: true,
       type: "list",
       storageClassType: "MetadataSchemaPropertyList",
@@ -1203,7 +1203,7 @@ export function tfMemoryStrategyMemoryRecordSchemaPropertyToHclTerraform(struct?
 }
 
 
-export function tfMemoryStrategyReflectionConfigurationPropertyToTerraform(struct?: TfMemoryStrategy.ReflectionConfigurationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyReflectionConfigurationPropertyToTerraform(struct?: AwsMemoryStrategy.ReflectionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1214,7 +1214,7 @@ export function tfMemoryStrategyReflectionConfigurationPropertyToTerraform(struc
 }
 
 
-export function tfMemoryStrategyReflectionConfigurationPropertyToHclTerraform(struct?: TfMemoryStrategy.ReflectionConfigurationProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyReflectionConfigurationPropertyToHclTerraform(struct?: AwsMemoryStrategy.ReflectionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1233,7 +1233,7 @@ export function tfMemoryStrategyReflectionConfigurationPropertyToHclTerraform(st
 }
 
 
-export function tfMemoryStrategyTimeoutsPropertyToTerraform(struct?: TfMemoryStrategy.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyTimeoutsPropertyToTerraform(struct?: AwsMemoryStrategy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1246,7 +1246,7 @@ export function tfMemoryStrategyTimeoutsPropertyToTerraform(struct?: TfMemoryStr
 }
 
 
-export function tfMemoryStrategyTimeoutsPropertyToHclTerraform(struct?: TfMemoryStrategy.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMemoryStrategyTimeoutsPropertyToHclTerraform(struct?: AwsMemoryStrategy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1277,14 +1277,14 @@ export function tfMemoryStrategyTimeoutsPropertyToHclTerraform(struct?: TfMemory
 }
 
 
-export namespace TfMemoryStrategy {
+export namespace AwsMemoryStrategy {
 export interface ConsolidationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#append_to_prompt TfMemoryStrategy#append_to_prompt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#append_to_prompt AwsMemoryStrategy#append_to_prompt}
   */
   readonly appendToPrompt: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#model_id TfMemoryStrategy#model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#model_id AwsMemoryStrategy#model_id}
   */
   readonly modelId: string;
 }
@@ -1386,11 +1386,11 @@ export class ConsolidationPropertyList extends cdktn.ComplexList {
 }
 export interface ExtractionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#append_to_prompt TfMemoryStrategy#append_to_prompt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#append_to_prompt AwsMemoryStrategy#append_to_prompt}
   */
   readonly appendToPrompt: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#model_id TfMemoryStrategy#model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#model_id AwsMemoryStrategy#model_id}
   */
   readonly modelId: string;
 }
@@ -1492,15 +1492,15 @@ export class ExtractionPropertyList extends cdktn.ComplexList {
 }
 export interface ReflectionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#append_to_prompt TfMemoryStrategy#append_to_prompt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#append_to_prompt AwsMemoryStrategy#append_to_prompt}
   */
   readonly appendToPrompt: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#model_id TfMemoryStrategy#model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#model_id AwsMemoryStrategy#model_id}
   */
   readonly modelId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#namespace_templates TfMemoryStrategy#namespace_templates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#namespace_templates AwsMemoryStrategy#namespace_templates}
   */
   readonly namespaceTemplates: string[];
 }
@@ -1850,11 +1850,11 @@ export class TriggerConditionsActualPropertyList extends cdktn.ComplexList {
 }
 export interface InvocationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#payload_delivery_bucket_name TfMemoryStrategy#payload_delivery_bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#payload_delivery_bucket_name AwsMemoryStrategy#payload_delivery_bucket_name}
   */
   readonly payloadDeliveryBucketName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#topic_arn TfMemoryStrategy#topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#topic_arn AwsMemoryStrategy#topic_arn}
   */
   readonly topicArn: string;
 }
@@ -1956,7 +1956,7 @@ export class InvocationConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ConfigurationSelfManagedConfigurationTriggerConditionsMessageBasedTriggerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#message_count TfMemoryStrategy#message_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#message_count AwsMemoryStrategy#message_count}
   */
   readonly messageCount: number;
 }
@@ -2039,7 +2039,7 @@ export class ConfigurationSelfManagedConfigurationTriggerConditionsMessageBasedT
 }
 export interface ConfigurationSelfManagedConfigurationTriggerConditionsTimeBasedTriggerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#idle_session_timeout TfMemoryStrategy#idle_session_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#idle_session_timeout AwsMemoryStrategy#idle_session_timeout}
   */
   readonly idleSessionTimeout: number;
 }
@@ -2122,7 +2122,7 @@ export class ConfigurationSelfManagedConfigurationTriggerConditionsTimeBasedTrig
 }
 export interface ConfigurationSelfManagedConfigurationTriggerConditionsTokenBasedTriggerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#token_count TfMemoryStrategy#token_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#token_count AwsMemoryStrategy#token_count}
   */
   readonly tokenCount: number;
 }
@@ -2207,19 +2207,19 @@ export interface TriggerConditionsProperty {
   /**
   * message_based_trigger block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#message_based_trigger TfMemoryStrategy#message_based_trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#message_based_trigger AwsMemoryStrategy#message_based_trigger}
   */
   readonly messageBasedTrigger?: ConfigurationSelfManagedConfigurationTriggerConditionsMessageBasedTriggerProperty[] | cdktn.IResolvable;
   /**
   * time_based_trigger block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#time_based_trigger TfMemoryStrategy#time_based_trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#time_based_trigger AwsMemoryStrategy#time_based_trigger}
   */
   readonly timeBasedTrigger?: ConfigurationSelfManagedConfigurationTriggerConditionsTimeBasedTriggerProperty[] | cdktn.IResolvable;
   /**
   * token_based_trigger block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#token_based_trigger TfMemoryStrategy#token_based_trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#token_based_trigger AwsMemoryStrategy#token_based_trigger}
   */
   readonly tokenBasedTrigger?: ConfigurationSelfManagedConfigurationTriggerConditionsTokenBasedTriggerProperty[] | cdktn.IResolvable;
 }
@@ -2349,19 +2349,19 @@ export class TriggerConditionsPropertyList extends cdktn.ComplexList {
 }
 export interface SelfManagedConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#historical_context_window_size TfMemoryStrategy#historical_context_window_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#historical_context_window_size AwsMemoryStrategy#historical_context_window_size}
   */
   readonly historicalContextWindowSize?: number;
   /**
   * invocation_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#invocation_configuration TfMemoryStrategy#invocation_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#invocation_configuration AwsMemoryStrategy#invocation_configuration}
   */
   readonly invocationConfiguration?: InvocationConfigurationProperty[] | cdktn.IResolvable;
   /**
   * trigger_conditions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#trigger_conditions TfMemoryStrategy#trigger_conditions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#trigger_conditions AwsMemoryStrategy#trigger_conditions}
   */
   readonly triggerConditions?: TriggerConditionsProperty[] | cdktn.IResolvable;
 }
@@ -2497,31 +2497,31 @@ export class SelfManagedConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#type TfMemoryStrategy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#type AwsMemoryStrategy#type}
   */
   readonly type: string;
   /**
   * consolidation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#consolidation TfMemoryStrategy#consolidation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#consolidation AwsMemoryStrategy#consolidation}
   */
   readonly consolidation?: ConsolidationProperty[] | cdktn.IResolvable;
   /**
   * extraction block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#extraction TfMemoryStrategy#extraction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#extraction AwsMemoryStrategy#extraction}
   */
   readonly extraction?: ExtractionProperty[] | cdktn.IResolvable;
   /**
   * reflection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#reflection TfMemoryStrategy#reflection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#reflection AwsMemoryStrategy#reflection}
   */
   readonly reflection?: ReflectionProperty[] | cdktn.IResolvable;
   /**
   * self_managed_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#self_managed_configuration TfMemoryStrategy#self_managed_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#self_managed_configuration AwsMemoryStrategy#self_managed_configuration}
   */
   readonly selfManagedConfiguration?: SelfManagedConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -2692,11 +2692,11 @@ export class ConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface NumberValidationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#max_value TfMemoryStrategy#max_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#max_value AwsMemoryStrategy#max_value}
   */
   readonly maxValue?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#min_value TfMemoryStrategy#min_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#min_value AwsMemoryStrategy#min_value}
   */
   readonly minValue?: number;
 }
@@ -2804,11 +2804,11 @@ export class NumberValidationPropertyList extends cdktn.ComplexList {
 }
 export interface StringListValidationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#allowed_values TfMemoryStrategy#allowed_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#allowed_values AwsMemoryStrategy#allowed_values}
   */
   readonly allowedValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#max_items TfMemoryStrategy#max_items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#max_items AwsMemoryStrategy#max_items}
   */
   readonly maxItems?: number;
 }
@@ -2916,7 +2916,7 @@ export class StringListValidationPropertyList extends cdktn.ComplexList {
 }
 export interface StringValidationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#allowed_values TfMemoryStrategy#allowed_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#allowed_values AwsMemoryStrategy#allowed_values}
   */
   readonly allowedValues: string[];
 }
@@ -3001,19 +3001,19 @@ export interface ValidationProperty {
   /**
   * number_validation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#number_validation TfMemoryStrategy#number_validation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#number_validation AwsMemoryStrategy#number_validation}
   */
   readonly numberValidation?: NumberValidationProperty[] | cdktn.IResolvable;
   /**
   * string_list_validation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#string_list_validation TfMemoryStrategy#string_list_validation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#string_list_validation AwsMemoryStrategy#string_list_validation}
   */
   readonly stringListValidation?: StringListValidationProperty[] | cdktn.IResolvable;
   /**
   * string_validation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#string_validation TfMemoryStrategy#string_validation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#string_validation AwsMemoryStrategy#string_validation}
   */
   readonly stringValidation?: StringValidationProperty[] | cdktn.IResolvable;
 }
@@ -3143,17 +3143,17 @@ export class ValidationPropertyList extends cdktn.ComplexList {
 }
 export interface LlmExtractionConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#definition TfMemoryStrategy#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#definition AwsMemoryStrategy#definition}
   */
   readonly definition: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#llm_extraction_instruction TfMemoryStrategy#llm_extraction_instruction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#llm_extraction_instruction AwsMemoryStrategy#llm_extraction_instruction}
   */
   readonly llmExtractionInstruction?: string;
   /**
   * validation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#validation TfMemoryStrategy#validation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#validation AwsMemoryStrategy#validation}
   */
   readonly validation?: ValidationProperty[] | cdktn.IResolvable;
 }
@@ -3282,7 +3282,7 @@ export interface ExtractionConfigProperty {
   /**
   * llm_extraction_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#llm_extraction_config TfMemoryStrategy#llm_extraction_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#llm_extraction_config AwsMemoryStrategy#llm_extraction_config}
   */
   readonly llmExtractionConfig?: LlmExtractionConfigProperty[] | cdktn.IResolvable;
 }
@@ -3368,21 +3368,21 @@ export class ExtractionConfigPropertyList extends cdktn.ComplexList {
 }
 export interface MetadataSchemaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#extraction_type TfMemoryStrategy#extraction_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#extraction_type AwsMemoryStrategy#extraction_type}
   */
   readonly extractionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#key TfMemoryStrategy#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#key AwsMemoryStrategy#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#type TfMemoryStrategy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#type AwsMemoryStrategy#type}
   */
   readonly type?: string;
   /**
   * extraction_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#extraction_config TfMemoryStrategy#extraction_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#extraction_config AwsMemoryStrategy#extraction_config}
   */
   readonly extractionConfig?: ExtractionConfigProperty[] | cdktn.IResolvable;
 }
@@ -3533,7 +3533,7 @@ export interface MemoryRecordSchemaProperty {
   /**
   * metadata_schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#metadata_schema TfMemoryStrategy#metadata_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#metadata_schema AwsMemoryStrategy#metadata_schema}
   */
   readonly metadataSchema?: MetadataSchemaProperty[] | cdktn.IResolvable;
 }
@@ -3619,7 +3619,7 @@ export class MemoryRecordSchemaPropertyList extends cdktn.ComplexList {
 }
 export interface ReflectionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#namespace_templates TfMemoryStrategy#namespace_templates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#namespace_templates AwsMemoryStrategy#namespace_templates}
   */
   readonly namespaceTemplates: string[];
 }
@@ -3704,19 +3704,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#create TfMemoryStrategy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#create AwsMemoryStrategy#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#delete TfMemoryStrategy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#delete AwsMemoryStrategy#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#update TfMemoryStrategy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_memory_strategy#update AwsMemoryStrategy#update}
   */
   readonly update?: string;
 }

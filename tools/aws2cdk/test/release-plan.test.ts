@@ -11,6 +11,11 @@
  */
 import * as fs from "node:fs";
 import * as path from "node:path";
+import {
+  PROVIDER_GROUP,
+  goPackageName as generatorGoPackageName,
+  readGroups,
+} from "../src/groups";
 import type { HashesManifest } from "../src/hashes";
 import {
   fleetVersion,
@@ -56,7 +61,7 @@ describe("planRelease — which groups moved", () => {
   });
 
   it("tags only changed and added groups — a removed group is never tagged", () => {
-    expect(plan().tags).toEqual(["awsec2/v0.1.0", "awss3vectors/v0.1.0", "awsswf/v0.1.0"]);
+    expect(plan().tags).toEqual(["ec2/v0.1.0", "s3vectors/v0.1.0", "swf/v0.1.0"]);
   });
 
   it("tags three of six modules, not all six", () => {
@@ -106,7 +111,7 @@ describe("planRelease — the warnings that stop a wrong release", () => {
   });
 
   it("warns when a group disappeared, because its tags outlive the decision", () => {
-    expect(plan().warnings.join("\n")).toMatch(/"msk_connect" \(awsmskconnect\) disappeared/);
+    expect(plan().warnings.join("\n")).toMatch(/"msk_connect" \(mskconnect\) disappeared/);
   });
 
   it("warns when nothing changed at all", () => {
@@ -137,24 +142,33 @@ describe("planRelease — the warnings that stop a wrong release", () => {
 
 describe("tag and module naming", () => {
   it("derives the Go package name by stripping underscores, not by casing", () => {
-    expect(goPackageName("msk_connect")).toBe("awsmskconnect");
-    expect(goPackageName("lex_v2_models")).toBe("awslexv2models");
-    expect(goPackageName("s3")).toBe("awss3");
+    expect(goPackageName("msk_connect")).toBe("mskconnect");
+    expect(goPackageName("lex_v2_models")).toBe("lexv2models");
+    expect(goPackageName("s3")).toBe("s3");
+  });
+
+  it("agrees with the generator's copy on every real slug", () => {
+    // `release-plan.ts` restates `goPackageName` deliberately, and its comment promises the two are
+    // caught disagreeing. Nothing asserted that: both were only ever tested apart, against their
+    // own restatements of the rule. This is the loop, over the names that actually get published.
+    for (const slug of [...Object.keys(readGroups().groups), PROVIDER_GROUP]) {
+      expect([slug, goPackageName(slug)]).toEqual([slug, generatorGoPackageName(slug)]);
+    }
   });
 
   it("puts the /vN suffix in the module path, so the tag is <dir>/v2/vX.Y.Z", () => {
     expect(majorSuffix("1.4.0")).toBe("");
     expect(majorSuffix("2.0.0")).toBe("/v2");
     expect(plan({ version: "2.0.0" }).tags).toEqual([
-      "awsec2/v2/v2.0.0",
-      "awss3vectors/v2/v2.0.0",
-      "awsswf/v2/v2.0.0",
+      "ec2/v2/v2.0.0",
+      "s3vectors/v2/v2.0.0",
+      "swf/v2/v2.0.0",
     ]);
   });
 
   it("splits a tag back into module path and version, /vN included", () => {
-    expect(splitTag("awsdetective/v0.1.0")).toEqual(["awsdetective", "v0.1.0"]);
-    expect(splitTag("awsec2/v2/v2.0.0")).toEqual(["awsec2/v2", "v2.0.0"]);
+    expect(splitTag("detective/v0.1.0")).toEqual(["detective", "v0.1.0"]);
+    expect(splitTag("ec2/v2/v2.0.0")).toEqual(["ec2/v2", "v2.0.0"]);
   });
 });
 
@@ -178,7 +192,7 @@ describe("planCommands", () => {
     expect(script).toMatch(/build-fleet\.mjs ec2 s3_vectors swf$/m);
     expect(script).not.toMatch(/detective|lex_v2_models/);
     for (const tag of p.tags) expect(script).toContain(`git tag -s ${tag}`.replace("git ", "git -C ../cdktn-aws-go "));
-    expect(script).not.toContain("awsmskconnect");
+    expect(script).not.toContain("mskconnect");
   });
 
   it("tidies before tagging — pacmak emits no go.sum", () => {
@@ -193,7 +207,7 @@ describe("planCommands", () => {
     const script = planCommands(plan(), "../cdktn-aws-go").join("\n");
     expect(script.indexOf("go mod download")).toBeGreaterThan(script.indexOf("push origin"));
     expect(script).toMatch(/GOPROXY=https:\/\/proxy\.golang\.org/);
-    expect(script).toMatch(/go mod download github\.com\/cdktn-io\/cdktn-aws-go\/awsec2@v0\.1\.0/);
+    expect(script).toMatch(/go mod download github\.com\/cdktn-io\/cdktn-aws-go\/ec2@v0\.1\.0/);
   });
 
   it("emits nothing at all when nothing changed", () => {

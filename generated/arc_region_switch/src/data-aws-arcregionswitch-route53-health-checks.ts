@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfRoute53HealthChecksConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsRoute53HealthChecksConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/arcregionswitch_route53_health_checks#plan_arn DataTfRoute53HealthChecks#plan_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/arcregionswitch_route53_health_checks#plan_arn DataAwsRoute53HealthChecks#plan_arn}
   */
   readonly planArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/arcregionswitch_route53_health_checks#region DataTfRoute53HealthChecks#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/arcregionswitch_route53_health_checks#region DataAwsRoute53HealthChecks#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataTfRoute53HealthChecksConfig extends cdktn.TerraformMetaArgu
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/arcregionswitch_route53_health_checks aws_arcregionswitch_route53_health_checks}
 */
-export class DataTfRoute53HealthChecks extends cdktn.TerraformDataSource {
+export class DataAwsRoute53HealthChecks extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataTfRoute53HealthChecks extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfRoute53HealthChecks resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsRoute53HealthChecks resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfRoute53HealthChecks to import
-  * @param importFromId The id of the existing DataTfRoute53HealthChecks that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/arcregionswitch_route53_health_checks#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfRoute53HealthChecks to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsRoute53HealthChecks to import
+  * @param importFromId The id of the existing DataAwsRoute53HealthChecks that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/arcregionswitch_route53_health_checks#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsRoute53HealthChecks to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_arcregionswitch_route53_health_checks", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataTfRoute53HealthChecks extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfRoute53HealthChecksConfig
+  * @param options DataAwsRoute53HealthChecksConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfRoute53HealthChecksConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsRoute53HealthChecksConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_arcregionswitch_route53_health_checks',
       terraformGeneratorMetadata: {
@@ -78,7 +78,7 @@ export class DataTfRoute53HealthChecks extends cdktn.TerraformDataSource {
   // ==========
 
   // health_checks - computed: true, optional: false, required: false
-  private _healthChecks = new DataTfRoute53HealthChecks.HealthChecksPropertyList(this, "health_checks", false);
+  private _healthChecks = new DataAwsRoute53HealthChecks.HealthChecksPropertyList(this, "health_checks", false);
   public get healthChecks() {
     return this._healthChecks;
   }
@@ -144,7 +144,7 @@ export class DataTfRoute53HealthChecks extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfRoute53HealthChecksHealthChecksPropertyToTerraform(struct?: DataTfRoute53HealthChecks.HealthChecksProperty): any {
+export function dataAwsRoute53HealthChecksHealthChecksPropertyToTerraform(struct?: DataAwsRoute53HealthChecks.HealthChecksProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -154,7 +154,7 @@ export function dataTfRoute53HealthChecksHealthChecksPropertyToTerraform(struct?
 }
 
 
-export function dataTfRoute53HealthChecksHealthChecksPropertyToHclTerraform(struct?: DataTfRoute53HealthChecks.HealthChecksProperty): any {
+export function dataAwsRoute53HealthChecksHealthChecksPropertyToHclTerraform(struct?: DataAwsRoute53HealthChecks.HealthChecksProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -165,7 +165,7 @@ export function dataTfRoute53HealthChecksHealthChecksPropertyToHclTerraform(stru
 }
 
 
-export namespace DataTfRoute53HealthChecks {
+export namespace DataAwsRoute53HealthChecks {
 export interface HealthChecksProperty {
 }
 export class HealthChecksPropertyOutputReference extends cdktn.ComplexObject {

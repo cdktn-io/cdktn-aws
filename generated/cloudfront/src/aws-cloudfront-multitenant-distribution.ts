@@ -5,97 +5,97 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfMultitenantDistributionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsMultitenantDistributionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#comment TfMultitenantDistribution#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#comment AwsMultitenantDistribution#comment}
   */
   readonly comment: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#default_root_object TfMultitenantDistribution#default_root_object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#default_root_object AwsMultitenantDistribution#default_root_object}
   */
   readonly defaultRootObject?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#enabled TfMultitenantDistribution#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#enabled AwsMultitenantDistribution#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#http_version TfMultitenantDistribution#http_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#http_version AwsMultitenantDistribution#http_version}
   */
   readonly httpVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#tags TfMultitenantDistribution#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#tags AwsMultitenantDistribution#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#web_acl_id TfMultitenantDistribution#web_acl_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#web_acl_id AwsMultitenantDistribution#web_acl_id}
   */
   readonly webAclId?: string;
   /**
   * active_trusted_key_groups block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#active_trusted_key_groups TfMultitenantDistribution#active_trusted_key_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#active_trusted_key_groups AwsMultitenantDistribution#active_trusted_key_groups}
   */
-  readonly activeTrustedKeyGroups?: TfMultitenantDistribution.ActiveTrustedKeyGroupsProperty[] | cdktn.IResolvable;
+  readonly activeTrustedKeyGroups?: AwsMultitenantDistribution.ActiveTrustedKeyGroupsProperty[] | cdktn.IResolvable;
   /**
   * cache_behavior block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#cache_behavior TfMultitenantDistribution#cache_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#cache_behavior AwsMultitenantDistribution#cache_behavior}
   */
-  readonly cacheBehavior?: TfMultitenantDistribution.CacheBehaviorProperty[] | cdktn.IResolvable;
+  readonly cacheBehavior?: AwsMultitenantDistribution.CacheBehaviorProperty[] | cdktn.IResolvable;
   /**
   * custom_error_response block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#custom_error_response TfMultitenantDistribution#custom_error_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#custom_error_response AwsMultitenantDistribution#custom_error_response}
   */
-  readonly customErrorResponse?: TfMultitenantDistribution.CustomErrorResponseProperty[] | cdktn.IResolvable;
+  readonly customErrorResponse?: AwsMultitenantDistribution.CustomErrorResponseProperty[] | cdktn.IResolvable;
   /**
   * default_cache_behavior block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#default_cache_behavior TfMultitenantDistribution#default_cache_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#default_cache_behavior AwsMultitenantDistribution#default_cache_behavior}
   */
-  readonly defaultCacheBehavior?: TfMultitenantDistribution.DefaultCacheBehaviorProperty[] | cdktn.IResolvable;
+  readonly defaultCacheBehavior?: AwsMultitenantDistribution.DefaultCacheBehaviorProperty[] | cdktn.IResolvable;
   /**
   * origin block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin TfMultitenantDistribution#origin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin AwsMultitenantDistribution#origin}
   */
-  readonly origin?: TfMultitenantDistribution.OriginProperty[] | cdktn.IResolvable;
+  readonly origin?: AwsMultitenantDistribution.OriginProperty[] | cdktn.IResolvable;
   /**
   * origin_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_group TfMultitenantDistribution#origin_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_group AwsMultitenantDistribution#origin_group}
   */
-  readonly originGroup?: TfMultitenantDistribution.OriginGroupProperty[] | cdktn.IResolvable;
+  readonly originGroup?: AwsMultitenantDistribution.OriginGroupProperty[] | cdktn.IResolvable;
   /**
   * restrictions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#restrictions TfMultitenantDistribution#restrictions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#restrictions AwsMultitenantDistribution#restrictions}
   */
-  readonly restrictions?: TfMultitenantDistribution.RestrictionsProperty[] | cdktn.IResolvable;
+  readonly restrictions?: AwsMultitenantDistribution.RestrictionsProperty[] | cdktn.IResolvable;
   /**
   * tenant_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#tenant_config TfMultitenantDistribution#tenant_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#tenant_config AwsMultitenantDistribution#tenant_config}
   */
-  readonly tenantConfig?: TfMultitenantDistribution.TenantConfigProperty[] | cdktn.IResolvable;
+  readonly tenantConfig?: AwsMultitenantDistribution.TenantConfigProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#timeouts TfMultitenantDistribution#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#timeouts AwsMultitenantDistribution#timeouts}
   */
-  readonly timeouts?: TfMultitenantDistribution.TimeoutsProperty;
+  readonly timeouts?: AwsMultitenantDistribution.TimeoutsProperty;
   /**
   * viewer_certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#viewer_certificate TfMultitenantDistribution#viewer_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#viewer_certificate AwsMultitenantDistribution#viewer_certificate}
   */
-  readonly viewerCertificate?: TfMultitenantDistribution.ViewerCertificateProperty[] | cdktn.IResolvable;
+  readonly viewerCertificate?: AwsMultitenantDistribution.ViewerCertificateProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution aws_cloudfront_multitenant_distribution}
 */
-export class TfMultitenantDistribution extends cdktn.TerraformResource {
+export class AwsMultitenantDistribution extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -106,11 +106,11 @@ export class TfMultitenantDistribution extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfMultitenantDistribution resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsMultitenantDistribution resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfMultitenantDistribution to import
-  * @param importFromId The id of the existing TfMultitenantDistribution that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfMultitenantDistribution to import is found
+  * @param importToId The construct id used in the generated config for the AwsMultitenantDistribution to import
+  * @param importFromId The id of the existing AwsMultitenantDistribution that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMultitenantDistribution to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_multitenant_distribution", importId: importFromId, provider });
@@ -125,9 +125,9 @@ export class TfMultitenantDistribution extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfMultitenantDistributionConfig
+  * @param options AwsMultitenantDistributionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfMultitenantDistributionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsMultitenantDistributionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_multitenant_distribution',
       terraformGeneratorMetadata: {
@@ -307,11 +307,11 @@ export class TfMultitenantDistribution extends cdktn.TerraformResource {
   }
 
   // active_trusted_key_groups - computed: false, optional: true, required: false
-  private _activeTrustedKeyGroups = new TfMultitenantDistribution.ActiveTrustedKeyGroupsPropertyList(this, "active_trusted_key_groups", false);
+  private _activeTrustedKeyGroups = new AwsMultitenantDistribution.ActiveTrustedKeyGroupsPropertyList(this, "active_trusted_key_groups", false);
   public get activeTrustedKeyGroups() {
     return this._activeTrustedKeyGroups;
   }
-  public putActiveTrustedKeyGroups(value: TfMultitenantDistribution.ActiveTrustedKeyGroupsProperty[] | cdktn.IResolvable) {
+  public putActiveTrustedKeyGroups(value: AwsMultitenantDistribution.ActiveTrustedKeyGroupsProperty[] | cdktn.IResolvable) {
     this._activeTrustedKeyGroups.internalValue = value;
   }
   public resetActiveTrustedKeyGroups() {
@@ -323,11 +323,11 @@ export class TfMultitenantDistribution extends cdktn.TerraformResource {
   }
 
   // cache_behavior - computed: false, optional: true, required: false
-  private _cacheBehavior = new TfMultitenantDistribution.CacheBehaviorPropertyList(this, "cache_behavior", false);
+  private _cacheBehavior = new AwsMultitenantDistribution.CacheBehaviorPropertyList(this, "cache_behavior", false);
   public get cacheBehavior() {
     return this._cacheBehavior;
   }
-  public putCacheBehavior(value: TfMultitenantDistribution.CacheBehaviorProperty[] | cdktn.IResolvable) {
+  public putCacheBehavior(value: AwsMultitenantDistribution.CacheBehaviorProperty[] | cdktn.IResolvable) {
     this._cacheBehavior.internalValue = value;
   }
   public resetCacheBehavior() {
@@ -339,11 +339,11 @@ export class TfMultitenantDistribution extends cdktn.TerraformResource {
   }
 
   // custom_error_response - computed: false, optional: true, required: false
-  private _customErrorResponse = new TfMultitenantDistribution.CustomErrorResponsePropertyList(this, "custom_error_response", false);
+  private _customErrorResponse = new AwsMultitenantDistribution.CustomErrorResponsePropertyList(this, "custom_error_response", false);
   public get customErrorResponse() {
     return this._customErrorResponse;
   }
-  public putCustomErrorResponse(value: TfMultitenantDistribution.CustomErrorResponseProperty[] | cdktn.IResolvable) {
+  public putCustomErrorResponse(value: AwsMultitenantDistribution.CustomErrorResponseProperty[] | cdktn.IResolvable) {
     this._customErrorResponse.internalValue = value;
   }
   public resetCustomErrorResponse() {
@@ -355,11 +355,11 @@ export class TfMultitenantDistribution extends cdktn.TerraformResource {
   }
 
   // default_cache_behavior - computed: false, optional: true, required: false
-  private _defaultCacheBehavior = new TfMultitenantDistribution.DefaultCacheBehaviorPropertyList(this, "default_cache_behavior", false);
+  private _defaultCacheBehavior = new AwsMultitenantDistribution.DefaultCacheBehaviorPropertyList(this, "default_cache_behavior", false);
   public get defaultCacheBehavior() {
     return this._defaultCacheBehavior;
   }
-  public putDefaultCacheBehavior(value: TfMultitenantDistribution.DefaultCacheBehaviorProperty[] | cdktn.IResolvable) {
+  public putDefaultCacheBehavior(value: AwsMultitenantDistribution.DefaultCacheBehaviorProperty[] | cdktn.IResolvable) {
     this._defaultCacheBehavior.internalValue = value;
   }
   public resetDefaultCacheBehavior() {
@@ -371,11 +371,11 @@ export class TfMultitenantDistribution extends cdktn.TerraformResource {
   }
 
   // origin - computed: false, optional: true, required: false
-  private _origin = new TfMultitenantDistribution.OriginPropertyList(this, "origin", true);
+  private _origin = new AwsMultitenantDistribution.OriginPropertyList(this, "origin", true);
   public get origin() {
     return this._origin;
   }
-  public putOrigin(value: TfMultitenantDistribution.OriginProperty[] | cdktn.IResolvable) {
+  public putOrigin(value: AwsMultitenantDistribution.OriginProperty[] | cdktn.IResolvable) {
     this._origin.internalValue = value;
   }
   public resetOrigin() {
@@ -387,11 +387,11 @@ export class TfMultitenantDistribution extends cdktn.TerraformResource {
   }
 
   // origin_group - computed: false, optional: true, required: false
-  private _originGroup = new TfMultitenantDistribution.OriginGroupPropertyList(this, "origin_group", false);
+  private _originGroup = new AwsMultitenantDistribution.OriginGroupPropertyList(this, "origin_group", false);
   public get originGroup() {
     return this._originGroup;
   }
-  public putOriginGroup(value: TfMultitenantDistribution.OriginGroupProperty[] | cdktn.IResolvable) {
+  public putOriginGroup(value: AwsMultitenantDistribution.OriginGroupProperty[] | cdktn.IResolvable) {
     this._originGroup.internalValue = value;
   }
   public resetOriginGroup() {
@@ -403,11 +403,11 @@ export class TfMultitenantDistribution extends cdktn.TerraformResource {
   }
 
   // restrictions - computed: false, optional: true, required: false
-  private _restrictions = new TfMultitenantDistribution.RestrictionsPropertyList(this, "restrictions", false);
+  private _restrictions = new AwsMultitenantDistribution.RestrictionsPropertyList(this, "restrictions", false);
   public get restrictions() {
     return this._restrictions;
   }
-  public putRestrictions(value: TfMultitenantDistribution.RestrictionsProperty[] | cdktn.IResolvable) {
+  public putRestrictions(value: AwsMultitenantDistribution.RestrictionsProperty[] | cdktn.IResolvable) {
     this._restrictions.internalValue = value;
   }
   public resetRestrictions() {
@@ -419,11 +419,11 @@ export class TfMultitenantDistribution extends cdktn.TerraformResource {
   }
 
   // tenant_config - computed: false, optional: true, required: false
-  private _tenantConfig = new TfMultitenantDistribution.TenantConfigPropertyList(this, "tenant_config", false);
+  private _tenantConfig = new AwsMultitenantDistribution.TenantConfigPropertyList(this, "tenant_config", false);
   public get tenantConfig() {
     return this._tenantConfig;
   }
-  public putTenantConfig(value: TfMultitenantDistribution.TenantConfigProperty[] | cdktn.IResolvable) {
+  public putTenantConfig(value: AwsMultitenantDistribution.TenantConfigProperty[] | cdktn.IResolvable) {
     this._tenantConfig.internalValue = value;
   }
   public resetTenantConfig() {
@@ -435,11 +435,11 @@ export class TfMultitenantDistribution extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfMultitenantDistribution.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsMultitenantDistribution.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfMultitenantDistribution.TimeoutsProperty) {
+  public putTimeouts(value: AwsMultitenantDistribution.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -451,11 +451,11 @@ export class TfMultitenantDistribution extends cdktn.TerraformResource {
   }
 
   // viewer_certificate - computed: false, optional: true, required: false
-  private _viewerCertificate = new TfMultitenantDistribution.ViewerCertificatePropertyList(this, "viewer_certificate", false);
+  private _viewerCertificate = new AwsMultitenantDistribution.ViewerCertificatePropertyList(this, "viewer_certificate", false);
   public get viewerCertificate() {
     return this._viewerCertificate;
   }
-  public putViewerCertificate(value: TfMultitenantDistribution.ViewerCertificateProperty[] | cdktn.IResolvable) {
+  public putViewerCertificate(value: AwsMultitenantDistribution.ViewerCertificateProperty[] | cdktn.IResolvable) {
     this._viewerCertificate.internalValue = value;
   }
   public resetViewerCertificate() {
@@ -478,16 +478,16 @@ export class TfMultitenantDistribution extends cdktn.TerraformResource {
       http_version: cdktn.stringToTerraform(this._httpVersion),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       web_acl_id: cdktn.stringToTerraform(this._webAclId),
-      active_trusted_key_groups: cdktn.listMapper(tfMultitenantDistributionActiveTrustedKeyGroupsPropertyToTerraform, true)(this._activeTrustedKeyGroups.internalValue),
-      cache_behavior: cdktn.listMapper(tfMultitenantDistributionCacheBehaviorPropertyToTerraform, true)(this._cacheBehavior.internalValue),
-      custom_error_response: cdktn.listMapper(tfMultitenantDistributionCustomErrorResponsePropertyToTerraform, true)(this._customErrorResponse.internalValue),
-      default_cache_behavior: cdktn.listMapper(tfMultitenantDistributionDefaultCacheBehaviorPropertyToTerraform, true)(this._defaultCacheBehavior.internalValue),
-      origin: cdktn.listMapper(tfMultitenantDistributionOriginPropertyToTerraform, true)(this._origin.internalValue),
-      origin_group: cdktn.listMapper(tfMultitenantDistributionOriginGroupPropertyToTerraform, true)(this._originGroup.internalValue),
-      restrictions: cdktn.listMapper(tfMultitenantDistributionRestrictionsPropertyToTerraform, true)(this._restrictions.internalValue),
-      tenant_config: cdktn.listMapper(tfMultitenantDistributionTenantConfigPropertyToTerraform, true)(this._tenantConfig.internalValue),
-      timeouts: tfMultitenantDistributionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      viewer_certificate: cdktn.listMapper(tfMultitenantDistributionViewerCertificatePropertyToTerraform, true)(this._viewerCertificate.internalValue),
+      active_trusted_key_groups: cdktn.listMapper(awsMultitenantDistributionActiveTrustedKeyGroupsPropertyToTerraform, true)(this._activeTrustedKeyGroups.internalValue),
+      cache_behavior: cdktn.listMapper(awsMultitenantDistributionCacheBehaviorPropertyToTerraform, true)(this._cacheBehavior.internalValue),
+      custom_error_response: cdktn.listMapper(awsMultitenantDistributionCustomErrorResponsePropertyToTerraform, true)(this._customErrorResponse.internalValue),
+      default_cache_behavior: cdktn.listMapper(awsMultitenantDistributionDefaultCacheBehaviorPropertyToTerraform, true)(this._defaultCacheBehavior.internalValue),
+      origin: cdktn.listMapper(awsMultitenantDistributionOriginPropertyToTerraform, true)(this._origin.internalValue),
+      origin_group: cdktn.listMapper(awsMultitenantDistributionOriginGroupPropertyToTerraform, true)(this._originGroup.internalValue),
+      restrictions: cdktn.listMapper(awsMultitenantDistributionRestrictionsPropertyToTerraform, true)(this._restrictions.internalValue),
+      tenant_config: cdktn.listMapper(awsMultitenantDistributionTenantConfigPropertyToTerraform, true)(this._tenantConfig.internalValue),
+      timeouts: awsMultitenantDistributionTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      viewer_certificate: cdktn.listMapper(awsMultitenantDistributionViewerCertificatePropertyToTerraform, true)(this._viewerCertificate.internalValue),
     };
   }
 
@@ -530,64 +530,64 @@ export class TfMultitenantDistribution extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       active_trusted_key_groups: {
-        value: cdktn.listMapperHcl(tfMultitenantDistributionActiveTrustedKeyGroupsPropertyToHclTerraform, true)(this._activeTrustedKeyGroups.internalValue),
+        value: cdktn.listMapperHcl(awsMultitenantDistributionActiveTrustedKeyGroupsPropertyToHclTerraform, true)(this._activeTrustedKeyGroups.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMultitenantDistribution.ActiveTrustedKeyGroupsPropertyList",
+        storageClassType: "AwsMultitenantDistribution.ActiveTrustedKeyGroupsPropertyList",
       },
       cache_behavior: {
-        value: cdktn.listMapperHcl(tfMultitenantDistributionCacheBehaviorPropertyToHclTerraform, true)(this._cacheBehavior.internalValue),
+        value: cdktn.listMapperHcl(awsMultitenantDistributionCacheBehaviorPropertyToHclTerraform, true)(this._cacheBehavior.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMultitenantDistribution.CacheBehaviorPropertyList",
+        storageClassType: "AwsMultitenantDistribution.CacheBehaviorPropertyList",
       },
       custom_error_response: {
-        value: cdktn.listMapperHcl(tfMultitenantDistributionCustomErrorResponsePropertyToHclTerraform, true)(this._customErrorResponse.internalValue),
+        value: cdktn.listMapperHcl(awsMultitenantDistributionCustomErrorResponsePropertyToHclTerraform, true)(this._customErrorResponse.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMultitenantDistribution.CustomErrorResponsePropertyList",
+        storageClassType: "AwsMultitenantDistribution.CustomErrorResponsePropertyList",
       },
       default_cache_behavior: {
-        value: cdktn.listMapperHcl(tfMultitenantDistributionDefaultCacheBehaviorPropertyToHclTerraform, true)(this._defaultCacheBehavior.internalValue),
+        value: cdktn.listMapperHcl(awsMultitenantDistributionDefaultCacheBehaviorPropertyToHclTerraform, true)(this._defaultCacheBehavior.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMultitenantDistribution.DefaultCacheBehaviorPropertyList",
+        storageClassType: "AwsMultitenantDistribution.DefaultCacheBehaviorPropertyList",
       },
       origin: {
-        value: cdktn.listMapperHcl(tfMultitenantDistributionOriginPropertyToHclTerraform, true)(this._origin.internalValue),
+        value: cdktn.listMapperHcl(awsMultitenantDistributionOriginPropertyToHclTerraform, true)(this._origin.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfMultitenantDistribution.OriginPropertyList",
+        storageClassType: "AwsMultitenantDistribution.OriginPropertyList",
       },
       origin_group: {
-        value: cdktn.listMapperHcl(tfMultitenantDistributionOriginGroupPropertyToHclTerraform, true)(this._originGroup.internalValue),
+        value: cdktn.listMapperHcl(awsMultitenantDistributionOriginGroupPropertyToHclTerraform, true)(this._originGroup.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMultitenantDistribution.OriginGroupPropertyList",
+        storageClassType: "AwsMultitenantDistribution.OriginGroupPropertyList",
       },
       restrictions: {
-        value: cdktn.listMapperHcl(tfMultitenantDistributionRestrictionsPropertyToHclTerraform, true)(this._restrictions.internalValue),
+        value: cdktn.listMapperHcl(awsMultitenantDistributionRestrictionsPropertyToHclTerraform, true)(this._restrictions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMultitenantDistribution.RestrictionsPropertyList",
+        storageClassType: "AwsMultitenantDistribution.RestrictionsPropertyList",
       },
       tenant_config: {
-        value: cdktn.listMapperHcl(tfMultitenantDistributionTenantConfigPropertyToHclTerraform, true)(this._tenantConfig.internalValue),
+        value: cdktn.listMapperHcl(awsMultitenantDistributionTenantConfigPropertyToHclTerraform, true)(this._tenantConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMultitenantDistribution.TenantConfigPropertyList",
+        storageClassType: "AwsMultitenantDistribution.TenantConfigPropertyList",
       },
       timeouts: {
-        value: tfMultitenantDistributionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsMultitenantDistributionTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfMultitenantDistribution.TimeoutsProperty",
+        storageClassType: "AwsMultitenantDistribution.TimeoutsProperty",
       },
       viewer_certificate: {
-        value: cdktn.listMapperHcl(tfMultitenantDistributionViewerCertificatePropertyToHclTerraform, true)(this._viewerCertificate.internalValue),
+        value: cdktn.listMapperHcl(awsMultitenantDistributionViewerCertificatePropertyToHclTerraform, true)(this._viewerCertificate.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfMultitenantDistribution.ViewerCertificatePropertyList",
+        storageClassType: "AwsMultitenantDistribution.ViewerCertificatePropertyList",
       },
     };
 
@@ -596,7 +596,7 @@ export class TfMultitenantDistribution extends cdktn.TerraformResource {
   }
 }
 
-export function tfMultitenantDistributionItemsPropertyToTerraform(struct?: TfMultitenantDistribution.ItemsProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionItemsPropertyToTerraform(struct?: AwsMultitenantDistribution.ItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -606,7 +606,7 @@ export function tfMultitenantDistributionItemsPropertyToTerraform(struct?: TfMul
 }
 
 
-export function tfMultitenantDistributionItemsPropertyToHclTerraform(struct?: TfMultitenantDistribution.ItemsProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionItemsPropertyToHclTerraform(struct?: AwsMultitenantDistribution.ItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -617,25 +617,25 @@ export function tfMultitenantDistributionItemsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfMultitenantDistributionActiveTrustedKeyGroupsPropertyToTerraform(struct?: TfMultitenantDistribution.ActiveTrustedKeyGroupsProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionActiveTrustedKeyGroupsPropertyToTerraform(struct?: AwsMultitenantDistribution.ActiveTrustedKeyGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    items: cdktn.listMapper(tfMultitenantDistributionItemsPropertyToTerraform, true)(struct!.items),
+    items: cdktn.listMapper(awsMultitenantDistributionItemsPropertyToTerraform, true)(struct!.items),
   }
 }
 
 
-export function tfMultitenantDistributionActiveTrustedKeyGroupsPropertyToHclTerraform(struct?: TfMultitenantDistribution.ActiveTrustedKeyGroupsProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionActiveTrustedKeyGroupsPropertyToHclTerraform(struct?: AwsMultitenantDistribution.ActiveTrustedKeyGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     items: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionItemsPropertyToHclTerraform, true)(struct!.items),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionItemsPropertyToHclTerraform, true)(struct!.items),
       isBlock: true,
       type: "list",
       storageClassType: "ItemsPropertyList",
@@ -647,7 +647,7 @@ export function tfMultitenantDistributionActiveTrustedKeyGroupsPropertyToHclTerr
 }
 
 
-export function tfMultitenantDistributionCacheBehaviorAllowedMethodsPropertyToTerraform(struct?: TfMultitenantDistribution.CacheBehaviorAllowedMethodsProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionCacheBehaviorAllowedMethodsPropertyToTerraform(struct?: AwsMultitenantDistribution.CacheBehaviorAllowedMethodsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -659,7 +659,7 @@ export function tfMultitenantDistributionCacheBehaviorAllowedMethodsPropertyToTe
 }
 
 
-export function tfMultitenantDistributionCacheBehaviorAllowedMethodsPropertyToHclTerraform(struct?: TfMultitenantDistribution.CacheBehaviorAllowedMethodsProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionCacheBehaviorAllowedMethodsPropertyToHclTerraform(struct?: AwsMultitenantDistribution.CacheBehaviorAllowedMethodsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -684,7 +684,7 @@ export function tfMultitenantDistributionCacheBehaviorAllowedMethodsPropertyToHc
 }
 
 
-export function tfMultitenantDistributionCacheBehaviorFunctionAssociationPropertyToTerraform(struct?: TfMultitenantDistribution.CacheBehaviorFunctionAssociationProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionCacheBehaviorFunctionAssociationPropertyToTerraform(struct?: AwsMultitenantDistribution.CacheBehaviorFunctionAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -696,7 +696,7 @@ export function tfMultitenantDistributionCacheBehaviorFunctionAssociationPropert
 }
 
 
-export function tfMultitenantDistributionCacheBehaviorFunctionAssociationPropertyToHclTerraform(struct?: TfMultitenantDistribution.CacheBehaviorFunctionAssociationProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionCacheBehaviorFunctionAssociationPropertyToHclTerraform(struct?: AwsMultitenantDistribution.CacheBehaviorFunctionAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -721,7 +721,7 @@ export function tfMultitenantDistributionCacheBehaviorFunctionAssociationPropert
 }
 
 
-export function tfMultitenantDistributionCacheBehaviorLambdaFunctionAssociationPropertyToTerraform(struct?: TfMultitenantDistribution.CacheBehaviorLambdaFunctionAssociationProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionCacheBehaviorLambdaFunctionAssociationPropertyToTerraform(struct?: AwsMultitenantDistribution.CacheBehaviorLambdaFunctionAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -734,7 +734,7 @@ export function tfMultitenantDistributionCacheBehaviorLambdaFunctionAssociationP
 }
 
 
-export function tfMultitenantDistributionCacheBehaviorLambdaFunctionAssociationPropertyToHclTerraform(struct?: TfMultitenantDistribution.CacheBehaviorLambdaFunctionAssociationProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionCacheBehaviorLambdaFunctionAssociationPropertyToHclTerraform(struct?: AwsMultitenantDistribution.CacheBehaviorLambdaFunctionAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -765,7 +765,7 @@ export function tfMultitenantDistributionCacheBehaviorLambdaFunctionAssociationP
 }
 
 
-export function tfMultitenantDistributionCacheBehaviorTrustedKeyGroupsPropertyToTerraform(struct?: TfMultitenantDistribution.CacheBehaviorTrustedKeyGroupsProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionCacheBehaviorTrustedKeyGroupsPropertyToTerraform(struct?: AwsMultitenantDistribution.CacheBehaviorTrustedKeyGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -777,7 +777,7 @@ export function tfMultitenantDistributionCacheBehaviorTrustedKeyGroupsPropertyTo
 }
 
 
-export function tfMultitenantDistributionCacheBehaviorTrustedKeyGroupsPropertyToHclTerraform(struct?: TfMultitenantDistribution.CacheBehaviorTrustedKeyGroupsProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionCacheBehaviorTrustedKeyGroupsPropertyToHclTerraform(struct?: AwsMultitenantDistribution.CacheBehaviorTrustedKeyGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -802,7 +802,7 @@ export function tfMultitenantDistributionCacheBehaviorTrustedKeyGroupsPropertyTo
 }
 
 
-export function tfMultitenantDistributionCacheBehaviorPropertyToTerraform(struct?: TfMultitenantDistribution.CacheBehaviorProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionCacheBehaviorPropertyToTerraform(struct?: AwsMultitenantDistribution.CacheBehaviorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -817,15 +817,15 @@ export function tfMultitenantDistributionCacheBehaviorPropertyToTerraform(struct
     response_headers_policy_id: cdktn.stringToTerraform(struct!.responseHeadersPolicyId),
     target_origin_id: cdktn.stringToTerraform(struct!.targetOriginId),
     viewer_protocol_policy: cdktn.stringToTerraform(struct!.viewerProtocolPolicy),
-    allowed_methods: cdktn.listMapper(tfMultitenantDistributionCacheBehaviorAllowedMethodsPropertyToTerraform, true)(struct!.allowedMethods),
-    function_association: cdktn.listMapper(tfMultitenantDistributionCacheBehaviorFunctionAssociationPropertyToTerraform, true)(struct!.functionAssociation),
-    lambda_function_association: cdktn.listMapper(tfMultitenantDistributionCacheBehaviorLambdaFunctionAssociationPropertyToTerraform, true)(struct!.lambdaFunctionAssociation),
-    trusted_key_groups: cdktn.listMapper(tfMultitenantDistributionCacheBehaviorTrustedKeyGroupsPropertyToTerraform, true)(struct!.trustedKeyGroups),
+    allowed_methods: cdktn.listMapper(awsMultitenantDistributionCacheBehaviorAllowedMethodsPropertyToTerraform, true)(struct!.allowedMethods),
+    function_association: cdktn.listMapper(awsMultitenantDistributionCacheBehaviorFunctionAssociationPropertyToTerraform, true)(struct!.functionAssociation),
+    lambda_function_association: cdktn.listMapper(awsMultitenantDistributionCacheBehaviorLambdaFunctionAssociationPropertyToTerraform, true)(struct!.lambdaFunctionAssociation),
+    trusted_key_groups: cdktn.listMapper(awsMultitenantDistributionCacheBehaviorTrustedKeyGroupsPropertyToTerraform, true)(struct!.trustedKeyGroups),
   }
 }
 
 
-export function tfMultitenantDistributionCacheBehaviorPropertyToHclTerraform(struct?: TfMultitenantDistribution.CacheBehaviorProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionCacheBehaviorPropertyToHclTerraform(struct?: AwsMultitenantDistribution.CacheBehaviorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -886,25 +886,25 @@ export function tfMultitenantDistributionCacheBehaviorPropertyToHclTerraform(str
       storageClassType: "string",
     },
     allowed_methods: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionCacheBehaviorAllowedMethodsPropertyToHclTerraform, true)(struct!.allowedMethods),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionCacheBehaviorAllowedMethodsPropertyToHclTerraform, true)(struct!.allowedMethods),
       isBlock: true,
       type: "list",
       storageClassType: "CacheBehaviorAllowedMethodsPropertyList",
     },
     function_association: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionCacheBehaviorFunctionAssociationPropertyToHclTerraform, true)(struct!.functionAssociation),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionCacheBehaviorFunctionAssociationPropertyToHclTerraform, true)(struct!.functionAssociation),
       isBlock: true,
       type: "set",
       storageClassType: "CacheBehaviorFunctionAssociationPropertyList",
     },
     lambda_function_association: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionCacheBehaviorLambdaFunctionAssociationPropertyToHclTerraform, true)(struct!.lambdaFunctionAssociation),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionCacheBehaviorLambdaFunctionAssociationPropertyToHclTerraform, true)(struct!.lambdaFunctionAssociation),
       isBlock: true,
       type: "set",
       storageClassType: "CacheBehaviorLambdaFunctionAssociationPropertyList",
     },
     trusted_key_groups: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionCacheBehaviorTrustedKeyGroupsPropertyToHclTerraform, true)(struct!.trustedKeyGroups),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionCacheBehaviorTrustedKeyGroupsPropertyToHclTerraform, true)(struct!.trustedKeyGroups),
       isBlock: true,
       type: "list",
       storageClassType: "CacheBehaviorTrustedKeyGroupsPropertyList",
@@ -916,7 +916,7 @@ export function tfMultitenantDistributionCacheBehaviorPropertyToHclTerraform(str
 }
 
 
-export function tfMultitenantDistributionCustomErrorResponsePropertyToTerraform(struct?: TfMultitenantDistribution.CustomErrorResponseProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionCustomErrorResponsePropertyToTerraform(struct?: AwsMultitenantDistribution.CustomErrorResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -930,7 +930,7 @@ export function tfMultitenantDistributionCustomErrorResponsePropertyToTerraform(
 }
 
 
-export function tfMultitenantDistributionCustomErrorResponsePropertyToHclTerraform(struct?: TfMultitenantDistribution.CustomErrorResponseProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionCustomErrorResponsePropertyToHclTerraform(struct?: AwsMultitenantDistribution.CustomErrorResponseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -967,7 +967,7 @@ export function tfMultitenantDistributionCustomErrorResponsePropertyToHclTerrafo
 }
 
 
-export function tfMultitenantDistributionDefaultCacheBehaviorAllowedMethodsPropertyToTerraform(struct?: TfMultitenantDistribution.DefaultCacheBehaviorAllowedMethodsProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionDefaultCacheBehaviorAllowedMethodsPropertyToTerraform(struct?: AwsMultitenantDistribution.DefaultCacheBehaviorAllowedMethodsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -979,7 +979,7 @@ export function tfMultitenantDistributionDefaultCacheBehaviorAllowedMethodsPrope
 }
 
 
-export function tfMultitenantDistributionDefaultCacheBehaviorAllowedMethodsPropertyToHclTerraform(struct?: TfMultitenantDistribution.DefaultCacheBehaviorAllowedMethodsProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionDefaultCacheBehaviorAllowedMethodsPropertyToHclTerraform(struct?: AwsMultitenantDistribution.DefaultCacheBehaviorAllowedMethodsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1004,7 +1004,7 @@ export function tfMultitenantDistributionDefaultCacheBehaviorAllowedMethodsPrope
 }
 
 
-export function tfMultitenantDistributionDefaultCacheBehaviorFunctionAssociationPropertyToTerraform(struct?: TfMultitenantDistribution.DefaultCacheBehaviorFunctionAssociationProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionDefaultCacheBehaviorFunctionAssociationPropertyToTerraform(struct?: AwsMultitenantDistribution.DefaultCacheBehaviorFunctionAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1016,7 +1016,7 @@ export function tfMultitenantDistributionDefaultCacheBehaviorFunctionAssociation
 }
 
 
-export function tfMultitenantDistributionDefaultCacheBehaviorFunctionAssociationPropertyToHclTerraform(struct?: TfMultitenantDistribution.DefaultCacheBehaviorFunctionAssociationProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionDefaultCacheBehaviorFunctionAssociationPropertyToHclTerraform(struct?: AwsMultitenantDistribution.DefaultCacheBehaviorFunctionAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1041,7 +1041,7 @@ export function tfMultitenantDistributionDefaultCacheBehaviorFunctionAssociation
 }
 
 
-export function tfMultitenantDistributionDefaultCacheBehaviorLambdaFunctionAssociationPropertyToTerraform(struct?: TfMultitenantDistribution.DefaultCacheBehaviorLambdaFunctionAssociationProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionDefaultCacheBehaviorLambdaFunctionAssociationPropertyToTerraform(struct?: AwsMultitenantDistribution.DefaultCacheBehaviorLambdaFunctionAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1054,7 +1054,7 @@ export function tfMultitenantDistributionDefaultCacheBehaviorLambdaFunctionAssoc
 }
 
 
-export function tfMultitenantDistributionDefaultCacheBehaviorLambdaFunctionAssociationPropertyToHclTerraform(struct?: TfMultitenantDistribution.DefaultCacheBehaviorLambdaFunctionAssociationProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionDefaultCacheBehaviorLambdaFunctionAssociationPropertyToHclTerraform(struct?: AwsMultitenantDistribution.DefaultCacheBehaviorLambdaFunctionAssociationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1085,7 +1085,7 @@ export function tfMultitenantDistributionDefaultCacheBehaviorLambdaFunctionAssoc
 }
 
 
-export function tfMultitenantDistributionDefaultCacheBehaviorTrustedKeyGroupsPropertyToTerraform(struct?: TfMultitenantDistribution.DefaultCacheBehaviorTrustedKeyGroupsProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionDefaultCacheBehaviorTrustedKeyGroupsPropertyToTerraform(struct?: AwsMultitenantDistribution.DefaultCacheBehaviorTrustedKeyGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1097,7 +1097,7 @@ export function tfMultitenantDistributionDefaultCacheBehaviorTrustedKeyGroupsPro
 }
 
 
-export function tfMultitenantDistributionDefaultCacheBehaviorTrustedKeyGroupsPropertyToHclTerraform(struct?: TfMultitenantDistribution.DefaultCacheBehaviorTrustedKeyGroupsProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionDefaultCacheBehaviorTrustedKeyGroupsPropertyToHclTerraform(struct?: AwsMultitenantDistribution.DefaultCacheBehaviorTrustedKeyGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1122,7 +1122,7 @@ export function tfMultitenantDistributionDefaultCacheBehaviorTrustedKeyGroupsPro
 }
 
 
-export function tfMultitenantDistributionDefaultCacheBehaviorPropertyToTerraform(struct?: TfMultitenantDistribution.DefaultCacheBehaviorProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionDefaultCacheBehaviorPropertyToTerraform(struct?: AwsMultitenantDistribution.DefaultCacheBehaviorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1136,15 +1136,15 @@ export function tfMultitenantDistributionDefaultCacheBehaviorPropertyToTerraform
     response_headers_policy_id: cdktn.stringToTerraform(struct!.responseHeadersPolicyId),
     target_origin_id: cdktn.stringToTerraform(struct!.targetOriginId),
     viewer_protocol_policy: cdktn.stringToTerraform(struct!.viewerProtocolPolicy),
-    allowed_methods: cdktn.listMapper(tfMultitenantDistributionDefaultCacheBehaviorAllowedMethodsPropertyToTerraform, true)(struct!.allowedMethods),
-    function_association: cdktn.listMapper(tfMultitenantDistributionDefaultCacheBehaviorFunctionAssociationPropertyToTerraform, true)(struct!.functionAssociation),
-    lambda_function_association: cdktn.listMapper(tfMultitenantDistributionDefaultCacheBehaviorLambdaFunctionAssociationPropertyToTerraform, true)(struct!.lambdaFunctionAssociation),
-    trusted_key_groups: cdktn.listMapper(tfMultitenantDistributionDefaultCacheBehaviorTrustedKeyGroupsPropertyToTerraform, true)(struct!.trustedKeyGroups),
+    allowed_methods: cdktn.listMapper(awsMultitenantDistributionDefaultCacheBehaviorAllowedMethodsPropertyToTerraform, true)(struct!.allowedMethods),
+    function_association: cdktn.listMapper(awsMultitenantDistributionDefaultCacheBehaviorFunctionAssociationPropertyToTerraform, true)(struct!.functionAssociation),
+    lambda_function_association: cdktn.listMapper(awsMultitenantDistributionDefaultCacheBehaviorLambdaFunctionAssociationPropertyToTerraform, true)(struct!.lambdaFunctionAssociation),
+    trusted_key_groups: cdktn.listMapper(awsMultitenantDistributionDefaultCacheBehaviorTrustedKeyGroupsPropertyToTerraform, true)(struct!.trustedKeyGroups),
   }
 }
 
 
-export function tfMultitenantDistributionDefaultCacheBehaviorPropertyToHclTerraform(struct?: TfMultitenantDistribution.DefaultCacheBehaviorProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionDefaultCacheBehaviorPropertyToHclTerraform(struct?: AwsMultitenantDistribution.DefaultCacheBehaviorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1199,25 +1199,25 @@ export function tfMultitenantDistributionDefaultCacheBehaviorPropertyToHclTerraf
       storageClassType: "string",
     },
     allowed_methods: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionDefaultCacheBehaviorAllowedMethodsPropertyToHclTerraform, true)(struct!.allowedMethods),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionDefaultCacheBehaviorAllowedMethodsPropertyToHclTerraform, true)(struct!.allowedMethods),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultCacheBehaviorAllowedMethodsPropertyList",
     },
     function_association: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionDefaultCacheBehaviorFunctionAssociationPropertyToHclTerraform, true)(struct!.functionAssociation),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionDefaultCacheBehaviorFunctionAssociationPropertyToHclTerraform, true)(struct!.functionAssociation),
       isBlock: true,
       type: "set",
       storageClassType: "DefaultCacheBehaviorFunctionAssociationPropertyList",
     },
     lambda_function_association: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionDefaultCacheBehaviorLambdaFunctionAssociationPropertyToHclTerraform, true)(struct!.lambdaFunctionAssociation),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionDefaultCacheBehaviorLambdaFunctionAssociationPropertyToHclTerraform, true)(struct!.lambdaFunctionAssociation),
       isBlock: true,
       type: "set",
       storageClassType: "DefaultCacheBehaviorLambdaFunctionAssociationPropertyList",
     },
     trusted_key_groups: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionDefaultCacheBehaviorTrustedKeyGroupsPropertyToHclTerraform, true)(struct!.trustedKeyGroups),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionDefaultCacheBehaviorTrustedKeyGroupsPropertyToHclTerraform, true)(struct!.trustedKeyGroups),
       isBlock: true,
       type: "list",
       storageClassType: "DefaultCacheBehaviorTrustedKeyGroupsPropertyList",
@@ -1229,7 +1229,7 @@ export function tfMultitenantDistributionDefaultCacheBehaviorPropertyToHclTerraf
 }
 
 
-export function tfMultitenantDistributionCustomHeaderPropertyToTerraform(struct?: TfMultitenantDistribution.CustomHeaderProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionCustomHeaderPropertyToTerraform(struct?: AwsMultitenantDistribution.CustomHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1241,7 +1241,7 @@ export function tfMultitenantDistributionCustomHeaderPropertyToTerraform(struct?
 }
 
 
-export function tfMultitenantDistributionCustomHeaderPropertyToHclTerraform(struct?: TfMultitenantDistribution.CustomHeaderProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionCustomHeaderPropertyToHclTerraform(struct?: AwsMultitenantDistribution.CustomHeaderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1266,7 +1266,7 @@ export function tfMultitenantDistributionCustomHeaderPropertyToHclTerraform(stru
 }
 
 
-export function tfMultitenantDistributionOriginMtlsConfigPropertyToTerraform(struct?: TfMultitenantDistribution.OriginMtlsConfigProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionOriginMtlsConfigPropertyToTerraform(struct?: AwsMultitenantDistribution.OriginMtlsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1277,7 +1277,7 @@ export function tfMultitenantDistributionOriginMtlsConfigPropertyToTerraform(str
 }
 
 
-export function tfMultitenantDistributionOriginMtlsConfigPropertyToHclTerraform(struct?: TfMultitenantDistribution.OriginMtlsConfigProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionOriginMtlsConfigPropertyToHclTerraform(struct?: AwsMultitenantDistribution.OriginMtlsConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1296,7 +1296,7 @@ export function tfMultitenantDistributionOriginMtlsConfigPropertyToHclTerraform(
 }
 
 
-export function tfMultitenantDistributionCustomOriginConfigPropertyToTerraform(struct?: TfMultitenantDistribution.CustomOriginConfigProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionCustomOriginConfigPropertyToTerraform(struct?: AwsMultitenantDistribution.CustomOriginConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1309,12 +1309,12 @@ export function tfMultitenantDistributionCustomOriginConfigPropertyToTerraform(s
     origin_protocol_policy: cdktn.stringToTerraform(struct!.originProtocolPolicy),
     origin_read_timeout: cdktn.numberToTerraform(struct!.originReadTimeout),
     origin_ssl_protocols: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.originSslProtocols),
-    origin_mtls_config: cdktn.listMapper(tfMultitenantDistributionOriginMtlsConfigPropertyToTerraform, true)(struct!.originMtlsConfig),
+    origin_mtls_config: cdktn.listMapper(awsMultitenantDistributionOriginMtlsConfigPropertyToTerraform, true)(struct!.originMtlsConfig),
   }
 }
 
 
-export function tfMultitenantDistributionCustomOriginConfigPropertyToHclTerraform(struct?: TfMultitenantDistribution.CustomOriginConfigProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionCustomOriginConfigPropertyToHclTerraform(struct?: AwsMultitenantDistribution.CustomOriginConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1363,7 +1363,7 @@ export function tfMultitenantDistributionCustomOriginConfigPropertyToHclTerrafor
       storageClassType: "stringList",
     },
     origin_mtls_config: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionOriginMtlsConfigPropertyToHclTerraform, true)(struct!.originMtlsConfig),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionOriginMtlsConfigPropertyToHclTerraform, true)(struct!.originMtlsConfig),
       isBlock: true,
       type: "list",
       storageClassType: "OriginMtlsConfigPropertyList",
@@ -1375,7 +1375,7 @@ export function tfMultitenantDistributionCustomOriginConfigPropertyToHclTerrafor
 }
 
 
-export function tfMultitenantDistributionOriginShieldPropertyToTerraform(struct?: TfMultitenantDistribution.OriginShieldProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionOriginShieldPropertyToTerraform(struct?: AwsMultitenantDistribution.OriginShieldProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1387,7 +1387,7 @@ export function tfMultitenantDistributionOriginShieldPropertyToTerraform(struct?
 }
 
 
-export function tfMultitenantDistributionOriginShieldPropertyToHclTerraform(struct?: TfMultitenantDistribution.OriginShieldProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionOriginShieldPropertyToHclTerraform(struct?: AwsMultitenantDistribution.OriginShieldProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1412,7 +1412,7 @@ export function tfMultitenantDistributionOriginShieldPropertyToHclTerraform(stru
 }
 
 
-export function tfMultitenantDistributionVpcOriginConfigPropertyToTerraform(struct?: TfMultitenantDistribution.VpcOriginConfigProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionVpcOriginConfigPropertyToTerraform(struct?: AwsMultitenantDistribution.VpcOriginConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1425,7 +1425,7 @@ export function tfMultitenantDistributionVpcOriginConfigPropertyToTerraform(stru
 }
 
 
-export function tfMultitenantDistributionVpcOriginConfigPropertyToHclTerraform(struct?: TfMultitenantDistribution.VpcOriginConfigProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionVpcOriginConfigPropertyToHclTerraform(struct?: AwsMultitenantDistribution.VpcOriginConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1456,7 +1456,7 @@ export function tfMultitenantDistributionVpcOriginConfigPropertyToHclTerraform(s
 }
 
 
-export function tfMultitenantDistributionOriginPropertyToTerraform(struct?: TfMultitenantDistribution.OriginProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionOriginPropertyToTerraform(struct?: AwsMultitenantDistribution.OriginProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1469,15 +1469,15 @@ export function tfMultitenantDistributionOriginPropertyToTerraform(struct?: TfMu
     origin_access_control_id: cdktn.stringToTerraform(struct!.originAccessControlId),
     origin_path: cdktn.stringToTerraform(struct!.originPath),
     response_completion_timeout: cdktn.numberToTerraform(struct!.responseCompletionTimeout),
-    custom_header: cdktn.listMapper(tfMultitenantDistributionCustomHeaderPropertyToTerraform, true)(struct!.customHeader),
-    custom_origin_config: cdktn.listMapper(tfMultitenantDistributionCustomOriginConfigPropertyToTerraform, true)(struct!.customOriginConfig),
-    origin_shield: cdktn.listMapper(tfMultitenantDistributionOriginShieldPropertyToTerraform, true)(struct!.originShield),
-    vpc_origin_config: cdktn.listMapper(tfMultitenantDistributionVpcOriginConfigPropertyToTerraform, true)(struct!.vpcOriginConfig),
+    custom_header: cdktn.listMapper(awsMultitenantDistributionCustomHeaderPropertyToTerraform, true)(struct!.customHeader),
+    custom_origin_config: cdktn.listMapper(awsMultitenantDistributionCustomOriginConfigPropertyToTerraform, true)(struct!.customOriginConfig),
+    origin_shield: cdktn.listMapper(awsMultitenantDistributionOriginShieldPropertyToTerraform, true)(struct!.originShield),
+    vpc_origin_config: cdktn.listMapper(awsMultitenantDistributionVpcOriginConfigPropertyToTerraform, true)(struct!.vpcOriginConfig),
   }
 }
 
 
-export function tfMultitenantDistributionOriginPropertyToHclTerraform(struct?: TfMultitenantDistribution.OriginProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionOriginPropertyToHclTerraform(struct?: AwsMultitenantDistribution.OriginProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1526,25 +1526,25 @@ export function tfMultitenantDistributionOriginPropertyToHclTerraform(struct?: T
       storageClassType: "number",
     },
     custom_header: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionCustomHeaderPropertyToHclTerraform, true)(struct!.customHeader),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionCustomHeaderPropertyToHclTerraform, true)(struct!.customHeader),
       isBlock: true,
       type: "list",
       storageClassType: "CustomHeaderPropertyList",
     },
     custom_origin_config: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionCustomOriginConfigPropertyToHclTerraform, true)(struct!.customOriginConfig),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionCustomOriginConfigPropertyToHclTerraform, true)(struct!.customOriginConfig),
       isBlock: true,
       type: "list",
       storageClassType: "CustomOriginConfigPropertyList",
     },
     origin_shield: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionOriginShieldPropertyToHclTerraform, true)(struct!.originShield),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionOriginShieldPropertyToHclTerraform, true)(struct!.originShield),
       isBlock: true,
       type: "list",
       storageClassType: "OriginShieldPropertyList",
     },
     vpc_origin_config: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionVpcOriginConfigPropertyToHclTerraform, true)(struct!.vpcOriginConfig),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionVpcOriginConfigPropertyToHclTerraform, true)(struct!.vpcOriginConfig),
       isBlock: true,
       type: "list",
       storageClassType: "VpcOriginConfigPropertyList",
@@ -1556,7 +1556,7 @@ export function tfMultitenantDistributionOriginPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfMultitenantDistributionFailoverCriteriaPropertyToTerraform(struct?: TfMultitenantDistribution.FailoverCriteriaProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionFailoverCriteriaPropertyToTerraform(struct?: AwsMultitenantDistribution.FailoverCriteriaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1567,7 +1567,7 @@ export function tfMultitenantDistributionFailoverCriteriaPropertyToTerraform(str
 }
 
 
-export function tfMultitenantDistributionFailoverCriteriaPropertyToHclTerraform(struct?: TfMultitenantDistribution.FailoverCriteriaProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionFailoverCriteriaPropertyToHclTerraform(struct?: AwsMultitenantDistribution.FailoverCriteriaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1586,7 +1586,7 @@ export function tfMultitenantDistributionFailoverCriteriaPropertyToHclTerraform(
 }
 
 
-export function tfMultitenantDistributionMemberPropertyToTerraform(struct?: TfMultitenantDistribution.MemberProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionMemberPropertyToTerraform(struct?: AwsMultitenantDistribution.MemberProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1597,7 +1597,7 @@ export function tfMultitenantDistributionMemberPropertyToTerraform(struct?: TfMu
 }
 
 
-export function tfMultitenantDistributionMemberPropertyToHclTerraform(struct?: TfMultitenantDistribution.MemberProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionMemberPropertyToHclTerraform(struct?: AwsMultitenantDistribution.MemberProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1616,20 +1616,20 @@ export function tfMultitenantDistributionMemberPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfMultitenantDistributionOriginGroupPropertyToTerraform(struct?: TfMultitenantDistribution.OriginGroupProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionOriginGroupPropertyToTerraform(struct?: AwsMultitenantDistribution.OriginGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     id: cdktn.stringToTerraform(struct!.id),
-    failover_criteria: cdktn.listMapper(tfMultitenantDistributionFailoverCriteriaPropertyToTerraform, true)(struct!.failoverCriteria),
-    member: cdktn.listMapper(tfMultitenantDistributionMemberPropertyToTerraform, true)(struct!.member),
+    failover_criteria: cdktn.listMapper(awsMultitenantDistributionFailoverCriteriaPropertyToTerraform, true)(struct!.failoverCriteria),
+    member: cdktn.listMapper(awsMultitenantDistributionMemberPropertyToTerraform, true)(struct!.member),
   }
 }
 
 
-export function tfMultitenantDistributionOriginGroupPropertyToHclTerraform(struct?: TfMultitenantDistribution.OriginGroupProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionOriginGroupPropertyToHclTerraform(struct?: AwsMultitenantDistribution.OriginGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1642,13 +1642,13 @@ export function tfMultitenantDistributionOriginGroupPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     failover_criteria: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionFailoverCriteriaPropertyToHclTerraform, true)(struct!.failoverCriteria),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionFailoverCriteriaPropertyToHclTerraform, true)(struct!.failoverCriteria),
       isBlock: true,
       type: "list",
       storageClassType: "FailoverCriteriaPropertyList",
     },
     member: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionMemberPropertyToHclTerraform, true)(struct!.member),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionMemberPropertyToHclTerraform, true)(struct!.member),
       isBlock: true,
       type: "list",
       storageClassType: "MemberPropertyList",
@@ -1660,7 +1660,7 @@ export function tfMultitenantDistributionOriginGroupPropertyToHclTerraform(struc
 }
 
 
-export function tfMultitenantDistributionGeoRestrictionPropertyToTerraform(struct?: TfMultitenantDistribution.GeoRestrictionProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionGeoRestrictionPropertyToTerraform(struct?: AwsMultitenantDistribution.GeoRestrictionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1672,7 +1672,7 @@ export function tfMultitenantDistributionGeoRestrictionPropertyToTerraform(struc
 }
 
 
-export function tfMultitenantDistributionGeoRestrictionPropertyToHclTerraform(struct?: TfMultitenantDistribution.GeoRestrictionProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionGeoRestrictionPropertyToHclTerraform(struct?: AwsMultitenantDistribution.GeoRestrictionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1697,25 +1697,25 @@ export function tfMultitenantDistributionGeoRestrictionPropertyToHclTerraform(st
 }
 
 
-export function tfMultitenantDistributionRestrictionsPropertyToTerraform(struct?: TfMultitenantDistribution.RestrictionsProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionRestrictionsPropertyToTerraform(struct?: AwsMultitenantDistribution.RestrictionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    geo_restriction: cdktn.listMapper(tfMultitenantDistributionGeoRestrictionPropertyToTerraform, true)(struct!.geoRestriction),
+    geo_restriction: cdktn.listMapper(awsMultitenantDistributionGeoRestrictionPropertyToTerraform, true)(struct!.geoRestriction),
   }
 }
 
 
-export function tfMultitenantDistributionRestrictionsPropertyToHclTerraform(struct?: TfMultitenantDistribution.RestrictionsProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionRestrictionsPropertyToHclTerraform(struct?: AwsMultitenantDistribution.RestrictionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     geo_restriction: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionGeoRestrictionPropertyToHclTerraform, true)(struct!.geoRestriction),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionGeoRestrictionPropertyToHclTerraform, true)(struct!.geoRestriction),
       isBlock: true,
       type: "list",
       storageClassType: "GeoRestrictionPropertyList",
@@ -1727,7 +1727,7 @@ export function tfMultitenantDistributionRestrictionsPropertyToHclTerraform(stru
 }
 
 
-export function tfMultitenantDistributionStringSchemaPropertyToTerraform(struct?: TfMultitenantDistribution.StringSchemaProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionStringSchemaPropertyToTerraform(struct?: AwsMultitenantDistribution.StringSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1740,7 +1740,7 @@ export function tfMultitenantDistributionStringSchemaPropertyToTerraform(struct?
 }
 
 
-export function tfMultitenantDistributionStringSchemaPropertyToHclTerraform(struct?: TfMultitenantDistribution.StringSchemaProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionStringSchemaPropertyToHclTerraform(struct?: AwsMultitenantDistribution.StringSchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1771,25 +1771,25 @@ export function tfMultitenantDistributionStringSchemaPropertyToHclTerraform(stru
 }
 
 
-export function tfMultitenantDistributionDefinitionPropertyToTerraform(struct?: TfMultitenantDistribution.DefinitionProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionDefinitionPropertyToTerraform(struct?: AwsMultitenantDistribution.DefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    string_schema: cdktn.listMapper(tfMultitenantDistributionStringSchemaPropertyToTerraform, true)(struct!.stringSchema),
+    string_schema: cdktn.listMapper(awsMultitenantDistributionStringSchemaPropertyToTerraform, true)(struct!.stringSchema),
   }
 }
 
 
-export function tfMultitenantDistributionDefinitionPropertyToHclTerraform(struct?: TfMultitenantDistribution.DefinitionProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionDefinitionPropertyToHclTerraform(struct?: AwsMultitenantDistribution.DefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     string_schema: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionStringSchemaPropertyToHclTerraform, true)(struct!.stringSchema),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionStringSchemaPropertyToHclTerraform, true)(struct!.stringSchema),
       isBlock: true,
       type: "list",
       storageClassType: "StringSchemaPropertyList",
@@ -1801,19 +1801,19 @@ export function tfMultitenantDistributionDefinitionPropertyToHclTerraform(struct
 }
 
 
-export function tfMultitenantDistributionParameterDefinitionPropertyToTerraform(struct?: TfMultitenantDistribution.ParameterDefinitionProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionParameterDefinitionPropertyToTerraform(struct?: AwsMultitenantDistribution.ParameterDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    definition: cdktn.listMapper(tfMultitenantDistributionDefinitionPropertyToTerraform, true)(struct!.definition),
+    definition: cdktn.listMapper(awsMultitenantDistributionDefinitionPropertyToTerraform, true)(struct!.definition),
   }
 }
 
 
-export function tfMultitenantDistributionParameterDefinitionPropertyToHclTerraform(struct?: TfMultitenantDistribution.ParameterDefinitionProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionParameterDefinitionPropertyToHclTerraform(struct?: AwsMultitenantDistribution.ParameterDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1826,7 +1826,7 @@ export function tfMultitenantDistributionParameterDefinitionPropertyToHclTerrafo
       storageClassType: "string",
     },
     definition: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionDefinitionPropertyToHclTerraform, true)(struct!.definition),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionDefinitionPropertyToHclTerraform, true)(struct!.definition),
       isBlock: true,
       type: "list",
       storageClassType: "DefinitionPropertyList",
@@ -1838,25 +1838,25 @@ export function tfMultitenantDistributionParameterDefinitionPropertyToHclTerrafo
 }
 
 
-export function tfMultitenantDistributionTenantConfigPropertyToTerraform(struct?: TfMultitenantDistribution.TenantConfigProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionTenantConfigPropertyToTerraform(struct?: AwsMultitenantDistribution.TenantConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    parameter_definition: cdktn.listMapper(tfMultitenantDistributionParameterDefinitionPropertyToTerraform, true)(struct!.parameterDefinition),
+    parameter_definition: cdktn.listMapper(awsMultitenantDistributionParameterDefinitionPropertyToTerraform, true)(struct!.parameterDefinition),
   }
 }
 
 
-export function tfMultitenantDistributionTenantConfigPropertyToHclTerraform(struct?: TfMultitenantDistribution.TenantConfigProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionTenantConfigPropertyToHclTerraform(struct?: AwsMultitenantDistribution.TenantConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     parameter_definition: {
-      value: cdktn.listMapperHcl(tfMultitenantDistributionParameterDefinitionPropertyToHclTerraform, true)(struct!.parameterDefinition),
+      value: cdktn.listMapperHcl(awsMultitenantDistributionParameterDefinitionPropertyToHclTerraform, true)(struct!.parameterDefinition),
       isBlock: true,
       type: "list",
       storageClassType: "ParameterDefinitionPropertyList",
@@ -1868,7 +1868,7 @@ export function tfMultitenantDistributionTenantConfigPropertyToHclTerraform(stru
 }
 
 
-export function tfMultitenantDistributionTimeoutsPropertyToTerraform(struct?: TfMultitenantDistribution.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionTimeoutsPropertyToTerraform(struct?: AwsMultitenantDistribution.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1881,7 +1881,7 @@ export function tfMultitenantDistributionTimeoutsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfMultitenantDistributionTimeoutsPropertyToHclTerraform(struct?: TfMultitenantDistribution.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionTimeoutsPropertyToHclTerraform(struct?: AwsMultitenantDistribution.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1912,7 +1912,7 @@ export function tfMultitenantDistributionTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfMultitenantDistributionViewerCertificatePropertyToTerraform(struct?: TfMultitenantDistribution.ViewerCertificateProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionViewerCertificatePropertyToTerraform(struct?: AwsMultitenantDistribution.ViewerCertificateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1926,7 +1926,7 @@ export function tfMultitenantDistributionViewerCertificatePropertyToTerraform(st
 }
 
 
-export function tfMultitenantDistributionViewerCertificatePropertyToHclTerraform(struct?: TfMultitenantDistribution.ViewerCertificateProperty | cdktn.IResolvable): any {
+export function awsMultitenantDistributionViewerCertificatePropertyToHclTerraform(struct?: AwsMultitenantDistribution.ViewerCertificateProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1963,7 +1963,7 @@ export function tfMultitenantDistributionViewerCertificatePropertyToHclTerraform
 }
 
 
-export namespace TfMultitenantDistribution {
+export namespace AwsMultitenantDistribution {
 export interface ItemsProperty {
 }
 export class ItemsPropertyOutputReference extends cdktn.ComplexObject {
@@ -2038,7 +2038,7 @@ export interface ActiveTrustedKeyGroupsProperty {
   /**
   * items block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#items TfMultitenantDistribution#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#items AwsMultitenantDistribution#items}
   */
   readonly items?: ItemsProperty[] | cdktn.IResolvable;
 }
@@ -2129,11 +2129,11 @@ export class ActiveTrustedKeyGroupsPropertyList extends cdktn.ComplexList {
 }
 export interface CacheBehaviorAllowedMethodsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#cached_methods TfMultitenantDistribution#cached_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#cached_methods AwsMultitenantDistribution#cached_methods}
   */
   readonly cachedMethods: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#items TfMultitenantDistribution#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#items AwsMultitenantDistribution#items}
   */
   readonly items: string[];
 }
@@ -2235,11 +2235,11 @@ export class CacheBehaviorAllowedMethodsPropertyList extends cdktn.ComplexList {
 }
 export interface CacheBehaviorFunctionAssociationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#event_type TfMultitenantDistribution#event_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#event_type AwsMultitenantDistribution#event_type}
   */
   readonly eventType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#function_arn TfMultitenantDistribution#function_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#function_arn AwsMultitenantDistribution#function_arn}
   */
   readonly functionArn: string;
 }
@@ -2341,15 +2341,15 @@ export class CacheBehaviorFunctionAssociationPropertyList extends cdktn.ComplexL
 }
 export interface CacheBehaviorLambdaFunctionAssociationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#event_type TfMultitenantDistribution#event_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#event_type AwsMultitenantDistribution#event_type}
   */
   readonly eventType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#include_body TfMultitenantDistribution#include_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#include_body AwsMultitenantDistribution#include_body}
   */
   readonly includeBody?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#lambda_function_arn TfMultitenantDistribution#lambda_function_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#lambda_function_arn AwsMultitenantDistribution#lambda_function_arn}
   */
   readonly lambdaFunctionArn: string;
 }
@@ -2473,11 +2473,11 @@ export class CacheBehaviorLambdaFunctionAssociationPropertyList extends cdktn.Co
 }
 export interface CacheBehaviorTrustedKeyGroupsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#enabled TfMultitenantDistribution#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#enabled AwsMultitenantDistribution#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#items TfMultitenantDistribution#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#items AwsMultitenantDistribution#items}
   */
   readonly items?: string[];
 }
@@ -2585,63 +2585,63 @@ export class CacheBehaviorTrustedKeyGroupsPropertyList extends cdktn.ComplexList
 }
 export interface CacheBehaviorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#cache_policy_id TfMultitenantDistribution#cache_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#cache_policy_id AwsMultitenantDistribution#cache_policy_id}
   */
   readonly cachePolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#compress TfMultitenantDistribution#compress}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#compress AwsMultitenantDistribution#compress}
   */
   readonly compress?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#field_level_encryption_id TfMultitenantDistribution#field_level_encryption_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#field_level_encryption_id AwsMultitenantDistribution#field_level_encryption_id}
   */
   readonly fieldLevelEncryptionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_request_policy_id TfMultitenantDistribution#origin_request_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_request_policy_id AwsMultitenantDistribution#origin_request_policy_id}
   */
   readonly originRequestPolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#path_pattern TfMultitenantDistribution#path_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#path_pattern AwsMultitenantDistribution#path_pattern}
   */
   readonly pathPattern: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#realtime_log_config_arn TfMultitenantDistribution#realtime_log_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#realtime_log_config_arn AwsMultitenantDistribution#realtime_log_config_arn}
   */
   readonly realtimeLogConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#response_headers_policy_id TfMultitenantDistribution#response_headers_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#response_headers_policy_id AwsMultitenantDistribution#response_headers_policy_id}
   */
   readonly responseHeadersPolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#target_origin_id TfMultitenantDistribution#target_origin_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#target_origin_id AwsMultitenantDistribution#target_origin_id}
   */
   readonly targetOriginId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#viewer_protocol_policy TfMultitenantDistribution#viewer_protocol_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#viewer_protocol_policy AwsMultitenantDistribution#viewer_protocol_policy}
   */
   readonly viewerProtocolPolicy: string;
   /**
   * allowed_methods block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#allowed_methods TfMultitenantDistribution#allowed_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#allowed_methods AwsMultitenantDistribution#allowed_methods}
   */
   readonly allowedMethods?: CacheBehaviorAllowedMethodsProperty[] | cdktn.IResolvable;
   /**
   * function_association block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#function_association TfMultitenantDistribution#function_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#function_association AwsMultitenantDistribution#function_association}
   */
   readonly functionAssociation?: CacheBehaviorFunctionAssociationProperty[] | cdktn.IResolvable;
   /**
   * lambda_function_association block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#lambda_function_association TfMultitenantDistribution#lambda_function_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#lambda_function_association AwsMultitenantDistribution#lambda_function_association}
   */
   readonly lambdaFunctionAssociation?: CacheBehaviorLambdaFunctionAssociationProperty[] | cdktn.IResolvable;
   /**
   * trusted_key_groups block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#trusted_key_groups TfMultitenantDistribution#trusted_key_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#trusted_key_groups AwsMultitenantDistribution#trusted_key_groups}
   */
   readonly trustedKeyGroups?: CacheBehaviorTrustedKeyGroupsProperty[] | cdktn.IResolvable;
 }
@@ -2982,19 +2982,19 @@ export class CacheBehaviorPropertyList extends cdktn.ComplexList {
 }
 export interface CustomErrorResponseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#error_caching_min_ttl TfMultitenantDistribution#error_caching_min_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#error_caching_min_ttl AwsMultitenantDistribution#error_caching_min_ttl}
   */
   readonly errorCachingMinTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#error_code TfMultitenantDistribution#error_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#error_code AwsMultitenantDistribution#error_code}
   */
   readonly errorCode: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#response_code TfMultitenantDistribution#response_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#response_code AwsMultitenantDistribution#response_code}
   */
   readonly responseCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#response_page_path TfMultitenantDistribution#response_page_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#response_page_path AwsMultitenantDistribution#response_page_path}
   */
   readonly responsePagePath?: string;
 }
@@ -3143,11 +3143,11 @@ export class CustomErrorResponsePropertyList extends cdktn.ComplexList {
 }
 export interface DefaultCacheBehaviorAllowedMethodsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#cached_methods TfMultitenantDistribution#cached_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#cached_methods AwsMultitenantDistribution#cached_methods}
   */
   readonly cachedMethods: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#items TfMultitenantDistribution#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#items AwsMultitenantDistribution#items}
   */
   readonly items: string[];
 }
@@ -3249,11 +3249,11 @@ export class DefaultCacheBehaviorAllowedMethodsPropertyList extends cdktn.Comple
 }
 export interface DefaultCacheBehaviorFunctionAssociationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#event_type TfMultitenantDistribution#event_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#event_type AwsMultitenantDistribution#event_type}
   */
   readonly eventType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#function_arn TfMultitenantDistribution#function_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#function_arn AwsMultitenantDistribution#function_arn}
   */
   readonly functionArn: string;
 }
@@ -3355,15 +3355,15 @@ export class DefaultCacheBehaviorFunctionAssociationPropertyList extends cdktn.C
 }
 export interface DefaultCacheBehaviorLambdaFunctionAssociationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#event_type TfMultitenantDistribution#event_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#event_type AwsMultitenantDistribution#event_type}
   */
   readonly eventType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#include_body TfMultitenantDistribution#include_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#include_body AwsMultitenantDistribution#include_body}
   */
   readonly includeBody?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#lambda_function_arn TfMultitenantDistribution#lambda_function_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#lambda_function_arn AwsMultitenantDistribution#lambda_function_arn}
   */
   readonly lambdaFunctionArn: string;
 }
@@ -3487,11 +3487,11 @@ export class DefaultCacheBehaviorLambdaFunctionAssociationPropertyList extends c
 }
 export interface DefaultCacheBehaviorTrustedKeyGroupsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#enabled TfMultitenantDistribution#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#enabled AwsMultitenantDistribution#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#items TfMultitenantDistribution#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#items AwsMultitenantDistribution#items}
   */
   readonly items?: string[];
 }
@@ -3599,59 +3599,59 @@ export class DefaultCacheBehaviorTrustedKeyGroupsPropertyList extends cdktn.Comp
 }
 export interface DefaultCacheBehaviorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#cache_policy_id TfMultitenantDistribution#cache_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#cache_policy_id AwsMultitenantDistribution#cache_policy_id}
   */
   readonly cachePolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#compress TfMultitenantDistribution#compress}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#compress AwsMultitenantDistribution#compress}
   */
   readonly compress?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#field_level_encryption_id TfMultitenantDistribution#field_level_encryption_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#field_level_encryption_id AwsMultitenantDistribution#field_level_encryption_id}
   */
   readonly fieldLevelEncryptionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_request_policy_id TfMultitenantDistribution#origin_request_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_request_policy_id AwsMultitenantDistribution#origin_request_policy_id}
   */
   readonly originRequestPolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#realtime_log_config_arn TfMultitenantDistribution#realtime_log_config_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#realtime_log_config_arn AwsMultitenantDistribution#realtime_log_config_arn}
   */
   readonly realtimeLogConfigArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#response_headers_policy_id TfMultitenantDistribution#response_headers_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#response_headers_policy_id AwsMultitenantDistribution#response_headers_policy_id}
   */
   readonly responseHeadersPolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#target_origin_id TfMultitenantDistribution#target_origin_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#target_origin_id AwsMultitenantDistribution#target_origin_id}
   */
   readonly targetOriginId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#viewer_protocol_policy TfMultitenantDistribution#viewer_protocol_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#viewer_protocol_policy AwsMultitenantDistribution#viewer_protocol_policy}
   */
   readonly viewerProtocolPolicy: string;
   /**
   * allowed_methods block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#allowed_methods TfMultitenantDistribution#allowed_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#allowed_methods AwsMultitenantDistribution#allowed_methods}
   */
   readonly allowedMethods?: DefaultCacheBehaviorAllowedMethodsProperty[] | cdktn.IResolvable;
   /**
   * function_association block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#function_association TfMultitenantDistribution#function_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#function_association AwsMultitenantDistribution#function_association}
   */
   readonly functionAssociation?: DefaultCacheBehaviorFunctionAssociationProperty[] | cdktn.IResolvable;
   /**
   * lambda_function_association block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#lambda_function_association TfMultitenantDistribution#lambda_function_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#lambda_function_association AwsMultitenantDistribution#lambda_function_association}
   */
   readonly lambdaFunctionAssociation?: DefaultCacheBehaviorLambdaFunctionAssociationProperty[] | cdktn.IResolvable;
   /**
   * trusted_key_groups block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#trusted_key_groups TfMultitenantDistribution#trusted_key_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#trusted_key_groups AwsMultitenantDistribution#trusted_key_groups}
   */
   readonly trustedKeyGroups?: DefaultCacheBehaviorTrustedKeyGroupsProperty[] | cdktn.IResolvable;
 }
@@ -3973,11 +3973,11 @@ export class DefaultCacheBehaviorPropertyList extends cdktn.ComplexList {
 }
 export interface CustomHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#header_name TfMultitenantDistribution#header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#header_name AwsMultitenantDistribution#header_name}
   */
   readonly headerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#header_value TfMultitenantDistribution#header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#header_value AwsMultitenantDistribution#header_value}
   */
   readonly headerValue: string;
 }
@@ -4079,7 +4079,7 @@ export class CustomHeaderPropertyList extends cdktn.ComplexList {
 }
 export interface OriginMtlsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#client_certificate_arn TfMultitenantDistribution#client_certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#client_certificate_arn AwsMultitenantDistribution#client_certificate_arn}
   */
   readonly clientCertificateArn: string;
 }
@@ -4162,37 +4162,37 @@ export class OriginMtlsConfigPropertyList extends cdktn.ComplexList {
 }
 export interface CustomOriginConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#http_port TfMultitenantDistribution#http_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#http_port AwsMultitenantDistribution#http_port}
   */
   readonly httpPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#https_port TfMultitenantDistribution#https_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#https_port AwsMultitenantDistribution#https_port}
   */
   readonly httpsPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#ip_address_type TfMultitenantDistribution#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#ip_address_type AwsMultitenantDistribution#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_keepalive_timeout TfMultitenantDistribution#origin_keepalive_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_keepalive_timeout AwsMultitenantDistribution#origin_keepalive_timeout}
   */
   readonly originKeepaliveTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_protocol_policy TfMultitenantDistribution#origin_protocol_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_protocol_policy AwsMultitenantDistribution#origin_protocol_policy}
   */
   readonly originProtocolPolicy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_read_timeout TfMultitenantDistribution#origin_read_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_read_timeout AwsMultitenantDistribution#origin_read_timeout}
   */
   readonly originReadTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_ssl_protocols TfMultitenantDistribution#origin_ssl_protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_ssl_protocols AwsMultitenantDistribution#origin_ssl_protocols}
   */
   readonly originSslProtocols: string[];
   /**
   * origin_mtls_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_mtls_config TfMultitenantDistribution#origin_mtls_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_mtls_config AwsMultitenantDistribution#origin_mtls_config}
   */
   readonly originMtlsConfig?: OriginMtlsConfigProperty[] | cdktn.IResolvable;
 }
@@ -4420,11 +4420,11 @@ export class CustomOriginConfigPropertyList extends cdktn.ComplexList {
 }
 export interface OriginShieldProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#enabled TfMultitenantDistribution#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#enabled AwsMultitenantDistribution#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_shield_region TfMultitenantDistribution#origin_shield_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_shield_region AwsMultitenantDistribution#origin_shield_region}
   */
   readonly originShieldRegion?: string;
 }
@@ -4529,15 +4529,15 @@ export class OriginShieldPropertyList extends cdktn.ComplexList {
 }
 export interface VpcOriginConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_keepalive_timeout TfMultitenantDistribution#origin_keepalive_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_keepalive_timeout AwsMultitenantDistribution#origin_keepalive_timeout}
   */
   readonly originKeepaliveTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_read_timeout TfMultitenantDistribution#origin_read_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_read_timeout AwsMultitenantDistribution#origin_read_timeout}
   */
   readonly originReadTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#vpc_origin_id TfMultitenantDistribution#vpc_origin_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#vpc_origin_id AwsMultitenantDistribution#vpc_origin_id}
   */
   readonly vpcOriginId: string;
 }
@@ -4664,58 +4664,58 @@ export class VpcOriginConfigPropertyList extends cdktn.ComplexList {
 }
 export interface OriginProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#connection_attempts TfMultitenantDistribution#connection_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#connection_attempts AwsMultitenantDistribution#connection_attempts}
   */
   readonly connectionAttempts?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#connection_timeout TfMultitenantDistribution#connection_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#connection_timeout AwsMultitenantDistribution#connection_timeout}
   */
   readonly connectionTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#domain_name TfMultitenantDistribution#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#domain_name AwsMultitenantDistribution#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#id TfMultitenantDistribution#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#id AwsMultitenantDistribution#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_access_control_id TfMultitenantDistribution#origin_access_control_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_access_control_id AwsMultitenantDistribution#origin_access_control_id}
   */
   readonly originAccessControlId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_path TfMultitenantDistribution#origin_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_path AwsMultitenantDistribution#origin_path}
   */
   readonly originPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#response_completion_timeout TfMultitenantDistribution#response_completion_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#response_completion_timeout AwsMultitenantDistribution#response_completion_timeout}
   */
   readonly responseCompletionTimeout?: number;
   /**
   * custom_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#custom_header TfMultitenantDistribution#custom_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#custom_header AwsMultitenantDistribution#custom_header}
   */
   readonly customHeader?: CustomHeaderProperty[] | cdktn.IResolvable;
   /**
   * custom_origin_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#custom_origin_config TfMultitenantDistribution#custom_origin_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#custom_origin_config AwsMultitenantDistribution#custom_origin_config}
   */
   readonly customOriginConfig?: CustomOriginConfigProperty[] | cdktn.IResolvable;
   /**
   * origin_shield block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_shield TfMultitenantDistribution#origin_shield}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_shield AwsMultitenantDistribution#origin_shield}
   */
   readonly originShield?: OriginShieldProperty[] | cdktn.IResolvable;
   /**
   * vpc_origin_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#vpc_origin_config TfMultitenantDistribution#vpc_origin_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#vpc_origin_config AwsMultitenantDistribution#vpc_origin_config}
   */
   readonly vpcOriginConfig?: VpcOriginConfigProperty[] | cdktn.IResolvable;
 }
@@ -5015,7 +5015,7 @@ export class OriginPropertyList extends cdktn.ComplexList {
 }
 export interface FailoverCriteriaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#status_codes TfMultitenantDistribution#status_codes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#status_codes AwsMultitenantDistribution#status_codes}
   */
   readonly statusCodes: number[];
 }
@@ -5098,7 +5098,7 @@ export class FailoverCriteriaPropertyList extends cdktn.ComplexList {
 }
 export interface MemberProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_id TfMultitenantDistribution#origin_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#origin_id AwsMultitenantDistribution#origin_id}
   */
   readonly originId: string;
 }
@@ -5181,7 +5181,7 @@ export class MemberPropertyList extends cdktn.ComplexList {
 }
 export interface OriginGroupProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#id TfMultitenantDistribution#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#id AwsMultitenantDistribution#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -5190,13 +5190,13 @@ export interface OriginGroupProperty {
   /**
   * failover_criteria block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#failover_criteria TfMultitenantDistribution#failover_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#failover_criteria AwsMultitenantDistribution#failover_criteria}
   */
   readonly failoverCriteria?: FailoverCriteriaProperty[] | cdktn.IResolvable;
   /**
   * member block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#member TfMultitenantDistribution#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#member AwsMultitenantDistribution#member}
   */
   readonly member?: MemberProperty[] | cdktn.IResolvable;
 }
@@ -5323,11 +5323,11 @@ export class OriginGroupPropertyList extends cdktn.ComplexList {
 }
 export interface GeoRestrictionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#items TfMultitenantDistribution#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#items AwsMultitenantDistribution#items}
   */
   readonly items?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#restriction_type TfMultitenantDistribution#restriction_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#restriction_type AwsMultitenantDistribution#restriction_type}
   */
   readonly restrictionType: string;
 }
@@ -5434,7 +5434,7 @@ export interface RestrictionsProperty {
   /**
   * geo_restriction block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#geo_restriction TfMultitenantDistribution#geo_restriction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#geo_restriction AwsMultitenantDistribution#geo_restriction}
   */
   readonly geoRestriction?: GeoRestrictionProperty[] | cdktn.IResolvable;
 }
@@ -5520,15 +5520,15 @@ export class RestrictionsPropertyList extends cdktn.ComplexList {
 }
 export interface StringSchemaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#comment TfMultitenantDistribution#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#comment AwsMultitenantDistribution#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#default_value TfMultitenantDistribution#default_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#default_value AwsMultitenantDistribution#default_value}
   */
   readonly defaultValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#required TfMultitenantDistribution#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#required AwsMultitenantDistribution#required}
   */
   readonly required: boolean | cdktn.IResolvable;
 }
@@ -5657,7 +5657,7 @@ export interface DefinitionProperty {
   /**
   * string_schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#string_schema TfMultitenantDistribution#string_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#string_schema AwsMultitenantDistribution#string_schema}
   */
   readonly stringSchema?: StringSchemaProperty[] | cdktn.IResolvable;
 }
@@ -5743,13 +5743,13 @@ export class DefinitionPropertyList extends cdktn.ComplexList {
 }
 export interface ParameterDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#name TfMultitenantDistribution#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#name AwsMultitenantDistribution#name}
   */
   readonly name: string;
   /**
   * definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#definition TfMultitenantDistribution#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#definition AwsMultitenantDistribution#definition}
   */
   readonly definition?: DefinitionProperty[] | cdktn.IResolvable;
 }
@@ -5856,7 +5856,7 @@ export interface TenantConfigProperty {
   /**
   * parameter_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#parameter_definition TfMultitenantDistribution#parameter_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#parameter_definition AwsMultitenantDistribution#parameter_definition}
   */
   readonly parameterDefinition?: ParameterDefinitionProperty[] | cdktn.IResolvable;
 }
@@ -5944,19 +5944,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#create TfMultitenantDistribution#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#create AwsMultitenantDistribution#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#delete TfMultitenantDistribution#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#delete AwsMultitenantDistribution#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#update TfMultitenantDistribution#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#update AwsMultitenantDistribution#update}
   */
   readonly update?: string;
 }
@@ -6064,19 +6064,19 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ViewerCertificateProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#acm_certificate_arn TfMultitenantDistribution#acm_certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#acm_certificate_arn AwsMultitenantDistribution#acm_certificate_arn}
   */
   readonly acmCertificateArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#cloudfront_default_certificate TfMultitenantDistribution#cloudfront_default_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#cloudfront_default_certificate AwsMultitenantDistribution#cloudfront_default_certificate}
   */
   readonly cloudfrontDefaultCertificate?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#minimum_protocol_version TfMultitenantDistribution#minimum_protocol_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#minimum_protocol_version AwsMultitenantDistribution#minimum_protocol_version}
   */
   readonly minimumProtocolVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#ssl_support_method TfMultitenantDistribution#ssl_support_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_multitenant_distribution#ssl_support_method AwsMultitenantDistribution#ssl_support_method}
   */
   readonly sslSupportMethod?: string;
 }

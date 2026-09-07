@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfJobDefinitionConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsJobDefinitionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_job_definition#arn DataTfJobDefinition#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_job_definition#arn DataAwsJobDefinition#arn}
   */
   readonly arn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_job_definition#name DataTfJobDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_job_definition#name DataAwsJobDefinition#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_job_definition#region DataTfJobDefinition#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_job_definition#region DataAwsJobDefinition#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_job_definition#revision DataTfJobDefinition#revision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_job_definition#revision DataAwsJobDefinition#revision}
   */
   readonly revision?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_job_definition#status DataTfJobDefinition#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_job_definition#status DataAwsJobDefinition#status}
   */
   readonly status?: string;
 }
@@ -33,7 +33,7 @@ export interface DataTfJobDefinitionConfig extends cdktn.TerraformMetaArguments 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_job_definition aws_batch_job_definition}
 */
-export class DataTfJobDefinition extends cdktn.TerraformDataSource {
+export class DataAwsJobDefinition extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class DataTfJobDefinition extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfJobDefinition resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsJobDefinition resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfJobDefinition to import
-  * @param importFromId The id of the existing DataTfJobDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_job_definition#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfJobDefinition to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsJobDefinition to import
+  * @param importFromId The id of the existing DataAwsJobDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/batch_job_definition#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsJobDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_batch_job_definition", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class DataTfJobDefinition extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfJobDefinitionConfig = {}
+  * @param options DataAwsJobDefinitionConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfJobDefinitionConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsJobDefinitionConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_batch_job_definition',
       terraformGeneratorMetadata: {
@@ -119,7 +119,7 @@ export class DataTfJobDefinition extends cdktn.TerraformDataSource {
   }
 
   // eks_properties - computed: true, optional: false, required: false
-  private _eksProperties = new DataTfJobDefinition.EksPropertiesPropertyList(this, "eks_properties", false);
+  private _eksProperties = new DataAwsJobDefinition.EksPropertiesPropertyList(this, "eks_properties", false);
   public get eksProperties() {
     return this._eksProperties;
   }
@@ -146,7 +146,7 @@ export class DataTfJobDefinition extends cdktn.TerraformDataSource {
   }
 
   // node_properties - computed: true, optional: false, required: false
-  private _nodeProperties = new DataTfJobDefinition.NodePropertiesPropertyList(this, "node_properties", false);
+  private _nodeProperties = new DataAwsJobDefinition.NodePropertiesPropertyList(this, "node_properties", false);
   public get nodeProperties() {
     return this._nodeProperties;
   }
@@ -168,7 +168,7 @@ export class DataTfJobDefinition extends cdktn.TerraformDataSource {
   }
 
   // retry_strategy - computed: true, optional: false, required: false
-  private _retryStrategy = new DataTfJobDefinition.RetryStrategyPropertyList(this, "retry_strategy", false);
+  private _retryStrategy = new DataAwsJobDefinition.RetryStrategyPropertyList(this, "retry_strategy", false);
   public get retryStrategy() {
     return this._retryStrategy;
   }
@@ -217,7 +217,7 @@ export class DataTfJobDefinition extends cdktn.TerraformDataSource {
   }
 
   // timeout - computed: true, optional: false, required: false
-  private _timeout = new DataTfJobDefinition.TimeoutPropertyList(this, "timeout", false);
+  private _timeout = new DataAwsJobDefinition.TimeoutPropertyList(this, "timeout", false);
   public get timeout() {
     return this._timeout;
   }
@@ -280,7 +280,7 @@ export class DataTfJobDefinition extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesContainersEnvPropertyToTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesContainersEnvProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesContainersEnvPropertyToTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesContainersEnvProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesContainersEnvProper
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesContainersEnvPropertyToHclTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesContainersEnvProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesContainersEnvPropertyToHclTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesContainersEnvProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -301,7 +301,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesContainersEnvProper
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesContainersResourcesPropertyToTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesContainersResourcesProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesContainersResourcesPropertyToTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesContainersResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -311,7 +311,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesContainersResources
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesContainersResourcesPropertyToHclTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesContainersResourcesProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesContainersResourcesPropertyToHclTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesContainersResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesContainersResources
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextPropertyToTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesContainersSecurityContextProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextPropertyToTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesContainersSecurityContextProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesContainersSecurityC
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextPropertyToHclTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesContainersSecurityContextProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesContainersSecurityContextPropertyToHclTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesContainersSecurityContextProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,7 +343,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesContainersSecurityC
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsPropertyToTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesContainersVolumeMountsProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsPropertyToTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesContainersVolumeMountsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesContainersVolumeMou
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsPropertyToHclTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesContainersVolumeMountsProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesContainersVolumeMountsPropertyToHclTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesContainersVolumeMountsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,7 +364,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesContainersVolumeMou
 }
 
 
-export function dataTfJobDefinitionContainersPropertyToTerraform(struct?: DataTfJobDefinition.ContainersProperty): any {
+export function dataAwsJobDefinitionContainersPropertyToTerraform(struct?: DataAwsJobDefinition.ContainersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,7 +374,7 @@ export function dataTfJobDefinitionContainersPropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfJobDefinitionContainersPropertyToHclTerraform(struct?: DataTfJobDefinition.ContainersProperty): any {
+export function dataAwsJobDefinitionContainersPropertyToHclTerraform(struct?: DataAwsJobDefinition.ContainersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function dataTfJobDefinitionContainersPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataTfJobDefinitionImagePullSecretsPropertyToTerraform(struct?: DataTfJobDefinition.ImagePullSecretsProperty): any {
+export function dataAwsJobDefinitionImagePullSecretsPropertyToTerraform(struct?: DataAwsJobDefinition.ImagePullSecretsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -395,7 +395,7 @@ export function dataTfJobDefinitionImagePullSecretsPropertyToTerraform(struct?: 
 }
 
 
-export function dataTfJobDefinitionImagePullSecretsPropertyToHclTerraform(struct?: DataTfJobDefinition.ImagePullSecretsProperty): any {
+export function dataAwsJobDefinitionImagePullSecretsPropertyToHclTerraform(struct?: DataAwsJobDefinition.ImagePullSecretsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -406,7 +406,7 @@ export function dataTfJobDefinitionImagePullSecretsPropertyToHclTerraform(struct
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesInitContainersEnvPropertyToTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesInitContainersEnvProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesInitContainersEnvPropertyToTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesInitContainersEnvProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,7 +416,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesInitContainersEnvPr
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesInitContainersEnvPropertyToHclTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesInitContainersEnvProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesInitContainersEnvPropertyToHclTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesInitContainersEnvProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -427,7 +427,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesInitContainersEnvPr
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesInitContainersResourcesPropertyToTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesInitContainersResourcesProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesInitContainersResourcesPropertyToTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesInitContainersResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -437,7 +437,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesInitContainersResou
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesInitContainersResourcesPropertyToHclTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesInitContainersResourcesProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesInitContainersResourcesPropertyToHclTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesInitContainersResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -448,7 +448,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesInitContainersResou
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesInitContainersSecurityContextPropertyToTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesInitContainersSecurityContextProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesInitContainersSecurityContextPropertyToTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesInitContainersSecurityContextProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -458,7 +458,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesInitContainersSecur
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesInitContainersSecurityContextPropertyToHclTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesInitContainersSecurityContextProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesInitContainersSecurityContextPropertyToHclTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesInitContainersSecurityContextProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,7 +469,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesInitContainersSecur
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesInitContainersVolumeMountsPropertyToTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesInitContainersVolumeMountsProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesInitContainersVolumeMountsPropertyToTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesInitContainersVolumeMountsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -479,7 +479,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesInitContainersVolum
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesInitContainersVolumeMountsPropertyToHclTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesInitContainersVolumeMountsProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesInitContainersVolumeMountsPropertyToHclTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesInitContainersVolumeMountsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -490,7 +490,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesInitContainersVolum
 }
 
 
-export function dataTfJobDefinitionInitContainersPropertyToTerraform(struct?: DataTfJobDefinition.InitContainersProperty): any {
+export function dataAwsJobDefinitionInitContainersPropertyToTerraform(struct?: DataAwsJobDefinition.InitContainersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,7 +500,7 @@ export function dataTfJobDefinitionInitContainersPropertyToTerraform(struct?: Da
 }
 
 
-export function dataTfJobDefinitionInitContainersPropertyToHclTerraform(struct?: DataTfJobDefinition.InitContainersProperty): any {
+export function dataAwsJobDefinitionInitContainersPropertyToHclTerraform(struct?: DataAwsJobDefinition.InitContainersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -511,7 +511,7 @@ export function dataTfJobDefinitionInitContainersPropertyToHclTerraform(struct?:
 }
 
 
-export function dataTfJobDefinitionMetadataPropertyToTerraform(struct?: DataTfJobDefinition.MetadataProperty): any {
+export function dataAwsJobDefinitionMetadataPropertyToTerraform(struct?: DataAwsJobDefinition.MetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -521,7 +521,7 @@ export function dataTfJobDefinitionMetadataPropertyToTerraform(struct?: DataTfJo
 }
 
 
-export function dataTfJobDefinitionMetadataPropertyToHclTerraform(struct?: DataTfJobDefinition.MetadataProperty): any {
+export function dataAwsJobDefinitionMetadataPropertyToHclTerraform(struct?: DataAwsJobDefinition.MetadataProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -532,7 +532,7 @@ export function dataTfJobDefinitionMetadataPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfJobDefinitionEmptyDirPropertyToTerraform(struct?: DataTfJobDefinition.EmptyDirProperty): any {
+export function dataAwsJobDefinitionEmptyDirPropertyToTerraform(struct?: DataAwsJobDefinition.EmptyDirProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -542,7 +542,7 @@ export function dataTfJobDefinitionEmptyDirPropertyToTerraform(struct?: DataTfJo
 }
 
 
-export function dataTfJobDefinitionEmptyDirPropertyToHclTerraform(struct?: DataTfJobDefinition.EmptyDirProperty): any {
+export function dataAwsJobDefinitionEmptyDirPropertyToHclTerraform(struct?: DataAwsJobDefinition.EmptyDirProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -553,7 +553,7 @@ export function dataTfJobDefinitionEmptyDirPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfJobDefinitionHostPathPropertyToTerraform(struct?: DataTfJobDefinition.HostPathProperty): any {
+export function dataAwsJobDefinitionHostPathPropertyToTerraform(struct?: DataAwsJobDefinition.HostPathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -563,7 +563,7 @@ export function dataTfJobDefinitionHostPathPropertyToTerraform(struct?: DataTfJo
 }
 
 
-export function dataTfJobDefinitionHostPathPropertyToHclTerraform(struct?: DataTfJobDefinition.HostPathProperty): any {
+export function dataAwsJobDefinitionHostPathPropertyToHclTerraform(struct?: DataAwsJobDefinition.HostPathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,7 +574,7 @@ export function dataTfJobDefinitionHostPathPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfJobDefinitionSecretPropertyToTerraform(struct?: DataTfJobDefinition.SecretProperty): any {
+export function dataAwsJobDefinitionSecretPropertyToTerraform(struct?: DataAwsJobDefinition.SecretProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -584,7 +584,7 @@ export function dataTfJobDefinitionSecretPropertyToTerraform(struct?: DataTfJobD
 }
 
 
-export function dataTfJobDefinitionSecretPropertyToHclTerraform(struct?: DataTfJobDefinition.SecretProperty): any {
+export function dataAwsJobDefinitionSecretPropertyToHclTerraform(struct?: DataAwsJobDefinition.SecretProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -595,7 +595,7 @@ export function dataTfJobDefinitionSecretPropertyToHclTerraform(struct?: DataTfJ
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesVolumesPropertyToTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesVolumesProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesVolumesPropertyToTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesVolumesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -605,7 +605,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesVolumesPropertyToTe
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPodPropertiesVolumesPropertyToHclTerraform(struct?: DataTfJobDefinition.EksPropertiesPodPropertiesVolumesProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPodPropertiesVolumesPropertyToHclTerraform(struct?: DataAwsJobDefinition.EksPropertiesPodPropertiesVolumesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -616,7 +616,7 @@ export function dataTfJobDefinitionEksPropertiesPodPropertiesVolumesPropertyToHc
 }
 
 
-export function dataTfJobDefinitionPodPropertiesPropertyToTerraform(struct?: DataTfJobDefinition.PodPropertiesProperty): any {
+export function dataAwsJobDefinitionPodPropertiesPropertyToTerraform(struct?: DataAwsJobDefinition.PodPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -626,7 +626,7 @@ export function dataTfJobDefinitionPodPropertiesPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataTfJobDefinitionPodPropertiesPropertyToHclTerraform(struct?: DataTfJobDefinition.PodPropertiesProperty): any {
+export function dataAwsJobDefinitionPodPropertiesPropertyToHclTerraform(struct?: DataAwsJobDefinition.PodPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -637,7 +637,7 @@ export function dataTfJobDefinitionPodPropertiesPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPropertyToTerraform(struct?: DataTfJobDefinition.EksPropertiesProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPropertyToTerraform(struct?: DataAwsJobDefinition.EksPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -647,7 +647,7 @@ export function dataTfJobDefinitionEksPropertiesPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataTfJobDefinitionEksPropertiesPropertyToHclTerraform(struct?: DataTfJobDefinition.EksPropertiesProperty): any {
+export function dataAwsJobDefinitionEksPropertiesPropertyToHclTerraform(struct?: DataAwsJobDefinition.EksPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -658,7 +658,7 @@ export function dataTfJobDefinitionEksPropertiesPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataTfJobDefinitionEnvironmentPropertyToTerraform(struct?: DataTfJobDefinition.EnvironmentProperty): any {
+export function dataAwsJobDefinitionEnvironmentPropertyToTerraform(struct?: DataAwsJobDefinition.EnvironmentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -668,7 +668,7 @@ export function dataTfJobDefinitionEnvironmentPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfJobDefinitionEnvironmentPropertyToHclTerraform(struct?: DataTfJobDefinition.EnvironmentProperty): any {
+export function dataAwsJobDefinitionEnvironmentPropertyToHclTerraform(struct?: DataAwsJobDefinition.EnvironmentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -679,7 +679,7 @@ export function dataTfJobDefinitionEnvironmentPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfJobDefinitionEphemeralStoragePropertyToTerraform(struct?: DataTfJobDefinition.EphemeralStorageProperty): any {
+export function dataAwsJobDefinitionEphemeralStoragePropertyToTerraform(struct?: DataAwsJobDefinition.EphemeralStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -689,7 +689,7 @@ export function dataTfJobDefinitionEphemeralStoragePropertyToTerraform(struct?: 
 }
 
 
-export function dataTfJobDefinitionEphemeralStoragePropertyToHclTerraform(struct?: DataTfJobDefinition.EphemeralStorageProperty): any {
+export function dataAwsJobDefinitionEphemeralStoragePropertyToHclTerraform(struct?: DataAwsJobDefinition.EphemeralStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -700,7 +700,7 @@ export function dataTfJobDefinitionEphemeralStoragePropertyToHclTerraform(struct
 }
 
 
-export function dataTfJobDefinitionFargatePlatformConfigurationPropertyToTerraform(struct?: DataTfJobDefinition.FargatePlatformConfigurationProperty): any {
+export function dataAwsJobDefinitionFargatePlatformConfigurationPropertyToTerraform(struct?: DataAwsJobDefinition.FargatePlatformConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -710,7 +710,7 @@ export function dataTfJobDefinitionFargatePlatformConfigurationPropertyToTerrafo
 }
 
 
-export function dataTfJobDefinitionFargatePlatformConfigurationPropertyToHclTerraform(struct?: DataTfJobDefinition.FargatePlatformConfigurationProperty): any {
+export function dataAwsJobDefinitionFargatePlatformConfigurationPropertyToHclTerraform(struct?: DataAwsJobDefinition.FargatePlatformConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -721,7 +721,7 @@ export function dataTfJobDefinitionFargatePlatformConfigurationPropertyToHclTerr
 }
 
 
-export function dataTfJobDefinitionDevicesPropertyToTerraform(struct?: DataTfJobDefinition.DevicesProperty): any {
+export function dataAwsJobDefinitionDevicesPropertyToTerraform(struct?: DataAwsJobDefinition.DevicesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -731,7 +731,7 @@ export function dataTfJobDefinitionDevicesPropertyToTerraform(struct?: DataTfJob
 }
 
 
-export function dataTfJobDefinitionDevicesPropertyToHclTerraform(struct?: DataTfJobDefinition.DevicesProperty): any {
+export function dataAwsJobDefinitionDevicesPropertyToHclTerraform(struct?: DataAwsJobDefinition.DevicesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -742,7 +742,7 @@ export function dataTfJobDefinitionDevicesPropertyToHclTerraform(struct?: DataTf
 }
 
 
-export function dataTfJobDefinitionTmpfsPropertyToTerraform(struct?: DataTfJobDefinition.TmpfsProperty): any {
+export function dataAwsJobDefinitionTmpfsPropertyToTerraform(struct?: DataAwsJobDefinition.TmpfsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -752,7 +752,7 @@ export function dataTfJobDefinitionTmpfsPropertyToTerraform(struct?: DataTfJobDe
 }
 
 
-export function dataTfJobDefinitionTmpfsPropertyToHclTerraform(struct?: DataTfJobDefinition.TmpfsProperty): any {
+export function dataAwsJobDefinitionTmpfsPropertyToHclTerraform(struct?: DataAwsJobDefinition.TmpfsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -763,7 +763,7 @@ export function dataTfJobDefinitionTmpfsPropertyToHclTerraform(struct?: DataTfJo
 }
 
 
-export function dataTfJobDefinitionLinuxParametersPropertyToTerraform(struct?: DataTfJobDefinition.LinuxParametersProperty): any {
+export function dataAwsJobDefinitionLinuxParametersPropertyToTerraform(struct?: DataAwsJobDefinition.LinuxParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -773,7 +773,7 @@ export function dataTfJobDefinitionLinuxParametersPropertyToTerraform(struct?: D
 }
 
 
-export function dataTfJobDefinitionLinuxParametersPropertyToHclTerraform(struct?: DataTfJobDefinition.LinuxParametersProperty): any {
+export function dataAwsJobDefinitionLinuxParametersPropertyToHclTerraform(struct?: DataAwsJobDefinition.LinuxParametersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -784,7 +784,7 @@ export function dataTfJobDefinitionLinuxParametersPropertyToHclTerraform(struct?
 }
 
 
-export function dataTfJobDefinitionSecretOptionsPropertyToTerraform(struct?: DataTfJobDefinition.SecretOptionsProperty): any {
+export function dataAwsJobDefinitionSecretOptionsPropertyToTerraform(struct?: DataAwsJobDefinition.SecretOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -794,7 +794,7 @@ export function dataTfJobDefinitionSecretOptionsPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataTfJobDefinitionSecretOptionsPropertyToHclTerraform(struct?: DataTfJobDefinition.SecretOptionsProperty): any {
+export function dataAwsJobDefinitionSecretOptionsPropertyToHclTerraform(struct?: DataAwsJobDefinition.SecretOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -805,7 +805,7 @@ export function dataTfJobDefinitionSecretOptionsPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataTfJobDefinitionLogConfigurationPropertyToTerraform(struct?: DataTfJobDefinition.LogConfigurationProperty): any {
+export function dataAwsJobDefinitionLogConfigurationPropertyToTerraform(struct?: DataAwsJobDefinition.LogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -815,7 +815,7 @@ export function dataTfJobDefinitionLogConfigurationPropertyToTerraform(struct?: 
 }
 
 
-export function dataTfJobDefinitionLogConfigurationPropertyToHclTerraform(struct?: DataTfJobDefinition.LogConfigurationProperty): any {
+export function dataAwsJobDefinitionLogConfigurationPropertyToHclTerraform(struct?: DataAwsJobDefinition.LogConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -826,7 +826,7 @@ export function dataTfJobDefinitionLogConfigurationPropertyToHclTerraform(struct
 }
 
 
-export function dataTfJobDefinitionMountPointsPropertyToTerraform(struct?: DataTfJobDefinition.MountPointsProperty): any {
+export function dataAwsJobDefinitionMountPointsPropertyToTerraform(struct?: DataAwsJobDefinition.MountPointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -836,7 +836,7 @@ export function dataTfJobDefinitionMountPointsPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfJobDefinitionMountPointsPropertyToHclTerraform(struct?: DataTfJobDefinition.MountPointsProperty): any {
+export function dataAwsJobDefinitionMountPointsPropertyToHclTerraform(struct?: DataAwsJobDefinition.MountPointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -847,7 +847,7 @@ export function dataTfJobDefinitionMountPointsPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfJobDefinitionNetworkConfigurationPropertyToTerraform(struct?: DataTfJobDefinition.NetworkConfigurationProperty): any {
+export function dataAwsJobDefinitionNetworkConfigurationPropertyToTerraform(struct?: DataAwsJobDefinition.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -857,7 +857,7 @@ export function dataTfJobDefinitionNetworkConfigurationPropertyToTerraform(struc
 }
 
 
-export function dataTfJobDefinitionNetworkConfigurationPropertyToHclTerraform(struct?: DataTfJobDefinition.NetworkConfigurationProperty): any {
+export function dataAwsJobDefinitionNetworkConfigurationPropertyToHclTerraform(struct?: DataAwsJobDefinition.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -868,7 +868,7 @@ export function dataTfJobDefinitionNetworkConfigurationPropertyToHclTerraform(st
 }
 
 
-export function dataTfJobDefinitionResourceRequirementsPropertyToTerraform(struct?: DataTfJobDefinition.ResourceRequirementsProperty): any {
+export function dataAwsJobDefinitionResourceRequirementsPropertyToTerraform(struct?: DataAwsJobDefinition.ResourceRequirementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -878,7 +878,7 @@ export function dataTfJobDefinitionResourceRequirementsPropertyToTerraform(struc
 }
 
 
-export function dataTfJobDefinitionResourceRequirementsPropertyToHclTerraform(struct?: DataTfJobDefinition.ResourceRequirementsProperty): any {
+export function dataAwsJobDefinitionResourceRequirementsPropertyToHclTerraform(struct?: DataAwsJobDefinition.ResourceRequirementsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -889,7 +889,7 @@ export function dataTfJobDefinitionResourceRequirementsPropertyToHclTerraform(st
 }
 
 
-export function dataTfJobDefinitionRuntimePlatformPropertyToTerraform(struct?: DataTfJobDefinition.RuntimePlatformProperty): any {
+export function dataAwsJobDefinitionRuntimePlatformPropertyToTerraform(struct?: DataAwsJobDefinition.RuntimePlatformProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -899,7 +899,7 @@ export function dataTfJobDefinitionRuntimePlatformPropertyToTerraform(struct?: D
 }
 
 
-export function dataTfJobDefinitionRuntimePlatformPropertyToHclTerraform(struct?: DataTfJobDefinition.RuntimePlatformProperty): any {
+export function dataAwsJobDefinitionRuntimePlatformPropertyToHclTerraform(struct?: DataAwsJobDefinition.RuntimePlatformProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -910,7 +910,7 @@ export function dataTfJobDefinitionRuntimePlatformPropertyToHclTerraform(struct?
 }
 
 
-export function dataTfJobDefinitionSecretsPropertyToTerraform(struct?: DataTfJobDefinition.SecretsProperty): any {
+export function dataAwsJobDefinitionSecretsPropertyToTerraform(struct?: DataAwsJobDefinition.SecretsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -920,7 +920,7 @@ export function dataTfJobDefinitionSecretsPropertyToTerraform(struct?: DataTfJob
 }
 
 
-export function dataTfJobDefinitionSecretsPropertyToHclTerraform(struct?: DataTfJobDefinition.SecretsProperty): any {
+export function dataAwsJobDefinitionSecretsPropertyToHclTerraform(struct?: DataAwsJobDefinition.SecretsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -931,7 +931,7 @@ export function dataTfJobDefinitionSecretsPropertyToHclTerraform(struct?: DataTf
 }
 
 
-export function dataTfJobDefinitionUlimitsPropertyToTerraform(struct?: DataTfJobDefinition.UlimitsProperty): any {
+export function dataAwsJobDefinitionUlimitsPropertyToTerraform(struct?: DataAwsJobDefinition.UlimitsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -941,7 +941,7 @@ export function dataTfJobDefinitionUlimitsPropertyToTerraform(struct?: DataTfJob
 }
 
 
-export function dataTfJobDefinitionUlimitsPropertyToHclTerraform(struct?: DataTfJobDefinition.UlimitsProperty): any {
+export function dataAwsJobDefinitionUlimitsPropertyToHclTerraform(struct?: DataAwsJobDefinition.UlimitsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -952,7 +952,7 @@ export function dataTfJobDefinitionUlimitsPropertyToHclTerraform(struct?: DataTf
 }
 
 
-export function dataTfJobDefinitionAuthorizationConfigPropertyToTerraform(struct?: DataTfJobDefinition.AuthorizationConfigProperty): any {
+export function dataAwsJobDefinitionAuthorizationConfigPropertyToTerraform(struct?: DataAwsJobDefinition.AuthorizationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -962,7 +962,7 @@ export function dataTfJobDefinitionAuthorizationConfigPropertyToTerraform(struct
 }
 
 
-export function dataTfJobDefinitionAuthorizationConfigPropertyToHclTerraform(struct?: DataTfJobDefinition.AuthorizationConfigProperty): any {
+export function dataAwsJobDefinitionAuthorizationConfigPropertyToHclTerraform(struct?: DataAwsJobDefinition.AuthorizationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -973,7 +973,7 @@ export function dataTfJobDefinitionAuthorizationConfigPropertyToHclTerraform(str
 }
 
 
-export function dataTfJobDefinitionEfsVolumeConfigurationPropertyToTerraform(struct?: DataTfJobDefinition.EfsVolumeConfigurationProperty): any {
+export function dataAwsJobDefinitionEfsVolumeConfigurationPropertyToTerraform(struct?: DataAwsJobDefinition.EfsVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -983,7 +983,7 @@ export function dataTfJobDefinitionEfsVolumeConfigurationPropertyToTerraform(str
 }
 
 
-export function dataTfJobDefinitionEfsVolumeConfigurationPropertyToHclTerraform(struct?: DataTfJobDefinition.EfsVolumeConfigurationProperty): any {
+export function dataAwsJobDefinitionEfsVolumeConfigurationPropertyToHclTerraform(struct?: DataAwsJobDefinition.EfsVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -994,7 +994,7 @@ export function dataTfJobDefinitionEfsVolumeConfigurationPropertyToHclTerraform(
 }
 
 
-export function dataTfJobDefinitionHostPropertyToTerraform(struct?: DataTfJobDefinition.HostProperty): any {
+export function dataAwsJobDefinitionHostPropertyToTerraform(struct?: DataAwsJobDefinition.HostProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1004,7 +1004,7 @@ export function dataTfJobDefinitionHostPropertyToTerraform(struct?: DataTfJobDef
 }
 
 
-export function dataTfJobDefinitionHostPropertyToHclTerraform(struct?: DataTfJobDefinition.HostProperty): any {
+export function dataAwsJobDefinitionHostPropertyToHclTerraform(struct?: DataAwsJobDefinition.HostProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1015,7 +1015,7 @@ export function dataTfJobDefinitionHostPropertyToHclTerraform(struct?: DataTfJob
 }
 
 
-export function dataTfJobDefinitionNodePropertiesNodeRangePropertiesContainerVolumesPropertyToTerraform(struct?: DataTfJobDefinition.NodePropertiesNodeRangePropertiesContainerVolumesProperty): any {
+export function dataAwsJobDefinitionNodePropertiesNodeRangePropertiesContainerVolumesPropertyToTerraform(struct?: DataAwsJobDefinition.NodePropertiesNodeRangePropertiesContainerVolumesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1025,7 +1025,7 @@ export function dataTfJobDefinitionNodePropertiesNodeRangePropertiesContainerVol
 }
 
 
-export function dataTfJobDefinitionNodePropertiesNodeRangePropertiesContainerVolumesPropertyToHclTerraform(struct?: DataTfJobDefinition.NodePropertiesNodeRangePropertiesContainerVolumesProperty): any {
+export function dataAwsJobDefinitionNodePropertiesNodeRangePropertiesContainerVolumesPropertyToHclTerraform(struct?: DataAwsJobDefinition.NodePropertiesNodeRangePropertiesContainerVolumesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1036,7 +1036,7 @@ export function dataTfJobDefinitionNodePropertiesNodeRangePropertiesContainerVol
 }
 
 
-export function dataTfJobDefinitionContainerPropertyToTerraform(struct?: DataTfJobDefinition.ContainerProperty): any {
+export function dataAwsJobDefinitionContainerPropertyToTerraform(struct?: DataAwsJobDefinition.ContainerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1046,7 +1046,7 @@ export function dataTfJobDefinitionContainerPropertyToTerraform(struct?: DataTfJ
 }
 
 
-export function dataTfJobDefinitionContainerPropertyToHclTerraform(struct?: DataTfJobDefinition.ContainerProperty): any {
+export function dataAwsJobDefinitionContainerPropertyToHclTerraform(struct?: DataAwsJobDefinition.ContainerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1057,7 +1057,7 @@ export function dataTfJobDefinitionContainerPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataTfJobDefinitionNodeRangePropertiesPropertyToTerraform(struct?: DataTfJobDefinition.NodeRangePropertiesProperty): any {
+export function dataAwsJobDefinitionNodeRangePropertiesPropertyToTerraform(struct?: DataAwsJobDefinition.NodeRangePropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1067,7 +1067,7 @@ export function dataTfJobDefinitionNodeRangePropertiesPropertyToTerraform(struct
 }
 
 
-export function dataTfJobDefinitionNodeRangePropertiesPropertyToHclTerraform(struct?: DataTfJobDefinition.NodeRangePropertiesProperty): any {
+export function dataAwsJobDefinitionNodeRangePropertiesPropertyToHclTerraform(struct?: DataAwsJobDefinition.NodeRangePropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1078,7 +1078,7 @@ export function dataTfJobDefinitionNodeRangePropertiesPropertyToHclTerraform(str
 }
 
 
-export function dataTfJobDefinitionNodePropertiesPropertyToTerraform(struct?: DataTfJobDefinition.NodePropertiesProperty): any {
+export function dataAwsJobDefinitionNodePropertiesPropertyToTerraform(struct?: DataAwsJobDefinition.NodePropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1088,7 +1088,7 @@ export function dataTfJobDefinitionNodePropertiesPropertyToTerraform(struct?: Da
 }
 
 
-export function dataTfJobDefinitionNodePropertiesPropertyToHclTerraform(struct?: DataTfJobDefinition.NodePropertiesProperty): any {
+export function dataAwsJobDefinitionNodePropertiesPropertyToHclTerraform(struct?: DataAwsJobDefinition.NodePropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1099,7 +1099,7 @@ export function dataTfJobDefinitionNodePropertiesPropertyToHclTerraform(struct?:
 }
 
 
-export function dataTfJobDefinitionEvaluateOnExitPropertyToTerraform(struct?: DataTfJobDefinition.EvaluateOnExitProperty): any {
+export function dataAwsJobDefinitionEvaluateOnExitPropertyToTerraform(struct?: DataAwsJobDefinition.EvaluateOnExitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1109,7 +1109,7 @@ export function dataTfJobDefinitionEvaluateOnExitPropertyToTerraform(struct?: Da
 }
 
 
-export function dataTfJobDefinitionEvaluateOnExitPropertyToHclTerraform(struct?: DataTfJobDefinition.EvaluateOnExitProperty): any {
+export function dataAwsJobDefinitionEvaluateOnExitPropertyToHclTerraform(struct?: DataAwsJobDefinition.EvaluateOnExitProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1120,7 +1120,7 @@ export function dataTfJobDefinitionEvaluateOnExitPropertyToHclTerraform(struct?:
 }
 
 
-export function dataTfJobDefinitionRetryStrategyPropertyToTerraform(struct?: DataTfJobDefinition.RetryStrategyProperty): any {
+export function dataAwsJobDefinitionRetryStrategyPropertyToTerraform(struct?: DataAwsJobDefinition.RetryStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1130,7 +1130,7 @@ export function dataTfJobDefinitionRetryStrategyPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataTfJobDefinitionRetryStrategyPropertyToHclTerraform(struct?: DataTfJobDefinition.RetryStrategyProperty): any {
+export function dataAwsJobDefinitionRetryStrategyPropertyToHclTerraform(struct?: DataAwsJobDefinition.RetryStrategyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1141,7 +1141,7 @@ export function dataTfJobDefinitionRetryStrategyPropertyToHclTerraform(struct?: 
 }
 
 
-export function dataTfJobDefinitionTimeoutPropertyToTerraform(struct?: DataTfJobDefinition.TimeoutProperty): any {
+export function dataAwsJobDefinitionTimeoutPropertyToTerraform(struct?: DataAwsJobDefinition.TimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1151,7 +1151,7 @@ export function dataTfJobDefinitionTimeoutPropertyToTerraform(struct?: DataTfJob
 }
 
 
-export function dataTfJobDefinitionTimeoutPropertyToHclTerraform(struct?: DataTfJobDefinition.TimeoutProperty): any {
+export function dataAwsJobDefinitionTimeoutPropertyToHclTerraform(struct?: DataAwsJobDefinition.TimeoutProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1162,7 +1162,7 @@ export function dataTfJobDefinitionTimeoutPropertyToHclTerraform(struct?: DataTf
 }
 
 
-export namespace DataTfJobDefinition {
+export namespace DataAwsJobDefinition {
 export interface EksPropertiesPodPropertiesContainersEnvProperty {
 }
 export class EksPropertiesPodPropertiesContainersEnvPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBucketVersioningConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBucketVersioningConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#bucket TfBucketVersioning#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#bucket AwsBucketVersioning#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#expected_bucket_owner TfBucketVersioning#expected_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#expected_bucket_owner AwsBucketVersioning#expected_bucket_owner}
   */
   readonly expectedBucketOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#id TfBucketVersioning#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#id AwsBucketVersioning#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#mfa TfBucketVersioning#mfa}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#mfa AwsBucketVersioning#mfa}
   */
   readonly mfa?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#region TfBucketVersioning#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#region AwsBucketVersioning#region}
   */
   readonly region?: string;
   /**
   * versioning_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#versioning_configuration TfBucketVersioning#versioning_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#versioning_configuration AwsBucketVersioning#versioning_configuration}
   */
-  readonly versioningConfiguration: TfBucketVersioning.VersioningConfigurationProperty;
+  readonly versioningConfiguration: AwsBucketVersioning.VersioningConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning aws_s3_bucket_versioning}
 */
-export class TfBucketVersioning extends cdktn.TerraformResource {
+export class AwsBucketVersioning extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class TfBucketVersioning extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBucketVersioning resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBucketVersioning resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBucketVersioning to import
-  * @param importFromId The id of the existing TfBucketVersioning that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBucketVersioning to import is found
+  * @param importToId The construct id used in the generated config for the AwsBucketVersioning to import
+  * @param importFromId The id of the existing AwsBucketVersioning that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBucketVersioning to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_versioning", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class TfBucketVersioning extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBucketVersioningConfig
+  * @param options AwsBucketVersioningConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBucketVersioningConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBucketVersioningConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_versioning',
       terraformGeneratorMetadata: {
@@ -180,11 +180,11 @@ export class TfBucketVersioning extends cdktn.TerraformResource {
   }
 
   // versioning_configuration - computed: false, optional: false, required: true
-  private _versioningConfiguration = new TfBucketVersioning.VersioningConfigurationPropertyOutputReference(this, "versioning_configuration");
+  private _versioningConfiguration = new AwsBucketVersioning.VersioningConfigurationPropertyOutputReference(this, "versioning_configuration");
   public get versioningConfiguration() {
     return this._versioningConfiguration;
   }
-  public putVersioningConfiguration(value: TfBucketVersioning.VersioningConfigurationProperty) {
+  public putVersioningConfiguration(value: AwsBucketVersioning.VersioningConfigurationProperty) {
     this._versioningConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -203,7 +203,7 @@ export class TfBucketVersioning extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       mfa: cdktn.stringToTerraform(this._mfa),
       region: cdktn.stringToTerraform(this._region),
-      versioning_configuration: tfBucketVersioningVersioningConfigurationPropertyToTerraform(this._versioningConfiguration.internalValue),
+      versioning_configuration: awsBucketVersioningVersioningConfigurationPropertyToTerraform(this._versioningConfiguration.internalValue),
     };
   }
 
@@ -240,10 +240,10 @@ export class TfBucketVersioning extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       versioning_configuration: {
-        value: tfBucketVersioningVersioningConfigurationPropertyToHclTerraform(this._versioningConfiguration.internalValue),
+        value: awsBucketVersioningVersioningConfigurationPropertyToHclTerraform(this._versioningConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBucketVersioning.VersioningConfigurationPropertyList",
+        storageClassType: "AwsBucketVersioning.VersioningConfigurationPropertyList",
       },
     };
 
@@ -252,7 +252,7 @@ export class TfBucketVersioning extends cdktn.TerraformResource {
   }
 }
 
-export function tfBucketVersioningVersioningConfigurationPropertyToTerraform(struct?: TfBucketVersioning.VersioningConfigurationPropertyOutputReference | TfBucketVersioning.VersioningConfigurationProperty): any {
+export function awsBucketVersioningVersioningConfigurationPropertyToTerraform(struct?: AwsBucketVersioning.VersioningConfigurationPropertyOutputReference | AwsBucketVersioning.VersioningConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -264,7 +264,7 @@ export function tfBucketVersioningVersioningConfigurationPropertyToTerraform(str
 }
 
 
-export function tfBucketVersioningVersioningConfigurationPropertyToHclTerraform(struct?: TfBucketVersioning.VersioningConfigurationPropertyOutputReference | TfBucketVersioning.VersioningConfigurationProperty): any {
+export function awsBucketVersioningVersioningConfigurationPropertyToHclTerraform(struct?: AwsBucketVersioning.VersioningConfigurationPropertyOutputReference | AwsBucketVersioning.VersioningConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -289,14 +289,14 @@ export function tfBucketVersioningVersioningConfigurationPropertyToHclTerraform(
 }
 
 
-export namespace TfBucketVersioning {
+export namespace AwsBucketVersioning {
 export interface VersioningConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#mfa_delete TfBucketVersioning#mfa_delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#mfa_delete AwsBucketVersioning#mfa_delete}
   */
   readonly mfaDelete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#status TfBucketVersioning#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_versioning#status AwsBucketVersioning#status}
   */
   readonly status: string;
 }

@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfOrganizationConformancePackConfig extends cdktn.TerraformMetaArguments {
+export interface AwsOrganizationConformancePackConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#delivery_s3_bucket TfOrganizationConformancePack#delivery_s3_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#delivery_s3_bucket AwsOrganizationConformancePack#delivery_s3_bucket}
   */
   readonly deliveryS3Bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#delivery_s3_key_prefix TfOrganizationConformancePack#delivery_s3_key_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#delivery_s3_key_prefix AwsOrganizationConformancePack#delivery_s3_key_prefix}
   */
   readonly deliveryS3KeyPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#excluded_accounts TfOrganizationConformancePack#excluded_accounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#excluded_accounts AwsOrganizationConformancePack#excluded_accounts}
   */
   readonly excludedAccounts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#id TfOrganizationConformancePack#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#id AwsOrganizationConformancePack#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#name TfOrganizationConformancePack#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#name AwsOrganizationConformancePack#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#region TfOrganizationConformancePack#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#region AwsOrganizationConformancePack#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#template_body TfOrganizationConformancePack#template_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#template_body AwsOrganizationConformancePack#template_body}
   */
   readonly templateBody?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#template_s3_uri TfOrganizationConformancePack#template_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#template_s3_uri AwsOrganizationConformancePack#template_s3_uri}
   */
   readonly templateS3Uri?: string;
   /**
   * input_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#input_parameter TfOrganizationConformancePack#input_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#input_parameter AwsOrganizationConformancePack#input_parameter}
   */
-  readonly inputParameter?: TfOrganizationConformancePack.InputParameterProperty[] | cdktn.IResolvable;
+  readonly inputParameter?: AwsOrganizationConformancePack.InputParameterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#timeouts TfOrganizationConformancePack#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#timeouts AwsOrganizationConformancePack#timeouts}
   */
-  readonly timeouts?: TfOrganizationConformancePack.TimeoutsProperty;
+  readonly timeouts?: AwsOrganizationConformancePack.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack aws_config_organization_conformance_pack}
 */
-export class TfOrganizationConformancePack extends cdktn.TerraformResource {
+export class AwsOrganizationConformancePack extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class TfOrganizationConformancePack extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfOrganizationConformancePack resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsOrganizationConformancePack resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfOrganizationConformancePack to import
-  * @param importFromId The id of the existing TfOrganizationConformancePack that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfOrganizationConformancePack to import is found
+  * @param importToId The construct id used in the generated config for the AwsOrganizationConformancePack to import
+  * @param importFromId The id of the existing AwsOrganizationConformancePack that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsOrganizationConformancePack to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_config_organization_conformance_pack", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class TfOrganizationConformancePack extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfOrganizationConformancePackConfig
+  * @param options AwsOrganizationConformancePackConfig
   */
-  public constructor(scope: Construct, id: string, config: TfOrganizationConformancePackConfig) {
+  public constructor(scope: Construct, id: string, config: AwsOrganizationConformancePackConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_config_organization_conformance_pack',
       terraformGeneratorMetadata: {
@@ -255,11 +255,11 @@ export class TfOrganizationConformancePack extends cdktn.TerraformResource {
   }
 
   // input_parameter - computed: false, optional: true, required: false
-  private _inputParameter = new TfOrganizationConformancePack.InputParameterPropertyList(this, "input_parameter", true);
+  private _inputParameter = new AwsOrganizationConformancePack.InputParameterPropertyList(this, "input_parameter", true);
   public get inputParameter() {
     return this._inputParameter;
   }
-  public putInputParameter(value: TfOrganizationConformancePack.InputParameterProperty[] | cdktn.IResolvable) {
+  public putInputParameter(value: AwsOrganizationConformancePack.InputParameterProperty[] | cdktn.IResolvable) {
     this._inputParameter.internalValue = value;
   }
   public resetInputParameter() {
@@ -271,11 +271,11 @@ export class TfOrganizationConformancePack extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfOrganizationConformancePack.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsOrganizationConformancePack.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfOrganizationConformancePack.TimeoutsProperty) {
+  public putTimeouts(value: AwsOrganizationConformancePack.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -300,8 +300,8 @@ export class TfOrganizationConformancePack extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       template_body: cdktn.stringToTerraform(this._templateBody),
       template_s3_uri: cdktn.stringToTerraform(this._templateS3Uri),
-      input_parameter: cdktn.listMapper(tfOrganizationConformancePackInputParameterPropertyToTerraform, true)(this._inputParameter.internalValue),
-      timeouts: tfOrganizationConformancePackTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      input_parameter: cdktn.listMapper(awsOrganizationConformancePackInputParameterPropertyToTerraform, true)(this._inputParameter.internalValue),
+      timeouts: awsOrganizationConformancePackTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -356,16 +356,16 @@ export class TfOrganizationConformancePack extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       input_parameter: {
-        value: cdktn.listMapperHcl(tfOrganizationConformancePackInputParameterPropertyToHclTerraform, true)(this._inputParameter.internalValue),
+        value: cdktn.listMapperHcl(awsOrganizationConformancePackInputParameterPropertyToHclTerraform, true)(this._inputParameter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfOrganizationConformancePack.InputParameterPropertyList",
+        storageClassType: "AwsOrganizationConformancePack.InputParameterPropertyList",
       },
       timeouts: {
-        value: tfOrganizationConformancePackTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsOrganizationConformancePackTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfOrganizationConformancePack.TimeoutsProperty",
+        storageClassType: "AwsOrganizationConformancePack.TimeoutsProperty",
       },
     };
 
@@ -374,7 +374,7 @@ export class TfOrganizationConformancePack extends cdktn.TerraformResource {
   }
 }
 
-export function tfOrganizationConformancePackInputParameterPropertyToTerraform(struct?: TfOrganizationConformancePack.InputParameterProperty | cdktn.IResolvable): any {
+export function awsOrganizationConformancePackInputParameterPropertyToTerraform(struct?: AwsOrganizationConformancePack.InputParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -386,7 +386,7 @@ export function tfOrganizationConformancePackInputParameterPropertyToTerraform(s
 }
 
 
-export function tfOrganizationConformancePackInputParameterPropertyToHclTerraform(struct?: TfOrganizationConformancePack.InputParameterProperty | cdktn.IResolvable): any {
+export function awsOrganizationConformancePackInputParameterPropertyToHclTerraform(struct?: AwsOrganizationConformancePack.InputParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -411,7 +411,7 @@ export function tfOrganizationConformancePackInputParameterPropertyToHclTerrafor
 }
 
 
-export function tfOrganizationConformancePackTimeoutsPropertyToTerraform(struct?: TfOrganizationConformancePack.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsOrganizationConformancePackTimeoutsPropertyToTerraform(struct?: AwsOrganizationConformancePack.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -424,7 +424,7 @@ export function tfOrganizationConformancePackTimeoutsPropertyToTerraform(struct?
 }
 
 
-export function tfOrganizationConformancePackTimeoutsPropertyToHclTerraform(struct?: TfOrganizationConformancePack.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsOrganizationConformancePackTimeoutsPropertyToHclTerraform(struct?: AwsOrganizationConformancePack.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -455,14 +455,14 @@ export function tfOrganizationConformancePackTimeoutsPropertyToHclTerraform(stru
 }
 
 
-export namespace TfOrganizationConformancePack {
+export namespace AwsOrganizationConformancePack {
 export interface InputParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#parameter_name TfOrganizationConformancePack#parameter_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#parameter_name AwsOrganizationConformancePack#parameter_name}
   */
   readonly parameterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#parameter_value TfOrganizationConformancePack#parameter_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#parameter_value AwsOrganizationConformancePack#parameter_value}
   */
   readonly parameterValue: string;
 }
@@ -564,15 +564,15 @@ export class InputParameterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#create TfOrganizationConformancePack#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#create AwsOrganizationConformancePack#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#delete TfOrganizationConformancePack#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#delete AwsOrganizationConformancePack#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#update TfOrganizationConformancePack#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/config_organization_conformance_pack#update AwsOrganizationConformancePack#update}
   */
   readonly update?: string;
 }

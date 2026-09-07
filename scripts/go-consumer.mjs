@@ -4,9 +4,11 @@
 /**
  * Build and run `examples/go-consumer` against a local checkout of the Go fleet.
  *
- * The fleet is published (`v0.2.0` on `proxy.golang.org`), but this example is deliberately *not*
- * built the way a consumer would build it: it exists to measure and prove the fleet as it stands
- * in a local checkout, not the last release. So it is built in **workspace mode**: this script
+ * The fleet is published (`v0.2.0` on `proxy.golang.org`, still under the 0.2.0 `aws<group>`
+ * directory names), but this example is deliberately *not* built the way a consumer would build
+ * it: it exists to measure and prove the fleet as it stands in a local checkout, not the last
+ * release — which since 0.3.0's rename is also the only way it can build at all. So it is built
+ * in **workspace mode**: this script
  * writes a `go.work` naming the local module directories, which is why
  * `examples/go-consumer/go.work` is generated and gitignored rather than committed — a committed
  * one would bake this machine's checkout layout into the repository.
@@ -103,6 +105,18 @@ if (flag("--work-only")) process.exit(0);
 
 const go = (args, opts = {}) =>
   execFileSync("go", args, { cwd: exampleDir, stdio: "inherit", ...opts });
+
+// `go build` does not care about formatting, so a rename that widens a struct field leaves the
+// example unformatted and every gate still green — which is exactly how 0.3.0's `tfType` ->
+// `awsType` broke the alignment column. gofmt is syntactic and needs no fleet, so it runs first.
+const unformatted = execFileSync("gofmt", ["-l", "."], {
+  cwd: exampleDir,
+  encoding: "utf-8",
+}).trim();
+if (unformatted !== "") {
+  console.error(`go-consumer: not gofmt-clean — run \`gofmt -w\` on:\n${unformatted}`);
+  process.exit(1);
+}
 
 console.log("go-consumer: go build ./...");
 go(["build", "./..."]);

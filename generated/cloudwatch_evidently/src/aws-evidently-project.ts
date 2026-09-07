@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfProjectConfig extends cdktn.TerraformMetaArguments {
+export interface AwsProjectConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#description TfProject#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#description AwsProject#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#id TfProject#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#id AwsProject#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#name TfProject#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#name AwsProject#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#region TfProject#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#region AwsProject#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#tags TfProject#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#tags AwsProject#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#tags_all TfProject#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#tags_all AwsProject#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * data_delivery block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#data_delivery TfProject#data_delivery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#data_delivery AwsProject#data_delivery}
   */
-  readonly dataDelivery?: TfProject.DataDeliveryProperty;
+  readonly dataDelivery?: AwsProject.DataDeliveryProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#timeouts TfProject#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#timeouts AwsProject#timeouts}
   */
-  readonly timeouts?: TfProject.TimeoutsProperty;
+  readonly timeouts?: AwsProject.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project aws_evidently_project}
 */
-export class TfProject extends cdktn.TerraformResource {
+export class AwsProject extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class TfProject extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfProject resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsProject resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfProject to import
-  * @param importFromId The id of the existing TfProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfProject to import is found
+  * @param importToId The construct id used in the generated config for the AwsProject to import
+  * @param importFromId The id of the existing AwsProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsProject to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_evidently_project", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class TfProject extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfProjectConfig
+  * @param options AwsProjectConfig
   */
-  public constructor(scope: Construct, id: string, config: TfProjectConfig) {
+  public constructor(scope: Construct, id: string, config: AwsProjectConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_evidently_project',
       terraformGeneratorMetadata: {
@@ -253,11 +253,11 @@ export class TfProject extends cdktn.TerraformResource {
   }
 
   // data_delivery - computed: false, optional: true, required: false
-  private _dataDelivery = new TfProject.DataDeliveryPropertyOutputReference(this, "data_delivery");
+  private _dataDelivery = new AwsProject.DataDeliveryPropertyOutputReference(this, "data_delivery");
   public get dataDelivery() {
     return this._dataDelivery;
   }
-  public putDataDelivery(value: TfProject.DataDeliveryProperty) {
+  public putDataDelivery(value: AwsProject.DataDeliveryProperty) {
     this._dataDelivery.internalValue = value;
   }
   public resetDataDelivery() {
@@ -269,11 +269,11 @@ export class TfProject extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfProject.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsProject.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfProject.TimeoutsProperty) {
+  public putTimeouts(value: AwsProject.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -296,8 +296,8 @@ export class TfProject extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      data_delivery: tfProjectDataDeliveryPropertyToTerraform(this._dataDelivery.internalValue),
-      timeouts: tfProjectTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      data_delivery: awsProjectDataDeliveryPropertyToTerraform(this._dataDelivery.internalValue),
+      timeouts: awsProjectTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -340,16 +340,16 @@ export class TfProject extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       data_delivery: {
-        value: tfProjectDataDeliveryPropertyToHclTerraform(this._dataDelivery.internalValue),
+        value: awsProjectDataDeliveryPropertyToHclTerraform(this._dataDelivery.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfProject.DataDeliveryPropertyList",
+        storageClassType: "AwsProject.DataDeliveryPropertyList",
       },
       timeouts: {
-        value: tfProjectTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsProjectTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfProject.TimeoutsProperty",
+        storageClassType: "AwsProject.TimeoutsProperty",
       },
     };
 
@@ -358,7 +358,7 @@ export class TfProject extends cdktn.TerraformResource {
   }
 }
 
-export function tfProjectCloudwatchLogsPropertyToTerraform(struct?: TfProject.CloudwatchLogsPropertyOutputReference | TfProject.CloudwatchLogsProperty): any {
+export function awsProjectCloudwatchLogsPropertyToTerraform(struct?: AwsProject.CloudwatchLogsPropertyOutputReference | AwsProject.CloudwatchLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -369,7 +369,7 @@ export function tfProjectCloudwatchLogsPropertyToTerraform(struct?: TfProject.Cl
 }
 
 
-export function tfProjectCloudwatchLogsPropertyToHclTerraform(struct?: TfProject.CloudwatchLogsPropertyOutputReference | TfProject.CloudwatchLogsProperty): any {
+export function awsProjectCloudwatchLogsPropertyToHclTerraform(struct?: AwsProject.CloudwatchLogsPropertyOutputReference | AwsProject.CloudwatchLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function tfProjectCloudwatchLogsPropertyToHclTerraform(struct?: TfProject
 }
 
 
-export function tfProjectS3DestinationPropertyToTerraform(struct?: TfProject.S3DestinationPropertyOutputReference | TfProject.S3DestinationProperty): any {
+export function awsProjectS3DestinationPropertyToTerraform(struct?: AwsProject.S3DestinationPropertyOutputReference | AwsProject.S3DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -400,7 +400,7 @@ export function tfProjectS3DestinationPropertyToTerraform(struct?: TfProject.S3D
 }
 
 
-export function tfProjectS3DestinationPropertyToHclTerraform(struct?: TfProject.S3DestinationPropertyOutputReference | TfProject.S3DestinationProperty): any {
+export function awsProjectS3DestinationPropertyToHclTerraform(struct?: AwsProject.S3DestinationPropertyOutputReference | AwsProject.S3DestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -425,32 +425,32 @@ export function tfProjectS3DestinationPropertyToHclTerraform(struct?: TfProject.
 }
 
 
-export function tfProjectDataDeliveryPropertyToTerraform(struct?: TfProject.DataDeliveryPropertyOutputReference | TfProject.DataDeliveryProperty): any {
+export function awsProjectDataDeliveryPropertyToTerraform(struct?: AwsProject.DataDeliveryPropertyOutputReference | AwsProject.DataDeliveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cloudwatch_logs: tfProjectCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
-    s3_destination: tfProjectS3DestinationPropertyToTerraform(struct!.s3Destination),
+    cloudwatch_logs: awsProjectCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
+    s3_destination: awsProjectS3DestinationPropertyToTerraform(struct!.s3Destination),
   }
 }
 
 
-export function tfProjectDataDeliveryPropertyToHclTerraform(struct?: TfProject.DataDeliveryPropertyOutputReference | TfProject.DataDeliveryProperty): any {
+export function awsProjectDataDeliveryPropertyToHclTerraform(struct?: AwsProject.DataDeliveryPropertyOutputReference | AwsProject.DataDeliveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cloudwatch_logs: {
-      value: tfProjectCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
+      value: awsProjectCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchLogsPropertyList",
     },
     s3_destination: {
-      value: tfProjectS3DestinationPropertyToHclTerraform(struct!.s3Destination),
+      value: awsProjectS3DestinationPropertyToHclTerraform(struct!.s3Destination),
       isBlock: true,
       type: "list",
       storageClassType: "S3DestinationPropertyList",
@@ -462,7 +462,7 @@ export function tfProjectDataDeliveryPropertyToHclTerraform(struct?: TfProject.D
 }
 
 
-export function tfProjectTimeoutsPropertyToTerraform(struct?: TfProject.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsProjectTimeoutsPropertyToTerraform(struct?: AwsProject.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -475,7 +475,7 @@ export function tfProjectTimeoutsPropertyToTerraform(struct?: TfProject.Timeouts
 }
 
 
-export function tfProjectTimeoutsPropertyToHclTerraform(struct?: TfProject.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsProjectTimeoutsPropertyToHclTerraform(struct?: AwsProject.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -506,10 +506,10 @@ export function tfProjectTimeoutsPropertyToHclTerraform(struct?: TfProject.Timeo
 }
 
 
-export namespace TfProject {
+export namespace AwsProject {
 export interface CloudwatchLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#log_group TfProject#log_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#log_group AwsProject#log_group}
   */
   readonly logGroup?: string;
 }
@@ -563,11 +563,11 @@ export class CloudwatchLogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface S3DestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#bucket TfProject#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#bucket AwsProject#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#prefix TfProject#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#prefix AwsProject#prefix}
   */
   readonly prefix?: string;
 }
@@ -645,13 +645,13 @@ export interface DataDeliveryProperty {
   /**
   * cloudwatch_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#cloudwatch_logs TfProject#cloudwatch_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#cloudwatch_logs AwsProject#cloudwatch_logs}
   */
   readonly cloudwatchLogs?: CloudwatchLogsProperty;
   /**
   * s3_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#s3_destination TfProject#s3_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#s3_destination AwsProject#s3_destination}
   */
   readonly s3Destination?: S3DestinationProperty;
 }
@@ -727,15 +727,15 @@ export class DataDeliveryPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#create TfProject#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#create AwsProject#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#delete TfProject#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#delete AwsProject#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#update TfProject#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/evidently_project#update AwsProject#update}
   */
   readonly update?: string;
 }

@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfAccessPointsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsAccessPointsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_access_points#account_id DataTfAccessPoints#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_access_points#account_id DataAwsAccessPoints#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_access_points#bucket DataTfAccessPoints#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_access_points#bucket DataAwsAccessPoints#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_access_points#data_source_id DataTfAccessPoints#data_source_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_access_points#data_source_id DataAwsAccessPoints#data_source_id}
   */
   readonly dataSourceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_access_points#data_source_type DataTfAccessPoints#data_source_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_access_points#data_source_type DataAwsAccessPoints#data_source_type}
   */
   readonly dataSourceType?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_access_points#region DataTfAccessPoints#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_access_points#region DataAwsAccessPoints#region}
   */
   readonly region?: string;
 }
@@ -33,7 +33,7 @@ export interface DataTfAccessPointsConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_access_points aws_s3control_access_points}
 */
-export class DataTfAccessPoints extends cdktn.TerraformDataSource {
+export class DataAwsAccessPoints extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class DataTfAccessPoints extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfAccessPoints resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsAccessPoints resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfAccessPoints to import
-  * @param importFromId The id of the existing DataTfAccessPoints that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_access_points#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfAccessPoints to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsAccessPoints to import
+  * @param importFromId The id of the existing DataAwsAccessPoints that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3control_access_points#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsAccessPoints to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3control_access_points", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class DataTfAccessPoints extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfAccessPointsConfig = {}
+  * @param options DataAwsAccessPointsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfAccessPointsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsAccessPointsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_s3control_access_points',
       terraformGeneratorMetadata: {
@@ -93,7 +93,7 @@ export class DataTfAccessPoints extends cdktn.TerraformDataSource {
   // ==========
 
   // access_points - computed: true, optional: false, required: false
-  private _accessPoints = new DataTfAccessPoints.AccessPointsPropertyList(this, "access_points", false);
+  private _accessPoints = new DataAwsAccessPoints.AccessPointsPropertyList(this, "access_points", false);
   public get accessPoints() {
     return this._accessPoints;
   }
@@ -231,7 +231,7 @@ export class DataTfAccessPoints extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfAccessPointsVpcConfigurationPropertyToTerraform(struct?: DataTfAccessPoints.VpcConfigurationProperty): any {
+export function dataAwsAccessPointsVpcConfigurationPropertyToTerraform(struct?: DataAwsAccessPoints.VpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function dataTfAccessPointsVpcConfigurationPropertyToTerraform(struct?: D
 }
 
 
-export function dataTfAccessPointsVpcConfigurationPropertyToHclTerraform(struct?: DataTfAccessPoints.VpcConfigurationProperty): any {
+export function dataAwsAccessPointsVpcConfigurationPropertyToHclTerraform(struct?: DataAwsAccessPoints.VpcConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -252,7 +252,7 @@ export function dataTfAccessPointsVpcConfigurationPropertyToHclTerraform(struct?
 }
 
 
-export function dataTfAccessPointsAccessPointsPropertyToTerraform(struct?: DataTfAccessPoints.AccessPointsProperty): any {
+export function dataAwsAccessPointsAccessPointsPropertyToTerraform(struct?: DataAwsAccessPoints.AccessPointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -262,7 +262,7 @@ export function dataTfAccessPointsAccessPointsPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfAccessPointsAccessPointsPropertyToHclTerraform(struct?: DataTfAccessPoints.AccessPointsProperty): any {
+export function dataAwsAccessPointsAccessPointsPropertyToHclTerraform(struct?: DataAwsAccessPoints.AccessPointsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -273,7 +273,7 @@ export function dataTfAccessPointsAccessPointsPropertyToHclTerraform(struct?: Da
 }
 
 
-export namespace DataTfAccessPoints {
+export namespace DataAwsAccessPoints {
 export interface VpcConfigurationProperty {
 }
 export class VpcConfigurationPropertyOutputReference extends cdktn.ComplexObject {

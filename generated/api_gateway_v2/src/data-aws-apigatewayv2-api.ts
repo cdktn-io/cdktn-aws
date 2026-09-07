@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfApiConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsApiConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/apigatewayv2_api#api_id DataTfApi#api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/apigatewayv2_api#api_id DataAwsApi#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/apigatewayv2_api#id DataTfApi#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/apigatewayv2_api#id DataAwsApi#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,11 +20,11 @@ export interface DataTfApiConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/apigatewayv2_api#region DataTfApi#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/apigatewayv2_api#region DataAwsApi#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/apigatewayv2_api#tags DataTfApi#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/apigatewayv2_api#tags DataAwsApi#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataTfApiConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/apigatewayv2_api aws_apigatewayv2_api}
 */
-export class DataTfApi extends cdktn.TerraformDataSource {
+export class DataAwsApi extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfApi extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfApi resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsApi resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfApi to import
-  * @param importFromId The id of the existing DataTfApi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/apigatewayv2_api#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfApi to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsApi to import
+  * @param importFromId The id of the existing DataAwsApi that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/apigatewayv2_api#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsApi to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apigatewayv2_api", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfApi extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfApiConfig
+  * @param options DataAwsApiConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfApiConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsApiConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apigatewayv2_api',
       terraformGeneratorMetadata: {
@@ -119,7 +119,7 @@ export class DataTfApi extends cdktn.TerraformDataSource {
   }
 
   // cors_configuration - computed: true, optional: false, required: false
-  private _corsConfiguration = new DataTfApi.CorsConfigurationPropertyList(this, "cors_configuration", false);
+  private _corsConfiguration = new DataAwsApi.CorsConfigurationPropertyList(this, "cors_configuration", false);
   public get corsConfiguration() {
     return this._corsConfiguration;
   }
@@ -258,7 +258,7 @@ export class DataTfApi extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfApiCorsConfigurationPropertyToTerraform(struct?: DataTfApi.CorsConfigurationProperty): any {
+export function dataAwsApiCorsConfigurationPropertyToTerraform(struct?: DataAwsApi.CorsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,7 +268,7 @@ export function dataTfApiCorsConfigurationPropertyToTerraform(struct?: DataTfApi
 }
 
 
-export function dataTfApiCorsConfigurationPropertyToHclTerraform(struct?: DataTfApi.CorsConfigurationProperty): any {
+export function dataAwsApiCorsConfigurationPropertyToHclTerraform(struct?: DataAwsApi.CorsConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -279,7 +279,7 @@ export function dataTfApiCorsConfigurationPropertyToHclTerraform(struct?: DataTf
 }
 
 
-export namespace DataTfApi {
+export namespace DataAwsApi {
 export interface CorsConfigurationProperty {
 }
 export class CorsConfigurationPropertyOutputReference extends cdktn.ComplexObject {

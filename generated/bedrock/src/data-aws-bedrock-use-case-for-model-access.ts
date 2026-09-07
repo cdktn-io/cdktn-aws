@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfUseCaseForModelAccessConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsUseCaseForModelAccessConfig extends cdktn.TerraformMetaArguments {
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_use_case_for_model_access aws_bedrock_use_case_for_model_access}
 */
-export class DataTfUseCaseForModelAccess extends cdktn.TerraformDataSource {
+export class DataAwsUseCaseForModelAccess extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -22,11 +22,11 @@ export class DataTfUseCaseForModelAccess extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfUseCaseForModelAccess resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsUseCaseForModelAccess resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfUseCaseForModelAccess to import
-  * @param importFromId The id of the existing DataTfUseCaseForModelAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_use_case_for_model_access#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfUseCaseForModelAccess to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsUseCaseForModelAccess to import
+  * @param importFromId The id of the existing DataAwsUseCaseForModelAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_use_case_for_model_access#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsUseCaseForModelAccess to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrock_use_case_for_model_access", importId: importFromId, provider });
@@ -41,9 +41,9 @@ export class DataTfUseCaseForModelAccess extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfUseCaseForModelAccessConfig = {}
+  * @param options DataAwsUseCaseForModelAccessConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfUseCaseForModelAccessConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsUseCaseForModelAccessConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrock_use_case_for_model_access',
       terraformGeneratorMetadata: {

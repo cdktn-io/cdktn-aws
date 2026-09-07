@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEventIntegrationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEventIntegrationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#description TfEventIntegration#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#description AwsEventIntegration#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#eventbridge_bus TfEventIntegration#eventbridge_bus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#eventbridge_bus AwsEventIntegration#eventbridge_bus}
   */
   readonly eventbridgeBus: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#id TfEventIntegration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#id AwsEventIntegration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#name TfEventIntegration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#name AwsEventIntegration#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#region TfEventIntegration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#region AwsEventIntegration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#tags TfEventIntegration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#tags AwsEventIntegration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#tags_all TfEventIntegration#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#tags_all AwsEventIntegration#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * event_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#event_filter TfEventIntegration#event_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#event_filter AwsEventIntegration#event_filter}
   */
-  readonly eventFilter: TfEventIntegration.EventFilterProperty;
+  readonly eventFilter: AwsEventIntegration.EventFilterProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration aws_appintegrations_event_integration}
 */
-export class TfEventIntegration extends cdktn.TerraformResource {
+export class AwsEventIntegration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfEventIntegration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEventIntegration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEventIntegration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEventIntegration to import
-  * @param importFromId The id of the existing TfEventIntegration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEventIntegration to import is found
+  * @param importToId The construct id used in the generated config for the AwsEventIntegration to import
+  * @param importFromId The id of the existing AwsEventIntegration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEventIntegration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appintegrations_event_integration", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfEventIntegration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEventIntegrationConfig
+  * @param options AwsEventIntegrationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEventIntegrationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEventIntegrationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appintegrations_event_integration',
       terraformGeneratorMetadata: {
@@ -224,11 +224,11 @@ export class TfEventIntegration extends cdktn.TerraformResource {
   }
 
   // event_filter - computed: false, optional: false, required: true
-  private _eventFilter = new TfEventIntegration.EventFilterPropertyOutputReference(this, "event_filter");
+  private _eventFilter = new AwsEventIntegration.EventFilterPropertyOutputReference(this, "event_filter");
   public get eventFilter() {
     return this._eventFilter;
   }
-  public putEventFilter(value: TfEventIntegration.EventFilterProperty) {
+  public putEventFilter(value: AwsEventIntegration.EventFilterProperty) {
     this._eventFilter.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -249,7 +249,7 @@ export class TfEventIntegration extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      event_filter: tfEventIntegrationEventFilterPropertyToTerraform(this._eventFilter.internalValue),
+      event_filter: awsEventIntegrationEventFilterPropertyToTerraform(this._eventFilter.internalValue),
     };
   }
 
@@ -298,10 +298,10 @@ export class TfEventIntegration extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       event_filter: {
-        value: tfEventIntegrationEventFilterPropertyToHclTerraform(this._eventFilter.internalValue),
+        value: awsEventIntegrationEventFilterPropertyToHclTerraform(this._eventFilter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEventIntegration.EventFilterPropertyList",
+        storageClassType: "AwsEventIntegration.EventFilterPropertyList",
       },
     };
 
@@ -310,7 +310,7 @@ export class TfEventIntegration extends cdktn.TerraformResource {
   }
 }
 
-export function tfEventIntegrationEventFilterPropertyToTerraform(struct?: TfEventIntegration.EventFilterPropertyOutputReference | TfEventIntegration.EventFilterProperty): any {
+export function awsEventIntegrationEventFilterPropertyToTerraform(struct?: AwsEventIntegration.EventFilterPropertyOutputReference | AwsEventIntegration.EventFilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -321,7 +321,7 @@ export function tfEventIntegrationEventFilterPropertyToTerraform(struct?: TfEven
 }
 
 
-export function tfEventIntegrationEventFilterPropertyToHclTerraform(struct?: TfEventIntegration.EventFilterPropertyOutputReference | TfEventIntegration.EventFilterProperty): any {
+export function awsEventIntegrationEventFilterPropertyToHclTerraform(struct?: AwsEventIntegration.EventFilterPropertyOutputReference | AwsEventIntegration.EventFilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -340,10 +340,10 @@ export function tfEventIntegrationEventFilterPropertyToHclTerraform(struct?: TfE
 }
 
 
-export namespace TfEventIntegration {
+export namespace AwsEventIntegration {
 export interface EventFilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#source TfEventIntegration#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appintegrations_event_integration#source AwsEventIntegration#source}
   */
   readonly source: string;
 }

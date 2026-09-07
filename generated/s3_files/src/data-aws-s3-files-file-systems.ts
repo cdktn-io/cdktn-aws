@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfFileSystemsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsFileSystemsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_file_systems#region DataTfFileSystems#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_file_systems#region DataAwsFileSystems#region}
   */
   readonly region?: string;
   /**
   * file_systems block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_file_systems#file_systems DataTfFileSystems#file_systems}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_file_systems#file_systems DataAwsFileSystems#file_systems}
   */
-  readonly fileSystems?: DataTfFileSystems.FileSystemsProperty[] | cdktn.IResolvable;
+  readonly fileSystems?: DataAwsFileSystems.FileSystemsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_file_systems aws_s3files_file_systems}
 */
-export class DataTfFileSystems extends cdktn.TerraformDataSource {
+export class DataAwsFileSystems extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class DataTfFileSystems extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfFileSystems resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsFileSystems resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfFileSystems to import
-  * @param importFromId The id of the existing DataTfFileSystems that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_file_systems#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfFileSystems to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsFileSystems to import
+  * @param importFromId The id of the existing DataAwsFileSystems that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/s3files_file_systems#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsFileSystems to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3files_file_systems", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class DataTfFileSystems extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfFileSystemsConfig = {}
+  * @param options DataAwsFileSystemsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfFileSystemsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsFileSystemsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_s3files_file_systems',
       terraformGeneratorMetadata: {
@@ -96,11 +96,11 @@ export class DataTfFileSystems extends cdktn.TerraformDataSource {
   }
 
   // file_systems - computed: false, optional: true, required: false
-  private _fileSystems = new DataTfFileSystems.FileSystemsPropertyList(this, "file_systems", false);
+  private _fileSystems = new DataAwsFileSystems.FileSystemsPropertyList(this, "file_systems", false);
   public get fileSystems() {
     return this._fileSystems;
   }
-  public putFileSystems(value: DataTfFileSystems.FileSystemsProperty[] | cdktn.IResolvable) {
+  public putFileSystems(value: DataAwsFileSystems.FileSystemsProperty[] | cdktn.IResolvable) {
     this._fileSystems.internalValue = value;
   }
   public resetFileSystems() {
@@ -118,7 +118,7 @@ export class DataTfFileSystems extends cdktn.TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       region: cdktn.stringToTerraform(this._region),
-      file_systems: cdktn.listMapper(dataTfFileSystemsFileSystemsPropertyToTerraform, true)(this._fileSystems.internalValue),
+      file_systems: cdktn.listMapper(dataAwsFileSystemsFileSystemsPropertyToTerraform, true)(this._fileSystems.internalValue),
     };
   }
 
@@ -131,10 +131,10 @@ export class DataTfFileSystems extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       file_systems: {
-        value: cdktn.listMapperHcl(dataTfFileSystemsFileSystemsPropertyToHclTerraform, true)(this._fileSystems.internalValue),
+        value: cdktn.listMapperHcl(dataAwsFileSystemsFileSystemsPropertyToHclTerraform, true)(this._fileSystems.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataTfFileSystems.FileSystemsPropertyList",
+        storageClassType: "DataAwsFileSystems.FileSystemsPropertyList",
       },
     };
 
@@ -143,7 +143,7 @@ export class DataTfFileSystems extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfFileSystemsFileSystemsPropertyToTerraform(struct?: DataTfFileSystems.FileSystemsProperty | cdktn.IResolvable): any {
+export function dataAwsFileSystemsFileSystemsPropertyToTerraform(struct?: DataAwsFileSystems.FileSystemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -153,7 +153,7 @@ export function dataTfFileSystemsFileSystemsPropertyToTerraform(struct?: DataTfF
 }
 
 
-export function dataTfFileSystemsFileSystemsPropertyToHclTerraform(struct?: DataTfFileSystems.FileSystemsProperty | cdktn.IResolvable): any {
+export function dataAwsFileSystemsFileSystemsPropertyToHclTerraform(struct?: DataAwsFileSystems.FileSystemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -164,7 +164,7 @@ export function dataTfFileSystemsFileSystemsPropertyToHclTerraform(struct?: Data
 }
 
 
-export namespace DataTfFileSystems {
+export namespace DataAwsFileSystems {
 export interface FileSystemsProperty {
 }
 export class FileSystemsPropertyOutputReference extends cdktn.ComplexObject {

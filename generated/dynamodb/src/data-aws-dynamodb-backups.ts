@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfBackupsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsBackupsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_backups#backup_type DataTfBackups#backup_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_backups#backup_type DataAwsBackups#backup_type}
   */
   readonly backupType?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_backups#region DataTfBackups#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_backups#region DataAwsBackups#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_backups#table_name DataTfBackups#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_backups#table_name DataAwsBackups#table_name}
   */
   readonly tableName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_backups#time_range_lower_bound DataTfBackups#time_range_lower_bound}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_backups#time_range_lower_bound DataAwsBackups#time_range_lower_bound}
   */
   readonly timeRangeLowerBound?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_backups#time_range_upper_bound DataTfBackups#time_range_upper_bound}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_backups#time_range_upper_bound DataAwsBackups#time_range_upper_bound}
   */
   readonly timeRangeUpperBound?: string;
 }
@@ -33,7 +33,7 @@ export interface DataTfBackupsConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_backups aws_dynamodb_backups}
 */
-export class DataTfBackups extends cdktn.TerraformDataSource {
+export class DataAwsBackups extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class DataTfBackups extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfBackups resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsBackups resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfBackups to import
-  * @param importFromId The id of the existing DataTfBackups that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_backups#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfBackups to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsBackups to import
+  * @param importFromId The id of the existing DataAwsBackups that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_backups#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsBackups to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dynamodb_backups", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class DataTfBackups extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfBackupsConfig = {}
+  * @param options DataAwsBackupsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfBackupsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsBackupsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_dynamodb_backups',
       terraformGeneratorMetadata: {
@@ -93,7 +93,7 @@ export class DataTfBackups extends cdktn.TerraformDataSource {
   // ==========
 
   // backup_summaries - computed: true, optional: false, required: false
-  private _backupSummaries = new DataTfBackups.BackupSummariesPropertyList(this, "backup_summaries", false);
+  private _backupSummaries = new DataAwsBackups.BackupSummariesPropertyList(this, "backup_summaries", false);
   public get backupSummaries() {
     return this._backupSummaries;
   }
@@ -231,7 +231,7 @@ export class DataTfBackups extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfBackupsBackupSummariesPropertyToTerraform(struct?: DataTfBackups.BackupSummariesProperty): any {
+export function dataAwsBackupsBackupSummariesPropertyToTerraform(struct?: DataAwsBackups.BackupSummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function dataTfBackupsBackupSummariesPropertyToTerraform(struct?: DataTfB
 }
 
 
-export function dataTfBackupsBackupSummariesPropertyToHclTerraform(struct?: DataTfBackups.BackupSummariesProperty): any {
+export function dataAwsBackupsBackupSummariesPropertyToHclTerraform(struct?: DataAwsBackups.BackupSummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -252,7 +252,7 @@ export function dataTfBackupsBackupSummariesPropertyToHclTerraform(struct?: Data
 }
 
 
-export namespace DataTfBackups {
+export namespace DataAwsBackups {
 export interface BackupSummariesProperty {
 }
 export class BackupSummariesPropertyOutputReference extends cdktn.ComplexObject {

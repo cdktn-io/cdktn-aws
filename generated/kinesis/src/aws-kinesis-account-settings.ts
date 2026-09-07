@@ -5,25 +5,25 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAccountSettingsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAccountSettingsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_account_settings#region TfAccountSettings#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_account_settings#region AwsAccountSettings#region}
   */
   readonly region?: string;
   /**
   * minimum_throughput_billing_commitment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_account_settings#minimum_throughput_billing_commitment TfAccountSettings#minimum_throughput_billing_commitment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_account_settings#minimum_throughput_billing_commitment AwsAccountSettings#minimum_throughput_billing_commitment}
   */
-  readonly minimumThroughputBillingCommitment?: TfAccountSettings.MinimumThroughputBillingCommitmentProperty[] | cdktn.IResolvable;
+  readonly minimumThroughputBillingCommitment?: AwsAccountSettings.MinimumThroughputBillingCommitmentProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_account_settings aws_kinesis_account_settings}
 */
-export class TfAccountSettings extends cdktn.TerraformResource {
+export class AwsAccountSettings extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -34,11 +34,11 @@ export class TfAccountSettings extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAccountSettings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAccountSettings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAccountSettings to import
-  * @param importFromId The id of the existing TfAccountSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_account_settings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAccountSettings to import is found
+  * @param importToId The construct id used in the generated config for the AwsAccountSettings to import
+  * @param importFromId The id of the existing AwsAccountSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_account_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAccountSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kinesis_account_settings", importId: importFromId, provider });
@@ -53,9 +53,9 @@ export class TfAccountSettings extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAccountSettingsConfig = {}
+  * @param options AwsAccountSettingsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfAccountSettingsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsAccountSettingsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_kinesis_account_settings',
       terraformGeneratorMetadata: {
@@ -101,11 +101,11 @@ export class TfAccountSettings extends cdktn.TerraformResource {
   }
 
   // minimum_throughput_billing_commitment - computed: false, optional: true, required: false
-  private _minimumThroughputBillingCommitment = new TfAccountSettings.MinimumThroughputBillingCommitmentPropertyList(this, "minimum_throughput_billing_commitment", false);
+  private _minimumThroughputBillingCommitment = new AwsAccountSettings.MinimumThroughputBillingCommitmentPropertyList(this, "minimum_throughput_billing_commitment", false);
   public get minimumThroughputBillingCommitment() {
     return this._minimumThroughputBillingCommitment;
   }
-  public putMinimumThroughputBillingCommitment(value: TfAccountSettings.MinimumThroughputBillingCommitmentProperty[] | cdktn.IResolvable) {
+  public putMinimumThroughputBillingCommitment(value: AwsAccountSettings.MinimumThroughputBillingCommitmentProperty[] | cdktn.IResolvable) {
     this._minimumThroughputBillingCommitment.internalValue = value;
   }
   public resetMinimumThroughputBillingCommitment() {
@@ -123,7 +123,7 @@ export class TfAccountSettings extends cdktn.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       region: cdktn.stringToTerraform(this._region),
-      minimum_throughput_billing_commitment: cdktn.listMapper(tfAccountSettingsMinimumThroughputBillingCommitmentPropertyToTerraform, true)(this._minimumThroughputBillingCommitment.internalValue),
+      minimum_throughput_billing_commitment: cdktn.listMapper(awsAccountSettingsMinimumThroughputBillingCommitmentPropertyToTerraform, true)(this._minimumThroughputBillingCommitment.internalValue),
     };
   }
 
@@ -136,10 +136,10 @@ export class TfAccountSettings extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       minimum_throughput_billing_commitment: {
-        value: cdktn.listMapperHcl(tfAccountSettingsMinimumThroughputBillingCommitmentPropertyToHclTerraform, true)(this._minimumThroughputBillingCommitment.internalValue),
+        value: cdktn.listMapperHcl(awsAccountSettingsMinimumThroughputBillingCommitmentPropertyToHclTerraform, true)(this._minimumThroughputBillingCommitment.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAccountSettings.MinimumThroughputBillingCommitmentPropertyList",
+        storageClassType: "AwsAccountSettings.MinimumThroughputBillingCommitmentPropertyList",
       },
     };
 
@@ -148,7 +148,7 @@ export class TfAccountSettings extends cdktn.TerraformResource {
   }
 }
 
-export function tfAccountSettingsMinimumThroughputBillingCommitmentPropertyToTerraform(struct?: TfAccountSettings.MinimumThroughputBillingCommitmentProperty | cdktn.IResolvable): any {
+export function awsAccountSettingsMinimumThroughputBillingCommitmentPropertyToTerraform(struct?: AwsAccountSettings.MinimumThroughputBillingCommitmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -159,7 +159,7 @@ export function tfAccountSettingsMinimumThroughputBillingCommitmentPropertyToTer
 }
 
 
-export function tfAccountSettingsMinimumThroughputBillingCommitmentPropertyToHclTerraform(struct?: TfAccountSettings.MinimumThroughputBillingCommitmentProperty | cdktn.IResolvable): any {
+export function awsAccountSettingsMinimumThroughputBillingCommitmentPropertyToHclTerraform(struct?: AwsAccountSettings.MinimumThroughputBillingCommitmentProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -178,10 +178,10 @@ export function tfAccountSettingsMinimumThroughputBillingCommitmentPropertyToHcl
 }
 
 
-export namespace TfAccountSettings {
+export namespace AwsAccountSettings {
 export interface MinimumThroughputBillingCommitmentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_account_settings#status TfAccountSettings#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kinesis_account_settings#status AwsAccountSettings#status}
   */
   readonly status: string;
 }

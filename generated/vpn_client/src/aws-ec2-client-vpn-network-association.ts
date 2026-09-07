@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfNetworkAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsNetworkAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association#client_vpn_endpoint_id TfNetworkAssociation#client_vpn_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association#client_vpn_endpoint_id AwsNetworkAssociation#client_vpn_endpoint_id}
   */
   readonly clientVpnEndpointId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association#id TfNetworkAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association#id AwsNetworkAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,25 +20,25 @@ export interface TfNetworkAssociationConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association#region TfNetworkAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association#region AwsNetworkAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association#subnet_id TfNetworkAssociation#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association#subnet_id AwsNetworkAssociation#subnet_id}
   */
   readonly subnetId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association#timeouts TfNetworkAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association#timeouts AwsNetworkAssociation#timeouts}
   */
-  readonly timeouts?: TfNetworkAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsNetworkAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association aws_ec2_client_vpn_network_association}
 */
-export class TfNetworkAssociation extends cdktn.TerraformResource {
+export class AwsNetworkAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfNetworkAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfNetworkAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsNetworkAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfNetworkAssociation to import
-  * @param importFromId The id of the existing TfNetworkAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfNetworkAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsNetworkAssociation to import
+  * @param importFromId The id of the existing AwsNetworkAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsNetworkAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_client_vpn_network_association", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfNetworkAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfNetworkAssociationConfig
+  * @param options AwsNetworkAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfNetworkAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsNetworkAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_client_vpn_network_association',
       terraformGeneratorMetadata: {
@@ -166,11 +166,11 @@ export class TfNetworkAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfNetworkAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsNetworkAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfNetworkAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsNetworkAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -191,7 +191,7 @@ export class TfNetworkAssociation extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       subnet_id: cdktn.stringToTerraform(this._subnetId),
-      timeouts: tfNetworkAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsNetworkAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -222,10 +222,10 @@ export class TfNetworkAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfNetworkAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsNetworkAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfNetworkAssociation.TimeoutsProperty",
+        storageClassType: "AwsNetworkAssociation.TimeoutsProperty",
       },
     };
 
@@ -234,7 +234,7 @@ export class TfNetworkAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfNetworkAssociationTimeoutsPropertyToTerraform(struct?: TfNetworkAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsNetworkAssociationTimeoutsPropertyToTerraform(struct?: AwsNetworkAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -246,7 +246,7 @@ export function tfNetworkAssociationTimeoutsPropertyToTerraform(struct?: TfNetwo
 }
 
 
-export function tfNetworkAssociationTimeoutsPropertyToHclTerraform(struct?: TfNetworkAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsNetworkAssociationTimeoutsPropertyToHclTerraform(struct?: AwsNetworkAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -271,14 +271,14 @@ export function tfNetworkAssociationTimeoutsPropertyToHclTerraform(struct?: TfNe
 }
 
 
-export namespace TfNetworkAssociation {
+export namespace AwsNetworkAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association#create TfNetworkAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association#create AwsNetworkAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association#delete TfNetworkAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_client_vpn_network_association#delete AwsNetworkAssociation#delete}
   */
   readonly delete?: string;
 }

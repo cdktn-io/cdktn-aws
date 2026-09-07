@@ -5,53 +5,53 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCapacityTaskConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCapacityTaskConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#asset_id TfCapacityTask#asset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#asset_id AwsCapacityTask#asset_id}
   */
   readonly assetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#order_id TfCapacityTask#order_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#order_id AwsCapacityTask#order_id}
   */
   readonly orderId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#outpost_identifier TfCapacityTask#outpost_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#outpost_identifier AwsCapacityTask#outpost_identifier}
   */
   readonly outpostIdentifier: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#region TfCapacityTask#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#region AwsCapacityTask#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#task_action_on_blocking_instances TfCapacityTask#task_action_on_blocking_instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#task_action_on_blocking_instances AwsCapacityTask#task_action_on_blocking_instances}
   */
   readonly taskActionOnBlockingInstances?: string;
   /**
   * instance_pool block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#instance_pool TfCapacityTask#instance_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#instance_pool AwsCapacityTask#instance_pool}
   */
-  readonly instancePool?: TfCapacityTask.InstancePoolProperty[] | cdktn.IResolvable;
+  readonly instancePool?: AwsCapacityTask.InstancePoolProperty[] | cdktn.IResolvable;
   /**
   * instances_to_exclude block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#instances_to_exclude TfCapacityTask#instances_to_exclude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#instances_to_exclude AwsCapacityTask#instances_to_exclude}
   */
-  readonly instancesToExclude?: TfCapacityTask.InstancesToExcludeProperty[] | cdktn.IResolvable;
+  readonly instancesToExclude?: AwsCapacityTask.InstancesToExcludeProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#timeouts TfCapacityTask#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#timeouts AwsCapacityTask#timeouts}
   */
-  readonly timeouts?: TfCapacityTask.TimeoutsProperty;
+  readonly timeouts?: AwsCapacityTask.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task aws_outposts_capacity_task}
 */
-export class TfCapacityTask extends cdktn.TerraformResource {
+export class AwsCapacityTask extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -62,11 +62,11 @@ export class TfCapacityTask extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCapacityTask resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCapacityTask resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCapacityTask to import
-  * @param importFromId The id of the existing TfCapacityTask that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCapacityTask to import is found
+  * @param importToId The construct id used in the generated config for the AwsCapacityTask to import
+  * @param importFromId The id of the existing AwsCapacityTask that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCapacityTask to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_outposts_capacity_task", importId: importFromId, provider });
@@ -81,9 +81,9 @@ export class TfCapacityTask extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCapacityTaskConfig
+  * @param options AwsCapacityTaskConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCapacityTaskConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCapacityTaskConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_outposts_capacity_task',
       terraformGeneratorMetadata: {
@@ -216,11 +216,11 @@ export class TfCapacityTask extends cdktn.TerraformResource {
   }
 
   // instance_pool - computed: false, optional: true, required: false
-  private _instancePool = new TfCapacityTask.InstancePoolPropertyList(this, "instance_pool", false);
+  private _instancePool = new AwsCapacityTask.InstancePoolPropertyList(this, "instance_pool", false);
   public get instancePool() {
     return this._instancePool;
   }
-  public putInstancePool(value: TfCapacityTask.InstancePoolProperty[] | cdktn.IResolvable) {
+  public putInstancePool(value: AwsCapacityTask.InstancePoolProperty[] | cdktn.IResolvable) {
     this._instancePool.internalValue = value;
   }
   public resetInstancePool() {
@@ -232,11 +232,11 @@ export class TfCapacityTask extends cdktn.TerraformResource {
   }
 
   // instances_to_exclude - computed: false, optional: true, required: false
-  private _instancesToExclude = new TfCapacityTask.InstancesToExcludePropertyList(this, "instances_to_exclude", false);
+  private _instancesToExclude = new AwsCapacityTask.InstancesToExcludePropertyList(this, "instances_to_exclude", false);
   public get instancesToExclude() {
     return this._instancesToExclude;
   }
-  public putInstancesToExclude(value: TfCapacityTask.InstancesToExcludeProperty[] | cdktn.IResolvable) {
+  public putInstancesToExclude(value: AwsCapacityTask.InstancesToExcludeProperty[] | cdktn.IResolvable) {
     this._instancesToExclude.internalValue = value;
   }
   public resetInstancesToExclude() {
@@ -248,11 +248,11 @@ export class TfCapacityTask extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCapacityTask.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCapacityTask.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCapacityTask.TimeoutsProperty) {
+  public putTimeouts(value: AwsCapacityTask.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -274,9 +274,9 @@ export class TfCapacityTask extends cdktn.TerraformResource {
       outpost_identifier: cdktn.stringToTerraform(this._outpostIdentifier),
       region: cdktn.stringToTerraform(this._region),
       task_action_on_blocking_instances: cdktn.stringToTerraform(this._taskActionOnBlockingInstances),
-      instance_pool: cdktn.listMapper(tfCapacityTaskInstancePoolPropertyToTerraform, true)(this._instancePool.internalValue),
-      instances_to_exclude: cdktn.listMapper(tfCapacityTaskInstancesToExcludePropertyToTerraform, true)(this._instancesToExclude.internalValue),
-      timeouts: tfCapacityTaskTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      instance_pool: cdktn.listMapper(awsCapacityTaskInstancePoolPropertyToTerraform, true)(this._instancePool.internalValue),
+      instances_to_exclude: cdktn.listMapper(awsCapacityTaskInstancesToExcludePropertyToTerraform, true)(this._instancesToExclude.internalValue),
+      timeouts: awsCapacityTaskTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -313,22 +313,22 @@ export class TfCapacityTask extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       instance_pool: {
-        value: cdktn.listMapperHcl(tfCapacityTaskInstancePoolPropertyToHclTerraform, true)(this._instancePool.internalValue),
+        value: cdktn.listMapperHcl(awsCapacityTaskInstancePoolPropertyToHclTerraform, true)(this._instancePool.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCapacityTask.InstancePoolPropertyList",
+        storageClassType: "AwsCapacityTask.InstancePoolPropertyList",
       },
       instances_to_exclude: {
-        value: cdktn.listMapperHcl(tfCapacityTaskInstancesToExcludePropertyToHclTerraform, true)(this._instancesToExclude.internalValue),
+        value: cdktn.listMapperHcl(awsCapacityTaskInstancesToExcludePropertyToHclTerraform, true)(this._instancesToExclude.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCapacityTask.InstancesToExcludePropertyList",
+        storageClassType: "AwsCapacityTask.InstancesToExcludePropertyList",
       },
       timeouts: {
-        value: tfCapacityTaskTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCapacityTaskTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCapacityTask.TimeoutsProperty",
+        storageClassType: "AwsCapacityTask.TimeoutsProperty",
       },
     };
 
@@ -337,7 +337,7 @@ export class TfCapacityTask extends cdktn.TerraformResource {
   }
 }
 
-export function tfCapacityTaskInstancePoolPropertyToTerraform(struct?: TfCapacityTask.InstancePoolProperty | cdktn.IResolvable): any {
+export function awsCapacityTaskInstancePoolPropertyToTerraform(struct?: AwsCapacityTask.InstancePoolProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -349,7 +349,7 @@ export function tfCapacityTaskInstancePoolPropertyToTerraform(struct?: TfCapacit
 }
 
 
-export function tfCapacityTaskInstancePoolPropertyToHclTerraform(struct?: TfCapacityTask.InstancePoolProperty | cdktn.IResolvable): any {
+export function awsCapacityTaskInstancePoolPropertyToHclTerraform(struct?: AwsCapacityTask.InstancePoolProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -374,7 +374,7 @@ export function tfCapacityTaskInstancePoolPropertyToHclTerraform(struct?: TfCapa
 }
 
 
-export function tfCapacityTaskInstancesToExcludePropertyToTerraform(struct?: TfCapacityTask.InstancesToExcludeProperty | cdktn.IResolvable): any {
+export function awsCapacityTaskInstancesToExcludePropertyToTerraform(struct?: AwsCapacityTask.InstancesToExcludeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function tfCapacityTaskInstancesToExcludePropertyToTerraform(struct?: TfC
 }
 
 
-export function tfCapacityTaskInstancesToExcludePropertyToHclTerraform(struct?: TfCapacityTask.InstancesToExcludeProperty | cdktn.IResolvable): any {
+export function awsCapacityTaskInstancesToExcludePropertyToHclTerraform(struct?: AwsCapacityTask.InstancesToExcludeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -404,7 +404,7 @@ export function tfCapacityTaskInstancesToExcludePropertyToHclTerraform(struct?: 
 }
 
 
-export function tfCapacityTaskTimeoutsPropertyToTerraform(struct?: TfCapacityTask.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCapacityTaskTimeoutsPropertyToTerraform(struct?: AwsCapacityTask.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,7 +416,7 @@ export function tfCapacityTaskTimeoutsPropertyToTerraform(struct?: TfCapacityTas
 }
 
 
-export function tfCapacityTaskTimeoutsPropertyToHclTerraform(struct?: TfCapacityTask.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCapacityTaskTimeoutsPropertyToHclTerraform(struct?: AwsCapacityTask.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -441,14 +441,14 @@ export function tfCapacityTaskTimeoutsPropertyToHclTerraform(struct?: TfCapacity
 }
 
 
-export namespace TfCapacityTask {
+export namespace AwsCapacityTask {
 export interface InstancePoolProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#count TfCapacityTask#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#count AwsCapacityTask#count}
   */
   readonly count: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#instance_type TfCapacityTask#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#instance_type AwsCapacityTask#instance_type}
   */
   readonly instanceType: string;
 }
@@ -550,7 +550,7 @@ export class InstancePoolPropertyList extends cdktn.ComplexList {
 }
 export interface InstancesToExcludeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#instances TfCapacityTask#instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#instances AwsCapacityTask#instances}
   */
   readonly instances: string[];
 }
@@ -635,13 +635,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#create TfCapacityTask#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#create AwsCapacityTask#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#delete TfCapacityTask#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/outposts_capacity_task#delete AwsCapacityTask#delete}
   */
   readonly delete?: string;
 }

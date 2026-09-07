@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfStageConfig extends cdktn.TerraformMetaArguments {
+export interface AwsStageConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#cache_cluster_enabled TfStage#cache_cluster_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#cache_cluster_enabled AwsStage#cache_cluster_enabled}
   */
   readonly cacheClusterEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#cache_cluster_size TfStage#cache_cluster_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#cache_cluster_size AwsStage#cache_cluster_size}
   */
   readonly cacheClusterSize?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#client_certificate_id TfStage#client_certificate_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#client_certificate_id AwsStage#client_certificate_id}
   */
   readonly clientCertificateId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#deployment_id TfStage#deployment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#deployment_id AwsStage#deployment_id}
   */
   readonly deploymentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#description TfStage#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#description AwsStage#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#documentation_version TfStage#documentation_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#documentation_version AwsStage#documentation_version}
   */
   readonly documentationVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#id TfStage#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#id AwsStage#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -40,51 +40,51 @@ export interface TfStageConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#region TfStage#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#region AwsStage#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#rest_api_id TfStage#rest_api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#rest_api_id AwsStage#rest_api_id}
   */
   readonly restApiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#stage_name TfStage#stage_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#stage_name AwsStage#stage_name}
   */
   readonly stageName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#tags TfStage#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#tags AwsStage#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#tags_all TfStage#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#tags_all AwsStage#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#variables TfStage#variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#variables AwsStage#variables}
   */
   readonly variables?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#xray_tracing_enabled TfStage#xray_tracing_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#xray_tracing_enabled AwsStage#xray_tracing_enabled}
   */
   readonly xrayTracingEnabled?: boolean | cdktn.IResolvable;
   /**
   * access_log_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#access_log_settings TfStage#access_log_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#access_log_settings AwsStage#access_log_settings}
   */
-  readonly accessLogSettings?: TfStage.AccessLogSettingsProperty;
+  readonly accessLogSettings?: AwsStage.AccessLogSettingsProperty;
   /**
   * canary_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#canary_settings TfStage#canary_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#canary_settings AwsStage#canary_settings}
   */
-  readonly canarySettings?: TfStage.CanarySettingsProperty;
+  readonly canarySettings?: AwsStage.CanarySettingsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage aws_api_gateway_stage}
 */
-export class TfStage extends cdktn.TerraformResource {
+export class AwsStage extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -95,11 +95,11 @@ export class TfStage extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfStage resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsStage resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfStage to import
-  * @param importFromId The id of the existing TfStage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfStage to import is found
+  * @param importToId The construct id used in the generated config for the AwsStage to import
+  * @param importFromId The id of the existing AwsStage that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsStage to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_stage", importId: importFromId, provider });
@@ -114,9 +114,9 @@ export class TfStage extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfStageConfig
+  * @param options AwsStageConfig
   */
-  public constructor(scope: Construct, id: string, config: TfStageConfig) {
+  public constructor(scope: Construct, id: string, config: AwsStageConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_api_gateway_stage',
       terraformGeneratorMetadata: {
@@ -390,11 +390,11 @@ export class TfStage extends cdktn.TerraformResource {
   }
 
   // access_log_settings - computed: false, optional: true, required: false
-  private _accessLogSettings = new TfStage.AccessLogSettingsPropertyOutputReference(this, "access_log_settings");
+  private _accessLogSettings = new AwsStage.AccessLogSettingsPropertyOutputReference(this, "access_log_settings");
   public get accessLogSettings() {
     return this._accessLogSettings;
   }
-  public putAccessLogSettings(value: TfStage.AccessLogSettingsProperty) {
+  public putAccessLogSettings(value: AwsStage.AccessLogSettingsProperty) {
     this._accessLogSettings.internalValue = value;
   }
   public resetAccessLogSettings() {
@@ -406,11 +406,11 @@ export class TfStage extends cdktn.TerraformResource {
   }
 
   // canary_settings - computed: false, optional: true, required: false
-  private _canarySettings = new TfStage.CanarySettingsPropertyOutputReference(this, "canary_settings");
+  private _canarySettings = new AwsStage.CanarySettingsPropertyOutputReference(this, "canary_settings");
   public get canarySettings() {
     return this._canarySettings;
   }
-  public putCanarySettings(value: TfStage.CanarySettingsProperty) {
+  public putCanarySettings(value: AwsStage.CanarySettingsProperty) {
     this._canarySettings.internalValue = value;
   }
   public resetCanarySettings() {
@@ -441,8 +441,8 @@ export class TfStage extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       variables: cdktn.hashMapper(cdktn.stringToTerraform)(this._variables),
       xray_tracing_enabled: cdktn.booleanToTerraform(this._xrayTracingEnabled),
-      access_log_settings: tfStageAccessLogSettingsPropertyToTerraform(this._accessLogSettings.internalValue),
-      canary_settings: tfStageCanarySettingsPropertyToTerraform(this._canarySettings.internalValue),
+      access_log_settings: awsStageAccessLogSettingsPropertyToTerraform(this._accessLogSettings.internalValue),
+      canary_settings: awsStageCanarySettingsPropertyToTerraform(this._canarySettings.internalValue),
     };
   }
 
@@ -533,16 +533,16 @@ export class TfStage extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       access_log_settings: {
-        value: tfStageAccessLogSettingsPropertyToHclTerraform(this._accessLogSettings.internalValue),
+        value: awsStageAccessLogSettingsPropertyToHclTerraform(this._accessLogSettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfStage.AccessLogSettingsPropertyList",
+        storageClassType: "AwsStage.AccessLogSettingsPropertyList",
       },
       canary_settings: {
-        value: tfStageCanarySettingsPropertyToHclTerraform(this._canarySettings.internalValue),
+        value: awsStageCanarySettingsPropertyToHclTerraform(this._canarySettings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfStage.CanarySettingsPropertyList",
+        storageClassType: "AwsStage.CanarySettingsPropertyList",
       },
     };
 
@@ -551,7 +551,7 @@ export class TfStage extends cdktn.TerraformResource {
   }
 }
 
-export function tfStageAccessLogSettingsPropertyToTerraform(struct?: TfStage.AccessLogSettingsPropertyOutputReference | TfStage.AccessLogSettingsProperty): any {
+export function awsStageAccessLogSettingsPropertyToTerraform(struct?: AwsStage.AccessLogSettingsPropertyOutputReference | AwsStage.AccessLogSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -563,7 +563,7 @@ export function tfStageAccessLogSettingsPropertyToTerraform(struct?: TfStage.Acc
 }
 
 
-export function tfStageAccessLogSettingsPropertyToHclTerraform(struct?: TfStage.AccessLogSettingsPropertyOutputReference | TfStage.AccessLogSettingsProperty): any {
+export function awsStageAccessLogSettingsPropertyToHclTerraform(struct?: AwsStage.AccessLogSettingsPropertyOutputReference | AwsStage.AccessLogSettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -588,7 +588,7 @@ export function tfStageAccessLogSettingsPropertyToHclTerraform(struct?: TfStage.
 }
 
 
-export function tfStageCanarySettingsPropertyToTerraform(struct?: TfStage.CanarySettingsPropertyOutputReference | TfStage.CanarySettingsProperty): any {
+export function awsStageCanarySettingsPropertyToTerraform(struct?: AwsStage.CanarySettingsPropertyOutputReference | AwsStage.CanarySettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -602,7 +602,7 @@ export function tfStageCanarySettingsPropertyToTerraform(struct?: TfStage.Canary
 }
 
 
-export function tfStageCanarySettingsPropertyToHclTerraform(struct?: TfStage.CanarySettingsPropertyOutputReference | TfStage.CanarySettingsProperty): any {
+export function awsStageCanarySettingsPropertyToHclTerraform(struct?: AwsStage.CanarySettingsPropertyOutputReference | AwsStage.CanarySettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -639,14 +639,14 @@ export function tfStageCanarySettingsPropertyToHclTerraform(struct?: TfStage.Can
 }
 
 
-export namespace TfStage {
+export namespace AwsStage {
 export interface AccessLogSettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#destination_arn TfStage#destination_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#destination_arn AwsStage#destination_arn}
   */
   readonly destinationArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#format TfStage#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#format AwsStage#format}
   */
   readonly format: string;
 }
@@ -716,19 +716,19 @@ export class AccessLogSettingsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface CanarySettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#deployment_id TfStage#deployment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#deployment_id AwsStage#deployment_id}
   */
   readonly deploymentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#percent_traffic TfStage#percent_traffic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#percent_traffic AwsStage#percent_traffic}
   */
   readonly percentTraffic?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#stage_variable_overrides TfStage#stage_variable_overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#stage_variable_overrides AwsStage#stage_variable_overrides}
   */
   readonly stageVariableOverrides?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#use_stage_cache TfStage#use_stage_cache}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_stage#use_stage_cache AwsStage#use_stage_cache}
   */
   readonly useStageCache?: boolean | cdktn.IResolvable;
 }

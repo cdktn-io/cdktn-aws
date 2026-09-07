@@ -5,34 +5,34 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFieldLevelEncryptionProfileConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFieldLevelEncryptionProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#comment TfFieldLevelEncryptionProfile#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#comment AwsFieldLevelEncryptionProfile#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#id TfFieldLevelEncryptionProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#id AwsFieldLevelEncryptionProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#name TfFieldLevelEncryptionProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#name AwsFieldLevelEncryptionProfile#name}
   */
   readonly name: string;
   /**
   * encryption_entities block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#encryption_entities TfFieldLevelEncryptionProfile#encryption_entities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#encryption_entities AwsFieldLevelEncryptionProfile#encryption_entities}
   */
-  readonly encryptionEntities: TfFieldLevelEncryptionProfile.EncryptionEntitiesProperty;
+  readonly encryptionEntities: AwsFieldLevelEncryptionProfile.EncryptionEntitiesProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile aws_cloudfront_field_level_encryption_profile}
 */
-export class TfFieldLevelEncryptionProfile extends cdktn.TerraformResource {
+export class AwsFieldLevelEncryptionProfile extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfFieldLevelEncryptionProfile extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFieldLevelEncryptionProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFieldLevelEncryptionProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFieldLevelEncryptionProfile to import
-  * @param importFromId The id of the existing TfFieldLevelEncryptionProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFieldLevelEncryptionProfile to import is found
+  * @param importToId The construct id used in the generated config for the AwsFieldLevelEncryptionProfile to import
+  * @param importFromId The id of the existing AwsFieldLevelEncryptionProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFieldLevelEncryptionProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_field_level_encryption_profile", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfFieldLevelEncryptionProfile extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFieldLevelEncryptionProfileConfig
+  * @param options AwsFieldLevelEncryptionProfileConfig
   */
-  public constructor(scope: Construct, id: string, config: TfFieldLevelEncryptionProfileConfig) {
+  public constructor(scope: Construct, id: string, config: AwsFieldLevelEncryptionProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_field_level_encryption_profile',
       terraformGeneratorMetadata: {
@@ -151,11 +151,11 @@ export class TfFieldLevelEncryptionProfile extends cdktn.TerraformResource {
   }
 
   // encryption_entities - computed: false, optional: false, required: true
-  private _encryptionEntities = new TfFieldLevelEncryptionProfile.EncryptionEntitiesPropertyOutputReference(this, "encryption_entities");
+  private _encryptionEntities = new AwsFieldLevelEncryptionProfile.EncryptionEntitiesPropertyOutputReference(this, "encryption_entities");
   public get encryptionEntities() {
     return this._encryptionEntities;
   }
-  public putEncryptionEntities(value: TfFieldLevelEncryptionProfile.EncryptionEntitiesProperty) {
+  public putEncryptionEntities(value: AwsFieldLevelEncryptionProfile.EncryptionEntitiesProperty) {
     this._encryptionEntities.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -172,7 +172,7 @@ export class TfFieldLevelEncryptionProfile extends cdktn.TerraformResource {
       comment: cdktn.stringToTerraform(this._comment),
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
-      encryption_entities: tfFieldLevelEncryptionProfileEncryptionEntitiesPropertyToTerraform(this._encryptionEntities.internalValue),
+      encryption_entities: awsFieldLevelEncryptionProfileEncryptionEntitiesPropertyToTerraform(this._encryptionEntities.internalValue),
     };
   }
 
@@ -197,10 +197,10 @@ export class TfFieldLevelEncryptionProfile extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       encryption_entities: {
-        value: tfFieldLevelEncryptionProfileEncryptionEntitiesPropertyToHclTerraform(this._encryptionEntities.internalValue),
+        value: awsFieldLevelEncryptionProfileEncryptionEntitiesPropertyToHclTerraform(this._encryptionEntities.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfFieldLevelEncryptionProfile.EncryptionEntitiesPropertyList",
+        storageClassType: "AwsFieldLevelEncryptionProfile.EncryptionEntitiesPropertyList",
       },
     };
 
@@ -209,7 +209,7 @@ export class TfFieldLevelEncryptionProfile extends cdktn.TerraformResource {
   }
 }
 
-export function tfFieldLevelEncryptionProfileFieldPatternsPropertyToTerraform(struct?: TfFieldLevelEncryptionProfile.FieldPatternsPropertyOutputReference | TfFieldLevelEncryptionProfile.FieldPatternsProperty): any {
+export function awsFieldLevelEncryptionProfileFieldPatternsPropertyToTerraform(struct?: AwsFieldLevelEncryptionProfile.FieldPatternsPropertyOutputReference | AwsFieldLevelEncryptionProfile.FieldPatternsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -220,7 +220,7 @@ export function tfFieldLevelEncryptionProfileFieldPatternsPropertyToTerraform(st
 }
 
 
-export function tfFieldLevelEncryptionProfileFieldPatternsPropertyToHclTerraform(struct?: TfFieldLevelEncryptionProfile.FieldPatternsPropertyOutputReference | TfFieldLevelEncryptionProfile.FieldPatternsProperty): any {
+export function awsFieldLevelEncryptionProfileFieldPatternsPropertyToHclTerraform(struct?: AwsFieldLevelEncryptionProfile.FieldPatternsPropertyOutputReference | AwsFieldLevelEncryptionProfile.FieldPatternsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -239,7 +239,7 @@ export function tfFieldLevelEncryptionProfileFieldPatternsPropertyToHclTerraform
 }
 
 
-export function tfFieldLevelEncryptionProfileItemsPropertyToTerraform(struct?: TfFieldLevelEncryptionProfile.ItemsProperty | cdktn.IResolvable): any {
+export function awsFieldLevelEncryptionProfileItemsPropertyToTerraform(struct?: AwsFieldLevelEncryptionProfile.ItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -247,12 +247,12 @@ export function tfFieldLevelEncryptionProfileItemsPropertyToTerraform(struct?: T
   return {
     provider_id: cdktn.stringToTerraform(struct!.providerId),
     public_key_id: cdktn.stringToTerraform(struct!.publicKeyId),
-    field_patterns: tfFieldLevelEncryptionProfileFieldPatternsPropertyToTerraform(struct!.fieldPatterns),
+    field_patterns: awsFieldLevelEncryptionProfileFieldPatternsPropertyToTerraform(struct!.fieldPatterns),
   }
 }
 
 
-export function tfFieldLevelEncryptionProfileItemsPropertyToHclTerraform(struct?: TfFieldLevelEncryptionProfile.ItemsProperty | cdktn.IResolvable): any {
+export function awsFieldLevelEncryptionProfileItemsPropertyToHclTerraform(struct?: AwsFieldLevelEncryptionProfile.ItemsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -271,7 +271,7 @@ export function tfFieldLevelEncryptionProfileItemsPropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     field_patterns: {
-      value: tfFieldLevelEncryptionProfileFieldPatternsPropertyToHclTerraform(struct!.fieldPatterns),
+      value: awsFieldLevelEncryptionProfileFieldPatternsPropertyToHclTerraform(struct!.fieldPatterns),
       isBlock: true,
       type: "list",
       storageClassType: "FieldPatternsPropertyList",
@@ -283,25 +283,25 @@ export function tfFieldLevelEncryptionProfileItemsPropertyToHclTerraform(struct?
 }
 
 
-export function tfFieldLevelEncryptionProfileEncryptionEntitiesPropertyToTerraform(struct?: TfFieldLevelEncryptionProfile.EncryptionEntitiesPropertyOutputReference | TfFieldLevelEncryptionProfile.EncryptionEntitiesProperty): any {
+export function awsFieldLevelEncryptionProfileEncryptionEntitiesPropertyToTerraform(struct?: AwsFieldLevelEncryptionProfile.EncryptionEntitiesPropertyOutputReference | AwsFieldLevelEncryptionProfile.EncryptionEntitiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    items: cdktn.listMapper(tfFieldLevelEncryptionProfileItemsPropertyToTerraform, true)(struct!.items),
+    items: cdktn.listMapper(awsFieldLevelEncryptionProfileItemsPropertyToTerraform, true)(struct!.items),
   }
 }
 
 
-export function tfFieldLevelEncryptionProfileEncryptionEntitiesPropertyToHclTerraform(struct?: TfFieldLevelEncryptionProfile.EncryptionEntitiesPropertyOutputReference | TfFieldLevelEncryptionProfile.EncryptionEntitiesProperty): any {
+export function awsFieldLevelEncryptionProfileEncryptionEntitiesPropertyToHclTerraform(struct?: AwsFieldLevelEncryptionProfile.EncryptionEntitiesPropertyOutputReference | AwsFieldLevelEncryptionProfile.EncryptionEntitiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     items: {
-      value: cdktn.listMapperHcl(tfFieldLevelEncryptionProfileItemsPropertyToHclTerraform, true)(struct!.items),
+      value: cdktn.listMapperHcl(awsFieldLevelEncryptionProfileItemsPropertyToHclTerraform, true)(struct!.items),
       isBlock: true,
       type: "set",
       storageClassType: "ItemsPropertyList",
@@ -313,10 +313,10 @@ export function tfFieldLevelEncryptionProfileEncryptionEntitiesPropertyToHclTerr
 }
 
 
-export namespace TfFieldLevelEncryptionProfile {
+export namespace AwsFieldLevelEncryptionProfile {
 export interface FieldPatternsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#items TfFieldLevelEncryptionProfile#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#items AwsFieldLevelEncryptionProfile#items}
   */
   readonly items?: string[];
 }
@@ -370,17 +370,17 @@ export class FieldPatternsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ItemsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#provider_id TfFieldLevelEncryptionProfile#provider_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#provider_id AwsFieldLevelEncryptionProfile#provider_id}
   */
   readonly providerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#public_key_id TfFieldLevelEncryptionProfile#public_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#public_key_id AwsFieldLevelEncryptionProfile#public_key_id}
   */
   readonly publicKeyId: string;
   /**
   * field_patterns block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#field_patterns TfFieldLevelEncryptionProfile#field_patterns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#field_patterns AwsFieldLevelEncryptionProfile#field_patterns}
   */
   readonly fieldPatterns: FieldPatternsProperty;
 }
@@ -503,7 +503,7 @@ export interface EncryptionEntitiesProperty {
   /**
   * items block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#items TfFieldLevelEncryptionProfile#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_field_level_encryption_profile#items AwsFieldLevelEncryptionProfile#items}
   */
   readonly items?: ItemsProperty[] | cdktn.IResolvable;
 }

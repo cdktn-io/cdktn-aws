@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConnectionConfirmationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConnectionConfirmationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_connection_confirmation#connection_id TfConnectionConfirmation#connection_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_connection_confirmation#connection_id AwsConnectionConfirmation#connection_id}
   */
   readonly connectionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_connection_confirmation#id TfConnectionConfirmation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_connection_confirmation#id AwsConnectionConfirmation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface TfConnectionConfirmationConfig extends cdktn.TerraformMetaArgum
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_connection_confirmation#region TfConnectionConfirmation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_connection_confirmation#region AwsConnectionConfirmation#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface TfConnectionConfirmationConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_connection_confirmation aws_dx_connection_confirmation}
 */
-export class TfConnectionConfirmation extends cdktn.TerraformResource {
+export class AwsConnectionConfirmation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class TfConnectionConfirmation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConnectionConfirmation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConnectionConfirmation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConnectionConfirmation to import
-  * @param importFromId The id of the existing TfConnectionConfirmation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_connection_confirmation#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConnectionConfirmation to import is found
+  * @param importToId The construct id used in the generated config for the AwsConnectionConfirmation to import
+  * @param importFromId The id of the existing AwsConnectionConfirmation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dx_connection_confirmation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConnectionConfirmation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dx_connection_confirmation", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class TfConnectionConfirmation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConnectionConfirmationConfig
+  * @param options AwsConnectionConfirmationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConnectionConfirmationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConnectionConfirmationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dx_connection_confirmation',
       terraformGeneratorMetadata: {

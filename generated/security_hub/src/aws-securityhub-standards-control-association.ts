@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfStandardsControlAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsStandardsControlAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control_association#association_status TfStandardsControlAssociation#association_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control_association#association_status AwsStandardsControlAssociation#association_status}
   */
   readonly associationStatus: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control_association#region TfStandardsControlAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control_association#region AwsStandardsControlAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control_association#security_control_id TfStandardsControlAssociation#security_control_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control_association#security_control_id AwsStandardsControlAssociation#security_control_id}
   */
   readonly securityControlId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control_association#standards_arn TfStandardsControlAssociation#standards_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control_association#standards_arn AwsStandardsControlAssociation#standards_arn}
   */
   readonly standardsArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control_association#updated_reason TfStandardsControlAssociation#updated_reason}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control_association#updated_reason AwsStandardsControlAssociation#updated_reason}
   */
   readonly updatedReason?: string;
 }
@@ -33,7 +33,7 @@ export interface TfStandardsControlAssociationConfig extends cdktn.TerraformMeta
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control_association aws_securityhub_standards_control_association}
 */
-export class TfStandardsControlAssociation extends cdktn.TerraformResource {
+export class AwsStandardsControlAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class TfStandardsControlAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfStandardsControlAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsStandardsControlAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfStandardsControlAssociation to import
-  * @param importFromId The id of the existing TfStandardsControlAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfStandardsControlAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsStandardsControlAssociation to import
+  * @param importFromId The id of the existing AwsStandardsControlAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securityhub_standards_control_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsStandardsControlAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securityhub_standards_control_association", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class TfStandardsControlAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfStandardsControlAssociationConfig
+  * @param options AwsStandardsControlAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfStandardsControlAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsStandardsControlAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_securityhub_standards_control_association',
       terraformGeneratorMetadata: {

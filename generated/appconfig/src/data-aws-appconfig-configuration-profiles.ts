@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfConfigurationProfilesConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsConfigurationProfilesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_configuration_profiles#application_id DataTfConfigurationProfiles#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_configuration_profiles#application_id DataAwsConfigurationProfiles#application_id}
   */
   readonly applicationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_configuration_profiles#id DataTfConfigurationProfiles#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_configuration_profiles#id DataAwsConfigurationProfiles#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,7 +20,7 @@ export interface DataTfConfigurationProfilesConfig extends cdktn.TerraformMetaAr
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_configuration_profiles#region DataTfConfigurationProfiles#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_configuration_profiles#region DataAwsConfigurationProfiles#region}
   */
   readonly region?: string;
 }
@@ -28,7 +28,7 @@ export interface DataTfConfigurationProfilesConfig extends cdktn.TerraformMetaAr
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_configuration_profiles aws_appconfig_configuration_profiles}
 */
-export class DataTfConfigurationProfiles extends cdktn.TerraformDataSource {
+export class DataAwsConfigurationProfiles extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -39,11 +39,11 @@ export class DataTfConfigurationProfiles extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfConfigurationProfiles resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsConfigurationProfiles resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfConfigurationProfiles to import
-  * @param importFromId The id of the existing DataTfConfigurationProfiles that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_configuration_profiles#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfConfigurationProfiles to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsConfigurationProfiles to import
+  * @param importFromId The id of the existing DataAwsConfigurationProfiles that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/appconfig_configuration_profiles#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsConfigurationProfiles to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appconfig_configuration_profiles", importId: importFromId, provider });
@@ -58,9 +58,9 @@ export class DataTfConfigurationProfiles extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfConfigurationProfilesConfig
+  * @param options DataAwsConfigurationProfilesConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfConfigurationProfilesConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsConfigurationProfilesConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appconfig_configuration_profiles',
       terraformGeneratorMetadata: {

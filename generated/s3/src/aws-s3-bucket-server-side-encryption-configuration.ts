@@ -5,17 +5,17 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBucketServerSideEncryptionConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBucketServerSideEncryptionConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#bucket TfBucketServerSideEncryptionConfiguration#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#bucket AwsBucketServerSideEncryptionConfiguration#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#expected_bucket_owner TfBucketServerSideEncryptionConfiguration#expected_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#expected_bucket_owner AwsBucketServerSideEncryptionConfiguration#expected_bucket_owner}
   */
   readonly expectedBucketOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#id TfBucketServerSideEncryptionConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#id AwsBucketServerSideEncryptionConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,21 +24,21 @@ export interface TfBucketServerSideEncryptionConfigurationConfig extends cdktn.T
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#region TfBucketServerSideEncryptionConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#region AwsBucketServerSideEncryptionConfiguration#region}
   */
   readonly region?: string;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#rule TfBucketServerSideEncryptionConfiguration#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#rule AwsBucketServerSideEncryptionConfiguration#rule}
   */
-  readonly rule: TfBucketServerSideEncryptionConfiguration.RuleProperty[] | cdktn.IResolvable;
+  readonly rule: AwsBucketServerSideEncryptionConfiguration.RuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration aws_s3_bucket_server_side_encryption_configuration}
 */
-export class TfBucketServerSideEncryptionConfiguration extends cdktn.TerraformResource {
+export class AwsBucketServerSideEncryptionConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfBucketServerSideEncryptionConfiguration extends cdktn.TerraformRe
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBucketServerSideEncryptionConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBucketServerSideEncryptionConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBucketServerSideEncryptionConfiguration to import
-  * @param importFromId The id of the existing TfBucketServerSideEncryptionConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBucketServerSideEncryptionConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsBucketServerSideEncryptionConfiguration to import
+  * @param importFromId The id of the existing AwsBucketServerSideEncryptionConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBucketServerSideEncryptionConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_server_side_encryption_configuration", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfBucketServerSideEncryptionConfiguration extends cdktn.TerraformRe
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBucketServerSideEncryptionConfigurationConfig
+  * @param options AwsBucketServerSideEncryptionConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBucketServerSideEncryptionConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBucketServerSideEncryptionConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_server_side_encryption_configuration',
       terraformGeneratorMetadata: {
@@ -159,11 +159,11 @@ export class TfBucketServerSideEncryptionConfiguration extends cdktn.TerraformRe
   }
 
   // rule - computed: false, optional: false, required: true
-  private _rule = new TfBucketServerSideEncryptionConfiguration.RulePropertyList(this, "rule", true);
+  private _rule = new AwsBucketServerSideEncryptionConfiguration.RulePropertyList(this, "rule", true);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: TfBucketServerSideEncryptionConfiguration.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: AwsBucketServerSideEncryptionConfiguration.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -181,7 +181,7 @@ export class TfBucketServerSideEncryptionConfiguration extends cdktn.TerraformRe
       expected_bucket_owner: cdktn.stringToTerraform(this._expectedBucketOwner),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      rule: cdktn.listMapper(tfBucketServerSideEncryptionConfigurationMapperRulePropertyToTerraform, true)(this._rule.internalValue),
+      rule: cdktn.listMapper(awsBucketServerSideEncryptionConfigurationMapperRulePropertyToTerraform, true)(this._rule.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class TfBucketServerSideEncryptionConfiguration extends cdktn.TerraformRe
         storageClassType: "string",
       },
       rule: {
-        value: cdktn.listMapperHcl(tfBucketServerSideEncryptionConfigurationMapperRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(awsBucketServerSideEncryptionConfigurationMapperRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfBucketServerSideEncryptionConfiguration.RulePropertyList",
+        storageClassType: "AwsBucketServerSideEncryptionConfiguration.RulePropertyList",
       },
     };
 
@@ -224,7 +224,7 @@ export class TfBucketServerSideEncryptionConfiguration extends cdktn.TerraformRe
   }
 }
 
-export function tfBucketServerSideEncryptionConfigurationMapperApplyServerSideEncryptionByDefaultPropertyToTerraform(struct?: TfBucketServerSideEncryptionConfiguration.ApplyServerSideEncryptionByDefaultPropertyOutputReference | TfBucketServerSideEncryptionConfiguration.ApplyServerSideEncryptionByDefaultProperty): any {
+export function awsBucketServerSideEncryptionConfigurationMapperApplyServerSideEncryptionByDefaultPropertyToTerraform(struct?: AwsBucketServerSideEncryptionConfiguration.ApplyServerSideEncryptionByDefaultPropertyOutputReference | AwsBucketServerSideEncryptionConfiguration.ApplyServerSideEncryptionByDefaultProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function tfBucketServerSideEncryptionConfigurationMapperApplyServerSideEn
 }
 
 
-export function tfBucketServerSideEncryptionConfigurationMapperApplyServerSideEncryptionByDefaultPropertyToHclTerraform(struct?: TfBucketServerSideEncryptionConfiguration.ApplyServerSideEncryptionByDefaultPropertyOutputReference | TfBucketServerSideEncryptionConfiguration.ApplyServerSideEncryptionByDefaultProperty): any {
+export function awsBucketServerSideEncryptionConfigurationMapperApplyServerSideEncryptionByDefaultPropertyToHclTerraform(struct?: AwsBucketServerSideEncryptionConfiguration.ApplyServerSideEncryptionByDefaultPropertyOutputReference | AwsBucketServerSideEncryptionConfiguration.ApplyServerSideEncryptionByDefaultProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,7 +261,7 @@ export function tfBucketServerSideEncryptionConfigurationMapperApplyServerSideEn
 }
 
 
-export function tfBucketServerSideEncryptionConfigurationMapperRulePropertyToTerraform(struct?: TfBucketServerSideEncryptionConfiguration.RuleProperty | cdktn.IResolvable): any {
+export function awsBucketServerSideEncryptionConfigurationMapperRulePropertyToTerraform(struct?: AwsBucketServerSideEncryptionConfiguration.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -269,12 +269,12 @@ export function tfBucketServerSideEncryptionConfigurationMapperRulePropertyToTer
   return {
     blocked_encryption_types: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.blockedEncryptionTypes),
     bucket_key_enabled: cdktn.booleanToTerraform(struct!.bucketKeyEnabled),
-    apply_server_side_encryption_by_default: tfBucketServerSideEncryptionConfigurationMapperApplyServerSideEncryptionByDefaultPropertyToTerraform(struct!.applyServerSideEncryptionByDefault),
+    apply_server_side_encryption_by_default: awsBucketServerSideEncryptionConfigurationMapperApplyServerSideEncryptionByDefaultPropertyToTerraform(struct!.applyServerSideEncryptionByDefault),
   }
 }
 
 
-export function tfBucketServerSideEncryptionConfigurationMapperRulePropertyToHclTerraform(struct?: TfBucketServerSideEncryptionConfiguration.RuleProperty | cdktn.IResolvable): any {
+export function awsBucketServerSideEncryptionConfigurationMapperRulePropertyToHclTerraform(struct?: AwsBucketServerSideEncryptionConfiguration.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -293,7 +293,7 @@ export function tfBucketServerSideEncryptionConfigurationMapperRulePropertyToHcl
       storageClassType: "boolean",
     },
     apply_server_side_encryption_by_default: {
-      value: tfBucketServerSideEncryptionConfigurationMapperApplyServerSideEncryptionByDefaultPropertyToHclTerraform(struct!.applyServerSideEncryptionByDefault),
+      value: awsBucketServerSideEncryptionConfigurationMapperApplyServerSideEncryptionByDefaultPropertyToHclTerraform(struct!.applyServerSideEncryptionByDefault),
       isBlock: true,
       type: "list",
       storageClassType: "ApplyServerSideEncryptionByDefaultPropertyList",
@@ -305,14 +305,14 @@ export function tfBucketServerSideEncryptionConfigurationMapperRulePropertyToHcl
 }
 
 
-export namespace TfBucketServerSideEncryptionConfiguration {
+export namespace AwsBucketServerSideEncryptionConfiguration {
 export interface ApplyServerSideEncryptionByDefaultProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#kms_master_key_id TfBucketServerSideEncryptionConfiguration#kms_master_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#kms_master_key_id AwsBucketServerSideEncryptionConfiguration#kms_master_key_id}
   */
   readonly kmsMasterKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#sse_algorithm TfBucketServerSideEncryptionConfiguration#sse_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#sse_algorithm AwsBucketServerSideEncryptionConfiguration#sse_algorithm}
   */
   readonly sseAlgorithm: string;
 }
@@ -385,17 +385,17 @@ export class ApplyServerSideEncryptionByDefaultPropertyOutputReference extends c
 }
 export interface RuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#blocked_encryption_types TfBucketServerSideEncryptionConfiguration#blocked_encryption_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#blocked_encryption_types AwsBucketServerSideEncryptionConfiguration#blocked_encryption_types}
   */
   readonly blockedEncryptionTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#bucket_key_enabled TfBucketServerSideEncryptionConfiguration#bucket_key_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#bucket_key_enabled AwsBucketServerSideEncryptionConfiguration#bucket_key_enabled}
   */
   readonly bucketKeyEnabled?: boolean | cdktn.IResolvable;
   /**
   * apply_server_side_encryption_by_default block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#apply_server_side_encryption_by_default TfBucketServerSideEncryptionConfiguration#apply_server_side_encryption_by_default}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_server_side_encryption_configuration#apply_server_side_encryption_by_default AwsBucketServerSideEncryptionConfiguration#apply_server_side_encryption_by_default}
   */
   readonly applyServerSideEncryptionByDefault?: ApplyServerSideEncryptionByDefaultProperty;
 }

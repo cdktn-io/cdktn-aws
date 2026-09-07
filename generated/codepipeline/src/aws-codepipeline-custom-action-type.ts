@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCustomActionTypeConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCustomActionTypeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#category TfCustomActionType#category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#category AwsCustomActionType#category}
   */
   readonly category: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#id TfCustomActionType#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#id AwsCustomActionType#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#provider_name TfCustomActionType#provider_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#provider_name AwsCustomActionType#provider_name}
   */
   readonly providerName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#region TfCustomActionType#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#region AwsCustomActionType#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#tags TfCustomActionType#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#tags AwsCustomActionType#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#tags_all TfCustomActionType#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#tags_all AwsCustomActionType#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#version TfCustomActionType#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#version AwsCustomActionType#version}
   */
   readonly version: string;
   /**
   * configuration_property block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#configuration_property TfCustomActionType#configuration_property}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#configuration_property AwsCustomActionType#configuration_property}
   */
-  readonly configurationProperty?: TfCustomActionType.ConfigurationPropertyProperty[] | cdktn.IResolvable;
+  readonly configurationProperty?: AwsCustomActionType.ConfigurationPropertyProperty[] | cdktn.IResolvable;
   /**
   * input_artifact_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#input_artifact_details TfCustomActionType#input_artifact_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#input_artifact_details AwsCustomActionType#input_artifact_details}
   */
-  readonly inputArtifactDetails: TfCustomActionType.InputArtifactDetailsProperty;
+  readonly inputArtifactDetails: AwsCustomActionType.InputArtifactDetailsProperty;
   /**
   * output_artifact_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#output_artifact_details TfCustomActionType#output_artifact_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#output_artifact_details AwsCustomActionType#output_artifact_details}
   */
-  readonly outputArtifactDetails: TfCustomActionType.OutputArtifactDetailsProperty;
+  readonly outputArtifactDetails: AwsCustomActionType.OutputArtifactDetailsProperty;
   /**
   * settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#settings TfCustomActionType#settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#settings AwsCustomActionType#settings}
   */
-  readonly settings?: TfCustomActionType.SettingsProperty;
+  readonly settings?: AwsCustomActionType.SettingsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type aws_codepipeline_custom_action_type}
 */
-export class TfCustomActionType extends cdktn.TerraformResource {
+export class AwsCustomActionType extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class TfCustomActionType extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCustomActionType resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCustomActionType resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCustomActionType to import
-  * @param importFromId The id of the existing TfCustomActionType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCustomActionType to import is found
+  * @param importToId The construct id used in the generated config for the AwsCustomActionType to import
+  * @param importFromId The id of the existing AwsCustomActionType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCustomActionType to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codepipeline_custom_action_type", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class TfCustomActionType extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCustomActionTypeConfig
+  * @param options AwsCustomActionTypeConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCustomActionTypeConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCustomActionTypeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codepipeline_custom_action_type',
       terraformGeneratorMetadata: {
@@ -247,11 +247,11 @@ export class TfCustomActionType extends cdktn.TerraformResource {
   }
 
   // configuration_property - computed: false, optional: true, required: false
-  private _configurationProperty = new TfCustomActionType.ConfigurationPropertyPropertyList(this, "configuration_property", false);
+  private _configurationProperty = new AwsCustomActionType.ConfigurationPropertyPropertyList(this, "configuration_property", false);
   public get configurationProperty() {
     return this._configurationProperty;
   }
-  public putConfigurationProperty(value: TfCustomActionType.ConfigurationPropertyProperty[] | cdktn.IResolvable) {
+  public putConfigurationProperty(value: AwsCustomActionType.ConfigurationPropertyProperty[] | cdktn.IResolvable) {
     this._configurationProperty.internalValue = value;
   }
   public resetConfigurationProperty() {
@@ -263,11 +263,11 @@ export class TfCustomActionType extends cdktn.TerraformResource {
   }
 
   // input_artifact_details - computed: false, optional: false, required: true
-  private _inputArtifactDetails = new TfCustomActionType.InputArtifactDetailsPropertyOutputReference(this, "input_artifact_details");
+  private _inputArtifactDetails = new AwsCustomActionType.InputArtifactDetailsPropertyOutputReference(this, "input_artifact_details");
   public get inputArtifactDetails() {
     return this._inputArtifactDetails;
   }
-  public putInputArtifactDetails(value: TfCustomActionType.InputArtifactDetailsProperty) {
+  public putInputArtifactDetails(value: AwsCustomActionType.InputArtifactDetailsProperty) {
     this._inputArtifactDetails.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -276,11 +276,11 @@ export class TfCustomActionType extends cdktn.TerraformResource {
   }
 
   // output_artifact_details - computed: false, optional: false, required: true
-  private _outputArtifactDetails = new TfCustomActionType.OutputArtifactDetailsPropertyOutputReference(this, "output_artifact_details");
+  private _outputArtifactDetails = new AwsCustomActionType.OutputArtifactDetailsPropertyOutputReference(this, "output_artifact_details");
   public get outputArtifactDetails() {
     return this._outputArtifactDetails;
   }
-  public putOutputArtifactDetails(value: TfCustomActionType.OutputArtifactDetailsProperty) {
+  public putOutputArtifactDetails(value: AwsCustomActionType.OutputArtifactDetailsProperty) {
     this._outputArtifactDetails.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -289,11 +289,11 @@ export class TfCustomActionType extends cdktn.TerraformResource {
   }
 
   // settings - computed: false, optional: true, required: false
-  private _settings = new TfCustomActionType.SettingsPropertyOutputReference(this, "settings");
+  private _settings = new AwsCustomActionType.SettingsPropertyOutputReference(this, "settings");
   public get settings() {
     return this._settings;
   }
-  public putSettings(value: TfCustomActionType.SettingsProperty) {
+  public putSettings(value: AwsCustomActionType.SettingsProperty) {
     this._settings.internalValue = value;
   }
   public resetSettings() {
@@ -317,10 +317,10 @@ export class TfCustomActionType extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       version: cdktn.stringToTerraform(this._version),
-      configuration_property: cdktn.listMapper(tfCustomActionTypeConfigurationPropertyPropertyToTerraform, true)(this._configurationProperty.internalValue),
-      input_artifact_details: tfCustomActionTypeInputArtifactDetailsPropertyToTerraform(this._inputArtifactDetails.internalValue),
-      output_artifact_details: tfCustomActionTypeOutputArtifactDetailsPropertyToTerraform(this._outputArtifactDetails.internalValue),
-      settings: tfCustomActionTypeSettingsPropertyToTerraform(this._settings.internalValue),
+      configuration_property: cdktn.listMapper(awsCustomActionTypeConfigurationPropertyPropertyToTerraform, true)(this._configurationProperty.internalValue),
+      input_artifact_details: awsCustomActionTypeInputArtifactDetailsPropertyToTerraform(this._inputArtifactDetails.internalValue),
+      output_artifact_details: awsCustomActionTypeOutputArtifactDetailsPropertyToTerraform(this._outputArtifactDetails.internalValue),
+      settings: awsCustomActionTypeSettingsPropertyToTerraform(this._settings.internalValue),
     };
   }
 
@@ -369,28 +369,28 @@ export class TfCustomActionType extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       configuration_property: {
-        value: cdktn.listMapperHcl(tfCustomActionTypeConfigurationPropertyPropertyToHclTerraform, true)(this._configurationProperty.internalValue),
+        value: cdktn.listMapperHcl(awsCustomActionTypeConfigurationPropertyPropertyToHclTerraform, true)(this._configurationProperty.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCustomActionType.ConfigurationPropertyPropertyList",
+        storageClassType: "AwsCustomActionType.ConfigurationPropertyPropertyList",
       },
       input_artifact_details: {
-        value: tfCustomActionTypeInputArtifactDetailsPropertyToHclTerraform(this._inputArtifactDetails.internalValue),
+        value: awsCustomActionTypeInputArtifactDetailsPropertyToHclTerraform(this._inputArtifactDetails.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCustomActionType.InputArtifactDetailsPropertyList",
+        storageClassType: "AwsCustomActionType.InputArtifactDetailsPropertyList",
       },
       output_artifact_details: {
-        value: tfCustomActionTypeOutputArtifactDetailsPropertyToHclTerraform(this._outputArtifactDetails.internalValue),
+        value: awsCustomActionTypeOutputArtifactDetailsPropertyToHclTerraform(this._outputArtifactDetails.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCustomActionType.OutputArtifactDetailsPropertyList",
+        storageClassType: "AwsCustomActionType.OutputArtifactDetailsPropertyList",
       },
       settings: {
-        value: tfCustomActionTypeSettingsPropertyToHclTerraform(this._settings.internalValue),
+        value: awsCustomActionTypeSettingsPropertyToHclTerraform(this._settings.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCustomActionType.SettingsPropertyList",
+        storageClassType: "AwsCustomActionType.SettingsPropertyList",
       },
     };
 
@@ -399,7 +399,7 @@ export class TfCustomActionType extends cdktn.TerraformResource {
   }
 }
 
-export function tfCustomActionTypeConfigurationPropertyPropertyToTerraform(struct?: TfCustomActionType.ConfigurationPropertyProperty | cdktn.IResolvable): any {
+export function awsCustomActionTypeConfigurationPropertyPropertyToTerraform(struct?: AwsCustomActionType.ConfigurationPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,7 +416,7 @@ export function tfCustomActionTypeConfigurationPropertyPropertyToTerraform(struc
 }
 
 
-export function tfCustomActionTypeConfigurationPropertyPropertyToHclTerraform(struct?: TfCustomActionType.ConfigurationPropertyProperty | cdktn.IResolvable): any {
+export function awsCustomActionTypeConfigurationPropertyPropertyToHclTerraform(struct?: AwsCustomActionType.ConfigurationPropertyProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -471,7 +471,7 @@ export function tfCustomActionTypeConfigurationPropertyPropertyToHclTerraform(st
 }
 
 
-export function tfCustomActionTypeInputArtifactDetailsPropertyToTerraform(struct?: TfCustomActionType.InputArtifactDetailsPropertyOutputReference | TfCustomActionType.InputArtifactDetailsProperty): any {
+export function awsCustomActionTypeInputArtifactDetailsPropertyToTerraform(struct?: AwsCustomActionType.InputArtifactDetailsPropertyOutputReference | AwsCustomActionType.InputArtifactDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,7 +483,7 @@ export function tfCustomActionTypeInputArtifactDetailsPropertyToTerraform(struct
 }
 
 
-export function tfCustomActionTypeInputArtifactDetailsPropertyToHclTerraform(struct?: TfCustomActionType.InputArtifactDetailsPropertyOutputReference | TfCustomActionType.InputArtifactDetailsProperty): any {
+export function awsCustomActionTypeInputArtifactDetailsPropertyToHclTerraform(struct?: AwsCustomActionType.InputArtifactDetailsPropertyOutputReference | AwsCustomActionType.InputArtifactDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -508,7 +508,7 @@ export function tfCustomActionTypeInputArtifactDetailsPropertyToHclTerraform(str
 }
 
 
-export function tfCustomActionTypeOutputArtifactDetailsPropertyToTerraform(struct?: TfCustomActionType.OutputArtifactDetailsPropertyOutputReference | TfCustomActionType.OutputArtifactDetailsProperty): any {
+export function awsCustomActionTypeOutputArtifactDetailsPropertyToTerraform(struct?: AwsCustomActionType.OutputArtifactDetailsPropertyOutputReference | AwsCustomActionType.OutputArtifactDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -520,7 +520,7 @@ export function tfCustomActionTypeOutputArtifactDetailsPropertyToTerraform(struc
 }
 
 
-export function tfCustomActionTypeOutputArtifactDetailsPropertyToHclTerraform(struct?: TfCustomActionType.OutputArtifactDetailsPropertyOutputReference | TfCustomActionType.OutputArtifactDetailsProperty): any {
+export function awsCustomActionTypeOutputArtifactDetailsPropertyToHclTerraform(struct?: AwsCustomActionType.OutputArtifactDetailsPropertyOutputReference | AwsCustomActionType.OutputArtifactDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -545,7 +545,7 @@ export function tfCustomActionTypeOutputArtifactDetailsPropertyToHclTerraform(st
 }
 
 
-export function tfCustomActionTypeSettingsPropertyToTerraform(struct?: TfCustomActionType.SettingsPropertyOutputReference | TfCustomActionType.SettingsProperty): any {
+export function awsCustomActionTypeSettingsPropertyToTerraform(struct?: AwsCustomActionType.SettingsPropertyOutputReference | AwsCustomActionType.SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -559,7 +559,7 @@ export function tfCustomActionTypeSettingsPropertyToTerraform(struct?: TfCustomA
 }
 
 
-export function tfCustomActionTypeSettingsPropertyToHclTerraform(struct?: TfCustomActionType.SettingsPropertyOutputReference | TfCustomActionType.SettingsProperty): any {
+export function awsCustomActionTypeSettingsPropertyToHclTerraform(struct?: AwsCustomActionType.SettingsPropertyOutputReference | AwsCustomActionType.SettingsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -596,34 +596,34 @@ export function tfCustomActionTypeSettingsPropertyToHclTerraform(struct?: TfCust
 }
 
 
-export namespace TfCustomActionType {
+export namespace AwsCustomActionType {
 export interface ConfigurationPropertyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#description TfCustomActionType#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#description AwsCustomActionType#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#key TfCustomActionType#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#key AwsCustomActionType#key}
   */
   readonly key: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#name TfCustomActionType#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#name AwsCustomActionType#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#queryable TfCustomActionType#queryable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#queryable AwsCustomActionType#queryable}
   */
   readonly queryable?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#required TfCustomActionType#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#required AwsCustomActionType#required}
   */
   readonly required: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#secret TfCustomActionType#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#secret AwsCustomActionType#secret}
   */
   readonly secret: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#type TfCustomActionType#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#type AwsCustomActionType#type}
   */
   readonly type?: string;
 }
@@ -829,11 +829,11 @@ export class ConfigurationPropertyPropertyList extends cdktn.ComplexList {
 }
 export interface InputArtifactDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#maximum_count TfCustomActionType#maximum_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#maximum_count AwsCustomActionType#maximum_count}
   */
   readonly maximumCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#minimum_count TfCustomActionType#minimum_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#minimum_count AwsCustomActionType#minimum_count}
   */
   readonly minimumCount: number;
 }
@@ -903,11 +903,11 @@ export class InputArtifactDetailsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface OutputArtifactDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#maximum_count TfCustomActionType#maximum_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#maximum_count AwsCustomActionType#maximum_count}
   */
   readonly maximumCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#minimum_count TfCustomActionType#minimum_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#minimum_count AwsCustomActionType#minimum_count}
   */
   readonly minimumCount: number;
 }
@@ -977,19 +977,19 @@ export class OutputArtifactDetailsPropertyOutputReference extends cdktn.ComplexO
 }
 export interface SettingsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#entity_url_template TfCustomActionType#entity_url_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#entity_url_template AwsCustomActionType#entity_url_template}
   */
   readonly entityUrlTemplate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#execution_url_template TfCustomActionType#execution_url_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#execution_url_template AwsCustomActionType#execution_url_template}
   */
   readonly executionUrlTemplate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#revision_url_template TfCustomActionType#revision_url_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#revision_url_template AwsCustomActionType#revision_url_template}
   */
   readonly revisionUrlTemplate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#third_party_configuration_url TfCustomActionType#third_party_configuration_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codepipeline_custom_action_type#third_party_configuration_url AwsCustomActionType#third_party_configuration_url}
   */
   readonly thirdPartyConfigurationUrl?: string;
 }

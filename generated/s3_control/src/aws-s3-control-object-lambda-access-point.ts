@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfObjectLambdaAccessPointConfig extends cdktn.TerraformMetaArguments {
+export interface AwsObjectLambdaAccessPointConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#account_id TfObjectLambdaAccessPoint#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#account_id AwsObjectLambdaAccessPoint#account_id}
   */
   readonly accountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#id TfObjectLambdaAccessPoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#id AwsObjectLambdaAccessPoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#name TfObjectLambdaAccessPoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#name AwsObjectLambdaAccessPoint#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#region TfObjectLambdaAccessPoint#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#region AwsObjectLambdaAccessPoint#region}
   */
   readonly region?: string;
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#configuration TfObjectLambdaAccessPoint#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#configuration AwsObjectLambdaAccessPoint#configuration}
   */
-  readonly configuration: TfObjectLambdaAccessPoint.ConfigurationProperty;
+  readonly configuration: AwsObjectLambdaAccessPoint.ConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point aws_s3control_object_lambda_access_point}
 */
-export class TfObjectLambdaAccessPoint extends cdktn.TerraformResource {
+export class AwsObjectLambdaAccessPoint extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfObjectLambdaAccessPoint extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfObjectLambdaAccessPoint resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsObjectLambdaAccessPoint resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfObjectLambdaAccessPoint to import
-  * @param importFromId The id of the existing TfObjectLambdaAccessPoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfObjectLambdaAccessPoint to import is found
+  * @param importToId The construct id used in the generated config for the AwsObjectLambdaAccessPoint to import
+  * @param importFromId The id of the existing AwsObjectLambdaAccessPoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsObjectLambdaAccessPoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3control_object_lambda_access_point", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfObjectLambdaAccessPoint extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfObjectLambdaAccessPointConfig
+  * @param options AwsObjectLambdaAccessPointConfig
   */
-  public constructor(scope: Construct, id: string, config: TfObjectLambdaAccessPointConfig) {
+  public constructor(scope: Construct, id: string, config: AwsObjectLambdaAccessPointConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3control_object_lambda_access_point',
       terraformGeneratorMetadata: {
@@ -169,11 +169,11 @@ export class TfObjectLambdaAccessPoint extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: false, required: true
-  private _configuration = new TfObjectLambdaAccessPoint.ConfigurationPropertyOutputReference(this, "configuration");
+  private _configuration = new AwsObjectLambdaAccessPoint.ConfigurationPropertyOutputReference(this, "configuration");
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: TfObjectLambdaAccessPoint.ConfigurationProperty) {
+  public putConfiguration(value: AwsObjectLambdaAccessPoint.ConfigurationProperty) {
     this._configuration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -191,7 +191,7 @@ export class TfObjectLambdaAccessPoint extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      configuration: tfObjectLambdaAccessPointConfigurationPropertyToTerraform(this._configuration.internalValue),
+      configuration: awsObjectLambdaAccessPointConfigurationPropertyToTerraform(this._configuration.internalValue),
     };
   }
 
@@ -222,10 +222,10 @@ export class TfObjectLambdaAccessPoint extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       configuration: {
-        value: tfObjectLambdaAccessPointConfigurationPropertyToHclTerraform(this._configuration.internalValue),
+        value: awsObjectLambdaAccessPointConfigurationPropertyToHclTerraform(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfObjectLambdaAccessPoint.ConfigurationPropertyList",
+        storageClassType: "AwsObjectLambdaAccessPoint.ConfigurationPropertyList",
       },
     };
 
@@ -234,7 +234,7 @@ export class TfObjectLambdaAccessPoint extends cdktn.TerraformResource {
   }
 }
 
-export function tfObjectLambdaAccessPointAwsLambdaPropertyToTerraform(struct?: TfObjectLambdaAccessPoint.AwsLambdaPropertyOutputReference | TfObjectLambdaAccessPoint.AwsLambdaProperty): any {
+export function awsObjectLambdaAccessPointAwsLambdaPropertyToTerraform(struct?: AwsObjectLambdaAccessPoint.AwsLambdaPropertyOutputReference | AwsObjectLambdaAccessPoint.AwsLambdaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -246,7 +246,7 @@ export function tfObjectLambdaAccessPointAwsLambdaPropertyToTerraform(struct?: T
 }
 
 
-export function tfObjectLambdaAccessPointAwsLambdaPropertyToHclTerraform(struct?: TfObjectLambdaAccessPoint.AwsLambdaPropertyOutputReference | TfObjectLambdaAccessPoint.AwsLambdaProperty): any {
+export function awsObjectLambdaAccessPointAwsLambdaPropertyToHclTerraform(struct?: AwsObjectLambdaAccessPoint.AwsLambdaPropertyOutputReference | AwsObjectLambdaAccessPoint.AwsLambdaProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -271,25 +271,25 @@ export function tfObjectLambdaAccessPointAwsLambdaPropertyToHclTerraform(struct?
 }
 
 
-export function tfObjectLambdaAccessPointContentTransformationPropertyToTerraform(struct?: TfObjectLambdaAccessPoint.ContentTransformationPropertyOutputReference | TfObjectLambdaAccessPoint.ContentTransformationProperty): any {
+export function awsObjectLambdaAccessPointContentTransformationPropertyToTerraform(struct?: AwsObjectLambdaAccessPoint.ContentTransformationPropertyOutputReference | AwsObjectLambdaAccessPoint.ContentTransformationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    aws_lambda: tfObjectLambdaAccessPointAwsLambdaPropertyToTerraform(struct!.awsLambda),
+    aws_lambda: awsObjectLambdaAccessPointAwsLambdaPropertyToTerraform(struct!.awsLambda),
   }
 }
 
 
-export function tfObjectLambdaAccessPointContentTransformationPropertyToHclTerraform(struct?: TfObjectLambdaAccessPoint.ContentTransformationPropertyOutputReference | TfObjectLambdaAccessPoint.ContentTransformationProperty): any {
+export function awsObjectLambdaAccessPointContentTransformationPropertyToHclTerraform(struct?: AwsObjectLambdaAccessPoint.ContentTransformationPropertyOutputReference | AwsObjectLambdaAccessPoint.ContentTransformationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     aws_lambda: {
-      value: tfObjectLambdaAccessPointAwsLambdaPropertyToHclTerraform(struct!.awsLambda),
+      value: awsObjectLambdaAccessPointAwsLambdaPropertyToHclTerraform(struct!.awsLambda),
       isBlock: true,
       type: "list",
       storageClassType: "AwsLambdaPropertyList",
@@ -301,19 +301,19 @@ export function tfObjectLambdaAccessPointContentTransformationPropertyToHclTerra
 }
 
 
-export function tfObjectLambdaAccessPointTransformationConfigurationPropertyToTerraform(struct?: TfObjectLambdaAccessPoint.TransformationConfigurationProperty | cdktn.IResolvable): any {
+export function awsObjectLambdaAccessPointTransformationConfigurationPropertyToTerraform(struct?: AwsObjectLambdaAccessPoint.TransformationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     actions: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.actions),
-    content_transformation: tfObjectLambdaAccessPointContentTransformationPropertyToTerraform(struct!.contentTransformation),
+    content_transformation: awsObjectLambdaAccessPointContentTransformationPropertyToTerraform(struct!.contentTransformation),
   }
 }
 
 
-export function tfObjectLambdaAccessPointTransformationConfigurationPropertyToHclTerraform(struct?: TfObjectLambdaAccessPoint.TransformationConfigurationProperty | cdktn.IResolvable): any {
+export function awsObjectLambdaAccessPointTransformationConfigurationPropertyToHclTerraform(struct?: AwsObjectLambdaAccessPoint.TransformationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -326,7 +326,7 @@ export function tfObjectLambdaAccessPointTransformationConfigurationPropertyToHc
       storageClassType: "stringList",
     },
     content_transformation: {
-      value: tfObjectLambdaAccessPointContentTransformationPropertyToHclTerraform(struct!.contentTransformation),
+      value: awsObjectLambdaAccessPointContentTransformationPropertyToHclTerraform(struct!.contentTransformation),
       isBlock: true,
       type: "list",
       storageClassType: "ContentTransformationPropertyList",
@@ -338,7 +338,7 @@ export function tfObjectLambdaAccessPointTransformationConfigurationPropertyToHc
 }
 
 
-export function tfObjectLambdaAccessPointConfigurationPropertyToTerraform(struct?: TfObjectLambdaAccessPoint.ConfigurationPropertyOutputReference | TfObjectLambdaAccessPoint.ConfigurationProperty): any {
+export function awsObjectLambdaAccessPointConfigurationPropertyToTerraform(struct?: AwsObjectLambdaAccessPoint.ConfigurationPropertyOutputReference | AwsObjectLambdaAccessPoint.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,12 +347,12 @@ export function tfObjectLambdaAccessPointConfigurationPropertyToTerraform(struct
     allowed_features: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.allowedFeatures),
     cloud_watch_metrics_enabled: cdktn.booleanToTerraform(struct!.cloudWatchMetricsEnabled),
     supporting_access_point: cdktn.stringToTerraform(struct!.supportingAccessPoint),
-    transformation_configuration: cdktn.listMapper(tfObjectLambdaAccessPointTransformationConfigurationPropertyToTerraform, true)(struct!.transformationConfiguration),
+    transformation_configuration: cdktn.listMapper(awsObjectLambdaAccessPointTransformationConfigurationPropertyToTerraform, true)(struct!.transformationConfiguration),
   }
 }
 
 
-export function tfObjectLambdaAccessPointConfigurationPropertyToHclTerraform(struct?: TfObjectLambdaAccessPoint.ConfigurationPropertyOutputReference | TfObjectLambdaAccessPoint.ConfigurationProperty): any {
+export function awsObjectLambdaAccessPointConfigurationPropertyToHclTerraform(struct?: AwsObjectLambdaAccessPoint.ConfigurationPropertyOutputReference | AwsObjectLambdaAccessPoint.ConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -377,7 +377,7 @@ export function tfObjectLambdaAccessPointConfigurationPropertyToHclTerraform(str
       storageClassType: "string",
     },
     transformation_configuration: {
-      value: cdktn.listMapperHcl(tfObjectLambdaAccessPointTransformationConfigurationPropertyToHclTerraform, true)(struct!.transformationConfiguration),
+      value: cdktn.listMapperHcl(awsObjectLambdaAccessPointTransformationConfigurationPropertyToHclTerraform, true)(struct!.transformationConfiguration),
       isBlock: true,
       type: "set",
       storageClassType: "TransformationConfigurationPropertyList",
@@ -389,14 +389,14 @@ export function tfObjectLambdaAccessPointConfigurationPropertyToHclTerraform(str
 }
 
 
-export namespace TfObjectLambdaAccessPoint {
+export namespace AwsObjectLambdaAccessPoint {
 export interface AwsLambdaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#function_arn TfObjectLambdaAccessPoint#function_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#function_arn AwsObjectLambdaAccessPoint#function_arn}
   */
   readonly functionArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#function_payload TfObjectLambdaAccessPoint#function_payload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#function_payload AwsObjectLambdaAccessPoint#function_payload}
   */
   readonly functionPayload?: string;
 }
@@ -471,7 +471,7 @@ export interface ContentTransformationProperty {
   /**
   * aws_lambda block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#aws_lambda TfObjectLambdaAccessPoint#aws_lambda}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#aws_lambda AwsObjectLambdaAccessPoint#aws_lambda}
   */
   readonly awsLambda: AwsLambdaProperty;
 }
@@ -522,13 +522,13 @@ export class ContentTransformationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface TransformationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#actions TfObjectLambdaAccessPoint#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#actions AwsObjectLambdaAccessPoint#actions}
   */
   readonly actions: string[];
   /**
   * content_transformation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#content_transformation TfObjectLambdaAccessPoint#content_transformation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#content_transformation AwsObjectLambdaAccessPoint#content_transformation}
   */
   readonly contentTransformation: ContentTransformationProperty;
 }
@@ -630,21 +630,21 @@ export class TransformationConfigurationPropertyList extends cdktn.ComplexList {
 }
 export interface ConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#allowed_features TfObjectLambdaAccessPoint#allowed_features}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#allowed_features AwsObjectLambdaAccessPoint#allowed_features}
   */
   readonly allowedFeatures?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#cloud_watch_metrics_enabled TfObjectLambdaAccessPoint#cloud_watch_metrics_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#cloud_watch_metrics_enabled AwsObjectLambdaAccessPoint#cloud_watch_metrics_enabled}
   */
   readonly cloudWatchMetricsEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#supporting_access_point TfObjectLambdaAccessPoint#supporting_access_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#supporting_access_point AwsObjectLambdaAccessPoint#supporting_access_point}
   */
   readonly supportingAccessPoint: string;
   /**
   * transformation_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#transformation_configuration TfObjectLambdaAccessPoint#transformation_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3control_object_lambda_access_point#transformation_configuration AwsObjectLambdaAccessPoint#transformation_configuration}
   */
   readonly transformationConfiguration: TransformationConfigurationProperty[] | cdktn.IResolvable;
 }

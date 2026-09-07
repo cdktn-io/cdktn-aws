@@ -5,19 +5,19 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfFleetConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsFleetConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codebuild_fleet#name DataTfFleet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codebuild_fleet#name DataAwsFleet#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codebuild_fleet#region DataTfFleet#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codebuild_fleet#region DataAwsFleet#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codebuild_fleet#tags DataTfFleet#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codebuild_fleet#tags DataAwsFleet#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -25,7 +25,7 @@ export interface DataTfFleetConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codebuild_fleet aws_codebuild_fleet}
 */
-export class DataTfFleet extends cdktn.TerraformDataSource {
+export class DataAwsFleet extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -36,11 +36,11 @@ export class DataTfFleet extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfFleet resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsFleet resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfFleet to import
-  * @param importFromId The id of the existing DataTfFleet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codebuild_fleet#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfFleet to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsFleet to import
+  * @param importFromId The id of the existing DataAwsFleet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/codebuild_fleet#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsFleet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codebuild_fleet", importId: importFromId, provider });
@@ -55,9 +55,9 @@ export class DataTfFleet extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfFleetConfig
+  * @param options DataAwsFleetConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfFleetConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsFleetConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codebuild_fleet',
       terraformGeneratorMetadata: {
@@ -93,7 +93,7 @@ export class DataTfFleet extends cdktn.TerraformDataSource {
   }
 
   // compute_configuration - computed: true, optional: false, required: false
-  private _computeConfiguration = new DataTfFleet.ComputeConfigurationPropertyList(this, "compute_configuration", false);
+  private _computeConfiguration = new DataAwsFleet.ComputeConfigurationPropertyList(this, "compute_configuration", false);
   public get computeConfiguration() {
     return this._computeConfiguration;
   }
@@ -168,13 +168,13 @@ export class DataTfFleet extends cdktn.TerraformDataSource {
   }
 
   // scaling_configuration - computed: true, optional: false, required: false
-  private _scalingConfiguration = new DataTfFleet.ScalingConfigurationPropertyList(this, "scaling_configuration", false);
+  private _scalingConfiguration = new DataAwsFleet.ScalingConfigurationPropertyList(this, "scaling_configuration", false);
   public get scalingConfiguration() {
     return this._scalingConfiguration;
   }
 
   // status - computed: true, optional: false, required: false
-  private _status = new DataTfFleet.StatusPropertyList(this, "status", true);
+  private _status = new DataAwsFleet.StatusPropertyList(this, "status", true);
   public get status() {
     return this._status;
   }
@@ -196,7 +196,7 @@ export class DataTfFleet extends cdktn.TerraformDataSource {
   }
 
   // vpc_config - computed: true, optional: false, required: false
-  private _vpcConfig = new DataTfFleet.VpcConfigPropertyList(this, "vpc_config", false);
+  private _vpcConfig = new DataAwsFleet.VpcConfigPropertyList(this, "vpc_config", false);
   public get vpcConfig() {
     return this._vpcConfig;
   }
@@ -240,7 +240,7 @@ export class DataTfFleet extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfFleetComputeConfigurationPropertyToTerraform(struct?: DataTfFleet.ComputeConfigurationProperty): any {
+export function dataAwsFleetComputeConfigurationPropertyToTerraform(struct?: DataAwsFleet.ComputeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -250,7 +250,7 @@ export function dataTfFleetComputeConfigurationPropertyToTerraform(struct?: Data
 }
 
 
-export function dataTfFleetComputeConfigurationPropertyToHclTerraform(struct?: DataTfFleet.ComputeConfigurationProperty): any {
+export function dataAwsFleetComputeConfigurationPropertyToHclTerraform(struct?: DataAwsFleet.ComputeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,7 +261,7 @@ export function dataTfFleetComputeConfigurationPropertyToHclTerraform(struct?: D
 }
 
 
-export function dataTfFleetTargetTrackingScalingConfigsPropertyToTerraform(struct?: DataTfFleet.TargetTrackingScalingConfigsProperty): any {
+export function dataAwsFleetTargetTrackingScalingConfigsPropertyToTerraform(struct?: DataAwsFleet.TargetTrackingScalingConfigsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -271,7 +271,7 @@ export function dataTfFleetTargetTrackingScalingConfigsPropertyToTerraform(struc
 }
 
 
-export function dataTfFleetTargetTrackingScalingConfigsPropertyToHclTerraform(struct?: DataTfFleet.TargetTrackingScalingConfigsProperty): any {
+export function dataAwsFleetTargetTrackingScalingConfigsPropertyToHclTerraform(struct?: DataAwsFleet.TargetTrackingScalingConfigsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -282,7 +282,7 @@ export function dataTfFleetTargetTrackingScalingConfigsPropertyToHclTerraform(st
 }
 
 
-export function dataTfFleetScalingConfigurationPropertyToTerraform(struct?: DataTfFleet.ScalingConfigurationProperty): any {
+export function dataAwsFleetScalingConfigurationPropertyToTerraform(struct?: DataAwsFleet.ScalingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -292,7 +292,7 @@ export function dataTfFleetScalingConfigurationPropertyToTerraform(struct?: Data
 }
 
 
-export function dataTfFleetScalingConfigurationPropertyToHclTerraform(struct?: DataTfFleet.ScalingConfigurationProperty): any {
+export function dataAwsFleetScalingConfigurationPropertyToHclTerraform(struct?: DataAwsFleet.ScalingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -303,7 +303,7 @@ export function dataTfFleetScalingConfigurationPropertyToHclTerraform(struct?: D
 }
 
 
-export function dataTfFleetStatusPropertyToTerraform(struct?: DataTfFleet.StatusProperty): any {
+export function dataAwsFleetStatusPropertyToTerraform(struct?: DataAwsFleet.StatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function dataTfFleetStatusPropertyToTerraform(struct?: DataTfFleet.Status
 }
 
 
-export function dataTfFleetStatusPropertyToHclTerraform(struct?: DataTfFleet.StatusProperty): any {
+export function dataAwsFleetStatusPropertyToHclTerraform(struct?: DataAwsFleet.StatusProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,7 +324,7 @@ export function dataTfFleetStatusPropertyToHclTerraform(struct?: DataTfFleet.Sta
 }
 
 
-export function dataTfFleetVpcConfigPropertyToTerraform(struct?: DataTfFleet.VpcConfigProperty): any {
+export function dataAwsFleetVpcConfigPropertyToTerraform(struct?: DataAwsFleet.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,7 +334,7 @@ export function dataTfFleetVpcConfigPropertyToTerraform(struct?: DataTfFleet.Vpc
 }
 
 
-export function dataTfFleetVpcConfigPropertyToHclTerraform(struct?: DataTfFleet.VpcConfigProperty): any {
+export function dataAwsFleetVpcConfigPropertyToHclTerraform(struct?: DataAwsFleet.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -345,7 +345,7 @@ export function dataTfFleetVpcConfigPropertyToHclTerraform(struct?: DataTfFleet.
 }
 
 
-export namespace DataTfFleet {
+export namespace DataAwsFleet {
 export interface ComputeConfigurationProperty {
 }
 export class ComputeConfigurationPropertyOutputReference extends cdktn.ComplexObject {

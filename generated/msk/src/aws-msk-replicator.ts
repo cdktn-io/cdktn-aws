@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfReplicatorConfig extends cdktn.TerraformMetaArguments {
+export interface AwsReplicatorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#description TfReplicator#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#description AwsReplicator#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#id TfReplicator#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#id AwsReplicator#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,55 +20,55 @@ export interface TfReplicatorConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#region TfReplicator#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#region AwsReplicator#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#replicator_name TfReplicator#replicator_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#replicator_name AwsReplicator#replicator_name}
   */
   readonly replicatorName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#service_execution_role_arn TfReplicator#service_execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#service_execution_role_arn AwsReplicator#service_execution_role_arn}
   */
   readonly serviceExecutionRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#tags TfReplicator#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#tags AwsReplicator#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#tags_all TfReplicator#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#tags_all AwsReplicator#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * kafka_cluster block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#kafka_cluster TfReplicator#kafka_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#kafka_cluster AwsReplicator#kafka_cluster}
   */
-  readonly kafkaCluster: TfReplicator.KafkaClusterProperty[] | cdktn.IResolvable;
+  readonly kafkaCluster: AwsReplicator.KafkaClusterProperty[] | cdktn.IResolvable;
   /**
   * log_delivery block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#log_delivery TfReplicator#log_delivery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#log_delivery AwsReplicator#log_delivery}
   */
-  readonly logDelivery?: TfReplicator.LogDeliveryProperty;
+  readonly logDelivery?: AwsReplicator.LogDeliveryProperty;
   /**
   * replication_info_list block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#replication_info_list TfReplicator#replication_info_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#replication_info_list AwsReplicator#replication_info_list}
   */
-  readonly replicationInfoList: TfReplicator.ReplicationInfoListProperty;
+  readonly replicationInfoList: AwsReplicator.ReplicationInfoListProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#timeouts TfReplicator#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#timeouts AwsReplicator#timeouts}
   */
-  readonly timeouts?: TfReplicator.TimeoutsProperty;
+  readonly timeouts?: AwsReplicator.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator aws_msk_replicator}
 */
-export class TfReplicator extends cdktn.TerraformResource {
+export class AwsReplicator extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class TfReplicator extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfReplicator resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsReplicator resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfReplicator to import
-  * @param importFromId The id of the existing TfReplicator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfReplicator to import is found
+  * @param importToId The construct id used in the generated config for the AwsReplicator to import
+  * @param importFromId The id of the existing AwsReplicator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsReplicator to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_msk_replicator", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class TfReplicator extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfReplicatorConfig
+  * @param options AwsReplicatorConfig
   */
-  public constructor(scope: Construct, id: string, config: TfReplicatorConfig) {
+  public constructor(scope: Construct, id: string, config: AwsReplicatorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_msk_replicator',
       terraformGeneratorMetadata: {
@@ -250,11 +250,11 @@ export class TfReplicator extends cdktn.TerraformResource {
   }
 
   // kafka_cluster - computed: false, optional: false, required: true
-  private _kafkaCluster = new TfReplicator.KafkaClusterPropertyList(this, "kafka_cluster", false);
+  private _kafkaCluster = new AwsReplicator.KafkaClusterPropertyList(this, "kafka_cluster", false);
   public get kafkaCluster() {
     return this._kafkaCluster;
   }
-  public putKafkaCluster(value: TfReplicator.KafkaClusterProperty[] | cdktn.IResolvable) {
+  public putKafkaCluster(value: AwsReplicator.KafkaClusterProperty[] | cdktn.IResolvable) {
     this._kafkaCluster.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -263,11 +263,11 @@ export class TfReplicator extends cdktn.TerraformResource {
   }
 
   // log_delivery - computed: false, optional: true, required: false
-  private _logDelivery = new TfReplicator.LogDeliveryPropertyOutputReference(this, "log_delivery");
+  private _logDelivery = new AwsReplicator.LogDeliveryPropertyOutputReference(this, "log_delivery");
   public get logDelivery() {
     return this._logDelivery;
   }
-  public putLogDelivery(value: TfReplicator.LogDeliveryProperty) {
+  public putLogDelivery(value: AwsReplicator.LogDeliveryProperty) {
     this._logDelivery.internalValue = value;
   }
   public resetLogDelivery() {
@@ -279,11 +279,11 @@ export class TfReplicator extends cdktn.TerraformResource {
   }
 
   // replication_info_list - computed: false, optional: false, required: true
-  private _replicationInfoList = new TfReplicator.ReplicationInfoListPropertyOutputReference(this, "replication_info_list");
+  private _replicationInfoList = new AwsReplicator.ReplicationInfoListPropertyOutputReference(this, "replication_info_list");
   public get replicationInfoList() {
     return this._replicationInfoList;
   }
-  public putReplicationInfoList(value: TfReplicator.ReplicationInfoListProperty) {
+  public putReplicationInfoList(value: AwsReplicator.ReplicationInfoListProperty) {
     this._replicationInfoList.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -292,11 +292,11 @@ export class TfReplicator extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfReplicator.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsReplicator.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfReplicator.TimeoutsProperty) {
+  public putTimeouts(value: AwsReplicator.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -320,10 +320,10 @@ export class TfReplicator extends cdktn.TerraformResource {
       service_execution_role_arn: cdktn.stringToTerraform(this._serviceExecutionRoleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      kafka_cluster: cdktn.listMapper(tfReplicatorKafkaClusterPropertyToTerraform, true)(this._kafkaCluster.internalValue),
-      log_delivery: tfReplicatorLogDeliveryPropertyToTerraform(this._logDelivery.internalValue),
-      replication_info_list: tfReplicatorReplicationInfoListPropertyToTerraform(this._replicationInfoList.internalValue),
-      timeouts: tfReplicatorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      kafka_cluster: cdktn.listMapper(awsReplicatorKafkaClusterPropertyToTerraform, true)(this._kafkaCluster.internalValue),
+      log_delivery: awsReplicatorLogDeliveryPropertyToTerraform(this._logDelivery.internalValue),
+      replication_info_list: awsReplicatorReplicationInfoListPropertyToTerraform(this._replicationInfoList.internalValue),
+      timeouts: awsReplicatorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -372,28 +372,28 @@ export class TfReplicator extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       kafka_cluster: {
-        value: cdktn.listMapperHcl(tfReplicatorKafkaClusterPropertyToHclTerraform, true)(this._kafkaCluster.internalValue),
+        value: cdktn.listMapperHcl(awsReplicatorKafkaClusterPropertyToHclTerraform, true)(this._kafkaCluster.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfReplicator.KafkaClusterPropertyList",
+        storageClassType: "AwsReplicator.KafkaClusterPropertyList",
       },
       log_delivery: {
-        value: tfReplicatorLogDeliveryPropertyToHclTerraform(this._logDelivery.internalValue),
+        value: awsReplicatorLogDeliveryPropertyToHclTerraform(this._logDelivery.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfReplicator.LogDeliveryPropertyList",
+        storageClassType: "AwsReplicator.LogDeliveryPropertyList",
       },
       replication_info_list: {
-        value: tfReplicatorReplicationInfoListPropertyToHclTerraform(this._replicationInfoList.internalValue),
+        value: awsReplicatorReplicationInfoListPropertyToHclTerraform(this._replicationInfoList.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfReplicator.ReplicationInfoListPropertyList",
+        storageClassType: "AwsReplicator.ReplicationInfoListPropertyList",
       },
       timeouts: {
-        value: tfReplicatorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsReplicatorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfReplicator.TimeoutsProperty",
+        storageClassType: "AwsReplicator.TimeoutsProperty",
       },
     };
 
@@ -402,7 +402,7 @@ export class TfReplicator extends cdktn.TerraformResource {
   }
 }
 
-export function tfReplicatorAmazonMskClusterPropertyToTerraform(struct?: TfReplicator.AmazonMskClusterPropertyOutputReference | TfReplicator.AmazonMskClusterProperty): any {
+export function awsReplicatorAmazonMskClusterPropertyToTerraform(struct?: AwsReplicator.AmazonMskClusterPropertyOutputReference | AwsReplicator.AmazonMskClusterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,7 +413,7 @@ export function tfReplicatorAmazonMskClusterPropertyToTerraform(struct?: TfRepli
 }
 
 
-export function tfReplicatorAmazonMskClusterPropertyToHclTerraform(struct?: TfReplicator.AmazonMskClusterPropertyOutputReference | TfReplicator.AmazonMskClusterProperty): any {
+export function awsReplicatorAmazonMskClusterPropertyToHclTerraform(struct?: AwsReplicator.AmazonMskClusterPropertyOutputReference | AwsReplicator.AmazonMskClusterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -432,7 +432,7 @@ export function tfReplicatorAmazonMskClusterPropertyToHclTerraform(struct?: TfRe
 }
 
 
-export function tfReplicatorVpcConfigPropertyToTerraform(struct?: TfReplicator.VpcConfigPropertyOutputReference | TfReplicator.VpcConfigProperty): any {
+export function awsReplicatorVpcConfigPropertyToTerraform(struct?: AwsReplicator.VpcConfigPropertyOutputReference | AwsReplicator.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -444,7 +444,7 @@ export function tfReplicatorVpcConfigPropertyToTerraform(struct?: TfReplicator.V
 }
 
 
-export function tfReplicatorVpcConfigPropertyToHclTerraform(struct?: TfReplicator.VpcConfigPropertyOutputReference | TfReplicator.VpcConfigProperty): any {
+export function awsReplicatorVpcConfigPropertyToHclTerraform(struct?: AwsReplicator.VpcConfigPropertyOutputReference | AwsReplicator.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,32 +469,32 @@ export function tfReplicatorVpcConfigPropertyToHclTerraform(struct?: TfReplicato
 }
 
 
-export function tfReplicatorKafkaClusterPropertyToTerraform(struct?: TfReplicator.KafkaClusterProperty | cdktn.IResolvable): any {
+export function awsReplicatorKafkaClusterPropertyToTerraform(struct?: AwsReplicator.KafkaClusterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    amazon_msk_cluster: tfReplicatorAmazonMskClusterPropertyToTerraform(struct!.amazonMskCluster),
-    vpc_config: tfReplicatorVpcConfigPropertyToTerraform(struct!.vpcConfig),
+    amazon_msk_cluster: awsReplicatorAmazonMskClusterPropertyToTerraform(struct!.amazonMskCluster),
+    vpc_config: awsReplicatorVpcConfigPropertyToTerraform(struct!.vpcConfig),
   }
 }
 
 
-export function tfReplicatorKafkaClusterPropertyToHclTerraform(struct?: TfReplicator.KafkaClusterProperty | cdktn.IResolvable): any {
+export function awsReplicatorKafkaClusterPropertyToHclTerraform(struct?: AwsReplicator.KafkaClusterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     amazon_msk_cluster: {
-      value: tfReplicatorAmazonMskClusterPropertyToHclTerraform(struct!.amazonMskCluster),
+      value: awsReplicatorAmazonMskClusterPropertyToHclTerraform(struct!.amazonMskCluster),
       isBlock: true,
       type: "list",
       storageClassType: "AmazonMskClusterPropertyList",
     },
     vpc_config: {
-      value: tfReplicatorVpcConfigPropertyToHclTerraform(struct!.vpcConfig),
+      value: awsReplicatorVpcConfigPropertyToHclTerraform(struct!.vpcConfig),
       isBlock: true,
       type: "list",
       storageClassType: "VpcConfigPropertyList",
@@ -506,7 +506,7 @@ export function tfReplicatorKafkaClusterPropertyToHclTerraform(struct?: TfReplic
 }
 
 
-export function tfReplicatorCloudwatchLogsPropertyToTerraform(struct?: TfReplicator.CloudwatchLogsPropertyOutputReference | TfReplicator.CloudwatchLogsProperty): any {
+export function awsReplicatorCloudwatchLogsPropertyToTerraform(struct?: AwsReplicator.CloudwatchLogsPropertyOutputReference | AwsReplicator.CloudwatchLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -518,7 +518,7 @@ export function tfReplicatorCloudwatchLogsPropertyToTerraform(struct?: TfReplica
 }
 
 
-export function tfReplicatorCloudwatchLogsPropertyToHclTerraform(struct?: TfReplicator.CloudwatchLogsPropertyOutputReference | TfReplicator.CloudwatchLogsProperty): any {
+export function awsReplicatorCloudwatchLogsPropertyToHclTerraform(struct?: AwsReplicator.CloudwatchLogsPropertyOutputReference | AwsReplicator.CloudwatchLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -543,7 +543,7 @@ export function tfReplicatorCloudwatchLogsPropertyToHclTerraform(struct?: TfRepl
 }
 
 
-export function tfReplicatorFirehosePropertyToTerraform(struct?: TfReplicator.FirehosePropertyOutputReference | TfReplicator.FirehoseProperty): any {
+export function awsReplicatorFirehosePropertyToTerraform(struct?: AwsReplicator.FirehosePropertyOutputReference | AwsReplicator.FirehoseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -555,7 +555,7 @@ export function tfReplicatorFirehosePropertyToTerraform(struct?: TfReplicator.Fi
 }
 
 
-export function tfReplicatorFirehosePropertyToHclTerraform(struct?: TfReplicator.FirehosePropertyOutputReference | TfReplicator.FirehoseProperty): any {
+export function awsReplicatorFirehosePropertyToHclTerraform(struct?: AwsReplicator.FirehosePropertyOutputReference | AwsReplicator.FirehoseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -580,7 +580,7 @@ export function tfReplicatorFirehosePropertyToHclTerraform(struct?: TfReplicator
 }
 
 
-export function tfReplicatorS3PropertyToTerraform(struct?: TfReplicator.S3PropertyOutputReference | TfReplicator.S3Property): any {
+export function awsReplicatorS3PropertyToTerraform(struct?: AwsReplicator.S3PropertyOutputReference | AwsReplicator.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -593,7 +593,7 @@ export function tfReplicatorS3PropertyToTerraform(struct?: TfReplicator.S3Proper
 }
 
 
-export function tfReplicatorS3PropertyToHclTerraform(struct?: TfReplicator.S3PropertyOutputReference | TfReplicator.S3Property): any {
+export function awsReplicatorS3PropertyToHclTerraform(struct?: AwsReplicator.S3PropertyOutputReference | AwsReplicator.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -624,39 +624,39 @@ export function tfReplicatorS3PropertyToHclTerraform(struct?: TfReplicator.S3Pro
 }
 
 
-export function tfReplicatorReplicatorLogDeliveryPropertyToTerraform(struct?: TfReplicator.ReplicatorLogDeliveryPropertyOutputReference | TfReplicator.ReplicatorLogDeliveryProperty): any {
+export function awsReplicatorReplicatorLogDeliveryPropertyToTerraform(struct?: AwsReplicator.ReplicatorLogDeliveryPropertyOutputReference | AwsReplicator.ReplicatorLogDeliveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cloudwatch_logs: tfReplicatorCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
-    firehose: tfReplicatorFirehosePropertyToTerraform(struct!.firehose),
-    s3: tfReplicatorS3PropertyToTerraform(struct!.s3),
+    cloudwatch_logs: awsReplicatorCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
+    firehose: awsReplicatorFirehosePropertyToTerraform(struct!.firehose),
+    s3: awsReplicatorS3PropertyToTerraform(struct!.s3),
   }
 }
 
 
-export function tfReplicatorReplicatorLogDeliveryPropertyToHclTerraform(struct?: TfReplicator.ReplicatorLogDeliveryPropertyOutputReference | TfReplicator.ReplicatorLogDeliveryProperty): any {
+export function awsReplicatorReplicatorLogDeliveryPropertyToHclTerraform(struct?: AwsReplicator.ReplicatorLogDeliveryPropertyOutputReference | AwsReplicator.ReplicatorLogDeliveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cloudwatch_logs: {
-      value: tfReplicatorCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
+      value: awsReplicatorCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchLogsPropertyList",
     },
     firehose: {
-      value: tfReplicatorFirehosePropertyToHclTerraform(struct!.firehose),
+      value: awsReplicatorFirehosePropertyToHclTerraform(struct!.firehose),
       isBlock: true,
       type: "list",
       storageClassType: "FirehosePropertyList",
     },
     s3: {
-      value: tfReplicatorS3PropertyToHclTerraform(struct!.s3),
+      value: awsReplicatorS3PropertyToHclTerraform(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "S3PropertyList",
@@ -668,25 +668,25 @@ export function tfReplicatorReplicatorLogDeliveryPropertyToHclTerraform(struct?:
 }
 
 
-export function tfReplicatorLogDeliveryPropertyToTerraform(struct?: TfReplicator.LogDeliveryPropertyOutputReference | TfReplicator.LogDeliveryProperty): any {
+export function awsReplicatorLogDeliveryPropertyToTerraform(struct?: AwsReplicator.LogDeliveryPropertyOutputReference | AwsReplicator.LogDeliveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    replicator_log_delivery: tfReplicatorReplicatorLogDeliveryPropertyToTerraform(struct!.replicatorLogDelivery),
+    replicator_log_delivery: awsReplicatorReplicatorLogDeliveryPropertyToTerraform(struct!.replicatorLogDelivery),
   }
 }
 
 
-export function tfReplicatorLogDeliveryPropertyToHclTerraform(struct?: TfReplicator.LogDeliveryPropertyOutputReference | TfReplicator.LogDeliveryProperty): any {
+export function awsReplicatorLogDeliveryPropertyToHclTerraform(struct?: AwsReplicator.LogDeliveryPropertyOutputReference | AwsReplicator.LogDeliveryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     replicator_log_delivery: {
-      value: tfReplicatorReplicatorLogDeliveryPropertyToHclTerraform(struct!.replicatorLogDelivery),
+      value: awsReplicatorReplicatorLogDeliveryPropertyToHclTerraform(struct!.replicatorLogDelivery),
       isBlock: true,
       type: "list",
       storageClassType: "ReplicatorLogDeliveryPropertyList",
@@ -698,7 +698,7 @@ export function tfReplicatorLogDeliveryPropertyToHclTerraform(struct?: TfReplica
 }
 
 
-export function tfReplicatorConsumerGroupReplicationPropertyToTerraform(struct?: TfReplicator.ConsumerGroupReplicationProperty | cdktn.IResolvable): any {
+export function awsReplicatorConsumerGroupReplicationPropertyToTerraform(struct?: AwsReplicator.ConsumerGroupReplicationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -713,7 +713,7 @@ export function tfReplicatorConsumerGroupReplicationPropertyToTerraform(struct?:
 }
 
 
-export function tfReplicatorConsumerGroupReplicationPropertyToHclTerraform(struct?: TfReplicator.ConsumerGroupReplicationProperty | cdktn.IResolvable): any {
+export function awsReplicatorConsumerGroupReplicationPropertyToHclTerraform(struct?: AwsReplicator.ConsumerGroupReplicationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -756,7 +756,7 @@ export function tfReplicatorConsumerGroupReplicationPropertyToHclTerraform(struc
 }
 
 
-export function tfReplicatorStartingPositionPropertyToTerraform(struct?: TfReplicator.StartingPositionPropertyOutputReference | TfReplicator.StartingPositionProperty): any {
+export function awsReplicatorStartingPositionPropertyToTerraform(struct?: AwsReplicator.StartingPositionPropertyOutputReference | AwsReplicator.StartingPositionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -767,7 +767,7 @@ export function tfReplicatorStartingPositionPropertyToTerraform(struct?: TfRepli
 }
 
 
-export function tfReplicatorStartingPositionPropertyToHclTerraform(struct?: TfReplicator.StartingPositionPropertyOutputReference | TfReplicator.StartingPositionProperty): any {
+export function awsReplicatorStartingPositionPropertyToHclTerraform(struct?: AwsReplicator.StartingPositionPropertyOutputReference | AwsReplicator.StartingPositionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -786,7 +786,7 @@ export function tfReplicatorStartingPositionPropertyToHclTerraform(struct?: TfRe
 }
 
 
-export function tfReplicatorTopicNameConfigurationPropertyToTerraform(struct?: TfReplicator.TopicNameConfigurationPropertyOutputReference | TfReplicator.TopicNameConfigurationProperty): any {
+export function awsReplicatorTopicNameConfigurationPropertyToTerraform(struct?: AwsReplicator.TopicNameConfigurationPropertyOutputReference | AwsReplicator.TopicNameConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -797,7 +797,7 @@ export function tfReplicatorTopicNameConfigurationPropertyToTerraform(struct?: T
 }
 
 
-export function tfReplicatorTopicNameConfigurationPropertyToHclTerraform(struct?: TfReplicator.TopicNameConfigurationPropertyOutputReference | TfReplicator.TopicNameConfigurationProperty): any {
+export function awsReplicatorTopicNameConfigurationPropertyToHclTerraform(struct?: AwsReplicator.TopicNameConfigurationPropertyOutputReference | AwsReplicator.TopicNameConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -816,7 +816,7 @@ export function tfReplicatorTopicNameConfigurationPropertyToHclTerraform(struct?
 }
 
 
-export function tfReplicatorTopicReplicationPropertyToTerraform(struct?: TfReplicator.TopicReplicationProperty | cdktn.IResolvable): any {
+export function awsReplicatorTopicReplicationPropertyToTerraform(struct?: AwsReplicator.TopicReplicationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -827,13 +827,13 @@ export function tfReplicatorTopicReplicationPropertyToTerraform(struct?: TfRepli
     detect_and_copy_new_topics: cdktn.booleanToTerraform(struct!.detectAndCopyNewTopics),
     topics_to_exclude: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.topicsToExclude),
     topics_to_replicate: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.topicsToReplicate),
-    starting_position: tfReplicatorStartingPositionPropertyToTerraform(struct!.startingPosition),
-    topic_name_configuration: tfReplicatorTopicNameConfigurationPropertyToTerraform(struct!.topicNameConfiguration),
+    starting_position: awsReplicatorStartingPositionPropertyToTerraform(struct!.startingPosition),
+    topic_name_configuration: awsReplicatorTopicNameConfigurationPropertyToTerraform(struct!.topicNameConfiguration),
   }
 }
 
 
-export function tfReplicatorTopicReplicationPropertyToHclTerraform(struct?: TfReplicator.TopicReplicationProperty | cdktn.IResolvable): any {
+export function awsReplicatorTopicReplicationPropertyToHclTerraform(struct?: AwsReplicator.TopicReplicationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -870,13 +870,13 @@ export function tfReplicatorTopicReplicationPropertyToHclTerraform(struct?: TfRe
       storageClassType: "stringList",
     },
     starting_position: {
-      value: tfReplicatorStartingPositionPropertyToHclTerraform(struct!.startingPosition),
+      value: awsReplicatorStartingPositionPropertyToHclTerraform(struct!.startingPosition),
       isBlock: true,
       type: "list",
       storageClassType: "StartingPositionPropertyList",
     },
     topic_name_configuration: {
-      value: tfReplicatorTopicNameConfigurationPropertyToHclTerraform(struct!.topicNameConfiguration),
+      value: awsReplicatorTopicNameConfigurationPropertyToHclTerraform(struct!.topicNameConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "TopicNameConfigurationPropertyList",
@@ -888,7 +888,7 @@ export function tfReplicatorTopicReplicationPropertyToHclTerraform(struct?: TfRe
 }
 
 
-export function tfReplicatorReplicationInfoListPropertyToTerraform(struct?: TfReplicator.ReplicationInfoListPropertyOutputReference | TfReplicator.ReplicationInfoListProperty): any {
+export function awsReplicatorReplicationInfoListPropertyToTerraform(struct?: AwsReplicator.ReplicationInfoListPropertyOutputReference | AwsReplicator.ReplicationInfoListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -897,13 +897,13 @@ export function tfReplicatorReplicationInfoListPropertyToTerraform(struct?: TfRe
     source_kafka_cluster_arn: cdktn.stringToTerraform(struct!.sourceKafkaClusterArn),
     target_compression_type: cdktn.stringToTerraform(struct!.targetCompressionType),
     target_kafka_cluster_arn: cdktn.stringToTerraform(struct!.targetKafkaClusterArn),
-    consumer_group_replication: cdktn.listMapper(tfReplicatorConsumerGroupReplicationPropertyToTerraform, true)(struct!.consumerGroupReplication),
-    topic_replication: cdktn.listMapper(tfReplicatorTopicReplicationPropertyToTerraform, true)(struct!.topicReplication),
+    consumer_group_replication: cdktn.listMapper(awsReplicatorConsumerGroupReplicationPropertyToTerraform, true)(struct!.consumerGroupReplication),
+    topic_replication: cdktn.listMapper(awsReplicatorTopicReplicationPropertyToTerraform, true)(struct!.topicReplication),
   }
 }
 
 
-export function tfReplicatorReplicationInfoListPropertyToHclTerraform(struct?: TfReplicator.ReplicationInfoListPropertyOutputReference | TfReplicator.ReplicationInfoListProperty): any {
+export function awsReplicatorReplicationInfoListPropertyToHclTerraform(struct?: AwsReplicator.ReplicationInfoListPropertyOutputReference | AwsReplicator.ReplicationInfoListProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -928,13 +928,13 @@ export function tfReplicatorReplicationInfoListPropertyToHclTerraform(struct?: T
       storageClassType: "string",
     },
     consumer_group_replication: {
-      value: cdktn.listMapperHcl(tfReplicatorConsumerGroupReplicationPropertyToHclTerraform, true)(struct!.consumerGroupReplication),
+      value: cdktn.listMapperHcl(awsReplicatorConsumerGroupReplicationPropertyToHclTerraform, true)(struct!.consumerGroupReplication),
       isBlock: true,
       type: "list",
       storageClassType: "ConsumerGroupReplicationPropertyList",
     },
     topic_replication: {
-      value: cdktn.listMapperHcl(tfReplicatorTopicReplicationPropertyToHclTerraform, true)(struct!.topicReplication),
+      value: cdktn.listMapperHcl(awsReplicatorTopicReplicationPropertyToHclTerraform, true)(struct!.topicReplication),
       isBlock: true,
       type: "list",
       storageClassType: "TopicReplicationPropertyList",
@@ -946,7 +946,7 @@ export function tfReplicatorReplicationInfoListPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfReplicatorTimeoutsPropertyToTerraform(struct?: TfReplicator.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsReplicatorTimeoutsPropertyToTerraform(struct?: AwsReplicator.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -959,7 +959,7 @@ export function tfReplicatorTimeoutsPropertyToTerraform(struct?: TfReplicator.Ti
 }
 
 
-export function tfReplicatorTimeoutsPropertyToHclTerraform(struct?: TfReplicator.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsReplicatorTimeoutsPropertyToHclTerraform(struct?: AwsReplicator.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -990,10 +990,10 @@ export function tfReplicatorTimeoutsPropertyToHclTerraform(struct?: TfReplicator
 }
 
 
-export namespace TfReplicator {
+export namespace AwsReplicator {
 export interface AmazonMskClusterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#msk_cluster_arn TfReplicator#msk_cluster_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#msk_cluster_arn AwsReplicator#msk_cluster_arn}
   */
   readonly mskClusterArn: string;
 }
@@ -1044,11 +1044,11 @@ export class AmazonMskClusterPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#security_groups_ids TfReplicator#security_groups_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#security_groups_ids AwsReplicator#security_groups_ids}
   */
   readonly securityGroupsIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#subnet_ids TfReplicator#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#subnet_ids AwsReplicator#subnet_ids}
   */
   readonly subnetIds: string[];
 }
@@ -1123,13 +1123,13 @@ export interface KafkaClusterProperty {
   /**
   * amazon_msk_cluster block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#amazon_msk_cluster TfReplicator#amazon_msk_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#amazon_msk_cluster AwsReplicator#amazon_msk_cluster}
   */
   readonly amazonMskCluster: AmazonMskClusterProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#vpc_config TfReplicator#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#vpc_config AwsReplicator#vpc_config}
   */
   readonly vpcConfig: VpcConfigProperty;
 }
@@ -1231,11 +1231,11 @@ export class KafkaClusterPropertyList extends cdktn.ComplexList {
 }
 export interface CloudwatchLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#enabled TfReplicator#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#enabled AwsReplicator#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#log_group TfReplicator#log_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#log_group AwsReplicator#log_group}
   */
   readonly logGroup?: string;
 }
@@ -1308,11 +1308,11 @@ export class CloudwatchLogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FirehoseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#delivery_stream TfReplicator#delivery_stream}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#delivery_stream AwsReplicator#delivery_stream}
   */
   readonly deliveryStream?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#enabled TfReplicator#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#enabled AwsReplicator#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
 }
@@ -1385,15 +1385,15 @@ export class FirehosePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface S3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#bucket TfReplicator#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#bucket AwsReplicator#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#enabled TfReplicator#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#enabled AwsReplicator#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#prefix TfReplicator#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#prefix AwsReplicator#prefix}
   */
   readonly prefix?: string;
 }
@@ -1490,19 +1490,19 @@ export interface ReplicatorLogDeliveryProperty {
   /**
   * cloudwatch_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#cloudwatch_logs TfReplicator#cloudwatch_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#cloudwatch_logs AwsReplicator#cloudwatch_logs}
   */
   readonly cloudwatchLogs?: CloudwatchLogsProperty;
   /**
   * firehose block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#firehose TfReplicator#firehose}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#firehose AwsReplicator#firehose}
   */
   readonly firehose?: FirehoseProperty;
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#s3 TfReplicator#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#s3 AwsReplicator#s3}
   */
   readonly s3?: S3Property;
 }
@@ -1602,7 +1602,7 @@ export interface LogDeliveryProperty {
   /**
   * replicator_log_delivery block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#replicator_log_delivery TfReplicator#replicator_log_delivery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#replicator_log_delivery AwsReplicator#replicator_log_delivery}
   */
   readonly replicatorLogDelivery?: ReplicatorLogDeliveryProperty;
 }
@@ -1656,23 +1656,23 @@ export class LogDeliveryPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ConsumerGroupReplicationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#consumer_group_offset_sync_mode TfReplicator#consumer_group_offset_sync_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#consumer_group_offset_sync_mode AwsReplicator#consumer_group_offset_sync_mode}
   */
   readonly consumerGroupOffsetSyncMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#consumer_groups_to_exclude TfReplicator#consumer_groups_to_exclude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#consumer_groups_to_exclude AwsReplicator#consumer_groups_to_exclude}
   */
   readonly consumerGroupsToExclude?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#consumer_groups_to_replicate TfReplicator#consumer_groups_to_replicate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#consumer_groups_to_replicate AwsReplicator#consumer_groups_to_replicate}
   */
   readonly consumerGroupsToReplicate: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#detect_and_copy_new_consumer_groups TfReplicator#detect_and_copy_new_consumer_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#detect_and_copy_new_consumer_groups AwsReplicator#detect_and_copy_new_consumer_groups}
   */
   readonly detectAndCopyNewConsumerGroups?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#synchronise_consumer_group_offsets TfReplicator#synchronise_consumer_group_offsets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#synchronise_consumer_group_offsets AwsReplicator#synchronise_consumer_group_offsets}
   */
   readonly synchroniseConsumerGroupOffsets?: boolean | cdktn.IResolvable;
 }
@@ -1843,7 +1843,7 @@ export class ConsumerGroupReplicationPropertyList extends cdktn.ComplexList {
 }
 export interface StartingPositionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#type TfReplicator#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#type AwsReplicator#type}
   */
   readonly type?: string;
 }
@@ -1897,7 +1897,7 @@ export class StartingPositionPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface TopicNameConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#type TfReplicator#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#type AwsReplicator#type}
   */
   readonly type?: string;
 }
@@ -1951,35 +1951,35 @@ export class TopicNameConfigurationPropertyOutputReference extends cdktn.Complex
 }
 export interface TopicReplicationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#copy_access_control_lists_for_topics TfReplicator#copy_access_control_lists_for_topics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#copy_access_control_lists_for_topics AwsReplicator#copy_access_control_lists_for_topics}
   */
   readonly copyAccessControlListsForTopics?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#copy_topic_configurations TfReplicator#copy_topic_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#copy_topic_configurations AwsReplicator#copy_topic_configurations}
   */
   readonly copyTopicConfigurations?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#detect_and_copy_new_topics TfReplicator#detect_and_copy_new_topics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#detect_and_copy_new_topics AwsReplicator#detect_and_copy_new_topics}
   */
   readonly detectAndCopyNewTopics?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#topics_to_exclude TfReplicator#topics_to_exclude}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#topics_to_exclude AwsReplicator#topics_to_exclude}
   */
   readonly topicsToExclude?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#topics_to_replicate TfReplicator#topics_to_replicate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#topics_to_replicate AwsReplicator#topics_to_replicate}
   */
   readonly topicsToReplicate: string[];
   /**
   * starting_position block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#starting_position TfReplicator#starting_position}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#starting_position AwsReplicator#starting_position}
   */
   readonly startingPosition?: StartingPositionProperty;
   /**
   * topic_name_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#topic_name_configuration TfReplicator#topic_name_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#topic_name_configuration AwsReplicator#topic_name_configuration}
   */
   readonly topicNameConfiguration?: TopicNameConfigurationProperty;
 }
@@ -2194,27 +2194,27 @@ export class TopicReplicationPropertyList extends cdktn.ComplexList {
 }
 export interface ReplicationInfoListProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#source_kafka_cluster_arn TfReplicator#source_kafka_cluster_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#source_kafka_cluster_arn AwsReplicator#source_kafka_cluster_arn}
   */
   readonly sourceKafkaClusterArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#target_compression_type TfReplicator#target_compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#target_compression_type AwsReplicator#target_compression_type}
   */
   readonly targetCompressionType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#target_kafka_cluster_arn TfReplicator#target_kafka_cluster_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#target_kafka_cluster_arn AwsReplicator#target_kafka_cluster_arn}
   */
   readonly targetKafkaClusterArn: string;
   /**
   * consumer_group_replication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#consumer_group_replication TfReplicator#consumer_group_replication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#consumer_group_replication AwsReplicator#consumer_group_replication}
   */
   readonly consumerGroupReplication: ConsumerGroupReplicationProperty[] | cdktn.IResolvable;
   /**
   * topic_replication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#topic_replication TfReplicator#topic_replication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#topic_replication AwsReplicator#topic_replication}
   */
   readonly topicReplication: TopicReplicationProperty[] | cdktn.IResolvable;
 }
@@ -2351,15 +2351,15 @@ export class ReplicationInfoListPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#create TfReplicator#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#create AwsReplicator#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#delete TfReplicator#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#delete AwsReplicator#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#update TfReplicator#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/msk_replicator#update AwsReplicator#update}
   */
   readonly update?: string;
 }

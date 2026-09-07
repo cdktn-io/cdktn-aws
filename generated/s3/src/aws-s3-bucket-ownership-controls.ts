@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBucketOwnershipControlsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBucketOwnershipControlsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_ownership_controls#bucket TfBucketOwnershipControls#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_ownership_controls#bucket AwsBucketOwnershipControls#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_ownership_controls#id TfBucketOwnershipControls#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_ownership_controls#id AwsBucketOwnershipControls#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,21 +20,21 @@ export interface TfBucketOwnershipControlsConfig extends cdktn.TerraformMetaArgu
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_ownership_controls#region TfBucketOwnershipControls#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_ownership_controls#region AwsBucketOwnershipControls#region}
   */
   readonly region?: string;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_ownership_controls#rule TfBucketOwnershipControls#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_ownership_controls#rule AwsBucketOwnershipControls#rule}
   */
-  readonly rule: TfBucketOwnershipControls.RuleProperty;
+  readonly rule: AwsBucketOwnershipControls.RuleProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_ownership_controls aws_s3_bucket_ownership_controls}
 */
-export class TfBucketOwnershipControls extends cdktn.TerraformResource {
+export class AwsBucketOwnershipControls extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfBucketOwnershipControls extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBucketOwnershipControls resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBucketOwnershipControls resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBucketOwnershipControls to import
-  * @param importFromId The id of the existing TfBucketOwnershipControls that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_ownership_controls#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBucketOwnershipControls to import is found
+  * @param importToId The construct id used in the generated config for the AwsBucketOwnershipControls to import
+  * @param importFromId The id of the existing AwsBucketOwnershipControls that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_ownership_controls#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBucketOwnershipControls to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_ownership_controls", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfBucketOwnershipControls extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBucketOwnershipControlsConfig
+  * @param options AwsBucketOwnershipControlsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBucketOwnershipControlsConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBucketOwnershipControlsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_ownership_controls',
       terraformGeneratorMetadata: {
@@ -138,11 +138,11 @@ export class TfBucketOwnershipControls extends cdktn.TerraformResource {
   }
 
   // rule - computed: false, optional: false, required: true
-  private _rule = new TfBucketOwnershipControls.RulePropertyOutputReference(this, "rule");
+  private _rule = new AwsBucketOwnershipControls.RulePropertyOutputReference(this, "rule");
   public get rule() {
     return this._rule;
   }
-  public putRule(value: TfBucketOwnershipControls.RuleProperty) {
+  public putRule(value: AwsBucketOwnershipControls.RuleProperty) {
     this._rule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -159,7 +159,7 @@ export class TfBucketOwnershipControls extends cdktn.TerraformResource {
       bucket: cdktn.stringToTerraform(this._bucket),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      rule: tfBucketOwnershipControlsRulePropertyToTerraform(this._rule.internalValue),
+      rule: awsBucketOwnershipControlsRulePropertyToTerraform(this._rule.internalValue),
     };
   }
 
@@ -184,10 +184,10 @@ export class TfBucketOwnershipControls extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       rule: {
-        value: tfBucketOwnershipControlsRulePropertyToHclTerraform(this._rule.internalValue),
+        value: awsBucketOwnershipControlsRulePropertyToHclTerraform(this._rule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBucketOwnershipControls.RulePropertyList",
+        storageClassType: "AwsBucketOwnershipControls.RulePropertyList",
       },
     };
 
@@ -196,7 +196,7 @@ export class TfBucketOwnershipControls extends cdktn.TerraformResource {
   }
 }
 
-export function tfBucketOwnershipControlsRulePropertyToTerraform(struct?: TfBucketOwnershipControls.RulePropertyOutputReference | TfBucketOwnershipControls.RuleProperty): any {
+export function awsBucketOwnershipControlsRulePropertyToTerraform(struct?: AwsBucketOwnershipControls.RulePropertyOutputReference | AwsBucketOwnershipControls.RuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -207,7 +207,7 @@ export function tfBucketOwnershipControlsRulePropertyToTerraform(struct?: TfBuck
 }
 
 
-export function tfBucketOwnershipControlsRulePropertyToHclTerraform(struct?: TfBucketOwnershipControls.RulePropertyOutputReference | TfBucketOwnershipControls.RuleProperty): any {
+export function awsBucketOwnershipControlsRulePropertyToHclTerraform(struct?: AwsBucketOwnershipControls.RulePropertyOutputReference | AwsBucketOwnershipControls.RuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -226,10 +226,10 @@ export function tfBucketOwnershipControlsRulePropertyToHclTerraform(struct?: TfB
 }
 
 
-export namespace TfBucketOwnershipControls {
+export namespace AwsBucketOwnershipControls {
 export interface RuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_ownership_controls#object_ownership TfBucketOwnershipControls#object_ownership}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_ownership_controls#object_ownership AwsBucketOwnershipControls#object_ownership}
   */
   readonly objectOwnership: string;
 }

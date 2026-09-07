@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDocumentationPartConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDocumentationPartConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#id TfDocumentationPart#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#id AwsDocumentationPart#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#properties TfDocumentationPart#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#properties AwsDocumentationPart#properties}
   */
   readonly properties: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#region TfDocumentationPart#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#region AwsDocumentationPart#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#rest_api_id TfDocumentationPart#rest_api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#rest_api_id AwsDocumentationPart#rest_api_id}
   */
   readonly restApiId: string;
   /**
   * location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#location TfDocumentationPart#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#location AwsDocumentationPart#location}
   */
-  readonly location: TfDocumentationPart.LocationProperty;
+  readonly location: AwsDocumentationPart.LocationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part aws_api_gateway_documentation_part}
 */
-export class TfDocumentationPart extends cdktn.TerraformResource {
+export class AwsDocumentationPart extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfDocumentationPart extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDocumentationPart resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDocumentationPart resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDocumentationPart to import
-  * @param importFromId The id of the existing TfDocumentationPart that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDocumentationPart to import is found
+  * @param importToId The construct id used in the generated config for the AwsDocumentationPart to import
+  * @param importFromId The id of the existing AwsDocumentationPart that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDocumentationPart to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_api_gateway_documentation_part", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfDocumentationPart extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDocumentationPartConfig
+  * @param options AwsDocumentationPartConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDocumentationPartConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDocumentationPartConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_api_gateway_documentation_part',
       terraformGeneratorMetadata: {
@@ -161,11 +161,11 @@ export class TfDocumentationPart extends cdktn.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location = new TfDocumentationPart.LocationPropertyOutputReference(this, "location");
+  private _location = new AwsDocumentationPart.LocationPropertyOutputReference(this, "location");
   public get location() {
     return this._location;
   }
-  public putLocation(value: TfDocumentationPart.LocationProperty) {
+  public putLocation(value: AwsDocumentationPart.LocationProperty) {
     this._location.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -183,7 +183,7 @@ export class TfDocumentationPart extends cdktn.TerraformResource {
       properties: cdktn.stringToTerraform(this._properties),
       region: cdktn.stringToTerraform(this._region),
       rest_api_id: cdktn.stringToTerraform(this._restApiId),
-      location: tfDocumentationPartLocationPropertyToTerraform(this._location.internalValue),
+      location: awsDocumentationPartLocationPropertyToTerraform(this._location.internalValue),
     };
   }
 
@@ -214,10 +214,10 @@ export class TfDocumentationPart extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       location: {
-        value: tfDocumentationPartLocationPropertyToHclTerraform(this._location.internalValue),
+        value: awsDocumentationPartLocationPropertyToHclTerraform(this._location.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDocumentationPart.LocationPropertyList",
+        storageClassType: "AwsDocumentationPart.LocationPropertyList",
       },
     };
 
@@ -226,7 +226,7 @@ export class TfDocumentationPart extends cdktn.TerraformResource {
   }
 }
 
-export function tfDocumentationPartLocationPropertyToTerraform(struct?: TfDocumentationPart.LocationPropertyOutputReference | TfDocumentationPart.LocationProperty): any {
+export function awsDocumentationPartLocationPropertyToTerraform(struct?: AwsDocumentationPart.LocationPropertyOutputReference | AwsDocumentationPart.LocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function tfDocumentationPartLocationPropertyToTerraform(struct?: TfDocume
 }
 
 
-export function tfDocumentationPartLocationPropertyToHclTerraform(struct?: TfDocumentationPart.LocationPropertyOutputReference | TfDocumentationPart.LocationProperty): any {
+export function awsDocumentationPartLocationPropertyToHclTerraform(struct?: AwsDocumentationPart.LocationPropertyOutputReference | AwsDocumentationPart.LocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -284,26 +284,26 @@ export function tfDocumentationPartLocationPropertyToHclTerraform(struct?: TfDoc
 }
 
 
-export namespace TfDocumentationPart {
+export namespace AwsDocumentationPart {
 export interface LocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#method TfDocumentationPart#method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#method AwsDocumentationPart#method}
   */
   readonly method?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#name TfDocumentationPart#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#name AwsDocumentationPart#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#path TfDocumentationPart#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#path AwsDocumentationPart#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#status_code TfDocumentationPart#status_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#status_code AwsDocumentationPart#status_code}
   */
   readonly statusCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#type TfDocumentationPart#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/api_gateway_documentation_part#type AwsDocumentationPart#type}
   */
   readonly type: string;
 }

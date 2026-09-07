@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTableReplicaConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTableReplicaConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#deletion_protection_enabled TfTableReplica#deletion_protection_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#deletion_protection_enabled AwsTableReplica#deletion_protection_enabled}
   */
   readonly deletionProtectionEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#global_table_arn TfTableReplica#global_table_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#global_table_arn AwsTableReplica#global_table_arn}
   */
   readonly globalTableArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#id TfTableReplica#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#id AwsTableReplica#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#kms_key_arn TfTableReplica#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#kms_key_arn AwsTableReplica#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#point_in_time_recovery TfTableReplica#point_in_time_recovery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#point_in_time_recovery AwsTableReplica#point_in_time_recovery}
   */
   readonly pointInTimeRecovery?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#region TfTableReplica#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#region AwsTableReplica#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#table_class_override TfTableReplica#table_class_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#table_class_override AwsTableReplica#table_class_override}
   */
   readonly tableClassOverride?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#tags TfTableReplica#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#tags AwsTableReplica#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#tags_all TfTableReplica#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#tags_all AwsTableReplica#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#timeouts TfTableReplica#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#timeouts AwsTableReplica#timeouts}
   */
-  readonly timeouts?: TfTableReplica.TimeoutsProperty;
+  readonly timeouts?: AwsTableReplica.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica aws_dynamodb_table_replica}
 */
-export class TfTableReplica extends cdktn.TerraformResource {
+export class AwsTableReplica extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfTableReplica extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTableReplica resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTableReplica resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTableReplica to import
-  * @param importFromId The id of the existing TfTableReplica that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTableReplica to import is found
+  * @param importToId The construct id used in the generated config for the AwsTableReplica to import
+  * @param importFromId The id of the existing AwsTableReplica that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTableReplica to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dynamodb_table_replica", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfTableReplica extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTableReplicaConfig
+  * @param options AwsTableReplicaConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTableReplicaConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTableReplicaConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dynamodb_table_replica',
       terraformGeneratorMetadata: {
@@ -269,11 +269,11 @@ export class TfTableReplica extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfTableReplica.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsTableReplica.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfTableReplica.TimeoutsProperty) {
+  public putTimeouts(value: AwsTableReplica.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -299,7 +299,7 @@ export class TfTableReplica extends cdktn.TerraformResource {
       table_class_override: cdktn.stringToTerraform(this._tableClassOverride),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfTableReplicaTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsTableReplicaTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -360,10 +360,10 @@ export class TfTableReplica extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfTableReplicaTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsTableReplicaTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfTableReplica.TimeoutsProperty",
+        storageClassType: "AwsTableReplica.TimeoutsProperty",
       },
     };
 
@@ -372,7 +372,7 @@ export class TfTableReplica extends cdktn.TerraformResource {
   }
 }
 
-export function tfTableReplicaTimeoutsPropertyToTerraform(struct?: TfTableReplica.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTableReplicaTimeoutsPropertyToTerraform(struct?: AwsTableReplica.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -385,7 +385,7 @@ export function tfTableReplicaTimeoutsPropertyToTerraform(struct?: TfTableReplic
 }
 
 
-export function tfTableReplicaTimeoutsPropertyToHclTerraform(struct?: TfTableReplica.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsTableReplicaTimeoutsPropertyToHclTerraform(struct?: AwsTableReplica.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -416,18 +416,18 @@ export function tfTableReplicaTimeoutsPropertyToHclTerraform(struct?: TfTableRep
 }
 
 
-export namespace TfTableReplica {
+export namespace AwsTableReplica {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#create TfTableReplica#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#create AwsTableReplica#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#delete TfTableReplica#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#delete AwsTableReplica#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#update TfTableReplica#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_table_replica#update AwsTableReplica#update}
   */
   readonly update?: string;
 }

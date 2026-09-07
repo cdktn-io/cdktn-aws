@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfApplicationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsApplicationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#auto_config_enabled TfApplication#auto_config_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#auto_config_enabled AwsApplication#auto_config_enabled}
   */
   readonly autoConfigEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#auto_create TfApplication#auto_create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#auto_create AwsApplication#auto_create}
   */
   readonly autoCreate?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#cwe_monitor_enabled TfApplication#cwe_monitor_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#cwe_monitor_enabled AwsApplication#cwe_monitor_enabled}
   */
   readonly cweMonitorEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#grouping_type TfApplication#grouping_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#grouping_type AwsApplication#grouping_type}
   */
   readonly groupingType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#id TfApplication#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#id AwsApplication#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#ops_center_enabled TfApplication#ops_center_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#ops_center_enabled AwsApplication#ops_center_enabled}
   */
   readonly opsCenterEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#ops_item_sns_topic_arn TfApplication#ops_item_sns_topic_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#ops_item_sns_topic_arn AwsApplication#ops_item_sns_topic_arn}
   */
   readonly opsItemSnsTopicArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#region TfApplication#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#region AwsApplication#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#resource_group_name TfApplication#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#resource_group_name AwsApplication#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#tags TfApplication#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#tags AwsApplication#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#tags_all TfApplication#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#tags_all AwsApplication#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -60,7 +60,7 @@ export interface TfApplicationConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application aws_applicationinsights_application}
 */
-export class TfApplication extends cdktn.TerraformResource {
+export class AwsApplication extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class TfApplication extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfApplication resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsApplication resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfApplication to import
-  * @param importFromId The id of the existing TfApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfApplication to import is found
+  * @param importToId The construct id used in the generated config for the AwsApplication to import
+  * @param importFromId The id of the existing AwsApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/applicationinsights_application#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_applicationinsights_application", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class TfApplication extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfApplicationConfig
+  * @param options AwsApplicationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfApplicationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsApplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_applicationinsights_application',
       terraformGeneratorMetadata: {

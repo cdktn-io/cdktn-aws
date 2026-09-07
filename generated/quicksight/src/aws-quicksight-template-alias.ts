@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTemplateAliasConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTemplateAliasConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template_alias#alias_name TfTemplateAlias#alias_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template_alias#alias_name AwsTemplateAlias#alias_name}
   */
   readonly aliasName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template_alias#aws_account_id TfTemplateAlias#aws_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template_alias#aws_account_id AwsTemplateAlias#aws_account_id}
   */
   readonly awsAccountId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template_alias#region TfTemplateAlias#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template_alias#region AwsTemplateAlias#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template_alias#template_id TfTemplateAlias#template_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template_alias#template_id AwsTemplateAlias#template_id}
   */
   readonly templateId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template_alias#template_version_number TfTemplateAlias#template_version_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template_alias#template_version_number AwsTemplateAlias#template_version_number}
   */
   readonly templateVersionNumber: number;
 }
@@ -33,7 +33,7 @@ export interface TfTemplateAliasConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template_alias aws_quicksight_template_alias}
 */
-export class TfTemplateAlias extends cdktn.TerraformResource {
+export class AwsTemplateAlias extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class TfTemplateAlias extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTemplateAlias resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTemplateAlias resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTemplateAlias to import
-  * @param importFromId The id of the existing TfTemplateAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template_alias#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTemplateAlias to import is found
+  * @param importToId The construct id used in the generated config for the AwsTemplateAlias to import
+  * @param importFromId The id of the existing AwsTemplateAlias that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/quicksight_template_alias#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTemplateAlias to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_quicksight_template_alias", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class TfTemplateAlias extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTemplateAliasConfig
+  * @param options AwsTemplateAliasConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTemplateAliasConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTemplateAliasConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_quicksight_template_alias',
       terraformGeneratorMetadata: {

@@ -5,81 +5,81 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPhoneNumberConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPhoneNumberConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#deletion_protection_enabled TfPhoneNumber#deletion_protection_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#deletion_protection_enabled AwsPhoneNumber#deletion_protection_enabled}
   */
   readonly deletionProtectionEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#force_disassociate TfPhoneNumber#force_disassociate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#force_disassociate AwsPhoneNumber#force_disassociate}
   */
   readonly forceDisassociate?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#iso_country_code TfPhoneNumber#iso_country_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#iso_country_code AwsPhoneNumber#iso_country_code}
   */
   readonly isoCountryCode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#message_type TfPhoneNumber#message_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#message_type AwsPhoneNumber#message_type}
   */
   readonly messageType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#number_capabilities TfPhoneNumber#number_capabilities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#number_capabilities AwsPhoneNumber#number_capabilities}
   */
   readonly numberCapabilities: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#number_type TfPhoneNumber#number_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#number_type AwsPhoneNumber#number_type}
   */
   readonly numberType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#opt_out_list_name TfPhoneNumber#opt_out_list_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#opt_out_list_name AwsPhoneNumber#opt_out_list_name}
   */
   readonly optOutListName?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#region TfPhoneNumber#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#region AwsPhoneNumber#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#registration_id TfPhoneNumber#registration_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#registration_id AwsPhoneNumber#registration_id}
   */
   readonly registrationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#self_managed_opt_outs_enabled TfPhoneNumber#self_managed_opt_outs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#self_managed_opt_outs_enabled AwsPhoneNumber#self_managed_opt_outs_enabled}
   */
   readonly selfManagedOptOutsEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#tags TfPhoneNumber#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#tags AwsPhoneNumber#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#two_way_channel_arn TfPhoneNumber#two_way_channel_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#two_way_channel_arn AwsPhoneNumber#two_way_channel_arn}
   */
   readonly twoWayChannelArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#two_way_channel_enabled TfPhoneNumber#two_way_channel_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#two_way_channel_enabled AwsPhoneNumber#two_way_channel_enabled}
   */
   readonly twoWayChannelEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#two_way_channel_role TfPhoneNumber#two_way_channel_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#two_way_channel_role AwsPhoneNumber#two_way_channel_role}
   */
   readonly twoWayChannelRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#wait_for_active TfPhoneNumber#wait_for_active}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#wait_for_active AwsPhoneNumber#wait_for_active}
   */
   readonly waitForActive?: boolean | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#timeouts TfPhoneNumber#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#timeouts AwsPhoneNumber#timeouts}
   */
-  readonly timeouts?: TfPhoneNumber.TimeoutsProperty;
+  readonly timeouts?: AwsPhoneNumber.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number aws_pinpointsmsvoicev2_phone_number}
 */
-export class TfPhoneNumber extends cdktn.TerraformResource {
+export class AwsPhoneNumber extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -90,11 +90,11 @@ export class TfPhoneNumber extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPhoneNumber resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPhoneNumber resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPhoneNumber to import
-  * @param importFromId The id of the existing TfPhoneNumber that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPhoneNumber to import is found
+  * @param importToId The construct id used in the generated config for the AwsPhoneNumber to import
+  * @param importFromId The id of the existing AwsPhoneNumber that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPhoneNumber to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_pinpointsmsvoicev2_phone_number", importId: importFromId, provider });
@@ -109,9 +109,9 @@ export class TfPhoneNumber extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPhoneNumberConfig
+  * @param options AwsPhoneNumberConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPhoneNumberConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPhoneNumberConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_pinpointsmsvoicev2_phone_number',
       terraformGeneratorMetadata: {
@@ -409,11 +409,11 @@ export class TfPhoneNumber extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfPhoneNumber.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsPhoneNumber.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfPhoneNumber.TimeoutsProperty) {
+  public putTimeouts(value: AwsPhoneNumber.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -445,7 +445,7 @@ export class TfPhoneNumber extends cdktn.TerraformResource {
       two_way_channel_enabled: cdktn.booleanToTerraform(this._twoWayChannelEnabled),
       two_way_channel_role: cdktn.stringToTerraform(this._twoWayChannelRole),
       wait_for_active: cdktn.booleanToTerraform(this._waitForActive),
-      timeouts: tfPhoneNumberTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsPhoneNumberTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -542,10 +542,10 @@ export class TfPhoneNumber extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       timeouts: {
-        value: tfPhoneNumberTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsPhoneNumberTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfPhoneNumber.TimeoutsProperty",
+        storageClassType: "AwsPhoneNumber.TimeoutsProperty",
       },
     };
 
@@ -554,7 +554,7 @@ export class TfPhoneNumber extends cdktn.TerraformResource {
   }
 }
 
-export function tfPhoneNumberTimeoutsPropertyToTerraform(struct?: TfPhoneNumber.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPhoneNumberTimeoutsPropertyToTerraform(struct?: AwsPhoneNumber.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -567,7 +567,7 @@ export function tfPhoneNumberTimeoutsPropertyToTerraform(struct?: TfPhoneNumber.
 }
 
 
-export function tfPhoneNumberTimeoutsPropertyToHclTerraform(struct?: TfPhoneNumber.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPhoneNumberTimeoutsPropertyToHclTerraform(struct?: AwsPhoneNumber.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -598,24 +598,24 @@ export function tfPhoneNumberTimeoutsPropertyToHclTerraform(struct?: TfPhoneNumb
 }
 
 
-export namespace TfPhoneNumber {
+export namespace AwsPhoneNumber {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#create TfPhoneNumber#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#create AwsPhoneNumber#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#delete TfPhoneNumber#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#delete AwsPhoneNumber#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#update TfPhoneNumber#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_phone_number#update AwsPhoneNumber#update}
   */
   readonly update?: string;
 }

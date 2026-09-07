@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEc2NetworkInsightsPathConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEc2NetworkInsightsPathConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#destination TfEc2NetworkInsightsPath#destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#destination AwsEc2NetworkInsightsPath#destination}
   */
   readonly destination?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#destination_ip TfEc2NetworkInsightsPath#destination_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#destination_ip AwsEc2NetworkInsightsPath#destination_ip}
   */
   readonly destinationIp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#destination_port TfEc2NetworkInsightsPath#destination_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#destination_port AwsEc2NetworkInsightsPath#destination_port}
   */
   readonly destinationPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#id TfEc2NetworkInsightsPath#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#id AwsEc2NetworkInsightsPath#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#protocol TfEc2NetworkInsightsPath#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#protocol AwsEc2NetworkInsightsPath#protocol}
   */
   readonly protocol: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#region TfEc2NetworkInsightsPath#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#region AwsEc2NetworkInsightsPath#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#source TfEc2NetworkInsightsPath#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#source AwsEc2NetworkInsightsPath#source}
   */
   readonly source: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#source_ip TfEc2NetworkInsightsPath#source_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#source_ip AwsEc2NetworkInsightsPath#source_ip}
   */
   readonly sourceIp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#tags TfEc2NetworkInsightsPath#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#tags AwsEc2NetworkInsightsPath#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#tags_all TfEc2NetworkInsightsPath#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#tags_all AwsEc2NetworkInsightsPath#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * filter_at_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#filter_at_destination TfEc2NetworkInsightsPath#filter_at_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#filter_at_destination AwsEc2NetworkInsightsPath#filter_at_destination}
   */
-  readonly filterAtDestination?: TfEc2NetworkInsightsPath.FilterAtDestinationProperty;
+  readonly filterAtDestination?: AwsEc2NetworkInsightsPath.FilterAtDestinationProperty;
   /**
   * filter_at_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#filter_at_source TfEc2NetworkInsightsPath#filter_at_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#filter_at_source AwsEc2NetworkInsightsPath#filter_at_source}
   */
-  readonly filterAtSource?: TfEc2NetworkInsightsPath.FilterAtSourceProperty;
+  readonly filterAtSource?: AwsEc2NetworkInsightsPath.FilterAtSourceProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path aws_ec2_network_insights_path}
 */
-export class TfEc2NetworkInsightsPath extends cdktn.TerraformResource {
+export class AwsEc2NetworkInsightsPath extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class TfEc2NetworkInsightsPath extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEc2NetworkInsightsPath resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEc2NetworkInsightsPath resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEc2NetworkInsightsPath to import
-  * @param importFromId The id of the existing TfEc2NetworkInsightsPath that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEc2NetworkInsightsPath to import is found
+  * @param importToId The construct id used in the generated config for the AwsEc2NetworkInsightsPath to import
+  * @param importFromId The id of the existing AwsEc2NetworkInsightsPath that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEc2NetworkInsightsPath to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_network_insights_path", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class TfEc2NetworkInsightsPath extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEc2NetworkInsightsPathConfig
+  * @param options AwsEc2NetworkInsightsPathConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEc2NetworkInsightsPathConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEc2NetworkInsightsPathConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_network_insights_path',
       terraformGeneratorMetadata: {
@@ -304,11 +304,11 @@ export class TfEc2NetworkInsightsPath extends cdktn.TerraformResource {
   }
 
   // filter_at_destination - computed: false, optional: true, required: false
-  private _filterAtDestination = new TfEc2NetworkInsightsPath.FilterAtDestinationPropertyOutputReference(this, "filter_at_destination");
+  private _filterAtDestination = new AwsEc2NetworkInsightsPath.FilterAtDestinationPropertyOutputReference(this, "filter_at_destination");
   public get filterAtDestination() {
     return this._filterAtDestination;
   }
-  public putFilterAtDestination(value: TfEc2NetworkInsightsPath.FilterAtDestinationProperty) {
+  public putFilterAtDestination(value: AwsEc2NetworkInsightsPath.FilterAtDestinationProperty) {
     this._filterAtDestination.internalValue = value;
   }
   public resetFilterAtDestination() {
@@ -320,11 +320,11 @@ export class TfEc2NetworkInsightsPath extends cdktn.TerraformResource {
   }
 
   // filter_at_source - computed: false, optional: true, required: false
-  private _filterAtSource = new TfEc2NetworkInsightsPath.FilterAtSourcePropertyOutputReference(this, "filter_at_source");
+  private _filterAtSource = new AwsEc2NetworkInsightsPath.FilterAtSourcePropertyOutputReference(this, "filter_at_source");
   public get filterAtSource() {
     return this._filterAtSource;
   }
-  public putFilterAtSource(value: TfEc2NetworkInsightsPath.FilterAtSourceProperty) {
+  public putFilterAtSource(value: AwsEc2NetworkInsightsPath.FilterAtSourceProperty) {
     this._filterAtSource.internalValue = value;
   }
   public resetFilterAtSource() {
@@ -351,8 +351,8 @@ export class TfEc2NetworkInsightsPath extends cdktn.TerraformResource {
       source_ip: cdktn.stringToTerraform(this._sourceIp),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      filter_at_destination: tfEc2NetworkInsightsPathFilterAtDestinationPropertyToTerraform(this._filterAtDestination.internalValue),
-      filter_at_source: tfEc2NetworkInsightsPathFilterAtSourcePropertyToTerraform(this._filterAtSource.internalValue),
+      filter_at_destination: awsEc2NetworkInsightsPathFilterAtDestinationPropertyToTerraform(this._filterAtDestination.internalValue),
+      filter_at_source: awsEc2NetworkInsightsPathFilterAtSourcePropertyToTerraform(this._filterAtSource.internalValue),
     };
   }
 
@@ -419,16 +419,16 @@ export class TfEc2NetworkInsightsPath extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       filter_at_destination: {
-        value: tfEc2NetworkInsightsPathFilterAtDestinationPropertyToHclTerraform(this._filterAtDestination.internalValue),
+        value: awsEc2NetworkInsightsPathFilterAtDestinationPropertyToHclTerraform(this._filterAtDestination.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEc2NetworkInsightsPath.FilterAtDestinationPropertyList",
+        storageClassType: "AwsEc2NetworkInsightsPath.FilterAtDestinationPropertyList",
       },
       filter_at_source: {
-        value: tfEc2NetworkInsightsPathFilterAtSourcePropertyToHclTerraform(this._filterAtSource.internalValue),
+        value: awsEc2NetworkInsightsPathFilterAtSourcePropertyToHclTerraform(this._filterAtSource.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEc2NetworkInsightsPath.FilterAtSourcePropertyList",
+        storageClassType: "AwsEc2NetworkInsightsPath.FilterAtSourcePropertyList",
       },
     };
 
@@ -437,7 +437,7 @@ export class TfEc2NetworkInsightsPath extends cdktn.TerraformResource {
   }
 }
 
-export function tfEc2NetworkInsightsPathFilterAtDestinationDestinationPortRangePropertyToTerraform(struct?: TfEc2NetworkInsightsPath.FilterAtDestinationDestinationPortRangePropertyOutputReference | TfEc2NetworkInsightsPath.FilterAtDestinationDestinationPortRangeProperty): any {
+export function awsEc2NetworkInsightsPathFilterAtDestinationDestinationPortRangePropertyToTerraform(struct?: AwsEc2NetworkInsightsPath.FilterAtDestinationDestinationPortRangePropertyOutputReference | AwsEc2NetworkInsightsPath.FilterAtDestinationDestinationPortRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -449,7 +449,7 @@ export function tfEc2NetworkInsightsPathFilterAtDestinationDestinationPortRangeP
 }
 
 
-export function tfEc2NetworkInsightsPathFilterAtDestinationDestinationPortRangePropertyToHclTerraform(struct?: TfEc2NetworkInsightsPath.FilterAtDestinationDestinationPortRangePropertyOutputReference | TfEc2NetworkInsightsPath.FilterAtDestinationDestinationPortRangeProperty): any {
+export function awsEc2NetworkInsightsPathFilterAtDestinationDestinationPortRangePropertyToHclTerraform(struct?: AwsEc2NetworkInsightsPath.FilterAtDestinationDestinationPortRangePropertyOutputReference | AwsEc2NetworkInsightsPath.FilterAtDestinationDestinationPortRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -474,7 +474,7 @@ export function tfEc2NetworkInsightsPathFilterAtDestinationDestinationPortRangeP
 }
 
 
-export function tfEc2NetworkInsightsPathFilterAtDestinationSourcePortRangePropertyToTerraform(struct?: TfEc2NetworkInsightsPath.FilterAtDestinationSourcePortRangePropertyOutputReference | TfEc2NetworkInsightsPath.FilterAtDestinationSourcePortRangeProperty): any {
+export function awsEc2NetworkInsightsPathFilterAtDestinationSourcePortRangePropertyToTerraform(struct?: AwsEc2NetworkInsightsPath.FilterAtDestinationSourcePortRangePropertyOutputReference | AwsEc2NetworkInsightsPath.FilterAtDestinationSourcePortRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -486,7 +486,7 @@ export function tfEc2NetworkInsightsPathFilterAtDestinationSourcePortRangeProper
 }
 
 
-export function tfEc2NetworkInsightsPathFilterAtDestinationSourcePortRangePropertyToHclTerraform(struct?: TfEc2NetworkInsightsPath.FilterAtDestinationSourcePortRangePropertyOutputReference | TfEc2NetworkInsightsPath.FilterAtDestinationSourcePortRangeProperty): any {
+export function awsEc2NetworkInsightsPathFilterAtDestinationSourcePortRangePropertyToHclTerraform(struct?: AwsEc2NetworkInsightsPath.FilterAtDestinationSourcePortRangePropertyOutputReference | AwsEc2NetworkInsightsPath.FilterAtDestinationSourcePortRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -511,7 +511,7 @@ export function tfEc2NetworkInsightsPathFilterAtDestinationSourcePortRangeProper
 }
 
 
-export function tfEc2NetworkInsightsPathFilterAtDestinationPropertyToTerraform(struct?: TfEc2NetworkInsightsPath.FilterAtDestinationPropertyOutputReference | TfEc2NetworkInsightsPath.FilterAtDestinationProperty): any {
+export function awsEc2NetworkInsightsPathFilterAtDestinationPropertyToTerraform(struct?: AwsEc2NetworkInsightsPath.FilterAtDestinationPropertyOutputReference | AwsEc2NetworkInsightsPath.FilterAtDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -519,13 +519,13 @@ export function tfEc2NetworkInsightsPathFilterAtDestinationPropertyToTerraform(s
   return {
     destination_address: cdktn.stringToTerraform(struct!.destinationAddress),
     source_address: cdktn.stringToTerraform(struct!.sourceAddress),
-    destination_port_range: tfEc2NetworkInsightsPathFilterAtDestinationDestinationPortRangePropertyToTerraform(struct!.destinationPortRange),
-    source_port_range: tfEc2NetworkInsightsPathFilterAtDestinationSourcePortRangePropertyToTerraform(struct!.sourcePortRange),
+    destination_port_range: awsEc2NetworkInsightsPathFilterAtDestinationDestinationPortRangePropertyToTerraform(struct!.destinationPortRange),
+    source_port_range: awsEc2NetworkInsightsPathFilterAtDestinationSourcePortRangePropertyToTerraform(struct!.sourcePortRange),
   }
 }
 
 
-export function tfEc2NetworkInsightsPathFilterAtDestinationPropertyToHclTerraform(struct?: TfEc2NetworkInsightsPath.FilterAtDestinationPropertyOutputReference | TfEc2NetworkInsightsPath.FilterAtDestinationProperty): any {
+export function awsEc2NetworkInsightsPathFilterAtDestinationPropertyToHclTerraform(struct?: AwsEc2NetworkInsightsPath.FilterAtDestinationPropertyOutputReference | AwsEc2NetworkInsightsPath.FilterAtDestinationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -544,13 +544,13 @@ export function tfEc2NetworkInsightsPathFilterAtDestinationPropertyToHclTerrafor
       storageClassType: "string",
     },
     destination_port_range: {
-      value: tfEc2NetworkInsightsPathFilterAtDestinationDestinationPortRangePropertyToHclTerraform(struct!.destinationPortRange),
+      value: awsEc2NetworkInsightsPathFilterAtDestinationDestinationPortRangePropertyToHclTerraform(struct!.destinationPortRange),
       isBlock: true,
       type: "list",
       storageClassType: "FilterAtDestinationDestinationPortRangePropertyList",
     },
     source_port_range: {
-      value: tfEc2NetworkInsightsPathFilterAtDestinationSourcePortRangePropertyToHclTerraform(struct!.sourcePortRange),
+      value: awsEc2NetworkInsightsPathFilterAtDestinationSourcePortRangePropertyToHclTerraform(struct!.sourcePortRange),
       isBlock: true,
       type: "list",
       storageClassType: "FilterAtDestinationSourcePortRangePropertyList",
@@ -562,7 +562,7 @@ export function tfEc2NetworkInsightsPathFilterAtDestinationPropertyToHclTerrafor
 }
 
 
-export function tfEc2NetworkInsightsPathFilterAtSourceDestinationPortRangePropertyToTerraform(struct?: TfEc2NetworkInsightsPath.FilterAtSourceDestinationPortRangePropertyOutputReference | TfEc2NetworkInsightsPath.FilterAtSourceDestinationPortRangeProperty): any {
+export function awsEc2NetworkInsightsPathFilterAtSourceDestinationPortRangePropertyToTerraform(struct?: AwsEc2NetworkInsightsPath.FilterAtSourceDestinationPortRangePropertyOutputReference | AwsEc2NetworkInsightsPath.FilterAtSourceDestinationPortRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -574,7 +574,7 @@ export function tfEc2NetworkInsightsPathFilterAtSourceDestinationPortRangeProper
 }
 
 
-export function tfEc2NetworkInsightsPathFilterAtSourceDestinationPortRangePropertyToHclTerraform(struct?: TfEc2NetworkInsightsPath.FilterAtSourceDestinationPortRangePropertyOutputReference | TfEc2NetworkInsightsPath.FilterAtSourceDestinationPortRangeProperty): any {
+export function awsEc2NetworkInsightsPathFilterAtSourceDestinationPortRangePropertyToHclTerraform(struct?: AwsEc2NetworkInsightsPath.FilterAtSourceDestinationPortRangePropertyOutputReference | AwsEc2NetworkInsightsPath.FilterAtSourceDestinationPortRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -599,7 +599,7 @@ export function tfEc2NetworkInsightsPathFilterAtSourceDestinationPortRangeProper
 }
 
 
-export function tfEc2NetworkInsightsPathFilterAtSourceSourcePortRangePropertyToTerraform(struct?: TfEc2NetworkInsightsPath.FilterAtSourceSourcePortRangePropertyOutputReference | TfEc2NetworkInsightsPath.FilterAtSourceSourcePortRangeProperty): any {
+export function awsEc2NetworkInsightsPathFilterAtSourceSourcePortRangePropertyToTerraform(struct?: AwsEc2NetworkInsightsPath.FilterAtSourceSourcePortRangePropertyOutputReference | AwsEc2NetworkInsightsPath.FilterAtSourceSourcePortRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -611,7 +611,7 @@ export function tfEc2NetworkInsightsPathFilterAtSourceSourcePortRangePropertyToT
 }
 
 
-export function tfEc2NetworkInsightsPathFilterAtSourceSourcePortRangePropertyToHclTerraform(struct?: TfEc2NetworkInsightsPath.FilterAtSourceSourcePortRangePropertyOutputReference | TfEc2NetworkInsightsPath.FilterAtSourceSourcePortRangeProperty): any {
+export function awsEc2NetworkInsightsPathFilterAtSourceSourcePortRangePropertyToHclTerraform(struct?: AwsEc2NetworkInsightsPath.FilterAtSourceSourcePortRangePropertyOutputReference | AwsEc2NetworkInsightsPath.FilterAtSourceSourcePortRangeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -636,7 +636,7 @@ export function tfEc2NetworkInsightsPathFilterAtSourceSourcePortRangePropertyToH
 }
 
 
-export function tfEc2NetworkInsightsPathFilterAtSourcePropertyToTerraform(struct?: TfEc2NetworkInsightsPath.FilterAtSourcePropertyOutputReference | TfEc2NetworkInsightsPath.FilterAtSourceProperty): any {
+export function awsEc2NetworkInsightsPathFilterAtSourcePropertyToTerraform(struct?: AwsEc2NetworkInsightsPath.FilterAtSourcePropertyOutputReference | AwsEc2NetworkInsightsPath.FilterAtSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -644,13 +644,13 @@ export function tfEc2NetworkInsightsPathFilterAtSourcePropertyToTerraform(struct
   return {
     destination_address: cdktn.stringToTerraform(struct!.destinationAddress),
     source_address: cdktn.stringToTerraform(struct!.sourceAddress),
-    destination_port_range: tfEc2NetworkInsightsPathFilterAtSourceDestinationPortRangePropertyToTerraform(struct!.destinationPortRange),
-    source_port_range: tfEc2NetworkInsightsPathFilterAtSourceSourcePortRangePropertyToTerraform(struct!.sourcePortRange),
+    destination_port_range: awsEc2NetworkInsightsPathFilterAtSourceDestinationPortRangePropertyToTerraform(struct!.destinationPortRange),
+    source_port_range: awsEc2NetworkInsightsPathFilterAtSourceSourcePortRangePropertyToTerraform(struct!.sourcePortRange),
   }
 }
 
 
-export function tfEc2NetworkInsightsPathFilterAtSourcePropertyToHclTerraform(struct?: TfEc2NetworkInsightsPath.FilterAtSourcePropertyOutputReference | TfEc2NetworkInsightsPath.FilterAtSourceProperty): any {
+export function awsEc2NetworkInsightsPathFilterAtSourcePropertyToHclTerraform(struct?: AwsEc2NetworkInsightsPath.FilterAtSourcePropertyOutputReference | AwsEc2NetworkInsightsPath.FilterAtSourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -669,13 +669,13 @@ export function tfEc2NetworkInsightsPathFilterAtSourcePropertyToHclTerraform(str
       storageClassType: "string",
     },
     destination_port_range: {
-      value: tfEc2NetworkInsightsPathFilterAtSourceDestinationPortRangePropertyToHclTerraform(struct!.destinationPortRange),
+      value: awsEc2NetworkInsightsPathFilterAtSourceDestinationPortRangePropertyToHclTerraform(struct!.destinationPortRange),
       isBlock: true,
       type: "list",
       storageClassType: "FilterAtSourceDestinationPortRangePropertyList",
     },
     source_port_range: {
-      value: tfEc2NetworkInsightsPathFilterAtSourceSourcePortRangePropertyToHclTerraform(struct!.sourcePortRange),
+      value: awsEc2NetworkInsightsPathFilterAtSourceSourcePortRangePropertyToHclTerraform(struct!.sourcePortRange),
       isBlock: true,
       type: "list",
       storageClassType: "FilterAtSourceSourcePortRangePropertyList",
@@ -687,14 +687,14 @@ export function tfEc2NetworkInsightsPathFilterAtSourcePropertyToHclTerraform(str
 }
 
 
-export namespace TfEc2NetworkInsightsPath {
+export namespace AwsEc2NetworkInsightsPath {
 export interface FilterAtDestinationDestinationPortRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#from_port TfEc2NetworkInsightsPath#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#from_port AwsEc2NetworkInsightsPath#from_port}
   */
   readonly fromPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#to_port TfEc2NetworkInsightsPath#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#to_port AwsEc2NetworkInsightsPath#to_port}
   */
   readonly toPort?: number;
 }
@@ -770,11 +770,11 @@ export class FilterAtDestinationDestinationPortRangePropertyOutputReference exte
 }
 export interface FilterAtDestinationSourcePortRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#from_port TfEc2NetworkInsightsPath#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#from_port AwsEc2NetworkInsightsPath#from_port}
   */
   readonly fromPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#to_port TfEc2NetworkInsightsPath#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#to_port AwsEc2NetworkInsightsPath#to_port}
   */
   readonly toPort?: number;
 }
@@ -850,23 +850,23 @@ export class FilterAtDestinationSourcePortRangePropertyOutputReference extends c
 }
 export interface FilterAtDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#destination_address TfEc2NetworkInsightsPath#destination_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#destination_address AwsEc2NetworkInsightsPath#destination_address}
   */
   readonly destinationAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#source_address TfEc2NetworkInsightsPath#source_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#source_address AwsEc2NetworkInsightsPath#source_address}
   */
   readonly sourceAddress?: string;
   /**
   * destination_port_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#destination_port_range TfEc2NetworkInsightsPath#destination_port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#destination_port_range AwsEc2NetworkInsightsPath#destination_port_range}
   */
   readonly destinationPortRange?: FilterAtDestinationDestinationPortRangeProperty;
   /**
   * source_port_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#source_port_range TfEc2NetworkInsightsPath#source_port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#source_port_range AwsEc2NetworkInsightsPath#source_port_range}
   */
   readonly sourcePortRange?: FilterAtDestinationSourcePortRangeProperty;
 }
@@ -986,11 +986,11 @@ export class FilterAtDestinationPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface FilterAtSourceDestinationPortRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#from_port TfEc2NetworkInsightsPath#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#from_port AwsEc2NetworkInsightsPath#from_port}
   */
   readonly fromPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#to_port TfEc2NetworkInsightsPath#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#to_port AwsEc2NetworkInsightsPath#to_port}
   */
   readonly toPort?: number;
 }
@@ -1066,11 +1066,11 @@ export class FilterAtSourceDestinationPortRangePropertyOutputReference extends c
 }
 export interface FilterAtSourceSourcePortRangeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#from_port TfEc2NetworkInsightsPath#from_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#from_port AwsEc2NetworkInsightsPath#from_port}
   */
   readonly fromPort?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#to_port TfEc2NetworkInsightsPath#to_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#to_port AwsEc2NetworkInsightsPath#to_port}
   */
   readonly toPort?: number;
 }
@@ -1146,23 +1146,23 @@ export class FilterAtSourceSourcePortRangePropertyOutputReference extends cdktn.
 }
 export interface FilterAtSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#destination_address TfEc2NetworkInsightsPath#destination_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#destination_address AwsEc2NetworkInsightsPath#destination_address}
   */
   readonly destinationAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#source_address TfEc2NetworkInsightsPath#source_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#source_address AwsEc2NetworkInsightsPath#source_address}
   */
   readonly sourceAddress?: string;
   /**
   * destination_port_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#destination_port_range TfEc2NetworkInsightsPath#destination_port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#destination_port_range AwsEc2NetworkInsightsPath#destination_port_range}
   */
   readonly destinationPortRange?: FilterAtSourceDestinationPortRangeProperty;
   /**
   * source_port_range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#source_port_range TfEc2NetworkInsightsPath#source_port_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_network_insights_path#source_port_range AwsEc2NetworkInsightsPath#source_port_range}
   */
   readonly sourcePortRange?: FilterAtSourceSourcePortRangeProperty;
 }

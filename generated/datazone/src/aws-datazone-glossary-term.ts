@@ -5,55 +5,55 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfGlossaryTermConfig extends cdktn.TerraformMetaArguments {
+export interface AwsGlossaryTermConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#domain_identifier TfGlossaryTerm#domain_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#domain_identifier AwsGlossaryTerm#domain_identifier}
   */
   readonly domainIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#glossary_identifier TfGlossaryTerm#glossary_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#glossary_identifier AwsGlossaryTerm#glossary_identifier}
   */
   readonly glossaryIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#long_description TfGlossaryTerm#long_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#long_description AwsGlossaryTerm#long_description}
   */
   readonly longDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#name TfGlossaryTerm#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#name AwsGlossaryTerm#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#region TfGlossaryTerm#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#region AwsGlossaryTerm#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#short_description TfGlossaryTerm#short_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#short_description AwsGlossaryTerm#short_description}
   */
   readonly shortDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#status TfGlossaryTerm#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#status AwsGlossaryTerm#status}
   */
   readonly status?: string;
   /**
   * term_relations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#term_relations TfGlossaryTerm#term_relations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#term_relations AwsGlossaryTerm#term_relations}
   */
-  readonly termRelations?: TfGlossaryTerm.TermRelationsProperty[] | cdktn.IResolvable;
+  readonly termRelations?: AwsGlossaryTerm.TermRelationsProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#timeouts TfGlossaryTerm#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#timeouts AwsGlossaryTerm#timeouts}
   */
-  readonly timeouts?: TfGlossaryTerm.TimeoutsProperty;
+  readonly timeouts?: AwsGlossaryTerm.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term aws_datazone_glossary_term}
 */
-export class TfGlossaryTerm extends cdktn.TerraformResource {
+export class AwsGlossaryTerm extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -64,11 +64,11 @@ export class TfGlossaryTerm extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfGlossaryTerm resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsGlossaryTerm resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfGlossaryTerm to import
-  * @param importFromId The id of the existing TfGlossaryTerm that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfGlossaryTerm to import is found
+  * @param importToId The construct id used in the generated config for the AwsGlossaryTerm to import
+  * @param importFromId The id of the existing AwsGlossaryTerm that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGlossaryTerm to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_datazone_glossary_term", importId: importFromId, provider });
@@ -83,9 +83,9 @@ export class TfGlossaryTerm extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfGlossaryTermConfig
+  * @param options AwsGlossaryTermConfig
   */
-  public constructor(scope: Construct, id: string, config: TfGlossaryTermConfig) {
+  public constructor(scope: Construct, id: string, config: AwsGlossaryTermConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_datazone_glossary_term',
       terraformGeneratorMetadata: {
@@ -238,11 +238,11 @@ export class TfGlossaryTerm extends cdktn.TerraformResource {
   }
 
   // term_relations - computed: false, optional: true, required: false
-  private _termRelations = new TfGlossaryTerm.TermRelationsPropertyList(this, "term_relations", false);
+  private _termRelations = new AwsGlossaryTerm.TermRelationsPropertyList(this, "term_relations", false);
   public get termRelations() {
     return this._termRelations;
   }
-  public putTermRelations(value: TfGlossaryTerm.TermRelationsProperty[] | cdktn.IResolvable) {
+  public putTermRelations(value: AwsGlossaryTerm.TermRelationsProperty[] | cdktn.IResolvable) {
     this._termRelations.internalValue = value;
   }
   public resetTermRelations() {
@@ -254,11 +254,11 @@ export class TfGlossaryTerm extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfGlossaryTerm.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsGlossaryTerm.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfGlossaryTerm.TimeoutsProperty) {
+  public putTimeouts(value: AwsGlossaryTerm.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -282,8 +282,8 @@ export class TfGlossaryTerm extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       short_description: cdktn.stringToTerraform(this._shortDescription),
       status: cdktn.stringToTerraform(this._status),
-      term_relations: cdktn.listMapper(tfGlossaryTermTermRelationsPropertyToTerraform, true)(this._termRelations.internalValue),
-      timeouts: tfGlossaryTermTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      term_relations: cdktn.listMapper(awsGlossaryTermTermRelationsPropertyToTerraform, true)(this._termRelations.internalValue),
+      timeouts: awsGlossaryTermTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -332,16 +332,16 @@ export class TfGlossaryTerm extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       term_relations: {
-        value: cdktn.listMapperHcl(tfGlossaryTermTermRelationsPropertyToHclTerraform, true)(this._termRelations.internalValue),
+        value: cdktn.listMapperHcl(awsGlossaryTermTermRelationsPropertyToHclTerraform, true)(this._termRelations.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGlossaryTerm.TermRelationsPropertyList",
+        storageClassType: "AwsGlossaryTerm.TermRelationsPropertyList",
       },
       timeouts: {
-        value: tfGlossaryTermTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsGlossaryTermTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfGlossaryTerm.TimeoutsProperty",
+        storageClassType: "AwsGlossaryTerm.TimeoutsProperty",
       },
     };
 
@@ -350,7 +350,7 @@ export class TfGlossaryTerm extends cdktn.TerraformResource {
   }
 }
 
-export function tfGlossaryTermTermRelationsPropertyToTerraform(struct?: TfGlossaryTerm.TermRelationsProperty | cdktn.IResolvable): any {
+export function awsGlossaryTermTermRelationsPropertyToTerraform(struct?: AwsGlossaryTerm.TermRelationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -362,7 +362,7 @@ export function tfGlossaryTermTermRelationsPropertyToTerraform(struct?: TfGlossa
 }
 
 
-export function tfGlossaryTermTermRelationsPropertyToHclTerraform(struct?: TfGlossaryTerm.TermRelationsProperty | cdktn.IResolvable): any {
+export function awsGlossaryTermTermRelationsPropertyToHclTerraform(struct?: AwsGlossaryTerm.TermRelationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -387,7 +387,7 @@ export function tfGlossaryTermTermRelationsPropertyToHclTerraform(struct?: TfGlo
 }
 
 
-export function tfGlossaryTermTimeoutsPropertyToTerraform(struct?: TfGlossaryTerm.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsGlossaryTermTimeoutsPropertyToTerraform(struct?: AwsGlossaryTerm.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -398,7 +398,7 @@ export function tfGlossaryTermTimeoutsPropertyToTerraform(struct?: TfGlossaryTer
 }
 
 
-export function tfGlossaryTermTimeoutsPropertyToHclTerraform(struct?: TfGlossaryTerm.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsGlossaryTermTimeoutsPropertyToHclTerraform(struct?: AwsGlossaryTerm.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -417,14 +417,14 @@ export function tfGlossaryTermTimeoutsPropertyToHclTerraform(struct?: TfGlossary
 }
 
 
-export namespace TfGlossaryTerm {
+export namespace AwsGlossaryTerm {
 export interface TermRelationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#classifies TfGlossaryTerm#classifies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#classifies AwsGlossaryTerm#classifies}
   */
   readonly classifies?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#is_a TfGlossaryTerm#is_a}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#is_a AwsGlossaryTerm#is_a}
   */
   readonly isA?: string[];
 }
@@ -534,7 +534,7 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#create TfGlossaryTerm#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/datazone_glossary_term#create AwsGlossaryTerm#create}
   */
   readonly create?: string;
 }

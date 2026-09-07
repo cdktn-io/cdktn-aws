@@ -5,43 +5,43 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBucketLifecycleConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBucketLifecycleConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#bucket TfBucketLifecycleConfiguration#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#bucket AwsBucketLifecycleConfiguration#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#expected_bucket_owner TfBucketLifecycleConfiguration#expected_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#expected_bucket_owner AwsBucketLifecycleConfiguration#expected_bucket_owner}
   */
   readonly expectedBucketOwner?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#region TfBucketLifecycleConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#region AwsBucketLifecycleConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#transition_default_minimum_object_size TfBucketLifecycleConfiguration#transition_default_minimum_object_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#transition_default_minimum_object_size AwsBucketLifecycleConfiguration#transition_default_minimum_object_size}
   */
   readonly transitionDefaultMinimumObjectSize?: string;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#rule TfBucketLifecycleConfiguration#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#rule AwsBucketLifecycleConfiguration#rule}
   */
-  readonly rule?: TfBucketLifecycleConfiguration.RuleProperty[] | cdktn.IResolvable;
+  readonly rule?: AwsBucketLifecycleConfiguration.RuleProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#timeouts TfBucketLifecycleConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#timeouts AwsBucketLifecycleConfiguration#timeouts}
   */
-  readonly timeouts?: TfBucketLifecycleConfiguration.TimeoutsProperty;
+  readonly timeouts?: AwsBucketLifecycleConfiguration.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration aws_s3_bucket_lifecycle_configuration}
 */
-export class TfBucketLifecycleConfiguration extends cdktn.TerraformResource {
+export class AwsBucketLifecycleConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -52,11 +52,11 @@ export class TfBucketLifecycleConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBucketLifecycleConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBucketLifecycleConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBucketLifecycleConfiguration to import
-  * @param importFromId The id of the existing TfBucketLifecycleConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBucketLifecycleConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsBucketLifecycleConfiguration to import
+  * @param importFromId The id of the existing AwsBucketLifecycleConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBucketLifecycleConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_lifecycle_configuration", importId: importFromId, provider });
@@ -71,9 +71,9 @@ export class TfBucketLifecycleConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBucketLifecycleConfigurationConfig
+  * @param options AwsBucketLifecycleConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBucketLifecycleConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBucketLifecycleConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_lifecycle_configuration',
       terraformGeneratorMetadata: {
@@ -168,11 +168,11 @@ export class TfBucketLifecycleConfiguration extends cdktn.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule = new TfBucketLifecycleConfiguration.RulePropertyList(this, "rule", false);
+  private _rule = new AwsBucketLifecycleConfiguration.RulePropertyList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: TfBucketLifecycleConfiguration.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: AwsBucketLifecycleConfiguration.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   public resetRule() {
@@ -184,11 +184,11 @@ export class TfBucketLifecycleConfiguration extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfBucketLifecycleConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsBucketLifecycleConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfBucketLifecycleConfiguration.TimeoutsProperty) {
+  public putTimeouts(value: AwsBucketLifecycleConfiguration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -209,8 +209,8 @@ export class TfBucketLifecycleConfiguration extends cdktn.TerraformResource {
       expected_bucket_owner: cdktn.stringToTerraform(this._expectedBucketOwner),
       region: cdktn.stringToTerraform(this._region),
       transition_default_minimum_object_size: cdktn.stringToTerraform(this._transitionDefaultMinimumObjectSize),
-      rule: cdktn.listMapper(tfBucketLifecycleConfigurationRulePropertyToTerraform, true)(this._rule.internalValue),
-      timeouts: tfBucketLifecycleConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      rule: cdktn.listMapper(awsBucketLifecycleConfigurationRulePropertyToTerraform, true)(this._rule.internalValue),
+      timeouts: awsBucketLifecycleConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -241,16 +241,16 @@ export class TfBucketLifecycleConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       rule: {
-        value: cdktn.listMapperHcl(tfBucketLifecycleConfigurationRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(awsBucketLifecycleConfigurationRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBucketLifecycleConfiguration.RulePropertyList",
+        storageClassType: "AwsBucketLifecycleConfiguration.RulePropertyList",
       },
       timeouts: {
-        value: tfBucketLifecycleConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsBucketLifecycleConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfBucketLifecycleConfiguration.TimeoutsProperty",
+        storageClassType: "AwsBucketLifecycleConfiguration.TimeoutsProperty",
       },
     };
 
@@ -259,7 +259,7 @@ export class TfBucketLifecycleConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfBucketLifecycleConfigurationAbortIncompleteMultipartUploadPropertyToTerraform(struct?: TfBucketLifecycleConfiguration.AbortIncompleteMultipartUploadProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationAbortIncompleteMultipartUploadPropertyToTerraform(struct?: AwsBucketLifecycleConfiguration.AbortIncompleteMultipartUploadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -270,7 +270,7 @@ export function tfBucketLifecycleConfigurationAbortIncompleteMultipartUploadProp
 }
 
 
-export function tfBucketLifecycleConfigurationAbortIncompleteMultipartUploadPropertyToHclTerraform(struct?: TfBucketLifecycleConfiguration.AbortIncompleteMultipartUploadProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationAbortIncompleteMultipartUploadPropertyToHclTerraform(struct?: AwsBucketLifecycleConfiguration.AbortIncompleteMultipartUploadProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -289,7 +289,7 @@ export function tfBucketLifecycleConfigurationAbortIncompleteMultipartUploadProp
 }
 
 
-export function tfBucketLifecycleConfigurationExpirationPropertyToTerraform(struct?: TfBucketLifecycleConfiguration.ExpirationProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationExpirationPropertyToTerraform(struct?: AwsBucketLifecycleConfiguration.ExpirationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function tfBucketLifecycleConfigurationExpirationPropertyToTerraform(stru
 }
 
 
-export function tfBucketLifecycleConfigurationExpirationPropertyToHclTerraform(struct?: TfBucketLifecycleConfiguration.ExpirationProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationExpirationPropertyToHclTerraform(struct?: AwsBucketLifecycleConfiguration.ExpirationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -333,7 +333,7 @@ export function tfBucketLifecycleConfigurationExpirationPropertyToHclTerraform(s
 }
 
 
-export function tfBucketLifecycleConfigurationAndPropertyToTerraform(struct?: TfBucketLifecycleConfiguration.AndProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationAndPropertyToTerraform(struct?: AwsBucketLifecycleConfiguration.AndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function tfBucketLifecycleConfigurationAndPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfBucketLifecycleConfigurationAndPropertyToHclTerraform(struct?: TfBucketLifecycleConfiguration.AndProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationAndPropertyToHclTerraform(struct?: AwsBucketLifecycleConfiguration.AndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -384,7 +384,7 @@ export function tfBucketLifecycleConfigurationAndPropertyToHclTerraform(struct?:
 }
 
 
-export function tfBucketLifecycleConfigurationTagPropertyToTerraform(struct?: TfBucketLifecycleConfiguration.TagProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationTagPropertyToTerraform(struct?: AwsBucketLifecycleConfiguration.TagProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -396,7 +396,7 @@ export function tfBucketLifecycleConfigurationTagPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfBucketLifecycleConfigurationTagPropertyToHclTerraform(struct?: TfBucketLifecycleConfiguration.TagProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationTagPropertyToHclTerraform(struct?: AwsBucketLifecycleConfiguration.TagProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -421,7 +421,7 @@ export function tfBucketLifecycleConfigurationTagPropertyToHclTerraform(struct?:
 }
 
 
-export function tfBucketLifecycleConfigurationFilterPropertyToTerraform(struct?: TfBucketLifecycleConfiguration.FilterProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationFilterPropertyToTerraform(struct?: AwsBucketLifecycleConfiguration.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -430,13 +430,13 @@ export function tfBucketLifecycleConfigurationFilterPropertyToTerraform(struct?:
     object_size_greater_than: cdktn.numberToTerraform(struct!.objectSizeGreaterThan),
     object_size_less_than: cdktn.numberToTerraform(struct!.objectSizeLessThan),
     prefix: cdktn.stringToTerraform(struct!.prefix),
-    and: cdktn.listMapper(tfBucketLifecycleConfigurationAndPropertyToTerraform, true)(struct!.and),
-    tag: cdktn.listMapper(tfBucketLifecycleConfigurationTagPropertyToTerraform, true)(struct!.tag),
+    and: cdktn.listMapper(awsBucketLifecycleConfigurationAndPropertyToTerraform, true)(struct!.and),
+    tag: cdktn.listMapper(awsBucketLifecycleConfigurationTagPropertyToTerraform, true)(struct!.tag),
   }
 }
 
 
-export function tfBucketLifecycleConfigurationFilterPropertyToHclTerraform(struct?: TfBucketLifecycleConfiguration.FilterProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationFilterPropertyToHclTerraform(struct?: AwsBucketLifecycleConfiguration.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,13 +461,13 @@ export function tfBucketLifecycleConfigurationFilterPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     and: {
-      value: cdktn.listMapperHcl(tfBucketLifecycleConfigurationAndPropertyToHclTerraform, true)(struct!.and),
+      value: cdktn.listMapperHcl(awsBucketLifecycleConfigurationAndPropertyToHclTerraform, true)(struct!.and),
       isBlock: true,
       type: "list",
       storageClassType: "AndPropertyList",
     },
     tag: {
-      value: cdktn.listMapperHcl(tfBucketLifecycleConfigurationTagPropertyToHclTerraform, true)(struct!.tag),
+      value: cdktn.listMapperHcl(awsBucketLifecycleConfigurationTagPropertyToHclTerraform, true)(struct!.tag),
       isBlock: true,
       type: "list",
       storageClassType: "TagPropertyList",
@@ -479,7 +479,7 @@ export function tfBucketLifecycleConfigurationFilterPropertyToHclTerraform(struc
 }
 
 
-export function tfBucketLifecycleConfigurationNoncurrentVersionExpirationPropertyToTerraform(struct?: TfBucketLifecycleConfiguration.NoncurrentVersionExpirationProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationNoncurrentVersionExpirationPropertyToTerraform(struct?: AwsBucketLifecycleConfiguration.NoncurrentVersionExpirationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -491,7 +491,7 @@ export function tfBucketLifecycleConfigurationNoncurrentVersionExpirationPropert
 }
 
 
-export function tfBucketLifecycleConfigurationNoncurrentVersionExpirationPropertyToHclTerraform(struct?: TfBucketLifecycleConfiguration.NoncurrentVersionExpirationProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationNoncurrentVersionExpirationPropertyToHclTerraform(struct?: AwsBucketLifecycleConfiguration.NoncurrentVersionExpirationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -516,7 +516,7 @@ export function tfBucketLifecycleConfigurationNoncurrentVersionExpirationPropert
 }
 
 
-export function tfBucketLifecycleConfigurationNoncurrentVersionTransitionPropertyToTerraform(struct?: TfBucketLifecycleConfiguration.NoncurrentVersionTransitionProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationNoncurrentVersionTransitionPropertyToTerraform(struct?: AwsBucketLifecycleConfiguration.NoncurrentVersionTransitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -529,7 +529,7 @@ export function tfBucketLifecycleConfigurationNoncurrentVersionTransitionPropert
 }
 
 
-export function tfBucketLifecycleConfigurationNoncurrentVersionTransitionPropertyToHclTerraform(struct?: TfBucketLifecycleConfiguration.NoncurrentVersionTransitionProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationNoncurrentVersionTransitionPropertyToHclTerraform(struct?: AwsBucketLifecycleConfiguration.NoncurrentVersionTransitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -560,7 +560,7 @@ export function tfBucketLifecycleConfigurationNoncurrentVersionTransitionPropert
 }
 
 
-export function tfBucketLifecycleConfigurationTransitionPropertyToTerraform(struct?: TfBucketLifecycleConfiguration.TransitionProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationTransitionPropertyToTerraform(struct?: AwsBucketLifecycleConfiguration.TransitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -573,7 +573,7 @@ export function tfBucketLifecycleConfigurationTransitionPropertyToTerraform(stru
 }
 
 
-export function tfBucketLifecycleConfigurationTransitionPropertyToHclTerraform(struct?: TfBucketLifecycleConfiguration.TransitionProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationTransitionPropertyToHclTerraform(struct?: AwsBucketLifecycleConfiguration.TransitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -604,7 +604,7 @@ export function tfBucketLifecycleConfigurationTransitionPropertyToHclTerraform(s
 }
 
 
-export function tfBucketLifecycleConfigurationRulePropertyToTerraform(struct?: TfBucketLifecycleConfiguration.RuleProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationRulePropertyToTerraform(struct?: AwsBucketLifecycleConfiguration.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -613,17 +613,17 @@ export function tfBucketLifecycleConfigurationRulePropertyToTerraform(struct?: T
     id: cdktn.stringToTerraform(struct!.id),
     prefix: cdktn.stringToTerraform(struct!.prefix),
     status: cdktn.stringToTerraform(struct!.status),
-    abort_incomplete_multipart_upload: cdktn.listMapper(tfBucketLifecycleConfigurationAbortIncompleteMultipartUploadPropertyToTerraform, true)(struct!.abortIncompleteMultipartUpload),
-    expiration: cdktn.listMapper(tfBucketLifecycleConfigurationExpirationPropertyToTerraform, true)(struct!.expiration),
-    filter: cdktn.listMapper(tfBucketLifecycleConfigurationFilterPropertyToTerraform, true)(struct!.filter),
-    noncurrent_version_expiration: cdktn.listMapper(tfBucketLifecycleConfigurationNoncurrentVersionExpirationPropertyToTerraform, true)(struct!.noncurrentVersionExpiration),
-    noncurrent_version_transition: cdktn.listMapper(tfBucketLifecycleConfigurationNoncurrentVersionTransitionPropertyToTerraform, true)(struct!.noncurrentVersionTransition),
-    transition: cdktn.listMapper(tfBucketLifecycleConfigurationTransitionPropertyToTerraform, true)(struct!.transition),
+    abort_incomplete_multipart_upload: cdktn.listMapper(awsBucketLifecycleConfigurationAbortIncompleteMultipartUploadPropertyToTerraform, true)(struct!.abortIncompleteMultipartUpload),
+    expiration: cdktn.listMapper(awsBucketLifecycleConfigurationExpirationPropertyToTerraform, true)(struct!.expiration),
+    filter: cdktn.listMapper(awsBucketLifecycleConfigurationFilterPropertyToTerraform, true)(struct!.filter),
+    noncurrent_version_expiration: cdktn.listMapper(awsBucketLifecycleConfigurationNoncurrentVersionExpirationPropertyToTerraform, true)(struct!.noncurrentVersionExpiration),
+    noncurrent_version_transition: cdktn.listMapper(awsBucketLifecycleConfigurationNoncurrentVersionTransitionPropertyToTerraform, true)(struct!.noncurrentVersionTransition),
+    transition: cdktn.listMapper(awsBucketLifecycleConfigurationTransitionPropertyToTerraform, true)(struct!.transition),
   }
 }
 
 
-export function tfBucketLifecycleConfigurationRulePropertyToHclTerraform(struct?: TfBucketLifecycleConfiguration.RuleProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationRulePropertyToHclTerraform(struct?: AwsBucketLifecycleConfiguration.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -648,37 +648,37 @@ export function tfBucketLifecycleConfigurationRulePropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     abort_incomplete_multipart_upload: {
-      value: cdktn.listMapperHcl(tfBucketLifecycleConfigurationAbortIncompleteMultipartUploadPropertyToHclTerraform, true)(struct!.abortIncompleteMultipartUpload),
+      value: cdktn.listMapperHcl(awsBucketLifecycleConfigurationAbortIncompleteMultipartUploadPropertyToHclTerraform, true)(struct!.abortIncompleteMultipartUpload),
       isBlock: true,
       type: "list",
       storageClassType: "AbortIncompleteMultipartUploadPropertyList",
     },
     expiration: {
-      value: cdktn.listMapperHcl(tfBucketLifecycleConfigurationExpirationPropertyToHclTerraform, true)(struct!.expiration),
+      value: cdktn.listMapperHcl(awsBucketLifecycleConfigurationExpirationPropertyToHclTerraform, true)(struct!.expiration),
       isBlock: true,
       type: "list",
       storageClassType: "ExpirationPropertyList",
     },
     filter: {
-      value: cdktn.listMapperHcl(tfBucketLifecycleConfigurationFilterPropertyToHclTerraform, true)(struct!.filter),
+      value: cdktn.listMapperHcl(awsBucketLifecycleConfigurationFilterPropertyToHclTerraform, true)(struct!.filter),
       isBlock: true,
       type: "list",
       storageClassType: "FilterPropertyList",
     },
     noncurrent_version_expiration: {
-      value: cdktn.listMapperHcl(tfBucketLifecycleConfigurationNoncurrentVersionExpirationPropertyToHclTerraform, true)(struct!.noncurrentVersionExpiration),
+      value: cdktn.listMapperHcl(awsBucketLifecycleConfigurationNoncurrentVersionExpirationPropertyToHclTerraform, true)(struct!.noncurrentVersionExpiration),
       isBlock: true,
       type: "list",
       storageClassType: "NoncurrentVersionExpirationPropertyList",
     },
     noncurrent_version_transition: {
-      value: cdktn.listMapperHcl(tfBucketLifecycleConfigurationNoncurrentVersionTransitionPropertyToHclTerraform, true)(struct!.noncurrentVersionTransition),
+      value: cdktn.listMapperHcl(awsBucketLifecycleConfigurationNoncurrentVersionTransitionPropertyToHclTerraform, true)(struct!.noncurrentVersionTransition),
       isBlock: true,
       type: "set",
       storageClassType: "NoncurrentVersionTransitionPropertyList",
     },
     transition: {
-      value: cdktn.listMapperHcl(tfBucketLifecycleConfigurationTransitionPropertyToHclTerraform, true)(struct!.transition),
+      value: cdktn.listMapperHcl(awsBucketLifecycleConfigurationTransitionPropertyToHclTerraform, true)(struct!.transition),
       isBlock: true,
       type: "set",
       storageClassType: "TransitionPropertyList",
@@ -690,7 +690,7 @@ export function tfBucketLifecycleConfigurationRulePropertyToHclTerraform(struct?
 }
 
 
-export function tfBucketLifecycleConfigurationTimeoutsPropertyToTerraform(struct?: TfBucketLifecycleConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationTimeoutsPropertyToTerraform(struct?: AwsBucketLifecycleConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -702,7 +702,7 @@ export function tfBucketLifecycleConfigurationTimeoutsPropertyToTerraform(struct
 }
 
 
-export function tfBucketLifecycleConfigurationTimeoutsPropertyToHclTerraform(struct?: TfBucketLifecycleConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBucketLifecycleConfigurationTimeoutsPropertyToHclTerraform(struct?: AwsBucketLifecycleConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -727,10 +727,10 @@ export function tfBucketLifecycleConfigurationTimeoutsPropertyToHclTerraform(str
 }
 
 
-export namespace TfBucketLifecycleConfiguration {
+export namespace AwsBucketLifecycleConfiguration {
 export interface AbortIncompleteMultipartUploadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#days_after_initiation TfBucketLifecycleConfiguration#days_after_initiation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#days_after_initiation AwsBucketLifecycleConfiguration#days_after_initiation}
   */
   readonly daysAfterInitiation?: number;
 }
@@ -816,15 +816,15 @@ export class AbortIncompleteMultipartUploadPropertyList extends cdktn.ComplexLis
 }
 export interface ExpirationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#date TfBucketLifecycleConfiguration#date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#date AwsBucketLifecycleConfiguration#date}
   */
   readonly date?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#days TfBucketLifecycleConfiguration#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#days AwsBucketLifecycleConfiguration#days}
   */
   readonly days?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#expired_object_delete_marker TfBucketLifecycleConfiguration#expired_object_delete_marker}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#expired_object_delete_marker AwsBucketLifecycleConfiguration#expired_object_delete_marker}
   */
   readonly expiredObjectDeleteMarker?: boolean | cdktn.IResolvable;
 }
@@ -954,19 +954,19 @@ export class ExpirationPropertyList extends cdktn.ComplexList {
 }
 export interface AndProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#object_size_greater_than TfBucketLifecycleConfiguration#object_size_greater_than}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#object_size_greater_than AwsBucketLifecycleConfiguration#object_size_greater_than}
   */
   readonly objectSizeGreaterThan?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#object_size_less_than TfBucketLifecycleConfiguration#object_size_less_than}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#object_size_less_than AwsBucketLifecycleConfiguration#object_size_less_than}
   */
   readonly objectSizeLessThan?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#prefix TfBucketLifecycleConfiguration#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#prefix AwsBucketLifecycleConfiguration#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#tags TfBucketLifecycleConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#tags AwsBucketLifecycleConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -1118,11 +1118,11 @@ export class AndPropertyList extends cdktn.ComplexList {
 }
 export interface TagProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#key TfBucketLifecycleConfiguration#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#key AwsBucketLifecycleConfiguration#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#value TfBucketLifecycleConfiguration#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#value AwsBucketLifecycleConfiguration#value}
   */
   readonly value: string;
 }
@@ -1224,27 +1224,27 @@ export class TagPropertyList extends cdktn.ComplexList {
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#object_size_greater_than TfBucketLifecycleConfiguration#object_size_greater_than}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#object_size_greater_than AwsBucketLifecycleConfiguration#object_size_greater_than}
   */
   readonly objectSizeGreaterThan?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#object_size_less_than TfBucketLifecycleConfiguration#object_size_less_than}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#object_size_less_than AwsBucketLifecycleConfiguration#object_size_less_than}
   */
   readonly objectSizeLessThan?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#prefix TfBucketLifecycleConfiguration#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#prefix AwsBucketLifecycleConfiguration#prefix}
   */
   readonly prefix?: string;
   /**
   * and block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#and TfBucketLifecycleConfiguration#and}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#and AwsBucketLifecycleConfiguration#and}
   */
   readonly and?: AndProperty[] | cdktn.IResolvable;
   /**
   * tag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#tag TfBucketLifecycleConfiguration#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#tag AwsBucketLifecycleConfiguration#tag}
   */
   readonly tag?: TagProperty[] | cdktn.IResolvable;
 }
@@ -1418,11 +1418,11 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface NoncurrentVersionExpirationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#newer_noncurrent_versions TfBucketLifecycleConfiguration#newer_noncurrent_versions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#newer_noncurrent_versions AwsBucketLifecycleConfiguration#newer_noncurrent_versions}
   */
   readonly newerNoncurrentVersions?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#noncurrent_days TfBucketLifecycleConfiguration#noncurrent_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#noncurrent_days AwsBucketLifecycleConfiguration#noncurrent_days}
   */
   readonly noncurrentDays: number;
 }
@@ -1527,15 +1527,15 @@ export class NoncurrentVersionExpirationPropertyList extends cdktn.ComplexList {
 }
 export interface NoncurrentVersionTransitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#newer_noncurrent_versions TfBucketLifecycleConfiguration#newer_noncurrent_versions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#newer_noncurrent_versions AwsBucketLifecycleConfiguration#newer_noncurrent_versions}
   */
   readonly newerNoncurrentVersions?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#noncurrent_days TfBucketLifecycleConfiguration#noncurrent_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#noncurrent_days AwsBucketLifecycleConfiguration#noncurrent_days}
   */
   readonly noncurrentDays: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#storage_class TfBucketLifecycleConfiguration#storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#storage_class AwsBucketLifecycleConfiguration#storage_class}
   */
   readonly storageClass: string;
 }
@@ -1659,15 +1659,15 @@ export class NoncurrentVersionTransitionPropertyList extends cdktn.ComplexList {
 }
 export interface TransitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#date TfBucketLifecycleConfiguration#date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#date AwsBucketLifecycleConfiguration#date}
   */
   readonly date?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#days TfBucketLifecycleConfiguration#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#days AwsBucketLifecycleConfiguration#days}
   */
   readonly days?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#storage_class TfBucketLifecycleConfiguration#storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#storage_class AwsBucketLifecycleConfiguration#storage_class}
   */
   readonly storageClass: string;
 }
@@ -1794,54 +1794,54 @@ export class TransitionPropertyList extends cdktn.ComplexList {
 }
 export interface RuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#id TfBucketLifecycleConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#id AwsBucketLifecycleConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#prefix TfBucketLifecycleConfiguration#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#prefix AwsBucketLifecycleConfiguration#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#status TfBucketLifecycleConfiguration#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#status AwsBucketLifecycleConfiguration#status}
   */
   readonly status: string;
   /**
   * abort_incomplete_multipart_upload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#abort_incomplete_multipart_upload TfBucketLifecycleConfiguration#abort_incomplete_multipart_upload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#abort_incomplete_multipart_upload AwsBucketLifecycleConfiguration#abort_incomplete_multipart_upload}
   */
   readonly abortIncompleteMultipartUpload?: AbortIncompleteMultipartUploadProperty[] | cdktn.IResolvable;
   /**
   * expiration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#expiration TfBucketLifecycleConfiguration#expiration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#expiration AwsBucketLifecycleConfiguration#expiration}
   */
   readonly expiration?: ExpirationProperty[] | cdktn.IResolvable;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#filter TfBucketLifecycleConfiguration#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#filter AwsBucketLifecycleConfiguration#filter}
   */
   readonly filter?: FilterProperty[] | cdktn.IResolvable;
   /**
   * noncurrent_version_expiration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#noncurrent_version_expiration TfBucketLifecycleConfiguration#noncurrent_version_expiration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#noncurrent_version_expiration AwsBucketLifecycleConfiguration#noncurrent_version_expiration}
   */
   readonly noncurrentVersionExpiration?: NoncurrentVersionExpirationProperty[] | cdktn.IResolvable;
   /**
   * noncurrent_version_transition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#noncurrent_version_transition TfBucketLifecycleConfiguration#noncurrent_version_transition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#noncurrent_version_transition AwsBucketLifecycleConfiguration#noncurrent_version_transition}
   */
   readonly noncurrentVersionTransition?: NoncurrentVersionTransitionProperty[] | cdktn.IResolvable;
   /**
   * transition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#transition TfBucketLifecycleConfiguration#transition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#transition AwsBucketLifecycleConfiguration#transition}
   */
   readonly transition?: TransitionProperty[] | cdktn.IResolvable;
 }
@@ -2099,13 +2099,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#create TfBucketLifecycleConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#create AwsBucketLifecycleConfiguration#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#update TfBucketLifecycleConfiguration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_lifecycle_configuration#update AwsBucketLifecycleConfiguration#update}
   */
   readonly update?: string;
 }

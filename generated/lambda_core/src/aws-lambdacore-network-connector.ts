@@ -5,39 +5,39 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfNetworkConnectorConfig extends cdktn.TerraformMetaArguments {
+export interface AwsNetworkConnectorConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#name TfNetworkConnector#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#name AwsNetworkConnector#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#operator_role TfNetworkConnector#operator_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#operator_role AwsNetworkConnector#operator_role}
   */
   readonly operatorRole: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#region TfNetworkConnector#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#region AwsNetworkConnector#region}
   */
   readonly region?: string;
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#configuration TfNetworkConnector#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#configuration AwsNetworkConnector#configuration}
   */
-  readonly configuration?: TfNetworkConnector.ConfigurationProperty[] | cdktn.IResolvable;
+  readonly configuration?: AwsNetworkConnector.ConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#timeouts TfNetworkConnector#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#timeouts AwsNetworkConnector#timeouts}
   */
-  readonly timeouts?: TfNetworkConnector.TimeoutsProperty;
+  readonly timeouts?: AwsNetworkConnector.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector aws_lambdacore_network_connector}
 */
-export class TfNetworkConnector extends cdktn.TerraformResource {
+export class AwsNetworkConnector extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class TfNetworkConnector extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfNetworkConnector resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsNetworkConnector resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfNetworkConnector to import
-  * @param importFromId The id of the existing TfNetworkConnector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfNetworkConnector to import is found
+  * @param importToId The construct id used in the generated config for the AwsNetworkConnector to import
+  * @param importFromId The id of the existing AwsNetworkConnector that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsNetworkConnector to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambdacore_network_connector", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class TfNetworkConnector extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfNetworkConnectorConfig
+  * @param options AwsNetworkConnectorConfig
   */
-  public constructor(scope: Construct, id: string, config: TfNetworkConnectorConfig) {
+  public constructor(scope: Construct, id: string, config: AwsNetworkConnectorConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambdacore_network_connector',
       terraformGeneratorMetadata: {
@@ -144,11 +144,11 @@ export class TfNetworkConnector extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new TfNetworkConnector.ConfigurationPropertyList(this, "configuration", false);
+  private _configuration = new AwsNetworkConnector.ConfigurationPropertyList(this, "configuration", false);
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: TfNetworkConnector.ConfigurationProperty[] | cdktn.IResolvable) {
+  public putConfiguration(value: AwsNetworkConnector.ConfigurationProperty[] | cdktn.IResolvable) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -160,11 +160,11 @@ export class TfNetworkConnector extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfNetworkConnector.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsNetworkConnector.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfNetworkConnector.TimeoutsProperty) {
+  public putTimeouts(value: AwsNetworkConnector.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -184,8 +184,8 @@ export class TfNetworkConnector extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       operator_role: cdktn.stringToTerraform(this._operatorRole),
       region: cdktn.stringToTerraform(this._region),
-      configuration: cdktn.listMapper(tfNetworkConnectorConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
-      timeouts: tfNetworkConnectorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      configuration: cdktn.listMapper(awsNetworkConnectorConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
+      timeouts: awsNetworkConnectorTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -210,16 +210,16 @@ export class TfNetworkConnector extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       configuration: {
-        value: cdktn.listMapperHcl(tfNetworkConnectorConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
+        value: cdktn.listMapperHcl(awsNetworkConnectorConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfNetworkConnector.ConfigurationPropertyList",
+        storageClassType: "AwsNetworkConnector.ConfigurationPropertyList",
       },
       timeouts: {
-        value: tfNetworkConnectorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsNetworkConnectorTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfNetworkConnector.TimeoutsProperty",
+        storageClassType: "AwsNetworkConnector.TimeoutsProperty",
       },
     };
 
@@ -228,7 +228,7 @@ export class TfNetworkConnector extends cdktn.TerraformResource {
   }
 }
 
-export function tfNetworkConnectorVpcEgressConfigurationPropertyToTerraform(struct?: TfNetworkConnector.VpcEgressConfigurationProperty | cdktn.IResolvable): any {
+export function awsNetworkConnectorVpcEgressConfigurationPropertyToTerraform(struct?: AwsNetworkConnector.VpcEgressConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -242,7 +242,7 @@ export function tfNetworkConnectorVpcEgressConfigurationPropertyToTerraform(stru
 }
 
 
-export function tfNetworkConnectorVpcEgressConfigurationPropertyToHclTerraform(struct?: TfNetworkConnector.VpcEgressConfigurationProperty | cdktn.IResolvable): any {
+export function awsNetworkConnectorVpcEgressConfigurationPropertyToHclTerraform(struct?: AwsNetworkConnector.VpcEgressConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -279,25 +279,25 @@ export function tfNetworkConnectorVpcEgressConfigurationPropertyToHclTerraform(s
 }
 
 
-export function tfNetworkConnectorConfigurationPropertyToTerraform(struct?: TfNetworkConnector.ConfigurationProperty | cdktn.IResolvable): any {
+export function awsNetworkConnectorConfigurationPropertyToTerraform(struct?: AwsNetworkConnector.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    vpc_egress_configuration: cdktn.listMapper(tfNetworkConnectorVpcEgressConfigurationPropertyToTerraform, true)(struct!.vpcEgressConfiguration),
+    vpc_egress_configuration: cdktn.listMapper(awsNetworkConnectorVpcEgressConfigurationPropertyToTerraform, true)(struct!.vpcEgressConfiguration),
   }
 }
 
 
-export function tfNetworkConnectorConfigurationPropertyToHclTerraform(struct?: TfNetworkConnector.ConfigurationProperty | cdktn.IResolvable): any {
+export function awsNetworkConnectorConfigurationPropertyToHclTerraform(struct?: AwsNetworkConnector.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     vpc_egress_configuration: {
-      value: cdktn.listMapperHcl(tfNetworkConnectorVpcEgressConfigurationPropertyToHclTerraform, true)(struct!.vpcEgressConfiguration),
+      value: cdktn.listMapperHcl(awsNetworkConnectorVpcEgressConfigurationPropertyToHclTerraform, true)(struct!.vpcEgressConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "VpcEgressConfigurationPropertyList",
@@ -309,7 +309,7 @@ export function tfNetworkConnectorConfigurationPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfNetworkConnectorTimeoutsPropertyToTerraform(struct?: TfNetworkConnector.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsNetworkConnectorTimeoutsPropertyToTerraform(struct?: AwsNetworkConnector.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function tfNetworkConnectorTimeoutsPropertyToTerraform(struct?: TfNetwork
 }
 
 
-export function tfNetworkConnectorTimeoutsPropertyToHclTerraform(struct?: TfNetworkConnector.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsNetworkConnectorTimeoutsPropertyToHclTerraform(struct?: AwsNetworkConnector.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,22 +353,22 @@ export function tfNetworkConnectorTimeoutsPropertyToHclTerraform(struct?: TfNetw
 }
 
 
-export namespace TfNetworkConnector {
+export namespace AwsNetworkConnector {
 export interface VpcEgressConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#associated_compute_resource_types TfNetworkConnector#associated_compute_resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#associated_compute_resource_types AwsNetworkConnector#associated_compute_resource_types}
   */
   readonly associatedComputeResourceTypes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#network_protocol TfNetworkConnector#network_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#network_protocol AwsNetworkConnector#network_protocol}
   */
   readonly networkProtocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#security_group_ids TfNetworkConnector#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#security_group_ids AwsNetworkConnector#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#subnet_ids TfNetworkConnector#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#subnet_ids AwsNetworkConnector#subnet_ids}
   */
   readonly subnetIds: string[];
 }
@@ -513,7 +513,7 @@ export interface ConfigurationProperty {
   /**
   * vpc_egress_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#vpc_egress_configuration TfNetworkConnector#vpc_egress_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#vpc_egress_configuration AwsNetworkConnector#vpc_egress_configuration}
   */
   readonly vpcEgressConfiguration?: VpcEgressConfigurationProperty[] | cdktn.IResolvable;
 }
@@ -601,19 +601,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#create TfNetworkConnector#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#create AwsNetworkConnector#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#delete TfNetworkConnector#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#delete AwsNetworkConnector#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#update TfNetworkConnector#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/lambdacore_network_connector#update AwsNetworkConnector#update}
   */
   readonly update?: string;
 }

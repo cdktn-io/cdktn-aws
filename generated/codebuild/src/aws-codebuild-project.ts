@@ -5,150 +5,150 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfProjectConfig extends cdktn.TerraformMetaArguments {
+export interface AwsProjectConfig extends cdktn.TerraformMetaArguments {
   /**
   * Maximum number of additional automatic retries after a failed build. The default value is 0.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#auto_retry_limit TfProject#auto_retry_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#auto_retry_limit AwsProject#auto_retry_limit}
   */
   readonly autoRetryLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#badge_enabled TfProject#badge_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#badge_enabled AwsProject#badge_enabled}
   */
   readonly badgeEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#build_timeout TfProject#build_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#build_timeout AwsProject#build_timeout}
   */
   readonly buildTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#concurrent_build_limit TfProject#concurrent_build_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#concurrent_build_limit AwsProject#concurrent_build_limit}
   */
   readonly concurrentBuildLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#description TfProject#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#description AwsProject#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#encryption_key TfProject#encryption_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#encryption_key AwsProject#encryption_key}
   */
   readonly encryptionKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#id TfProject#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#id AwsProject#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#name TfProject#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#name AwsProject#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#project_visibility TfProject#project_visibility}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#project_visibility AwsProject#project_visibility}
   */
   readonly projectVisibility?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#queued_timeout TfProject#queued_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#queued_timeout AwsProject#queued_timeout}
   */
   readonly queuedTimeout?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#region TfProject#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#region AwsProject#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#resource_access_role TfProject#resource_access_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#resource_access_role AwsProject#resource_access_role}
   */
   readonly resourceAccessRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#service_role TfProject#service_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#service_role AwsProject#service_role}
   */
   readonly serviceRole: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#source_version TfProject#source_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#source_version AwsProject#source_version}
   */
   readonly sourceVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#tags TfProject#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#tags AwsProject#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#tags_all TfProject#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#tags_all AwsProject#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * artifacts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#artifacts TfProject#artifacts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#artifacts AwsProject#artifacts}
   */
-  readonly artifacts: TfProject.ArtifactsProperty;
+  readonly artifacts: AwsProject.ArtifactsProperty;
   /**
   * build_batch_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#build_batch_config TfProject#build_batch_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#build_batch_config AwsProject#build_batch_config}
   */
-  readonly buildBatchConfig?: TfProject.BuildBatchConfigProperty;
+  readonly buildBatchConfig?: AwsProject.BuildBatchConfigProperty;
   /**
   * cache block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#cache TfProject#cache}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#cache AwsProject#cache}
   */
-  readonly cache?: TfProject.CacheProperty;
+  readonly cache?: AwsProject.CacheProperty;
   /**
   * environment block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#environment TfProject#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#environment AwsProject#environment}
   */
-  readonly environment: TfProject.EnvironmentProperty;
+  readonly environment: AwsProject.EnvironmentProperty;
   /**
   * file_system_locations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#file_system_locations TfProject#file_system_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#file_system_locations AwsProject#file_system_locations}
   */
-  readonly fileSystemLocations?: TfProject.FileSystemLocationsProperty[] | cdktn.IResolvable;
+  readonly fileSystemLocations?: AwsProject.FileSystemLocationsProperty[] | cdktn.IResolvable;
   /**
   * logs_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#logs_config TfProject#logs_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#logs_config AwsProject#logs_config}
   */
-  readonly logsConfig?: TfProject.LogsConfigProperty;
+  readonly logsConfig?: AwsProject.LogsConfigProperty;
   /**
   * secondary_artifacts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#secondary_artifacts TfProject#secondary_artifacts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#secondary_artifacts AwsProject#secondary_artifacts}
   */
-  readonly secondaryArtifacts?: TfProject.SecondaryArtifactsProperty[] | cdktn.IResolvable;
+  readonly secondaryArtifacts?: AwsProject.SecondaryArtifactsProperty[] | cdktn.IResolvable;
   /**
   * secondary_source_version block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#secondary_source_version TfProject#secondary_source_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#secondary_source_version AwsProject#secondary_source_version}
   */
-  readonly secondarySourceVersion?: TfProject.SecondarySourceVersionProperty[] | cdktn.IResolvable;
+  readonly secondarySourceVersion?: AwsProject.SecondarySourceVersionProperty[] | cdktn.IResolvable;
   /**
   * secondary_sources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#secondary_sources TfProject#secondary_sources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#secondary_sources AwsProject#secondary_sources}
   */
-  readonly secondarySources?: TfProject.SecondarySourcesProperty[] | cdktn.IResolvable;
+  readonly secondarySources?: AwsProject.SecondarySourcesProperty[] | cdktn.IResolvable;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#source TfProject#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#source AwsProject#source}
   */
-  readonly source: TfProject.SourceProperty;
+  readonly source: AwsProject.SourceProperty;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#vpc_config TfProject#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#vpc_config AwsProject#vpc_config}
   */
-  readonly vpcConfig?: TfProject.VpcConfigProperty;
+  readonly vpcConfig?: AwsProject.VpcConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project aws_codebuild_project}
 */
-export class TfProject extends cdktn.TerraformResource {
+export class AwsProject extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -159,11 +159,11 @@ export class TfProject extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfProject resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsProject resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfProject to import
-  * @param importFromId The id of the existing TfProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfProject to import is found
+  * @param importToId The construct id used in the generated config for the AwsProject to import
+  * @param importFromId The id of the existing AwsProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsProject to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codebuild_project", importId: importFromId, provider });
@@ -178,9 +178,9 @@ export class TfProject extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfProjectConfig
+  * @param options AwsProjectConfig
   */
-  public constructor(scope: Construct, id: string, config: TfProjectConfig) {
+  public constructor(scope: Construct, id: string, config: AwsProjectConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codebuild_project',
       terraformGeneratorMetadata: {
@@ -495,11 +495,11 @@ export class TfProject extends cdktn.TerraformResource {
   }
 
   // artifacts - computed: false, optional: false, required: true
-  private _artifacts = new TfProject.ArtifactsPropertyOutputReference(this, "artifacts");
+  private _artifacts = new AwsProject.ArtifactsPropertyOutputReference(this, "artifacts");
   public get artifacts() {
     return this._artifacts;
   }
-  public putArtifacts(value: TfProject.ArtifactsProperty) {
+  public putArtifacts(value: AwsProject.ArtifactsProperty) {
     this._artifacts.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -508,11 +508,11 @@ export class TfProject extends cdktn.TerraformResource {
   }
 
   // build_batch_config - computed: false, optional: true, required: false
-  private _buildBatchConfig = new TfProject.BuildBatchConfigPropertyOutputReference(this, "build_batch_config");
+  private _buildBatchConfig = new AwsProject.BuildBatchConfigPropertyOutputReference(this, "build_batch_config");
   public get buildBatchConfig() {
     return this._buildBatchConfig;
   }
-  public putBuildBatchConfig(value: TfProject.BuildBatchConfigProperty) {
+  public putBuildBatchConfig(value: AwsProject.BuildBatchConfigProperty) {
     this._buildBatchConfig.internalValue = value;
   }
   public resetBuildBatchConfig() {
@@ -524,11 +524,11 @@ export class TfProject extends cdktn.TerraformResource {
   }
 
   // cache - computed: false, optional: true, required: false
-  private _cache = new TfProject.CachePropertyOutputReference(this, "cache");
+  private _cache = new AwsProject.CachePropertyOutputReference(this, "cache");
   public get cache() {
     return this._cache;
   }
-  public putCache(value: TfProject.CacheProperty) {
+  public putCache(value: AwsProject.CacheProperty) {
     this._cache.internalValue = value;
   }
   public resetCache() {
@@ -540,11 +540,11 @@ export class TfProject extends cdktn.TerraformResource {
   }
 
   // environment - computed: false, optional: false, required: true
-  private _environment = new TfProject.EnvironmentPropertyOutputReference(this, "environment");
+  private _environment = new AwsProject.EnvironmentPropertyOutputReference(this, "environment");
   public get environment() {
     return this._environment;
   }
-  public putEnvironment(value: TfProject.EnvironmentProperty) {
+  public putEnvironment(value: AwsProject.EnvironmentProperty) {
     this._environment.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -553,11 +553,11 @@ export class TfProject extends cdktn.TerraformResource {
   }
 
   // file_system_locations - computed: false, optional: true, required: false
-  private _fileSystemLocations = new TfProject.FileSystemLocationsPropertyList(this, "file_system_locations", true);
+  private _fileSystemLocations = new AwsProject.FileSystemLocationsPropertyList(this, "file_system_locations", true);
   public get fileSystemLocations() {
     return this._fileSystemLocations;
   }
-  public putFileSystemLocations(value: TfProject.FileSystemLocationsProperty[] | cdktn.IResolvable) {
+  public putFileSystemLocations(value: AwsProject.FileSystemLocationsProperty[] | cdktn.IResolvable) {
     this._fileSystemLocations.internalValue = value;
   }
   public resetFileSystemLocations() {
@@ -569,11 +569,11 @@ export class TfProject extends cdktn.TerraformResource {
   }
 
   // logs_config - computed: false, optional: true, required: false
-  private _logsConfig = new TfProject.LogsConfigPropertyOutputReference(this, "logs_config");
+  private _logsConfig = new AwsProject.LogsConfigPropertyOutputReference(this, "logs_config");
   public get logsConfig() {
     return this._logsConfig;
   }
-  public putLogsConfig(value: TfProject.LogsConfigProperty) {
+  public putLogsConfig(value: AwsProject.LogsConfigProperty) {
     this._logsConfig.internalValue = value;
   }
   public resetLogsConfig() {
@@ -585,11 +585,11 @@ export class TfProject extends cdktn.TerraformResource {
   }
 
   // secondary_artifacts - computed: false, optional: true, required: false
-  private _secondaryArtifacts = new TfProject.SecondaryArtifactsPropertyList(this, "secondary_artifacts", true);
+  private _secondaryArtifacts = new AwsProject.SecondaryArtifactsPropertyList(this, "secondary_artifacts", true);
   public get secondaryArtifacts() {
     return this._secondaryArtifacts;
   }
-  public putSecondaryArtifacts(value: TfProject.SecondaryArtifactsProperty[] | cdktn.IResolvable) {
+  public putSecondaryArtifacts(value: AwsProject.SecondaryArtifactsProperty[] | cdktn.IResolvable) {
     this._secondaryArtifacts.internalValue = value;
   }
   public resetSecondaryArtifacts() {
@@ -601,11 +601,11 @@ export class TfProject extends cdktn.TerraformResource {
   }
 
   // secondary_source_version - computed: false, optional: true, required: false
-  private _secondarySourceVersion = new TfProject.SecondarySourceVersionPropertyList(this, "secondary_source_version", true);
+  private _secondarySourceVersion = new AwsProject.SecondarySourceVersionPropertyList(this, "secondary_source_version", true);
   public get secondarySourceVersion() {
     return this._secondarySourceVersion;
   }
-  public putSecondarySourceVersion(value: TfProject.SecondarySourceVersionProperty[] | cdktn.IResolvable) {
+  public putSecondarySourceVersion(value: AwsProject.SecondarySourceVersionProperty[] | cdktn.IResolvable) {
     this._secondarySourceVersion.internalValue = value;
   }
   public resetSecondarySourceVersion() {
@@ -617,11 +617,11 @@ export class TfProject extends cdktn.TerraformResource {
   }
 
   // secondary_sources - computed: false, optional: true, required: false
-  private _secondarySources = new TfProject.SecondarySourcesPropertyList(this, "secondary_sources", true);
+  private _secondarySources = new AwsProject.SecondarySourcesPropertyList(this, "secondary_sources", true);
   public get secondarySources() {
     return this._secondarySources;
   }
-  public putSecondarySources(value: TfProject.SecondarySourcesProperty[] | cdktn.IResolvable) {
+  public putSecondarySources(value: AwsProject.SecondarySourcesProperty[] | cdktn.IResolvable) {
     this._secondarySources.internalValue = value;
   }
   public resetSecondarySources() {
@@ -633,11 +633,11 @@ export class TfProject extends cdktn.TerraformResource {
   }
 
   // source - computed: false, optional: false, required: true
-  private _source = new TfProject.SourcePropertyOutputReference(this, "source");
+  private _source = new AwsProject.SourcePropertyOutputReference(this, "source");
   public get source() {
     return this._source;
   }
-  public putSource(value: TfProject.SourceProperty) {
+  public putSource(value: AwsProject.SourceProperty) {
     this._source.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -646,11 +646,11 @@ export class TfProject extends cdktn.TerraformResource {
   }
 
   // vpc_config - computed: false, optional: true, required: false
-  private _vpcConfig = new TfProject.VpcConfigPropertyOutputReference(this, "vpc_config");
+  private _vpcConfig = new AwsProject.VpcConfigPropertyOutputReference(this, "vpc_config");
   public get vpcConfig() {
     return this._vpcConfig;
   }
-  public putVpcConfig(value: TfProject.VpcConfigProperty) {
+  public putVpcConfig(value: AwsProject.VpcConfigProperty) {
     this._vpcConfig.internalValue = value;
   }
   public resetVpcConfig() {
@@ -683,17 +683,17 @@ export class TfProject extends cdktn.TerraformResource {
       source_version: cdktn.stringToTerraform(this._sourceVersion),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      artifacts: tfProjectArtifactsPropertyToTerraform(this._artifacts.internalValue),
-      build_batch_config: tfProjectBuildBatchConfigPropertyToTerraform(this._buildBatchConfig.internalValue),
-      cache: tfProjectCachePropertyToTerraform(this._cache.internalValue),
-      environment: tfProjectEnvironmentPropertyToTerraform(this._environment.internalValue),
-      file_system_locations: cdktn.listMapper(tfProjectFileSystemLocationsPropertyToTerraform, true)(this._fileSystemLocations.internalValue),
-      logs_config: tfProjectLogsConfigPropertyToTerraform(this._logsConfig.internalValue),
-      secondary_artifacts: cdktn.listMapper(tfProjectSecondaryArtifactsPropertyToTerraform, true)(this._secondaryArtifacts.internalValue),
-      secondary_source_version: cdktn.listMapper(tfProjectSecondarySourceVersionPropertyToTerraform, true)(this._secondarySourceVersion.internalValue),
-      secondary_sources: cdktn.listMapper(tfProjectSecondarySourcesPropertyToTerraform, true)(this._secondarySources.internalValue),
-      source: tfProjectSourcePropertyToTerraform(this._source.internalValue),
-      vpc_config: tfProjectVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
+      artifacts: awsProjectArtifactsPropertyToTerraform(this._artifacts.internalValue),
+      build_batch_config: awsProjectBuildBatchConfigPropertyToTerraform(this._buildBatchConfig.internalValue),
+      cache: awsProjectCachePropertyToTerraform(this._cache.internalValue),
+      environment: awsProjectEnvironmentPropertyToTerraform(this._environment.internalValue),
+      file_system_locations: cdktn.listMapper(awsProjectFileSystemLocationsPropertyToTerraform, true)(this._fileSystemLocations.internalValue),
+      logs_config: awsProjectLogsConfigPropertyToTerraform(this._logsConfig.internalValue),
+      secondary_artifacts: cdktn.listMapper(awsProjectSecondaryArtifactsPropertyToTerraform, true)(this._secondaryArtifacts.internalValue),
+      secondary_source_version: cdktn.listMapper(awsProjectSecondarySourceVersionPropertyToTerraform, true)(this._secondarySourceVersion.internalValue),
+      secondary_sources: cdktn.listMapper(awsProjectSecondarySourcesPropertyToTerraform, true)(this._secondarySources.internalValue),
+      source: awsProjectSourcePropertyToTerraform(this._source.internalValue),
+      vpc_config: awsProjectVpcConfigPropertyToTerraform(this._vpcConfig.internalValue),
     };
   }
 
@@ -796,70 +796,70 @@ export class TfProject extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       artifacts: {
-        value: tfProjectArtifactsPropertyToHclTerraform(this._artifacts.internalValue),
+        value: awsProjectArtifactsPropertyToHclTerraform(this._artifacts.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfProject.ArtifactsPropertyList",
+        storageClassType: "AwsProject.ArtifactsPropertyList",
       },
       build_batch_config: {
-        value: tfProjectBuildBatchConfigPropertyToHclTerraform(this._buildBatchConfig.internalValue),
+        value: awsProjectBuildBatchConfigPropertyToHclTerraform(this._buildBatchConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfProject.BuildBatchConfigPropertyList",
+        storageClassType: "AwsProject.BuildBatchConfigPropertyList",
       },
       cache: {
-        value: tfProjectCachePropertyToHclTerraform(this._cache.internalValue),
+        value: awsProjectCachePropertyToHclTerraform(this._cache.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfProject.CachePropertyList",
+        storageClassType: "AwsProject.CachePropertyList",
       },
       environment: {
-        value: tfProjectEnvironmentPropertyToHclTerraform(this._environment.internalValue),
+        value: awsProjectEnvironmentPropertyToHclTerraform(this._environment.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfProject.EnvironmentPropertyList",
+        storageClassType: "AwsProject.EnvironmentPropertyList",
       },
       file_system_locations: {
-        value: cdktn.listMapperHcl(tfProjectFileSystemLocationsPropertyToHclTerraform, true)(this._fileSystemLocations.internalValue),
+        value: cdktn.listMapperHcl(awsProjectFileSystemLocationsPropertyToHclTerraform, true)(this._fileSystemLocations.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfProject.FileSystemLocationsPropertyList",
+        storageClassType: "AwsProject.FileSystemLocationsPropertyList",
       },
       logs_config: {
-        value: tfProjectLogsConfigPropertyToHclTerraform(this._logsConfig.internalValue),
+        value: awsProjectLogsConfigPropertyToHclTerraform(this._logsConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfProject.LogsConfigPropertyList",
+        storageClassType: "AwsProject.LogsConfigPropertyList",
       },
       secondary_artifacts: {
-        value: cdktn.listMapperHcl(tfProjectSecondaryArtifactsPropertyToHclTerraform, true)(this._secondaryArtifacts.internalValue),
+        value: cdktn.listMapperHcl(awsProjectSecondaryArtifactsPropertyToHclTerraform, true)(this._secondaryArtifacts.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfProject.SecondaryArtifactsPropertyList",
+        storageClassType: "AwsProject.SecondaryArtifactsPropertyList",
       },
       secondary_source_version: {
-        value: cdktn.listMapperHcl(tfProjectSecondarySourceVersionPropertyToHclTerraform, true)(this._secondarySourceVersion.internalValue),
+        value: cdktn.listMapperHcl(awsProjectSecondarySourceVersionPropertyToHclTerraform, true)(this._secondarySourceVersion.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfProject.SecondarySourceVersionPropertyList",
+        storageClassType: "AwsProject.SecondarySourceVersionPropertyList",
       },
       secondary_sources: {
-        value: cdktn.listMapperHcl(tfProjectSecondarySourcesPropertyToHclTerraform, true)(this._secondarySources.internalValue),
+        value: cdktn.listMapperHcl(awsProjectSecondarySourcesPropertyToHclTerraform, true)(this._secondarySources.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfProject.SecondarySourcesPropertyList",
+        storageClassType: "AwsProject.SecondarySourcesPropertyList",
       },
       source: {
-        value: tfProjectSourcePropertyToHclTerraform(this._source.internalValue),
+        value: awsProjectSourcePropertyToHclTerraform(this._source.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfProject.SourcePropertyList",
+        storageClassType: "AwsProject.SourcePropertyList",
       },
       vpc_config: {
-        value: tfProjectVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
+        value: awsProjectVpcConfigPropertyToHclTerraform(this._vpcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfProject.VpcConfigPropertyList",
+        storageClassType: "AwsProject.VpcConfigPropertyList",
       },
     };
 
@@ -868,7 +868,7 @@ export class TfProject extends cdktn.TerraformResource {
   }
 }
 
-export function tfProjectArtifactsPropertyToTerraform(struct?: TfProject.ArtifactsPropertyOutputReference | TfProject.ArtifactsProperty): any {
+export function awsProjectArtifactsPropertyToTerraform(struct?: AwsProject.ArtifactsPropertyOutputReference | AwsProject.ArtifactsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -888,7 +888,7 @@ export function tfProjectArtifactsPropertyToTerraform(struct?: TfProject.Artifac
 }
 
 
-export function tfProjectArtifactsPropertyToHclTerraform(struct?: TfProject.ArtifactsPropertyOutputReference | TfProject.ArtifactsProperty): any {
+export function awsProjectArtifactsPropertyToHclTerraform(struct?: AwsProject.ArtifactsPropertyOutputReference | AwsProject.ArtifactsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -961,7 +961,7 @@ export function tfProjectArtifactsPropertyToHclTerraform(struct?: TfProject.Arti
 }
 
 
-export function tfProjectRestrictionsPropertyToTerraform(struct?: TfProject.RestrictionsPropertyOutputReference | TfProject.RestrictionsProperty): any {
+export function awsProjectRestrictionsPropertyToTerraform(struct?: AwsProject.RestrictionsPropertyOutputReference | AwsProject.RestrictionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -973,7 +973,7 @@ export function tfProjectRestrictionsPropertyToTerraform(struct?: TfProject.Rest
 }
 
 
-export function tfProjectRestrictionsPropertyToHclTerraform(struct?: TfProject.RestrictionsPropertyOutputReference | TfProject.RestrictionsProperty): any {
+export function awsProjectRestrictionsPropertyToHclTerraform(struct?: AwsProject.RestrictionsPropertyOutputReference | AwsProject.RestrictionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -998,7 +998,7 @@ export function tfProjectRestrictionsPropertyToHclTerraform(struct?: TfProject.R
 }
 
 
-export function tfProjectBuildBatchConfigPropertyToTerraform(struct?: TfProject.BuildBatchConfigPropertyOutputReference | TfProject.BuildBatchConfigProperty): any {
+export function awsProjectBuildBatchConfigPropertyToTerraform(struct?: AwsProject.BuildBatchConfigPropertyOutputReference | AwsProject.BuildBatchConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1007,12 +1007,12 @@ export function tfProjectBuildBatchConfigPropertyToTerraform(struct?: TfProject.
     combine_artifacts: cdktn.booleanToTerraform(struct!.combineArtifacts),
     service_role: cdktn.stringToTerraform(struct!.serviceRole),
     timeout_in_mins: cdktn.numberToTerraform(struct!.timeoutInMins),
-    restrictions: tfProjectRestrictionsPropertyToTerraform(struct!.restrictions),
+    restrictions: awsProjectRestrictionsPropertyToTerraform(struct!.restrictions),
   }
 }
 
 
-export function tfProjectBuildBatchConfigPropertyToHclTerraform(struct?: TfProject.BuildBatchConfigPropertyOutputReference | TfProject.BuildBatchConfigProperty): any {
+export function awsProjectBuildBatchConfigPropertyToHclTerraform(struct?: AwsProject.BuildBatchConfigPropertyOutputReference | AwsProject.BuildBatchConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1037,7 +1037,7 @@ export function tfProjectBuildBatchConfigPropertyToHclTerraform(struct?: TfProje
       storageClassType: "number",
     },
     restrictions: {
-      value: tfProjectRestrictionsPropertyToHclTerraform(struct!.restrictions),
+      value: awsProjectRestrictionsPropertyToHclTerraform(struct!.restrictions),
       isBlock: true,
       type: "list",
       storageClassType: "RestrictionsPropertyList",
@@ -1049,7 +1049,7 @@ export function tfProjectBuildBatchConfigPropertyToHclTerraform(struct?: TfProje
 }
 
 
-export function tfProjectCachePropertyToTerraform(struct?: TfProject.CachePropertyOutputReference | TfProject.CacheProperty): any {
+export function awsProjectCachePropertyToTerraform(struct?: AwsProject.CachePropertyOutputReference | AwsProject.CacheProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1063,7 +1063,7 @@ export function tfProjectCachePropertyToTerraform(struct?: TfProject.CacheProper
 }
 
 
-export function tfProjectCachePropertyToHclTerraform(struct?: TfProject.CachePropertyOutputReference | TfProject.CacheProperty): any {
+export function awsProjectCachePropertyToHclTerraform(struct?: AwsProject.CachePropertyOutputReference | AwsProject.CacheProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1100,7 +1100,7 @@ export function tfProjectCachePropertyToHclTerraform(struct?: TfProject.CachePro
 }
 
 
-export function tfProjectDockerServerPropertyToTerraform(struct?: TfProject.DockerServerPropertyOutputReference | TfProject.DockerServerProperty): any {
+export function awsProjectDockerServerPropertyToTerraform(struct?: AwsProject.DockerServerPropertyOutputReference | AwsProject.DockerServerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1112,7 +1112,7 @@ export function tfProjectDockerServerPropertyToTerraform(struct?: TfProject.Dock
 }
 
 
-export function tfProjectDockerServerPropertyToHclTerraform(struct?: TfProject.DockerServerPropertyOutputReference | TfProject.DockerServerProperty): any {
+export function awsProjectDockerServerPropertyToHclTerraform(struct?: AwsProject.DockerServerPropertyOutputReference | AwsProject.DockerServerProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1137,7 +1137,7 @@ export function tfProjectDockerServerPropertyToHclTerraform(struct?: TfProject.D
 }
 
 
-export function tfProjectEnvironmentVariablePropertyToTerraform(struct?: TfProject.EnvironmentVariableProperty | cdktn.IResolvable): any {
+export function awsProjectEnvironmentVariablePropertyToTerraform(struct?: AwsProject.EnvironmentVariableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1150,7 +1150,7 @@ export function tfProjectEnvironmentVariablePropertyToTerraform(struct?: TfProje
 }
 
 
-export function tfProjectEnvironmentVariablePropertyToHclTerraform(struct?: TfProject.EnvironmentVariableProperty | cdktn.IResolvable): any {
+export function awsProjectEnvironmentVariablePropertyToHclTerraform(struct?: AwsProject.EnvironmentVariableProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1181,7 +1181,7 @@ export function tfProjectEnvironmentVariablePropertyToHclTerraform(struct?: TfPr
 }
 
 
-export function tfProjectFleetPropertyToTerraform(struct?: TfProject.FleetPropertyOutputReference | TfProject.FleetProperty): any {
+export function awsProjectFleetPropertyToTerraform(struct?: AwsProject.FleetPropertyOutputReference | AwsProject.FleetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1192,7 +1192,7 @@ export function tfProjectFleetPropertyToTerraform(struct?: TfProject.FleetProper
 }
 
 
-export function tfProjectFleetPropertyToHclTerraform(struct?: TfProject.FleetPropertyOutputReference | TfProject.FleetProperty): any {
+export function awsProjectFleetPropertyToHclTerraform(struct?: AwsProject.FleetPropertyOutputReference | AwsProject.FleetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1211,7 +1211,7 @@ export function tfProjectFleetPropertyToHclTerraform(struct?: TfProject.FleetPro
 }
 
 
-export function tfProjectRegistryCredentialPropertyToTerraform(struct?: TfProject.RegistryCredentialPropertyOutputReference | TfProject.RegistryCredentialProperty): any {
+export function awsProjectRegistryCredentialPropertyToTerraform(struct?: AwsProject.RegistryCredentialPropertyOutputReference | AwsProject.RegistryCredentialProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1223,7 +1223,7 @@ export function tfProjectRegistryCredentialPropertyToTerraform(struct?: TfProjec
 }
 
 
-export function tfProjectRegistryCredentialPropertyToHclTerraform(struct?: TfProject.RegistryCredentialPropertyOutputReference | TfProject.RegistryCredentialProperty): any {
+export function awsProjectRegistryCredentialPropertyToHclTerraform(struct?: AwsProject.RegistryCredentialPropertyOutputReference | AwsProject.RegistryCredentialProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1248,7 +1248,7 @@ export function tfProjectRegistryCredentialPropertyToHclTerraform(struct?: TfPro
 }
 
 
-export function tfProjectEnvironmentPropertyToTerraform(struct?: TfProject.EnvironmentPropertyOutputReference | TfProject.EnvironmentProperty): any {
+export function awsProjectEnvironmentPropertyToTerraform(struct?: AwsProject.EnvironmentPropertyOutputReference | AwsProject.EnvironmentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1261,15 +1261,15 @@ export function tfProjectEnvironmentPropertyToTerraform(struct?: TfProject.Envir
     image_pull_credentials_type: cdktn.stringToTerraform(struct!.imagePullCredentialsType),
     privileged_mode: cdktn.booleanToTerraform(struct!.privilegedMode),
     type: cdktn.stringToTerraform(struct!.type),
-    docker_server: tfProjectDockerServerPropertyToTerraform(struct!.dockerServer),
-    environment_variable: cdktn.listMapper(tfProjectEnvironmentVariablePropertyToTerraform, true)(struct!.environmentVariable),
-    fleet: tfProjectFleetPropertyToTerraform(struct!.fleet),
-    registry_credential: tfProjectRegistryCredentialPropertyToTerraform(struct!.registryCredential),
+    docker_server: awsProjectDockerServerPropertyToTerraform(struct!.dockerServer),
+    environment_variable: cdktn.listMapper(awsProjectEnvironmentVariablePropertyToTerraform, true)(struct!.environmentVariable),
+    fleet: awsProjectFleetPropertyToTerraform(struct!.fleet),
+    registry_credential: awsProjectRegistryCredentialPropertyToTerraform(struct!.registryCredential),
   }
 }
 
 
-export function tfProjectEnvironmentPropertyToHclTerraform(struct?: TfProject.EnvironmentPropertyOutputReference | TfProject.EnvironmentProperty): any {
+export function awsProjectEnvironmentPropertyToHclTerraform(struct?: AwsProject.EnvironmentPropertyOutputReference | AwsProject.EnvironmentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1318,25 +1318,25 @@ export function tfProjectEnvironmentPropertyToHclTerraform(struct?: TfProject.En
       storageClassType: "string",
     },
     docker_server: {
-      value: tfProjectDockerServerPropertyToHclTerraform(struct!.dockerServer),
+      value: awsProjectDockerServerPropertyToHclTerraform(struct!.dockerServer),
       isBlock: true,
       type: "list",
       storageClassType: "DockerServerPropertyList",
     },
     environment_variable: {
-      value: cdktn.listMapperHcl(tfProjectEnvironmentVariablePropertyToHclTerraform, true)(struct!.environmentVariable),
+      value: cdktn.listMapperHcl(awsProjectEnvironmentVariablePropertyToHclTerraform, true)(struct!.environmentVariable),
       isBlock: true,
       type: "list",
       storageClassType: "EnvironmentVariablePropertyList",
     },
     fleet: {
-      value: tfProjectFleetPropertyToHclTerraform(struct!.fleet),
+      value: awsProjectFleetPropertyToHclTerraform(struct!.fleet),
       isBlock: true,
       type: "list",
       storageClassType: "FleetPropertyList",
     },
     registry_credential: {
-      value: tfProjectRegistryCredentialPropertyToHclTerraform(struct!.registryCredential),
+      value: awsProjectRegistryCredentialPropertyToHclTerraform(struct!.registryCredential),
       isBlock: true,
       type: "list",
       storageClassType: "RegistryCredentialPropertyList",
@@ -1348,7 +1348,7 @@ export function tfProjectEnvironmentPropertyToHclTerraform(struct?: TfProject.En
 }
 
 
-export function tfProjectFileSystemLocationsPropertyToTerraform(struct?: TfProject.FileSystemLocationsProperty | cdktn.IResolvable): any {
+export function awsProjectFileSystemLocationsPropertyToTerraform(struct?: AwsProject.FileSystemLocationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1363,7 +1363,7 @@ export function tfProjectFileSystemLocationsPropertyToTerraform(struct?: TfProje
 }
 
 
-export function tfProjectFileSystemLocationsPropertyToHclTerraform(struct?: TfProject.FileSystemLocationsProperty | cdktn.IResolvable): any {
+export function awsProjectFileSystemLocationsPropertyToHclTerraform(struct?: AwsProject.FileSystemLocationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1406,7 +1406,7 @@ export function tfProjectFileSystemLocationsPropertyToHclTerraform(struct?: TfPr
 }
 
 
-export function tfProjectCloudwatchLogsPropertyToTerraform(struct?: TfProject.CloudwatchLogsPropertyOutputReference | TfProject.CloudwatchLogsProperty): any {
+export function awsProjectCloudwatchLogsPropertyToTerraform(struct?: AwsProject.CloudwatchLogsPropertyOutputReference | AwsProject.CloudwatchLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1419,7 +1419,7 @@ export function tfProjectCloudwatchLogsPropertyToTerraform(struct?: TfProject.Cl
 }
 
 
-export function tfProjectCloudwatchLogsPropertyToHclTerraform(struct?: TfProject.CloudwatchLogsPropertyOutputReference | TfProject.CloudwatchLogsProperty): any {
+export function awsProjectCloudwatchLogsPropertyToHclTerraform(struct?: AwsProject.CloudwatchLogsPropertyOutputReference | AwsProject.CloudwatchLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1450,7 +1450,7 @@ export function tfProjectCloudwatchLogsPropertyToHclTerraform(struct?: TfProject
 }
 
 
-export function tfProjectS3LogsPropertyToTerraform(struct?: TfProject.S3LogsPropertyOutputReference | TfProject.S3LogsProperty): any {
+export function awsProjectS3LogsPropertyToTerraform(struct?: AwsProject.S3LogsPropertyOutputReference | AwsProject.S3LogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1464,7 +1464,7 @@ export function tfProjectS3LogsPropertyToTerraform(struct?: TfProject.S3LogsProp
 }
 
 
-export function tfProjectS3LogsPropertyToHclTerraform(struct?: TfProject.S3LogsPropertyOutputReference | TfProject.S3LogsProperty): any {
+export function awsProjectS3LogsPropertyToHclTerraform(struct?: AwsProject.S3LogsPropertyOutputReference | AwsProject.S3LogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1501,32 +1501,32 @@ export function tfProjectS3LogsPropertyToHclTerraform(struct?: TfProject.S3LogsP
 }
 
 
-export function tfProjectLogsConfigPropertyToTerraform(struct?: TfProject.LogsConfigPropertyOutputReference | TfProject.LogsConfigProperty): any {
+export function awsProjectLogsConfigPropertyToTerraform(struct?: AwsProject.LogsConfigPropertyOutputReference | AwsProject.LogsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cloudwatch_logs: tfProjectCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
-    s3_logs: tfProjectS3LogsPropertyToTerraform(struct!.s3Logs),
+    cloudwatch_logs: awsProjectCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
+    s3_logs: awsProjectS3LogsPropertyToTerraform(struct!.s3Logs),
   }
 }
 
 
-export function tfProjectLogsConfigPropertyToHclTerraform(struct?: TfProject.LogsConfigPropertyOutputReference | TfProject.LogsConfigProperty): any {
+export function awsProjectLogsConfigPropertyToHclTerraform(struct?: AwsProject.LogsConfigPropertyOutputReference | AwsProject.LogsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cloudwatch_logs: {
-      value: tfProjectCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
+      value: awsProjectCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchLogsPropertyList",
     },
     s3_logs: {
-      value: tfProjectS3LogsPropertyToHclTerraform(struct!.s3Logs),
+      value: awsProjectS3LogsPropertyToHclTerraform(struct!.s3Logs),
       isBlock: true,
       type: "list",
       storageClassType: "S3LogsPropertyList",
@@ -1538,7 +1538,7 @@ export function tfProjectLogsConfigPropertyToHclTerraform(struct?: TfProject.Log
 }
 
 
-export function tfProjectSecondaryArtifactsPropertyToTerraform(struct?: TfProject.SecondaryArtifactsProperty | cdktn.IResolvable): any {
+export function awsProjectSecondaryArtifactsPropertyToTerraform(struct?: AwsProject.SecondaryArtifactsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1558,7 +1558,7 @@ export function tfProjectSecondaryArtifactsPropertyToTerraform(struct?: TfProjec
 }
 
 
-export function tfProjectSecondaryArtifactsPropertyToHclTerraform(struct?: TfProject.SecondaryArtifactsProperty | cdktn.IResolvable): any {
+export function awsProjectSecondaryArtifactsPropertyToHclTerraform(struct?: AwsProject.SecondaryArtifactsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1631,7 +1631,7 @@ export function tfProjectSecondaryArtifactsPropertyToHclTerraform(struct?: TfPro
 }
 
 
-export function tfProjectSecondarySourceVersionPropertyToTerraform(struct?: TfProject.SecondarySourceVersionProperty | cdktn.IResolvable): any {
+export function awsProjectSecondarySourceVersionPropertyToTerraform(struct?: AwsProject.SecondarySourceVersionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1643,7 +1643,7 @@ export function tfProjectSecondarySourceVersionPropertyToTerraform(struct?: TfPr
 }
 
 
-export function tfProjectSecondarySourceVersionPropertyToHclTerraform(struct?: TfProject.SecondarySourceVersionProperty | cdktn.IResolvable): any {
+export function awsProjectSecondarySourceVersionPropertyToHclTerraform(struct?: AwsProject.SecondarySourceVersionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1668,7 +1668,7 @@ export function tfProjectSecondarySourceVersionPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfProjectSecondarySourcesAuthPropertyToTerraform(struct?: TfProject.SecondarySourcesAuthPropertyOutputReference | TfProject.SecondarySourcesAuthProperty): any {
+export function awsProjectSecondarySourcesAuthPropertyToTerraform(struct?: AwsProject.SecondarySourcesAuthPropertyOutputReference | AwsProject.SecondarySourcesAuthProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1680,7 +1680,7 @@ export function tfProjectSecondarySourcesAuthPropertyToTerraform(struct?: TfProj
 }
 
 
-export function tfProjectSecondarySourcesAuthPropertyToHclTerraform(struct?: TfProject.SecondarySourcesAuthPropertyOutputReference | TfProject.SecondarySourcesAuthProperty): any {
+export function awsProjectSecondarySourcesAuthPropertyToHclTerraform(struct?: AwsProject.SecondarySourcesAuthPropertyOutputReference | AwsProject.SecondarySourcesAuthProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1705,7 +1705,7 @@ export function tfProjectSecondarySourcesAuthPropertyToHclTerraform(struct?: TfP
 }
 
 
-export function tfProjectSecondarySourcesBuildStatusConfigPropertyToTerraform(struct?: TfProject.SecondarySourcesBuildStatusConfigPropertyOutputReference | TfProject.SecondarySourcesBuildStatusConfigProperty): any {
+export function awsProjectSecondarySourcesBuildStatusConfigPropertyToTerraform(struct?: AwsProject.SecondarySourcesBuildStatusConfigPropertyOutputReference | AwsProject.SecondarySourcesBuildStatusConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1717,7 +1717,7 @@ export function tfProjectSecondarySourcesBuildStatusConfigPropertyToTerraform(st
 }
 
 
-export function tfProjectSecondarySourcesBuildStatusConfigPropertyToHclTerraform(struct?: TfProject.SecondarySourcesBuildStatusConfigPropertyOutputReference | TfProject.SecondarySourcesBuildStatusConfigProperty): any {
+export function awsProjectSecondarySourcesBuildStatusConfigPropertyToHclTerraform(struct?: AwsProject.SecondarySourcesBuildStatusConfigPropertyOutputReference | AwsProject.SecondarySourcesBuildStatusConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1742,7 +1742,7 @@ export function tfProjectSecondarySourcesBuildStatusConfigPropertyToHclTerraform
 }
 
 
-export function tfProjectSecondarySourcesGitSubmodulesConfigPropertyToTerraform(struct?: TfProject.SecondarySourcesGitSubmodulesConfigPropertyOutputReference | TfProject.SecondarySourcesGitSubmodulesConfigProperty): any {
+export function awsProjectSecondarySourcesGitSubmodulesConfigPropertyToTerraform(struct?: AwsProject.SecondarySourcesGitSubmodulesConfigPropertyOutputReference | AwsProject.SecondarySourcesGitSubmodulesConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1753,7 +1753,7 @@ export function tfProjectSecondarySourcesGitSubmodulesConfigPropertyToTerraform(
 }
 
 
-export function tfProjectSecondarySourcesGitSubmodulesConfigPropertyToHclTerraform(struct?: TfProject.SecondarySourcesGitSubmodulesConfigPropertyOutputReference | TfProject.SecondarySourcesGitSubmodulesConfigProperty): any {
+export function awsProjectSecondarySourcesGitSubmodulesConfigPropertyToHclTerraform(struct?: AwsProject.SecondarySourcesGitSubmodulesConfigPropertyOutputReference | AwsProject.SecondarySourcesGitSubmodulesConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1772,7 +1772,7 @@ export function tfProjectSecondarySourcesGitSubmodulesConfigPropertyToHclTerrafo
 }
 
 
-export function tfProjectSecondarySourcesPropertyToTerraform(struct?: TfProject.SecondarySourcesProperty | cdktn.IResolvable): any {
+export function awsProjectSecondarySourcesPropertyToTerraform(struct?: AwsProject.SecondarySourcesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1785,14 +1785,14 @@ export function tfProjectSecondarySourcesPropertyToTerraform(struct?: TfProject.
     report_build_status: cdktn.booleanToTerraform(struct!.reportBuildStatus),
     source_identifier: cdktn.stringToTerraform(struct!.sourceIdentifier),
     type: cdktn.stringToTerraform(struct!.type),
-    auth: tfProjectSecondarySourcesAuthPropertyToTerraform(struct!.auth),
-    build_status_config: tfProjectSecondarySourcesBuildStatusConfigPropertyToTerraform(struct!.buildStatusConfig),
-    git_submodules_config: tfProjectSecondarySourcesGitSubmodulesConfigPropertyToTerraform(struct!.gitSubmodulesConfig),
+    auth: awsProjectSecondarySourcesAuthPropertyToTerraform(struct!.auth),
+    build_status_config: awsProjectSecondarySourcesBuildStatusConfigPropertyToTerraform(struct!.buildStatusConfig),
+    git_submodules_config: awsProjectSecondarySourcesGitSubmodulesConfigPropertyToTerraform(struct!.gitSubmodulesConfig),
   }
 }
 
 
-export function tfProjectSecondarySourcesPropertyToHclTerraform(struct?: TfProject.SecondarySourcesProperty | cdktn.IResolvable): any {
+export function awsProjectSecondarySourcesPropertyToHclTerraform(struct?: AwsProject.SecondarySourcesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1841,19 +1841,19 @@ export function tfProjectSecondarySourcesPropertyToHclTerraform(struct?: TfProje
       storageClassType: "string",
     },
     auth: {
-      value: tfProjectSecondarySourcesAuthPropertyToHclTerraform(struct!.auth),
+      value: awsProjectSecondarySourcesAuthPropertyToHclTerraform(struct!.auth),
       isBlock: true,
       type: "list",
       storageClassType: "SecondarySourcesAuthPropertyList",
     },
     build_status_config: {
-      value: tfProjectSecondarySourcesBuildStatusConfigPropertyToHclTerraform(struct!.buildStatusConfig),
+      value: awsProjectSecondarySourcesBuildStatusConfigPropertyToHclTerraform(struct!.buildStatusConfig),
       isBlock: true,
       type: "list",
       storageClassType: "SecondarySourcesBuildStatusConfigPropertyList",
     },
     git_submodules_config: {
-      value: tfProjectSecondarySourcesGitSubmodulesConfigPropertyToHclTerraform(struct!.gitSubmodulesConfig),
+      value: awsProjectSecondarySourcesGitSubmodulesConfigPropertyToHclTerraform(struct!.gitSubmodulesConfig),
       isBlock: true,
       type: "list",
       storageClassType: "SecondarySourcesGitSubmodulesConfigPropertyList",
@@ -1865,7 +1865,7 @@ export function tfProjectSecondarySourcesPropertyToHclTerraform(struct?: TfProje
 }
 
 
-export function tfProjectSourceAuthPropertyToTerraform(struct?: TfProject.SourceAuthPropertyOutputReference | TfProject.SourceAuthProperty): any {
+export function awsProjectSourceAuthPropertyToTerraform(struct?: AwsProject.SourceAuthPropertyOutputReference | AwsProject.SourceAuthProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1877,7 +1877,7 @@ export function tfProjectSourceAuthPropertyToTerraform(struct?: TfProject.Source
 }
 
 
-export function tfProjectSourceAuthPropertyToHclTerraform(struct?: TfProject.SourceAuthPropertyOutputReference | TfProject.SourceAuthProperty): any {
+export function awsProjectSourceAuthPropertyToHclTerraform(struct?: AwsProject.SourceAuthPropertyOutputReference | AwsProject.SourceAuthProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1902,7 +1902,7 @@ export function tfProjectSourceAuthPropertyToHclTerraform(struct?: TfProject.Sou
 }
 
 
-export function tfProjectSourceBuildStatusConfigPropertyToTerraform(struct?: TfProject.SourceBuildStatusConfigPropertyOutputReference | TfProject.SourceBuildStatusConfigProperty): any {
+export function awsProjectSourceBuildStatusConfigPropertyToTerraform(struct?: AwsProject.SourceBuildStatusConfigPropertyOutputReference | AwsProject.SourceBuildStatusConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1914,7 +1914,7 @@ export function tfProjectSourceBuildStatusConfigPropertyToTerraform(struct?: TfP
 }
 
 
-export function tfProjectSourceBuildStatusConfigPropertyToHclTerraform(struct?: TfProject.SourceBuildStatusConfigPropertyOutputReference | TfProject.SourceBuildStatusConfigProperty): any {
+export function awsProjectSourceBuildStatusConfigPropertyToHclTerraform(struct?: AwsProject.SourceBuildStatusConfigPropertyOutputReference | AwsProject.SourceBuildStatusConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1939,7 +1939,7 @@ export function tfProjectSourceBuildStatusConfigPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfProjectSourceGitSubmodulesConfigPropertyToTerraform(struct?: TfProject.SourceGitSubmodulesConfigPropertyOutputReference | TfProject.SourceGitSubmodulesConfigProperty): any {
+export function awsProjectSourceGitSubmodulesConfigPropertyToTerraform(struct?: AwsProject.SourceGitSubmodulesConfigPropertyOutputReference | AwsProject.SourceGitSubmodulesConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1950,7 +1950,7 @@ export function tfProjectSourceGitSubmodulesConfigPropertyToTerraform(struct?: T
 }
 
 
-export function tfProjectSourceGitSubmodulesConfigPropertyToHclTerraform(struct?: TfProject.SourceGitSubmodulesConfigPropertyOutputReference | TfProject.SourceGitSubmodulesConfigProperty): any {
+export function awsProjectSourceGitSubmodulesConfigPropertyToHclTerraform(struct?: AwsProject.SourceGitSubmodulesConfigPropertyOutputReference | AwsProject.SourceGitSubmodulesConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1969,7 +1969,7 @@ export function tfProjectSourceGitSubmodulesConfigPropertyToHclTerraform(struct?
 }
 
 
-export function tfProjectSourcePropertyToTerraform(struct?: TfProject.SourcePropertyOutputReference | TfProject.SourceProperty): any {
+export function awsProjectSourcePropertyToTerraform(struct?: AwsProject.SourcePropertyOutputReference | AwsProject.SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1981,14 +1981,14 @@ export function tfProjectSourcePropertyToTerraform(struct?: TfProject.SourceProp
     location: cdktn.stringToTerraform(struct!.location),
     report_build_status: cdktn.booleanToTerraform(struct!.reportBuildStatus),
     type: cdktn.stringToTerraform(struct!.type),
-    auth: tfProjectSourceAuthPropertyToTerraform(struct!.auth),
-    build_status_config: tfProjectSourceBuildStatusConfigPropertyToTerraform(struct!.buildStatusConfig),
-    git_submodules_config: tfProjectSourceGitSubmodulesConfigPropertyToTerraform(struct!.gitSubmodulesConfig),
+    auth: awsProjectSourceAuthPropertyToTerraform(struct!.auth),
+    build_status_config: awsProjectSourceBuildStatusConfigPropertyToTerraform(struct!.buildStatusConfig),
+    git_submodules_config: awsProjectSourceGitSubmodulesConfigPropertyToTerraform(struct!.gitSubmodulesConfig),
   }
 }
 
 
-export function tfProjectSourcePropertyToHclTerraform(struct?: TfProject.SourcePropertyOutputReference | TfProject.SourceProperty): any {
+export function awsProjectSourcePropertyToHclTerraform(struct?: AwsProject.SourcePropertyOutputReference | AwsProject.SourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2031,19 +2031,19 @@ export function tfProjectSourcePropertyToHclTerraform(struct?: TfProject.SourceP
       storageClassType: "string",
     },
     auth: {
-      value: tfProjectSourceAuthPropertyToHclTerraform(struct!.auth),
+      value: awsProjectSourceAuthPropertyToHclTerraform(struct!.auth),
       isBlock: true,
       type: "list",
       storageClassType: "SourceAuthPropertyList",
     },
     build_status_config: {
-      value: tfProjectSourceBuildStatusConfigPropertyToHclTerraform(struct!.buildStatusConfig),
+      value: awsProjectSourceBuildStatusConfigPropertyToHclTerraform(struct!.buildStatusConfig),
       isBlock: true,
       type: "list",
       storageClassType: "SourceBuildStatusConfigPropertyList",
     },
     git_submodules_config: {
-      value: tfProjectSourceGitSubmodulesConfigPropertyToHclTerraform(struct!.gitSubmodulesConfig),
+      value: awsProjectSourceGitSubmodulesConfigPropertyToHclTerraform(struct!.gitSubmodulesConfig),
       isBlock: true,
       type: "list",
       storageClassType: "SourceGitSubmodulesConfigPropertyList",
@@ -2055,7 +2055,7 @@ export function tfProjectSourcePropertyToHclTerraform(struct?: TfProject.SourceP
 }
 
 
-export function tfProjectVpcConfigPropertyToTerraform(struct?: TfProject.VpcConfigPropertyOutputReference | TfProject.VpcConfigProperty): any {
+export function awsProjectVpcConfigPropertyToTerraform(struct?: AwsProject.VpcConfigPropertyOutputReference | AwsProject.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2068,7 +2068,7 @@ export function tfProjectVpcConfigPropertyToTerraform(struct?: TfProject.VpcConf
 }
 
 
-export function tfProjectVpcConfigPropertyToHclTerraform(struct?: TfProject.VpcConfigPropertyOutputReference | TfProject.VpcConfigProperty): any {
+export function awsProjectVpcConfigPropertyToHclTerraform(struct?: AwsProject.VpcConfigPropertyOutputReference | AwsProject.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2099,46 +2099,46 @@ export function tfProjectVpcConfigPropertyToHclTerraform(struct?: TfProject.VpcC
 }
 
 
-export namespace TfProject {
+export namespace AwsProject {
 export interface ArtifactsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#artifact_identifier TfProject#artifact_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#artifact_identifier AwsProject#artifact_identifier}
   */
   readonly artifactIdentifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#bucket_owner_access TfProject#bucket_owner_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#bucket_owner_access AwsProject#bucket_owner_access}
   */
   readonly bucketOwnerAccess?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#encryption_disabled TfProject#encryption_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#encryption_disabled AwsProject#encryption_disabled}
   */
   readonly encryptionDisabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#location TfProject#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#location AwsProject#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#name TfProject#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#name AwsProject#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#namespace_type TfProject#namespace_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#namespace_type AwsProject#namespace_type}
   */
   readonly namespaceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#override_artifact_name TfProject#override_artifact_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#override_artifact_name AwsProject#override_artifact_name}
   */
   readonly overrideArtifactName?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#packaging TfProject#packaging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#packaging AwsProject#packaging}
   */
   readonly packaging?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#path TfProject#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#path AwsProject#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type TfProject#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type AwsProject#type}
   */
   readonly type: string;
 }
@@ -2387,11 +2387,11 @@ export class ArtifactsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RestrictionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#compute_types_allowed TfProject#compute_types_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#compute_types_allowed AwsProject#compute_types_allowed}
   */
   readonly computeTypesAllowed?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#maximum_builds_allowed TfProject#maximum_builds_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#maximum_builds_allowed AwsProject#maximum_builds_allowed}
   */
   readonly maximumBuildsAllowed?: number;
 }
@@ -2467,21 +2467,21 @@ export class RestrictionsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface BuildBatchConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#combine_artifacts TfProject#combine_artifacts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#combine_artifacts AwsProject#combine_artifacts}
   */
   readonly combineArtifacts?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#service_role TfProject#service_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#service_role AwsProject#service_role}
   */
   readonly serviceRole: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#timeout_in_mins TfProject#timeout_in_mins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#timeout_in_mins AwsProject#timeout_in_mins}
   */
   readonly timeoutInMins?: number;
   /**
   * restrictions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#restrictions TfProject#restrictions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#restrictions AwsProject#restrictions}
   */
   readonly restrictions?: RestrictionsProperty;
 }
@@ -2598,19 +2598,19 @@ export class BuildBatchConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface CacheProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#cache_namespace TfProject#cache_namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#cache_namespace AwsProject#cache_namespace}
   */
   readonly cacheNamespace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#location TfProject#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#location AwsProject#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#modes TfProject#modes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#modes AwsProject#modes}
   */
   readonly modes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type TfProject#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type AwsProject#type}
   */
   readonly type?: string;
 }
@@ -2730,11 +2730,11 @@ export class CachePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface DockerServerProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#compute_type TfProject#compute_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#compute_type AwsProject#compute_type}
   */
   readonly computeType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#security_group_ids TfProject#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#security_group_ids AwsProject#security_group_ids}
   */
   readonly securityGroupIds?: string[];
 }
@@ -2807,15 +2807,15 @@ export class DockerServerPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface EnvironmentVariableProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#name TfProject#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#name AwsProject#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type TfProject#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type AwsProject#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#value TfProject#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#value AwsProject#value}
   */
   readonly value: string;
 }
@@ -2939,7 +2939,7 @@ export class EnvironmentVariablePropertyList extends cdktn.ComplexList {
 }
 export interface FleetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#fleet_arn TfProject#fleet_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#fleet_arn AwsProject#fleet_arn}
   */
   readonly fleetArn?: string;
 }
@@ -2993,11 +2993,11 @@ export class FleetPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RegistryCredentialProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#credential TfProject#credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#credential AwsProject#credential}
   */
   readonly credential: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#credential_provider TfProject#credential_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#credential_provider AwsProject#credential_provider}
   */
   readonly credentialProvider: string;
 }
@@ -3067,55 +3067,55 @@ export class RegistryCredentialPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface EnvironmentProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#certificate TfProject#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#certificate AwsProject#certificate}
   */
   readonly certificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#compute_type TfProject#compute_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#compute_type AwsProject#compute_type}
   */
   readonly computeType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#host_kernel TfProject#host_kernel}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#host_kernel AwsProject#host_kernel}
   */
   readonly hostKernel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#image TfProject#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#image AwsProject#image}
   */
   readonly image: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#image_pull_credentials_type TfProject#image_pull_credentials_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#image_pull_credentials_type AwsProject#image_pull_credentials_type}
   */
   readonly imagePullCredentialsType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#privileged_mode TfProject#privileged_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#privileged_mode AwsProject#privileged_mode}
   */
   readonly privilegedMode?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type TfProject#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type AwsProject#type}
   */
   readonly type: string;
   /**
   * docker_server block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#docker_server TfProject#docker_server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#docker_server AwsProject#docker_server}
   */
   readonly dockerServer?: DockerServerProperty;
   /**
   * environment_variable block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#environment_variable TfProject#environment_variable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#environment_variable AwsProject#environment_variable}
   */
   readonly environmentVariable?: EnvironmentVariableProperty[] | cdktn.IResolvable;
   /**
   * fleet block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#fleet TfProject#fleet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#fleet AwsProject#fleet}
   */
   readonly fleet?: FleetProperty;
   /**
   * registry_credential block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#registry_credential TfProject#registry_credential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#registry_credential AwsProject#registry_credential}
   */
   readonly registryCredential?: RegistryCredentialProperty;
 }
@@ -3380,23 +3380,23 @@ export class EnvironmentPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FileSystemLocationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#identifier TfProject#identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#identifier AwsProject#identifier}
   */
   readonly identifier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#location TfProject#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#location AwsProject#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#mount_options TfProject#mount_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#mount_options AwsProject#mount_options}
   */
   readonly mountOptions?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#mount_point TfProject#mount_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#mount_point AwsProject#mount_point}
   */
   readonly mountPoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type TfProject#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type AwsProject#type}
   */
   readonly type?: string;
 }
@@ -3570,15 +3570,15 @@ export class FileSystemLocationsPropertyList extends cdktn.ComplexList {
 }
 export interface CloudwatchLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#group_name TfProject#group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#group_name AwsProject#group_name}
   */
   readonly groupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#status TfProject#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#status AwsProject#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#stream_name TfProject#stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#stream_name AwsProject#stream_name}
   */
   readonly streamName?: string;
 }
@@ -3676,19 +3676,19 @@ export class CloudwatchLogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface S3LogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#bucket_owner_access TfProject#bucket_owner_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#bucket_owner_access AwsProject#bucket_owner_access}
   */
   readonly bucketOwnerAccess?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#encryption_disabled TfProject#encryption_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#encryption_disabled AwsProject#encryption_disabled}
   */
   readonly encryptionDisabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#location TfProject#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#location AwsProject#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#status TfProject#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#status AwsProject#status}
   */
   readonly status?: string;
 }
@@ -3810,13 +3810,13 @@ export interface LogsConfigProperty {
   /**
   * cloudwatch_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#cloudwatch_logs TfProject#cloudwatch_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#cloudwatch_logs AwsProject#cloudwatch_logs}
   */
   readonly cloudwatchLogs?: CloudwatchLogsProperty;
   /**
   * s3_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#s3_logs TfProject#s3_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#s3_logs AwsProject#s3_logs}
   */
   readonly s3Logs?: S3LogsProperty;
 }
@@ -3892,43 +3892,43 @@ export class LogsConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SecondaryArtifactsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#artifact_identifier TfProject#artifact_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#artifact_identifier AwsProject#artifact_identifier}
   */
   readonly artifactIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#bucket_owner_access TfProject#bucket_owner_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#bucket_owner_access AwsProject#bucket_owner_access}
   */
   readonly bucketOwnerAccess?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#encryption_disabled TfProject#encryption_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#encryption_disabled AwsProject#encryption_disabled}
   */
   readonly encryptionDisabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#location TfProject#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#location AwsProject#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#name TfProject#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#name AwsProject#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#namespace_type TfProject#namespace_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#namespace_type AwsProject#namespace_type}
   */
   readonly namespaceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#override_artifact_name TfProject#override_artifact_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#override_artifact_name AwsProject#override_artifact_name}
   */
   readonly overrideArtifactName?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#packaging TfProject#packaging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#packaging AwsProject#packaging}
   */
   readonly packaging?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#path TfProject#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#path AwsProject#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type TfProject#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type AwsProject#type}
   */
   readonly type: string;
 }
@@ -4206,11 +4206,11 @@ export class SecondaryArtifactsPropertyList extends cdktn.ComplexList {
 }
 export interface SecondarySourceVersionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#source_identifier TfProject#source_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#source_identifier AwsProject#source_identifier}
   */
   readonly sourceIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#source_version TfProject#source_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#source_version AwsProject#source_version}
   */
   readonly sourceVersion: string;
 }
@@ -4312,11 +4312,11 @@ export class SecondarySourceVersionPropertyList extends cdktn.ComplexList {
 }
 export interface SecondarySourcesAuthProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#resource TfProject#resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#resource AwsProject#resource}
   */
   readonly resource: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type TfProject#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type AwsProject#type}
   */
   readonly type: string;
 }
@@ -4386,11 +4386,11 @@ export class SecondarySourcesAuthPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface SecondarySourcesBuildStatusConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#context TfProject#context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#context AwsProject#context}
   */
   readonly context?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#target_url TfProject#target_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#target_url AwsProject#target_url}
   */
   readonly targetUrl?: string;
 }
@@ -4466,7 +4466,7 @@ export class SecondarySourcesBuildStatusConfigPropertyOutputReference extends cd
 }
 export interface SecondarySourcesGitSubmodulesConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#fetch_submodules TfProject#fetch_submodules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#fetch_submodules AwsProject#fetch_submodules}
   */
   readonly fetchSubmodules: boolean | cdktn.IResolvable;
 }
@@ -4517,49 +4517,49 @@ export class SecondarySourcesGitSubmodulesConfigPropertyOutputReference extends 
 }
 export interface SecondarySourcesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#buildspec TfProject#buildspec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#buildspec AwsProject#buildspec}
   */
   readonly buildspec?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#git_clone_depth TfProject#git_clone_depth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#git_clone_depth AwsProject#git_clone_depth}
   */
   readonly gitCloneDepth?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#insecure_ssl TfProject#insecure_ssl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#insecure_ssl AwsProject#insecure_ssl}
   */
   readonly insecureSsl?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#location TfProject#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#location AwsProject#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#report_build_status TfProject#report_build_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#report_build_status AwsProject#report_build_status}
   */
   readonly reportBuildStatus?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#source_identifier TfProject#source_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#source_identifier AwsProject#source_identifier}
   */
   readonly sourceIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type TfProject#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type AwsProject#type}
   */
   readonly type: string;
   /**
   * auth block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#auth TfProject#auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#auth AwsProject#auth}
   */
   readonly auth?: SecondarySourcesAuthProperty;
   /**
   * build_status_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#build_status_config TfProject#build_status_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#build_status_config AwsProject#build_status_config}
   */
   readonly buildStatusConfig?: SecondarySourcesBuildStatusConfigProperty;
   /**
   * git_submodules_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#git_submodules_config TfProject#git_submodules_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#git_submodules_config AwsProject#git_submodules_config}
   */
   readonly gitSubmodulesConfig?: SecondarySourcesGitSubmodulesConfigProperty;
 }
@@ -4837,11 +4837,11 @@ export class SecondarySourcesPropertyList extends cdktn.ComplexList {
 }
 export interface SourceAuthProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#resource TfProject#resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#resource AwsProject#resource}
   */
   readonly resource: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type TfProject#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type AwsProject#type}
   */
   readonly type: string;
 }
@@ -4911,11 +4911,11 @@ export class SourceAuthPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SourceBuildStatusConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#context TfProject#context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#context AwsProject#context}
   */
   readonly context?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#target_url TfProject#target_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#target_url AwsProject#target_url}
   */
   readonly targetUrl?: string;
 }
@@ -4991,7 +4991,7 @@ export class SourceBuildStatusConfigPropertyOutputReference extends cdktn.Comple
 }
 export interface SourceGitSubmodulesConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#fetch_submodules TfProject#fetch_submodules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#fetch_submodules AwsProject#fetch_submodules}
   */
   readonly fetchSubmodules: boolean | cdktn.IResolvable;
 }
@@ -5042,45 +5042,45 @@ export class SourceGitSubmodulesConfigPropertyOutputReference extends cdktn.Comp
 }
 export interface SourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#buildspec TfProject#buildspec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#buildspec AwsProject#buildspec}
   */
   readonly buildspec?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#git_clone_depth TfProject#git_clone_depth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#git_clone_depth AwsProject#git_clone_depth}
   */
   readonly gitCloneDepth?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#insecure_ssl TfProject#insecure_ssl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#insecure_ssl AwsProject#insecure_ssl}
   */
   readonly insecureSsl?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#location TfProject#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#location AwsProject#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#report_build_status TfProject#report_build_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#report_build_status AwsProject#report_build_status}
   */
   readonly reportBuildStatus?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type TfProject#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#type AwsProject#type}
   */
   readonly type: string;
   /**
   * auth block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#auth TfProject#auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#auth AwsProject#auth}
   */
   readonly auth?: SourceAuthProperty;
   /**
   * build_status_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#build_status_config TfProject#build_status_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#build_status_config AwsProject#build_status_config}
   */
   readonly buildStatusConfig?: SourceBuildStatusConfigProperty;
   /**
   * git_submodules_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#git_submodules_config TfProject#git_submodules_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#git_submodules_config AwsProject#git_submodules_config}
   */
   readonly gitSubmodulesConfig?: SourceGitSubmodulesConfigProperty;
 }
@@ -5307,15 +5307,15 @@ export class SourcePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#security_group_ids TfProject#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#security_group_ids AwsProject#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#subnets TfProject#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#subnets AwsProject#subnets}
   */
   readonly subnets: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#vpc_id TfProject#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_project#vpc_id AwsProject#vpc_id}
   */
   readonly vpcId: string;
 }

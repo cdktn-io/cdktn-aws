@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfFunctionConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsFunctionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function#function_name DataTfFunction#function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function#function_name DataAwsFunction#function_name}
   */
   readonly functionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function#id DataTfFunction#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function#id DataAwsFunction#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function#qualifier DataTfFunction#qualifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function#qualifier DataAwsFunction#qualifier}
   */
   readonly qualifier?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function#region DataTfFunction#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function#region DataAwsFunction#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function#tags DataTfFunction#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function#tags DataAwsFunction#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface DataTfFunctionConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function aws_lambda_function}
 */
-export class DataTfFunction extends cdktn.TerraformDataSource {
+export class DataAwsFunction extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class DataTfFunction extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfFunction resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsFunction resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfFunction to import
-  * @param importFromId The id of the existing DataTfFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfFunction to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsFunction to import
+  * @param importFromId The id of the existing DataAwsFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/lambda_function#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsFunction to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_lambda_function", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class DataTfFunction extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfFunctionConfig
+  * @param options DataAwsFunctionConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfFunctionConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsFunctionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_lambda_function',
       terraformGeneratorMetadata: {
@@ -106,7 +106,7 @@ export class DataTfFunction extends cdktn.TerraformDataSource {
   }
 
   // capacity_provider_config - computed: true, optional: false, required: false
-  private _capacityProviderConfig = new DataTfFunction.CapacityProviderConfigPropertyList(this, "capacity_provider_config", false);
+  private _capacityProviderConfig = new DataAwsFunction.CapacityProviderConfigPropertyList(this, "capacity_provider_config", false);
   public get capacityProviderConfig() {
     return this._capacityProviderConfig;
   }
@@ -122,7 +122,7 @@ export class DataTfFunction extends cdktn.TerraformDataSource {
   }
 
   // dead_letter_config - computed: true, optional: false, required: false
-  private _deadLetterConfig = new DataTfFunction.DeadLetterConfigPropertyList(this, "dead_letter_config", false);
+  private _deadLetterConfig = new DataAwsFunction.DeadLetterConfigPropertyList(this, "dead_letter_config", false);
   public get deadLetterConfig() {
     return this._deadLetterConfig;
   }
@@ -133,25 +133,25 @@ export class DataTfFunction extends cdktn.TerraformDataSource {
   }
 
   // durable_config - computed: true, optional: false, required: false
-  private _durableConfig = new DataTfFunction.DurableConfigPropertyList(this, "durable_config", false);
+  private _durableConfig = new DataAwsFunction.DurableConfigPropertyList(this, "durable_config", false);
   public get durableConfig() {
     return this._durableConfig;
   }
 
   // environment - computed: true, optional: false, required: false
-  private _environment = new DataTfFunction.EnvironmentPropertyList(this, "environment", false);
+  private _environment = new DataAwsFunction.EnvironmentPropertyList(this, "environment", false);
   public get environment() {
     return this._environment;
   }
 
   // ephemeral_storage - computed: true, optional: false, required: false
-  private _ephemeralStorage = new DataTfFunction.EphemeralStoragePropertyList(this, "ephemeral_storage", false);
+  private _ephemeralStorage = new DataAwsFunction.EphemeralStoragePropertyList(this, "ephemeral_storage", false);
   public get ephemeralStorage() {
     return this._ephemeralStorage;
   }
 
   // file_system_config - computed: true, optional: false, required: false
-  private _fileSystemConfig = new DataTfFunction.FileSystemConfigPropertyList(this, "file_system_config", false);
+  private _fileSystemConfig = new DataAwsFunction.FileSystemConfigPropertyList(this, "file_system_config", false);
   public get fileSystemConfig() {
     return this._fileSystemConfig;
   }
@@ -216,7 +216,7 @@ export class DataTfFunction extends cdktn.TerraformDataSource {
   }
 
   // logging_config - computed: true, optional: false, required: false
-  private _loggingConfig = new DataTfFunction.LoggingConfigPropertyList(this, "logging_config", false);
+  private _loggingConfig = new DataAwsFunction.LoggingConfigPropertyList(this, "logging_config", false);
   public get loggingConfig() {
     return this._loggingConfig;
   }
@@ -330,7 +330,7 @@ export class DataTfFunction extends cdktn.TerraformDataSource {
   }
 
   // tenancy_config - computed: true, optional: false, required: false
-  private _tenancyConfig = new DataTfFunction.TenancyConfigPropertyList(this, "tenancy_config", false);
+  private _tenancyConfig = new DataAwsFunction.TenancyConfigPropertyList(this, "tenancy_config", false);
   public get tenancyConfig() {
     return this._tenancyConfig;
   }
@@ -341,7 +341,7 @@ export class DataTfFunction extends cdktn.TerraformDataSource {
   }
 
   // tracing_config - computed: true, optional: false, required: false
-  private _tracingConfig = new DataTfFunction.TracingConfigPropertyList(this, "tracing_config", false);
+  private _tracingConfig = new DataAwsFunction.TracingConfigPropertyList(this, "tracing_config", false);
   public get tracingConfig() {
     return this._tracingConfig;
   }
@@ -352,7 +352,7 @@ export class DataTfFunction extends cdktn.TerraformDataSource {
   }
 
   // vpc_config - computed: true, optional: false, required: false
-  private _vpcConfig = new DataTfFunction.VpcConfigPropertyList(this, "vpc_config", false);
+  private _vpcConfig = new DataAwsFunction.VpcConfigPropertyList(this, "vpc_config", false);
   public get vpcConfig() {
     return this._vpcConfig;
   }
@@ -410,7 +410,7 @@ export class DataTfFunction extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfFunctionLambdaManagedInstancesCapacityProviderConfigPropertyToTerraform(struct?: DataTfFunction.LambdaManagedInstancesCapacityProviderConfigProperty): any {
+export function dataAwsFunctionLambdaManagedInstancesCapacityProviderConfigPropertyToTerraform(struct?: DataAwsFunction.LambdaManagedInstancesCapacityProviderConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -420,7 +420,7 @@ export function dataTfFunctionLambdaManagedInstancesCapacityProviderConfigProper
 }
 
 
-export function dataTfFunctionLambdaManagedInstancesCapacityProviderConfigPropertyToHclTerraform(struct?: DataTfFunction.LambdaManagedInstancesCapacityProviderConfigProperty): any {
+export function dataAwsFunctionLambdaManagedInstancesCapacityProviderConfigPropertyToHclTerraform(struct?: DataAwsFunction.LambdaManagedInstancesCapacityProviderConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,7 +431,7 @@ export function dataTfFunctionLambdaManagedInstancesCapacityProviderConfigProper
 }
 
 
-export function dataTfFunctionCapacityProviderConfigPropertyToTerraform(struct?: DataTfFunction.CapacityProviderConfigProperty): any {
+export function dataAwsFunctionCapacityProviderConfigPropertyToTerraform(struct?: DataAwsFunction.CapacityProviderConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -441,7 +441,7 @@ export function dataTfFunctionCapacityProviderConfigPropertyToTerraform(struct?:
 }
 
 
-export function dataTfFunctionCapacityProviderConfigPropertyToHclTerraform(struct?: DataTfFunction.CapacityProviderConfigProperty): any {
+export function dataAwsFunctionCapacityProviderConfigPropertyToHclTerraform(struct?: DataAwsFunction.CapacityProviderConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -452,7 +452,7 @@ export function dataTfFunctionCapacityProviderConfigPropertyToHclTerraform(struc
 }
 
 
-export function dataTfFunctionDeadLetterConfigPropertyToTerraform(struct?: DataTfFunction.DeadLetterConfigProperty): any {
+export function dataAwsFunctionDeadLetterConfigPropertyToTerraform(struct?: DataAwsFunction.DeadLetterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -462,7 +462,7 @@ export function dataTfFunctionDeadLetterConfigPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfFunctionDeadLetterConfigPropertyToHclTerraform(struct?: DataTfFunction.DeadLetterConfigProperty): any {
+export function dataAwsFunctionDeadLetterConfigPropertyToHclTerraform(struct?: DataAwsFunction.DeadLetterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -473,7 +473,7 @@ export function dataTfFunctionDeadLetterConfigPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfFunctionDurableConfigPropertyToTerraform(struct?: DataTfFunction.DurableConfigProperty): any {
+export function dataAwsFunctionDurableConfigPropertyToTerraform(struct?: DataAwsFunction.DurableConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,7 +483,7 @@ export function dataTfFunctionDurableConfigPropertyToTerraform(struct?: DataTfFu
 }
 
 
-export function dataTfFunctionDurableConfigPropertyToHclTerraform(struct?: DataTfFunction.DurableConfigProperty): any {
+export function dataAwsFunctionDurableConfigPropertyToHclTerraform(struct?: DataAwsFunction.DurableConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -494,7 +494,7 @@ export function dataTfFunctionDurableConfigPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfFunctionEnvironmentPropertyToTerraform(struct?: DataTfFunction.EnvironmentProperty): any {
+export function dataAwsFunctionEnvironmentPropertyToTerraform(struct?: DataAwsFunction.EnvironmentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,7 +504,7 @@ export function dataTfFunctionEnvironmentPropertyToTerraform(struct?: DataTfFunc
 }
 
 
-export function dataTfFunctionEnvironmentPropertyToHclTerraform(struct?: DataTfFunction.EnvironmentProperty): any {
+export function dataAwsFunctionEnvironmentPropertyToHclTerraform(struct?: DataAwsFunction.EnvironmentProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -515,7 +515,7 @@ export function dataTfFunctionEnvironmentPropertyToHclTerraform(struct?: DataTfF
 }
 
 
-export function dataTfFunctionEphemeralStoragePropertyToTerraform(struct?: DataTfFunction.EphemeralStorageProperty): any {
+export function dataAwsFunctionEphemeralStoragePropertyToTerraform(struct?: DataAwsFunction.EphemeralStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -525,7 +525,7 @@ export function dataTfFunctionEphemeralStoragePropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfFunctionEphemeralStoragePropertyToHclTerraform(struct?: DataTfFunction.EphemeralStorageProperty): any {
+export function dataAwsFunctionEphemeralStoragePropertyToHclTerraform(struct?: DataAwsFunction.EphemeralStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -536,7 +536,7 @@ export function dataTfFunctionEphemeralStoragePropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfFunctionFileSystemConfigPropertyToTerraform(struct?: DataTfFunction.FileSystemConfigProperty): any {
+export function dataAwsFunctionFileSystemConfigPropertyToTerraform(struct?: DataAwsFunction.FileSystemConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -546,7 +546,7 @@ export function dataTfFunctionFileSystemConfigPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfFunctionFileSystemConfigPropertyToHclTerraform(struct?: DataTfFunction.FileSystemConfigProperty): any {
+export function dataAwsFunctionFileSystemConfigPropertyToHclTerraform(struct?: DataAwsFunction.FileSystemConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -557,7 +557,7 @@ export function dataTfFunctionFileSystemConfigPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfFunctionLoggingConfigPropertyToTerraform(struct?: DataTfFunction.LoggingConfigProperty): any {
+export function dataAwsFunctionLoggingConfigPropertyToTerraform(struct?: DataAwsFunction.LoggingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -567,7 +567,7 @@ export function dataTfFunctionLoggingConfigPropertyToTerraform(struct?: DataTfFu
 }
 
 
-export function dataTfFunctionLoggingConfigPropertyToHclTerraform(struct?: DataTfFunction.LoggingConfigProperty): any {
+export function dataAwsFunctionLoggingConfigPropertyToHclTerraform(struct?: DataAwsFunction.LoggingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -578,7 +578,7 @@ export function dataTfFunctionLoggingConfigPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfFunctionTenancyConfigPropertyToTerraform(struct?: DataTfFunction.TenancyConfigProperty): any {
+export function dataAwsFunctionTenancyConfigPropertyToTerraform(struct?: DataAwsFunction.TenancyConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -588,7 +588,7 @@ export function dataTfFunctionTenancyConfigPropertyToTerraform(struct?: DataTfFu
 }
 
 
-export function dataTfFunctionTenancyConfigPropertyToHclTerraform(struct?: DataTfFunction.TenancyConfigProperty): any {
+export function dataAwsFunctionTenancyConfigPropertyToHclTerraform(struct?: DataAwsFunction.TenancyConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -599,7 +599,7 @@ export function dataTfFunctionTenancyConfigPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfFunctionTracingConfigPropertyToTerraform(struct?: DataTfFunction.TracingConfigProperty): any {
+export function dataAwsFunctionTracingConfigPropertyToTerraform(struct?: DataAwsFunction.TracingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -609,7 +609,7 @@ export function dataTfFunctionTracingConfigPropertyToTerraform(struct?: DataTfFu
 }
 
 
-export function dataTfFunctionTracingConfigPropertyToHclTerraform(struct?: DataTfFunction.TracingConfigProperty): any {
+export function dataAwsFunctionTracingConfigPropertyToHclTerraform(struct?: DataAwsFunction.TracingConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -620,7 +620,7 @@ export function dataTfFunctionTracingConfigPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfFunctionVpcConfigPropertyToTerraform(struct?: DataTfFunction.VpcConfigProperty): any {
+export function dataAwsFunctionVpcConfigPropertyToTerraform(struct?: DataAwsFunction.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -630,7 +630,7 @@ export function dataTfFunctionVpcConfigPropertyToTerraform(struct?: DataTfFuncti
 }
 
 
-export function dataTfFunctionVpcConfigPropertyToHclTerraform(struct?: DataTfFunction.VpcConfigProperty): any {
+export function dataAwsFunctionVpcConfigPropertyToHclTerraform(struct?: DataAwsFunction.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -641,7 +641,7 @@ export function dataTfFunctionVpcConfigPropertyToHclTerraform(struct?: DataTfFun
 }
 
 
-export namespace DataTfFunction {
+export namespace DataAwsFunction {
 export interface LambdaManagedInstancesCapacityProviderConfigProperty {
 }
 export class LambdaManagedInstancesCapacityProviderConfigPropertyOutputReference extends cdktn.ComplexObject {

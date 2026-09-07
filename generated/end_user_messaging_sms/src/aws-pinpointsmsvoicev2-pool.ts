@@ -5,89 +5,89 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPoolConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPoolConfig extends cdktn.TerraformMetaArguments {
   /**
   * Whether deletion protection is enabled. When `true`, the pool cannot be deleted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#deletion_protection_enabled TfPool#deletion_protection_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#deletion_protection_enabled AwsPool#deletion_protection_enabled}
   */
   readonly deletionProtectionEnabled?: boolean | cdktn.IResolvable;
   /**
   * Two-character code, in ISO 3166-1 alpha-2 format, for the country or region of the pool. This field is optional for origination identity types that are not country-specific.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#iso_country_code TfPool#iso_country_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#iso_country_code AwsPool#iso_country_code}
   */
   readonly isoCountryCode?: string;
   /**
   * Type of message.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#message_type TfPool#message_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#message_type AwsPool#message_type}
   */
   readonly messageType: string;
   /**
   * Name of the opt-out list to associate with the pool. Inherited from the initial origination identity when omitted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#opt_out_list_name TfPool#opt_out_list_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#opt_out_list_name AwsPool#opt_out_list_name}
   */
   readonly optOutListName?: string;
   /**
   * Set of origination identity ARNs to associate with the pool. At least one origination identity is required at creation.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#origination_identities TfPool#origination_identities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#origination_identities AwsPool#origination_identities}
   */
   readonly originationIdentities: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#region TfPool#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#region AwsPool#region}
   */
   readonly region?: string;
   /**
   * Whether the pool relies on self-managed opt-out handling. When `false`, AWS auto-replies to HELP/STOP requests and manages the opt-out list. Inherited from the initial origination identity when omitted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#self_managed_opt_outs_enabled TfPool#self_managed_opt_outs_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#self_managed_opt_outs_enabled AwsPool#self_managed_opt_outs_enabled}
   */
   readonly selfManagedOptOutsEnabled?: boolean | cdktn.IResolvable;
   /**
   * Whether shared routes are enabled for the pool. When `true`, messages may use shared phone numbers or sender IDs in countries that allow it.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#shared_routes_enabled TfPool#shared_routes_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#shared_routes_enabled AwsPool#shared_routes_enabled}
   */
   readonly sharedRoutesEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#tags TfPool#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#tags AwsPool#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * ARN of the two-way channel that receives inbound messages.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#two_way_channel_arn TfPool#two_way_channel_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#two_way_channel_arn AwsPool#two_way_channel_arn}
   */
   readonly twoWayChannelArn?: string;
   /**
   * ARN of the IAM role that End User Messaging SMS assumes to publish inbound messages to the two-way channel.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#two_way_channel_role TfPool#two_way_channel_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#two_way_channel_role AwsPool#two_way_channel_role}
   */
   readonly twoWayChannelRole?: string;
   /**
   * Whether inbound message reception is enabled for the pool.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#two_way_enabled TfPool#two_way_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#two_way_enabled AwsPool#two_way_enabled}
   */
   readonly twoWayEnabled?: boolean | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#timeouts TfPool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#timeouts AwsPool#timeouts}
   */
-  readonly timeouts?: TfPool.TimeoutsProperty;
+  readonly timeouts?: AwsPool.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool aws_pinpointsmsvoicev2_pool}
 */
-export class TfPool extends cdktn.TerraformResource {
+export class AwsPool extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -98,11 +98,11 @@ export class TfPool extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPool resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPool resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPool to import
-  * @param importFromId The id of the existing TfPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPool to import is found
+  * @param importToId The construct id used in the generated config for the AwsPool to import
+  * @param importFromId The id of the existing AwsPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_pinpointsmsvoicev2_pool", importId: importFromId, provider });
@@ -117,9 +117,9 @@ export class TfPool extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPoolConfig
+  * @param options AwsPoolConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPoolConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPoolConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_pinpointsmsvoicev2_pool',
       terraformGeneratorMetadata: {
@@ -357,11 +357,11 @@ export class TfPool extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfPool.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsPool.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfPool.TimeoutsProperty) {
+  public putTimeouts(value: AwsPool.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -390,7 +390,7 @@ export class TfPool extends cdktn.TerraformResource {
       two_way_channel_arn: cdktn.stringToTerraform(this._twoWayChannelArn),
       two_way_channel_role: cdktn.stringToTerraform(this._twoWayChannelRole),
       two_way_enabled: cdktn.booleanToTerraform(this._twoWayEnabled),
-      timeouts: tfPoolTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsPoolTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -469,10 +469,10 @@ export class TfPool extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       timeouts: {
-        value: tfPoolTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsPoolTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfPool.TimeoutsProperty",
+        storageClassType: "AwsPool.TimeoutsProperty",
       },
     };
 
@@ -481,7 +481,7 @@ export class TfPool extends cdktn.TerraformResource {
   }
 }
 
-export function tfPoolTimeoutsPropertyToTerraform(struct?: TfPool.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPoolTimeoutsPropertyToTerraform(struct?: AwsPool.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -494,7 +494,7 @@ export function tfPoolTimeoutsPropertyToTerraform(struct?: TfPool.TimeoutsProper
 }
 
 
-export function tfPoolTimeoutsPropertyToHclTerraform(struct?: TfPool.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPoolTimeoutsPropertyToHclTerraform(struct?: AwsPool.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -525,24 +525,24 @@ export function tfPoolTimeoutsPropertyToHclTerraform(struct?: TfPool.TimeoutsPro
 }
 
 
-export namespace TfPool {
+export namespace AwsPool {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#create TfPool#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#create AwsPool#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#delete TfPool#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#delete AwsPool#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#update TfPool#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_pool#update AwsPool#update}
   */
   readonly update?: string;
 }

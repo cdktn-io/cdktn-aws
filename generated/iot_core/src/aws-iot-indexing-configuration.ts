@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfIndexingConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsIndexingConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#id TfIndexingConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#id AwsIndexingConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,27 +16,27 @@ export interface TfIndexingConfigurationConfig extends cdktn.TerraformMetaArgume
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#region TfIndexingConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#region AwsIndexingConfiguration#region}
   */
   readonly region?: string;
   /**
   * thing_group_indexing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#thing_group_indexing_configuration TfIndexingConfiguration#thing_group_indexing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#thing_group_indexing_configuration AwsIndexingConfiguration#thing_group_indexing_configuration}
   */
-  readonly thingGroupIndexingConfiguration?: TfIndexingConfiguration.ThingGroupIndexingConfigurationProperty;
+  readonly thingGroupIndexingConfiguration?: AwsIndexingConfiguration.ThingGroupIndexingConfigurationProperty;
   /**
   * thing_indexing_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#thing_indexing_configuration TfIndexingConfiguration#thing_indexing_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#thing_indexing_configuration AwsIndexingConfiguration#thing_indexing_configuration}
   */
-  readonly thingIndexingConfiguration?: TfIndexingConfiguration.ThingIndexingConfigurationProperty;
+  readonly thingIndexingConfiguration?: AwsIndexingConfiguration.ThingIndexingConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration aws_iot_indexing_configuration}
 */
-export class TfIndexingConfiguration extends cdktn.TerraformResource {
+export class AwsIndexingConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfIndexingConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfIndexingConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsIndexingConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfIndexingConfiguration to import
-  * @param importFromId The id of the existing TfIndexingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfIndexingConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsIndexingConfiguration to import
+  * @param importFromId The id of the existing AwsIndexingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsIndexingConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_iot_indexing_configuration", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfIndexingConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfIndexingConfigurationConfig = {}
+  * @param options AwsIndexingConfigurationConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfIndexingConfigurationConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsIndexingConfigurationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_iot_indexing_configuration',
       terraformGeneratorMetadata: {
@@ -127,11 +127,11 @@ export class TfIndexingConfiguration extends cdktn.TerraformResource {
   }
 
   // thing_group_indexing_configuration - computed: false, optional: true, required: false
-  private _thingGroupIndexingConfiguration = new TfIndexingConfiguration.ThingGroupIndexingConfigurationPropertyOutputReference(this, "thing_group_indexing_configuration");
+  private _thingGroupIndexingConfiguration = new AwsIndexingConfiguration.ThingGroupIndexingConfigurationPropertyOutputReference(this, "thing_group_indexing_configuration");
   public get thingGroupIndexingConfiguration() {
     return this._thingGroupIndexingConfiguration;
   }
-  public putThingGroupIndexingConfiguration(value: TfIndexingConfiguration.ThingGroupIndexingConfigurationProperty) {
+  public putThingGroupIndexingConfiguration(value: AwsIndexingConfiguration.ThingGroupIndexingConfigurationProperty) {
     this._thingGroupIndexingConfiguration.internalValue = value;
   }
   public resetThingGroupIndexingConfiguration() {
@@ -143,11 +143,11 @@ export class TfIndexingConfiguration extends cdktn.TerraformResource {
   }
 
   // thing_indexing_configuration - computed: false, optional: true, required: false
-  private _thingIndexingConfiguration = new TfIndexingConfiguration.ThingIndexingConfigurationPropertyOutputReference(this, "thing_indexing_configuration");
+  private _thingIndexingConfiguration = new AwsIndexingConfiguration.ThingIndexingConfigurationPropertyOutputReference(this, "thing_indexing_configuration");
   public get thingIndexingConfiguration() {
     return this._thingIndexingConfiguration;
   }
-  public putThingIndexingConfiguration(value: TfIndexingConfiguration.ThingIndexingConfigurationProperty) {
+  public putThingIndexingConfiguration(value: AwsIndexingConfiguration.ThingIndexingConfigurationProperty) {
     this._thingIndexingConfiguration.internalValue = value;
   }
   public resetThingIndexingConfiguration() {
@@ -166,8 +166,8 @@ export class TfIndexingConfiguration extends cdktn.TerraformResource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      thing_group_indexing_configuration: tfIndexingConfigurationThingGroupIndexingConfigurationPropertyToTerraform(this._thingGroupIndexingConfiguration.internalValue),
-      thing_indexing_configuration: tfIndexingConfigurationThingIndexingConfigurationPropertyToTerraform(this._thingIndexingConfiguration.internalValue),
+      thing_group_indexing_configuration: awsIndexingConfigurationThingGroupIndexingConfigurationPropertyToTerraform(this._thingGroupIndexingConfiguration.internalValue),
+      thing_indexing_configuration: awsIndexingConfigurationThingIndexingConfigurationPropertyToTerraform(this._thingIndexingConfiguration.internalValue),
     };
   }
 
@@ -186,16 +186,16 @@ export class TfIndexingConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       thing_group_indexing_configuration: {
-        value: tfIndexingConfigurationThingGroupIndexingConfigurationPropertyToHclTerraform(this._thingGroupIndexingConfiguration.internalValue),
+        value: awsIndexingConfigurationThingGroupIndexingConfigurationPropertyToHclTerraform(this._thingGroupIndexingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfIndexingConfiguration.ThingGroupIndexingConfigurationPropertyList",
+        storageClassType: "AwsIndexingConfiguration.ThingGroupIndexingConfigurationPropertyList",
       },
       thing_indexing_configuration: {
-        value: tfIndexingConfigurationThingIndexingConfigurationPropertyToHclTerraform(this._thingIndexingConfiguration.internalValue),
+        value: awsIndexingConfigurationThingIndexingConfigurationPropertyToHclTerraform(this._thingIndexingConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfIndexingConfiguration.ThingIndexingConfigurationPropertyList",
+        storageClassType: "AwsIndexingConfiguration.ThingIndexingConfigurationPropertyList",
       },
     };
 
@@ -204,7 +204,7 @@ export class TfIndexingConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfIndexingConfigurationThingGroupIndexingConfigurationCustomFieldPropertyToTerraform(struct?: TfIndexingConfiguration.ThingGroupIndexingConfigurationCustomFieldProperty | cdktn.IResolvable): any {
+export function awsIndexingConfigurationThingGroupIndexingConfigurationCustomFieldPropertyToTerraform(struct?: AwsIndexingConfiguration.ThingGroupIndexingConfigurationCustomFieldProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,7 +216,7 @@ export function tfIndexingConfigurationThingGroupIndexingConfigurationCustomFiel
 }
 
 
-export function tfIndexingConfigurationThingGroupIndexingConfigurationCustomFieldPropertyToHclTerraform(struct?: TfIndexingConfiguration.ThingGroupIndexingConfigurationCustomFieldProperty | cdktn.IResolvable): any {
+export function awsIndexingConfigurationThingGroupIndexingConfigurationCustomFieldPropertyToHclTerraform(struct?: AwsIndexingConfiguration.ThingGroupIndexingConfigurationCustomFieldProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function tfIndexingConfigurationThingGroupIndexingConfigurationCustomFiel
 }
 
 
-export function tfIndexingConfigurationThingGroupIndexingConfigurationManagedFieldPropertyToTerraform(struct?: TfIndexingConfiguration.ThingGroupIndexingConfigurationManagedFieldProperty | cdktn.IResolvable): any {
+export function awsIndexingConfigurationThingGroupIndexingConfigurationManagedFieldPropertyToTerraform(struct?: AwsIndexingConfiguration.ThingGroupIndexingConfigurationManagedFieldProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -253,7 +253,7 @@ export function tfIndexingConfigurationThingGroupIndexingConfigurationManagedFie
 }
 
 
-export function tfIndexingConfigurationThingGroupIndexingConfigurationManagedFieldPropertyToHclTerraform(struct?: TfIndexingConfiguration.ThingGroupIndexingConfigurationManagedFieldProperty | cdktn.IResolvable): any {
+export function awsIndexingConfigurationThingGroupIndexingConfigurationManagedFieldPropertyToHclTerraform(struct?: AwsIndexingConfiguration.ThingGroupIndexingConfigurationManagedFieldProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -278,20 +278,20 @@ export function tfIndexingConfigurationThingGroupIndexingConfigurationManagedFie
 }
 
 
-export function tfIndexingConfigurationThingGroupIndexingConfigurationPropertyToTerraform(struct?: TfIndexingConfiguration.ThingGroupIndexingConfigurationPropertyOutputReference | TfIndexingConfiguration.ThingGroupIndexingConfigurationProperty): any {
+export function awsIndexingConfigurationThingGroupIndexingConfigurationPropertyToTerraform(struct?: AwsIndexingConfiguration.ThingGroupIndexingConfigurationPropertyOutputReference | AwsIndexingConfiguration.ThingGroupIndexingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     thing_group_indexing_mode: cdktn.stringToTerraform(struct!.thingGroupIndexingMode),
-    custom_field: cdktn.listMapper(tfIndexingConfigurationThingGroupIndexingConfigurationCustomFieldPropertyToTerraform, true)(struct!.customField),
-    managed_field: cdktn.listMapper(tfIndexingConfigurationThingGroupIndexingConfigurationManagedFieldPropertyToTerraform, true)(struct!.managedField),
+    custom_field: cdktn.listMapper(awsIndexingConfigurationThingGroupIndexingConfigurationCustomFieldPropertyToTerraform, true)(struct!.customField),
+    managed_field: cdktn.listMapper(awsIndexingConfigurationThingGroupIndexingConfigurationManagedFieldPropertyToTerraform, true)(struct!.managedField),
   }
 }
 
 
-export function tfIndexingConfigurationThingGroupIndexingConfigurationPropertyToHclTerraform(struct?: TfIndexingConfiguration.ThingGroupIndexingConfigurationPropertyOutputReference | TfIndexingConfiguration.ThingGroupIndexingConfigurationProperty): any {
+export function awsIndexingConfigurationThingGroupIndexingConfigurationPropertyToHclTerraform(struct?: AwsIndexingConfiguration.ThingGroupIndexingConfigurationPropertyOutputReference | AwsIndexingConfiguration.ThingGroupIndexingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,13 +304,13 @@ export function tfIndexingConfigurationThingGroupIndexingConfigurationPropertyTo
       storageClassType: "string",
     },
     custom_field: {
-      value: cdktn.listMapperHcl(tfIndexingConfigurationThingGroupIndexingConfigurationCustomFieldPropertyToHclTerraform, true)(struct!.customField),
+      value: cdktn.listMapperHcl(awsIndexingConfigurationThingGroupIndexingConfigurationCustomFieldPropertyToHclTerraform, true)(struct!.customField),
       isBlock: true,
       type: "set",
       storageClassType: "ThingGroupIndexingConfigurationCustomFieldPropertyList",
     },
     managed_field: {
-      value: cdktn.listMapperHcl(tfIndexingConfigurationThingGroupIndexingConfigurationManagedFieldPropertyToHclTerraform, true)(struct!.managedField),
+      value: cdktn.listMapperHcl(awsIndexingConfigurationThingGroupIndexingConfigurationManagedFieldPropertyToHclTerraform, true)(struct!.managedField),
       isBlock: true,
       type: "set",
       storageClassType: "ThingGroupIndexingConfigurationManagedFieldPropertyList",
@@ -322,7 +322,7 @@ export function tfIndexingConfigurationThingGroupIndexingConfigurationPropertyTo
 }
 
 
-export function tfIndexingConfigurationThingIndexingConfigurationCustomFieldPropertyToTerraform(struct?: TfIndexingConfiguration.ThingIndexingConfigurationCustomFieldProperty | cdktn.IResolvable): any {
+export function awsIndexingConfigurationThingIndexingConfigurationCustomFieldPropertyToTerraform(struct?: AwsIndexingConfiguration.ThingIndexingConfigurationCustomFieldProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,7 +334,7 @@ export function tfIndexingConfigurationThingIndexingConfigurationCustomFieldProp
 }
 
 
-export function tfIndexingConfigurationThingIndexingConfigurationCustomFieldPropertyToHclTerraform(struct?: TfIndexingConfiguration.ThingIndexingConfigurationCustomFieldProperty | cdktn.IResolvable): any {
+export function awsIndexingConfigurationThingIndexingConfigurationCustomFieldPropertyToHclTerraform(struct?: AwsIndexingConfiguration.ThingIndexingConfigurationCustomFieldProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -359,7 +359,7 @@ export function tfIndexingConfigurationThingIndexingConfigurationCustomFieldProp
 }
 
 
-export function tfIndexingConfigurationFilterPropertyToTerraform(struct?: TfIndexingConfiguration.FilterPropertyOutputReference | TfIndexingConfiguration.FilterProperty): any {
+export function awsIndexingConfigurationFilterPropertyToTerraform(struct?: AwsIndexingConfiguration.FilterPropertyOutputReference | AwsIndexingConfiguration.FilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -370,7 +370,7 @@ export function tfIndexingConfigurationFilterPropertyToTerraform(struct?: TfInde
 }
 
 
-export function tfIndexingConfigurationFilterPropertyToHclTerraform(struct?: TfIndexingConfiguration.FilterPropertyOutputReference | TfIndexingConfiguration.FilterProperty): any {
+export function awsIndexingConfigurationFilterPropertyToHclTerraform(struct?: AwsIndexingConfiguration.FilterPropertyOutputReference | AwsIndexingConfiguration.FilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -389,7 +389,7 @@ export function tfIndexingConfigurationFilterPropertyToHclTerraform(struct?: TfI
 }
 
 
-export function tfIndexingConfigurationThingIndexingConfigurationManagedFieldPropertyToTerraform(struct?: TfIndexingConfiguration.ThingIndexingConfigurationManagedFieldProperty | cdktn.IResolvable): any {
+export function awsIndexingConfigurationThingIndexingConfigurationManagedFieldPropertyToTerraform(struct?: AwsIndexingConfiguration.ThingIndexingConfigurationManagedFieldProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -401,7 +401,7 @@ export function tfIndexingConfigurationThingIndexingConfigurationManagedFieldPro
 }
 
 
-export function tfIndexingConfigurationThingIndexingConfigurationManagedFieldPropertyToHclTerraform(struct?: TfIndexingConfiguration.ThingIndexingConfigurationManagedFieldProperty | cdktn.IResolvable): any {
+export function awsIndexingConfigurationThingIndexingConfigurationManagedFieldPropertyToHclTerraform(struct?: AwsIndexingConfiguration.ThingIndexingConfigurationManagedFieldProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -426,7 +426,7 @@ export function tfIndexingConfigurationThingIndexingConfigurationManagedFieldPro
 }
 
 
-export function tfIndexingConfigurationThingIndexingConfigurationPropertyToTerraform(struct?: TfIndexingConfiguration.ThingIndexingConfigurationPropertyOutputReference | TfIndexingConfiguration.ThingIndexingConfigurationProperty): any {
+export function awsIndexingConfigurationThingIndexingConfigurationPropertyToTerraform(struct?: AwsIndexingConfiguration.ThingIndexingConfigurationPropertyOutputReference | AwsIndexingConfiguration.ThingIndexingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,14 +436,14 @@ export function tfIndexingConfigurationThingIndexingConfigurationPropertyToTerra
     named_shadow_indexing_mode: cdktn.stringToTerraform(struct!.namedShadowIndexingMode),
     thing_connectivity_indexing_mode: cdktn.stringToTerraform(struct!.thingConnectivityIndexingMode),
     thing_indexing_mode: cdktn.stringToTerraform(struct!.thingIndexingMode),
-    custom_field: cdktn.listMapper(tfIndexingConfigurationThingIndexingConfigurationCustomFieldPropertyToTerraform, true)(struct!.customField),
-    filter: tfIndexingConfigurationFilterPropertyToTerraform(struct!.filter),
-    managed_field: cdktn.listMapper(tfIndexingConfigurationThingIndexingConfigurationManagedFieldPropertyToTerraform, true)(struct!.managedField),
+    custom_field: cdktn.listMapper(awsIndexingConfigurationThingIndexingConfigurationCustomFieldPropertyToTerraform, true)(struct!.customField),
+    filter: awsIndexingConfigurationFilterPropertyToTerraform(struct!.filter),
+    managed_field: cdktn.listMapper(awsIndexingConfigurationThingIndexingConfigurationManagedFieldPropertyToTerraform, true)(struct!.managedField),
   }
 }
 
 
-export function tfIndexingConfigurationThingIndexingConfigurationPropertyToHclTerraform(struct?: TfIndexingConfiguration.ThingIndexingConfigurationPropertyOutputReference | TfIndexingConfiguration.ThingIndexingConfigurationProperty): any {
+export function awsIndexingConfigurationThingIndexingConfigurationPropertyToHclTerraform(struct?: AwsIndexingConfiguration.ThingIndexingConfigurationPropertyOutputReference | AwsIndexingConfiguration.ThingIndexingConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -474,19 +474,19 @@ export function tfIndexingConfigurationThingIndexingConfigurationPropertyToHclTe
       storageClassType: "string",
     },
     custom_field: {
-      value: cdktn.listMapperHcl(tfIndexingConfigurationThingIndexingConfigurationCustomFieldPropertyToHclTerraform, true)(struct!.customField),
+      value: cdktn.listMapperHcl(awsIndexingConfigurationThingIndexingConfigurationCustomFieldPropertyToHclTerraform, true)(struct!.customField),
       isBlock: true,
       type: "set",
       storageClassType: "ThingIndexingConfigurationCustomFieldPropertyList",
     },
     filter: {
-      value: tfIndexingConfigurationFilterPropertyToHclTerraform(struct!.filter),
+      value: awsIndexingConfigurationFilterPropertyToHclTerraform(struct!.filter),
       isBlock: true,
       type: "list",
       storageClassType: "FilterPropertyList",
     },
     managed_field: {
-      value: cdktn.listMapperHcl(tfIndexingConfigurationThingIndexingConfigurationManagedFieldPropertyToHclTerraform, true)(struct!.managedField),
+      value: cdktn.listMapperHcl(awsIndexingConfigurationThingIndexingConfigurationManagedFieldPropertyToHclTerraform, true)(struct!.managedField),
       isBlock: true,
       type: "set",
       storageClassType: "ThingIndexingConfigurationManagedFieldPropertyList",
@@ -498,14 +498,14 @@ export function tfIndexingConfigurationThingIndexingConfigurationPropertyToHclTe
 }
 
 
-export namespace TfIndexingConfiguration {
+export namespace AwsIndexingConfiguration {
 export interface ThingGroupIndexingConfigurationCustomFieldProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#name TfIndexingConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#name AwsIndexingConfiguration#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#type TfIndexingConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#type AwsIndexingConfiguration#type}
   */
   readonly type?: string;
 }
@@ -613,11 +613,11 @@ export class ThingGroupIndexingConfigurationCustomFieldPropertyList extends cdkt
 }
 export interface ThingGroupIndexingConfigurationManagedFieldProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#name TfIndexingConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#name AwsIndexingConfiguration#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#type TfIndexingConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#type AwsIndexingConfiguration#type}
   */
   readonly type?: string;
 }
@@ -725,19 +725,19 @@ export class ThingGroupIndexingConfigurationManagedFieldPropertyList extends cdk
 }
 export interface ThingGroupIndexingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#thing_group_indexing_mode TfIndexingConfiguration#thing_group_indexing_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#thing_group_indexing_mode AwsIndexingConfiguration#thing_group_indexing_mode}
   */
   readonly thingGroupIndexingMode: string;
   /**
   * custom_field block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#custom_field TfIndexingConfiguration#custom_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#custom_field AwsIndexingConfiguration#custom_field}
   */
   readonly customField?: ThingGroupIndexingConfigurationCustomFieldProperty[] | cdktn.IResolvable;
   /**
   * managed_field block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#managed_field TfIndexingConfiguration#managed_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#managed_field AwsIndexingConfiguration#managed_field}
   */
   readonly managedField?: ThingGroupIndexingConfigurationManagedFieldProperty[] | cdktn.IResolvable;
 }
@@ -832,11 +832,11 @@ export class ThingGroupIndexingConfigurationPropertyOutputReference extends cdkt
 }
 export interface ThingIndexingConfigurationCustomFieldProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#name TfIndexingConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#name AwsIndexingConfiguration#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#type TfIndexingConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#type AwsIndexingConfiguration#type}
   */
   readonly type?: string;
 }
@@ -944,7 +944,7 @@ export class ThingIndexingConfigurationCustomFieldPropertyList extends cdktn.Com
 }
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#named_shadow_names TfIndexingConfiguration#named_shadow_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#named_shadow_names AwsIndexingConfiguration#named_shadow_names}
   */
   readonly namedShadowNames?: string[];
 }
@@ -998,11 +998,11 @@ export class FilterPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ThingIndexingConfigurationManagedFieldProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#name TfIndexingConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#name AwsIndexingConfiguration#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#type TfIndexingConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#type AwsIndexingConfiguration#type}
   */
   readonly type?: string;
 }
@@ -1110,37 +1110,37 @@ export class ThingIndexingConfigurationManagedFieldPropertyList extends cdktn.Co
 }
 export interface ThingIndexingConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#device_defender_indexing_mode TfIndexingConfiguration#device_defender_indexing_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#device_defender_indexing_mode AwsIndexingConfiguration#device_defender_indexing_mode}
   */
   readonly deviceDefenderIndexingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#named_shadow_indexing_mode TfIndexingConfiguration#named_shadow_indexing_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#named_shadow_indexing_mode AwsIndexingConfiguration#named_shadow_indexing_mode}
   */
   readonly namedShadowIndexingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#thing_connectivity_indexing_mode TfIndexingConfiguration#thing_connectivity_indexing_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#thing_connectivity_indexing_mode AwsIndexingConfiguration#thing_connectivity_indexing_mode}
   */
   readonly thingConnectivityIndexingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#thing_indexing_mode TfIndexingConfiguration#thing_indexing_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#thing_indexing_mode AwsIndexingConfiguration#thing_indexing_mode}
   */
   readonly thingIndexingMode: string;
   /**
   * custom_field block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#custom_field TfIndexingConfiguration#custom_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#custom_field AwsIndexingConfiguration#custom_field}
   */
   readonly customField?: ThingIndexingConfigurationCustomFieldProperty[] | cdktn.IResolvable;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#filter TfIndexingConfiguration#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#filter AwsIndexingConfiguration#filter}
   */
   readonly filter?: FilterProperty;
   /**
   * managed_field block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#managed_field TfIndexingConfiguration#managed_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/iot_indexing_configuration#managed_field AwsIndexingConfiguration#managed_field}
   */
   readonly managedField?: ThingIndexingConfigurationManagedFieldProperty[] | cdktn.IResolvable;
 }

@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfCatalogConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsCatalogConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog#name DataTfCatalog#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog#name DataAwsCatalog#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog#region DataTfCatalog#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog#region DataAwsCatalog#region}
   */
   readonly region?: string;
 }
@@ -21,7 +21,7 @@ export interface DataTfCatalogConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog aws_glue_catalog}
 */
-export class DataTfCatalog extends cdktn.TerraformDataSource {
+export class DataAwsCatalog extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataTfCatalog extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfCatalog resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsCatalog resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfCatalog to import
-  * @param importFromId The id of the existing DataTfCatalog that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfCatalog to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsCatalog to import
+  * @param importFromId The id of the existing DataAwsCatalog that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/glue_catalog#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsCatalog to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_catalog", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataTfCatalog extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfCatalogConfig
+  * @param options DataAwsCatalogConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfCatalogConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsCatalogConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_catalog',
       terraformGeneratorMetadata: {
@@ -93,19 +93,19 @@ export class DataTfCatalog extends cdktn.TerraformDataSource {
   }
 
   // catalog_properties - computed: true, optional: false, required: false
-  private _catalogProperties = new DataTfCatalog.CatalogPropertiesPropertyList(this, "catalog_properties", false);
+  private _catalogProperties = new DataAwsCatalog.CatalogPropertiesPropertyList(this, "catalog_properties", false);
   public get catalogProperties() {
     return this._catalogProperties;
   }
 
   // create_database_default_permissions - computed: true, optional: false, required: false
-  private _createDatabaseDefaultPermissions = new DataTfCatalog.CreateDatabaseDefaultPermissionsPropertyList(this, "create_database_default_permissions", false);
+  private _createDatabaseDefaultPermissions = new DataAwsCatalog.CreateDatabaseDefaultPermissionsPropertyList(this, "create_database_default_permissions", false);
   public get createDatabaseDefaultPermissions() {
     return this._createDatabaseDefaultPermissions;
   }
 
   // create_table_default_permissions - computed: true, optional: false, required: false
-  private _createTableDefaultPermissions = new DataTfCatalog.CreateTableDefaultPermissionsPropertyList(this, "create_table_default_permissions", false);
+  private _createTableDefaultPermissions = new DataAwsCatalog.CreateTableDefaultPermissionsPropertyList(this, "create_table_default_permissions", false);
   public get createTableDefaultPermissions() {
     return this._createTableDefaultPermissions;
   }
@@ -121,7 +121,7 @@ export class DataTfCatalog extends cdktn.TerraformDataSource {
   }
 
   // federated_catalog - computed: true, optional: false, required: false
-  private _federatedCatalog = new DataTfCatalog.FederatedCatalogPropertyList(this, "federated_catalog", false);
+  private _federatedCatalog = new DataAwsCatalog.FederatedCatalogPropertyList(this, "federated_catalog", false);
   public get federatedCatalog() {
     return this._federatedCatalog;
   }
@@ -168,7 +168,7 @@ export class DataTfCatalog extends cdktn.TerraformDataSource {
   }
 
   // target_redshift_catalog - computed: true, optional: false, required: false
-  private _targetRedshiftCatalog = new DataTfCatalog.TargetRedshiftCatalogPropertyList(this, "target_redshift_catalog", false);
+  private _targetRedshiftCatalog = new DataAwsCatalog.TargetRedshiftCatalogPropertyList(this, "target_redshift_catalog", false);
   public get targetRedshiftCatalog() {
     return this._targetRedshiftCatalog;
   }
@@ -210,7 +210,7 @@ export class DataTfCatalog extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfCatalogDataLakeAccessPropertiesPropertyToTerraform(struct?: DataTfCatalog.DataLakeAccessPropertiesProperty): any {
+export function dataAwsCatalogDataLakeAccessPropertiesPropertyToTerraform(struct?: DataAwsCatalog.DataLakeAccessPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -220,7 +220,7 @@ export function dataTfCatalogDataLakeAccessPropertiesPropertyToTerraform(struct?
 }
 
 
-export function dataTfCatalogDataLakeAccessPropertiesPropertyToHclTerraform(struct?: DataTfCatalog.DataLakeAccessPropertiesProperty): any {
+export function dataAwsCatalogDataLakeAccessPropertiesPropertyToHclTerraform(struct?: DataAwsCatalog.DataLakeAccessPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -231,7 +231,7 @@ export function dataTfCatalogDataLakeAccessPropertiesPropertyToHclTerraform(stru
 }
 
 
-export function dataTfCatalogIcebergOptimizationPropertiesPropertyToTerraform(struct?: DataTfCatalog.IcebergOptimizationPropertiesProperty): any {
+export function dataAwsCatalogIcebergOptimizationPropertiesPropertyToTerraform(struct?: DataAwsCatalog.IcebergOptimizationPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function dataTfCatalogIcebergOptimizationPropertiesPropertyToTerraform(st
 }
 
 
-export function dataTfCatalogIcebergOptimizationPropertiesPropertyToHclTerraform(struct?: DataTfCatalog.IcebergOptimizationPropertiesProperty): any {
+export function dataAwsCatalogIcebergOptimizationPropertiesPropertyToHclTerraform(struct?: DataAwsCatalog.IcebergOptimizationPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -252,7 +252,7 @@ export function dataTfCatalogIcebergOptimizationPropertiesPropertyToHclTerraform
 }
 
 
-export function dataTfCatalogCatalogPropertiesPropertyToTerraform(struct?: DataTfCatalog.CatalogPropertiesProperty): any {
+export function dataAwsCatalogCatalogPropertiesPropertyToTerraform(struct?: DataAwsCatalog.CatalogPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -262,7 +262,7 @@ export function dataTfCatalogCatalogPropertiesPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfCatalogCatalogPropertiesPropertyToHclTerraform(struct?: DataTfCatalog.CatalogPropertiesProperty): any {
+export function dataAwsCatalogCatalogPropertiesPropertyToHclTerraform(struct?: DataAwsCatalog.CatalogPropertiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -273,7 +273,7 @@ export function dataTfCatalogCatalogPropertiesPropertyToHclTerraform(struct?: Da
 }
 
 
-export function dataTfCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToTerraform(struct?: DataTfCatalog.CreateDatabaseDefaultPermissionsPrincipalProperty): any {
+export function dataAwsCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToTerraform(struct?: DataAwsCatalog.CreateDatabaseDefaultPermissionsPrincipalProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -283,7 +283,7 @@ export function dataTfCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyTo
 }
 
 
-export function dataTfCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToHclTerraform(struct?: DataTfCatalog.CreateDatabaseDefaultPermissionsPrincipalProperty): any {
+export function dataAwsCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyToHclTerraform(struct?: DataAwsCatalog.CreateDatabaseDefaultPermissionsPrincipalProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -294,7 +294,7 @@ export function dataTfCatalogCreateDatabaseDefaultPermissionsPrincipalPropertyTo
 }
 
 
-export function dataTfCatalogCreateDatabaseDefaultPermissionsPropertyToTerraform(struct?: DataTfCatalog.CreateDatabaseDefaultPermissionsProperty): any {
+export function dataAwsCatalogCreateDatabaseDefaultPermissionsPropertyToTerraform(struct?: DataAwsCatalog.CreateDatabaseDefaultPermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,7 +304,7 @@ export function dataTfCatalogCreateDatabaseDefaultPermissionsPropertyToTerraform
 }
 
 
-export function dataTfCatalogCreateDatabaseDefaultPermissionsPropertyToHclTerraform(struct?: DataTfCatalog.CreateDatabaseDefaultPermissionsProperty): any {
+export function dataAwsCatalogCreateDatabaseDefaultPermissionsPropertyToHclTerraform(struct?: DataAwsCatalog.CreateDatabaseDefaultPermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -315,7 +315,7 @@ export function dataTfCatalogCreateDatabaseDefaultPermissionsPropertyToHclTerraf
 }
 
 
-export function dataTfCatalogCreateTableDefaultPermissionsPrincipalPropertyToTerraform(struct?: DataTfCatalog.CreateTableDefaultPermissionsPrincipalProperty): any {
+export function dataAwsCatalogCreateTableDefaultPermissionsPrincipalPropertyToTerraform(struct?: DataAwsCatalog.CreateTableDefaultPermissionsPrincipalProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -325,7 +325,7 @@ export function dataTfCatalogCreateTableDefaultPermissionsPrincipalPropertyToTer
 }
 
 
-export function dataTfCatalogCreateTableDefaultPermissionsPrincipalPropertyToHclTerraform(struct?: DataTfCatalog.CreateTableDefaultPermissionsPrincipalProperty): any {
+export function dataAwsCatalogCreateTableDefaultPermissionsPrincipalPropertyToHclTerraform(struct?: DataAwsCatalog.CreateTableDefaultPermissionsPrincipalProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function dataTfCatalogCreateTableDefaultPermissionsPrincipalPropertyToHcl
 }
 
 
-export function dataTfCatalogCreateTableDefaultPermissionsPropertyToTerraform(struct?: DataTfCatalog.CreateTableDefaultPermissionsProperty): any {
+export function dataAwsCatalogCreateTableDefaultPermissionsPropertyToTerraform(struct?: DataAwsCatalog.CreateTableDefaultPermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,7 +346,7 @@ export function dataTfCatalogCreateTableDefaultPermissionsPropertyToTerraform(st
 }
 
 
-export function dataTfCatalogCreateTableDefaultPermissionsPropertyToHclTerraform(struct?: DataTfCatalog.CreateTableDefaultPermissionsProperty): any {
+export function dataAwsCatalogCreateTableDefaultPermissionsPropertyToHclTerraform(struct?: DataAwsCatalog.CreateTableDefaultPermissionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -357,7 +357,7 @@ export function dataTfCatalogCreateTableDefaultPermissionsPropertyToHclTerraform
 }
 
 
-export function dataTfCatalogFederatedCatalogPropertyToTerraform(struct?: DataTfCatalog.FederatedCatalogProperty): any {
+export function dataAwsCatalogFederatedCatalogPropertyToTerraform(struct?: DataAwsCatalog.FederatedCatalogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,7 +367,7 @@ export function dataTfCatalogFederatedCatalogPropertyToTerraform(struct?: DataTf
 }
 
 
-export function dataTfCatalogFederatedCatalogPropertyToHclTerraform(struct?: DataTfCatalog.FederatedCatalogProperty): any {
+export function dataAwsCatalogFederatedCatalogPropertyToHclTerraform(struct?: DataAwsCatalog.FederatedCatalogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function dataTfCatalogFederatedCatalogPropertyToHclTerraform(struct?: Dat
 }
 
 
-export function dataTfCatalogTargetRedshiftCatalogPropertyToTerraform(struct?: DataTfCatalog.TargetRedshiftCatalogProperty): any {
+export function dataAwsCatalogTargetRedshiftCatalogPropertyToTerraform(struct?: DataAwsCatalog.TargetRedshiftCatalogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,7 +388,7 @@ export function dataTfCatalogTargetRedshiftCatalogPropertyToTerraform(struct?: D
 }
 
 
-export function dataTfCatalogTargetRedshiftCatalogPropertyToHclTerraform(struct?: DataTfCatalog.TargetRedshiftCatalogProperty): any {
+export function dataAwsCatalogTargetRedshiftCatalogPropertyToHclTerraform(struct?: DataAwsCatalog.TargetRedshiftCatalogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -399,7 +399,7 @@ export function dataTfCatalogTargetRedshiftCatalogPropertyToHclTerraform(struct?
 }
 
 
-export namespace DataTfCatalog {
+export namespace DataAwsCatalog {
 export interface DataLakeAccessPropertiesProperty {
 }
 export class DataLakeAccessPropertiesPropertyOutputReference extends cdktn.ComplexObject {

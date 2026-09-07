@@ -5,42 +5,42 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDbSubnetGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDbSubnetGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#description TfDbSubnetGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#description AwsDbSubnetGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#id TfDbSubnetGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#id AwsDbSubnetGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#name TfDbSubnetGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#name AwsDbSubnetGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#name_prefix TfDbSubnetGroup#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#name_prefix AwsDbSubnetGroup#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#region TfDbSubnetGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#region AwsDbSubnetGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#subnet_ids TfDbSubnetGroup#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#subnet_ids AwsDbSubnetGroup#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#tags TfDbSubnetGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#tags AwsDbSubnetGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#tags_all TfDbSubnetGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#tags_all AwsDbSubnetGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -48,7 +48,7 @@ export interface TfDbSubnetGroupConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group aws_db_subnet_group}
 */
-export class TfDbSubnetGroup extends cdktn.TerraformResource {
+export class AwsDbSubnetGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfDbSubnetGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDbSubnetGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDbSubnetGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDbSubnetGroup to import
-  * @param importFromId The id of the existing TfDbSubnetGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDbSubnetGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsDbSubnetGroup to import
+  * @param importFromId The id of the existing AwsDbSubnetGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/db_subnet_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDbSubnetGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_db_subnet_group", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfDbSubnetGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDbSubnetGroupConfig
+  * @param options AwsDbSubnetGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDbSubnetGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDbSubnetGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_db_subnet_group',
       terraformGeneratorMetadata: {

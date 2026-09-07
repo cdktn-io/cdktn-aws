@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfWebhookConfig extends cdktn.TerraformMetaArguments {
+export interface AwsWebhookConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#branch_filter TfWebhook#branch_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#branch_filter AwsWebhook#branch_filter}
   */
   readonly branchFilter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#build_type TfWebhook#build_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#build_type AwsWebhook#build_type}
   */
   readonly buildType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#id TfWebhook#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#id AwsWebhook#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#manual_creation TfWebhook#manual_creation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#manual_creation AwsWebhook#manual_creation}
   */
   readonly manualCreation?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#project_name TfWebhook#project_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#project_name AwsWebhook#project_name}
   */
   readonly projectName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#region TfWebhook#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#region AwsWebhook#region}
   */
   readonly region?: string;
   /**
   * filter_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#filter_group TfWebhook#filter_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#filter_group AwsWebhook#filter_group}
   */
-  readonly filterGroup?: TfWebhook.FilterGroupProperty[] | cdktn.IResolvable;
+  readonly filterGroup?: AwsWebhook.FilterGroupProperty[] | cdktn.IResolvable;
   /**
   * pull_request_build_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#pull_request_build_policy TfWebhook#pull_request_build_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#pull_request_build_policy AwsWebhook#pull_request_build_policy}
   */
-  readonly pullRequestBuildPolicy?: TfWebhook.PullRequestBuildPolicyProperty;
+  readonly pullRequestBuildPolicy?: AwsWebhook.PullRequestBuildPolicyProperty;
   /**
   * scope_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#scope_configuration TfWebhook#scope_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#scope_configuration AwsWebhook#scope_configuration}
   */
-  readonly scopeConfiguration?: TfWebhook.ScopeConfigurationProperty;
+  readonly scopeConfiguration?: AwsWebhook.ScopeConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook aws_codebuild_webhook}
 */
-export class TfWebhook extends cdktn.TerraformResource {
+export class AwsWebhook extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfWebhook extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfWebhook resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsWebhook resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfWebhook to import
-  * @param importFromId The id of the existing TfWebhook that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfWebhook to import is found
+  * @param importToId The construct id used in the generated config for the AwsWebhook to import
+  * @param importFromId The id of the existing AwsWebhook that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsWebhook to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codebuild_webhook", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfWebhook extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfWebhookConfig
+  * @param options AwsWebhookConfig
   */
-  public constructor(scope: Construct, id: string, config: TfWebhookConfig) {
+  public constructor(scope: Construct, id: string, config: AwsWebhookConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codebuild_webhook',
       terraformGeneratorMetadata: {
@@ -230,11 +230,11 @@ export class TfWebhook extends cdktn.TerraformResource {
   }
 
   // filter_group - computed: false, optional: true, required: false
-  private _filterGroup = new TfWebhook.FilterGroupPropertyList(this, "filter_group", true);
+  private _filterGroup = new AwsWebhook.FilterGroupPropertyList(this, "filter_group", true);
   public get filterGroup() {
     return this._filterGroup;
   }
-  public putFilterGroup(value: TfWebhook.FilterGroupProperty[] | cdktn.IResolvable) {
+  public putFilterGroup(value: AwsWebhook.FilterGroupProperty[] | cdktn.IResolvable) {
     this._filterGroup.internalValue = value;
   }
   public resetFilterGroup() {
@@ -246,11 +246,11 @@ export class TfWebhook extends cdktn.TerraformResource {
   }
 
   // pull_request_build_policy - computed: false, optional: true, required: false
-  private _pullRequestBuildPolicy = new TfWebhook.PullRequestBuildPolicyPropertyOutputReference(this, "pull_request_build_policy");
+  private _pullRequestBuildPolicy = new AwsWebhook.PullRequestBuildPolicyPropertyOutputReference(this, "pull_request_build_policy");
   public get pullRequestBuildPolicy() {
     return this._pullRequestBuildPolicy;
   }
-  public putPullRequestBuildPolicy(value: TfWebhook.PullRequestBuildPolicyProperty) {
+  public putPullRequestBuildPolicy(value: AwsWebhook.PullRequestBuildPolicyProperty) {
     this._pullRequestBuildPolicy.internalValue = value;
   }
   public resetPullRequestBuildPolicy() {
@@ -262,11 +262,11 @@ export class TfWebhook extends cdktn.TerraformResource {
   }
 
   // scope_configuration - computed: false, optional: true, required: false
-  private _scopeConfiguration = new TfWebhook.ScopeConfigurationPropertyOutputReference(this, "scope_configuration");
+  private _scopeConfiguration = new AwsWebhook.ScopeConfigurationPropertyOutputReference(this, "scope_configuration");
   public get scopeConfiguration() {
     return this._scopeConfiguration;
   }
-  public putScopeConfiguration(value: TfWebhook.ScopeConfigurationProperty) {
+  public putScopeConfiguration(value: AwsWebhook.ScopeConfigurationProperty) {
     this._scopeConfiguration.internalValue = value;
   }
   public resetScopeConfiguration() {
@@ -289,9 +289,9 @@ export class TfWebhook extends cdktn.TerraformResource {
       manual_creation: cdktn.booleanToTerraform(this._manualCreation),
       project_name: cdktn.stringToTerraform(this._projectName),
       region: cdktn.stringToTerraform(this._region),
-      filter_group: cdktn.listMapper(tfWebhookFilterGroupPropertyToTerraform, true)(this._filterGroup.internalValue),
-      pull_request_build_policy: tfWebhookPullRequestBuildPolicyPropertyToTerraform(this._pullRequestBuildPolicy.internalValue),
-      scope_configuration: tfWebhookScopeConfigurationPropertyToTerraform(this._scopeConfiguration.internalValue),
+      filter_group: cdktn.listMapper(awsWebhookFilterGroupPropertyToTerraform, true)(this._filterGroup.internalValue),
+      pull_request_build_policy: awsWebhookPullRequestBuildPolicyPropertyToTerraform(this._pullRequestBuildPolicy.internalValue),
+      scope_configuration: awsWebhookScopeConfigurationPropertyToTerraform(this._scopeConfiguration.internalValue),
     };
   }
 
@@ -334,22 +334,22 @@ export class TfWebhook extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       filter_group: {
-        value: cdktn.listMapperHcl(tfWebhookFilterGroupPropertyToHclTerraform, true)(this._filterGroup.internalValue),
+        value: cdktn.listMapperHcl(awsWebhookFilterGroupPropertyToHclTerraform, true)(this._filterGroup.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfWebhook.FilterGroupPropertyList",
+        storageClassType: "AwsWebhook.FilterGroupPropertyList",
       },
       pull_request_build_policy: {
-        value: tfWebhookPullRequestBuildPolicyPropertyToHclTerraform(this._pullRequestBuildPolicy.internalValue),
+        value: awsWebhookPullRequestBuildPolicyPropertyToHclTerraform(this._pullRequestBuildPolicy.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfWebhook.PullRequestBuildPolicyPropertyList",
+        storageClassType: "AwsWebhook.PullRequestBuildPolicyPropertyList",
       },
       scope_configuration: {
-        value: tfWebhookScopeConfigurationPropertyToHclTerraform(this._scopeConfiguration.internalValue),
+        value: awsWebhookScopeConfigurationPropertyToHclTerraform(this._scopeConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfWebhook.ScopeConfigurationPropertyList",
+        storageClassType: "AwsWebhook.ScopeConfigurationPropertyList",
       },
     };
 
@@ -358,7 +358,7 @@ export class TfWebhook extends cdktn.TerraformResource {
   }
 }
 
-export function tfWebhookFilterPropertyToTerraform(struct?: TfWebhook.FilterProperty | cdktn.IResolvable): any {
+export function awsWebhookFilterPropertyToTerraform(struct?: AwsWebhook.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -371,7 +371,7 @@ export function tfWebhookFilterPropertyToTerraform(struct?: TfWebhook.FilterProp
 }
 
 
-export function tfWebhookFilterPropertyToHclTerraform(struct?: TfWebhook.FilterProperty | cdktn.IResolvable): any {
+export function awsWebhookFilterPropertyToHclTerraform(struct?: AwsWebhook.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -402,25 +402,25 @@ export function tfWebhookFilterPropertyToHclTerraform(struct?: TfWebhook.FilterP
 }
 
 
-export function tfWebhookFilterGroupPropertyToTerraform(struct?: TfWebhook.FilterGroupProperty | cdktn.IResolvable): any {
+export function awsWebhookFilterGroupPropertyToTerraform(struct?: AwsWebhook.FilterGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    filter: cdktn.listMapper(tfWebhookFilterPropertyToTerraform, true)(struct!.filter),
+    filter: cdktn.listMapper(awsWebhookFilterPropertyToTerraform, true)(struct!.filter),
   }
 }
 
 
-export function tfWebhookFilterGroupPropertyToHclTerraform(struct?: TfWebhook.FilterGroupProperty | cdktn.IResolvable): any {
+export function awsWebhookFilterGroupPropertyToHclTerraform(struct?: AwsWebhook.FilterGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     filter: {
-      value: cdktn.listMapperHcl(tfWebhookFilterPropertyToHclTerraform, true)(struct!.filter),
+      value: cdktn.listMapperHcl(awsWebhookFilterPropertyToHclTerraform, true)(struct!.filter),
       isBlock: true,
       type: "list",
       storageClassType: "FilterPropertyList",
@@ -432,7 +432,7 @@ export function tfWebhookFilterGroupPropertyToHclTerraform(struct?: TfWebhook.Fi
 }
 
 
-export function tfWebhookPullRequestBuildPolicyPropertyToTerraform(struct?: TfWebhook.PullRequestBuildPolicyPropertyOutputReference | TfWebhook.PullRequestBuildPolicyProperty): any {
+export function awsWebhookPullRequestBuildPolicyPropertyToTerraform(struct?: AwsWebhook.PullRequestBuildPolicyPropertyOutputReference | AwsWebhook.PullRequestBuildPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -444,7 +444,7 @@ export function tfWebhookPullRequestBuildPolicyPropertyToTerraform(struct?: TfWe
 }
 
 
-export function tfWebhookPullRequestBuildPolicyPropertyToHclTerraform(struct?: TfWebhook.PullRequestBuildPolicyPropertyOutputReference | TfWebhook.PullRequestBuildPolicyProperty): any {
+export function awsWebhookPullRequestBuildPolicyPropertyToHclTerraform(struct?: AwsWebhook.PullRequestBuildPolicyPropertyOutputReference | AwsWebhook.PullRequestBuildPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -469,7 +469,7 @@ export function tfWebhookPullRequestBuildPolicyPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfWebhookScopeConfigurationPropertyToTerraform(struct?: TfWebhook.ScopeConfigurationPropertyOutputReference | TfWebhook.ScopeConfigurationProperty): any {
+export function awsWebhookScopeConfigurationPropertyToTerraform(struct?: AwsWebhook.ScopeConfigurationPropertyOutputReference | AwsWebhook.ScopeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -482,7 +482,7 @@ export function tfWebhookScopeConfigurationPropertyToTerraform(struct?: TfWebhoo
 }
 
 
-export function tfWebhookScopeConfigurationPropertyToHclTerraform(struct?: TfWebhook.ScopeConfigurationPropertyOutputReference | TfWebhook.ScopeConfigurationProperty): any {
+export function awsWebhookScopeConfigurationPropertyToHclTerraform(struct?: AwsWebhook.ScopeConfigurationPropertyOutputReference | AwsWebhook.ScopeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -513,18 +513,18 @@ export function tfWebhookScopeConfigurationPropertyToHclTerraform(struct?: TfWeb
 }
 
 
-export namespace TfWebhook {
+export namespace AwsWebhook {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#exclude_matched_pattern TfWebhook#exclude_matched_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#exclude_matched_pattern AwsWebhook#exclude_matched_pattern}
   */
   readonly excludeMatchedPattern?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#pattern TfWebhook#pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#pattern AwsWebhook#pattern}
   */
   readonly pattern: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#type TfWebhook#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#type AwsWebhook#type}
   */
   readonly type: string;
 }
@@ -650,7 +650,7 @@ export interface FilterGroupProperty {
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#filter TfWebhook#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#filter AwsWebhook#filter}
   */
   readonly filter?: FilterProperty[] | cdktn.IResolvable;
 }
@@ -736,11 +736,11 @@ export class FilterGroupPropertyList extends cdktn.ComplexList {
 }
 export interface PullRequestBuildPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#approver_roles TfWebhook#approver_roles}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#approver_roles AwsWebhook#approver_roles}
   */
   readonly approverRoles?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#requires_comment_approval TfWebhook#requires_comment_approval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#requires_comment_approval AwsWebhook#requires_comment_approval}
   */
   readonly requiresCommentApproval: string;
 }
@@ -813,15 +813,15 @@ export class PullRequestBuildPolicyPropertyOutputReference extends cdktn.Complex
 }
 export interface ScopeConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#domain TfWebhook#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#domain AwsWebhook#domain}
   */
   readonly domain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#name TfWebhook#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#name AwsWebhook#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#scope TfWebhook#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codebuild_webhook#scope AwsWebhook#scope}
   */
   readonly scope: string;
 }

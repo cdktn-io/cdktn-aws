@@ -324,7 +324,7 @@ function resolve(
     // Whether the symbol is known was decided once, before any reference was looked at — see
     // `migrateFile`. Reaching here means it is.
     const target = binding.detail.module.symbols.get(binding.detail.imported)!;
-    // Two positions where the identifier also NAMES something: a qualified `s3.TfBucket` does not
+    // Two positions where the identifier also NAMES something: a qualified `s3.AwsBucket` does not
     // parse in an export clause, and in a shorthand it would rename the property as well.
     const parent = ref.getParent();
     const inPlace = Node.isExportSpecifier(parent)
@@ -702,7 +702,7 @@ export function migrateFile(file: SourceFile, index: SymbolIndex, relative: stri
     const root = retargetedRoots.find((b) => b.statement === statement);
     if (root) {
       // `import * as aws from '@cdktn/provider-aws'` keeps the consumer's own spelling; only the
-      // package moves, because `aws.s3.TfBucket` is a perfectly good call site on the new library.
+      // package moves, because `aws.s3.AwsBucket` is a perfectly good call site on the new library.
       const literal = Node.isImportDeclaration(statement)
         ? statement.getModuleSpecifier()
         : statement.getFirstDescendantByKindOrThrow(SyntaxKind.StringLiteral);

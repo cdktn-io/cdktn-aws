@@ -5,60 +5,60 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAlbListenerRuleConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAlbListenerRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#id TfAlbListenerRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#id AwsAlbListenerRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#listener_arn TfAlbListenerRule#listener_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#listener_arn AwsAlbListenerRule#listener_arn}
   */
   readonly listenerArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#priority TfAlbListenerRule#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#priority AwsAlbListenerRule#priority}
   */
   readonly priority?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#region TfAlbListenerRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#region AwsAlbListenerRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#tags TfAlbListenerRule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#tags AwsAlbListenerRule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#tags_all TfAlbListenerRule#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#tags_all AwsAlbListenerRule#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#action TfAlbListenerRule#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#action AwsAlbListenerRule#action}
   */
-  readonly action: TfAlbListenerRule.ActionProperty[] | cdktn.IResolvable;
+  readonly action: AwsAlbListenerRule.ActionProperty[] | cdktn.IResolvable;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#condition TfAlbListenerRule#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#condition AwsAlbListenerRule#condition}
   */
-  readonly condition: TfAlbListenerRule.ConditionProperty[] | cdktn.IResolvable;
+  readonly condition: AwsAlbListenerRule.ConditionProperty[] | cdktn.IResolvable;
   /**
   * transform block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#transform TfAlbListenerRule#transform}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#transform AwsAlbListenerRule#transform}
   */
-  readonly transform?: TfAlbListenerRule.TransformProperty[] | cdktn.IResolvable;
+  readonly transform?: AwsAlbListenerRule.TransformProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule aws_alb_listener_rule}
 */
-export class TfAlbListenerRule extends cdktn.TerraformResource {
+export class AwsAlbListenerRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -69,11 +69,11 @@ export class TfAlbListenerRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAlbListenerRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAlbListenerRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAlbListenerRule to import
-  * @param importFromId The id of the existing TfAlbListenerRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAlbListenerRule to import is found
+  * @param importToId The construct id used in the generated config for the AwsAlbListenerRule to import
+  * @param importFromId The id of the existing AwsAlbListenerRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAlbListenerRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_alb_listener_rule", importId: importFromId, provider });
@@ -88,9 +88,9 @@ export class TfAlbListenerRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAlbListenerRuleConfig
+  * @param options AwsAlbListenerRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAlbListenerRuleConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAlbListenerRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_alb_listener_rule',
       terraformGeneratorMetadata: {
@@ -220,11 +220,11 @@ export class TfAlbListenerRule extends cdktn.TerraformResource {
   }
 
   // action - computed: false, optional: false, required: true
-  private _action = new TfAlbListenerRule.ActionPropertyList(this, "action", false);
+  private _action = new AwsAlbListenerRule.ActionPropertyList(this, "action", false);
   public get action() {
     return this._action;
   }
-  public putAction(value: TfAlbListenerRule.ActionProperty[] | cdktn.IResolvable) {
+  public putAction(value: AwsAlbListenerRule.ActionProperty[] | cdktn.IResolvable) {
     this._action.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -233,11 +233,11 @@ export class TfAlbListenerRule extends cdktn.TerraformResource {
   }
 
   // condition - computed: false, optional: false, required: true
-  private _condition = new TfAlbListenerRule.ConditionPropertyList(this, "condition", true);
+  private _condition = new AwsAlbListenerRule.ConditionPropertyList(this, "condition", true);
   public get condition() {
     return this._condition;
   }
-  public putCondition(value: TfAlbListenerRule.ConditionProperty[] | cdktn.IResolvable) {
+  public putCondition(value: AwsAlbListenerRule.ConditionProperty[] | cdktn.IResolvable) {
     this._condition.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -246,11 +246,11 @@ export class TfAlbListenerRule extends cdktn.TerraformResource {
   }
 
   // transform - computed: false, optional: true, required: false
-  private _transform = new TfAlbListenerRule.TransformPropertyList(this, "transform", true);
+  private _transform = new AwsAlbListenerRule.TransformPropertyList(this, "transform", true);
   public get transform() {
     return this._transform;
   }
-  public putTransform(value: TfAlbListenerRule.TransformProperty[] | cdktn.IResolvable) {
+  public putTransform(value: AwsAlbListenerRule.TransformProperty[] | cdktn.IResolvable) {
     this._transform.internalValue = value;
   }
   public resetTransform() {
@@ -273,9 +273,9 @@ export class TfAlbListenerRule extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      action: cdktn.listMapper(tfAlbListenerRuleActionPropertyToTerraform, true)(this._action.internalValue),
-      condition: cdktn.listMapper(tfAlbListenerRuleConditionPropertyToTerraform, true)(this._condition.internalValue),
-      transform: cdktn.listMapper(tfAlbListenerRuleTransformPropertyToTerraform, true)(this._transform.internalValue),
+      action: cdktn.listMapper(awsAlbListenerRuleActionPropertyToTerraform, true)(this._action.internalValue),
+      condition: cdktn.listMapper(awsAlbListenerRuleConditionPropertyToTerraform, true)(this._condition.internalValue),
+      transform: cdktn.listMapper(awsAlbListenerRuleTransformPropertyToTerraform, true)(this._transform.internalValue),
     };
   }
 
@@ -318,22 +318,22 @@ export class TfAlbListenerRule extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       action: {
-        value: cdktn.listMapperHcl(tfAlbListenerRuleActionPropertyToHclTerraform, true)(this._action.internalValue),
+        value: cdktn.listMapperHcl(awsAlbListenerRuleActionPropertyToHclTerraform, true)(this._action.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAlbListenerRule.ActionPropertyList",
+        storageClassType: "AwsAlbListenerRule.ActionPropertyList",
       },
       condition: {
-        value: cdktn.listMapperHcl(tfAlbListenerRuleConditionPropertyToHclTerraform, true)(this._condition.internalValue),
+        value: cdktn.listMapperHcl(awsAlbListenerRuleConditionPropertyToHclTerraform, true)(this._condition.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfAlbListenerRule.ConditionPropertyList",
+        storageClassType: "AwsAlbListenerRule.ConditionPropertyList",
       },
       transform: {
-        value: cdktn.listMapperHcl(tfAlbListenerRuleTransformPropertyToHclTerraform, true)(this._transform.internalValue),
+        value: cdktn.listMapperHcl(awsAlbListenerRuleTransformPropertyToHclTerraform, true)(this._transform.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfAlbListenerRule.TransformPropertyList",
+        storageClassType: "AwsAlbListenerRule.TransformPropertyList",
       },
     };
 
@@ -342,7 +342,7 @@ export class TfAlbListenerRule extends cdktn.TerraformResource {
   }
 }
 
-export function tfAlbListenerRuleAuthenticateCognitoPropertyToTerraform(struct?: TfAlbListenerRule.AuthenticateCognitoPropertyOutputReference | TfAlbListenerRule.AuthenticateCognitoProperty): any {
+export function awsAlbListenerRuleAuthenticateCognitoPropertyToTerraform(struct?: AwsAlbListenerRule.AuthenticateCognitoPropertyOutputReference | AwsAlbListenerRule.AuthenticateCognitoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function tfAlbListenerRuleAuthenticateCognitoPropertyToTerraform(struct?:
 }
 
 
-export function tfAlbListenerRuleAuthenticateCognitoPropertyToHclTerraform(struct?: TfAlbListenerRule.AuthenticateCognitoPropertyOutputReference | TfAlbListenerRule.AuthenticateCognitoProperty): any {
+export function awsAlbListenerRuleAuthenticateCognitoPropertyToHclTerraform(struct?: AwsAlbListenerRule.AuthenticateCognitoPropertyOutputReference | AwsAlbListenerRule.AuthenticateCognitoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -421,7 +421,7 @@ export function tfAlbListenerRuleAuthenticateCognitoPropertyToHclTerraform(struc
 }
 
 
-export function tfAlbListenerRuleAuthenticateOidcPropertyToTerraform(struct?: TfAlbListenerRule.AuthenticateOidcPropertyOutputReference | TfAlbListenerRule.AuthenticateOidcProperty): any {
+export function awsAlbListenerRuleAuthenticateOidcPropertyToTerraform(struct?: AwsAlbListenerRule.AuthenticateOidcPropertyOutputReference | AwsAlbListenerRule.AuthenticateOidcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -442,7 +442,7 @@ export function tfAlbListenerRuleAuthenticateOidcPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfAlbListenerRuleAuthenticateOidcPropertyToHclTerraform(struct?: TfAlbListenerRule.AuthenticateOidcPropertyOutputReference | TfAlbListenerRule.AuthenticateOidcProperty): any {
+export function awsAlbListenerRuleAuthenticateOidcPropertyToHclTerraform(struct?: AwsAlbListenerRule.AuthenticateOidcPropertyOutputReference | AwsAlbListenerRule.AuthenticateOidcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -521,7 +521,7 @@ export function tfAlbListenerRuleAuthenticateOidcPropertyToHclTerraform(struct?:
 }
 
 
-export function tfAlbListenerRuleFixedResponsePropertyToTerraform(struct?: TfAlbListenerRule.FixedResponsePropertyOutputReference | TfAlbListenerRule.FixedResponseProperty): any {
+export function awsAlbListenerRuleFixedResponsePropertyToTerraform(struct?: AwsAlbListenerRule.FixedResponsePropertyOutputReference | AwsAlbListenerRule.FixedResponseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -534,7 +534,7 @@ export function tfAlbListenerRuleFixedResponsePropertyToTerraform(struct?: TfAlb
 }
 
 
-export function tfAlbListenerRuleFixedResponsePropertyToHclTerraform(struct?: TfAlbListenerRule.FixedResponsePropertyOutputReference | TfAlbListenerRule.FixedResponseProperty): any {
+export function awsAlbListenerRuleFixedResponsePropertyToHclTerraform(struct?: AwsAlbListenerRule.FixedResponsePropertyOutputReference | AwsAlbListenerRule.FixedResponseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -565,7 +565,7 @@ export function tfAlbListenerRuleFixedResponsePropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfAlbListenerRuleStickinessPropertyToTerraform(struct?: TfAlbListenerRule.StickinessPropertyOutputReference | TfAlbListenerRule.StickinessProperty): any {
+export function awsAlbListenerRuleStickinessPropertyToTerraform(struct?: AwsAlbListenerRule.StickinessPropertyOutputReference | AwsAlbListenerRule.StickinessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -577,7 +577,7 @@ export function tfAlbListenerRuleStickinessPropertyToTerraform(struct?: TfAlbLis
 }
 
 
-export function tfAlbListenerRuleStickinessPropertyToHclTerraform(struct?: TfAlbListenerRule.StickinessPropertyOutputReference | TfAlbListenerRule.StickinessProperty): any {
+export function awsAlbListenerRuleStickinessPropertyToHclTerraform(struct?: AwsAlbListenerRule.StickinessPropertyOutputReference | AwsAlbListenerRule.StickinessProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -602,7 +602,7 @@ export function tfAlbListenerRuleStickinessPropertyToHclTerraform(struct?: TfAlb
 }
 
 
-export function tfAlbListenerRuleTargetGroupPropertyToTerraform(struct?: TfAlbListenerRule.TargetGroupProperty | cdktn.IResolvable): any {
+export function awsAlbListenerRuleTargetGroupPropertyToTerraform(struct?: AwsAlbListenerRule.TargetGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -614,7 +614,7 @@ export function tfAlbListenerRuleTargetGroupPropertyToTerraform(struct?: TfAlbLi
 }
 
 
-export function tfAlbListenerRuleTargetGroupPropertyToHclTerraform(struct?: TfAlbListenerRule.TargetGroupProperty | cdktn.IResolvable): any {
+export function awsAlbListenerRuleTargetGroupPropertyToHclTerraform(struct?: AwsAlbListenerRule.TargetGroupProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -639,32 +639,32 @@ export function tfAlbListenerRuleTargetGroupPropertyToHclTerraform(struct?: TfAl
 }
 
 
-export function tfAlbListenerRuleForwardPropertyToTerraform(struct?: TfAlbListenerRule.ForwardPropertyOutputReference | TfAlbListenerRule.ForwardProperty): any {
+export function awsAlbListenerRuleForwardPropertyToTerraform(struct?: AwsAlbListenerRule.ForwardPropertyOutputReference | AwsAlbListenerRule.ForwardProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    stickiness: tfAlbListenerRuleStickinessPropertyToTerraform(struct!.stickiness),
-    target_group: cdktn.listMapper(tfAlbListenerRuleTargetGroupPropertyToTerraform, true)(struct!.targetGroup),
+    stickiness: awsAlbListenerRuleStickinessPropertyToTerraform(struct!.stickiness),
+    target_group: cdktn.listMapper(awsAlbListenerRuleTargetGroupPropertyToTerraform, true)(struct!.targetGroup),
   }
 }
 
 
-export function tfAlbListenerRuleForwardPropertyToHclTerraform(struct?: TfAlbListenerRule.ForwardPropertyOutputReference | TfAlbListenerRule.ForwardProperty): any {
+export function awsAlbListenerRuleForwardPropertyToHclTerraform(struct?: AwsAlbListenerRule.ForwardPropertyOutputReference | AwsAlbListenerRule.ForwardProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     stickiness: {
-      value: tfAlbListenerRuleStickinessPropertyToHclTerraform(struct!.stickiness),
+      value: awsAlbListenerRuleStickinessPropertyToHclTerraform(struct!.stickiness),
       isBlock: true,
       type: "list",
       storageClassType: "StickinessPropertyList",
     },
     target_group: {
-      value: cdktn.listMapperHcl(tfAlbListenerRuleTargetGroupPropertyToHclTerraform, true)(struct!.targetGroup),
+      value: cdktn.listMapperHcl(awsAlbListenerRuleTargetGroupPropertyToHclTerraform, true)(struct!.targetGroup),
       isBlock: true,
       type: "set",
       storageClassType: "TargetGroupPropertyList",
@@ -676,7 +676,7 @@ export function tfAlbListenerRuleForwardPropertyToHclTerraform(struct?: TfAlbLis
 }
 
 
-export function tfAlbListenerRuleAdditionalClaimPropertyToTerraform(struct?: TfAlbListenerRule.AdditionalClaimProperty | cdktn.IResolvable): any {
+export function awsAlbListenerRuleAdditionalClaimPropertyToTerraform(struct?: AwsAlbListenerRule.AdditionalClaimProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -689,7 +689,7 @@ export function tfAlbListenerRuleAdditionalClaimPropertyToTerraform(struct?: TfA
 }
 
 
-export function tfAlbListenerRuleAdditionalClaimPropertyToHclTerraform(struct?: TfAlbListenerRule.AdditionalClaimProperty | cdktn.IResolvable): any {
+export function awsAlbListenerRuleAdditionalClaimPropertyToHclTerraform(struct?: AwsAlbListenerRule.AdditionalClaimProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -720,7 +720,7 @@ export function tfAlbListenerRuleAdditionalClaimPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfAlbListenerRuleJwtValidationPropertyToTerraform(struct?: TfAlbListenerRule.JwtValidationPropertyOutputReference | TfAlbListenerRule.JwtValidationProperty): any {
+export function awsAlbListenerRuleJwtValidationPropertyToTerraform(struct?: AwsAlbListenerRule.JwtValidationPropertyOutputReference | AwsAlbListenerRule.JwtValidationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -728,12 +728,12 @@ export function tfAlbListenerRuleJwtValidationPropertyToTerraform(struct?: TfAlb
   return {
     issuer: cdktn.stringToTerraform(struct!.issuer),
     jwks_endpoint: cdktn.stringToTerraform(struct!.jwksEndpoint),
-    additional_claim: cdktn.listMapper(tfAlbListenerRuleAdditionalClaimPropertyToTerraform, true)(struct!.additionalClaim),
+    additional_claim: cdktn.listMapper(awsAlbListenerRuleAdditionalClaimPropertyToTerraform, true)(struct!.additionalClaim),
   }
 }
 
 
-export function tfAlbListenerRuleJwtValidationPropertyToHclTerraform(struct?: TfAlbListenerRule.JwtValidationPropertyOutputReference | TfAlbListenerRule.JwtValidationProperty): any {
+export function awsAlbListenerRuleJwtValidationPropertyToHclTerraform(struct?: AwsAlbListenerRule.JwtValidationPropertyOutputReference | AwsAlbListenerRule.JwtValidationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -752,7 +752,7 @@ export function tfAlbListenerRuleJwtValidationPropertyToHclTerraform(struct?: Tf
       storageClassType: "string",
     },
     additional_claim: {
-      value: cdktn.listMapperHcl(tfAlbListenerRuleAdditionalClaimPropertyToHclTerraform, true)(struct!.additionalClaim),
+      value: cdktn.listMapperHcl(awsAlbListenerRuleAdditionalClaimPropertyToHclTerraform, true)(struct!.additionalClaim),
       isBlock: true,
       type: "set",
       storageClassType: "AdditionalClaimPropertyList",
@@ -764,7 +764,7 @@ export function tfAlbListenerRuleJwtValidationPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfAlbListenerRuleRedirectPropertyToTerraform(struct?: TfAlbListenerRule.RedirectPropertyOutputReference | TfAlbListenerRule.RedirectProperty): any {
+export function awsAlbListenerRuleRedirectPropertyToTerraform(struct?: AwsAlbListenerRule.RedirectPropertyOutputReference | AwsAlbListenerRule.RedirectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -780,7 +780,7 @@ export function tfAlbListenerRuleRedirectPropertyToTerraform(struct?: TfAlbListe
 }
 
 
-export function tfAlbListenerRuleRedirectPropertyToHclTerraform(struct?: TfAlbListenerRule.RedirectPropertyOutputReference | TfAlbListenerRule.RedirectProperty): any {
+export function awsAlbListenerRuleRedirectPropertyToHclTerraform(struct?: AwsAlbListenerRule.RedirectPropertyOutputReference | AwsAlbListenerRule.RedirectProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -829,7 +829,7 @@ export function tfAlbListenerRuleRedirectPropertyToHclTerraform(struct?: TfAlbLi
 }
 
 
-export function tfAlbListenerRuleActionPropertyToTerraform(struct?: TfAlbListenerRule.ActionProperty | cdktn.IResolvable): any {
+export function awsAlbListenerRuleActionPropertyToTerraform(struct?: AwsAlbListenerRule.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -838,17 +838,17 @@ export function tfAlbListenerRuleActionPropertyToTerraform(struct?: TfAlbListene
     order: cdktn.numberToTerraform(struct!.order),
     target_group_arn: cdktn.stringToTerraform(struct!.targetGroupArn),
     type: cdktn.stringToTerraform(struct!.type),
-    authenticate_cognito: tfAlbListenerRuleAuthenticateCognitoPropertyToTerraform(struct!.authenticateCognito),
-    authenticate_oidc: tfAlbListenerRuleAuthenticateOidcPropertyToTerraform(struct!.authenticateOidc),
-    fixed_response: tfAlbListenerRuleFixedResponsePropertyToTerraform(struct!.fixedResponse),
-    forward: tfAlbListenerRuleForwardPropertyToTerraform(struct!.forward),
-    jwt_validation: tfAlbListenerRuleJwtValidationPropertyToTerraform(struct!.jwtValidation),
-    redirect: tfAlbListenerRuleRedirectPropertyToTerraform(struct!.redirect),
+    authenticate_cognito: awsAlbListenerRuleAuthenticateCognitoPropertyToTerraform(struct!.authenticateCognito),
+    authenticate_oidc: awsAlbListenerRuleAuthenticateOidcPropertyToTerraform(struct!.authenticateOidc),
+    fixed_response: awsAlbListenerRuleFixedResponsePropertyToTerraform(struct!.fixedResponse),
+    forward: awsAlbListenerRuleForwardPropertyToTerraform(struct!.forward),
+    jwt_validation: awsAlbListenerRuleJwtValidationPropertyToTerraform(struct!.jwtValidation),
+    redirect: awsAlbListenerRuleRedirectPropertyToTerraform(struct!.redirect),
   }
 }
 
 
-export function tfAlbListenerRuleActionPropertyToHclTerraform(struct?: TfAlbListenerRule.ActionProperty | cdktn.IResolvable): any {
+export function awsAlbListenerRuleActionPropertyToHclTerraform(struct?: AwsAlbListenerRule.ActionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -873,37 +873,37 @@ export function tfAlbListenerRuleActionPropertyToHclTerraform(struct?: TfAlbList
       storageClassType: "string",
     },
     authenticate_cognito: {
-      value: tfAlbListenerRuleAuthenticateCognitoPropertyToHclTerraform(struct!.authenticateCognito),
+      value: awsAlbListenerRuleAuthenticateCognitoPropertyToHclTerraform(struct!.authenticateCognito),
       isBlock: true,
       type: "list",
       storageClassType: "AuthenticateCognitoPropertyList",
     },
     authenticate_oidc: {
-      value: tfAlbListenerRuleAuthenticateOidcPropertyToHclTerraform(struct!.authenticateOidc),
+      value: awsAlbListenerRuleAuthenticateOidcPropertyToHclTerraform(struct!.authenticateOidc),
       isBlock: true,
       type: "list",
       storageClassType: "AuthenticateOidcPropertyList",
     },
     fixed_response: {
-      value: tfAlbListenerRuleFixedResponsePropertyToHclTerraform(struct!.fixedResponse),
+      value: awsAlbListenerRuleFixedResponsePropertyToHclTerraform(struct!.fixedResponse),
       isBlock: true,
       type: "list",
       storageClassType: "FixedResponsePropertyList",
     },
     forward: {
-      value: tfAlbListenerRuleForwardPropertyToHclTerraform(struct!.forward),
+      value: awsAlbListenerRuleForwardPropertyToHclTerraform(struct!.forward),
       isBlock: true,
       type: "list",
       storageClassType: "ForwardPropertyList",
     },
     jwt_validation: {
-      value: tfAlbListenerRuleJwtValidationPropertyToHclTerraform(struct!.jwtValidation),
+      value: awsAlbListenerRuleJwtValidationPropertyToHclTerraform(struct!.jwtValidation),
       isBlock: true,
       type: "list",
       storageClassType: "JwtValidationPropertyList",
     },
     redirect: {
-      value: tfAlbListenerRuleRedirectPropertyToHclTerraform(struct!.redirect),
+      value: awsAlbListenerRuleRedirectPropertyToHclTerraform(struct!.redirect),
       isBlock: true,
       type: "list",
       storageClassType: "RedirectPropertyList",
@@ -915,7 +915,7 @@ export function tfAlbListenerRuleActionPropertyToHclTerraform(struct?: TfAlbList
 }
 
 
-export function tfAlbListenerRuleHostHeaderPropertyToTerraform(struct?: TfAlbListenerRule.HostHeaderPropertyOutputReference | TfAlbListenerRule.HostHeaderProperty): any {
+export function awsAlbListenerRuleHostHeaderPropertyToTerraform(struct?: AwsAlbListenerRule.HostHeaderPropertyOutputReference | AwsAlbListenerRule.HostHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -927,7 +927,7 @@ export function tfAlbListenerRuleHostHeaderPropertyToTerraform(struct?: TfAlbLis
 }
 
 
-export function tfAlbListenerRuleHostHeaderPropertyToHclTerraform(struct?: TfAlbListenerRule.HostHeaderPropertyOutputReference | TfAlbListenerRule.HostHeaderProperty): any {
+export function awsAlbListenerRuleHostHeaderPropertyToHclTerraform(struct?: AwsAlbListenerRule.HostHeaderPropertyOutputReference | AwsAlbListenerRule.HostHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -952,7 +952,7 @@ export function tfAlbListenerRuleHostHeaderPropertyToHclTerraform(struct?: TfAlb
 }
 
 
-export function tfAlbListenerRuleHttpHeaderPropertyToTerraform(struct?: TfAlbListenerRule.HttpHeaderPropertyOutputReference | TfAlbListenerRule.HttpHeaderProperty): any {
+export function awsAlbListenerRuleHttpHeaderPropertyToTerraform(struct?: AwsAlbListenerRule.HttpHeaderPropertyOutputReference | AwsAlbListenerRule.HttpHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -965,7 +965,7 @@ export function tfAlbListenerRuleHttpHeaderPropertyToTerraform(struct?: TfAlbLis
 }
 
 
-export function tfAlbListenerRuleHttpHeaderPropertyToHclTerraform(struct?: TfAlbListenerRule.HttpHeaderPropertyOutputReference | TfAlbListenerRule.HttpHeaderProperty): any {
+export function awsAlbListenerRuleHttpHeaderPropertyToHclTerraform(struct?: AwsAlbListenerRule.HttpHeaderPropertyOutputReference | AwsAlbListenerRule.HttpHeaderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -996,7 +996,7 @@ export function tfAlbListenerRuleHttpHeaderPropertyToHclTerraform(struct?: TfAlb
 }
 
 
-export function tfAlbListenerRuleHttpRequestMethodPropertyToTerraform(struct?: TfAlbListenerRule.HttpRequestMethodPropertyOutputReference | TfAlbListenerRule.HttpRequestMethodProperty): any {
+export function awsAlbListenerRuleHttpRequestMethodPropertyToTerraform(struct?: AwsAlbListenerRule.HttpRequestMethodPropertyOutputReference | AwsAlbListenerRule.HttpRequestMethodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1007,7 +1007,7 @@ export function tfAlbListenerRuleHttpRequestMethodPropertyToTerraform(struct?: T
 }
 
 
-export function tfAlbListenerRuleHttpRequestMethodPropertyToHclTerraform(struct?: TfAlbListenerRule.HttpRequestMethodPropertyOutputReference | TfAlbListenerRule.HttpRequestMethodProperty): any {
+export function awsAlbListenerRuleHttpRequestMethodPropertyToHclTerraform(struct?: AwsAlbListenerRule.HttpRequestMethodPropertyOutputReference | AwsAlbListenerRule.HttpRequestMethodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1026,7 +1026,7 @@ export function tfAlbListenerRuleHttpRequestMethodPropertyToHclTerraform(struct?
 }
 
 
-export function tfAlbListenerRulePathPatternPropertyToTerraform(struct?: TfAlbListenerRule.PathPatternPropertyOutputReference | TfAlbListenerRule.PathPatternProperty): any {
+export function awsAlbListenerRulePathPatternPropertyToTerraform(struct?: AwsAlbListenerRule.PathPatternPropertyOutputReference | AwsAlbListenerRule.PathPatternProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1038,7 +1038,7 @@ export function tfAlbListenerRulePathPatternPropertyToTerraform(struct?: TfAlbLi
 }
 
 
-export function tfAlbListenerRulePathPatternPropertyToHclTerraform(struct?: TfAlbListenerRule.PathPatternPropertyOutputReference | TfAlbListenerRule.PathPatternProperty): any {
+export function awsAlbListenerRulePathPatternPropertyToHclTerraform(struct?: AwsAlbListenerRule.PathPatternPropertyOutputReference | AwsAlbListenerRule.PathPatternProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1063,7 +1063,7 @@ export function tfAlbListenerRulePathPatternPropertyToHclTerraform(struct?: TfAl
 }
 
 
-export function tfAlbListenerRuleQueryStringPropertyToTerraform(struct?: TfAlbListenerRule.QueryStringProperty | cdktn.IResolvable): any {
+export function awsAlbListenerRuleQueryStringPropertyToTerraform(struct?: AwsAlbListenerRule.QueryStringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1075,7 +1075,7 @@ export function tfAlbListenerRuleQueryStringPropertyToTerraform(struct?: TfAlbLi
 }
 
 
-export function tfAlbListenerRuleQueryStringPropertyToHclTerraform(struct?: TfAlbListenerRule.QueryStringProperty | cdktn.IResolvable): any {
+export function awsAlbListenerRuleQueryStringPropertyToHclTerraform(struct?: AwsAlbListenerRule.QueryStringProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1100,7 +1100,7 @@ export function tfAlbListenerRuleQueryStringPropertyToHclTerraform(struct?: TfAl
 }
 
 
-export function tfAlbListenerRuleSourceIpPropertyToTerraform(struct?: TfAlbListenerRule.SourceIpPropertyOutputReference | TfAlbListenerRule.SourceIpProperty): any {
+export function awsAlbListenerRuleSourceIpPropertyToTerraform(struct?: AwsAlbListenerRule.SourceIpPropertyOutputReference | AwsAlbListenerRule.SourceIpProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1112,7 +1112,7 @@ export function tfAlbListenerRuleSourceIpPropertyToTerraform(struct?: TfAlbListe
 }
 
 
-export function tfAlbListenerRuleSourceIpPropertyToHclTerraform(struct?: TfAlbListenerRule.SourceIpPropertyOutputReference | TfAlbListenerRule.SourceIpProperty): any {
+export function awsAlbListenerRuleSourceIpPropertyToHclTerraform(struct?: AwsAlbListenerRule.SourceIpPropertyOutputReference | AwsAlbListenerRule.SourceIpProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1137,60 +1137,60 @@ export function tfAlbListenerRuleSourceIpPropertyToHclTerraform(struct?: TfAlbLi
 }
 
 
-export function tfAlbListenerRuleConditionPropertyToTerraform(struct?: TfAlbListenerRule.ConditionProperty | cdktn.IResolvable): any {
+export function awsAlbListenerRuleConditionPropertyToTerraform(struct?: AwsAlbListenerRule.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    host_header: tfAlbListenerRuleHostHeaderPropertyToTerraform(struct!.hostHeader),
-    http_header: tfAlbListenerRuleHttpHeaderPropertyToTerraform(struct!.httpHeader),
-    http_request_method: tfAlbListenerRuleHttpRequestMethodPropertyToTerraform(struct!.httpRequestMethod),
-    path_pattern: tfAlbListenerRulePathPatternPropertyToTerraform(struct!.pathPattern),
-    query_string: cdktn.listMapper(tfAlbListenerRuleQueryStringPropertyToTerraform, true)(struct!.queryString),
-    source_ip: tfAlbListenerRuleSourceIpPropertyToTerraform(struct!.sourceIp),
+    host_header: awsAlbListenerRuleHostHeaderPropertyToTerraform(struct!.hostHeader),
+    http_header: awsAlbListenerRuleHttpHeaderPropertyToTerraform(struct!.httpHeader),
+    http_request_method: awsAlbListenerRuleHttpRequestMethodPropertyToTerraform(struct!.httpRequestMethod),
+    path_pattern: awsAlbListenerRulePathPatternPropertyToTerraform(struct!.pathPattern),
+    query_string: cdktn.listMapper(awsAlbListenerRuleQueryStringPropertyToTerraform, true)(struct!.queryString),
+    source_ip: awsAlbListenerRuleSourceIpPropertyToTerraform(struct!.sourceIp),
   }
 }
 
 
-export function tfAlbListenerRuleConditionPropertyToHclTerraform(struct?: TfAlbListenerRule.ConditionProperty | cdktn.IResolvable): any {
+export function awsAlbListenerRuleConditionPropertyToHclTerraform(struct?: AwsAlbListenerRule.ConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     host_header: {
-      value: tfAlbListenerRuleHostHeaderPropertyToHclTerraform(struct!.hostHeader),
+      value: awsAlbListenerRuleHostHeaderPropertyToHclTerraform(struct!.hostHeader),
       isBlock: true,
       type: "list",
       storageClassType: "HostHeaderPropertyList",
     },
     http_header: {
-      value: tfAlbListenerRuleHttpHeaderPropertyToHclTerraform(struct!.httpHeader),
+      value: awsAlbListenerRuleHttpHeaderPropertyToHclTerraform(struct!.httpHeader),
       isBlock: true,
       type: "list",
       storageClassType: "HttpHeaderPropertyList",
     },
     http_request_method: {
-      value: tfAlbListenerRuleHttpRequestMethodPropertyToHclTerraform(struct!.httpRequestMethod),
+      value: awsAlbListenerRuleHttpRequestMethodPropertyToHclTerraform(struct!.httpRequestMethod),
       isBlock: true,
       type: "list",
       storageClassType: "HttpRequestMethodPropertyList",
     },
     path_pattern: {
-      value: tfAlbListenerRulePathPatternPropertyToHclTerraform(struct!.pathPattern),
+      value: awsAlbListenerRulePathPatternPropertyToHclTerraform(struct!.pathPattern),
       isBlock: true,
       type: "list",
       storageClassType: "PathPatternPropertyList",
     },
     query_string: {
-      value: cdktn.listMapperHcl(tfAlbListenerRuleQueryStringPropertyToHclTerraform, true)(struct!.queryString),
+      value: cdktn.listMapperHcl(awsAlbListenerRuleQueryStringPropertyToHclTerraform, true)(struct!.queryString),
       isBlock: true,
       type: "set",
       storageClassType: "QueryStringPropertyList",
     },
     source_ip: {
-      value: tfAlbListenerRuleSourceIpPropertyToHclTerraform(struct!.sourceIp),
+      value: awsAlbListenerRuleSourceIpPropertyToHclTerraform(struct!.sourceIp),
       isBlock: true,
       type: "list",
       storageClassType: "SourceIpPropertyList",
@@ -1202,7 +1202,7 @@ export function tfAlbListenerRuleConditionPropertyToHclTerraform(struct?: TfAlbL
 }
 
 
-export function tfAlbListenerRuleTransformHostHeaderRewriteConfigRewritePropertyToTerraform(struct?: TfAlbListenerRule.TransformHostHeaderRewriteConfigRewritePropertyOutputReference | TfAlbListenerRule.TransformHostHeaderRewriteConfigRewriteProperty): any {
+export function awsAlbListenerRuleTransformHostHeaderRewriteConfigRewritePropertyToTerraform(struct?: AwsAlbListenerRule.TransformHostHeaderRewriteConfigRewritePropertyOutputReference | AwsAlbListenerRule.TransformHostHeaderRewriteConfigRewriteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1214,7 +1214,7 @@ export function tfAlbListenerRuleTransformHostHeaderRewriteConfigRewriteProperty
 }
 
 
-export function tfAlbListenerRuleTransformHostHeaderRewriteConfigRewritePropertyToHclTerraform(struct?: TfAlbListenerRule.TransformHostHeaderRewriteConfigRewritePropertyOutputReference | TfAlbListenerRule.TransformHostHeaderRewriteConfigRewriteProperty): any {
+export function awsAlbListenerRuleTransformHostHeaderRewriteConfigRewritePropertyToHclTerraform(struct?: AwsAlbListenerRule.TransformHostHeaderRewriteConfigRewritePropertyOutputReference | AwsAlbListenerRule.TransformHostHeaderRewriteConfigRewriteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1239,25 +1239,25 @@ export function tfAlbListenerRuleTransformHostHeaderRewriteConfigRewriteProperty
 }
 
 
-export function tfAlbListenerRuleHostHeaderRewriteConfigPropertyToTerraform(struct?: TfAlbListenerRule.HostHeaderRewriteConfigPropertyOutputReference | TfAlbListenerRule.HostHeaderRewriteConfigProperty): any {
+export function awsAlbListenerRuleHostHeaderRewriteConfigPropertyToTerraform(struct?: AwsAlbListenerRule.HostHeaderRewriteConfigPropertyOutputReference | AwsAlbListenerRule.HostHeaderRewriteConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    rewrite: tfAlbListenerRuleTransformHostHeaderRewriteConfigRewritePropertyToTerraform(struct!.rewrite),
+    rewrite: awsAlbListenerRuleTransformHostHeaderRewriteConfigRewritePropertyToTerraform(struct!.rewrite),
   }
 }
 
 
-export function tfAlbListenerRuleHostHeaderRewriteConfigPropertyToHclTerraform(struct?: TfAlbListenerRule.HostHeaderRewriteConfigPropertyOutputReference | TfAlbListenerRule.HostHeaderRewriteConfigProperty): any {
+export function awsAlbListenerRuleHostHeaderRewriteConfigPropertyToHclTerraform(struct?: AwsAlbListenerRule.HostHeaderRewriteConfigPropertyOutputReference | AwsAlbListenerRule.HostHeaderRewriteConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     rewrite: {
-      value: tfAlbListenerRuleTransformHostHeaderRewriteConfigRewritePropertyToHclTerraform(struct!.rewrite),
+      value: awsAlbListenerRuleTransformHostHeaderRewriteConfigRewritePropertyToHclTerraform(struct!.rewrite),
       isBlock: true,
       type: "list",
       storageClassType: "TransformHostHeaderRewriteConfigRewritePropertyList",
@@ -1269,7 +1269,7 @@ export function tfAlbListenerRuleHostHeaderRewriteConfigPropertyToHclTerraform(s
 }
 
 
-export function tfAlbListenerRuleTransformUrlRewriteConfigRewritePropertyToTerraform(struct?: TfAlbListenerRule.TransformUrlRewriteConfigRewritePropertyOutputReference | TfAlbListenerRule.TransformUrlRewriteConfigRewriteProperty): any {
+export function awsAlbListenerRuleTransformUrlRewriteConfigRewritePropertyToTerraform(struct?: AwsAlbListenerRule.TransformUrlRewriteConfigRewritePropertyOutputReference | AwsAlbListenerRule.TransformUrlRewriteConfigRewriteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1281,7 +1281,7 @@ export function tfAlbListenerRuleTransformUrlRewriteConfigRewritePropertyToTerra
 }
 
 
-export function tfAlbListenerRuleTransformUrlRewriteConfigRewritePropertyToHclTerraform(struct?: TfAlbListenerRule.TransformUrlRewriteConfigRewritePropertyOutputReference | TfAlbListenerRule.TransformUrlRewriteConfigRewriteProperty): any {
+export function awsAlbListenerRuleTransformUrlRewriteConfigRewritePropertyToHclTerraform(struct?: AwsAlbListenerRule.TransformUrlRewriteConfigRewritePropertyOutputReference | AwsAlbListenerRule.TransformUrlRewriteConfigRewriteProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1306,25 +1306,25 @@ export function tfAlbListenerRuleTransformUrlRewriteConfigRewritePropertyToHclTe
 }
 
 
-export function tfAlbListenerRuleUrlRewriteConfigPropertyToTerraform(struct?: TfAlbListenerRule.UrlRewriteConfigPropertyOutputReference | TfAlbListenerRule.UrlRewriteConfigProperty): any {
+export function awsAlbListenerRuleUrlRewriteConfigPropertyToTerraform(struct?: AwsAlbListenerRule.UrlRewriteConfigPropertyOutputReference | AwsAlbListenerRule.UrlRewriteConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    rewrite: tfAlbListenerRuleTransformUrlRewriteConfigRewritePropertyToTerraform(struct!.rewrite),
+    rewrite: awsAlbListenerRuleTransformUrlRewriteConfigRewritePropertyToTerraform(struct!.rewrite),
   }
 }
 
 
-export function tfAlbListenerRuleUrlRewriteConfigPropertyToHclTerraform(struct?: TfAlbListenerRule.UrlRewriteConfigPropertyOutputReference | TfAlbListenerRule.UrlRewriteConfigProperty): any {
+export function awsAlbListenerRuleUrlRewriteConfigPropertyToHclTerraform(struct?: AwsAlbListenerRule.UrlRewriteConfigPropertyOutputReference | AwsAlbListenerRule.UrlRewriteConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     rewrite: {
-      value: tfAlbListenerRuleTransformUrlRewriteConfigRewritePropertyToHclTerraform(struct!.rewrite),
+      value: awsAlbListenerRuleTransformUrlRewriteConfigRewritePropertyToHclTerraform(struct!.rewrite),
       isBlock: true,
       type: "list",
       storageClassType: "TransformUrlRewriteConfigRewritePropertyList",
@@ -1336,20 +1336,20 @@ export function tfAlbListenerRuleUrlRewriteConfigPropertyToHclTerraform(struct?:
 }
 
 
-export function tfAlbListenerRuleTransformPropertyToTerraform(struct?: TfAlbListenerRule.TransformProperty | cdktn.IResolvable): any {
+export function awsAlbListenerRuleTransformPropertyToTerraform(struct?: AwsAlbListenerRule.TransformProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    host_header_rewrite_config: tfAlbListenerRuleHostHeaderRewriteConfigPropertyToTerraform(struct!.hostHeaderRewriteConfig),
-    url_rewrite_config: tfAlbListenerRuleUrlRewriteConfigPropertyToTerraform(struct!.urlRewriteConfig),
+    host_header_rewrite_config: awsAlbListenerRuleHostHeaderRewriteConfigPropertyToTerraform(struct!.hostHeaderRewriteConfig),
+    url_rewrite_config: awsAlbListenerRuleUrlRewriteConfigPropertyToTerraform(struct!.urlRewriteConfig),
   }
 }
 
 
-export function tfAlbListenerRuleTransformPropertyToHclTerraform(struct?: TfAlbListenerRule.TransformProperty | cdktn.IResolvable): any {
+export function awsAlbListenerRuleTransformPropertyToHclTerraform(struct?: AwsAlbListenerRule.TransformProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1362,13 +1362,13 @@ export function tfAlbListenerRuleTransformPropertyToHclTerraform(struct?: TfAlbL
       storageClassType: "string",
     },
     host_header_rewrite_config: {
-      value: tfAlbListenerRuleHostHeaderRewriteConfigPropertyToHclTerraform(struct!.hostHeaderRewriteConfig),
+      value: awsAlbListenerRuleHostHeaderRewriteConfigPropertyToHclTerraform(struct!.hostHeaderRewriteConfig),
       isBlock: true,
       type: "list",
       storageClassType: "HostHeaderRewriteConfigPropertyList",
     },
     url_rewrite_config: {
-      value: tfAlbListenerRuleUrlRewriteConfigPropertyToHclTerraform(struct!.urlRewriteConfig),
+      value: awsAlbListenerRuleUrlRewriteConfigPropertyToHclTerraform(struct!.urlRewriteConfig),
       isBlock: true,
       type: "list",
       storageClassType: "UrlRewriteConfigPropertyList",
@@ -1380,38 +1380,38 @@ export function tfAlbListenerRuleTransformPropertyToHclTerraform(struct?: TfAlbL
 }
 
 
-export namespace TfAlbListenerRule {
+export namespace AwsAlbListenerRule {
 export interface AuthenticateCognitoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#authentication_request_extra_params TfAlbListenerRule#authentication_request_extra_params}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#authentication_request_extra_params AwsAlbListenerRule#authentication_request_extra_params}
   */
   readonly authenticationRequestExtraParams?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#on_unauthenticated_request TfAlbListenerRule#on_unauthenticated_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#on_unauthenticated_request AwsAlbListenerRule#on_unauthenticated_request}
   */
   readonly onUnauthenticatedRequest?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#scope TfAlbListenerRule#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#scope AwsAlbListenerRule#scope}
   */
   readonly scope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#session_cookie_name TfAlbListenerRule#session_cookie_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#session_cookie_name AwsAlbListenerRule#session_cookie_name}
   */
   readonly sessionCookieName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#session_timeout TfAlbListenerRule#session_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#session_timeout AwsAlbListenerRule#session_timeout}
   */
   readonly sessionTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#user_pool_arn TfAlbListenerRule#user_pool_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#user_pool_arn AwsAlbListenerRule#user_pool_arn}
   */
   readonly userPoolArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#user_pool_client_id TfAlbListenerRule#user_pool_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#user_pool_client_id AwsAlbListenerRule#user_pool_client_id}
   */
   readonly userPoolClientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#user_pool_domain TfAlbListenerRule#user_pool_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#user_pool_domain AwsAlbListenerRule#user_pool_domain}
   */
   readonly userPoolDomain: string;
 }
@@ -1610,47 +1610,47 @@ export class AuthenticateCognitoPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface AuthenticateOidcProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#authentication_request_extra_params TfAlbListenerRule#authentication_request_extra_params}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#authentication_request_extra_params AwsAlbListenerRule#authentication_request_extra_params}
   */
   readonly authenticationRequestExtraParams?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#authorization_endpoint TfAlbListenerRule#authorization_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#authorization_endpoint AwsAlbListenerRule#authorization_endpoint}
   */
   readonly authorizationEndpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#client_id TfAlbListenerRule#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#client_id AwsAlbListenerRule#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#client_secret TfAlbListenerRule#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#client_secret AwsAlbListenerRule#client_secret}
   */
   readonly clientSecret: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#issuer TfAlbListenerRule#issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#issuer AwsAlbListenerRule#issuer}
   */
   readonly issuer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#on_unauthenticated_request TfAlbListenerRule#on_unauthenticated_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#on_unauthenticated_request AwsAlbListenerRule#on_unauthenticated_request}
   */
   readonly onUnauthenticatedRequest?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#scope TfAlbListenerRule#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#scope AwsAlbListenerRule#scope}
   */
   readonly scope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#session_cookie_name TfAlbListenerRule#session_cookie_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#session_cookie_name AwsAlbListenerRule#session_cookie_name}
   */
   readonly sessionCookieName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#session_timeout TfAlbListenerRule#session_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#session_timeout AwsAlbListenerRule#session_timeout}
   */
   readonly sessionTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#token_endpoint TfAlbListenerRule#token_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#token_endpoint AwsAlbListenerRule#token_endpoint}
   */
   readonly tokenEndpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#user_info_endpoint TfAlbListenerRule#user_info_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#user_info_endpoint AwsAlbListenerRule#user_info_endpoint}
   */
   readonly userInfoEndpoint: string;
 }
@@ -1906,15 +1906,15 @@ export class AuthenticateOidcPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface FixedResponseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#content_type TfAlbListenerRule#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#content_type AwsAlbListenerRule#content_type}
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#message_body TfAlbListenerRule#message_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#message_body AwsAlbListenerRule#message_body}
   */
   readonly messageBody?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#status_code TfAlbListenerRule#status_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#status_code AwsAlbListenerRule#status_code}
   */
   readonly statusCode?: string;
 }
@@ -2009,11 +2009,11 @@ export class FixedResponsePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StickinessProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#duration TfAlbListenerRule#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#duration AwsAlbListenerRule#duration}
   */
   readonly duration: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#enabled TfAlbListenerRule#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#enabled AwsAlbListenerRule#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
 }
@@ -2086,11 +2086,11 @@ export class StickinessPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TargetGroupProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#arn TfAlbListenerRule#arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#arn AwsAlbListenerRule#arn}
   */
   readonly arn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#weight TfAlbListenerRule#weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#weight AwsAlbListenerRule#weight}
   */
   readonly weight?: number;
 }
@@ -2197,13 +2197,13 @@ export interface ForwardProperty {
   /**
   * stickiness block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#stickiness TfAlbListenerRule#stickiness}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#stickiness AwsAlbListenerRule#stickiness}
   */
   readonly stickiness?: StickinessProperty;
   /**
   * target_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#target_group TfAlbListenerRule#target_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#target_group AwsAlbListenerRule#target_group}
   */
   readonly targetGroup: TargetGroupProperty[] | cdktn.IResolvable;
 }
@@ -2276,15 +2276,15 @@ export class ForwardPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AdditionalClaimProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#format TfAlbListenerRule#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#format AwsAlbListenerRule#format}
   */
   readonly format: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#name TfAlbListenerRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#name AwsAlbListenerRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#values TfAlbListenerRule#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#values AwsAlbListenerRule#values}
   */
   readonly values: string[];
 }
@@ -2405,17 +2405,17 @@ export class AdditionalClaimPropertyList extends cdktn.ComplexList {
 }
 export interface JwtValidationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#issuer TfAlbListenerRule#issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#issuer AwsAlbListenerRule#issuer}
   */
   readonly issuer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#jwks_endpoint TfAlbListenerRule#jwks_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#jwks_endpoint AwsAlbListenerRule#jwks_endpoint}
   */
   readonly jwksEndpoint: string;
   /**
   * additional_claim block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#additional_claim TfAlbListenerRule#additional_claim}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#additional_claim AwsAlbListenerRule#additional_claim}
   */
   readonly additionalClaim?: AdditionalClaimProperty[] | cdktn.IResolvable;
 }
@@ -2507,27 +2507,27 @@ export class JwtValidationPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RedirectProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#host TfAlbListenerRule#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#host AwsAlbListenerRule#host}
   */
   readonly host?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#path TfAlbListenerRule#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#path AwsAlbListenerRule#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#port TfAlbListenerRule#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#port AwsAlbListenerRule#port}
   */
   readonly port?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#protocol TfAlbListenerRule#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#protocol AwsAlbListenerRule#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#query TfAlbListenerRule#query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#query AwsAlbListenerRule#query}
   */
   readonly query?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#status_code TfAlbListenerRule#status_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#status_code AwsAlbListenerRule#status_code}
   */
   readonly statusCode: string;
 }
@@ -2688,51 +2688,51 @@ export class RedirectPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ActionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#order TfAlbListenerRule#order}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#order AwsAlbListenerRule#order}
   */
   readonly order?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#target_group_arn TfAlbListenerRule#target_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#target_group_arn AwsAlbListenerRule#target_group_arn}
   */
   readonly targetGroupArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#type TfAlbListenerRule#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#type AwsAlbListenerRule#type}
   */
   readonly type: string;
   /**
   * authenticate_cognito block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#authenticate_cognito TfAlbListenerRule#authenticate_cognito}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#authenticate_cognito AwsAlbListenerRule#authenticate_cognito}
   */
   readonly authenticateCognito?: AuthenticateCognitoProperty;
   /**
   * authenticate_oidc block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#authenticate_oidc TfAlbListenerRule#authenticate_oidc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#authenticate_oidc AwsAlbListenerRule#authenticate_oidc}
   */
   readonly authenticateOidc?: AuthenticateOidcProperty;
   /**
   * fixed_response block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#fixed_response TfAlbListenerRule#fixed_response}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#fixed_response AwsAlbListenerRule#fixed_response}
   */
   readonly fixedResponse?: FixedResponseProperty;
   /**
   * forward block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#forward TfAlbListenerRule#forward}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#forward AwsAlbListenerRule#forward}
   */
   readonly forward?: ForwardProperty;
   /**
   * jwt_validation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#jwt_validation TfAlbListenerRule#jwt_validation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#jwt_validation AwsAlbListenerRule#jwt_validation}
   */
   readonly jwtValidation?: JwtValidationProperty;
   /**
   * redirect block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#redirect TfAlbListenerRule#redirect}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#redirect AwsAlbListenerRule#redirect}
   */
   readonly redirect?: RedirectProperty;
 }
@@ -2991,11 +2991,11 @@ export class ActionPropertyList extends cdktn.ComplexList {
 }
 export interface HostHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#regex_values TfAlbListenerRule#regex_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#regex_values AwsAlbListenerRule#regex_values}
   */
   readonly regexValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#values TfAlbListenerRule#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#values AwsAlbListenerRule#values}
   */
   readonly values?: string[];
 }
@@ -3071,15 +3071,15 @@ export class HostHeaderPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HttpHeaderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#http_header_name TfAlbListenerRule#http_header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#http_header_name AwsAlbListenerRule#http_header_name}
   */
   readonly httpHeaderName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#regex_values TfAlbListenerRule#regex_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#regex_values AwsAlbListenerRule#regex_values}
   */
   readonly regexValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#values TfAlbListenerRule#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#values AwsAlbListenerRule#values}
   */
   readonly values?: string[];
 }
@@ -3174,7 +3174,7 @@ export class HttpHeaderPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HttpRequestMethodProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#values TfAlbListenerRule#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#values AwsAlbListenerRule#values}
   */
   readonly values: string[];
 }
@@ -3225,11 +3225,11 @@ export class HttpRequestMethodPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface PathPatternProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#regex_values TfAlbListenerRule#regex_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#regex_values AwsAlbListenerRule#regex_values}
   */
   readonly regexValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#values TfAlbListenerRule#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#values AwsAlbListenerRule#values}
   */
   readonly values?: string[];
 }
@@ -3305,11 +3305,11 @@ export class PathPatternPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface QueryStringProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#key TfAlbListenerRule#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#key AwsAlbListenerRule#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#value TfAlbListenerRule#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#value AwsAlbListenerRule#value}
   */
   readonly value: string;
 }
@@ -3414,11 +3414,11 @@ export class QueryStringPropertyList extends cdktn.ComplexList {
 }
 export interface SourceIpProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#ip_address_type TfAlbListenerRule#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#ip_address_type AwsAlbListenerRule#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#values TfAlbListenerRule#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#values AwsAlbListenerRule#values}
   */
   readonly values?: string[];
 }
@@ -3496,37 +3496,37 @@ export interface ConditionProperty {
   /**
   * host_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#host_header TfAlbListenerRule#host_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#host_header AwsAlbListenerRule#host_header}
   */
   readonly hostHeader?: HostHeaderProperty;
   /**
   * http_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#http_header TfAlbListenerRule#http_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#http_header AwsAlbListenerRule#http_header}
   */
   readonly httpHeader?: HttpHeaderProperty;
   /**
   * http_request_method block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#http_request_method TfAlbListenerRule#http_request_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#http_request_method AwsAlbListenerRule#http_request_method}
   */
   readonly httpRequestMethod?: HttpRequestMethodProperty;
   /**
   * path_pattern block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#path_pattern TfAlbListenerRule#path_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#path_pattern AwsAlbListenerRule#path_pattern}
   */
   readonly pathPattern?: PathPatternProperty;
   /**
   * query_string block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#query_string TfAlbListenerRule#query_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#query_string AwsAlbListenerRule#query_string}
   */
   readonly queryString?: QueryStringProperty[] | cdktn.IResolvable;
   /**
   * source_ip block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#source_ip TfAlbListenerRule#source_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#source_ip AwsAlbListenerRule#source_ip}
   */
   readonly sourceIp?: SourceIpProperty;
 }
@@ -3722,11 +3722,11 @@ export class ConditionPropertyList extends cdktn.ComplexList {
 }
 export interface TransformHostHeaderRewriteConfigRewriteProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#regex TfAlbListenerRule#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#regex AwsAlbListenerRule#regex}
   */
   readonly regex: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#replace TfAlbListenerRule#replace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#replace AwsAlbListenerRule#replace}
   */
   readonly replace: string;
 }
@@ -3798,7 +3798,7 @@ export interface HostHeaderRewriteConfigProperty {
   /**
   * rewrite block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#rewrite TfAlbListenerRule#rewrite}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#rewrite AwsAlbListenerRule#rewrite}
   */
   readonly rewrite?: TransformHostHeaderRewriteConfigRewriteProperty;
 }
@@ -3852,11 +3852,11 @@ export class HostHeaderRewriteConfigPropertyOutputReference extends cdktn.Comple
 }
 export interface TransformUrlRewriteConfigRewriteProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#regex TfAlbListenerRule#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#regex AwsAlbListenerRule#regex}
   */
   readonly regex: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#replace TfAlbListenerRule#replace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#replace AwsAlbListenerRule#replace}
   */
   readonly replace: string;
 }
@@ -3928,7 +3928,7 @@ export interface UrlRewriteConfigProperty {
   /**
   * rewrite block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#rewrite TfAlbListenerRule#rewrite}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#rewrite AwsAlbListenerRule#rewrite}
   */
   readonly rewrite?: TransformUrlRewriteConfigRewriteProperty;
 }
@@ -3982,19 +3982,19 @@ export class UrlRewriteConfigPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface TransformProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#type TfAlbListenerRule#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#type AwsAlbListenerRule#type}
   */
   readonly type: string;
   /**
   * host_header_rewrite_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#host_header_rewrite_config TfAlbListenerRule#host_header_rewrite_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#host_header_rewrite_config AwsAlbListenerRule#host_header_rewrite_config}
   */
   readonly hostHeaderRewriteConfig?: HostHeaderRewriteConfigProperty;
   /**
   * url_rewrite_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#url_rewrite_config TfAlbListenerRule#url_rewrite_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/alb_listener_rule#url_rewrite_config AwsAlbListenerRule#url_rewrite_config}
   */
   readonly urlRewriteConfig?: UrlRewriteConfigProperty;
 }

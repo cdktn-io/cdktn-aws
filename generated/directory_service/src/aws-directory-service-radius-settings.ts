@@ -5,68 +5,68 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRadiusSettingsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRadiusSettingsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#authentication_protocol TfRadiusSettings#authentication_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#authentication_protocol AwsRadiusSettings#authentication_protocol}
   */
   readonly authenticationProtocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#directory_id TfRadiusSettings#directory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#directory_id AwsRadiusSettings#directory_id}
   */
   readonly directoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#display_label TfRadiusSettings#display_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#display_label AwsRadiusSettings#display_label}
   */
   readonly displayLabel: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#id TfRadiusSettings#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#id AwsRadiusSettings#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#radius_port TfRadiusSettings#radius_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#radius_port AwsRadiusSettings#radius_port}
   */
   readonly radiusPort: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#radius_retries TfRadiusSettings#radius_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#radius_retries AwsRadiusSettings#radius_retries}
   */
   readonly radiusRetries: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#radius_servers TfRadiusSettings#radius_servers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#radius_servers AwsRadiusSettings#radius_servers}
   */
   readonly radiusServers: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#radius_timeout TfRadiusSettings#radius_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#radius_timeout AwsRadiusSettings#radius_timeout}
   */
   readonly radiusTimeout: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#region TfRadiusSettings#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#region AwsRadiusSettings#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#shared_secret TfRadiusSettings#shared_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#shared_secret AwsRadiusSettings#shared_secret}
   */
   readonly sharedSecret: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#use_same_username TfRadiusSettings#use_same_username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#use_same_username AwsRadiusSettings#use_same_username}
   */
   readonly useSameUsername?: boolean | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#timeouts TfRadiusSettings#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#timeouts AwsRadiusSettings#timeouts}
   */
-  readonly timeouts?: TfRadiusSettings.TimeoutsProperty;
+  readonly timeouts?: AwsRadiusSettings.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings aws_directory_service_radius_settings}
 */
-export class TfRadiusSettings extends cdktn.TerraformResource {
+export class AwsRadiusSettings extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -77,11 +77,11 @@ export class TfRadiusSettings extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRadiusSettings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRadiusSettings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRadiusSettings to import
-  * @param importFromId The id of the existing TfRadiusSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRadiusSettings to import is found
+  * @param importToId The construct id used in the generated config for the AwsRadiusSettings to import
+  * @param importFromId The id of the existing AwsRadiusSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRadiusSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_directory_service_radius_settings", importId: importFromId, provider });
@@ -96,9 +96,9 @@ export class TfRadiusSettings extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRadiusSettingsConfig
+  * @param options AwsRadiusSettingsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRadiusSettingsConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRadiusSettingsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_directory_service_radius_settings',
       terraformGeneratorMetadata: {
@@ -285,11 +285,11 @@ export class TfRadiusSettings extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfRadiusSettings.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsRadiusSettings.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfRadiusSettings.TimeoutsProperty) {
+  public putTimeouts(value: AwsRadiusSettings.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -317,7 +317,7 @@ export class TfRadiusSettings extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       shared_secret: cdktn.stringToTerraform(this._sharedSecret),
       use_same_username: cdktn.booleanToTerraform(this._useSameUsername),
-      timeouts: tfRadiusSettingsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsRadiusSettingsTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -390,10 +390,10 @@ export class TfRadiusSettings extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       timeouts: {
-        value: tfRadiusSettingsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsRadiusSettingsTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfRadiusSettings.TimeoutsProperty",
+        storageClassType: "AwsRadiusSettings.TimeoutsProperty",
       },
     };
 
@@ -402,7 +402,7 @@ export class TfRadiusSettings extends cdktn.TerraformResource {
   }
 }
 
-export function tfRadiusSettingsTimeoutsPropertyToTerraform(struct?: TfRadiusSettings.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRadiusSettingsTimeoutsPropertyToTerraform(struct?: AwsRadiusSettings.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -414,7 +414,7 @@ export function tfRadiusSettingsTimeoutsPropertyToTerraform(struct?: TfRadiusSet
 }
 
 
-export function tfRadiusSettingsTimeoutsPropertyToHclTerraform(struct?: TfRadiusSettings.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRadiusSettingsTimeoutsPropertyToHclTerraform(struct?: AwsRadiusSettings.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,14 +439,14 @@ export function tfRadiusSettingsTimeoutsPropertyToHclTerraform(struct?: TfRadius
 }
 
 
-export namespace TfRadiusSettings {
+export namespace AwsRadiusSettings {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#create TfRadiusSettings#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#create AwsRadiusSettings#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#update TfRadiusSettings#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/directory_service_radius_settings#update AwsRadiusSettings#update}
   */
   readonly update?: string;
 }

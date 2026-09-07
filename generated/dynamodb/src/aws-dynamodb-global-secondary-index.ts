@@ -5,61 +5,61 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfGlobalSecondaryIndexConfig extends cdktn.TerraformMetaArguments {
+export interface AwsGlobalSecondaryIndexConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#index_name TfGlobalSecondaryIndex#index_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#index_name AwsGlobalSecondaryIndex#index_name}
   */
   readonly indexName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#region TfGlobalSecondaryIndex#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#region AwsGlobalSecondaryIndex#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#table_name TfGlobalSecondaryIndex#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#table_name AwsGlobalSecondaryIndex#table_name}
   */
   readonly tableName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#warm_throughput TfGlobalSecondaryIndex#warm_throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#warm_throughput AwsGlobalSecondaryIndex#warm_throughput}
   */
-  readonly warmThroughput?: TfGlobalSecondaryIndex.WarmThroughputProperty;
+  readonly warmThroughput?: AwsGlobalSecondaryIndex.WarmThroughputProperty;
   /**
   * key_schema block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#key_schema TfGlobalSecondaryIndex#key_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#key_schema AwsGlobalSecondaryIndex#key_schema}
   */
-  readonly keySchema?: TfGlobalSecondaryIndex.KeySchemaProperty[] | cdktn.IResolvable;
+  readonly keySchema?: AwsGlobalSecondaryIndex.KeySchemaProperty[] | cdktn.IResolvable;
   /**
   * on_demand_throughput block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#on_demand_throughput TfGlobalSecondaryIndex#on_demand_throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#on_demand_throughput AwsGlobalSecondaryIndex#on_demand_throughput}
   */
-  readonly onDemandThroughput?: TfGlobalSecondaryIndex.OnDemandThroughputProperty[] | cdktn.IResolvable;
+  readonly onDemandThroughput?: AwsGlobalSecondaryIndex.OnDemandThroughputProperty[] | cdktn.IResolvable;
   /**
   * projection block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#projection TfGlobalSecondaryIndex#projection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#projection AwsGlobalSecondaryIndex#projection}
   */
-  readonly projection?: TfGlobalSecondaryIndex.ProjectionProperty[] | cdktn.IResolvable;
+  readonly projection?: AwsGlobalSecondaryIndex.ProjectionProperty[] | cdktn.IResolvable;
   /**
   * provisioned_throughput block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#provisioned_throughput TfGlobalSecondaryIndex#provisioned_throughput}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#provisioned_throughput AwsGlobalSecondaryIndex#provisioned_throughput}
   */
-  readonly provisionedThroughput?: TfGlobalSecondaryIndex.ProvisionedThroughputProperty[] | cdktn.IResolvable;
+  readonly provisionedThroughput?: AwsGlobalSecondaryIndex.ProvisionedThroughputProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#timeouts TfGlobalSecondaryIndex#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#timeouts AwsGlobalSecondaryIndex#timeouts}
   */
-  readonly timeouts?: TfGlobalSecondaryIndex.TimeoutsProperty;
+  readonly timeouts?: AwsGlobalSecondaryIndex.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index aws_dynamodb_global_secondary_index}
 */
-export class TfGlobalSecondaryIndex extends cdktn.TerraformResource {
+export class AwsGlobalSecondaryIndex extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -70,11 +70,11 @@ export class TfGlobalSecondaryIndex extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfGlobalSecondaryIndex resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsGlobalSecondaryIndex resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfGlobalSecondaryIndex to import
-  * @param importFromId The id of the existing TfGlobalSecondaryIndex that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfGlobalSecondaryIndex to import is found
+  * @param importToId The construct id used in the generated config for the AwsGlobalSecondaryIndex to import
+  * @param importFromId The id of the existing AwsGlobalSecondaryIndex that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGlobalSecondaryIndex to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dynamodb_global_secondary_index", importId: importFromId, provider });
@@ -89,9 +89,9 @@ export class TfGlobalSecondaryIndex extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfGlobalSecondaryIndexConfig
+  * @param options AwsGlobalSecondaryIndexConfig
   */
-  public constructor(scope: Construct, id: string, config: TfGlobalSecondaryIndexConfig) {
+  public constructor(scope: Construct, id: string, config: AwsGlobalSecondaryIndexConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dynamodb_global_secondary_index',
       terraformGeneratorMetadata: {
@@ -170,11 +170,11 @@ export class TfGlobalSecondaryIndex extends cdktn.TerraformResource {
   }
 
   // warm_throughput - computed: true, optional: true, required: false
-  private _warmThroughput = new TfGlobalSecondaryIndex.WarmThroughputPropertyOutputReference(this, "warm_throughput");
+  private _warmThroughput = new AwsGlobalSecondaryIndex.WarmThroughputPropertyOutputReference(this, "warm_throughput");
   public get warmThroughput() {
     return this._warmThroughput;
   }
-  public putWarmThroughput(value: TfGlobalSecondaryIndex.WarmThroughputProperty) {
+  public putWarmThroughput(value: AwsGlobalSecondaryIndex.WarmThroughputProperty) {
     this._warmThroughput.internalValue = value;
   }
   public resetWarmThroughput() {
@@ -186,11 +186,11 @@ export class TfGlobalSecondaryIndex extends cdktn.TerraformResource {
   }
 
   // key_schema - computed: false, optional: true, required: false
-  private _keySchema = new TfGlobalSecondaryIndex.KeySchemaPropertyList(this, "key_schema", false);
+  private _keySchema = new AwsGlobalSecondaryIndex.KeySchemaPropertyList(this, "key_schema", false);
   public get keySchema() {
     return this._keySchema;
   }
-  public putKeySchema(value: TfGlobalSecondaryIndex.KeySchemaProperty[] | cdktn.IResolvable) {
+  public putKeySchema(value: AwsGlobalSecondaryIndex.KeySchemaProperty[] | cdktn.IResolvable) {
     this._keySchema.internalValue = value;
   }
   public resetKeySchema() {
@@ -202,11 +202,11 @@ export class TfGlobalSecondaryIndex extends cdktn.TerraformResource {
   }
 
   // on_demand_throughput - computed: false, optional: true, required: false
-  private _onDemandThroughput = new TfGlobalSecondaryIndex.OnDemandThroughputPropertyList(this, "on_demand_throughput", false);
+  private _onDemandThroughput = new AwsGlobalSecondaryIndex.OnDemandThroughputPropertyList(this, "on_demand_throughput", false);
   public get onDemandThroughput() {
     return this._onDemandThroughput;
   }
-  public putOnDemandThroughput(value: TfGlobalSecondaryIndex.OnDemandThroughputProperty[] | cdktn.IResolvable) {
+  public putOnDemandThroughput(value: AwsGlobalSecondaryIndex.OnDemandThroughputProperty[] | cdktn.IResolvable) {
     this._onDemandThroughput.internalValue = value;
   }
   public resetOnDemandThroughput() {
@@ -218,11 +218,11 @@ export class TfGlobalSecondaryIndex extends cdktn.TerraformResource {
   }
 
   // projection - computed: false, optional: true, required: false
-  private _projection = new TfGlobalSecondaryIndex.ProjectionPropertyList(this, "projection", false);
+  private _projection = new AwsGlobalSecondaryIndex.ProjectionPropertyList(this, "projection", false);
   public get projection() {
     return this._projection;
   }
-  public putProjection(value: TfGlobalSecondaryIndex.ProjectionProperty[] | cdktn.IResolvable) {
+  public putProjection(value: AwsGlobalSecondaryIndex.ProjectionProperty[] | cdktn.IResolvable) {
     this._projection.internalValue = value;
   }
   public resetProjection() {
@@ -234,11 +234,11 @@ export class TfGlobalSecondaryIndex extends cdktn.TerraformResource {
   }
 
   // provisioned_throughput - computed: false, optional: true, required: false
-  private _provisionedThroughput = new TfGlobalSecondaryIndex.ProvisionedThroughputPropertyList(this, "provisioned_throughput", false);
+  private _provisionedThroughput = new AwsGlobalSecondaryIndex.ProvisionedThroughputPropertyList(this, "provisioned_throughput", false);
   public get provisionedThroughput() {
     return this._provisionedThroughput;
   }
-  public putProvisionedThroughput(value: TfGlobalSecondaryIndex.ProvisionedThroughputProperty[] | cdktn.IResolvable) {
+  public putProvisionedThroughput(value: AwsGlobalSecondaryIndex.ProvisionedThroughputProperty[] | cdktn.IResolvable) {
     this._provisionedThroughput.internalValue = value;
   }
   public resetProvisionedThroughput() {
@@ -250,11 +250,11 @@ export class TfGlobalSecondaryIndex extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfGlobalSecondaryIndex.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsGlobalSecondaryIndex.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfGlobalSecondaryIndex.TimeoutsProperty) {
+  public putTimeouts(value: AwsGlobalSecondaryIndex.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -274,12 +274,12 @@ export class TfGlobalSecondaryIndex extends cdktn.TerraformResource {
       index_name: cdktn.stringToTerraform(this._indexName),
       region: cdktn.stringToTerraform(this._region),
       table_name: cdktn.stringToTerraform(this._tableName),
-      warm_throughput: tfGlobalSecondaryIndexWarmThroughputPropertyToTerraform(this._warmThroughput.internalValue),
-      key_schema: cdktn.listMapper(tfGlobalSecondaryIndexKeySchemaPropertyToTerraform, true)(this._keySchema.internalValue),
-      on_demand_throughput: cdktn.listMapper(tfGlobalSecondaryIndexOnDemandThroughputPropertyToTerraform, true)(this._onDemandThroughput.internalValue),
-      projection: cdktn.listMapper(tfGlobalSecondaryIndexProjectionPropertyToTerraform, true)(this._projection.internalValue),
-      provisioned_throughput: cdktn.listMapper(tfGlobalSecondaryIndexProvisionedThroughputPropertyToTerraform, true)(this._provisionedThroughput.internalValue),
-      timeouts: tfGlobalSecondaryIndexTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      warm_throughput: awsGlobalSecondaryIndexWarmThroughputPropertyToTerraform(this._warmThroughput.internalValue),
+      key_schema: cdktn.listMapper(awsGlobalSecondaryIndexKeySchemaPropertyToTerraform, true)(this._keySchema.internalValue),
+      on_demand_throughput: cdktn.listMapper(awsGlobalSecondaryIndexOnDemandThroughputPropertyToTerraform, true)(this._onDemandThroughput.internalValue),
+      projection: cdktn.listMapper(awsGlobalSecondaryIndexProjectionPropertyToTerraform, true)(this._projection.internalValue),
+      provisioned_throughput: cdktn.listMapper(awsGlobalSecondaryIndexProvisionedThroughputPropertyToTerraform, true)(this._provisionedThroughput.internalValue),
+      timeouts: awsGlobalSecondaryIndexTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -304,40 +304,40 @@ export class TfGlobalSecondaryIndex extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       warm_throughput: {
-        value: tfGlobalSecondaryIndexWarmThroughputPropertyToHclTerraform(this._warmThroughput.internalValue),
+        value: awsGlobalSecondaryIndexWarmThroughputPropertyToHclTerraform(this._warmThroughput.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfGlobalSecondaryIndex.WarmThroughputProperty",
+        storageClassType: "AwsGlobalSecondaryIndex.WarmThroughputProperty",
       },
       key_schema: {
-        value: cdktn.listMapperHcl(tfGlobalSecondaryIndexKeySchemaPropertyToHclTerraform, true)(this._keySchema.internalValue),
+        value: cdktn.listMapperHcl(awsGlobalSecondaryIndexKeySchemaPropertyToHclTerraform, true)(this._keySchema.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGlobalSecondaryIndex.KeySchemaPropertyList",
+        storageClassType: "AwsGlobalSecondaryIndex.KeySchemaPropertyList",
       },
       on_demand_throughput: {
-        value: cdktn.listMapperHcl(tfGlobalSecondaryIndexOnDemandThroughputPropertyToHclTerraform, true)(this._onDemandThroughput.internalValue),
+        value: cdktn.listMapperHcl(awsGlobalSecondaryIndexOnDemandThroughputPropertyToHclTerraform, true)(this._onDemandThroughput.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGlobalSecondaryIndex.OnDemandThroughputPropertyList",
+        storageClassType: "AwsGlobalSecondaryIndex.OnDemandThroughputPropertyList",
       },
       projection: {
-        value: cdktn.listMapperHcl(tfGlobalSecondaryIndexProjectionPropertyToHclTerraform, true)(this._projection.internalValue),
+        value: cdktn.listMapperHcl(awsGlobalSecondaryIndexProjectionPropertyToHclTerraform, true)(this._projection.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGlobalSecondaryIndex.ProjectionPropertyList",
+        storageClassType: "AwsGlobalSecondaryIndex.ProjectionPropertyList",
       },
       provisioned_throughput: {
-        value: cdktn.listMapperHcl(tfGlobalSecondaryIndexProvisionedThroughputPropertyToHclTerraform, true)(this._provisionedThroughput.internalValue),
+        value: cdktn.listMapperHcl(awsGlobalSecondaryIndexProvisionedThroughputPropertyToHclTerraform, true)(this._provisionedThroughput.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGlobalSecondaryIndex.ProvisionedThroughputPropertyList",
+        storageClassType: "AwsGlobalSecondaryIndex.ProvisionedThroughputPropertyList",
       },
       timeouts: {
-        value: tfGlobalSecondaryIndexTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsGlobalSecondaryIndexTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfGlobalSecondaryIndex.TimeoutsProperty",
+        storageClassType: "AwsGlobalSecondaryIndex.TimeoutsProperty",
       },
     };
 
@@ -346,7 +346,7 @@ export class TfGlobalSecondaryIndex extends cdktn.TerraformResource {
   }
 }
 
-export function tfGlobalSecondaryIndexWarmThroughputPropertyToTerraform(struct?: TfGlobalSecondaryIndex.WarmThroughputProperty | cdktn.IResolvable): any {
+export function awsGlobalSecondaryIndexWarmThroughputPropertyToTerraform(struct?: AwsGlobalSecondaryIndex.WarmThroughputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -358,7 +358,7 @@ export function tfGlobalSecondaryIndexWarmThroughputPropertyToTerraform(struct?:
 }
 
 
-export function tfGlobalSecondaryIndexWarmThroughputPropertyToHclTerraform(struct?: TfGlobalSecondaryIndex.WarmThroughputProperty | cdktn.IResolvable): any {
+export function awsGlobalSecondaryIndexWarmThroughputPropertyToHclTerraform(struct?: AwsGlobalSecondaryIndex.WarmThroughputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -383,7 +383,7 @@ export function tfGlobalSecondaryIndexWarmThroughputPropertyToHclTerraform(struc
 }
 
 
-export function tfGlobalSecondaryIndexKeySchemaPropertyToTerraform(struct?: TfGlobalSecondaryIndex.KeySchemaProperty | cdktn.IResolvable): any {
+export function awsGlobalSecondaryIndexKeySchemaPropertyToTerraform(struct?: AwsGlobalSecondaryIndex.KeySchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -396,7 +396,7 @@ export function tfGlobalSecondaryIndexKeySchemaPropertyToTerraform(struct?: TfGl
 }
 
 
-export function tfGlobalSecondaryIndexKeySchemaPropertyToHclTerraform(struct?: TfGlobalSecondaryIndex.KeySchemaProperty | cdktn.IResolvable): any {
+export function awsGlobalSecondaryIndexKeySchemaPropertyToHclTerraform(struct?: AwsGlobalSecondaryIndex.KeySchemaProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -427,7 +427,7 @@ export function tfGlobalSecondaryIndexKeySchemaPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfGlobalSecondaryIndexOnDemandThroughputPropertyToTerraform(struct?: TfGlobalSecondaryIndex.OnDemandThroughputProperty | cdktn.IResolvable): any {
+export function awsGlobalSecondaryIndexOnDemandThroughputPropertyToTerraform(struct?: AwsGlobalSecondaryIndex.OnDemandThroughputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,7 +439,7 @@ export function tfGlobalSecondaryIndexOnDemandThroughputPropertyToTerraform(stru
 }
 
 
-export function tfGlobalSecondaryIndexOnDemandThroughputPropertyToHclTerraform(struct?: TfGlobalSecondaryIndex.OnDemandThroughputProperty | cdktn.IResolvable): any {
+export function awsGlobalSecondaryIndexOnDemandThroughputPropertyToHclTerraform(struct?: AwsGlobalSecondaryIndex.OnDemandThroughputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -464,7 +464,7 @@ export function tfGlobalSecondaryIndexOnDemandThroughputPropertyToHclTerraform(s
 }
 
 
-export function tfGlobalSecondaryIndexProjectionPropertyToTerraform(struct?: TfGlobalSecondaryIndex.ProjectionProperty | cdktn.IResolvable): any {
+export function awsGlobalSecondaryIndexProjectionPropertyToTerraform(struct?: AwsGlobalSecondaryIndex.ProjectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,7 +476,7 @@ export function tfGlobalSecondaryIndexProjectionPropertyToTerraform(struct?: TfG
 }
 
 
-export function tfGlobalSecondaryIndexProjectionPropertyToHclTerraform(struct?: TfGlobalSecondaryIndex.ProjectionProperty | cdktn.IResolvable): any {
+export function awsGlobalSecondaryIndexProjectionPropertyToHclTerraform(struct?: AwsGlobalSecondaryIndex.ProjectionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -501,7 +501,7 @@ export function tfGlobalSecondaryIndexProjectionPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfGlobalSecondaryIndexProvisionedThroughputPropertyToTerraform(struct?: TfGlobalSecondaryIndex.ProvisionedThroughputProperty | cdktn.IResolvable): any {
+export function awsGlobalSecondaryIndexProvisionedThroughputPropertyToTerraform(struct?: AwsGlobalSecondaryIndex.ProvisionedThroughputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -513,7 +513,7 @@ export function tfGlobalSecondaryIndexProvisionedThroughputPropertyToTerraform(s
 }
 
 
-export function tfGlobalSecondaryIndexProvisionedThroughputPropertyToHclTerraform(struct?: TfGlobalSecondaryIndex.ProvisionedThroughputProperty | cdktn.IResolvable): any {
+export function awsGlobalSecondaryIndexProvisionedThroughputPropertyToHclTerraform(struct?: AwsGlobalSecondaryIndex.ProvisionedThroughputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -538,7 +538,7 @@ export function tfGlobalSecondaryIndexProvisionedThroughputPropertyToHclTerrafor
 }
 
 
-export function tfGlobalSecondaryIndexTimeoutsPropertyToTerraform(struct?: TfGlobalSecondaryIndex.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsGlobalSecondaryIndexTimeoutsPropertyToTerraform(struct?: AwsGlobalSecondaryIndex.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -551,7 +551,7 @@ export function tfGlobalSecondaryIndexTimeoutsPropertyToTerraform(struct?: TfGlo
 }
 
 
-export function tfGlobalSecondaryIndexTimeoutsPropertyToHclTerraform(struct?: TfGlobalSecondaryIndex.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsGlobalSecondaryIndexTimeoutsPropertyToHclTerraform(struct?: AwsGlobalSecondaryIndex.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -582,14 +582,14 @@ export function tfGlobalSecondaryIndexTimeoutsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export namespace TfGlobalSecondaryIndex {
+export namespace AwsGlobalSecondaryIndex {
 export interface WarmThroughputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#read_units_per_second TfGlobalSecondaryIndex#read_units_per_second}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#read_units_per_second AwsGlobalSecondaryIndex#read_units_per_second}
   */
   readonly readUnitsPerSecond?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#write_units_per_second TfGlobalSecondaryIndex#write_units_per_second}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#write_units_per_second AwsGlobalSecondaryIndex#write_units_per_second}
   */
   readonly writeUnitsPerSecond?: number;
 }
@@ -675,15 +675,15 @@ export class WarmThroughputPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface KeySchemaProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#attribute_name TfGlobalSecondaryIndex#attribute_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#attribute_name AwsGlobalSecondaryIndex#attribute_name}
   */
   readonly attributeName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#attribute_type TfGlobalSecondaryIndex#attribute_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#attribute_type AwsGlobalSecondaryIndex#attribute_type}
   */
   readonly attributeType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#key_type TfGlobalSecondaryIndex#key_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#key_type AwsGlobalSecondaryIndex#key_type}
   */
   readonly keyType: string;
 }
@@ -804,11 +804,11 @@ export class KeySchemaPropertyList extends cdktn.ComplexList {
 }
 export interface OnDemandThroughputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#max_read_request_units TfGlobalSecondaryIndex#max_read_request_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#max_read_request_units AwsGlobalSecondaryIndex#max_read_request_units}
   */
   readonly maxReadRequestUnits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#max_write_request_units TfGlobalSecondaryIndex#max_write_request_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#max_write_request_units AwsGlobalSecondaryIndex#max_write_request_units}
   */
   readonly maxWriteRequestUnits?: number;
 }
@@ -916,11 +916,11 @@ export class OnDemandThroughputPropertyList extends cdktn.ComplexList {
 }
 export interface ProjectionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#non_key_attributes TfGlobalSecondaryIndex#non_key_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#non_key_attributes AwsGlobalSecondaryIndex#non_key_attributes}
   */
   readonly nonKeyAttributes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#projection_type TfGlobalSecondaryIndex#projection_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#projection_type AwsGlobalSecondaryIndex#projection_type}
   */
   readonly projectionType: string;
 }
@@ -1025,11 +1025,11 @@ export class ProjectionPropertyList extends cdktn.ComplexList {
 }
 export interface ProvisionedThroughputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#read_capacity_units TfGlobalSecondaryIndex#read_capacity_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#read_capacity_units AwsGlobalSecondaryIndex#read_capacity_units}
   */
   readonly readCapacityUnits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#write_capacity_units TfGlobalSecondaryIndex#write_capacity_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#write_capacity_units AwsGlobalSecondaryIndex#write_capacity_units}
   */
   readonly writeCapacityUnits?: number;
 }
@@ -1139,19 +1139,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#create TfGlobalSecondaryIndex#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#create AwsGlobalSecondaryIndex#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#delete TfGlobalSecondaryIndex#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#delete AwsGlobalSecondaryIndex#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#update TfGlobalSecondaryIndex#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dynamodb_global_secondary_index#update AwsGlobalSecondaryIndex#update}
   */
   readonly update?: string;
 }

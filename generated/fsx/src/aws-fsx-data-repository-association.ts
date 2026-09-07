@@ -5,70 +5,70 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataRepositoryAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDataRepositoryAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#batch_import_meta_data_on_create TfDataRepositoryAssociation#batch_import_meta_data_on_create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#batch_import_meta_data_on_create AwsDataRepositoryAssociation#batch_import_meta_data_on_create}
   */
   readonly batchImportMetaDataOnCreate?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#data_repository_path TfDataRepositoryAssociation#data_repository_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#data_repository_path AwsDataRepositoryAssociation#data_repository_path}
   */
   readonly dataRepositoryPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#delete_data_in_filesystem TfDataRepositoryAssociation#delete_data_in_filesystem}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#delete_data_in_filesystem AwsDataRepositoryAssociation#delete_data_in_filesystem}
   */
   readonly deleteDataInFilesystem?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#file_system_id TfDataRepositoryAssociation#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#file_system_id AwsDataRepositoryAssociation#file_system_id}
   */
   readonly fileSystemId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#file_system_path TfDataRepositoryAssociation#file_system_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#file_system_path AwsDataRepositoryAssociation#file_system_path}
   */
   readonly fileSystemPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#id TfDataRepositoryAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#id AwsDataRepositoryAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#imported_file_chunk_size TfDataRepositoryAssociation#imported_file_chunk_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#imported_file_chunk_size AwsDataRepositoryAssociation#imported_file_chunk_size}
   */
   readonly importedFileChunkSize?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#region TfDataRepositoryAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#region AwsDataRepositoryAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#tags TfDataRepositoryAssociation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#tags AwsDataRepositoryAssociation#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#tags_all TfDataRepositoryAssociation#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#tags_all AwsDataRepositoryAssociation#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#s3 TfDataRepositoryAssociation#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#s3 AwsDataRepositoryAssociation#s3}
   */
-  readonly s3?: TfDataRepositoryAssociation.S3Property;
+  readonly s3?: AwsDataRepositoryAssociation.S3Property;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#timeouts TfDataRepositoryAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#timeouts AwsDataRepositoryAssociation#timeouts}
   */
-  readonly timeouts?: TfDataRepositoryAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsDataRepositoryAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association aws_fsx_data_repository_association}
 */
-export class TfDataRepositoryAssociation extends cdktn.TerraformResource {
+export class AwsDataRepositoryAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -79,11 +79,11 @@ export class TfDataRepositoryAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataRepositoryAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDataRepositoryAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataRepositoryAssociation to import
-  * @param importFromId The id of the existing TfDataRepositoryAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataRepositoryAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsDataRepositoryAssociation to import
+  * @param importFromId The id of the existing AwsDataRepositoryAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDataRepositoryAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fsx_data_repository_association", importId: importFromId, provider });
@@ -98,9 +98,9 @@ export class TfDataRepositoryAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataRepositoryAssociationConfig
+  * @param options AwsDataRepositoryAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataRepositoryAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDataRepositoryAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_fsx_data_repository_association',
       terraformGeneratorMetadata: {
@@ -296,11 +296,11 @@ export class TfDataRepositoryAssociation extends cdktn.TerraformResource {
   }
 
   // s3 - computed: false, optional: true, required: false
-  private _s3 = new TfDataRepositoryAssociation.S3PropertyOutputReference(this, "s3");
+  private _s3 = new AwsDataRepositoryAssociation.S3PropertyOutputReference(this, "s3");
   public get s3() {
     return this._s3;
   }
-  public putS3(value: TfDataRepositoryAssociation.S3Property) {
+  public putS3(value: AwsDataRepositoryAssociation.S3Property) {
     this._s3.internalValue = value;
   }
   public resetS3() {
@@ -312,11 +312,11 @@ export class TfDataRepositoryAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDataRepositoryAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsDataRepositoryAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDataRepositoryAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsDataRepositoryAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -343,8 +343,8 @@ export class TfDataRepositoryAssociation extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      s3: tfDataRepositoryAssociationS3PropertyToTerraform(this._s3.internalValue),
-      timeouts: tfDataRepositoryAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      s3: awsDataRepositoryAssociationS3PropertyToTerraform(this._s3.internalValue),
+      timeouts: awsDataRepositoryAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -411,16 +411,16 @@ export class TfDataRepositoryAssociation extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       s3: {
-        value: tfDataRepositoryAssociationS3PropertyToHclTerraform(this._s3.internalValue),
+        value: awsDataRepositoryAssociationS3PropertyToHclTerraform(this._s3.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataRepositoryAssociation.S3PropertyList",
+        storageClassType: "AwsDataRepositoryAssociation.S3PropertyList",
       },
       timeouts: {
-        value: tfDataRepositoryAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsDataRepositoryAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDataRepositoryAssociation.TimeoutsProperty",
+        storageClassType: "AwsDataRepositoryAssociation.TimeoutsProperty",
       },
     };
 
@@ -429,7 +429,7 @@ export class TfDataRepositoryAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfDataRepositoryAssociationAutoExportPolicyPropertyToTerraform(struct?: TfDataRepositoryAssociation.AutoExportPolicyPropertyOutputReference | TfDataRepositoryAssociation.AutoExportPolicyProperty): any {
+export function awsDataRepositoryAssociationAutoExportPolicyPropertyToTerraform(struct?: AwsDataRepositoryAssociation.AutoExportPolicyPropertyOutputReference | AwsDataRepositoryAssociation.AutoExportPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -440,7 +440,7 @@ export function tfDataRepositoryAssociationAutoExportPolicyPropertyToTerraform(s
 }
 
 
-export function tfDataRepositoryAssociationAutoExportPolicyPropertyToHclTerraform(struct?: TfDataRepositoryAssociation.AutoExportPolicyPropertyOutputReference | TfDataRepositoryAssociation.AutoExportPolicyProperty): any {
+export function awsDataRepositoryAssociationAutoExportPolicyPropertyToHclTerraform(struct?: AwsDataRepositoryAssociation.AutoExportPolicyPropertyOutputReference | AwsDataRepositoryAssociation.AutoExportPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -459,7 +459,7 @@ export function tfDataRepositoryAssociationAutoExportPolicyPropertyToHclTerrafor
 }
 
 
-export function tfDataRepositoryAssociationAutoImportPolicyPropertyToTerraform(struct?: TfDataRepositoryAssociation.AutoImportPolicyPropertyOutputReference | TfDataRepositoryAssociation.AutoImportPolicyProperty): any {
+export function awsDataRepositoryAssociationAutoImportPolicyPropertyToTerraform(struct?: AwsDataRepositoryAssociation.AutoImportPolicyPropertyOutputReference | AwsDataRepositoryAssociation.AutoImportPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -470,7 +470,7 @@ export function tfDataRepositoryAssociationAutoImportPolicyPropertyToTerraform(s
 }
 
 
-export function tfDataRepositoryAssociationAutoImportPolicyPropertyToHclTerraform(struct?: TfDataRepositoryAssociation.AutoImportPolicyPropertyOutputReference | TfDataRepositoryAssociation.AutoImportPolicyProperty): any {
+export function awsDataRepositoryAssociationAutoImportPolicyPropertyToHclTerraform(struct?: AwsDataRepositoryAssociation.AutoImportPolicyPropertyOutputReference | AwsDataRepositoryAssociation.AutoImportPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -489,32 +489,32 @@ export function tfDataRepositoryAssociationAutoImportPolicyPropertyToHclTerrafor
 }
 
 
-export function tfDataRepositoryAssociationS3PropertyToTerraform(struct?: TfDataRepositoryAssociation.S3PropertyOutputReference | TfDataRepositoryAssociation.S3Property): any {
+export function awsDataRepositoryAssociationS3PropertyToTerraform(struct?: AwsDataRepositoryAssociation.S3PropertyOutputReference | AwsDataRepositoryAssociation.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    auto_export_policy: tfDataRepositoryAssociationAutoExportPolicyPropertyToTerraform(struct!.autoExportPolicy),
-    auto_import_policy: tfDataRepositoryAssociationAutoImportPolicyPropertyToTerraform(struct!.autoImportPolicy),
+    auto_export_policy: awsDataRepositoryAssociationAutoExportPolicyPropertyToTerraform(struct!.autoExportPolicy),
+    auto_import_policy: awsDataRepositoryAssociationAutoImportPolicyPropertyToTerraform(struct!.autoImportPolicy),
   }
 }
 
 
-export function tfDataRepositoryAssociationS3PropertyToHclTerraform(struct?: TfDataRepositoryAssociation.S3PropertyOutputReference | TfDataRepositoryAssociation.S3Property): any {
+export function awsDataRepositoryAssociationS3PropertyToHclTerraform(struct?: AwsDataRepositoryAssociation.S3PropertyOutputReference | AwsDataRepositoryAssociation.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     auto_export_policy: {
-      value: tfDataRepositoryAssociationAutoExportPolicyPropertyToHclTerraform(struct!.autoExportPolicy),
+      value: awsDataRepositoryAssociationAutoExportPolicyPropertyToHclTerraform(struct!.autoExportPolicy),
       isBlock: true,
       type: "list",
       storageClassType: "AutoExportPolicyPropertyList",
     },
     auto_import_policy: {
-      value: tfDataRepositoryAssociationAutoImportPolicyPropertyToHclTerraform(struct!.autoImportPolicy),
+      value: awsDataRepositoryAssociationAutoImportPolicyPropertyToHclTerraform(struct!.autoImportPolicy),
       isBlock: true,
       type: "list",
       storageClassType: "AutoImportPolicyPropertyList",
@@ -526,7 +526,7 @@ export function tfDataRepositoryAssociationS3PropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataRepositoryAssociationTimeoutsPropertyToTerraform(struct?: TfDataRepositoryAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDataRepositoryAssociationTimeoutsPropertyToTerraform(struct?: AwsDataRepositoryAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -539,7 +539,7 @@ export function tfDataRepositoryAssociationTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataRepositoryAssociationTimeoutsPropertyToHclTerraform(struct?: TfDataRepositoryAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDataRepositoryAssociationTimeoutsPropertyToHclTerraform(struct?: AwsDataRepositoryAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -570,10 +570,10 @@ export function tfDataRepositoryAssociationTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace TfDataRepositoryAssociation {
+export namespace AwsDataRepositoryAssociation {
 export interface AutoExportPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#events TfDataRepositoryAssociation#events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#events AwsDataRepositoryAssociation#events}
   */
   readonly events?: string[];
 }
@@ -627,7 +627,7 @@ export class AutoExportPolicyPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface AutoImportPolicyProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#events TfDataRepositoryAssociation#events}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#events AwsDataRepositoryAssociation#events}
   */
   readonly events?: string[];
 }
@@ -683,13 +683,13 @@ export interface S3Property {
   /**
   * auto_export_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#auto_export_policy TfDataRepositoryAssociation#auto_export_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#auto_export_policy AwsDataRepositoryAssociation#auto_export_policy}
   */
   readonly autoExportPolicy?: AutoExportPolicyProperty;
   /**
   * auto_import_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#auto_import_policy TfDataRepositoryAssociation#auto_import_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#auto_import_policy AwsDataRepositoryAssociation#auto_import_policy}
   */
   readonly autoImportPolicy?: AutoImportPolicyProperty;
 }
@@ -765,15 +765,15 @@ export class S3PropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#create TfDataRepositoryAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#create AwsDataRepositoryAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#delete TfDataRepositoryAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#delete AwsDataRepositoryAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#update TfDataRepositoryAssociation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_data_repository_association#update AwsDataRepositoryAssociation#update}
   */
   readonly update?: string;
 }

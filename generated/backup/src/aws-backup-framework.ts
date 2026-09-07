@@ -5,54 +5,54 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFrameworkConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFrameworkConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#description TfFramework#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#description AwsFramework#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#id TfFramework#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#id AwsFramework#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#name TfFramework#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#name AwsFramework#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#region TfFramework#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#region AwsFramework#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#tags TfFramework#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#tags AwsFramework#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#tags_all TfFramework#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#tags_all AwsFramework#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * control block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#control TfFramework#control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#control AwsFramework#control}
   */
-  readonly control: TfFramework.ControlProperty[] | cdktn.IResolvable;
+  readonly control: AwsFramework.ControlProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#timeouts TfFramework#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#timeouts AwsFramework#timeouts}
   */
-  readonly timeouts?: TfFramework.TimeoutsProperty;
+  readonly timeouts?: AwsFramework.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework aws_backup_framework}
 */
-export class TfFramework extends cdktn.TerraformResource {
+export class AwsFramework extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -63,11 +63,11 @@ export class TfFramework extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFramework resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFramework resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFramework to import
-  * @param importFromId The id of the existing TfFramework that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFramework to import is found
+  * @param importToId The construct id used in the generated config for the AwsFramework to import
+  * @param importFromId The id of the existing AwsFramework that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFramework to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_backup_framework", importId: importFromId, provider });
@@ -82,9 +82,9 @@ export class TfFramework extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFrameworkConfig
+  * @param options AwsFrameworkConfig
   */
-  public constructor(scope: Construct, id: string, config: TfFrameworkConfig) {
+  public constructor(scope: Construct, id: string, config: AwsFrameworkConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_backup_framework',
       terraformGeneratorMetadata: {
@@ -228,11 +228,11 @@ export class TfFramework extends cdktn.TerraformResource {
   }
 
   // control - computed: false, optional: false, required: true
-  private _control = new TfFramework.ControlPropertyList(this, "control", true);
+  private _control = new AwsFramework.ControlPropertyList(this, "control", true);
   public get control() {
     return this._control;
   }
-  public putControl(value: TfFramework.ControlProperty[] | cdktn.IResolvable) {
+  public putControl(value: AwsFramework.ControlProperty[] | cdktn.IResolvable) {
     this._control.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -241,11 +241,11 @@ export class TfFramework extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfFramework.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsFramework.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfFramework.TimeoutsProperty) {
+  public putTimeouts(value: AwsFramework.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -268,8 +268,8 @@ export class TfFramework extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      control: cdktn.listMapper(tfFrameworkControlPropertyToTerraform, true)(this._control.internalValue),
-      timeouts: tfFrameworkTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      control: cdktn.listMapper(awsFrameworkControlPropertyToTerraform, true)(this._control.internalValue),
+      timeouts: awsFrameworkTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -312,16 +312,16 @@ export class TfFramework extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       control: {
-        value: cdktn.listMapperHcl(tfFrameworkControlPropertyToHclTerraform, true)(this._control.internalValue),
+        value: cdktn.listMapperHcl(awsFrameworkControlPropertyToHclTerraform, true)(this._control.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfFramework.ControlPropertyList",
+        storageClassType: "AwsFramework.ControlPropertyList",
       },
       timeouts: {
-        value: tfFrameworkTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsFrameworkTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfFramework.TimeoutsProperty",
+        storageClassType: "AwsFramework.TimeoutsProperty",
       },
     };
 
@@ -330,7 +330,7 @@ export class TfFramework extends cdktn.TerraformResource {
   }
 }
 
-export function tfFrameworkInputParameterPropertyToTerraform(struct?: TfFramework.InputParameterProperty | cdktn.IResolvable): any {
+export function awsFrameworkInputParameterPropertyToTerraform(struct?: AwsFramework.InputParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -342,7 +342,7 @@ export function tfFrameworkInputParameterPropertyToTerraform(struct?: TfFramewor
 }
 
 
-export function tfFrameworkInputParameterPropertyToHclTerraform(struct?: TfFramework.InputParameterProperty | cdktn.IResolvable): any {
+export function awsFrameworkInputParameterPropertyToHclTerraform(struct?: AwsFramework.InputParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,7 +367,7 @@ export function tfFrameworkInputParameterPropertyToHclTerraform(struct?: TfFrame
 }
 
 
-export function tfFrameworkScopePropertyToTerraform(struct?: TfFramework.ScopePropertyOutputReference | TfFramework.ScopeProperty): any {
+export function awsFrameworkScopePropertyToTerraform(struct?: AwsFramework.ScopePropertyOutputReference | AwsFramework.ScopeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,7 +380,7 @@ export function tfFrameworkScopePropertyToTerraform(struct?: TfFramework.ScopePr
 }
 
 
-export function tfFrameworkScopePropertyToHclTerraform(struct?: TfFramework.ScopePropertyOutputReference | TfFramework.ScopeProperty): any {
+export function awsFrameworkScopePropertyToHclTerraform(struct?: AwsFramework.ScopePropertyOutputReference | AwsFramework.ScopeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -411,20 +411,20 @@ export function tfFrameworkScopePropertyToHclTerraform(struct?: TfFramework.Scop
 }
 
 
-export function tfFrameworkControlPropertyToTerraform(struct?: TfFramework.ControlProperty | cdktn.IResolvable): any {
+export function awsFrameworkControlPropertyToTerraform(struct?: AwsFramework.ControlProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    input_parameter: cdktn.listMapper(tfFrameworkInputParameterPropertyToTerraform, true)(struct!.inputParameter),
-    scope: tfFrameworkScopePropertyToTerraform(struct!.scope),
+    input_parameter: cdktn.listMapper(awsFrameworkInputParameterPropertyToTerraform, true)(struct!.inputParameter),
+    scope: awsFrameworkScopePropertyToTerraform(struct!.scope),
   }
 }
 
 
-export function tfFrameworkControlPropertyToHclTerraform(struct?: TfFramework.ControlProperty | cdktn.IResolvable): any {
+export function awsFrameworkControlPropertyToHclTerraform(struct?: AwsFramework.ControlProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -437,13 +437,13 @@ export function tfFrameworkControlPropertyToHclTerraform(struct?: TfFramework.Co
       storageClassType: "string",
     },
     input_parameter: {
-      value: cdktn.listMapperHcl(tfFrameworkInputParameterPropertyToHclTerraform, true)(struct!.inputParameter),
+      value: cdktn.listMapperHcl(awsFrameworkInputParameterPropertyToHclTerraform, true)(struct!.inputParameter),
       isBlock: true,
       type: "set",
       storageClassType: "InputParameterPropertyList",
     },
     scope: {
-      value: tfFrameworkScopePropertyToHclTerraform(struct!.scope),
+      value: awsFrameworkScopePropertyToHclTerraform(struct!.scope),
       isBlock: true,
       type: "list",
       storageClassType: "ScopePropertyList",
@@ -455,7 +455,7 @@ export function tfFrameworkControlPropertyToHclTerraform(struct?: TfFramework.Co
 }
 
 
-export function tfFrameworkTimeoutsPropertyToTerraform(struct?: TfFramework.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsFrameworkTimeoutsPropertyToTerraform(struct?: AwsFramework.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -468,7 +468,7 @@ export function tfFrameworkTimeoutsPropertyToTerraform(struct?: TfFramework.Time
 }
 
 
-export function tfFrameworkTimeoutsPropertyToHclTerraform(struct?: TfFramework.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsFrameworkTimeoutsPropertyToHclTerraform(struct?: AwsFramework.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -499,14 +499,14 @@ export function tfFrameworkTimeoutsPropertyToHclTerraform(struct?: TfFramework.T
 }
 
 
-export namespace TfFramework {
+export namespace AwsFramework {
 export interface InputParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#name TfFramework#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#name AwsFramework#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#value TfFramework#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#value AwsFramework#value}
   */
   readonly value?: string;
 }
@@ -614,15 +614,15 @@ export class InputParameterPropertyList extends cdktn.ComplexList {
 }
 export interface ScopeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#compliance_resource_ids TfFramework#compliance_resource_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#compliance_resource_ids AwsFramework#compliance_resource_ids}
   */
   readonly complianceResourceIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#compliance_resource_types TfFramework#compliance_resource_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#compliance_resource_types AwsFramework#compliance_resource_types}
   */
   readonly complianceResourceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#tags TfFramework#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#tags AwsFramework#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -720,19 +720,19 @@ export class ScopePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ControlProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#name TfFramework#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#name AwsFramework#name}
   */
   readonly name: string;
   /**
   * input_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#input_parameter TfFramework#input_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#input_parameter AwsFramework#input_parameter}
   */
   readonly inputParameter?: InputParameterProperty[] | cdktn.IResolvable;
   /**
   * scope block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#scope TfFramework#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#scope AwsFramework#scope}
   */
   readonly scope?: ScopeProperty;
 }
@@ -859,15 +859,15 @@ export class ControlPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#create TfFramework#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#create AwsFramework#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#delete TfFramework#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#delete AwsFramework#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#update TfFramework#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_framework#update AwsFramework#update}
   */
   readonly update?: string;
 }

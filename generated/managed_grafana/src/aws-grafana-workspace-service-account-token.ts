@@ -5,27 +5,27 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfWorkspaceServiceAccountTokenConfig extends cdktn.TerraformMetaArguments {
+export interface AwsWorkspaceServiceAccountTokenConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#name TfWorkspaceServiceAccountToken#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#name AwsWorkspaceServiceAccountToken#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#region TfWorkspaceServiceAccountToken#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#region AwsWorkspaceServiceAccountToken#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#seconds_to_live TfWorkspaceServiceAccountToken#seconds_to_live}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#seconds_to_live AwsWorkspaceServiceAccountToken#seconds_to_live}
   */
   readonly secondsToLive: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#service_account_id TfWorkspaceServiceAccountToken#service_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#service_account_id AwsWorkspaceServiceAccountToken#service_account_id}
   */
   readonly serviceAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#workspace_id TfWorkspaceServiceAccountToken#workspace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#workspace_id AwsWorkspaceServiceAccountToken#workspace_id}
   */
   readonly workspaceId: string;
 }
@@ -33,7 +33,7 @@ export interface TfWorkspaceServiceAccountTokenConfig extends cdktn.TerraformMet
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token aws_grafana_workspace_service_account_token}
 */
-export class TfWorkspaceServiceAccountToken extends cdktn.TerraformResource {
+export class AwsWorkspaceServiceAccountToken extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -44,11 +44,11 @@ export class TfWorkspaceServiceAccountToken extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfWorkspaceServiceAccountToken resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsWorkspaceServiceAccountToken resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfWorkspaceServiceAccountToken to import
-  * @param importFromId The id of the existing TfWorkspaceServiceAccountToken that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfWorkspaceServiceAccountToken to import is found
+  * @param importToId The construct id used in the generated config for the AwsWorkspaceServiceAccountToken to import
+  * @param importFromId The id of the existing AwsWorkspaceServiceAccountToken that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/grafana_workspace_service_account_token#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsWorkspaceServiceAccountToken to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_grafana_workspace_service_account_token", importId: importFromId, provider });
@@ -63,9 +63,9 @@ export class TfWorkspaceServiceAccountToken extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfWorkspaceServiceAccountTokenConfig
+  * @param options AwsWorkspaceServiceAccountTokenConfig
   */
-  public constructor(scope: Construct, id: string, config: TfWorkspaceServiceAccountTokenConfig) {
+  public constructor(scope: Construct, id: string, config: AwsWorkspaceServiceAccountTokenConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_grafana_workspace_service_account_token',
       terraformGeneratorMetadata: {

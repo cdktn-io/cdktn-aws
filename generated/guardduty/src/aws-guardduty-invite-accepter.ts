@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfInviteAccepterConfig extends cdktn.TerraformMetaArguments {
+export interface AwsInviteAccepterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_invite_accepter#detector_id TfInviteAccepter#detector_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_invite_accepter#detector_id AwsInviteAccepter#detector_id}
   */
   readonly detectorId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_invite_accepter#id TfInviteAccepter#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_invite_accepter#id AwsInviteAccepter#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_invite_accepter#master_account_id TfInviteAccepter#master_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_invite_accepter#master_account_id AwsInviteAccepter#master_account_id}
   */
   readonly masterAccountId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_invite_accepter#region TfInviteAccepter#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_invite_accepter#region AwsInviteAccepter#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_invite_accepter#timeouts TfInviteAccepter#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_invite_accepter#timeouts AwsInviteAccepter#timeouts}
   */
-  readonly timeouts?: TfInviteAccepter.TimeoutsProperty;
+  readonly timeouts?: AwsInviteAccepter.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_invite_accepter aws_guardduty_invite_accepter}
 */
-export class TfInviteAccepter extends cdktn.TerraformResource {
+export class AwsInviteAccepter extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfInviteAccepter extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfInviteAccepter resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsInviteAccepter resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfInviteAccepter to import
-  * @param importFromId The id of the existing TfInviteAccepter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_invite_accepter#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfInviteAccepter to import is found
+  * @param importToId The construct id used in the generated config for the AwsInviteAccepter to import
+  * @param importFromId The id of the existing AwsInviteAccepter that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_invite_accepter#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsInviteAccepter to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_guardduty_invite_accepter", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfInviteAccepter extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfInviteAccepterConfig
+  * @param options AwsInviteAccepterConfig
   */
-  public constructor(scope: Construct, id: string, config: TfInviteAccepterConfig) {
+  public constructor(scope: Construct, id: string, config: AwsInviteAccepterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_guardduty_invite_accepter',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class TfInviteAccepter extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfInviteAccepter.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsInviteAccepter.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfInviteAccepter.TimeoutsProperty) {
+  public putTimeouts(value: AwsInviteAccepter.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -181,7 +181,7 @@ export class TfInviteAccepter extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       master_account_id: cdktn.stringToTerraform(this._masterAccountId),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfInviteAccepterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsInviteAccepterTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class TfInviteAccepter extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfInviteAccepterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsInviteAccepterTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfInviteAccepter.TimeoutsProperty",
+        storageClassType: "AwsInviteAccepter.TimeoutsProperty",
       },
     };
 
@@ -224,7 +224,7 @@ export class TfInviteAccepter extends cdktn.TerraformResource {
   }
 }
 
-export function tfInviteAccepterTimeoutsPropertyToTerraform(struct?: TfInviteAccepter.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsInviteAccepterTimeoutsPropertyToTerraform(struct?: AwsInviteAccepter.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -235,7 +235,7 @@ export function tfInviteAccepterTimeoutsPropertyToTerraform(struct?: TfInviteAcc
 }
 
 
-export function tfInviteAccepterTimeoutsPropertyToHclTerraform(struct?: TfInviteAccepter.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsInviteAccepterTimeoutsPropertyToHclTerraform(struct?: AwsInviteAccepter.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -254,10 +254,10 @@ export function tfInviteAccepterTimeoutsPropertyToHclTerraform(struct?: TfInvite
 }
 
 
-export namespace TfInviteAccepter {
+export namespace AwsInviteAccepter {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_invite_accepter#create TfInviteAccepter#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/guardduty_invite_accepter#create AwsInviteAccepter#create}
   */
   readonly create?: string;
 }

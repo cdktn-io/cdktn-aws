@@ -5,116 +5,116 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfTaskDefinitionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsTaskDefinitionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#container_definitions TfTaskDefinition#container_definitions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#container_definitions AwsTaskDefinition#container_definitions}
   */
   readonly containerDefinitions: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#cpu TfTaskDefinition#cpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#cpu AwsTaskDefinition#cpu}
   */
   readonly cpu?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#enable_fault_injection TfTaskDefinition#enable_fault_injection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#enable_fault_injection AwsTaskDefinition#enable_fault_injection}
   */
   readonly enableFaultInjection?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#execution_role_arn TfTaskDefinition#execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#execution_role_arn AwsTaskDefinition#execution_role_arn}
   */
   readonly executionRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#family TfTaskDefinition#family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#family AwsTaskDefinition#family}
   */
   readonly family: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#id TfTaskDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#id AwsTaskDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#ipc_mode TfTaskDefinition#ipc_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#ipc_mode AwsTaskDefinition#ipc_mode}
   */
   readonly ipcMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#memory TfTaskDefinition#memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#memory AwsTaskDefinition#memory}
   */
   readonly memory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#network_mode TfTaskDefinition#network_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#network_mode AwsTaskDefinition#network_mode}
   */
   readonly networkMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#pid_mode TfTaskDefinition#pid_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#pid_mode AwsTaskDefinition#pid_mode}
   */
   readonly pidMode?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#region TfTaskDefinition#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#region AwsTaskDefinition#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#requires_compatibilities TfTaskDefinition#requires_compatibilities}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#requires_compatibilities AwsTaskDefinition#requires_compatibilities}
   */
   readonly requiresCompatibilities?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#skip_destroy TfTaskDefinition#skip_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#skip_destroy AwsTaskDefinition#skip_destroy}
   */
   readonly skipDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#tags TfTaskDefinition#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#tags AwsTaskDefinition#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#tags_all TfTaskDefinition#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#tags_all AwsTaskDefinition#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#task_role_arn TfTaskDefinition#task_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#task_role_arn AwsTaskDefinition#task_role_arn}
   */
   readonly taskRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#track_latest TfTaskDefinition#track_latest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#track_latest AwsTaskDefinition#track_latest}
   */
   readonly trackLatest?: boolean | cdktn.IResolvable;
   /**
   * ephemeral_storage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#ephemeral_storage TfTaskDefinition#ephemeral_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#ephemeral_storage AwsTaskDefinition#ephemeral_storage}
   */
-  readonly ephemeralStorage?: TfTaskDefinition.EphemeralStorageProperty;
+  readonly ephemeralStorage?: AwsTaskDefinition.EphemeralStorageProperty;
   /**
   * placement_constraints block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#placement_constraints TfTaskDefinition#placement_constraints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#placement_constraints AwsTaskDefinition#placement_constraints}
   */
-  readonly placementConstraints?: TfTaskDefinition.PlacementConstraintsProperty[] | cdktn.IResolvable;
+  readonly placementConstraints?: AwsTaskDefinition.PlacementConstraintsProperty[] | cdktn.IResolvable;
   /**
   * proxy_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#proxy_configuration TfTaskDefinition#proxy_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#proxy_configuration AwsTaskDefinition#proxy_configuration}
   */
-  readonly proxyConfiguration?: TfTaskDefinition.ProxyConfigurationProperty;
+  readonly proxyConfiguration?: AwsTaskDefinition.ProxyConfigurationProperty;
   /**
   * runtime_platform block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#runtime_platform TfTaskDefinition#runtime_platform}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#runtime_platform AwsTaskDefinition#runtime_platform}
   */
-  readonly runtimePlatform?: TfTaskDefinition.RuntimePlatformProperty;
+  readonly runtimePlatform?: AwsTaskDefinition.RuntimePlatformProperty;
   /**
   * volume block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#volume TfTaskDefinition#volume}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#volume AwsTaskDefinition#volume}
   */
-  readonly volume?: TfTaskDefinition.VolumeProperty[] | cdktn.IResolvable;
+  readonly volume?: AwsTaskDefinition.VolumeProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition aws_ecs_task_definition}
 */
-export class TfTaskDefinition extends cdktn.TerraformResource {
+export class AwsTaskDefinition extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -125,11 +125,11 @@ export class TfTaskDefinition extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfTaskDefinition resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsTaskDefinition resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfTaskDefinition to import
-  * @param importFromId The id of the existing TfTaskDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfTaskDefinition to import is found
+  * @param importToId The construct id used in the generated config for the AwsTaskDefinition to import
+  * @param importFromId The id of the existing AwsTaskDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsTaskDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecs_task_definition", importId: importFromId, provider });
@@ -144,9 +144,9 @@ export class TfTaskDefinition extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfTaskDefinitionConfig
+  * @param options AwsTaskDefinitionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfTaskDefinitionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsTaskDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecs_task_definition',
       terraformGeneratorMetadata: {
@@ -472,11 +472,11 @@ export class TfTaskDefinition extends cdktn.TerraformResource {
   }
 
   // ephemeral_storage - computed: false, optional: true, required: false
-  private _ephemeralStorage = new TfTaskDefinition.EphemeralStoragePropertyOutputReference(this, "ephemeral_storage");
+  private _ephemeralStorage = new AwsTaskDefinition.EphemeralStoragePropertyOutputReference(this, "ephemeral_storage");
   public get ephemeralStorage() {
     return this._ephemeralStorage;
   }
-  public putEphemeralStorage(value: TfTaskDefinition.EphemeralStorageProperty) {
+  public putEphemeralStorage(value: AwsTaskDefinition.EphemeralStorageProperty) {
     this._ephemeralStorage.internalValue = value;
   }
   public resetEphemeralStorage() {
@@ -488,11 +488,11 @@ export class TfTaskDefinition extends cdktn.TerraformResource {
   }
 
   // placement_constraints - computed: false, optional: true, required: false
-  private _placementConstraints = new TfTaskDefinition.PlacementConstraintsPropertyList(this, "placement_constraints", true);
+  private _placementConstraints = new AwsTaskDefinition.PlacementConstraintsPropertyList(this, "placement_constraints", true);
   public get placementConstraints() {
     return this._placementConstraints;
   }
-  public putPlacementConstraints(value: TfTaskDefinition.PlacementConstraintsProperty[] | cdktn.IResolvable) {
+  public putPlacementConstraints(value: AwsTaskDefinition.PlacementConstraintsProperty[] | cdktn.IResolvable) {
     this._placementConstraints.internalValue = value;
   }
   public resetPlacementConstraints() {
@@ -504,11 +504,11 @@ export class TfTaskDefinition extends cdktn.TerraformResource {
   }
 
   // proxy_configuration - computed: false, optional: true, required: false
-  private _proxyConfiguration = new TfTaskDefinition.ProxyConfigurationPropertyOutputReference(this, "proxy_configuration");
+  private _proxyConfiguration = new AwsTaskDefinition.ProxyConfigurationPropertyOutputReference(this, "proxy_configuration");
   public get proxyConfiguration() {
     return this._proxyConfiguration;
   }
-  public putProxyConfiguration(value: TfTaskDefinition.ProxyConfigurationProperty) {
+  public putProxyConfiguration(value: AwsTaskDefinition.ProxyConfigurationProperty) {
     this._proxyConfiguration.internalValue = value;
   }
   public resetProxyConfiguration() {
@@ -520,11 +520,11 @@ export class TfTaskDefinition extends cdktn.TerraformResource {
   }
 
   // runtime_platform - computed: false, optional: true, required: false
-  private _runtimePlatform = new TfTaskDefinition.RuntimePlatformPropertyOutputReference(this, "runtime_platform");
+  private _runtimePlatform = new AwsTaskDefinition.RuntimePlatformPropertyOutputReference(this, "runtime_platform");
   public get runtimePlatform() {
     return this._runtimePlatform;
   }
-  public putRuntimePlatform(value: TfTaskDefinition.RuntimePlatformProperty) {
+  public putRuntimePlatform(value: AwsTaskDefinition.RuntimePlatformProperty) {
     this._runtimePlatform.internalValue = value;
   }
   public resetRuntimePlatform() {
@@ -536,11 +536,11 @@ export class TfTaskDefinition extends cdktn.TerraformResource {
   }
 
   // volume - computed: false, optional: true, required: false
-  private _volume = new TfTaskDefinition.VolumePropertyList(this, "volume", true);
+  private _volume = new AwsTaskDefinition.VolumePropertyList(this, "volume", true);
   public get volume() {
     return this._volume;
   }
-  public putVolume(value: TfTaskDefinition.VolumeProperty[] | cdktn.IResolvable) {
+  public putVolume(value: AwsTaskDefinition.VolumeProperty[] | cdktn.IResolvable) {
     this._volume.internalValue = value;
   }
   public resetVolume() {
@@ -574,11 +574,11 @@ export class TfTaskDefinition extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       task_role_arn: cdktn.stringToTerraform(this._taskRoleArn),
       track_latest: cdktn.booleanToTerraform(this._trackLatest),
-      ephemeral_storage: tfTaskDefinitionEphemeralStoragePropertyToTerraform(this._ephemeralStorage.internalValue),
-      placement_constraints: cdktn.listMapper(tfTaskDefinitionPlacementConstraintsPropertyToTerraform, true)(this._placementConstraints.internalValue),
-      proxy_configuration: tfTaskDefinitionProxyConfigurationPropertyToTerraform(this._proxyConfiguration.internalValue),
-      runtime_platform: tfTaskDefinitionRuntimePlatformPropertyToTerraform(this._runtimePlatform.internalValue),
-      volume: cdktn.listMapper(tfTaskDefinitionVolumePropertyToTerraform, true)(this._volume.internalValue),
+      ephemeral_storage: awsTaskDefinitionEphemeralStoragePropertyToTerraform(this._ephemeralStorage.internalValue),
+      placement_constraints: cdktn.listMapper(awsTaskDefinitionPlacementConstraintsPropertyToTerraform, true)(this._placementConstraints.internalValue),
+      proxy_configuration: awsTaskDefinitionProxyConfigurationPropertyToTerraform(this._proxyConfiguration.internalValue),
+      runtime_platform: awsTaskDefinitionRuntimePlatformPropertyToTerraform(this._runtimePlatform.internalValue),
+      volume: cdktn.listMapper(awsTaskDefinitionVolumePropertyToTerraform, true)(this._volume.internalValue),
     };
   }
 
@@ -687,34 +687,34 @@ export class TfTaskDefinition extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       ephemeral_storage: {
-        value: tfTaskDefinitionEphemeralStoragePropertyToHclTerraform(this._ephemeralStorage.internalValue),
+        value: awsTaskDefinitionEphemeralStoragePropertyToHclTerraform(this._ephemeralStorage.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTaskDefinition.EphemeralStoragePropertyList",
+        storageClassType: "AwsTaskDefinition.EphemeralStoragePropertyList",
       },
       placement_constraints: {
-        value: cdktn.listMapperHcl(tfTaskDefinitionPlacementConstraintsPropertyToHclTerraform, true)(this._placementConstraints.internalValue),
+        value: cdktn.listMapperHcl(awsTaskDefinitionPlacementConstraintsPropertyToHclTerraform, true)(this._placementConstraints.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfTaskDefinition.PlacementConstraintsPropertyList",
+        storageClassType: "AwsTaskDefinition.PlacementConstraintsPropertyList",
       },
       proxy_configuration: {
-        value: tfTaskDefinitionProxyConfigurationPropertyToHclTerraform(this._proxyConfiguration.internalValue),
+        value: awsTaskDefinitionProxyConfigurationPropertyToHclTerraform(this._proxyConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTaskDefinition.ProxyConfigurationPropertyList",
+        storageClassType: "AwsTaskDefinition.ProxyConfigurationPropertyList",
       },
       runtime_platform: {
-        value: tfTaskDefinitionRuntimePlatformPropertyToHclTerraform(this._runtimePlatform.internalValue),
+        value: awsTaskDefinitionRuntimePlatformPropertyToHclTerraform(this._runtimePlatform.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfTaskDefinition.RuntimePlatformPropertyList",
+        storageClassType: "AwsTaskDefinition.RuntimePlatformPropertyList",
       },
       volume: {
-        value: cdktn.listMapperHcl(tfTaskDefinitionVolumePropertyToHclTerraform, true)(this._volume.internalValue),
+        value: cdktn.listMapperHcl(awsTaskDefinitionVolumePropertyToHclTerraform, true)(this._volume.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfTaskDefinition.VolumePropertyList",
+        storageClassType: "AwsTaskDefinition.VolumePropertyList",
       },
     };
 
@@ -723,7 +723,7 @@ export class TfTaskDefinition extends cdktn.TerraformResource {
   }
 }
 
-export function tfTaskDefinitionEphemeralStoragePropertyToTerraform(struct?: TfTaskDefinition.EphemeralStoragePropertyOutputReference | TfTaskDefinition.EphemeralStorageProperty): any {
+export function awsTaskDefinitionEphemeralStoragePropertyToTerraform(struct?: AwsTaskDefinition.EphemeralStoragePropertyOutputReference | AwsTaskDefinition.EphemeralStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -734,7 +734,7 @@ export function tfTaskDefinitionEphemeralStoragePropertyToTerraform(struct?: TfT
 }
 
 
-export function tfTaskDefinitionEphemeralStoragePropertyToHclTerraform(struct?: TfTaskDefinition.EphemeralStoragePropertyOutputReference | TfTaskDefinition.EphemeralStorageProperty): any {
+export function awsTaskDefinitionEphemeralStoragePropertyToHclTerraform(struct?: AwsTaskDefinition.EphemeralStoragePropertyOutputReference | AwsTaskDefinition.EphemeralStorageProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -753,7 +753,7 @@ export function tfTaskDefinitionEphemeralStoragePropertyToHclTerraform(struct?: 
 }
 
 
-export function tfTaskDefinitionPlacementConstraintsPropertyToTerraform(struct?: TfTaskDefinition.PlacementConstraintsProperty | cdktn.IResolvable): any {
+export function awsTaskDefinitionPlacementConstraintsPropertyToTerraform(struct?: AwsTaskDefinition.PlacementConstraintsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -765,7 +765,7 @@ export function tfTaskDefinitionPlacementConstraintsPropertyToTerraform(struct?:
 }
 
 
-export function tfTaskDefinitionPlacementConstraintsPropertyToHclTerraform(struct?: TfTaskDefinition.PlacementConstraintsProperty | cdktn.IResolvable): any {
+export function awsTaskDefinitionPlacementConstraintsPropertyToHclTerraform(struct?: AwsTaskDefinition.PlacementConstraintsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -790,7 +790,7 @@ export function tfTaskDefinitionPlacementConstraintsPropertyToHclTerraform(struc
 }
 
 
-export function tfTaskDefinitionProxyConfigurationPropertyToTerraform(struct?: TfTaskDefinition.ProxyConfigurationPropertyOutputReference | TfTaskDefinition.ProxyConfigurationProperty): any {
+export function awsTaskDefinitionProxyConfigurationPropertyToTerraform(struct?: AwsTaskDefinition.ProxyConfigurationPropertyOutputReference | AwsTaskDefinition.ProxyConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -803,7 +803,7 @@ export function tfTaskDefinitionProxyConfigurationPropertyToTerraform(struct?: T
 }
 
 
-export function tfTaskDefinitionProxyConfigurationPropertyToHclTerraform(struct?: TfTaskDefinition.ProxyConfigurationPropertyOutputReference | TfTaskDefinition.ProxyConfigurationProperty): any {
+export function awsTaskDefinitionProxyConfigurationPropertyToHclTerraform(struct?: AwsTaskDefinition.ProxyConfigurationPropertyOutputReference | AwsTaskDefinition.ProxyConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -834,7 +834,7 @@ export function tfTaskDefinitionProxyConfigurationPropertyToHclTerraform(struct?
 }
 
 
-export function tfTaskDefinitionRuntimePlatformPropertyToTerraform(struct?: TfTaskDefinition.RuntimePlatformPropertyOutputReference | TfTaskDefinition.RuntimePlatformProperty): any {
+export function awsTaskDefinitionRuntimePlatformPropertyToTerraform(struct?: AwsTaskDefinition.RuntimePlatformPropertyOutputReference | AwsTaskDefinition.RuntimePlatformProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -846,7 +846,7 @@ export function tfTaskDefinitionRuntimePlatformPropertyToTerraform(struct?: TfTa
 }
 
 
-export function tfTaskDefinitionRuntimePlatformPropertyToHclTerraform(struct?: TfTaskDefinition.RuntimePlatformPropertyOutputReference | TfTaskDefinition.RuntimePlatformProperty): any {
+export function awsTaskDefinitionRuntimePlatformPropertyToHclTerraform(struct?: AwsTaskDefinition.RuntimePlatformPropertyOutputReference | AwsTaskDefinition.RuntimePlatformProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -871,7 +871,7 @@ export function tfTaskDefinitionRuntimePlatformPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfTaskDefinitionDockerVolumeConfigurationPropertyToTerraform(struct?: TfTaskDefinition.DockerVolumeConfigurationPropertyOutputReference | TfTaskDefinition.DockerVolumeConfigurationProperty): any {
+export function awsTaskDefinitionDockerVolumeConfigurationPropertyToTerraform(struct?: AwsTaskDefinition.DockerVolumeConfigurationPropertyOutputReference | AwsTaskDefinition.DockerVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -886,7 +886,7 @@ export function tfTaskDefinitionDockerVolumeConfigurationPropertyToTerraform(str
 }
 
 
-export function tfTaskDefinitionDockerVolumeConfigurationPropertyToHclTerraform(struct?: TfTaskDefinition.DockerVolumeConfigurationPropertyOutputReference | TfTaskDefinition.DockerVolumeConfigurationProperty): any {
+export function awsTaskDefinitionDockerVolumeConfigurationPropertyToHclTerraform(struct?: AwsTaskDefinition.DockerVolumeConfigurationPropertyOutputReference | AwsTaskDefinition.DockerVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -929,7 +929,7 @@ export function tfTaskDefinitionDockerVolumeConfigurationPropertyToHclTerraform(
 }
 
 
-export function tfTaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigPropertyToTerraform(struct?: TfTaskDefinition.VolumeEfsVolumeConfigurationAuthorizationConfigPropertyOutputReference | TfTaskDefinition.VolumeEfsVolumeConfigurationAuthorizationConfigProperty): any {
+export function awsTaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigPropertyToTerraform(struct?: AwsTaskDefinition.VolumeEfsVolumeConfigurationAuthorizationConfigPropertyOutputReference | AwsTaskDefinition.VolumeEfsVolumeConfigurationAuthorizationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -941,7 +941,7 @@ export function tfTaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigP
 }
 
 
-export function tfTaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigPropertyToHclTerraform(struct?: TfTaskDefinition.VolumeEfsVolumeConfigurationAuthorizationConfigPropertyOutputReference | TfTaskDefinition.VolumeEfsVolumeConfigurationAuthorizationConfigProperty): any {
+export function awsTaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigPropertyToHclTerraform(struct?: AwsTaskDefinition.VolumeEfsVolumeConfigurationAuthorizationConfigPropertyOutputReference | AwsTaskDefinition.VolumeEfsVolumeConfigurationAuthorizationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -966,7 +966,7 @@ export function tfTaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigP
 }
 
 
-export function tfTaskDefinitionEfsVolumeConfigurationPropertyToTerraform(struct?: TfTaskDefinition.EfsVolumeConfigurationPropertyOutputReference | TfTaskDefinition.EfsVolumeConfigurationProperty): any {
+export function awsTaskDefinitionEfsVolumeConfigurationPropertyToTerraform(struct?: AwsTaskDefinition.EfsVolumeConfigurationPropertyOutputReference | AwsTaskDefinition.EfsVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -976,12 +976,12 @@ export function tfTaskDefinitionEfsVolumeConfigurationPropertyToTerraform(struct
     root_directory: cdktn.stringToTerraform(struct!.rootDirectory),
     transit_encryption: cdktn.stringToTerraform(struct!.transitEncryption),
     transit_encryption_port: cdktn.numberToTerraform(struct!.transitEncryptionPort),
-    authorization_config: tfTaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigPropertyToTerraform(struct!.authorizationConfig),
+    authorization_config: awsTaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigPropertyToTerraform(struct!.authorizationConfig),
   }
 }
 
 
-export function tfTaskDefinitionEfsVolumeConfigurationPropertyToHclTerraform(struct?: TfTaskDefinition.EfsVolumeConfigurationPropertyOutputReference | TfTaskDefinition.EfsVolumeConfigurationProperty): any {
+export function awsTaskDefinitionEfsVolumeConfigurationPropertyToHclTerraform(struct?: AwsTaskDefinition.EfsVolumeConfigurationPropertyOutputReference | AwsTaskDefinition.EfsVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1012,7 +1012,7 @@ export function tfTaskDefinitionEfsVolumeConfigurationPropertyToHclTerraform(str
       storageClassType: "number",
     },
     authorization_config: {
-      value: tfTaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigPropertyToHclTerraform(struct!.authorizationConfig),
+      value: awsTaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigPropertyToHclTerraform(struct!.authorizationConfig),
       isBlock: true,
       type: "list",
       storageClassType: "VolumeEfsVolumeConfigurationAuthorizationConfigPropertyList",
@@ -1024,7 +1024,7 @@ export function tfTaskDefinitionEfsVolumeConfigurationPropertyToHclTerraform(str
 }
 
 
-export function tfTaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyToTerraform(struct?: TfTaskDefinition.VolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyOutputReference | TfTaskDefinition.VolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigProperty): any {
+export function awsTaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyToTerraform(struct?: AwsTaskDefinition.VolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyOutputReference | AwsTaskDefinition.VolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1036,7 +1036,7 @@ export function tfTaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAut
 }
 
 
-export function tfTaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyToHclTerraform(struct?: TfTaskDefinition.VolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyOutputReference | TfTaskDefinition.VolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigProperty): any {
+export function awsTaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyToHclTerraform(struct?: AwsTaskDefinition.VolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyOutputReference | AwsTaskDefinition.VolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1061,7 +1061,7 @@ export function tfTaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAut
 }
 
 
-export function tfTaskDefinitionFsxWindowsFileServerVolumeConfigurationPropertyToTerraform(struct?: TfTaskDefinition.FsxWindowsFileServerVolumeConfigurationPropertyOutputReference | TfTaskDefinition.FsxWindowsFileServerVolumeConfigurationProperty): any {
+export function awsTaskDefinitionFsxWindowsFileServerVolumeConfigurationPropertyToTerraform(struct?: AwsTaskDefinition.FsxWindowsFileServerVolumeConfigurationPropertyOutputReference | AwsTaskDefinition.FsxWindowsFileServerVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1069,12 +1069,12 @@ export function tfTaskDefinitionFsxWindowsFileServerVolumeConfigurationPropertyT
   return {
     file_system_id: cdktn.stringToTerraform(struct!.fileSystemId),
     root_directory: cdktn.stringToTerraform(struct!.rootDirectory),
-    authorization_config: tfTaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyToTerraform(struct!.authorizationConfig),
+    authorization_config: awsTaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyToTerraform(struct!.authorizationConfig),
   }
 }
 
 
-export function tfTaskDefinitionFsxWindowsFileServerVolumeConfigurationPropertyToHclTerraform(struct?: TfTaskDefinition.FsxWindowsFileServerVolumeConfigurationPropertyOutputReference | TfTaskDefinition.FsxWindowsFileServerVolumeConfigurationProperty): any {
+export function awsTaskDefinitionFsxWindowsFileServerVolumeConfigurationPropertyToHclTerraform(struct?: AwsTaskDefinition.FsxWindowsFileServerVolumeConfigurationPropertyOutputReference | AwsTaskDefinition.FsxWindowsFileServerVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1093,7 +1093,7 @@ export function tfTaskDefinitionFsxWindowsFileServerVolumeConfigurationPropertyT
       storageClassType: "string",
     },
     authorization_config: {
-      value: tfTaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyToHclTerraform(struct!.authorizationConfig),
+      value: awsTaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyToHclTerraform(struct!.authorizationConfig),
       isBlock: true,
       type: "list",
       storageClassType: "VolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPropertyList",
@@ -1105,7 +1105,7 @@ export function tfTaskDefinitionFsxWindowsFileServerVolumeConfigurationPropertyT
 }
 
 
-export function tfTaskDefinitionS3filesVolumeConfigurationPropertyToTerraform(struct?: TfTaskDefinition.S3filesVolumeConfigurationPropertyOutputReference | TfTaskDefinition.S3filesVolumeConfigurationProperty): any {
+export function awsTaskDefinitionS3filesVolumeConfigurationPropertyToTerraform(struct?: AwsTaskDefinition.S3filesVolumeConfigurationPropertyOutputReference | AwsTaskDefinition.S3filesVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1119,7 +1119,7 @@ export function tfTaskDefinitionS3filesVolumeConfigurationPropertyToTerraform(st
 }
 
 
-export function tfTaskDefinitionS3filesVolumeConfigurationPropertyToHclTerraform(struct?: TfTaskDefinition.S3filesVolumeConfigurationPropertyOutputReference | TfTaskDefinition.S3filesVolumeConfigurationProperty): any {
+export function awsTaskDefinitionS3filesVolumeConfigurationPropertyToHclTerraform(struct?: AwsTaskDefinition.S3filesVolumeConfigurationPropertyOutputReference | AwsTaskDefinition.S3filesVolumeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1156,7 +1156,7 @@ export function tfTaskDefinitionS3filesVolumeConfigurationPropertyToHclTerraform
 }
 
 
-export function tfTaskDefinitionVolumePropertyToTerraform(struct?: TfTaskDefinition.VolumeProperty | cdktn.IResolvable): any {
+export function awsTaskDefinitionVolumePropertyToTerraform(struct?: AwsTaskDefinition.VolumeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1165,15 +1165,15 @@ export function tfTaskDefinitionVolumePropertyToTerraform(struct?: TfTaskDefinit
     configure_at_launch: cdktn.booleanToTerraform(struct!.configureAtLaunch),
     host_path: cdktn.stringToTerraform(struct!.hostPath),
     name: cdktn.stringToTerraform(struct!.name),
-    docker_volume_configuration: tfTaskDefinitionDockerVolumeConfigurationPropertyToTerraform(struct!.dockerVolumeConfiguration),
-    efs_volume_configuration: tfTaskDefinitionEfsVolumeConfigurationPropertyToTerraform(struct!.efsVolumeConfiguration),
-    fsx_windows_file_server_volume_configuration: tfTaskDefinitionFsxWindowsFileServerVolumeConfigurationPropertyToTerraform(struct!.fsxWindowsFileServerVolumeConfiguration),
-    s3files_volume_configuration: tfTaskDefinitionS3filesVolumeConfigurationPropertyToTerraform(struct!.s3FilesVolumeConfiguration),
+    docker_volume_configuration: awsTaskDefinitionDockerVolumeConfigurationPropertyToTerraform(struct!.dockerVolumeConfiguration),
+    efs_volume_configuration: awsTaskDefinitionEfsVolumeConfigurationPropertyToTerraform(struct!.efsVolumeConfiguration),
+    fsx_windows_file_server_volume_configuration: awsTaskDefinitionFsxWindowsFileServerVolumeConfigurationPropertyToTerraform(struct!.fsxWindowsFileServerVolumeConfiguration),
+    s3files_volume_configuration: awsTaskDefinitionS3filesVolumeConfigurationPropertyToTerraform(struct!.s3FilesVolumeConfiguration),
   }
 }
 
 
-export function tfTaskDefinitionVolumePropertyToHclTerraform(struct?: TfTaskDefinition.VolumeProperty | cdktn.IResolvable): any {
+export function awsTaskDefinitionVolumePropertyToHclTerraform(struct?: AwsTaskDefinition.VolumeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1198,25 +1198,25 @@ export function tfTaskDefinitionVolumePropertyToHclTerraform(struct?: TfTaskDefi
       storageClassType: "string",
     },
     docker_volume_configuration: {
-      value: tfTaskDefinitionDockerVolumeConfigurationPropertyToHclTerraform(struct!.dockerVolumeConfiguration),
+      value: awsTaskDefinitionDockerVolumeConfigurationPropertyToHclTerraform(struct!.dockerVolumeConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "DockerVolumeConfigurationPropertyList",
     },
     efs_volume_configuration: {
-      value: tfTaskDefinitionEfsVolumeConfigurationPropertyToHclTerraform(struct!.efsVolumeConfiguration),
+      value: awsTaskDefinitionEfsVolumeConfigurationPropertyToHclTerraform(struct!.efsVolumeConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "EfsVolumeConfigurationPropertyList",
     },
     fsx_windows_file_server_volume_configuration: {
-      value: tfTaskDefinitionFsxWindowsFileServerVolumeConfigurationPropertyToHclTerraform(struct!.fsxWindowsFileServerVolumeConfiguration),
+      value: awsTaskDefinitionFsxWindowsFileServerVolumeConfigurationPropertyToHclTerraform(struct!.fsxWindowsFileServerVolumeConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "FsxWindowsFileServerVolumeConfigurationPropertyList",
     },
     s3files_volume_configuration: {
-      value: tfTaskDefinitionS3filesVolumeConfigurationPropertyToHclTerraform(struct!.s3FilesVolumeConfiguration),
+      value: awsTaskDefinitionS3filesVolumeConfigurationPropertyToHclTerraform(struct!.s3FilesVolumeConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "S3filesVolumeConfigurationPropertyList",
@@ -1228,10 +1228,10 @@ export function tfTaskDefinitionVolumePropertyToHclTerraform(struct?: TfTaskDefi
 }
 
 
-export namespace TfTaskDefinition {
+export namespace AwsTaskDefinition {
 export interface EphemeralStorageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#size_in_gib TfTaskDefinition#size_in_gib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#size_in_gib AwsTaskDefinition#size_in_gib}
   */
   readonly sizeInGib: number;
 }
@@ -1282,11 +1282,11 @@ export class EphemeralStoragePropertyOutputReference extends cdktn.ComplexObject
 }
 export interface PlacementConstraintsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#expression TfTaskDefinition#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#expression AwsTaskDefinition#expression}
   */
   readonly expression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#type TfTaskDefinition#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#type AwsTaskDefinition#type}
   */
   readonly type: string;
 }
@@ -1391,15 +1391,15 @@ export class PlacementConstraintsPropertyList extends cdktn.ComplexList {
 }
 export interface ProxyConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#container_name TfTaskDefinition#container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#container_name AwsTaskDefinition#container_name}
   */
   readonly containerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#properties TfTaskDefinition#properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#properties AwsTaskDefinition#properties}
   */
   readonly properties?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#type TfTaskDefinition#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#type AwsTaskDefinition#type}
   */
   readonly type?: string;
 }
@@ -1494,11 +1494,11 @@ export class ProxyConfigurationPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface RuntimePlatformProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#cpu_architecture TfTaskDefinition#cpu_architecture}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#cpu_architecture AwsTaskDefinition#cpu_architecture}
   */
   readonly cpuArchitecture?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#operating_system_family TfTaskDefinition#operating_system_family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#operating_system_family AwsTaskDefinition#operating_system_family}
   */
   readonly operatingSystemFamily?: string;
 }
@@ -1574,23 +1574,23 @@ export class RuntimePlatformPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface DockerVolumeConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#autoprovision TfTaskDefinition#autoprovision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#autoprovision AwsTaskDefinition#autoprovision}
   */
   readonly autoprovision?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#driver TfTaskDefinition#driver}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#driver AwsTaskDefinition#driver}
   */
   readonly driver?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#driver_opts TfTaskDefinition#driver_opts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#driver_opts AwsTaskDefinition#driver_opts}
   */
   readonly driverOpts?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#labels TfTaskDefinition#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#labels AwsTaskDefinition#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#scope TfTaskDefinition#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#scope AwsTaskDefinition#scope}
   */
   readonly scope?: string;
 }
@@ -1732,11 +1732,11 @@ export class DockerVolumeConfigurationPropertyOutputReference extends cdktn.Comp
 }
 export interface VolumeEfsVolumeConfigurationAuthorizationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#access_point_id TfTaskDefinition#access_point_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#access_point_id AwsTaskDefinition#access_point_id}
   */
   readonly accessPointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#iam TfTaskDefinition#iam}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#iam AwsTaskDefinition#iam}
   */
   readonly iam?: string;
 }
@@ -1812,25 +1812,25 @@ export class VolumeEfsVolumeConfigurationAuthorizationConfigPropertyOutputRefere
 }
 export interface EfsVolumeConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#file_system_id TfTaskDefinition#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#file_system_id AwsTaskDefinition#file_system_id}
   */
   readonly fileSystemId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#root_directory TfTaskDefinition#root_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#root_directory AwsTaskDefinition#root_directory}
   */
   readonly rootDirectory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#transit_encryption TfTaskDefinition#transit_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#transit_encryption AwsTaskDefinition#transit_encryption}
   */
   readonly transitEncryption?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#transit_encryption_port TfTaskDefinition#transit_encryption_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#transit_encryption_port AwsTaskDefinition#transit_encryption_port}
   */
   readonly transitEncryptionPort?: number;
   /**
   * authorization_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#authorization_config TfTaskDefinition#authorization_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#authorization_config AwsTaskDefinition#authorization_config}
   */
   readonly authorizationConfig?: VolumeEfsVolumeConfigurationAuthorizationConfigProperty;
 }
@@ -1969,11 +1969,11 @@ export class EfsVolumeConfigurationPropertyOutputReference extends cdktn.Complex
 }
 export interface VolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#credentials_parameter TfTaskDefinition#credentials_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#credentials_parameter AwsTaskDefinition#credentials_parameter}
   */
   readonly credentialsParameter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#domain TfTaskDefinition#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#domain AwsTaskDefinition#domain}
   */
   readonly domain: string;
 }
@@ -2043,17 +2043,17 @@ export class VolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigPro
 }
 export interface FsxWindowsFileServerVolumeConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#file_system_id TfTaskDefinition#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#file_system_id AwsTaskDefinition#file_system_id}
   */
   readonly fileSystemId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#root_directory TfTaskDefinition#root_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#root_directory AwsTaskDefinition#root_directory}
   */
   readonly rootDirectory: string;
   /**
   * authorization_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#authorization_config TfTaskDefinition#authorization_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#authorization_config AwsTaskDefinition#authorization_config}
   */
   readonly authorizationConfig: VolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigProperty;
 }
@@ -2142,19 +2142,19 @@ export class FsxWindowsFileServerVolumeConfigurationPropertyOutputReference exte
 }
 export interface S3filesVolumeConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#access_point_arn TfTaskDefinition#access_point_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#access_point_arn AwsTaskDefinition#access_point_arn}
   */
   readonly accessPointArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#file_system_arn TfTaskDefinition#file_system_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#file_system_arn AwsTaskDefinition#file_system_arn}
   */
   readonly fileSystemArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#root_directory TfTaskDefinition#root_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#root_directory AwsTaskDefinition#root_directory}
   */
   readonly rootDirectory?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#transit_encryption_port TfTaskDefinition#transit_encryption_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#transit_encryption_port AwsTaskDefinition#transit_encryption_port}
   */
   readonly transitEncryptionPort?: number;
 }
@@ -2271,39 +2271,39 @@ export class S3filesVolumeConfigurationPropertyOutputReference extends cdktn.Com
 }
 export interface VolumeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#configure_at_launch TfTaskDefinition#configure_at_launch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#configure_at_launch AwsTaskDefinition#configure_at_launch}
   */
   readonly configureAtLaunch?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#host_path TfTaskDefinition#host_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#host_path AwsTaskDefinition#host_path}
   */
   readonly hostPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#name TfTaskDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#name AwsTaskDefinition#name}
   */
   readonly name: string;
   /**
   * docker_volume_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#docker_volume_configuration TfTaskDefinition#docker_volume_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#docker_volume_configuration AwsTaskDefinition#docker_volume_configuration}
   */
   readonly dockerVolumeConfiguration?: DockerVolumeConfigurationProperty;
   /**
   * efs_volume_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#efs_volume_configuration TfTaskDefinition#efs_volume_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#efs_volume_configuration AwsTaskDefinition#efs_volume_configuration}
   */
   readonly efsVolumeConfiguration?: EfsVolumeConfigurationProperty;
   /**
   * fsx_windows_file_server_volume_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#fsx_windows_file_server_volume_configuration TfTaskDefinition#fsx_windows_file_server_volume_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#fsx_windows_file_server_volume_configuration AwsTaskDefinition#fsx_windows_file_server_volume_configuration}
   */
   readonly fsxWindowsFileServerVolumeConfiguration?: FsxWindowsFileServerVolumeConfigurationProperty;
   /**
   * s3files_volume_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#s3files_volume_configuration TfTaskDefinition#s3files_volume_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecs_task_definition#s3files_volume_configuration AwsTaskDefinition#s3files_volume_configuration}
   */
   readonly s3FilesVolumeConfiguration?: S3filesVolumeConfigurationProperty;
 }

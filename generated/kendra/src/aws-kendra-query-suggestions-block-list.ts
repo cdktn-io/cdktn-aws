@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfQuerySuggestionsBlockListConfig extends cdktn.TerraformMetaArguments {
+export interface AwsQuerySuggestionsBlockListConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#description TfQuerySuggestionsBlockList#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#description AwsQuerySuggestionsBlockList#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#id TfQuerySuggestionsBlockList#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#id AwsQuerySuggestionsBlockList#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#index_id TfQuerySuggestionsBlockList#index_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#index_id AwsQuerySuggestionsBlockList#index_id}
   */
   readonly indexId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#name TfQuerySuggestionsBlockList#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#name AwsQuerySuggestionsBlockList#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#region TfQuerySuggestionsBlockList#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#region AwsQuerySuggestionsBlockList#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#role_arn TfQuerySuggestionsBlockList#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#role_arn AwsQuerySuggestionsBlockList#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#tags TfQuerySuggestionsBlockList#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#tags AwsQuerySuggestionsBlockList#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#tags_all TfQuerySuggestionsBlockList#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#tags_all AwsQuerySuggestionsBlockList#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * source_s3_path block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#source_s3_path TfQuerySuggestionsBlockList#source_s3_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#source_s3_path AwsQuerySuggestionsBlockList#source_s3_path}
   */
-  readonly sourceS3Path: TfQuerySuggestionsBlockList.SourceS3PathProperty;
+  readonly sourceS3Path: AwsQuerySuggestionsBlockList.SourceS3PathProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#timeouts TfQuerySuggestionsBlockList#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#timeouts AwsQuerySuggestionsBlockList#timeouts}
   */
-  readonly timeouts?: TfQuerySuggestionsBlockList.TimeoutsProperty;
+  readonly timeouts?: AwsQuerySuggestionsBlockList.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list aws_kendra_query_suggestions_block_list}
 */
-export class TfQuerySuggestionsBlockList extends cdktn.TerraformResource {
+export class AwsQuerySuggestionsBlockList extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class TfQuerySuggestionsBlockList extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfQuerySuggestionsBlockList resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsQuerySuggestionsBlockList resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfQuerySuggestionsBlockList to import
-  * @param importFromId The id of the existing TfQuerySuggestionsBlockList that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfQuerySuggestionsBlockList to import is found
+  * @param importToId The construct id used in the generated config for the AwsQuerySuggestionsBlockList to import
+  * @param importFromId The id of the existing AwsQuerySuggestionsBlockList that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsQuerySuggestionsBlockList to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_kendra_query_suggestions_block_list", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class TfQuerySuggestionsBlockList extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfQuerySuggestionsBlockListConfig
+  * @param options AwsQuerySuggestionsBlockListConfig
   */
-  public constructor(scope: Construct, id: string, config: TfQuerySuggestionsBlockListConfig) {
+  public constructor(scope: Construct, id: string, config: AwsQuerySuggestionsBlockListConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_kendra_query_suggestions_block_list',
       terraformGeneratorMetadata: {
@@ -259,11 +259,11 @@ export class TfQuerySuggestionsBlockList extends cdktn.TerraformResource {
   }
 
   // source_s3_path - computed: false, optional: false, required: true
-  private _sourceS3Path = new TfQuerySuggestionsBlockList.SourceS3PathPropertyOutputReference(this, "source_s3_path");
+  private _sourceS3Path = new AwsQuerySuggestionsBlockList.SourceS3PathPropertyOutputReference(this, "source_s3_path");
   public get sourceS3Path() {
     return this._sourceS3Path;
   }
-  public putSourceS3Path(value: TfQuerySuggestionsBlockList.SourceS3PathProperty) {
+  public putSourceS3Path(value: AwsQuerySuggestionsBlockList.SourceS3PathProperty) {
     this._sourceS3Path.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -272,11 +272,11 @@ export class TfQuerySuggestionsBlockList extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfQuerySuggestionsBlockList.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsQuerySuggestionsBlockList.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfQuerySuggestionsBlockList.TimeoutsProperty) {
+  public putTimeouts(value: AwsQuerySuggestionsBlockList.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -301,8 +301,8 @@ export class TfQuerySuggestionsBlockList extends cdktn.TerraformResource {
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      source_s3_path: tfQuerySuggestionsBlockListSourceS3PathPropertyToTerraform(this._sourceS3Path.internalValue),
-      timeouts: tfQuerySuggestionsBlockListTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      source_s3_path: awsQuerySuggestionsBlockListSourceS3PathPropertyToTerraform(this._sourceS3Path.internalValue),
+      timeouts: awsQuerySuggestionsBlockListTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -357,16 +357,16 @@ export class TfQuerySuggestionsBlockList extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       source_s3_path: {
-        value: tfQuerySuggestionsBlockListSourceS3PathPropertyToHclTerraform(this._sourceS3Path.internalValue),
+        value: awsQuerySuggestionsBlockListSourceS3PathPropertyToHclTerraform(this._sourceS3Path.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfQuerySuggestionsBlockList.SourceS3PathPropertyList",
+        storageClassType: "AwsQuerySuggestionsBlockList.SourceS3PathPropertyList",
       },
       timeouts: {
-        value: tfQuerySuggestionsBlockListTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsQuerySuggestionsBlockListTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfQuerySuggestionsBlockList.TimeoutsProperty",
+        storageClassType: "AwsQuerySuggestionsBlockList.TimeoutsProperty",
       },
     };
 
@@ -375,7 +375,7 @@ export class TfQuerySuggestionsBlockList extends cdktn.TerraformResource {
   }
 }
 
-export function tfQuerySuggestionsBlockListSourceS3PathPropertyToTerraform(struct?: TfQuerySuggestionsBlockList.SourceS3PathPropertyOutputReference | TfQuerySuggestionsBlockList.SourceS3PathProperty): any {
+export function awsQuerySuggestionsBlockListSourceS3PathPropertyToTerraform(struct?: AwsQuerySuggestionsBlockList.SourceS3PathPropertyOutputReference | AwsQuerySuggestionsBlockList.SourceS3PathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -387,7 +387,7 @@ export function tfQuerySuggestionsBlockListSourceS3PathPropertyToTerraform(struc
 }
 
 
-export function tfQuerySuggestionsBlockListSourceS3PathPropertyToHclTerraform(struct?: TfQuerySuggestionsBlockList.SourceS3PathPropertyOutputReference | TfQuerySuggestionsBlockList.SourceS3PathProperty): any {
+export function awsQuerySuggestionsBlockListSourceS3PathPropertyToHclTerraform(struct?: AwsQuerySuggestionsBlockList.SourceS3PathPropertyOutputReference | AwsQuerySuggestionsBlockList.SourceS3PathProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -412,7 +412,7 @@ export function tfQuerySuggestionsBlockListSourceS3PathPropertyToHclTerraform(st
 }
 
 
-export function tfQuerySuggestionsBlockListTimeoutsPropertyToTerraform(struct?: TfQuerySuggestionsBlockList.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsQuerySuggestionsBlockListTimeoutsPropertyToTerraform(struct?: AwsQuerySuggestionsBlockList.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -425,7 +425,7 @@ export function tfQuerySuggestionsBlockListTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function tfQuerySuggestionsBlockListTimeoutsPropertyToHclTerraform(struct?: TfQuerySuggestionsBlockList.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsQuerySuggestionsBlockListTimeoutsPropertyToHclTerraform(struct?: AwsQuerySuggestionsBlockList.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -456,14 +456,14 @@ export function tfQuerySuggestionsBlockListTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace TfQuerySuggestionsBlockList {
+export namespace AwsQuerySuggestionsBlockList {
 export interface SourceS3PathProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#bucket TfQuerySuggestionsBlockList#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#bucket AwsQuerySuggestionsBlockList#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#key TfQuerySuggestionsBlockList#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#key AwsQuerySuggestionsBlockList#key}
   */
   readonly key: string;
 }
@@ -533,15 +533,15 @@ export class SourceS3PathPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#create TfQuerySuggestionsBlockList#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#create AwsQuerySuggestionsBlockList#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#delete TfQuerySuggestionsBlockList#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#delete AwsQuerySuggestionsBlockList#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#update TfQuerySuggestionsBlockList#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/kendra_query_suggestions_block_list#update AwsQuerySuggestionsBlockList#update}
   */
   readonly update?: string;
 }

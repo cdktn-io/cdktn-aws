@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfOriginRequestPolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsOriginRequestPolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#comment TfOriginRequestPolicy#comment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#comment AwsOriginRequestPolicy#comment}
   */
   readonly comment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#id TfOriginRequestPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#id AwsOriginRequestPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#name TfOriginRequestPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#name AwsOriginRequestPolicy#name}
   */
   readonly name: string;
   /**
   * cookies_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#cookies_config TfOriginRequestPolicy#cookies_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#cookies_config AwsOriginRequestPolicy#cookies_config}
   */
-  readonly cookiesConfig: TfOriginRequestPolicy.CookiesConfigProperty;
+  readonly cookiesConfig: AwsOriginRequestPolicy.CookiesConfigProperty;
   /**
   * headers_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#headers_config TfOriginRequestPolicy#headers_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#headers_config AwsOriginRequestPolicy#headers_config}
   */
-  readonly headersConfig: TfOriginRequestPolicy.HeadersConfigProperty;
+  readonly headersConfig: AwsOriginRequestPolicy.HeadersConfigProperty;
   /**
   * query_strings_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#query_strings_config TfOriginRequestPolicy#query_strings_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#query_strings_config AwsOriginRequestPolicy#query_strings_config}
   */
-  readonly queryStringsConfig: TfOriginRequestPolicy.QueryStringsConfigProperty;
+  readonly queryStringsConfig: AwsOriginRequestPolicy.QueryStringsConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy aws_cloudfront_origin_request_policy}
 */
-export class TfOriginRequestPolicy extends cdktn.TerraformResource {
+export class AwsOriginRequestPolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfOriginRequestPolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfOriginRequestPolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsOriginRequestPolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfOriginRequestPolicy to import
-  * @param importFromId The id of the existing TfOriginRequestPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfOriginRequestPolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsOriginRequestPolicy to import
+  * @param importFromId The id of the existing AwsOriginRequestPolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsOriginRequestPolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_origin_request_policy", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfOriginRequestPolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfOriginRequestPolicyConfig
+  * @param options AwsOriginRequestPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfOriginRequestPolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsOriginRequestPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_origin_request_policy',
       terraformGeneratorMetadata: {
@@ -160,11 +160,11 @@ export class TfOriginRequestPolicy extends cdktn.TerraformResource {
   }
 
   // cookies_config - computed: false, optional: false, required: true
-  private _cookiesConfig = new TfOriginRequestPolicy.CookiesConfigPropertyOutputReference(this, "cookies_config");
+  private _cookiesConfig = new AwsOriginRequestPolicy.CookiesConfigPropertyOutputReference(this, "cookies_config");
   public get cookiesConfig() {
     return this._cookiesConfig;
   }
-  public putCookiesConfig(value: TfOriginRequestPolicy.CookiesConfigProperty) {
+  public putCookiesConfig(value: AwsOriginRequestPolicy.CookiesConfigProperty) {
     this._cookiesConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -173,11 +173,11 @@ export class TfOriginRequestPolicy extends cdktn.TerraformResource {
   }
 
   // headers_config - computed: false, optional: false, required: true
-  private _headersConfig = new TfOriginRequestPolicy.HeadersConfigPropertyOutputReference(this, "headers_config");
+  private _headersConfig = new AwsOriginRequestPolicy.HeadersConfigPropertyOutputReference(this, "headers_config");
   public get headersConfig() {
     return this._headersConfig;
   }
-  public putHeadersConfig(value: TfOriginRequestPolicy.HeadersConfigProperty) {
+  public putHeadersConfig(value: AwsOriginRequestPolicy.HeadersConfigProperty) {
     this._headersConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -186,11 +186,11 @@ export class TfOriginRequestPolicy extends cdktn.TerraformResource {
   }
 
   // query_strings_config - computed: false, optional: false, required: true
-  private _queryStringsConfig = new TfOriginRequestPolicy.QueryStringsConfigPropertyOutputReference(this, "query_strings_config");
+  private _queryStringsConfig = new AwsOriginRequestPolicy.QueryStringsConfigPropertyOutputReference(this, "query_strings_config");
   public get queryStringsConfig() {
     return this._queryStringsConfig;
   }
-  public putQueryStringsConfig(value: TfOriginRequestPolicy.QueryStringsConfigProperty) {
+  public putQueryStringsConfig(value: AwsOriginRequestPolicy.QueryStringsConfigProperty) {
     this._queryStringsConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -207,9 +207,9 @@ export class TfOriginRequestPolicy extends cdktn.TerraformResource {
       comment: cdktn.stringToTerraform(this._comment),
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
-      cookies_config: tfOriginRequestPolicyCookiesConfigPropertyToTerraform(this._cookiesConfig.internalValue),
-      headers_config: tfOriginRequestPolicyHeadersConfigPropertyToTerraform(this._headersConfig.internalValue),
-      query_strings_config: tfOriginRequestPolicyQueryStringsConfigPropertyToTerraform(this._queryStringsConfig.internalValue),
+      cookies_config: awsOriginRequestPolicyCookiesConfigPropertyToTerraform(this._cookiesConfig.internalValue),
+      headers_config: awsOriginRequestPolicyHeadersConfigPropertyToTerraform(this._headersConfig.internalValue),
+      query_strings_config: awsOriginRequestPolicyQueryStringsConfigPropertyToTerraform(this._queryStringsConfig.internalValue),
     };
   }
 
@@ -234,22 +234,22 @@ export class TfOriginRequestPolicy extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       cookies_config: {
-        value: tfOriginRequestPolicyCookiesConfigPropertyToHclTerraform(this._cookiesConfig.internalValue),
+        value: awsOriginRequestPolicyCookiesConfigPropertyToHclTerraform(this._cookiesConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfOriginRequestPolicy.CookiesConfigPropertyList",
+        storageClassType: "AwsOriginRequestPolicy.CookiesConfigPropertyList",
       },
       headers_config: {
-        value: tfOriginRequestPolicyHeadersConfigPropertyToHclTerraform(this._headersConfig.internalValue),
+        value: awsOriginRequestPolicyHeadersConfigPropertyToHclTerraform(this._headersConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfOriginRequestPolicy.HeadersConfigPropertyList",
+        storageClassType: "AwsOriginRequestPolicy.HeadersConfigPropertyList",
       },
       query_strings_config: {
-        value: tfOriginRequestPolicyQueryStringsConfigPropertyToHclTerraform(this._queryStringsConfig.internalValue),
+        value: awsOriginRequestPolicyQueryStringsConfigPropertyToHclTerraform(this._queryStringsConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfOriginRequestPolicy.QueryStringsConfigPropertyList",
+        storageClassType: "AwsOriginRequestPolicy.QueryStringsConfigPropertyList",
       },
     };
 
@@ -258,7 +258,7 @@ export class TfOriginRequestPolicy extends cdktn.TerraformResource {
   }
 }
 
-export function tfOriginRequestPolicyCookiesPropertyToTerraform(struct?: TfOriginRequestPolicy.CookiesPropertyOutputReference | TfOriginRequestPolicy.CookiesProperty): any {
+export function awsOriginRequestPolicyCookiesPropertyToTerraform(struct?: AwsOriginRequestPolicy.CookiesPropertyOutputReference | AwsOriginRequestPolicy.CookiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -269,7 +269,7 @@ export function tfOriginRequestPolicyCookiesPropertyToTerraform(struct?: TfOrigi
 }
 
 
-export function tfOriginRequestPolicyCookiesPropertyToHclTerraform(struct?: TfOriginRequestPolicy.CookiesPropertyOutputReference | TfOriginRequestPolicy.CookiesProperty): any {
+export function awsOriginRequestPolicyCookiesPropertyToHclTerraform(struct?: AwsOriginRequestPolicy.CookiesPropertyOutputReference | AwsOriginRequestPolicy.CookiesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -288,19 +288,19 @@ export function tfOriginRequestPolicyCookiesPropertyToHclTerraform(struct?: TfOr
 }
 
 
-export function tfOriginRequestPolicyCookiesConfigPropertyToTerraform(struct?: TfOriginRequestPolicy.CookiesConfigPropertyOutputReference | TfOriginRequestPolicy.CookiesConfigProperty): any {
+export function awsOriginRequestPolicyCookiesConfigPropertyToTerraform(struct?: AwsOriginRequestPolicy.CookiesConfigPropertyOutputReference | AwsOriginRequestPolicy.CookiesConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     cookie_behavior: cdktn.stringToTerraform(struct!.cookieBehavior),
-    cookies: tfOriginRequestPolicyCookiesPropertyToTerraform(struct!.cookies),
+    cookies: awsOriginRequestPolicyCookiesPropertyToTerraform(struct!.cookies),
   }
 }
 
 
-export function tfOriginRequestPolicyCookiesConfigPropertyToHclTerraform(struct?: TfOriginRequestPolicy.CookiesConfigPropertyOutputReference | TfOriginRequestPolicy.CookiesConfigProperty): any {
+export function awsOriginRequestPolicyCookiesConfigPropertyToHclTerraform(struct?: AwsOriginRequestPolicy.CookiesConfigPropertyOutputReference | AwsOriginRequestPolicy.CookiesConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function tfOriginRequestPolicyCookiesConfigPropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     cookies: {
-      value: tfOriginRequestPolicyCookiesPropertyToHclTerraform(struct!.cookies),
+      value: awsOriginRequestPolicyCookiesPropertyToHclTerraform(struct!.cookies),
       isBlock: true,
       type: "list",
       storageClassType: "CookiesPropertyList",
@@ -325,7 +325,7 @@ export function tfOriginRequestPolicyCookiesConfigPropertyToHclTerraform(struct?
 }
 
 
-export function tfOriginRequestPolicyHeadersPropertyToTerraform(struct?: TfOriginRequestPolicy.HeadersPropertyOutputReference | TfOriginRequestPolicy.HeadersProperty): any {
+export function awsOriginRequestPolicyHeadersPropertyToTerraform(struct?: AwsOriginRequestPolicy.HeadersPropertyOutputReference | AwsOriginRequestPolicy.HeadersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -336,7 +336,7 @@ export function tfOriginRequestPolicyHeadersPropertyToTerraform(struct?: TfOrigi
 }
 
 
-export function tfOriginRequestPolicyHeadersPropertyToHclTerraform(struct?: TfOriginRequestPolicy.HeadersPropertyOutputReference | TfOriginRequestPolicy.HeadersProperty): any {
+export function awsOriginRequestPolicyHeadersPropertyToHclTerraform(struct?: AwsOriginRequestPolicy.HeadersPropertyOutputReference | AwsOriginRequestPolicy.HeadersProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,19 +355,19 @@ export function tfOriginRequestPolicyHeadersPropertyToHclTerraform(struct?: TfOr
 }
 
 
-export function tfOriginRequestPolicyHeadersConfigPropertyToTerraform(struct?: TfOriginRequestPolicy.HeadersConfigPropertyOutputReference | TfOriginRequestPolicy.HeadersConfigProperty): any {
+export function awsOriginRequestPolicyHeadersConfigPropertyToTerraform(struct?: AwsOriginRequestPolicy.HeadersConfigPropertyOutputReference | AwsOriginRequestPolicy.HeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     header_behavior: cdktn.stringToTerraform(struct!.headerBehavior),
-    headers: tfOriginRequestPolicyHeadersPropertyToTerraform(struct!.headers),
+    headers: awsOriginRequestPolicyHeadersPropertyToTerraform(struct!.headers),
   }
 }
 
 
-export function tfOriginRequestPolicyHeadersConfigPropertyToHclTerraform(struct?: TfOriginRequestPolicy.HeadersConfigPropertyOutputReference | TfOriginRequestPolicy.HeadersConfigProperty): any {
+export function awsOriginRequestPolicyHeadersConfigPropertyToHclTerraform(struct?: AwsOriginRequestPolicy.HeadersConfigPropertyOutputReference | AwsOriginRequestPolicy.HeadersConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,7 +380,7 @@ export function tfOriginRequestPolicyHeadersConfigPropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     headers: {
-      value: tfOriginRequestPolicyHeadersPropertyToHclTerraform(struct!.headers),
+      value: awsOriginRequestPolicyHeadersPropertyToHclTerraform(struct!.headers),
       isBlock: true,
       type: "list",
       storageClassType: "HeadersPropertyList",
@@ -392,7 +392,7 @@ export function tfOriginRequestPolicyHeadersConfigPropertyToHclTerraform(struct?
 }
 
 
-export function tfOriginRequestPolicyQueryStringsPropertyToTerraform(struct?: TfOriginRequestPolicy.QueryStringsPropertyOutputReference | TfOriginRequestPolicy.QueryStringsProperty): any {
+export function awsOriginRequestPolicyQueryStringsPropertyToTerraform(struct?: AwsOriginRequestPolicy.QueryStringsPropertyOutputReference | AwsOriginRequestPolicy.QueryStringsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -403,7 +403,7 @@ export function tfOriginRequestPolicyQueryStringsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfOriginRequestPolicyQueryStringsPropertyToHclTerraform(struct?: TfOriginRequestPolicy.QueryStringsPropertyOutputReference | TfOriginRequestPolicy.QueryStringsProperty): any {
+export function awsOriginRequestPolicyQueryStringsPropertyToHclTerraform(struct?: AwsOriginRequestPolicy.QueryStringsPropertyOutputReference | AwsOriginRequestPolicy.QueryStringsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -422,19 +422,19 @@ export function tfOriginRequestPolicyQueryStringsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfOriginRequestPolicyQueryStringsConfigPropertyToTerraform(struct?: TfOriginRequestPolicy.QueryStringsConfigPropertyOutputReference | TfOriginRequestPolicy.QueryStringsConfigProperty): any {
+export function awsOriginRequestPolicyQueryStringsConfigPropertyToTerraform(struct?: AwsOriginRequestPolicy.QueryStringsConfigPropertyOutputReference | AwsOriginRequestPolicy.QueryStringsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     query_string_behavior: cdktn.stringToTerraform(struct!.queryStringBehavior),
-    query_strings: tfOriginRequestPolicyQueryStringsPropertyToTerraform(struct!.queryStrings),
+    query_strings: awsOriginRequestPolicyQueryStringsPropertyToTerraform(struct!.queryStrings),
   }
 }
 
 
-export function tfOriginRequestPolicyQueryStringsConfigPropertyToHclTerraform(struct?: TfOriginRequestPolicy.QueryStringsConfigPropertyOutputReference | TfOriginRequestPolicy.QueryStringsConfigProperty): any {
+export function awsOriginRequestPolicyQueryStringsConfigPropertyToHclTerraform(struct?: AwsOriginRequestPolicy.QueryStringsConfigPropertyOutputReference | AwsOriginRequestPolicy.QueryStringsConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -447,7 +447,7 @@ export function tfOriginRequestPolicyQueryStringsConfigPropertyToHclTerraform(st
       storageClassType: "string",
     },
     query_strings: {
-      value: tfOriginRequestPolicyQueryStringsPropertyToHclTerraform(struct!.queryStrings),
+      value: awsOriginRequestPolicyQueryStringsPropertyToHclTerraform(struct!.queryStrings),
       isBlock: true,
       type: "list",
       storageClassType: "QueryStringsPropertyList",
@@ -459,10 +459,10 @@ export function tfOriginRequestPolicyQueryStringsConfigPropertyToHclTerraform(st
 }
 
 
-export namespace TfOriginRequestPolicy {
+export namespace AwsOriginRequestPolicy {
 export interface CookiesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#items TfOriginRequestPolicy#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#items AwsOriginRequestPolicy#items}
   */
   readonly items?: string[];
 }
@@ -516,13 +516,13 @@ export class CookiesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface CookiesConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#cookie_behavior TfOriginRequestPolicy#cookie_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#cookie_behavior AwsOriginRequestPolicy#cookie_behavior}
   */
   readonly cookieBehavior: string;
   /**
   * cookies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#cookies TfOriginRequestPolicy#cookies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#cookies AwsOriginRequestPolicy#cookies}
   */
   readonly cookies?: CookiesProperty;
 }
@@ -595,7 +595,7 @@ export class CookiesConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HeadersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#items TfOriginRequestPolicy#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#items AwsOriginRequestPolicy#items}
   */
   readonly items?: string[];
 }
@@ -649,13 +649,13 @@ export class HeadersPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HeadersConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#header_behavior TfOriginRequestPolicy#header_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#header_behavior AwsOriginRequestPolicy#header_behavior}
   */
   readonly headerBehavior?: string;
   /**
   * headers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#headers TfOriginRequestPolicy#headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#headers AwsOriginRequestPolicy#headers}
   */
   readonly headers?: HeadersProperty;
 }
@@ -731,7 +731,7 @@ export class HeadersConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface QueryStringsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#items TfOriginRequestPolicy#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#items AwsOriginRequestPolicy#items}
   */
   readonly items?: string[];
 }
@@ -785,13 +785,13 @@ export class QueryStringsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface QueryStringsConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#query_string_behavior TfOriginRequestPolicy#query_string_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#query_string_behavior AwsOriginRequestPolicy#query_string_behavior}
   */
   readonly queryStringBehavior: string;
   /**
   * query_strings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#query_strings TfOriginRequestPolicy#query_strings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_request_policy#query_strings AwsOriginRequestPolicy#query_strings}
   */
   readonly queryStrings?: QueryStringsProperty;
 }

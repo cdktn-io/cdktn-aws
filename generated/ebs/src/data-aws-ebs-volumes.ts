@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfVolumesConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsVolumesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#id DataTfVolumes#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#id DataAwsVolumes#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,31 +16,31 @@ export interface DataTfVolumesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#region DataTfVolumes#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#region DataAwsVolumes#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#tags DataTfVolumes#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#tags DataAwsVolumes#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#filter DataTfVolumes#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#filter DataAwsVolumes#filter}
   */
-  readonly filter?: DataTfVolumes.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsVolumes.FilterProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#timeouts DataTfVolumes#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#timeouts DataAwsVolumes#timeouts}
   */
-  readonly timeouts?: DataTfVolumes.TimeoutsProperty;
+  readonly timeouts?: DataAwsVolumes.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes aws_ebs_volumes}
 */
-export class DataTfVolumes extends cdktn.TerraformDataSource {
+export class DataAwsVolumes extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -51,11 +51,11 @@ export class DataTfVolumes extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfVolumes resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsVolumes resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfVolumes to import
-  * @param importFromId The id of the existing DataTfVolumes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfVolumes to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsVolumes to import
+  * @param importFromId The id of the existing DataAwsVolumes that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsVolumes to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ebs_volumes", importId: importFromId, provider });
@@ -70,9 +70,9 @@ export class DataTfVolumes extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfVolumesConfig = {}
+  * @param options DataAwsVolumesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfVolumesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsVolumesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ebs_volumes',
       terraformGeneratorMetadata: {
@@ -153,11 +153,11 @@ export class DataTfVolumes extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfVolumes.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsVolumes.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfVolumes.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsVolumes.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -169,11 +169,11 @@ export class DataTfVolumes extends cdktn.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataTfVolumes.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new DataAwsVolumes.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: DataTfVolumes.TimeoutsProperty) {
+  public putTimeouts(value: DataAwsVolumes.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -193,8 +193,8 @@ export class DataTfVolumes extends cdktn.TerraformDataSource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataTfVolumesFilterPropertyToTerraform, true)(this._filter.internalValue),
-      timeouts: dataTfVolumesTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      filter: cdktn.listMapper(dataAwsVolumesFilterPropertyToTerraform, true)(this._filter.internalValue),
+      timeouts: dataAwsVolumesTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -219,16 +219,16 @@ export class DataTfVolumes extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfVolumesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsVolumesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfVolumes.FilterPropertyList",
+        storageClassType: "DataAwsVolumes.FilterPropertyList",
       },
       timeouts: {
-        value: dataTfVolumesTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: dataAwsVolumesTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "DataTfVolumes.TimeoutsProperty",
+        storageClassType: "DataAwsVolumes.TimeoutsProperty",
       },
     };
 
@@ -237,7 +237,7 @@ export class DataTfVolumes extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfVolumesFilterPropertyToTerraform(struct?: DataTfVolumes.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsVolumesFilterPropertyToTerraform(struct?: DataAwsVolumes.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -249,7 +249,7 @@ export function dataTfVolumesFilterPropertyToTerraform(struct?: DataTfVolumes.Fi
 }
 
 
-export function dataTfVolumesFilterPropertyToHclTerraform(struct?: DataTfVolumes.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsVolumesFilterPropertyToHclTerraform(struct?: DataAwsVolumes.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -274,7 +274,7 @@ export function dataTfVolumesFilterPropertyToHclTerraform(struct?: DataTfVolumes
 }
 
 
-export function dataTfVolumesTimeoutsPropertyToTerraform(struct?: DataTfVolumes.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsVolumesTimeoutsPropertyToTerraform(struct?: DataAwsVolumes.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -285,7 +285,7 @@ export function dataTfVolumesTimeoutsPropertyToTerraform(struct?: DataTfVolumes.
 }
 
 
-export function dataTfVolumesTimeoutsPropertyToHclTerraform(struct?: DataTfVolumes.TimeoutsProperty | cdktn.IResolvable): any {
+export function dataAwsVolumesTimeoutsPropertyToHclTerraform(struct?: DataAwsVolumes.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -304,14 +304,14 @@ export function dataTfVolumesTimeoutsPropertyToHclTerraform(struct?: DataTfVolum
 }
 
 
-export namespace DataTfVolumes {
+export namespace DataAwsVolumes {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#name DataTfVolumes#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#name DataAwsVolumes#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#values DataTfVolumes#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#values DataAwsVolumes#values}
   */
   readonly values: string[];
 }
@@ -413,7 +413,7 @@ export class FilterPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#read DataTfVolumes#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ebs_volumes#read DataAwsVolumes#read}
   */
   readonly read?: string;
 }

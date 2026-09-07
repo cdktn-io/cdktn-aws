@@ -26,8 +26,8 @@ describe("import forms", () => {
       [
         "import { s3 } from '@cdktn/aws';",
         "",
-        "export function make(scope: any, config: s3.TfBucketConfig) {",
-        "  return new s3.TfBucket(scope, 'b', config);",
+        "export function make(scope: any, config: s3.AwsBucketConfig) {",
+        "  return new s3.AwsBucket(scope, 'b', config);",
         "}",
       ].join("\n"),
     );
@@ -41,7 +41,7 @@ describe("import forms", () => {
           "const b = new s3Bucket.S3Bucket(this, 'b', { bucket: 'x' });",
         ].join("\n"),
       ),
-    ).toBe(["import { s3 } from '@cdktn/aws';", "const b = new s3.TfBucket(this, 'b', { bucket: 'x' });"].join("\n"));
+    ).toBe(["import { s3 } from '@cdktn/aws';", "const b = new s3.AwsBucket(this, 'b', { bucket: 'x' });"].join("\n"));
   });
 
   it("rewrites a barrel named import, whose members are the classic submodules", () => {
@@ -57,13 +57,13 @@ describe("import forms", () => {
       [
         "import { provider, s3 } from '@cdktn/aws';",
         "new provider.AwsProvider(this, 'aws', { region: 'eu-west-1' });",
-        "new s3.TfBucket(this, 'b', { bucket: 'x' });",
+        "new s3.AwsBucket(this, 'b', { bucket: 'x' });",
       ].join("\n"),
     );
   });
 
   it("keeps a `* as aws` barrel import as one, and moves only the two hops below it", () => {
-    // `aws.s3.TfBucket` is a perfectly good call site on the new library, so the consumer's own
+    // `aws.s3.AwsBucket` is a perfectly good call site on the new library, so the consumer's own
     // spelling survives and the diff stays as small as the rename actually is.
     expect(
       migrated(
@@ -76,8 +76,8 @@ describe("import forms", () => {
     ).toBe(
       [
         "import * as aws from '@cdktn/aws';",
-        "const b = new aws.s3.TfBucket(this, 'b', { bucket: 'x' });",
-        "const v: aws.s3.TfBucketVersioningConfig = { bucket: b.bucket };",
+        "const b = new aws.s3.AwsBucket(this, 'b', { bucket: 'x' });",
+        "const v: aws.s3.AwsBucketVersioningConfig = { bucket: b.bucket };",
       ].join("\n"),
     );
   });
@@ -96,7 +96,7 @@ describe("import forms", () => {
       [
         "import { provider, s3 } from '@cdktn/aws';",
         "new provider.AwsProvider(this, 'aws', {});",
-        "new s3.TfBucket(this, 'b', { bucket: 'x' });",
+        "new s3.AwsBucket(this, 'b', { bucket: 'x' });",
       ].join("\n"),
     );
   });
@@ -116,9 +116,9 @@ describe("import forms", () => {
     ).toBe(
       [
         "import { iam, s3 } from '@cdktn/aws';",
-        "new s3.TfBucket(this, 'b', { bucket: 'x' });",
-        "new iam.TfRole(this, 'r', {});",
-        "new iam.TfPolicy(this, 'p', {});",
+        "new s3.AwsBucket(this, 'b', { bucket: 'x' });",
+        "new iam.AwsRole(this, 'r', {});",
+        "new iam.AwsPolicy(this, 'p', {});",
       ].join("\n"),
     );
   });
@@ -148,7 +148,7 @@ describe("import forms", () => {
     ).toBe(
       [
         "import { waf } from '@cdktn/aws';",
-        "export const action: waf.TfWebAclRule.ActionProperty = {};",
+        "export const action: waf.AwsWebAclRule.ActionProperty = {};",
       ].join("\n"),
     );
   });
@@ -170,9 +170,9 @@ describe("import forms", () => {
       [
         "import { iam, lambda, s3 } from '@cdktn/aws';",
         "",
-        "new iam.TfRole(this, 'r', {});",
-        "new lambda.TfFunction(this, 'f', {});",
-        "new s3.TfBucket(this, 'b', { bucket: 'x' });",
+        "new iam.AwsRole(this, 'r', {});",
+        "new lambda.AwsFunction(this, 'f', {});",
+        "new s3.AwsBucket(this, 'b', { bucket: 'x' });",
       ].join("\n"),
     );
   });

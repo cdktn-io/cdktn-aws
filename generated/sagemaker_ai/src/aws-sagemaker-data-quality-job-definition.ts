@@ -5,84 +5,84 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataQualityJobDefinitionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDataQualityJobDefinitionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#id TfDataQualityJobDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#id AwsDataQualityJobDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#name TfDataQualityJobDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#name AwsDataQualityJobDefinition#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#region TfDataQualityJobDefinition#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#region AwsDataQualityJobDefinition#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#role_arn TfDataQualityJobDefinition#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#role_arn AwsDataQualityJobDefinition#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#tags TfDataQualityJobDefinition#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#tags AwsDataQualityJobDefinition#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#tags_all TfDataQualityJobDefinition#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#tags_all AwsDataQualityJobDefinition#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * data_quality_app_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#data_quality_app_specification TfDataQualityJobDefinition#data_quality_app_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#data_quality_app_specification AwsDataQualityJobDefinition#data_quality_app_specification}
   */
-  readonly dataQualityAppSpecification: TfDataQualityJobDefinition.DataQualityAppSpecificationProperty;
+  readonly dataQualityAppSpecification: AwsDataQualityJobDefinition.DataQualityAppSpecificationProperty;
   /**
   * data_quality_baseline_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#data_quality_baseline_config TfDataQualityJobDefinition#data_quality_baseline_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#data_quality_baseline_config AwsDataQualityJobDefinition#data_quality_baseline_config}
   */
-  readonly dataQualityBaselineConfig?: TfDataQualityJobDefinition.DataQualityBaselineConfigProperty;
+  readonly dataQualityBaselineConfig?: AwsDataQualityJobDefinition.DataQualityBaselineConfigProperty;
   /**
   * data_quality_job_input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#data_quality_job_input TfDataQualityJobDefinition#data_quality_job_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#data_quality_job_input AwsDataQualityJobDefinition#data_quality_job_input}
   */
-  readonly dataQualityJobInput: TfDataQualityJobDefinition.DataQualityJobInputProperty;
+  readonly dataQualityJobInput: AwsDataQualityJobDefinition.DataQualityJobInputProperty;
   /**
   * data_quality_job_output_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#data_quality_job_output_config TfDataQualityJobDefinition#data_quality_job_output_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#data_quality_job_output_config AwsDataQualityJobDefinition#data_quality_job_output_config}
   */
-  readonly dataQualityJobOutputConfig: TfDataQualityJobDefinition.DataQualityJobOutputConfigProperty;
+  readonly dataQualityJobOutputConfig: AwsDataQualityJobDefinition.DataQualityJobOutputConfigProperty;
   /**
   * job_resources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#job_resources TfDataQualityJobDefinition#job_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#job_resources AwsDataQualityJobDefinition#job_resources}
   */
-  readonly jobResources: TfDataQualityJobDefinition.JobResourcesProperty;
+  readonly jobResources: AwsDataQualityJobDefinition.JobResourcesProperty;
   /**
   * network_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#network_config TfDataQualityJobDefinition#network_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#network_config AwsDataQualityJobDefinition#network_config}
   */
-  readonly networkConfig?: TfDataQualityJobDefinition.NetworkConfigProperty;
+  readonly networkConfig?: AwsDataQualityJobDefinition.NetworkConfigProperty;
   /**
   * stopping_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#stopping_condition TfDataQualityJobDefinition#stopping_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#stopping_condition AwsDataQualityJobDefinition#stopping_condition}
   */
-  readonly stoppingCondition?: TfDataQualityJobDefinition.StoppingConditionProperty;
+  readonly stoppingCondition?: AwsDataQualityJobDefinition.StoppingConditionProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition aws_sagemaker_data_quality_job_definition}
 */
-export class TfDataQualityJobDefinition extends cdktn.TerraformResource {
+export class AwsDataQualityJobDefinition extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -93,11 +93,11 @@ export class TfDataQualityJobDefinition extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataQualityJobDefinition resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDataQualityJobDefinition resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataQualityJobDefinition to import
-  * @param importFromId The id of the existing TfDataQualityJobDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataQualityJobDefinition to import is found
+  * @param importToId The construct id used in the generated config for the AwsDataQualityJobDefinition to import
+  * @param importFromId The id of the existing AwsDataQualityJobDefinition that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDataQualityJobDefinition to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_data_quality_job_definition", importId: importFromId, provider });
@@ -112,9 +112,9 @@ export class TfDataQualityJobDefinition extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataQualityJobDefinitionConfig
+  * @param options AwsDataQualityJobDefinitionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataQualityJobDefinitionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDataQualityJobDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_data_quality_job_definition',
       terraformGeneratorMetadata: {
@@ -248,11 +248,11 @@ export class TfDataQualityJobDefinition extends cdktn.TerraformResource {
   }
 
   // data_quality_app_specification - computed: false, optional: false, required: true
-  private _dataQualityAppSpecification = new TfDataQualityJobDefinition.DataQualityAppSpecificationPropertyOutputReference(this, "data_quality_app_specification");
+  private _dataQualityAppSpecification = new AwsDataQualityJobDefinition.DataQualityAppSpecificationPropertyOutputReference(this, "data_quality_app_specification");
   public get dataQualityAppSpecification() {
     return this._dataQualityAppSpecification;
   }
-  public putDataQualityAppSpecification(value: TfDataQualityJobDefinition.DataQualityAppSpecificationProperty) {
+  public putDataQualityAppSpecification(value: AwsDataQualityJobDefinition.DataQualityAppSpecificationProperty) {
     this._dataQualityAppSpecification.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -261,11 +261,11 @@ export class TfDataQualityJobDefinition extends cdktn.TerraformResource {
   }
 
   // data_quality_baseline_config - computed: false, optional: true, required: false
-  private _dataQualityBaselineConfig = new TfDataQualityJobDefinition.DataQualityBaselineConfigPropertyOutputReference(this, "data_quality_baseline_config");
+  private _dataQualityBaselineConfig = new AwsDataQualityJobDefinition.DataQualityBaselineConfigPropertyOutputReference(this, "data_quality_baseline_config");
   public get dataQualityBaselineConfig() {
     return this._dataQualityBaselineConfig;
   }
-  public putDataQualityBaselineConfig(value: TfDataQualityJobDefinition.DataQualityBaselineConfigProperty) {
+  public putDataQualityBaselineConfig(value: AwsDataQualityJobDefinition.DataQualityBaselineConfigProperty) {
     this._dataQualityBaselineConfig.internalValue = value;
   }
   public resetDataQualityBaselineConfig() {
@@ -277,11 +277,11 @@ export class TfDataQualityJobDefinition extends cdktn.TerraformResource {
   }
 
   // data_quality_job_input - computed: false, optional: false, required: true
-  private _dataQualityJobInput = new TfDataQualityJobDefinition.DataQualityJobInputPropertyOutputReference(this, "data_quality_job_input");
+  private _dataQualityJobInput = new AwsDataQualityJobDefinition.DataQualityJobInputPropertyOutputReference(this, "data_quality_job_input");
   public get dataQualityJobInput() {
     return this._dataQualityJobInput;
   }
-  public putDataQualityJobInput(value: TfDataQualityJobDefinition.DataQualityJobInputProperty) {
+  public putDataQualityJobInput(value: AwsDataQualityJobDefinition.DataQualityJobInputProperty) {
     this._dataQualityJobInput.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -290,11 +290,11 @@ export class TfDataQualityJobDefinition extends cdktn.TerraformResource {
   }
 
   // data_quality_job_output_config - computed: false, optional: false, required: true
-  private _dataQualityJobOutputConfig = new TfDataQualityJobDefinition.DataQualityJobOutputConfigPropertyOutputReference(this, "data_quality_job_output_config");
+  private _dataQualityJobOutputConfig = new AwsDataQualityJobDefinition.DataQualityJobOutputConfigPropertyOutputReference(this, "data_quality_job_output_config");
   public get dataQualityJobOutputConfig() {
     return this._dataQualityJobOutputConfig;
   }
-  public putDataQualityJobOutputConfig(value: TfDataQualityJobDefinition.DataQualityJobOutputConfigProperty) {
+  public putDataQualityJobOutputConfig(value: AwsDataQualityJobDefinition.DataQualityJobOutputConfigProperty) {
     this._dataQualityJobOutputConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -303,11 +303,11 @@ export class TfDataQualityJobDefinition extends cdktn.TerraformResource {
   }
 
   // job_resources - computed: false, optional: false, required: true
-  private _jobResources = new TfDataQualityJobDefinition.JobResourcesPropertyOutputReference(this, "job_resources");
+  private _jobResources = new AwsDataQualityJobDefinition.JobResourcesPropertyOutputReference(this, "job_resources");
   public get jobResources() {
     return this._jobResources;
   }
-  public putJobResources(value: TfDataQualityJobDefinition.JobResourcesProperty) {
+  public putJobResources(value: AwsDataQualityJobDefinition.JobResourcesProperty) {
     this._jobResources.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -316,11 +316,11 @@ export class TfDataQualityJobDefinition extends cdktn.TerraformResource {
   }
 
   // network_config - computed: false, optional: true, required: false
-  private _networkConfig = new TfDataQualityJobDefinition.NetworkConfigPropertyOutputReference(this, "network_config");
+  private _networkConfig = new AwsDataQualityJobDefinition.NetworkConfigPropertyOutputReference(this, "network_config");
   public get networkConfig() {
     return this._networkConfig;
   }
-  public putNetworkConfig(value: TfDataQualityJobDefinition.NetworkConfigProperty) {
+  public putNetworkConfig(value: AwsDataQualityJobDefinition.NetworkConfigProperty) {
     this._networkConfig.internalValue = value;
   }
   public resetNetworkConfig() {
@@ -332,11 +332,11 @@ export class TfDataQualityJobDefinition extends cdktn.TerraformResource {
   }
 
   // stopping_condition - computed: false, optional: true, required: false
-  private _stoppingCondition = new TfDataQualityJobDefinition.StoppingConditionPropertyOutputReference(this, "stopping_condition");
+  private _stoppingCondition = new AwsDataQualityJobDefinition.StoppingConditionPropertyOutputReference(this, "stopping_condition");
   public get stoppingCondition() {
     return this._stoppingCondition;
   }
-  public putStoppingCondition(value: TfDataQualityJobDefinition.StoppingConditionProperty) {
+  public putStoppingCondition(value: AwsDataQualityJobDefinition.StoppingConditionProperty) {
     this._stoppingCondition.internalValue = value;
   }
   public resetStoppingCondition() {
@@ -359,13 +359,13 @@ export class TfDataQualityJobDefinition extends cdktn.TerraformResource {
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      data_quality_app_specification: tfDataQualityJobDefinitionDataQualityAppSpecificationPropertyToTerraform(this._dataQualityAppSpecification.internalValue),
-      data_quality_baseline_config: tfDataQualityJobDefinitionDataQualityBaselineConfigPropertyToTerraform(this._dataQualityBaselineConfig.internalValue),
-      data_quality_job_input: tfDataQualityJobDefinitionDataQualityJobInputPropertyToTerraform(this._dataQualityJobInput.internalValue),
-      data_quality_job_output_config: tfDataQualityJobDefinitionDataQualityJobOutputConfigPropertyToTerraform(this._dataQualityJobOutputConfig.internalValue),
-      job_resources: tfDataQualityJobDefinitionJobResourcesPropertyToTerraform(this._jobResources.internalValue),
-      network_config: tfDataQualityJobDefinitionNetworkConfigPropertyToTerraform(this._networkConfig.internalValue),
-      stopping_condition: tfDataQualityJobDefinitionStoppingConditionPropertyToTerraform(this._stoppingCondition.internalValue),
+      data_quality_app_specification: awsDataQualityJobDefinitionDataQualityAppSpecificationPropertyToTerraform(this._dataQualityAppSpecification.internalValue),
+      data_quality_baseline_config: awsDataQualityJobDefinitionDataQualityBaselineConfigPropertyToTerraform(this._dataQualityBaselineConfig.internalValue),
+      data_quality_job_input: awsDataQualityJobDefinitionDataQualityJobInputPropertyToTerraform(this._dataQualityJobInput.internalValue),
+      data_quality_job_output_config: awsDataQualityJobDefinitionDataQualityJobOutputConfigPropertyToTerraform(this._dataQualityJobOutputConfig.internalValue),
+      job_resources: awsDataQualityJobDefinitionJobResourcesPropertyToTerraform(this._jobResources.internalValue),
+      network_config: awsDataQualityJobDefinitionNetworkConfigPropertyToTerraform(this._networkConfig.internalValue),
+      stopping_condition: awsDataQualityJobDefinitionStoppingConditionPropertyToTerraform(this._stoppingCondition.internalValue),
     };
   }
 
@@ -408,46 +408,46 @@ export class TfDataQualityJobDefinition extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       data_quality_app_specification: {
-        value: tfDataQualityJobDefinitionDataQualityAppSpecificationPropertyToHclTerraform(this._dataQualityAppSpecification.internalValue),
+        value: awsDataQualityJobDefinitionDataQualityAppSpecificationPropertyToHclTerraform(this._dataQualityAppSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataQualityJobDefinition.DataQualityAppSpecificationPropertyList",
+        storageClassType: "AwsDataQualityJobDefinition.DataQualityAppSpecificationPropertyList",
       },
       data_quality_baseline_config: {
-        value: tfDataQualityJobDefinitionDataQualityBaselineConfigPropertyToHclTerraform(this._dataQualityBaselineConfig.internalValue),
+        value: awsDataQualityJobDefinitionDataQualityBaselineConfigPropertyToHclTerraform(this._dataQualityBaselineConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataQualityJobDefinition.DataQualityBaselineConfigPropertyList",
+        storageClassType: "AwsDataQualityJobDefinition.DataQualityBaselineConfigPropertyList",
       },
       data_quality_job_input: {
-        value: tfDataQualityJobDefinitionDataQualityJobInputPropertyToHclTerraform(this._dataQualityJobInput.internalValue),
+        value: awsDataQualityJobDefinitionDataQualityJobInputPropertyToHclTerraform(this._dataQualityJobInput.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataQualityJobDefinition.DataQualityJobInputPropertyList",
+        storageClassType: "AwsDataQualityJobDefinition.DataQualityJobInputPropertyList",
       },
       data_quality_job_output_config: {
-        value: tfDataQualityJobDefinitionDataQualityJobOutputConfigPropertyToHclTerraform(this._dataQualityJobOutputConfig.internalValue),
+        value: awsDataQualityJobDefinitionDataQualityJobOutputConfigPropertyToHclTerraform(this._dataQualityJobOutputConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataQualityJobDefinition.DataQualityJobOutputConfigPropertyList",
+        storageClassType: "AwsDataQualityJobDefinition.DataQualityJobOutputConfigPropertyList",
       },
       job_resources: {
-        value: tfDataQualityJobDefinitionJobResourcesPropertyToHclTerraform(this._jobResources.internalValue),
+        value: awsDataQualityJobDefinitionJobResourcesPropertyToHclTerraform(this._jobResources.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataQualityJobDefinition.JobResourcesPropertyList",
+        storageClassType: "AwsDataQualityJobDefinition.JobResourcesPropertyList",
       },
       network_config: {
-        value: tfDataQualityJobDefinitionNetworkConfigPropertyToHclTerraform(this._networkConfig.internalValue),
+        value: awsDataQualityJobDefinitionNetworkConfigPropertyToHclTerraform(this._networkConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataQualityJobDefinition.NetworkConfigPropertyList",
+        storageClassType: "AwsDataQualityJobDefinition.NetworkConfigPropertyList",
       },
       stopping_condition: {
-        value: tfDataQualityJobDefinitionStoppingConditionPropertyToHclTerraform(this._stoppingCondition.internalValue),
+        value: awsDataQualityJobDefinitionStoppingConditionPropertyToHclTerraform(this._stoppingCondition.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataQualityJobDefinition.StoppingConditionPropertyList",
+        storageClassType: "AwsDataQualityJobDefinition.StoppingConditionPropertyList",
       },
     };
 
@@ -456,7 +456,7 @@ export class TfDataQualityJobDefinition extends cdktn.TerraformResource {
   }
 }
 
-export function tfDataQualityJobDefinitionDataQualityAppSpecificationPropertyToTerraform(struct?: TfDataQualityJobDefinition.DataQualityAppSpecificationPropertyOutputReference | TfDataQualityJobDefinition.DataQualityAppSpecificationProperty): any {
+export function awsDataQualityJobDefinitionDataQualityAppSpecificationPropertyToTerraform(struct?: AwsDataQualityJobDefinition.DataQualityAppSpecificationPropertyOutputReference | AwsDataQualityJobDefinition.DataQualityAppSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -470,7 +470,7 @@ export function tfDataQualityJobDefinitionDataQualityAppSpecificationPropertyToT
 }
 
 
-export function tfDataQualityJobDefinitionDataQualityAppSpecificationPropertyToHclTerraform(struct?: TfDataQualityJobDefinition.DataQualityAppSpecificationPropertyOutputReference | TfDataQualityJobDefinition.DataQualityAppSpecificationProperty): any {
+export function awsDataQualityJobDefinitionDataQualityAppSpecificationPropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.DataQualityAppSpecificationPropertyOutputReference | AwsDataQualityJobDefinition.DataQualityAppSpecificationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -507,7 +507,7 @@ export function tfDataQualityJobDefinitionDataQualityAppSpecificationPropertyToH
 }
 
 
-export function tfDataQualityJobDefinitionConstraintsResourcePropertyToTerraform(struct?: TfDataQualityJobDefinition.ConstraintsResourcePropertyOutputReference | TfDataQualityJobDefinition.ConstraintsResourceProperty): any {
+export function awsDataQualityJobDefinitionConstraintsResourcePropertyToTerraform(struct?: AwsDataQualityJobDefinition.ConstraintsResourcePropertyOutputReference | AwsDataQualityJobDefinition.ConstraintsResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -518,7 +518,7 @@ export function tfDataQualityJobDefinitionConstraintsResourcePropertyToTerraform
 }
 
 
-export function tfDataQualityJobDefinitionConstraintsResourcePropertyToHclTerraform(struct?: TfDataQualityJobDefinition.ConstraintsResourcePropertyOutputReference | TfDataQualityJobDefinition.ConstraintsResourceProperty): any {
+export function awsDataQualityJobDefinitionConstraintsResourcePropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.ConstraintsResourcePropertyOutputReference | AwsDataQualityJobDefinition.ConstraintsResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -537,7 +537,7 @@ export function tfDataQualityJobDefinitionConstraintsResourcePropertyToHclTerraf
 }
 
 
-export function tfDataQualityJobDefinitionStatisticsResourcePropertyToTerraform(struct?: TfDataQualityJobDefinition.StatisticsResourcePropertyOutputReference | TfDataQualityJobDefinition.StatisticsResourceProperty): any {
+export function awsDataQualityJobDefinitionStatisticsResourcePropertyToTerraform(struct?: AwsDataQualityJobDefinition.StatisticsResourcePropertyOutputReference | AwsDataQualityJobDefinition.StatisticsResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -548,7 +548,7 @@ export function tfDataQualityJobDefinitionStatisticsResourcePropertyToTerraform(
 }
 
 
-export function tfDataQualityJobDefinitionStatisticsResourcePropertyToHclTerraform(struct?: TfDataQualityJobDefinition.StatisticsResourcePropertyOutputReference | TfDataQualityJobDefinition.StatisticsResourceProperty): any {
+export function awsDataQualityJobDefinitionStatisticsResourcePropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.StatisticsResourcePropertyOutputReference | AwsDataQualityJobDefinition.StatisticsResourceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -567,32 +567,32 @@ export function tfDataQualityJobDefinitionStatisticsResourcePropertyToHclTerrafo
 }
 
 
-export function tfDataQualityJobDefinitionDataQualityBaselineConfigPropertyToTerraform(struct?: TfDataQualityJobDefinition.DataQualityBaselineConfigPropertyOutputReference | TfDataQualityJobDefinition.DataQualityBaselineConfigProperty): any {
+export function awsDataQualityJobDefinitionDataQualityBaselineConfigPropertyToTerraform(struct?: AwsDataQualityJobDefinition.DataQualityBaselineConfigPropertyOutputReference | AwsDataQualityJobDefinition.DataQualityBaselineConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    constraints_resource: tfDataQualityJobDefinitionConstraintsResourcePropertyToTerraform(struct!.constraintsResource),
-    statistics_resource: tfDataQualityJobDefinitionStatisticsResourcePropertyToTerraform(struct!.statisticsResource),
+    constraints_resource: awsDataQualityJobDefinitionConstraintsResourcePropertyToTerraform(struct!.constraintsResource),
+    statistics_resource: awsDataQualityJobDefinitionStatisticsResourcePropertyToTerraform(struct!.statisticsResource),
   }
 }
 
 
-export function tfDataQualityJobDefinitionDataQualityBaselineConfigPropertyToHclTerraform(struct?: TfDataQualityJobDefinition.DataQualityBaselineConfigPropertyOutputReference | TfDataQualityJobDefinition.DataQualityBaselineConfigProperty): any {
+export function awsDataQualityJobDefinitionDataQualityBaselineConfigPropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.DataQualityBaselineConfigPropertyOutputReference | AwsDataQualityJobDefinition.DataQualityBaselineConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     constraints_resource: {
-      value: tfDataQualityJobDefinitionConstraintsResourcePropertyToHclTerraform(struct!.constraintsResource),
+      value: awsDataQualityJobDefinitionConstraintsResourcePropertyToHclTerraform(struct!.constraintsResource),
       isBlock: true,
       type: "list",
       storageClassType: "ConstraintsResourcePropertyList",
     },
     statistics_resource: {
-      value: tfDataQualityJobDefinitionStatisticsResourcePropertyToHclTerraform(struct!.statisticsResource),
+      value: awsDataQualityJobDefinitionStatisticsResourcePropertyToHclTerraform(struct!.statisticsResource),
       isBlock: true,
       type: "list",
       storageClassType: "StatisticsResourcePropertyList",
@@ -604,7 +604,7 @@ export function tfDataQualityJobDefinitionDataQualityBaselineConfigPropertyToHcl
 }
 
 
-export function tfDataQualityJobDefinitionCsvPropertyToTerraform(struct?: TfDataQualityJobDefinition.CsvPropertyOutputReference | TfDataQualityJobDefinition.CsvProperty): any {
+export function awsDataQualityJobDefinitionCsvPropertyToTerraform(struct?: AwsDataQualityJobDefinition.CsvPropertyOutputReference | AwsDataQualityJobDefinition.CsvProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -615,7 +615,7 @@ export function tfDataQualityJobDefinitionCsvPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDataQualityJobDefinitionCsvPropertyToHclTerraform(struct?: TfDataQualityJobDefinition.CsvPropertyOutputReference | TfDataQualityJobDefinition.CsvProperty): any {
+export function awsDataQualityJobDefinitionCsvPropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.CsvPropertyOutputReference | AwsDataQualityJobDefinition.CsvProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -634,7 +634,7 @@ export function tfDataQualityJobDefinitionCsvPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDataQualityJobDefinitionJsonPropertyToTerraform(struct?: TfDataQualityJobDefinition.JsonPropertyOutputReference | TfDataQualityJobDefinition.JsonProperty): any {
+export function awsDataQualityJobDefinitionJsonPropertyToTerraform(struct?: AwsDataQualityJobDefinition.JsonPropertyOutputReference | AwsDataQualityJobDefinition.JsonProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -645,7 +645,7 @@ export function tfDataQualityJobDefinitionJsonPropertyToTerraform(struct?: TfDat
 }
 
 
-export function tfDataQualityJobDefinitionJsonPropertyToHclTerraform(struct?: TfDataQualityJobDefinition.JsonPropertyOutputReference | TfDataQualityJobDefinition.JsonProperty): any {
+export function awsDataQualityJobDefinitionJsonPropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.JsonPropertyOutputReference | AwsDataQualityJobDefinition.JsonProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -664,32 +664,32 @@ export function tfDataQualityJobDefinitionJsonPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDataQualityJobDefinitionDatasetFormatPropertyToTerraform(struct?: TfDataQualityJobDefinition.DatasetFormatPropertyOutputReference | TfDataQualityJobDefinition.DatasetFormatProperty): any {
+export function awsDataQualityJobDefinitionDatasetFormatPropertyToTerraform(struct?: AwsDataQualityJobDefinition.DatasetFormatPropertyOutputReference | AwsDataQualityJobDefinition.DatasetFormatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    csv: tfDataQualityJobDefinitionCsvPropertyToTerraform(struct!.csv),
-    json: tfDataQualityJobDefinitionJsonPropertyToTerraform(struct!.json),
+    csv: awsDataQualityJobDefinitionCsvPropertyToTerraform(struct!.csv),
+    json: awsDataQualityJobDefinitionJsonPropertyToTerraform(struct!.json),
   }
 }
 
 
-export function tfDataQualityJobDefinitionDatasetFormatPropertyToHclTerraform(struct?: TfDataQualityJobDefinition.DatasetFormatPropertyOutputReference | TfDataQualityJobDefinition.DatasetFormatProperty): any {
+export function awsDataQualityJobDefinitionDatasetFormatPropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.DatasetFormatPropertyOutputReference | AwsDataQualityJobDefinition.DatasetFormatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     csv: {
-      value: tfDataQualityJobDefinitionCsvPropertyToHclTerraform(struct!.csv),
+      value: awsDataQualityJobDefinitionCsvPropertyToHclTerraform(struct!.csv),
       isBlock: true,
       type: "list",
       storageClassType: "CsvPropertyList",
     },
     json: {
-      value: tfDataQualityJobDefinitionJsonPropertyToHclTerraform(struct!.json),
+      value: awsDataQualityJobDefinitionJsonPropertyToHclTerraform(struct!.json),
       isBlock: true,
       type: "list",
       storageClassType: "JsonPropertyList",
@@ -701,7 +701,7 @@ export function tfDataQualityJobDefinitionDatasetFormatPropertyToHclTerraform(st
 }
 
 
-export function tfDataQualityJobDefinitionBatchTransformInputPropertyToTerraform(struct?: TfDataQualityJobDefinition.BatchTransformInputPropertyOutputReference | TfDataQualityJobDefinition.BatchTransformInputProperty): any {
+export function awsDataQualityJobDefinitionBatchTransformInputPropertyToTerraform(struct?: AwsDataQualityJobDefinition.BatchTransformInputPropertyOutputReference | AwsDataQualityJobDefinition.BatchTransformInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -711,12 +711,12 @@ export function tfDataQualityJobDefinitionBatchTransformInputPropertyToTerraform
     local_path: cdktn.stringToTerraform(struct!.localPath),
     s3_data_distribution_type: cdktn.stringToTerraform(struct!.s3DataDistributionType),
     s3_input_mode: cdktn.stringToTerraform(struct!.s3InputMode),
-    dataset_format: tfDataQualityJobDefinitionDatasetFormatPropertyToTerraform(struct!.datasetFormat),
+    dataset_format: awsDataQualityJobDefinitionDatasetFormatPropertyToTerraform(struct!.datasetFormat),
   }
 }
 
 
-export function tfDataQualityJobDefinitionBatchTransformInputPropertyToHclTerraform(struct?: TfDataQualityJobDefinition.BatchTransformInputPropertyOutputReference | TfDataQualityJobDefinition.BatchTransformInputProperty): any {
+export function awsDataQualityJobDefinitionBatchTransformInputPropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.BatchTransformInputPropertyOutputReference | AwsDataQualityJobDefinition.BatchTransformInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -747,7 +747,7 @@ export function tfDataQualityJobDefinitionBatchTransformInputPropertyToHclTerraf
       storageClassType: "string",
     },
     dataset_format: {
-      value: tfDataQualityJobDefinitionDatasetFormatPropertyToHclTerraform(struct!.datasetFormat),
+      value: awsDataQualityJobDefinitionDatasetFormatPropertyToHclTerraform(struct!.datasetFormat),
       isBlock: true,
       type: "list",
       storageClassType: "DatasetFormatPropertyList",
@@ -759,7 +759,7 @@ export function tfDataQualityJobDefinitionBatchTransformInputPropertyToHclTerraf
 }
 
 
-export function tfDataQualityJobDefinitionEndpointInputPropertyToTerraform(struct?: TfDataQualityJobDefinition.EndpointInputPropertyOutputReference | TfDataQualityJobDefinition.EndpointInputProperty): any {
+export function awsDataQualityJobDefinitionEndpointInputPropertyToTerraform(struct?: AwsDataQualityJobDefinition.EndpointInputPropertyOutputReference | AwsDataQualityJobDefinition.EndpointInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -773,7 +773,7 @@ export function tfDataQualityJobDefinitionEndpointInputPropertyToTerraform(struc
 }
 
 
-export function tfDataQualityJobDefinitionEndpointInputPropertyToHclTerraform(struct?: TfDataQualityJobDefinition.EndpointInputPropertyOutputReference | TfDataQualityJobDefinition.EndpointInputProperty): any {
+export function awsDataQualityJobDefinitionEndpointInputPropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.EndpointInputPropertyOutputReference | AwsDataQualityJobDefinition.EndpointInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -810,32 +810,32 @@ export function tfDataQualityJobDefinitionEndpointInputPropertyToHclTerraform(st
 }
 
 
-export function tfDataQualityJobDefinitionDataQualityJobInputPropertyToTerraform(struct?: TfDataQualityJobDefinition.DataQualityJobInputPropertyOutputReference | TfDataQualityJobDefinition.DataQualityJobInputProperty): any {
+export function awsDataQualityJobDefinitionDataQualityJobInputPropertyToTerraform(struct?: AwsDataQualityJobDefinition.DataQualityJobInputPropertyOutputReference | AwsDataQualityJobDefinition.DataQualityJobInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    batch_transform_input: tfDataQualityJobDefinitionBatchTransformInputPropertyToTerraform(struct!.batchTransformInput),
-    endpoint_input: tfDataQualityJobDefinitionEndpointInputPropertyToTerraform(struct!.endpointInput),
+    batch_transform_input: awsDataQualityJobDefinitionBatchTransformInputPropertyToTerraform(struct!.batchTransformInput),
+    endpoint_input: awsDataQualityJobDefinitionEndpointInputPropertyToTerraform(struct!.endpointInput),
   }
 }
 
 
-export function tfDataQualityJobDefinitionDataQualityJobInputPropertyToHclTerraform(struct?: TfDataQualityJobDefinition.DataQualityJobInputPropertyOutputReference | TfDataQualityJobDefinition.DataQualityJobInputProperty): any {
+export function awsDataQualityJobDefinitionDataQualityJobInputPropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.DataQualityJobInputPropertyOutputReference | AwsDataQualityJobDefinition.DataQualityJobInputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     batch_transform_input: {
-      value: tfDataQualityJobDefinitionBatchTransformInputPropertyToHclTerraform(struct!.batchTransformInput),
+      value: awsDataQualityJobDefinitionBatchTransformInputPropertyToHclTerraform(struct!.batchTransformInput),
       isBlock: true,
       type: "list",
       storageClassType: "BatchTransformInputPropertyList",
     },
     endpoint_input: {
-      value: tfDataQualityJobDefinitionEndpointInputPropertyToHclTerraform(struct!.endpointInput),
+      value: awsDataQualityJobDefinitionEndpointInputPropertyToHclTerraform(struct!.endpointInput),
       isBlock: true,
       type: "list",
       storageClassType: "EndpointInputPropertyList",
@@ -847,7 +847,7 @@ export function tfDataQualityJobDefinitionDataQualityJobInputPropertyToHclTerraf
 }
 
 
-export function tfDataQualityJobDefinitionS3OutputPropertyToTerraform(struct?: TfDataQualityJobDefinition.S3OutputPropertyOutputReference | TfDataQualityJobDefinition.S3OutputProperty): any {
+export function awsDataQualityJobDefinitionS3OutputPropertyToTerraform(struct?: AwsDataQualityJobDefinition.S3OutputPropertyOutputReference | AwsDataQualityJobDefinition.S3OutputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -860,7 +860,7 @@ export function tfDataQualityJobDefinitionS3OutputPropertyToTerraform(struct?: T
 }
 
 
-export function tfDataQualityJobDefinitionS3OutputPropertyToHclTerraform(struct?: TfDataQualityJobDefinition.S3OutputPropertyOutputReference | TfDataQualityJobDefinition.S3OutputProperty): any {
+export function awsDataQualityJobDefinitionS3OutputPropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.S3OutputPropertyOutputReference | AwsDataQualityJobDefinition.S3OutputProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -891,25 +891,25 @@ export function tfDataQualityJobDefinitionS3OutputPropertyToHclTerraform(struct?
 }
 
 
-export function tfDataQualityJobDefinitionMonitoringOutputsPropertyToTerraform(struct?: TfDataQualityJobDefinition.MonitoringOutputsPropertyOutputReference | TfDataQualityJobDefinition.MonitoringOutputsProperty): any {
+export function awsDataQualityJobDefinitionMonitoringOutputsPropertyToTerraform(struct?: AwsDataQualityJobDefinition.MonitoringOutputsPropertyOutputReference | AwsDataQualityJobDefinition.MonitoringOutputsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_output: tfDataQualityJobDefinitionS3OutputPropertyToTerraform(struct!.s3Output),
+    s3_output: awsDataQualityJobDefinitionS3OutputPropertyToTerraform(struct!.s3Output),
   }
 }
 
 
-export function tfDataQualityJobDefinitionMonitoringOutputsPropertyToHclTerraform(struct?: TfDataQualityJobDefinition.MonitoringOutputsPropertyOutputReference | TfDataQualityJobDefinition.MonitoringOutputsProperty): any {
+export function awsDataQualityJobDefinitionMonitoringOutputsPropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.MonitoringOutputsPropertyOutputReference | AwsDataQualityJobDefinition.MonitoringOutputsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_output: {
-      value: tfDataQualityJobDefinitionS3OutputPropertyToHclTerraform(struct!.s3Output),
+      value: awsDataQualityJobDefinitionS3OutputPropertyToHclTerraform(struct!.s3Output),
       isBlock: true,
       type: "list",
       storageClassType: "S3OutputPropertyList",
@@ -921,19 +921,19 @@ export function tfDataQualityJobDefinitionMonitoringOutputsPropertyToHclTerrafor
 }
 
 
-export function tfDataQualityJobDefinitionDataQualityJobOutputConfigPropertyToTerraform(struct?: TfDataQualityJobDefinition.DataQualityJobOutputConfigPropertyOutputReference | TfDataQualityJobDefinition.DataQualityJobOutputConfigProperty): any {
+export function awsDataQualityJobDefinitionDataQualityJobOutputConfigPropertyToTerraform(struct?: AwsDataQualityJobDefinition.DataQualityJobOutputConfigPropertyOutputReference | AwsDataQualityJobDefinition.DataQualityJobOutputConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     kms_key_id: cdktn.stringToTerraform(struct!.kmsKeyId),
-    monitoring_outputs: tfDataQualityJobDefinitionMonitoringOutputsPropertyToTerraform(struct!.monitoringOutputs),
+    monitoring_outputs: awsDataQualityJobDefinitionMonitoringOutputsPropertyToTerraform(struct!.monitoringOutputs),
   }
 }
 
 
-export function tfDataQualityJobDefinitionDataQualityJobOutputConfigPropertyToHclTerraform(struct?: TfDataQualityJobDefinition.DataQualityJobOutputConfigPropertyOutputReference | TfDataQualityJobDefinition.DataQualityJobOutputConfigProperty): any {
+export function awsDataQualityJobDefinitionDataQualityJobOutputConfigPropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.DataQualityJobOutputConfigPropertyOutputReference | AwsDataQualityJobDefinition.DataQualityJobOutputConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -946,7 +946,7 @@ export function tfDataQualityJobDefinitionDataQualityJobOutputConfigPropertyToHc
       storageClassType: "string",
     },
     monitoring_outputs: {
-      value: tfDataQualityJobDefinitionMonitoringOutputsPropertyToHclTerraform(struct!.monitoringOutputs),
+      value: awsDataQualityJobDefinitionMonitoringOutputsPropertyToHclTerraform(struct!.monitoringOutputs),
       isBlock: true,
       type: "list",
       storageClassType: "MonitoringOutputsPropertyList",
@@ -958,7 +958,7 @@ export function tfDataQualityJobDefinitionDataQualityJobOutputConfigPropertyToHc
 }
 
 
-export function tfDataQualityJobDefinitionClusterConfigPropertyToTerraform(struct?: TfDataQualityJobDefinition.ClusterConfigPropertyOutputReference | TfDataQualityJobDefinition.ClusterConfigProperty): any {
+export function awsDataQualityJobDefinitionClusterConfigPropertyToTerraform(struct?: AwsDataQualityJobDefinition.ClusterConfigPropertyOutputReference | AwsDataQualityJobDefinition.ClusterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -972,7 +972,7 @@ export function tfDataQualityJobDefinitionClusterConfigPropertyToTerraform(struc
 }
 
 
-export function tfDataQualityJobDefinitionClusterConfigPropertyToHclTerraform(struct?: TfDataQualityJobDefinition.ClusterConfigPropertyOutputReference | TfDataQualityJobDefinition.ClusterConfigProperty): any {
+export function awsDataQualityJobDefinitionClusterConfigPropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.ClusterConfigPropertyOutputReference | AwsDataQualityJobDefinition.ClusterConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1009,25 +1009,25 @@ export function tfDataQualityJobDefinitionClusterConfigPropertyToHclTerraform(st
 }
 
 
-export function tfDataQualityJobDefinitionJobResourcesPropertyToTerraform(struct?: TfDataQualityJobDefinition.JobResourcesPropertyOutputReference | TfDataQualityJobDefinition.JobResourcesProperty): any {
+export function awsDataQualityJobDefinitionJobResourcesPropertyToTerraform(struct?: AwsDataQualityJobDefinition.JobResourcesPropertyOutputReference | AwsDataQualityJobDefinition.JobResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cluster_config: tfDataQualityJobDefinitionClusterConfigPropertyToTerraform(struct!.clusterConfig),
+    cluster_config: awsDataQualityJobDefinitionClusterConfigPropertyToTerraform(struct!.clusterConfig),
   }
 }
 
 
-export function tfDataQualityJobDefinitionJobResourcesPropertyToHclTerraform(struct?: TfDataQualityJobDefinition.JobResourcesPropertyOutputReference | TfDataQualityJobDefinition.JobResourcesProperty): any {
+export function awsDataQualityJobDefinitionJobResourcesPropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.JobResourcesPropertyOutputReference | AwsDataQualityJobDefinition.JobResourcesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cluster_config: {
-      value: tfDataQualityJobDefinitionClusterConfigPropertyToHclTerraform(struct!.clusterConfig),
+      value: awsDataQualityJobDefinitionClusterConfigPropertyToHclTerraform(struct!.clusterConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ClusterConfigPropertyList",
@@ -1039,7 +1039,7 @@ export function tfDataQualityJobDefinitionJobResourcesPropertyToHclTerraform(str
 }
 
 
-export function tfDataQualityJobDefinitionVpcConfigPropertyToTerraform(struct?: TfDataQualityJobDefinition.VpcConfigPropertyOutputReference | TfDataQualityJobDefinition.VpcConfigProperty): any {
+export function awsDataQualityJobDefinitionVpcConfigPropertyToTerraform(struct?: AwsDataQualityJobDefinition.VpcConfigPropertyOutputReference | AwsDataQualityJobDefinition.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1051,7 +1051,7 @@ export function tfDataQualityJobDefinitionVpcConfigPropertyToTerraform(struct?: 
 }
 
 
-export function tfDataQualityJobDefinitionVpcConfigPropertyToHclTerraform(struct?: TfDataQualityJobDefinition.VpcConfigPropertyOutputReference | TfDataQualityJobDefinition.VpcConfigProperty): any {
+export function awsDataQualityJobDefinitionVpcConfigPropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.VpcConfigPropertyOutputReference | AwsDataQualityJobDefinition.VpcConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1076,7 +1076,7 @@ export function tfDataQualityJobDefinitionVpcConfigPropertyToHclTerraform(struct
 }
 
 
-export function tfDataQualityJobDefinitionNetworkConfigPropertyToTerraform(struct?: TfDataQualityJobDefinition.NetworkConfigPropertyOutputReference | TfDataQualityJobDefinition.NetworkConfigProperty): any {
+export function awsDataQualityJobDefinitionNetworkConfigPropertyToTerraform(struct?: AwsDataQualityJobDefinition.NetworkConfigPropertyOutputReference | AwsDataQualityJobDefinition.NetworkConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1084,12 +1084,12 @@ export function tfDataQualityJobDefinitionNetworkConfigPropertyToTerraform(struc
   return {
     enable_inter_container_traffic_encryption: cdktn.booleanToTerraform(struct!.enableInterContainerTrafficEncryption),
     enable_network_isolation: cdktn.booleanToTerraform(struct!.enableNetworkIsolation),
-    vpc_config: tfDataQualityJobDefinitionVpcConfigPropertyToTerraform(struct!.vpcConfig),
+    vpc_config: awsDataQualityJobDefinitionVpcConfigPropertyToTerraform(struct!.vpcConfig),
   }
 }
 
 
-export function tfDataQualityJobDefinitionNetworkConfigPropertyToHclTerraform(struct?: TfDataQualityJobDefinition.NetworkConfigPropertyOutputReference | TfDataQualityJobDefinition.NetworkConfigProperty): any {
+export function awsDataQualityJobDefinitionNetworkConfigPropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.NetworkConfigPropertyOutputReference | AwsDataQualityJobDefinition.NetworkConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1108,7 +1108,7 @@ export function tfDataQualityJobDefinitionNetworkConfigPropertyToHclTerraform(st
       storageClassType: "boolean",
     },
     vpc_config: {
-      value: tfDataQualityJobDefinitionVpcConfigPropertyToHclTerraform(struct!.vpcConfig),
+      value: awsDataQualityJobDefinitionVpcConfigPropertyToHclTerraform(struct!.vpcConfig),
       isBlock: true,
       type: "list",
       storageClassType: "VpcConfigPropertyList",
@@ -1120,7 +1120,7 @@ export function tfDataQualityJobDefinitionNetworkConfigPropertyToHclTerraform(st
 }
 
 
-export function tfDataQualityJobDefinitionStoppingConditionPropertyToTerraform(struct?: TfDataQualityJobDefinition.StoppingConditionPropertyOutputReference | TfDataQualityJobDefinition.StoppingConditionProperty): any {
+export function awsDataQualityJobDefinitionStoppingConditionPropertyToTerraform(struct?: AwsDataQualityJobDefinition.StoppingConditionPropertyOutputReference | AwsDataQualityJobDefinition.StoppingConditionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1131,7 +1131,7 @@ export function tfDataQualityJobDefinitionStoppingConditionPropertyToTerraform(s
 }
 
 
-export function tfDataQualityJobDefinitionStoppingConditionPropertyToHclTerraform(struct?: TfDataQualityJobDefinition.StoppingConditionPropertyOutputReference | TfDataQualityJobDefinition.StoppingConditionProperty): any {
+export function awsDataQualityJobDefinitionStoppingConditionPropertyToHclTerraform(struct?: AwsDataQualityJobDefinition.StoppingConditionPropertyOutputReference | AwsDataQualityJobDefinition.StoppingConditionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1150,22 +1150,22 @@ export function tfDataQualityJobDefinitionStoppingConditionPropertyToHclTerrafor
 }
 
 
-export namespace TfDataQualityJobDefinition {
+export namespace AwsDataQualityJobDefinition {
 export interface DataQualityAppSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#environment TfDataQualityJobDefinition#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#environment AwsDataQualityJobDefinition#environment}
   */
   readonly environment?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#image_uri TfDataQualityJobDefinition#image_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#image_uri AwsDataQualityJobDefinition#image_uri}
   */
   readonly imageUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#post_analytics_processor_source_uri TfDataQualityJobDefinition#post_analytics_processor_source_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#post_analytics_processor_source_uri AwsDataQualityJobDefinition#post_analytics_processor_source_uri}
   */
   readonly postAnalyticsProcessorSourceUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#record_preprocessor_source_uri TfDataQualityJobDefinition#record_preprocessor_source_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#record_preprocessor_source_uri AwsDataQualityJobDefinition#record_preprocessor_source_uri}
   */
   readonly recordPreprocessorSourceUri?: string;
 }
@@ -1282,7 +1282,7 @@ export class DataQualityAppSpecificationPropertyOutputReference extends cdktn.Co
 }
 export interface ConstraintsResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_uri TfDataQualityJobDefinition#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_uri AwsDataQualityJobDefinition#s3_uri}
   */
   readonly s3Uri?: string;
 }
@@ -1336,7 +1336,7 @@ export class ConstraintsResourcePropertyOutputReference extends cdktn.ComplexObj
 }
 export interface StatisticsResourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_uri TfDataQualityJobDefinition#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_uri AwsDataQualityJobDefinition#s3_uri}
   */
   readonly s3Uri?: string;
 }
@@ -1392,13 +1392,13 @@ export interface DataQualityBaselineConfigProperty {
   /**
   * constraints_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#constraints_resource TfDataQualityJobDefinition#constraints_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#constraints_resource AwsDataQualityJobDefinition#constraints_resource}
   */
   readonly constraintsResource?: ConstraintsResourceProperty;
   /**
   * statistics_resource block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#statistics_resource TfDataQualityJobDefinition#statistics_resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#statistics_resource AwsDataQualityJobDefinition#statistics_resource}
   */
   readonly statisticsResource?: StatisticsResourceProperty;
 }
@@ -1474,7 +1474,7 @@ export class DataQualityBaselineConfigPropertyOutputReference extends cdktn.Comp
 }
 export interface CsvProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#header TfDataQualityJobDefinition#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#header AwsDataQualityJobDefinition#header}
   */
   readonly header?: boolean | cdktn.IResolvable;
 }
@@ -1528,7 +1528,7 @@ export class CsvPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface JsonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#line TfDataQualityJobDefinition#line}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#line AwsDataQualityJobDefinition#line}
   */
   readonly line?: boolean | cdktn.IResolvable;
 }
@@ -1584,13 +1584,13 @@ export interface DatasetFormatProperty {
   /**
   * csv block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#csv TfDataQualityJobDefinition#csv}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#csv AwsDataQualityJobDefinition#csv}
   */
   readonly csv?: CsvProperty;
   /**
   * json block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#json TfDataQualityJobDefinition#json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#json AwsDataQualityJobDefinition#json}
   */
   readonly json?: JsonProperty;
 }
@@ -1666,25 +1666,25 @@ export class DatasetFormatPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface BatchTransformInputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#data_captured_destination_s3_uri TfDataQualityJobDefinition#data_captured_destination_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#data_captured_destination_s3_uri AwsDataQualityJobDefinition#data_captured_destination_s3_uri}
   */
   readonly dataCapturedDestinationS3Uri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#local_path TfDataQualityJobDefinition#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#local_path AwsDataQualityJobDefinition#local_path}
   */
   readonly localPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_data_distribution_type TfDataQualityJobDefinition#s3_data_distribution_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_data_distribution_type AwsDataQualityJobDefinition#s3_data_distribution_type}
   */
   readonly s3DataDistributionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_input_mode TfDataQualityJobDefinition#s3_input_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_input_mode AwsDataQualityJobDefinition#s3_input_mode}
   */
   readonly s3InputMode?: string;
   /**
   * dataset_format block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#dataset_format TfDataQualityJobDefinition#dataset_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#dataset_format AwsDataQualityJobDefinition#dataset_format}
   */
   readonly datasetFormat: DatasetFormatProperty;
 }
@@ -1820,19 +1820,19 @@ export class BatchTransformInputPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface EndpointInputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#endpoint_name TfDataQualityJobDefinition#endpoint_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#endpoint_name AwsDataQualityJobDefinition#endpoint_name}
   */
   readonly endpointName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#local_path TfDataQualityJobDefinition#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#local_path AwsDataQualityJobDefinition#local_path}
   */
   readonly localPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_data_distribution_type TfDataQualityJobDefinition#s3_data_distribution_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_data_distribution_type AwsDataQualityJobDefinition#s3_data_distribution_type}
   */
   readonly s3DataDistributionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_input_mode TfDataQualityJobDefinition#s3_input_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_input_mode AwsDataQualityJobDefinition#s3_input_mode}
   */
   readonly s3InputMode?: string;
 }
@@ -1951,13 +1951,13 @@ export interface DataQualityJobInputProperty {
   /**
   * batch_transform_input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#batch_transform_input TfDataQualityJobDefinition#batch_transform_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#batch_transform_input AwsDataQualityJobDefinition#batch_transform_input}
   */
   readonly batchTransformInput?: BatchTransformInputProperty;
   /**
   * endpoint_input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#endpoint_input TfDataQualityJobDefinition#endpoint_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#endpoint_input AwsDataQualityJobDefinition#endpoint_input}
   */
   readonly endpointInput?: EndpointInputProperty;
 }
@@ -2033,15 +2033,15 @@ export class DataQualityJobInputPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface S3OutputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#local_path TfDataQualityJobDefinition#local_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#local_path AwsDataQualityJobDefinition#local_path}
   */
   readonly localPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_upload_mode TfDataQualityJobDefinition#s3_upload_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_upload_mode AwsDataQualityJobDefinition#s3_upload_mode}
   */
   readonly s3UploadMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_uri TfDataQualityJobDefinition#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_uri AwsDataQualityJobDefinition#s3_uri}
   */
   readonly s3Uri: string;
 }
@@ -2138,7 +2138,7 @@ export interface MonitoringOutputsProperty {
   /**
   * s3_output block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_output TfDataQualityJobDefinition#s3_output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#s3_output AwsDataQualityJobDefinition#s3_output}
   */
   readonly s3Output: S3OutputProperty;
 }
@@ -2189,13 +2189,13 @@ export class MonitoringOutputsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface DataQualityJobOutputConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#kms_key_id TfDataQualityJobDefinition#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#kms_key_id AwsDataQualityJobDefinition#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
   * monitoring_outputs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#monitoring_outputs TfDataQualityJobDefinition#monitoring_outputs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#monitoring_outputs AwsDataQualityJobDefinition#monitoring_outputs}
   */
   readonly monitoringOutputs: MonitoringOutputsProperty;
 }
@@ -2268,19 +2268,19 @@ export class DataQualityJobOutputConfigPropertyOutputReference extends cdktn.Com
 }
 export interface ClusterConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#instance_count TfDataQualityJobDefinition#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#instance_count AwsDataQualityJobDefinition#instance_count}
   */
   readonly instanceCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#instance_type TfDataQualityJobDefinition#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#instance_type AwsDataQualityJobDefinition#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#volume_kms_key_id TfDataQualityJobDefinition#volume_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#volume_kms_key_id AwsDataQualityJobDefinition#volume_kms_key_id}
   */
   readonly volumeKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#volume_size_in_gb TfDataQualityJobDefinition#volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#volume_size_in_gb AwsDataQualityJobDefinition#volume_size_in_gb}
   */
   readonly volumeSizeInGb: number;
 }
@@ -2393,7 +2393,7 @@ export interface JobResourcesProperty {
   /**
   * cluster_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#cluster_config TfDataQualityJobDefinition#cluster_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#cluster_config AwsDataQualityJobDefinition#cluster_config}
   */
   readonly clusterConfig: ClusterConfigProperty;
 }
@@ -2444,11 +2444,11 @@ export class JobResourcesPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#security_group_ids TfDataQualityJobDefinition#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#security_group_ids AwsDataQualityJobDefinition#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#subnets TfDataQualityJobDefinition#subnets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#subnets AwsDataQualityJobDefinition#subnets}
   */
   readonly subnets: string[];
 }
@@ -2518,17 +2518,17 @@ export class VpcConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface NetworkConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#enable_inter_container_traffic_encryption TfDataQualityJobDefinition#enable_inter_container_traffic_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#enable_inter_container_traffic_encryption AwsDataQualityJobDefinition#enable_inter_container_traffic_encryption}
   */
   readonly enableInterContainerTrafficEncryption?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#enable_network_isolation TfDataQualityJobDefinition#enable_network_isolation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#enable_network_isolation AwsDataQualityJobDefinition#enable_network_isolation}
   */
   readonly enableNetworkIsolation?: boolean | cdktn.IResolvable;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#vpc_config TfDataQualityJobDefinition#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#vpc_config AwsDataQualityJobDefinition#vpc_config}
   */
   readonly vpcConfig?: VpcConfigProperty;
 }
@@ -2626,7 +2626,7 @@ export class NetworkConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface StoppingConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#max_runtime_in_seconds TfDataQualityJobDefinition#max_runtime_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_data_quality_job_definition#max_runtime_in_seconds AwsDataQualityJobDefinition#max_runtime_in_seconds}
   */
   readonly maxRuntimeInSeconds?: number;
 }

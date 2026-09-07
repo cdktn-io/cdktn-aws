@@ -5,44 +5,44 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPermissionSetInlinePolicyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPermissionSetInlinePolicyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#id TfPermissionSetInlinePolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#id AwsPermissionSetInlinePolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#inline_policy TfPermissionSetInlinePolicy#inline_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#inline_policy AwsPermissionSetInlinePolicy#inline_policy}
   */
   readonly inlinePolicy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#instance_arn TfPermissionSetInlinePolicy#instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#instance_arn AwsPermissionSetInlinePolicy#instance_arn}
   */
   readonly instanceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#permission_set_arn TfPermissionSetInlinePolicy#permission_set_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#permission_set_arn AwsPermissionSetInlinePolicy#permission_set_arn}
   */
   readonly permissionSetArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#region TfPermissionSetInlinePolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#region AwsPermissionSetInlinePolicy#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#timeouts TfPermissionSetInlinePolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#timeouts AwsPermissionSetInlinePolicy#timeouts}
   */
-  readonly timeouts?: TfPermissionSetInlinePolicy.TimeoutsProperty;
+  readonly timeouts?: AwsPermissionSetInlinePolicy.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy aws_ssoadmin_permission_set_inline_policy}
 */
-export class TfPermissionSetInlinePolicy extends cdktn.TerraformResource {
+export class AwsPermissionSetInlinePolicy extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -53,11 +53,11 @@ export class TfPermissionSetInlinePolicy extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPermissionSetInlinePolicy resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPermissionSetInlinePolicy resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPermissionSetInlinePolicy to import
-  * @param importFromId The id of the existing TfPermissionSetInlinePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPermissionSetInlinePolicy to import is found
+  * @param importToId The construct id used in the generated config for the AwsPermissionSetInlinePolicy to import
+  * @param importFromId The id of the existing AwsPermissionSetInlinePolicy that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPermissionSetInlinePolicy to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_permission_set_inline_policy", importId: importFromId, provider });
@@ -72,9 +72,9 @@ export class TfPermissionSetInlinePolicy extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPermissionSetInlinePolicyConfig
+  * @param options AwsPermissionSetInlinePolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPermissionSetInlinePolicyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPermissionSetInlinePolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssoadmin_permission_set_inline_policy',
       terraformGeneratorMetadata: {
@@ -174,11 +174,11 @@ export class TfPermissionSetInlinePolicy extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfPermissionSetInlinePolicy.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsPermissionSetInlinePolicy.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfPermissionSetInlinePolicy.TimeoutsProperty) {
+  public putTimeouts(value: AwsPermissionSetInlinePolicy.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -200,7 +200,7 @@ export class TfPermissionSetInlinePolicy extends cdktn.TerraformResource {
       instance_arn: cdktn.stringToTerraform(this._instanceArn),
       permission_set_arn: cdktn.stringToTerraform(this._permissionSetArn),
       region: cdktn.stringToTerraform(this._region),
-      timeouts: tfPermissionSetInlinePolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsPermissionSetInlinePolicyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -237,10 +237,10 @@ export class TfPermissionSetInlinePolicy extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfPermissionSetInlinePolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsPermissionSetInlinePolicyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfPermissionSetInlinePolicy.TimeoutsProperty",
+        storageClassType: "AwsPermissionSetInlinePolicy.TimeoutsProperty",
       },
     };
 
@@ -249,7 +249,7 @@ export class TfPermissionSetInlinePolicy extends cdktn.TerraformResource {
   }
 }
 
-export function tfPermissionSetInlinePolicyTimeoutsPropertyToTerraform(struct?: TfPermissionSetInlinePolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPermissionSetInlinePolicyTimeoutsPropertyToTerraform(struct?: AwsPermissionSetInlinePolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,7 +261,7 @@ export function tfPermissionSetInlinePolicyTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function tfPermissionSetInlinePolicyTimeoutsPropertyToHclTerraform(struct?: TfPermissionSetInlinePolicy.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPermissionSetInlinePolicyTimeoutsPropertyToHclTerraform(struct?: AwsPermissionSetInlinePolicy.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,14 +286,14 @@ export function tfPermissionSetInlinePolicyTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace TfPermissionSetInlinePolicy {
+export namespace AwsPermissionSetInlinePolicy {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#create TfPermissionSetInlinePolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#create AwsPermissionSetInlinePolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#delete TfPermissionSetInlinePolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permission_set_inline_policy#delete AwsPermissionSetInlinePolicy#delete}
   */
   readonly delete?: string;
 }

@@ -5,37 +5,37 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBrowserProfileConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBrowserProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile#description TfBrowserProfile#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile#description AwsBrowserProfile#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile#name TfBrowserProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile#name AwsBrowserProfile#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile#region TfBrowserProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile#region AwsBrowserProfile#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile#tags TfBrowserProfile#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile#tags AwsBrowserProfile#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile#timeouts TfBrowserProfile#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile#timeouts AwsBrowserProfile#timeouts}
   */
-  readonly timeouts?: TfBrowserProfile.TimeoutsProperty;
+  readonly timeouts?: AwsBrowserProfile.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile aws_bedrockagentcore_browser_profile}
 */
-export class TfBrowserProfile extends cdktn.TerraformResource {
+export class AwsBrowserProfile extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -46,11 +46,11 @@ export class TfBrowserProfile extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBrowserProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBrowserProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBrowserProfile to import
-  * @param importFromId The id of the existing TfBrowserProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBrowserProfile to import is found
+  * @param importToId The construct id used in the generated config for the AwsBrowserProfile to import
+  * @param importFromId The id of the existing AwsBrowserProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBrowserProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagentcore_browser_profile", importId: importFromId, provider });
@@ -65,9 +65,9 @@ export class TfBrowserProfile extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBrowserProfileConfig
+  * @param options AwsBrowserProfileConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBrowserProfileConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBrowserProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagentcore_browser_profile',
       terraformGeneratorMetadata: {
@@ -172,11 +172,11 @@ export class TfBrowserProfile extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfBrowserProfile.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsBrowserProfile.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfBrowserProfile.TimeoutsProperty) {
+  public putTimeouts(value: AwsBrowserProfile.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -197,7 +197,7 @@ export class TfBrowserProfile extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      timeouts: tfBrowserProfileTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsBrowserProfileTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -228,10 +228,10 @@ export class TfBrowserProfile extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfBrowserProfileTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsBrowserProfileTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfBrowserProfile.TimeoutsProperty",
+        storageClassType: "AwsBrowserProfile.TimeoutsProperty",
       },
     };
 
@@ -240,7 +240,7 @@ export class TfBrowserProfile extends cdktn.TerraformResource {
   }
 }
 
-export function tfBrowserProfileTimeoutsPropertyToTerraform(struct?: TfBrowserProfile.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBrowserProfileTimeoutsPropertyToTerraform(struct?: AwsBrowserProfile.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -252,7 +252,7 @@ export function tfBrowserProfileTimeoutsPropertyToTerraform(struct?: TfBrowserPr
 }
 
 
-export function tfBrowserProfileTimeoutsPropertyToHclTerraform(struct?: TfBrowserProfile.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsBrowserProfileTimeoutsPropertyToHclTerraform(struct?: AwsBrowserProfile.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -277,18 +277,18 @@ export function tfBrowserProfileTimeoutsPropertyToHclTerraform(struct?: TfBrowse
 }
 
 
-export namespace TfBrowserProfile {
+export namespace AwsBrowserProfile {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile#create TfBrowserProfile#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile#create AwsBrowserProfile#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile#delete TfBrowserProfile#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrockagentcore_browser_profile#delete AwsBrowserProfile#delete}
   */
   readonly delete?: string;
 }

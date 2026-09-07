@@ -5,36 +5,36 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSecurityConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSecurityConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#id TfSecurityConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#id AwsSecurityConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#name TfSecurityConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#name AwsSecurityConfiguration#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#region TfSecurityConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#region AwsSecurityConfiguration#region}
   */
   readonly region?: string;
   /**
   * encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#encryption_configuration TfSecurityConfiguration#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#encryption_configuration AwsSecurityConfiguration#encryption_configuration}
   */
-  readonly encryptionConfiguration: TfSecurityConfiguration.EncryptionConfigurationProperty;
+  readonly encryptionConfiguration: AwsSecurityConfiguration.EncryptionConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration aws_glue_security_configuration}
 */
-export class TfSecurityConfiguration extends cdktn.TerraformResource {
+export class AwsSecurityConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfSecurityConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSecurityConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSecurityConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSecurityConfiguration to import
-  * @param importFromId The id of the existing TfSecurityConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSecurityConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsSecurityConfiguration to import
+  * @param importFromId The id of the existing AwsSecurityConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSecurityConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_glue_security_configuration", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfSecurityConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSecurityConfigurationConfig
+  * @param options AwsSecurityConfigurationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSecurityConfigurationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSecurityConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_glue_security_configuration',
       terraformGeneratorMetadata: {
@@ -138,11 +138,11 @@ export class TfSecurityConfiguration extends cdktn.TerraformResource {
   }
 
   // encryption_configuration - computed: false, optional: false, required: true
-  private _encryptionConfiguration = new TfSecurityConfiguration.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
+  private _encryptionConfiguration = new AwsSecurityConfiguration.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
-  public putEncryptionConfiguration(value: TfSecurityConfiguration.EncryptionConfigurationProperty) {
+  public putEncryptionConfiguration(value: AwsSecurityConfiguration.EncryptionConfigurationProperty) {
     this._encryptionConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -159,7 +159,7 @@ export class TfSecurityConfiguration extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      encryption_configuration: tfSecurityConfigurationEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
+      encryption_configuration: awsSecurityConfigurationEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
     };
   }
 
@@ -184,10 +184,10 @@ export class TfSecurityConfiguration extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       encryption_configuration: {
-        value: tfSecurityConfigurationEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
+        value: awsSecurityConfigurationEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSecurityConfiguration.EncryptionConfigurationPropertyList",
+        storageClassType: "AwsSecurityConfiguration.EncryptionConfigurationPropertyList",
       },
     };
 
@@ -196,7 +196,7 @@ export class TfSecurityConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfSecurityConfigurationCloudwatchEncryptionPropertyToTerraform(struct?: TfSecurityConfiguration.CloudwatchEncryptionPropertyOutputReference | TfSecurityConfiguration.CloudwatchEncryptionProperty): any {
+export function awsSecurityConfigurationCloudwatchEncryptionPropertyToTerraform(struct?: AwsSecurityConfiguration.CloudwatchEncryptionPropertyOutputReference | AwsSecurityConfiguration.CloudwatchEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -208,7 +208,7 @@ export function tfSecurityConfigurationCloudwatchEncryptionPropertyToTerraform(s
 }
 
 
-export function tfSecurityConfigurationCloudwatchEncryptionPropertyToHclTerraform(struct?: TfSecurityConfiguration.CloudwatchEncryptionPropertyOutputReference | TfSecurityConfiguration.CloudwatchEncryptionProperty): any {
+export function awsSecurityConfigurationCloudwatchEncryptionPropertyToHclTerraform(struct?: AwsSecurityConfiguration.CloudwatchEncryptionPropertyOutputReference | AwsSecurityConfiguration.CloudwatchEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,7 +233,7 @@ export function tfSecurityConfigurationCloudwatchEncryptionPropertyToHclTerrafor
 }
 
 
-export function tfSecurityConfigurationJobBookmarksEncryptionPropertyToTerraform(struct?: TfSecurityConfiguration.JobBookmarksEncryptionPropertyOutputReference | TfSecurityConfiguration.JobBookmarksEncryptionProperty): any {
+export function awsSecurityConfigurationJobBookmarksEncryptionPropertyToTerraform(struct?: AwsSecurityConfiguration.JobBookmarksEncryptionPropertyOutputReference | AwsSecurityConfiguration.JobBookmarksEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -245,7 +245,7 @@ export function tfSecurityConfigurationJobBookmarksEncryptionPropertyToTerraform
 }
 
 
-export function tfSecurityConfigurationJobBookmarksEncryptionPropertyToHclTerraform(struct?: TfSecurityConfiguration.JobBookmarksEncryptionPropertyOutputReference | TfSecurityConfiguration.JobBookmarksEncryptionProperty): any {
+export function awsSecurityConfigurationJobBookmarksEncryptionPropertyToHclTerraform(struct?: AwsSecurityConfiguration.JobBookmarksEncryptionPropertyOutputReference | AwsSecurityConfiguration.JobBookmarksEncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -270,7 +270,7 @@ export function tfSecurityConfigurationJobBookmarksEncryptionPropertyToHclTerraf
 }
 
 
-export function tfSecurityConfigurationS3EncryptionPropertyToTerraform(struct?: TfSecurityConfiguration.S3EncryptionPropertyOutputReference | TfSecurityConfiguration.S3EncryptionProperty): any {
+export function awsSecurityConfigurationS3EncryptionPropertyToTerraform(struct?: AwsSecurityConfiguration.S3EncryptionPropertyOutputReference | AwsSecurityConfiguration.S3EncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -282,7 +282,7 @@ export function tfSecurityConfigurationS3EncryptionPropertyToTerraform(struct?: 
 }
 
 
-export function tfSecurityConfigurationS3EncryptionPropertyToHclTerraform(struct?: TfSecurityConfiguration.S3EncryptionPropertyOutputReference | TfSecurityConfiguration.S3EncryptionProperty): any {
+export function awsSecurityConfigurationS3EncryptionPropertyToHclTerraform(struct?: AwsSecurityConfiguration.S3EncryptionPropertyOutputReference | AwsSecurityConfiguration.S3EncryptionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -307,39 +307,39 @@ export function tfSecurityConfigurationS3EncryptionPropertyToHclTerraform(struct
 }
 
 
-export function tfSecurityConfigurationEncryptionConfigurationPropertyToTerraform(struct?: TfSecurityConfiguration.EncryptionConfigurationPropertyOutputReference | TfSecurityConfiguration.EncryptionConfigurationProperty): any {
+export function awsSecurityConfigurationEncryptionConfigurationPropertyToTerraform(struct?: AwsSecurityConfiguration.EncryptionConfigurationPropertyOutputReference | AwsSecurityConfiguration.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cloudwatch_encryption: tfSecurityConfigurationCloudwatchEncryptionPropertyToTerraform(struct!.cloudwatchEncryption),
-    job_bookmarks_encryption: tfSecurityConfigurationJobBookmarksEncryptionPropertyToTerraform(struct!.jobBookmarksEncryption),
-    s3_encryption: tfSecurityConfigurationS3EncryptionPropertyToTerraform(struct!.s3Encryption),
+    cloudwatch_encryption: awsSecurityConfigurationCloudwatchEncryptionPropertyToTerraform(struct!.cloudwatchEncryption),
+    job_bookmarks_encryption: awsSecurityConfigurationJobBookmarksEncryptionPropertyToTerraform(struct!.jobBookmarksEncryption),
+    s3_encryption: awsSecurityConfigurationS3EncryptionPropertyToTerraform(struct!.s3Encryption),
   }
 }
 
 
-export function tfSecurityConfigurationEncryptionConfigurationPropertyToHclTerraform(struct?: TfSecurityConfiguration.EncryptionConfigurationPropertyOutputReference | TfSecurityConfiguration.EncryptionConfigurationProperty): any {
+export function awsSecurityConfigurationEncryptionConfigurationPropertyToHclTerraform(struct?: AwsSecurityConfiguration.EncryptionConfigurationPropertyOutputReference | AwsSecurityConfiguration.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cloudwatch_encryption: {
-      value: tfSecurityConfigurationCloudwatchEncryptionPropertyToHclTerraform(struct!.cloudwatchEncryption),
+      value: awsSecurityConfigurationCloudwatchEncryptionPropertyToHclTerraform(struct!.cloudwatchEncryption),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchEncryptionPropertyList",
     },
     job_bookmarks_encryption: {
-      value: tfSecurityConfigurationJobBookmarksEncryptionPropertyToHclTerraform(struct!.jobBookmarksEncryption),
+      value: awsSecurityConfigurationJobBookmarksEncryptionPropertyToHclTerraform(struct!.jobBookmarksEncryption),
       isBlock: true,
       type: "list",
       storageClassType: "JobBookmarksEncryptionPropertyList",
     },
     s3_encryption: {
-      value: tfSecurityConfigurationS3EncryptionPropertyToHclTerraform(struct!.s3Encryption),
+      value: awsSecurityConfigurationS3EncryptionPropertyToHclTerraform(struct!.s3Encryption),
       isBlock: true,
       type: "list",
       storageClassType: "S3EncryptionPropertyList",
@@ -351,14 +351,14 @@ export function tfSecurityConfigurationEncryptionConfigurationPropertyToHclTerra
 }
 
 
-export namespace TfSecurityConfiguration {
+export namespace AwsSecurityConfiguration {
 export interface CloudwatchEncryptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#cloudwatch_encryption_mode TfSecurityConfiguration#cloudwatch_encryption_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#cloudwatch_encryption_mode AwsSecurityConfiguration#cloudwatch_encryption_mode}
   */
   readonly cloudwatchEncryptionMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#kms_key_arn TfSecurityConfiguration#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#kms_key_arn AwsSecurityConfiguration#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
 }
@@ -434,11 +434,11 @@ export class CloudwatchEncryptionPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface JobBookmarksEncryptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#job_bookmarks_encryption_mode TfSecurityConfiguration#job_bookmarks_encryption_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#job_bookmarks_encryption_mode AwsSecurityConfiguration#job_bookmarks_encryption_mode}
   */
   readonly jobBookmarksEncryptionMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#kms_key_arn TfSecurityConfiguration#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#kms_key_arn AwsSecurityConfiguration#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
 }
@@ -514,11 +514,11 @@ export class JobBookmarksEncryptionPropertyOutputReference extends cdktn.Complex
 }
 export interface S3EncryptionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#kms_key_arn TfSecurityConfiguration#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#kms_key_arn AwsSecurityConfiguration#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#s3_encryption_mode TfSecurityConfiguration#s3_encryption_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#s3_encryption_mode AwsSecurityConfiguration#s3_encryption_mode}
   */
   readonly s3EncryptionMode?: string;
 }
@@ -596,19 +596,19 @@ export interface EncryptionConfigurationProperty {
   /**
   * cloudwatch_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#cloudwatch_encryption TfSecurityConfiguration#cloudwatch_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#cloudwatch_encryption AwsSecurityConfiguration#cloudwatch_encryption}
   */
   readonly cloudwatchEncryption: CloudwatchEncryptionProperty;
   /**
   * job_bookmarks_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#job_bookmarks_encryption TfSecurityConfiguration#job_bookmarks_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#job_bookmarks_encryption AwsSecurityConfiguration#job_bookmarks_encryption}
   */
   readonly jobBookmarksEncryption: JobBookmarksEncryptionProperty;
   /**
   * s3_encryption block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#s3_encryption TfSecurityConfiguration#s3_encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/glue_security_configuration#s3_encryption AwsSecurityConfiguration#s3_encryption}
   */
   readonly s3Encryption: S3EncryptionProperty;
 }

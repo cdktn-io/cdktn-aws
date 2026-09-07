@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfInfrastructureConfigurationsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsInfrastructureConfigurationsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configurations#id DataTfInfrastructureConfigurations#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configurations#id DataAwsInfrastructureConfigurations#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface DataTfInfrastructureConfigurationsConfig extends cdktn.Terrafor
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configurations#region DataTfInfrastructureConfigurations#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configurations#region DataAwsInfrastructureConfigurations#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configurations#filter DataTfInfrastructureConfigurations#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configurations#filter DataAwsInfrastructureConfigurations#filter}
   */
-  readonly filter?: DataTfInfrastructureConfigurations.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsInfrastructureConfigurations.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configurations aws_imagebuilder_infrastructure_configurations}
 */
-export class DataTfInfrastructureConfigurations extends cdktn.TerraformDataSource {
+export class DataAwsInfrastructureConfigurations extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class DataTfInfrastructureConfigurations extends cdktn.TerraformDataSourc
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfInfrastructureConfigurations resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsInfrastructureConfigurations resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfInfrastructureConfigurations to import
-  * @param importFromId The id of the existing DataTfInfrastructureConfigurations that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configurations#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfInfrastructureConfigurations to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsInfrastructureConfigurations to import
+  * @param importFromId The id of the existing DataAwsInfrastructureConfigurations that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configurations#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsInfrastructureConfigurations to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_imagebuilder_infrastructure_configurations", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class DataTfInfrastructureConfigurations extends cdktn.TerraformDataSourc
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfInfrastructureConfigurationsConfig = {}
+  * @param options DataAwsInfrastructureConfigurationsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfInfrastructureConfigurationsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsInfrastructureConfigurationsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_imagebuilder_infrastructure_configurations',
       terraformGeneratorMetadata: {
@@ -130,11 +130,11 @@ export class DataTfInfrastructureConfigurations extends cdktn.TerraformDataSourc
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfInfrastructureConfigurations.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsInfrastructureConfigurations.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfInfrastructureConfigurations.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsInfrastructureConfigurations.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -153,7 +153,7 @@ export class DataTfInfrastructureConfigurations extends cdktn.TerraformDataSourc
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(dataTfInfrastructureConfigurationsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataAwsInfrastructureConfigurationsFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -172,10 +172,10 @@ export class DataTfInfrastructureConfigurations extends cdktn.TerraformDataSourc
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfInfrastructureConfigurationsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsInfrastructureConfigurationsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfInfrastructureConfigurations.FilterPropertyList",
+        storageClassType: "DataAwsInfrastructureConfigurations.FilterPropertyList",
       },
     };
 
@@ -184,7 +184,7 @@ export class DataTfInfrastructureConfigurations extends cdktn.TerraformDataSourc
   }
 }
 
-export function dataTfInfrastructureConfigurationsFilterPropertyToTerraform(struct?: DataTfInfrastructureConfigurations.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsInfrastructureConfigurationsFilterPropertyToTerraform(struct?: DataAwsInfrastructureConfigurations.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -196,7 +196,7 @@ export function dataTfInfrastructureConfigurationsFilterPropertyToTerraform(stru
 }
 
 
-export function dataTfInfrastructureConfigurationsFilterPropertyToHclTerraform(struct?: DataTfInfrastructureConfigurations.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsInfrastructureConfigurationsFilterPropertyToHclTerraform(struct?: DataAwsInfrastructureConfigurations.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -221,14 +221,14 @@ export function dataTfInfrastructureConfigurationsFilterPropertyToHclTerraform(s
 }
 
 
-export namespace DataTfInfrastructureConfigurations {
+export namespace DataAwsInfrastructureConfigurations {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configurations#name DataTfInfrastructureConfigurations#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configurations#name DataAwsInfrastructureConfigurations#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configurations#values DataTfInfrastructureConfigurations#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_infrastructure_configurations#values DataAwsInfrastructureConfigurations#values}
   */
   readonly values: string[];
 }

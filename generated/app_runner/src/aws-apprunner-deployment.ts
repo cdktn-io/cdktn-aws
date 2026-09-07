@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDeploymentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDeploymentConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_deployment#region TfDeployment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_deployment#region AwsDeployment#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_deployment#service_arn TfDeployment#service_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_deployment#service_arn AwsDeployment#service_arn}
   */
   readonly serviceArn: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_deployment#timeouts TfDeployment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_deployment#timeouts AwsDeployment#timeouts}
   */
-  readonly timeouts?: TfDeployment.TimeoutsProperty;
+  readonly timeouts?: AwsDeployment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_deployment aws_apprunner_deployment}
 */
-export class TfDeployment extends cdktn.TerraformResource {
+export class AwsDeployment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class TfDeployment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDeployment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDeployment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDeployment to import
-  * @param importFromId The id of the existing TfDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_deployment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDeployment to import is found
+  * @param importToId The construct id used in the generated config for the AwsDeployment to import
+  * @param importFromId The id of the existing AwsDeployment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_deployment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDeployment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apprunner_deployment", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class TfDeployment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDeploymentConfig
+  * @param options AwsDeploymentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDeploymentConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDeploymentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apprunner_deployment',
       terraformGeneratorMetadata: {
@@ -129,11 +129,11 @@ export class TfDeployment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfDeployment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsDeployment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfDeployment.TimeoutsProperty) {
+  public putTimeouts(value: AwsDeployment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -152,7 +152,7 @@ export class TfDeployment extends cdktn.TerraformResource {
     return {
       region: cdktn.stringToTerraform(this._region),
       service_arn: cdktn.stringToTerraform(this._serviceArn),
-      timeouts: tfDeploymentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsDeploymentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -171,10 +171,10 @@ export class TfDeployment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfDeploymentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsDeploymentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfDeployment.TimeoutsProperty",
+        storageClassType: "AwsDeployment.TimeoutsProperty",
       },
     };
 
@@ -183,7 +183,7 @@ export class TfDeployment extends cdktn.TerraformResource {
   }
 }
 
-export function tfDeploymentTimeoutsPropertyToTerraform(struct?: TfDeployment.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDeploymentTimeoutsPropertyToTerraform(struct?: AwsDeployment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -194,7 +194,7 @@ export function tfDeploymentTimeoutsPropertyToTerraform(struct?: TfDeployment.Ti
 }
 
 
-export function tfDeploymentTimeoutsPropertyToHclTerraform(struct?: TfDeployment.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsDeploymentTimeoutsPropertyToHclTerraform(struct?: AwsDeployment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -213,12 +213,12 @@ export function tfDeploymentTimeoutsPropertyToHclTerraform(struct?: TfDeployment
 }
 
 
-export namespace TfDeployment {
+export namespace AwsDeployment {
 export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_deployment#create TfDeployment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_deployment#create AwsDeployment#create}
   */
   readonly create?: string;
 }

@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfOrganizationDelegatedAdminAccountConfig extends cdktn.TerraformMetaArguments {
+export interface AwsOrganizationDelegatedAdminAccountConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_organization_delegated_admin_account#account_id TfOrganizationDelegatedAdminAccount#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_organization_delegated_admin_account#account_id AwsOrganizationDelegatedAdminAccount#account_id}
   */
   readonly accountId: string;
 }
@@ -15,7 +15,7 @@ export interface TfOrganizationDelegatedAdminAccountConfig extends cdktn.Terrafo
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_organization_delegated_admin_account aws_cloudtrail_organization_delegated_admin_account}
 */
-export class TfOrganizationDelegatedAdminAccount extends cdktn.TerraformResource {
+export class AwsOrganizationDelegatedAdminAccount extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -26,11 +26,11 @@ export class TfOrganizationDelegatedAdminAccount extends cdktn.TerraformResource
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfOrganizationDelegatedAdminAccount resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsOrganizationDelegatedAdminAccount resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfOrganizationDelegatedAdminAccount to import
-  * @param importFromId The id of the existing TfOrganizationDelegatedAdminAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_organization_delegated_admin_account#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfOrganizationDelegatedAdminAccount to import is found
+  * @param importToId The construct id used in the generated config for the AwsOrganizationDelegatedAdminAccount to import
+  * @param importFromId The id of the existing AwsOrganizationDelegatedAdminAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_organization_delegated_admin_account#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsOrganizationDelegatedAdminAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudtrail_organization_delegated_admin_account", importId: importFromId, provider });
@@ -45,9 +45,9 @@ export class TfOrganizationDelegatedAdminAccount extends cdktn.TerraformResource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfOrganizationDelegatedAdminAccountConfig
+  * @param options AwsOrganizationDelegatedAdminAccountConfig
   */
-  public constructor(scope: Construct, id: string, config: TfOrganizationDelegatedAdminAccountConfig) {
+  public constructor(scope: Construct, id: string, config: AwsOrganizationDelegatedAdminAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudtrail_organization_delegated_admin_account',
       terraformGeneratorMetadata: {

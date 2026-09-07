@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfServiceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsServiceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#auto_scaling_configuration_arn TfService#auto_scaling_configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#auto_scaling_configuration_arn AwsService#auto_scaling_configuration_arn}
   */
   readonly autoScalingConfigurationArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#id TfService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#id AwsService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,63 +20,63 @@ export interface TfServiceConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#region TfService#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#region AwsService#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#service_name TfService#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#service_name AwsService#service_name}
   */
   readonly serviceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#tags TfService#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#tags AwsService#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#tags_all TfService#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#tags_all AwsService#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * encryption_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#encryption_configuration TfService#encryption_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#encryption_configuration AwsService#encryption_configuration}
   */
-  readonly encryptionConfiguration?: TfService.EncryptionConfigurationProperty;
+  readonly encryptionConfiguration?: AwsService.EncryptionConfigurationProperty;
   /**
   * health_check_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#health_check_configuration TfService#health_check_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#health_check_configuration AwsService#health_check_configuration}
   */
-  readonly healthCheckConfiguration?: TfService.HealthCheckConfigurationProperty;
+  readonly healthCheckConfiguration?: AwsService.HealthCheckConfigurationProperty;
   /**
   * instance_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#instance_configuration TfService#instance_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#instance_configuration AwsService#instance_configuration}
   */
-  readonly instanceConfiguration?: TfService.InstanceConfigurationProperty;
+  readonly instanceConfiguration?: AwsService.InstanceConfigurationProperty;
   /**
   * network_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#network_configuration TfService#network_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#network_configuration AwsService#network_configuration}
   */
-  readonly networkConfiguration?: TfService.NetworkConfigurationProperty;
+  readonly networkConfiguration?: AwsService.NetworkConfigurationProperty;
   /**
   * observability_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#observability_configuration TfService#observability_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#observability_configuration AwsService#observability_configuration}
   */
-  readonly observabilityConfiguration?: TfService.ObservabilityConfigurationProperty;
+  readonly observabilityConfiguration?: AwsService.ObservabilityConfigurationProperty;
   /**
   * source_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#source_configuration TfService#source_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#source_configuration AwsService#source_configuration}
   */
-  readonly sourceConfiguration: TfService.SourceConfigurationProperty;
+  readonly sourceConfiguration: AwsService.SourceConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service aws_apprunner_service}
 */
-export class TfService extends cdktn.TerraformResource {
+export class AwsService extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -87,11 +87,11 @@ export class TfService extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfService resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsService resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfService to import
-  * @param importFromId The id of the existing TfService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfService to import is found
+  * @param importToId The construct id used in the generated config for the AwsService to import
+  * @param importFromId The id of the existing AwsService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsService to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apprunner_service", importId: importFromId, provider });
@@ -106,9 +106,9 @@ export class TfService extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfServiceConfig
+  * @param options AwsServiceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfServiceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apprunner_service',
       terraformGeneratorMetadata: {
@@ -256,11 +256,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // encryption_configuration - computed: false, optional: true, required: false
-  private _encryptionConfiguration = new TfService.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
+  private _encryptionConfiguration = new AwsService.EncryptionConfigurationPropertyOutputReference(this, "encryption_configuration");
   public get encryptionConfiguration() {
     return this._encryptionConfiguration;
   }
-  public putEncryptionConfiguration(value: TfService.EncryptionConfigurationProperty) {
+  public putEncryptionConfiguration(value: AwsService.EncryptionConfigurationProperty) {
     this._encryptionConfiguration.internalValue = value;
   }
   public resetEncryptionConfiguration() {
@@ -272,11 +272,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // health_check_configuration - computed: false, optional: true, required: false
-  private _healthCheckConfiguration = new TfService.HealthCheckConfigurationPropertyOutputReference(this, "health_check_configuration");
+  private _healthCheckConfiguration = new AwsService.HealthCheckConfigurationPropertyOutputReference(this, "health_check_configuration");
   public get healthCheckConfiguration() {
     return this._healthCheckConfiguration;
   }
-  public putHealthCheckConfiguration(value: TfService.HealthCheckConfigurationProperty) {
+  public putHealthCheckConfiguration(value: AwsService.HealthCheckConfigurationProperty) {
     this._healthCheckConfiguration.internalValue = value;
   }
   public resetHealthCheckConfiguration() {
@@ -288,11 +288,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // instance_configuration - computed: false, optional: true, required: false
-  private _instanceConfiguration = new TfService.InstanceConfigurationPropertyOutputReference(this, "instance_configuration");
+  private _instanceConfiguration = new AwsService.InstanceConfigurationPropertyOutputReference(this, "instance_configuration");
   public get instanceConfiguration() {
     return this._instanceConfiguration;
   }
-  public putInstanceConfiguration(value: TfService.InstanceConfigurationProperty) {
+  public putInstanceConfiguration(value: AwsService.InstanceConfigurationProperty) {
     this._instanceConfiguration.internalValue = value;
   }
   public resetInstanceConfiguration() {
@@ -304,11 +304,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // network_configuration - computed: false, optional: true, required: false
-  private _networkConfiguration = new TfService.NetworkConfigurationPropertyOutputReference(this, "network_configuration");
+  private _networkConfiguration = new AwsService.NetworkConfigurationPropertyOutputReference(this, "network_configuration");
   public get networkConfiguration() {
     return this._networkConfiguration;
   }
-  public putNetworkConfiguration(value: TfService.NetworkConfigurationProperty) {
+  public putNetworkConfiguration(value: AwsService.NetworkConfigurationProperty) {
     this._networkConfiguration.internalValue = value;
   }
   public resetNetworkConfiguration() {
@@ -320,11 +320,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // observability_configuration - computed: false, optional: true, required: false
-  private _observabilityConfiguration = new TfService.ObservabilityConfigurationPropertyOutputReference(this, "observability_configuration");
+  private _observabilityConfiguration = new AwsService.ObservabilityConfigurationPropertyOutputReference(this, "observability_configuration");
   public get observabilityConfiguration() {
     return this._observabilityConfiguration;
   }
-  public putObservabilityConfiguration(value: TfService.ObservabilityConfigurationProperty) {
+  public putObservabilityConfiguration(value: AwsService.ObservabilityConfigurationProperty) {
     this._observabilityConfiguration.internalValue = value;
   }
   public resetObservabilityConfiguration() {
@@ -336,11 +336,11 @@ export class TfService extends cdktn.TerraformResource {
   }
 
   // source_configuration - computed: false, optional: false, required: true
-  private _sourceConfiguration = new TfService.SourceConfigurationPropertyOutputReference(this, "source_configuration");
+  private _sourceConfiguration = new AwsService.SourceConfigurationPropertyOutputReference(this, "source_configuration");
   public get sourceConfiguration() {
     return this._sourceConfiguration;
   }
-  public putSourceConfiguration(value: TfService.SourceConfigurationProperty) {
+  public putSourceConfiguration(value: AwsService.SourceConfigurationProperty) {
     this._sourceConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -360,12 +360,12 @@ export class TfService extends cdktn.TerraformResource {
       service_name: cdktn.stringToTerraform(this._serviceName),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      encryption_configuration: tfServiceEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
-      health_check_configuration: tfServiceHealthCheckConfigurationPropertyToTerraform(this._healthCheckConfiguration.internalValue),
-      instance_configuration: tfServiceInstanceConfigurationPropertyToTerraform(this._instanceConfiguration.internalValue),
-      network_configuration: tfServiceNetworkConfigurationPropertyToTerraform(this._networkConfiguration.internalValue),
-      observability_configuration: tfServiceObservabilityConfigurationPropertyToTerraform(this._observabilityConfiguration.internalValue),
-      source_configuration: tfServiceSourceConfigurationPropertyToTerraform(this._sourceConfiguration.internalValue),
+      encryption_configuration: awsServiceEncryptionConfigurationPropertyToTerraform(this._encryptionConfiguration.internalValue),
+      health_check_configuration: awsServiceHealthCheckConfigurationPropertyToTerraform(this._healthCheckConfiguration.internalValue),
+      instance_configuration: awsServiceInstanceConfigurationPropertyToTerraform(this._instanceConfiguration.internalValue),
+      network_configuration: awsServiceNetworkConfigurationPropertyToTerraform(this._networkConfiguration.internalValue),
+      observability_configuration: awsServiceObservabilityConfigurationPropertyToTerraform(this._observabilityConfiguration.internalValue),
+      source_configuration: awsServiceSourceConfigurationPropertyToTerraform(this._sourceConfiguration.internalValue),
     };
   }
 
@@ -408,40 +408,40 @@ export class TfService extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       encryption_configuration: {
-        value: tfServiceEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
+        value: awsServiceEncryptionConfigurationPropertyToHclTerraform(this._encryptionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfService.EncryptionConfigurationPropertyList",
+        storageClassType: "AwsService.EncryptionConfigurationPropertyList",
       },
       health_check_configuration: {
-        value: tfServiceHealthCheckConfigurationPropertyToHclTerraform(this._healthCheckConfiguration.internalValue),
+        value: awsServiceHealthCheckConfigurationPropertyToHclTerraform(this._healthCheckConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfService.HealthCheckConfigurationPropertyList",
+        storageClassType: "AwsService.HealthCheckConfigurationPropertyList",
       },
       instance_configuration: {
-        value: tfServiceInstanceConfigurationPropertyToHclTerraform(this._instanceConfiguration.internalValue),
+        value: awsServiceInstanceConfigurationPropertyToHclTerraform(this._instanceConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfService.InstanceConfigurationPropertyList",
+        storageClassType: "AwsService.InstanceConfigurationPropertyList",
       },
       network_configuration: {
-        value: tfServiceNetworkConfigurationPropertyToHclTerraform(this._networkConfiguration.internalValue),
+        value: awsServiceNetworkConfigurationPropertyToHclTerraform(this._networkConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfService.NetworkConfigurationPropertyList",
+        storageClassType: "AwsService.NetworkConfigurationPropertyList",
       },
       observability_configuration: {
-        value: tfServiceObservabilityConfigurationPropertyToHclTerraform(this._observabilityConfiguration.internalValue),
+        value: awsServiceObservabilityConfigurationPropertyToHclTerraform(this._observabilityConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfService.ObservabilityConfigurationPropertyList",
+        storageClassType: "AwsService.ObservabilityConfigurationPropertyList",
       },
       source_configuration: {
-        value: tfServiceSourceConfigurationPropertyToHclTerraform(this._sourceConfiguration.internalValue),
+        value: awsServiceSourceConfigurationPropertyToHclTerraform(this._sourceConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfService.SourceConfigurationPropertyList",
+        storageClassType: "AwsService.SourceConfigurationPropertyList",
       },
     };
 
@@ -450,7 +450,7 @@ export class TfService extends cdktn.TerraformResource {
   }
 }
 
-export function tfServiceEncryptionConfigurationPropertyToTerraform(struct?: TfService.EncryptionConfigurationPropertyOutputReference | TfService.EncryptionConfigurationProperty): any {
+export function awsServiceEncryptionConfigurationPropertyToTerraform(struct?: AwsService.EncryptionConfigurationPropertyOutputReference | AwsService.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -461,7 +461,7 @@ export function tfServiceEncryptionConfigurationPropertyToTerraform(struct?: TfS
 }
 
 
-export function tfServiceEncryptionConfigurationPropertyToHclTerraform(struct?: TfService.EncryptionConfigurationPropertyOutputReference | TfService.EncryptionConfigurationProperty): any {
+export function awsServiceEncryptionConfigurationPropertyToHclTerraform(struct?: AwsService.EncryptionConfigurationPropertyOutputReference | AwsService.EncryptionConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -480,7 +480,7 @@ export function tfServiceEncryptionConfigurationPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfServiceHealthCheckConfigurationPropertyToTerraform(struct?: TfService.HealthCheckConfigurationPropertyOutputReference | TfService.HealthCheckConfigurationProperty): any {
+export function awsServiceHealthCheckConfigurationPropertyToTerraform(struct?: AwsService.HealthCheckConfigurationPropertyOutputReference | AwsService.HealthCheckConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -496,7 +496,7 @@ export function tfServiceHealthCheckConfigurationPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfServiceHealthCheckConfigurationPropertyToHclTerraform(struct?: TfService.HealthCheckConfigurationPropertyOutputReference | TfService.HealthCheckConfigurationProperty): any {
+export function awsServiceHealthCheckConfigurationPropertyToHclTerraform(struct?: AwsService.HealthCheckConfigurationPropertyOutputReference | AwsService.HealthCheckConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -545,7 +545,7 @@ export function tfServiceHealthCheckConfigurationPropertyToHclTerraform(struct?:
 }
 
 
-export function tfServiceInstanceConfigurationPropertyToTerraform(struct?: TfService.InstanceConfigurationPropertyOutputReference | TfService.InstanceConfigurationProperty): any {
+export function awsServiceInstanceConfigurationPropertyToTerraform(struct?: AwsService.InstanceConfigurationPropertyOutputReference | AwsService.InstanceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -558,7 +558,7 @@ export function tfServiceInstanceConfigurationPropertyToTerraform(struct?: TfSer
 }
 
 
-export function tfServiceInstanceConfigurationPropertyToHclTerraform(struct?: TfService.InstanceConfigurationPropertyOutputReference | TfService.InstanceConfigurationProperty): any {
+export function awsServiceInstanceConfigurationPropertyToHclTerraform(struct?: AwsService.InstanceConfigurationPropertyOutputReference | AwsService.InstanceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -589,7 +589,7 @@ export function tfServiceInstanceConfigurationPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfServiceEgressConfigurationPropertyToTerraform(struct?: TfService.EgressConfigurationPropertyOutputReference | TfService.EgressConfigurationProperty): any {
+export function awsServiceEgressConfigurationPropertyToTerraform(struct?: AwsService.EgressConfigurationPropertyOutputReference | AwsService.EgressConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -601,7 +601,7 @@ export function tfServiceEgressConfigurationPropertyToTerraform(struct?: TfServi
 }
 
 
-export function tfServiceEgressConfigurationPropertyToHclTerraform(struct?: TfService.EgressConfigurationPropertyOutputReference | TfService.EgressConfigurationProperty): any {
+export function awsServiceEgressConfigurationPropertyToHclTerraform(struct?: AwsService.EgressConfigurationPropertyOutputReference | AwsService.EgressConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -626,7 +626,7 @@ export function tfServiceEgressConfigurationPropertyToHclTerraform(struct?: TfSe
 }
 
 
-export function tfServiceIngressConfigurationPropertyToTerraform(struct?: TfService.IngressConfigurationPropertyOutputReference | TfService.IngressConfigurationProperty): any {
+export function awsServiceIngressConfigurationPropertyToTerraform(struct?: AwsService.IngressConfigurationPropertyOutputReference | AwsService.IngressConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -637,7 +637,7 @@ export function tfServiceIngressConfigurationPropertyToTerraform(struct?: TfServ
 }
 
 
-export function tfServiceIngressConfigurationPropertyToHclTerraform(struct?: TfService.IngressConfigurationPropertyOutputReference | TfService.IngressConfigurationProperty): any {
+export function awsServiceIngressConfigurationPropertyToHclTerraform(struct?: AwsService.IngressConfigurationPropertyOutputReference | AwsService.IngressConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -656,20 +656,20 @@ export function tfServiceIngressConfigurationPropertyToHclTerraform(struct?: TfS
 }
 
 
-export function tfServiceNetworkConfigurationPropertyToTerraform(struct?: TfService.NetworkConfigurationPropertyOutputReference | TfService.NetworkConfigurationProperty): any {
+export function awsServiceNetworkConfigurationPropertyToTerraform(struct?: AwsService.NetworkConfigurationPropertyOutputReference | AwsService.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     ip_address_type: cdktn.stringToTerraform(struct!.ipAddressType),
-    egress_configuration: tfServiceEgressConfigurationPropertyToTerraform(struct!.egressConfiguration),
-    ingress_configuration: tfServiceIngressConfigurationPropertyToTerraform(struct!.ingressConfiguration),
+    egress_configuration: awsServiceEgressConfigurationPropertyToTerraform(struct!.egressConfiguration),
+    ingress_configuration: awsServiceIngressConfigurationPropertyToTerraform(struct!.ingressConfiguration),
   }
 }
 
 
-export function tfServiceNetworkConfigurationPropertyToHclTerraform(struct?: TfService.NetworkConfigurationPropertyOutputReference | TfService.NetworkConfigurationProperty): any {
+export function awsServiceNetworkConfigurationPropertyToHclTerraform(struct?: AwsService.NetworkConfigurationPropertyOutputReference | AwsService.NetworkConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -682,13 +682,13 @@ export function tfServiceNetworkConfigurationPropertyToHclTerraform(struct?: TfS
       storageClassType: "string",
     },
     egress_configuration: {
-      value: tfServiceEgressConfigurationPropertyToHclTerraform(struct!.egressConfiguration),
+      value: awsServiceEgressConfigurationPropertyToHclTerraform(struct!.egressConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "EgressConfigurationPropertyList",
     },
     ingress_configuration: {
-      value: tfServiceIngressConfigurationPropertyToHclTerraform(struct!.ingressConfiguration),
+      value: awsServiceIngressConfigurationPropertyToHclTerraform(struct!.ingressConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "IngressConfigurationPropertyList",
@@ -700,7 +700,7 @@ export function tfServiceNetworkConfigurationPropertyToHclTerraform(struct?: TfS
 }
 
 
-export function tfServiceObservabilityConfigurationPropertyToTerraform(struct?: TfService.ObservabilityConfigurationPropertyOutputReference | TfService.ObservabilityConfigurationProperty): any {
+export function awsServiceObservabilityConfigurationPropertyToTerraform(struct?: AwsService.ObservabilityConfigurationPropertyOutputReference | AwsService.ObservabilityConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -712,7 +712,7 @@ export function tfServiceObservabilityConfigurationPropertyToTerraform(struct?: 
 }
 
 
-export function tfServiceObservabilityConfigurationPropertyToHclTerraform(struct?: TfService.ObservabilityConfigurationPropertyOutputReference | TfService.ObservabilityConfigurationProperty): any {
+export function awsServiceObservabilityConfigurationPropertyToHclTerraform(struct?: AwsService.ObservabilityConfigurationPropertyOutputReference | AwsService.ObservabilityConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -737,7 +737,7 @@ export function tfServiceObservabilityConfigurationPropertyToHclTerraform(struct
 }
 
 
-export function tfServiceAuthenticationConfigurationPropertyToTerraform(struct?: TfService.AuthenticationConfigurationPropertyOutputReference | TfService.AuthenticationConfigurationProperty): any {
+export function awsServiceAuthenticationConfigurationPropertyToTerraform(struct?: AwsService.AuthenticationConfigurationPropertyOutputReference | AwsService.AuthenticationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -749,7 +749,7 @@ export function tfServiceAuthenticationConfigurationPropertyToTerraform(struct?:
 }
 
 
-export function tfServiceAuthenticationConfigurationPropertyToHclTerraform(struct?: TfService.AuthenticationConfigurationPropertyOutputReference | TfService.AuthenticationConfigurationProperty): any {
+export function awsServiceAuthenticationConfigurationPropertyToHclTerraform(struct?: AwsService.AuthenticationConfigurationPropertyOutputReference | AwsService.AuthenticationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -774,7 +774,7 @@ export function tfServiceAuthenticationConfigurationPropertyToHclTerraform(struc
 }
 
 
-export function tfServiceCodeConfigurationValuesPropertyToTerraform(struct?: TfService.CodeConfigurationValuesPropertyOutputReference | TfService.CodeConfigurationValuesProperty): any {
+export function awsServiceCodeConfigurationValuesPropertyToTerraform(struct?: AwsService.CodeConfigurationValuesPropertyOutputReference | AwsService.CodeConfigurationValuesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -790,7 +790,7 @@ export function tfServiceCodeConfigurationValuesPropertyToTerraform(struct?: TfS
 }
 
 
-export function tfServiceCodeConfigurationValuesPropertyToHclTerraform(struct?: TfService.CodeConfigurationValuesPropertyOutputReference | TfService.CodeConfigurationValuesProperty): any {
+export function awsServiceCodeConfigurationValuesPropertyToHclTerraform(struct?: AwsService.CodeConfigurationValuesPropertyOutputReference | AwsService.CodeConfigurationValuesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -839,19 +839,19 @@ export function tfServiceCodeConfigurationValuesPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfServiceCodeConfigurationPropertyToTerraform(struct?: TfService.CodeConfigurationPropertyOutputReference | TfService.CodeConfigurationProperty): any {
+export function awsServiceCodeConfigurationPropertyToTerraform(struct?: AwsService.CodeConfigurationPropertyOutputReference | AwsService.CodeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     configuration_source: cdktn.stringToTerraform(struct!.configurationSource),
-    code_configuration_values: tfServiceCodeConfigurationValuesPropertyToTerraform(struct!.codeConfigurationValues),
+    code_configuration_values: awsServiceCodeConfigurationValuesPropertyToTerraform(struct!.codeConfigurationValues),
   }
 }
 
 
-export function tfServiceCodeConfigurationPropertyToHclTerraform(struct?: TfService.CodeConfigurationPropertyOutputReference | TfService.CodeConfigurationProperty): any {
+export function awsServiceCodeConfigurationPropertyToHclTerraform(struct?: AwsService.CodeConfigurationPropertyOutputReference | AwsService.CodeConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -864,7 +864,7 @@ export function tfServiceCodeConfigurationPropertyToHclTerraform(struct?: TfServ
       storageClassType: "string",
     },
     code_configuration_values: {
-      value: tfServiceCodeConfigurationValuesPropertyToHclTerraform(struct!.codeConfigurationValues),
+      value: awsServiceCodeConfigurationValuesPropertyToHclTerraform(struct!.codeConfigurationValues),
       isBlock: true,
       type: "list",
       storageClassType: "CodeConfigurationValuesPropertyList",
@@ -876,7 +876,7 @@ export function tfServiceCodeConfigurationPropertyToHclTerraform(struct?: TfServ
 }
 
 
-export function tfServiceSourceCodeVersionPropertyToTerraform(struct?: TfService.SourceCodeVersionPropertyOutputReference | TfService.SourceCodeVersionProperty): any {
+export function awsServiceSourceCodeVersionPropertyToTerraform(struct?: AwsService.SourceCodeVersionPropertyOutputReference | AwsService.SourceCodeVersionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -888,7 +888,7 @@ export function tfServiceSourceCodeVersionPropertyToTerraform(struct?: TfService
 }
 
 
-export function tfServiceSourceCodeVersionPropertyToHclTerraform(struct?: TfService.SourceCodeVersionPropertyOutputReference | TfService.SourceCodeVersionProperty): any {
+export function awsServiceSourceCodeVersionPropertyToHclTerraform(struct?: AwsService.SourceCodeVersionPropertyOutputReference | AwsService.SourceCodeVersionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -913,7 +913,7 @@ export function tfServiceSourceCodeVersionPropertyToHclTerraform(struct?: TfServ
 }
 
 
-export function tfServiceCodeRepositoryPropertyToTerraform(struct?: TfService.CodeRepositoryPropertyOutputReference | TfService.CodeRepositoryProperty): any {
+export function awsServiceCodeRepositoryPropertyToTerraform(struct?: AwsService.CodeRepositoryPropertyOutputReference | AwsService.CodeRepositoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -921,13 +921,13 @@ export function tfServiceCodeRepositoryPropertyToTerraform(struct?: TfService.Co
   return {
     repository_url: cdktn.stringToTerraform(struct!.repositoryUrl),
     source_directory: cdktn.stringToTerraform(struct!.sourceDirectory),
-    code_configuration: tfServiceCodeConfigurationPropertyToTerraform(struct!.codeConfiguration),
-    source_code_version: tfServiceSourceCodeVersionPropertyToTerraform(struct!.sourceCodeVersion),
+    code_configuration: awsServiceCodeConfigurationPropertyToTerraform(struct!.codeConfiguration),
+    source_code_version: awsServiceSourceCodeVersionPropertyToTerraform(struct!.sourceCodeVersion),
   }
 }
 
 
-export function tfServiceCodeRepositoryPropertyToHclTerraform(struct?: TfService.CodeRepositoryPropertyOutputReference | TfService.CodeRepositoryProperty): any {
+export function awsServiceCodeRepositoryPropertyToHclTerraform(struct?: AwsService.CodeRepositoryPropertyOutputReference | AwsService.CodeRepositoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -946,13 +946,13 @@ export function tfServiceCodeRepositoryPropertyToHclTerraform(struct?: TfService
       storageClassType: "string",
     },
     code_configuration: {
-      value: tfServiceCodeConfigurationPropertyToHclTerraform(struct!.codeConfiguration),
+      value: awsServiceCodeConfigurationPropertyToHclTerraform(struct!.codeConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "CodeConfigurationPropertyList",
     },
     source_code_version: {
-      value: tfServiceSourceCodeVersionPropertyToHclTerraform(struct!.sourceCodeVersion),
+      value: awsServiceSourceCodeVersionPropertyToHclTerraform(struct!.sourceCodeVersion),
       isBlock: true,
       type: "list",
       storageClassType: "SourceCodeVersionPropertyList",
@@ -964,7 +964,7 @@ export function tfServiceCodeRepositoryPropertyToHclTerraform(struct?: TfService
 }
 
 
-export function tfServiceImageConfigurationPropertyToTerraform(struct?: TfService.ImageConfigurationPropertyOutputReference | TfService.ImageConfigurationProperty): any {
+export function awsServiceImageConfigurationPropertyToTerraform(struct?: AwsService.ImageConfigurationPropertyOutputReference | AwsService.ImageConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -978,7 +978,7 @@ export function tfServiceImageConfigurationPropertyToTerraform(struct?: TfServic
 }
 
 
-export function tfServiceImageConfigurationPropertyToHclTerraform(struct?: TfService.ImageConfigurationPropertyOutputReference | TfService.ImageConfigurationProperty): any {
+export function awsServiceImageConfigurationPropertyToHclTerraform(struct?: AwsService.ImageConfigurationPropertyOutputReference | AwsService.ImageConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1015,7 +1015,7 @@ export function tfServiceImageConfigurationPropertyToHclTerraform(struct?: TfSer
 }
 
 
-export function tfServiceImageRepositoryPropertyToTerraform(struct?: TfService.ImageRepositoryPropertyOutputReference | TfService.ImageRepositoryProperty): any {
+export function awsServiceImageRepositoryPropertyToTerraform(struct?: AwsService.ImageRepositoryPropertyOutputReference | AwsService.ImageRepositoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1023,12 +1023,12 @@ export function tfServiceImageRepositoryPropertyToTerraform(struct?: TfService.I
   return {
     image_identifier: cdktn.stringToTerraform(struct!.imageIdentifier),
     image_repository_type: cdktn.stringToTerraform(struct!.imageRepositoryType),
-    image_configuration: tfServiceImageConfigurationPropertyToTerraform(struct!.imageConfiguration),
+    image_configuration: awsServiceImageConfigurationPropertyToTerraform(struct!.imageConfiguration),
   }
 }
 
 
-export function tfServiceImageRepositoryPropertyToHclTerraform(struct?: TfService.ImageRepositoryPropertyOutputReference | TfService.ImageRepositoryProperty): any {
+export function awsServiceImageRepositoryPropertyToHclTerraform(struct?: AwsService.ImageRepositoryPropertyOutputReference | AwsService.ImageRepositoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1047,7 +1047,7 @@ export function tfServiceImageRepositoryPropertyToHclTerraform(struct?: TfServic
       storageClassType: "string",
     },
     image_configuration: {
-      value: tfServiceImageConfigurationPropertyToHclTerraform(struct!.imageConfiguration),
+      value: awsServiceImageConfigurationPropertyToHclTerraform(struct!.imageConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "ImageConfigurationPropertyList",
@@ -1059,21 +1059,21 @@ export function tfServiceImageRepositoryPropertyToHclTerraform(struct?: TfServic
 }
 
 
-export function tfServiceSourceConfigurationPropertyToTerraform(struct?: TfService.SourceConfigurationPropertyOutputReference | TfService.SourceConfigurationProperty): any {
+export function awsServiceSourceConfigurationPropertyToTerraform(struct?: AwsService.SourceConfigurationPropertyOutputReference | AwsService.SourceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     auto_deployments_enabled: cdktn.booleanToTerraform(struct!.autoDeploymentsEnabled),
-    authentication_configuration: tfServiceAuthenticationConfigurationPropertyToTerraform(struct!.authenticationConfiguration),
-    code_repository: tfServiceCodeRepositoryPropertyToTerraform(struct!.codeRepository),
-    image_repository: tfServiceImageRepositoryPropertyToTerraform(struct!.imageRepository),
+    authentication_configuration: awsServiceAuthenticationConfigurationPropertyToTerraform(struct!.authenticationConfiguration),
+    code_repository: awsServiceCodeRepositoryPropertyToTerraform(struct!.codeRepository),
+    image_repository: awsServiceImageRepositoryPropertyToTerraform(struct!.imageRepository),
   }
 }
 
 
-export function tfServiceSourceConfigurationPropertyToHclTerraform(struct?: TfService.SourceConfigurationPropertyOutputReference | TfService.SourceConfigurationProperty): any {
+export function awsServiceSourceConfigurationPropertyToHclTerraform(struct?: AwsService.SourceConfigurationPropertyOutputReference | AwsService.SourceConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1086,19 +1086,19 @@ export function tfServiceSourceConfigurationPropertyToHclTerraform(struct?: TfSe
       storageClassType: "boolean",
     },
     authentication_configuration: {
-      value: tfServiceAuthenticationConfigurationPropertyToHclTerraform(struct!.authenticationConfiguration),
+      value: awsServiceAuthenticationConfigurationPropertyToHclTerraform(struct!.authenticationConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "AuthenticationConfigurationPropertyList",
     },
     code_repository: {
-      value: tfServiceCodeRepositoryPropertyToHclTerraform(struct!.codeRepository),
+      value: awsServiceCodeRepositoryPropertyToHclTerraform(struct!.codeRepository),
       isBlock: true,
       type: "list",
       storageClassType: "CodeRepositoryPropertyList",
     },
     image_repository: {
-      value: tfServiceImageRepositoryPropertyToHclTerraform(struct!.imageRepository),
+      value: awsServiceImageRepositoryPropertyToHclTerraform(struct!.imageRepository),
       isBlock: true,
       type: "list",
       storageClassType: "ImageRepositoryPropertyList",
@@ -1110,10 +1110,10 @@ export function tfServiceSourceConfigurationPropertyToHclTerraform(struct?: TfSe
 }
 
 
-export namespace TfService {
+export namespace AwsService {
 export interface EncryptionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#kms_key TfService#kms_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#kms_key AwsService#kms_key}
   */
   readonly kmsKey: string;
 }
@@ -1164,27 +1164,27 @@ export class EncryptionConfigurationPropertyOutputReference extends cdktn.Comple
 }
 export interface HealthCheckConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#healthy_threshold TfService#healthy_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#healthy_threshold AwsService#healthy_threshold}
   */
   readonly healthyThreshold?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#interval TfService#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#interval AwsService#interval}
   */
   readonly interval?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#path TfService#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#path AwsService#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#protocol TfService#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#protocol AwsService#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#timeout TfService#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#timeout AwsService#timeout}
   */
   readonly timeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#unhealthy_threshold TfService#unhealthy_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#unhealthy_threshold AwsService#unhealthy_threshold}
   */
   readonly unhealthyThreshold?: number;
 }
@@ -1348,15 +1348,15 @@ export class HealthCheckConfigurationPropertyOutputReference extends cdktn.Compl
 }
 export interface InstanceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#cpu TfService#cpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#cpu AwsService#cpu}
   */
   readonly cpu?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#instance_role_arn TfService#instance_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#instance_role_arn AwsService#instance_role_arn}
   */
   readonly instanceRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#memory TfService#memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#memory AwsService#memory}
   */
   readonly memory?: string;
 }
@@ -1454,11 +1454,11 @@ export class InstanceConfigurationPropertyOutputReference extends cdktn.ComplexO
 }
 export interface EgressConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#egress_type TfService#egress_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#egress_type AwsService#egress_type}
   */
   readonly egressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#vpc_connector_arn TfService#vpc_connector_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#vpc_connector_arn AwsService#vpc_connector_arn}
   */
   readonly vpcConnectorArn?: string;
 }
@@ -1534,7 +1534,7 @@ export class EgressConfigurationPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface IngressConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#is_publicly_accessible TfService#is_publicly_accessible}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#is_publicly_accessible AwsService#is_publicly_accessible}
   */
   readonly isPubliclyAccessible?: boolean | cdktn.IResolvable;
 }
@@ -1588,19 +1588,19 @@ export class IngressConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface NetworkConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#ip_address_type TfService#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#ip_address_type AwsService#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
   * egress_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#egress_configuration TfService#egress_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#egress_configuration AwsService#egress_configuration}
   */
   readonly egressConfiguration?: EgressConfigurationProperty;
   /**
   * ingress_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#ingress_configuration TfService#ingress_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#ingress_configuration AwsService#ingress_configuration}
   */
   readonly ingressConfiguration?: IngressConfigurationProperty;
 }
@@ -1698,11 +1698,11 @@ export class NetworkConfigurationPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface ObservabilityConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#observability_configuration_arn TfService#observability_configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#observability_configuration_arn AwsService#observability_configuration_arn}
   */
   readonly observabilityConfigurationArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#observability_enabled TfService#observability_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#observability_enabled AwsService#observability_enabled}
   */
   readonly observabilityEnabled: boolean | cdktn.IResolvable;
 }
@@ -1775,11 +1775,11 @@ export class ObservabilityConfigurationPropertyOutputReference extends cdktn.Com
 }
 export interface AuthenticationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#access_role_arn TfService#access_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#access_role_arn AwsService#access_role_arn}
   */
   readonly accessRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#connection_arn TfService#connection_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#connection_arn AwsService#connection_arn}
   */
   readonly connectionArn?: string;
 }
@@ -1855,27 +1855,27 @@ export class AuthenticationConfigurationPropertyOutputReference extends cdktn.Co
 }
 export interface CodeConfigurationValuesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#build_command TfService#build_command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#build_command AwsService#build_command}
   */
   readonly buildCommand?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#port TfService#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#port AwsService#port}
   */
   readonly port?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#runtime TfService#runtime}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#runtime AwsService#runtime}
   */
   readonly runtime: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#runtime_environment_secrets TfService#runtime_environment_secrets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#runtime_environment_secrets AwsService#runtime_environment_secrets}
   */
   readonly runtimeEnvironmentSecrets?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#runtime_environment_variables TfService#runtime_environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#runtime_environment_variables AwsService#runtime_environment_variables}
   */
   readonly runtimeEnvironmentVariables?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#start_command TfService#start_command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#start_command AwsService#start_command}
   */
   readonly startCommand?: string;
 }
@@ -2036,13 +2036,13 @@ export class CodeConfigurationValuesPropertyOutputReference extends cdktn.Comple
 }
 export interface CodeConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#configuration_source TfService#configuration_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#configuration_source AwsService#configuration_source}
   */
   readonly configurationSource: string;
   /**
   * code_configuration_values block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#code_configuration_values TfService#code_configuration_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#code_configuration_values AwsService#code_configuration_values}
   */
   readonly codeConfigurationValues?: CodeConfigurationValuesProperty;
 }
@@ -2115,11 +2115,11 @@ export class CodeConfigurationPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface SourceCodeVersionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#type TfService#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#type AwsService#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#value TfService#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#value AwsService#value}
   */
   readonly value: string;
 }
@@ -2189,23 +2189,23 @@ export class SourceCodeVersionPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface CodeRepositoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#repository_url TfService#repository_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#repository_url AwsService#repository_url}
   */
   readonly repositoryUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#source_directory TfService#source_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#source_directory AwsService#source_directory}
   */
   readonly sourceDirectory?: string;
   /**
   * code_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#code_configuration TfService#code_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#code_configuration AwsService#code_configuration}
   */
   readonly codeConfiguration?: CodeConfigurationProperty;
   /**
   * source_code_version block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#source_code_version TfService#source_code_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#source_code_version AwsService#source_code_version}
   */
   readonly sourceCodeVersion: SourceCodeVersionProperty;
 }
@@ -2319,19 +2319,19 @@ export class CodeRepositoryPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ImageConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#port TfService#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#port AwsService#port}
   */
   readonly port?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#runtime_environment_secrets TfService#runtime_environment_secrets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#runtime_environment_secrets AwsService#runtime_environment_secrets}
   */
   readonly runtimeEnvironmentSecrets?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#runtime_environment_variables TfService#runtime_environment_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#runtime_environment_variables AwsService#runtime_environment_variables}
   */
   readonly runtimeEnvironmentVariables?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#start_command TfService#start_command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#start_command AwsService#start_command}
   */
   readonly startCommand?: string;
 }
@@ -2451,17 +2451,17 @@ export class ImageConfigurationPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface ImageRepositoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#image_identifier TfService#image_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#image_identifier AwsService#image_identifier}
   */
   readonly imageIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#image_repository_type TfService#image_repository_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#image_repository_type AwsService#image_repository_type}
   */
   readonly imageRepositoryType: string;
   /**
   * image_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#image_configuration TfService#image_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#image_configuration AwsService#image_configuration}
   */
   readonly imageConfiguration?: ImageConfigurationProperty;
 }
@@ -2553,25 +2553,25 @@ export class ImageRepositoryPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface SourceConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#auto_deployments_enabled TfService#auto_deployments_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#auto_deployments_enabled AwsService#auto_deployments_enabled}
   */
   readonly autoDeploymentsEnabled?: boolean | cdktn.IResolvable;
   /**
   * authentication_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#authentication_configuration TfService#authentication_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#authentication_configuration AwsService#authentication_configuration}
   */
   readonly authenticationConfiguration?: AuthenticationConfigurationProperty;
   /**
   * code_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#code_repository TfService#code_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#code_repository AwsService#code_repository}
   */
   readonly codeRepository?: CodeRepositoryProperty;
   /**
   * image_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#image_repository TfService#image_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apprunner_service#image_repository AwsService#image_repository}
   */
   readonly imageRepository?: ImageRepositoryProperty;
 }

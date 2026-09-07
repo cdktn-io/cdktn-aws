@@ -5,62 +5,62 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfFargateProfileConfig extends cdktn.TerraformMetaArguments {
+export interface AwsFargateProfileConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#cluster_name TfFargateProfile#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#cluster_name AwsFargateProfile#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#fargate_profile_name TfFargateProfile#fargate_profile_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#fargate_profile_name AwsFargateProfile#fargate_profile_name}
   */
   readonly fargateProfileName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#id TfFargateProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#id AwsFargateProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#pod_execution_role_arn TfFargateProfile#pod_execution_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#pod_execution_role_arn AwsFargateProfile#pod_execution_role_arn}
   */
   readonly podExecutionRoleArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#region TfFargateProfile#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#region AwsFargateProfile#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#subnet_ids TfFargateProfile#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#subnet_ids AwsFargateProfile#subnet_ids}
   */
   readonly subnetIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#tags TfFargateProfile#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#tags AwsFargateProfile#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#tags_all TfFargateProfile#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#tags_all AwsFargateProfile#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * selector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#selector TfFargateProfile#selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#selector AwsFargateProfile#selector}
   */
-  readonly selector: TfFargateProfile.SelectorProperty[] | cdktn.IResolvable;
+  readonly selector: AwsFargateProfile.SelectorProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#timeouts TfFargateProfile#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#timeouts AwsFargateProfile#timeouts}
   */
-  readonly timeouts?: TfFargateProfile.TimeoutsProperty;
+  readonly timeouts?: AwsFargateProfile.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile aws_eks_fargate_profile}
 */
-export class TfFargateProfile extends cdktn.TerraformResource {
+export class AwsFargateProfile extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -71,11 +71,11 @@ export class TfFargateProfile extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfFargateProfile resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsFargateProfile resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfFargateProfile to import
-  * @param importFromId The id of the existing TfFargateProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfFargateProfile to import is found
+  * @param importToId The construct id used in the generated config for the AwsFargateProfile to import
+  * @param importFromId The id of the existing AwsFargateProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsFargateProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eks_fargate_profile", importId: importFromId, provider });
@@ -90,9 +90,9 @@ export class TfFargateProfile extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfFargateProfileConfig
+  * @param options AwsFargateProfileConfig
   */
-  public constructor(scope: Construct, id: string, config: TfFargateProfileConfig) {
+  public constructor(scope: Construct, id: string, config: AwsFargateProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_eks_fargate_profile',
       terraformGeneratorMetadata: {
@@ -254,11 +254,11 @@ export class TfFargateProfile extends cdktn.TerraformResource {
   }
 
   // selector - computed: false, optional: false, required: true
-  private _selector = new TfFargateProfile.SelectorPropertyList(this, "selector", true);
+  private _selector = new AwsFargateProfile.SelectorPropertyList(this, "selector", true);
   public get selector() {
     return this._selector;
   }
-  public putSelector(value: TfFargateProfile.SelectorProperty[] | cdktn.IResolvable) {
+  public putSelector(value: AwsFargateProfile.SelectorProperty[] | cdktn.IResolvable) {
     this._selector.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -267,11 +267,11 @@ export class TfFargateProfile extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfFargateProfile.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsFargateProfile.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfFargateProfile.TimeoutsProperty) {
+  public putTimeouts(value: AwsFargateProfile.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -296,8 +296,8 @@ export class TfFargateProfile extends cdktn.TerraformResource {
       subnet_ids: cdktn.listMapper(cdktn.stringToTerraform, false)(this._subnetIds),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      selector: cdktn.listMapper(tfFargateProfileSelectorPropertyToTerraform, true)(this._selector.internalValue),
-      timeouts: tfFargateProfileTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      selector: cdktn.listMapper(awsFargateProfileSelectorPropertyToTerraform, true)(this._selector.internalValue),
+      timeouts: awsFargateProfileTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -352,16 +352,16 @@ export class TfFargateProfile extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       selector: {
-        value: cdktn.listMapperHcl(tfFargateProfileSelectorPropertyToHclTerraform, true)(this._selector.internalValue),
+        value: cdktn.listMapperHcl(awsFargateProfileSelectorPropertyToHclTerraform, true)(this._selector.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfFargateProfile.SelectorPropertyList",
+        storageClassType: "AwsFargateProfile.SelectorPropertyList",
       },
       timeouts: {
-        value: tfFargateProfileTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsFargateProfileTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfFargateProfile.TimeoutsProperty",
+        storageClassType: "AwsFargateProfile.TimeoutsProperty",
       },
     };
 
@@ -370,7 +370,7 @@ export class TfFargateProfile extends cdktn.TerraformResource {
   }
 }
 
-export function tfFargateProfileSelectorPropertyToTerraform(struct?: TfFargateProfile.SelectorProperty | cdktn.IResolvable): any {
+export function awsFargateProfileSelectorPropertyToTerraform(struct?: AwsFargateProfile.SelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -382,7 +382,7 @@ export function tfFargateProfileSelectorPropertyToTerraform(struct?: TfFargatePr
 }
 
 
-export function tfFargateProfileSelectorPropertyToHclTerraform(struct?: TfFargateProfile.SelectorProperty | cdktn.IResolvable): any {
+export function awsFargateProfileSelectorPropertyToHclTerraform(struct?: AwsFargateProfile.SelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -407,7 +407,7 @@ export function tfFargateProfileSelectorPropertyToHclTerraform(struct?: TfFargat
 }
 
 
-export function tfFargateProfileTimeoutsPropertyToTerraform(struct?: TfFargateProfile.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsFargateProfileTimeoutsPropertyToTerraform(struct?: AwsFargateProfile.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -419,7 +419,7 @@ export function tfFargateProfileTimeoutsPropertyToTerraform(struct?: TfFargatePr
 }
 
 
-export function tfFargateProfileTimeoutsPropertyToHclTerraform(struct?: TfFargateProfile.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsFargateProfileTimeoutsPropertyToHclTerraform(struct?: AwsFargateProfile.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -444,14 +444,14 @@ export function tfFargateProfileTimeoutsPropertyToHclTerraform(struct?: TfFargat
 }
 
 
-export namespace TfFargateProfile {
+export namespace AwsFargateProfile {
 export interface SelectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#labels TfFargateProfile#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#labels AwsFargateProfile#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#namespace TfFargateProfile#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#namespace AwsFargateProfile#namespace}
   */
   readonly namespace: string;
 }
@@ -556,11 +556,11 @@ export class SelectorPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#create TfFargateProfile#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#create AwsFargateProfile#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#delete TfFargateProfile#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_fargate_profile#delete AwsFargateProfile#delete}
   */
   readonly delete?: string;
 }

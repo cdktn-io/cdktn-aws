@@ -5,30 +5,30 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDefaultVpcDhcpOptionsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDefaultVpcDhcpOptionsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_vpc_dhcp_options#id TfDefaultVpcDhcpOptions#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_vpc_dhcp_options#id AwsDefaultVpcDhcpOptions#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_vpc_dhcp_options#owner_id TfDefaultVpcDhcpOptions#owner_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_vpc_dhcp_options#owner_id AwsDefaultVpcDhcpOptions#owner_id}
   */
   readonly ownerId?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_vpc_dhcp_options#region TfDefaultVpcDhcpOptions#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_vpc_dhcp_options#region AwsDefaultVpcDhcpOptions#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_vpc_dhcp_options#tags TfDefaultVpcDhcpOptions#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_vpc_dhcp_options#tags AwsDefaultVpcDhcpOptions#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_vpc_dhcp_options#tags_all TfDefaultVpcDhcpOptions#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_vpc_dhcp_options#tags_all AwsDefaultVpcDhcpOptions#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
 }
@@ -36,7 +36,7 @@ export interface TfDefaultVpcDhcpOptionsConfig extends cdktn.TerraformMetaArgume
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_vpc_dhcp_options aws_default_vpc_dhcp_options}
 */
-export class TfDefaultVpcDhcpOptions extends cdktn.TerraformResource {
+export class AwsDefaultVpcDhcpOptions extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -47,11 +47,11 @@ export class TfDefaultVpcDhcpOptions extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDefaultVpcDhcpOptions resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDefaultVpcDhcpOptions resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDefaultVpcDhcpOptions to import
-  * @param importFromId The id of the existing TfDefaultVpcDhcpOptions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_vpc_dhcp_options#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDefaultVpcDhcpOptions to import is found
+  * @param importToId The construct id used in the generated config for the AwsDefaultVpcDhcpOptions to import
+  * @param importFromId The id of the existing AwsDefaultVpcDhcpOptions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/default_vpc_dhcp_options#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDefaultVpcDhcpOptions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_default_vpc_dhcp_options", importId: importFromId, provider });
@@ -66,9 +66,9 @@ export class TfDefaultVpcDhcpOptions extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDefaultVpcDhcpOptionsConfig = {}
+  * @param options AwsDefaultVpcDhcpOptionsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfDefaultVpcDhcpOptionsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsDefaultVpcDhcpOptionsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_default_vpc_dhcp_options',
       terraformGeneratorMetadata: {

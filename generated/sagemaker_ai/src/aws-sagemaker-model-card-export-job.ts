@@ -5,43 +5,43 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfModelCardExportJobConfig extends cdktn.TerraformMetaArguments {
+export interface AwsModelCardExportJobConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#model_card_export_job_name TfModelCardExportJob#model_card_export_job_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#model_card_export_job_name AwsModelCardExportJob#model_card_export_job_name}
   */
   readonly modelCardExportJobName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#model_card_name TfModelCardExportJob#model_card_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#model_card_name AwsModelCardExportJob#model_card_name}
   */
   readonly modelCardName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#model_card_version TfModelCardExportJob#model_card_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#model_card_version AwsModelCardExportJob#model_card_version}
   */
   readonly modelCardVersion?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#region TfModelCardExportJob#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#region AwsModelCardExportJob#region}
   */
   readonly region?: string;
   /**
   * output_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#output_config TfModelCardExportJob#output_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#output_config AwsModelCardExportJob#output_config}
   */
-  readonly outputConfig?: TfModelCardExportJob.OutputConfigProperty[] | cdktn.IResolvable;
+  readonly outputConfig?: AwsModelCardExportJob.OutputConfigProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#timeouts TfModelCardExportJob#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#timeouts AwsModelCardExportJob#timeouts}
   */
-  readonly timeouts?: TfModelCardExportJob.TimeoutsProperty;
+  readonly timeouts?: AwsModelCardExportJob.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job aws_sagemaker_model_card_export_job}
 */
-export class TfModelCardExportJob extends cdktn.TerraformResource {
+export class AwsModelCardExportJob extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -52,11 +52,11 @@ export class TfModelCardExportJob extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfModelCardExportJob resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsModelCardExportJob resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfModelCardExportJob to import
-  * @param importFromId The id of the existing TfModelCardExportJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfModelCardExportJob to import is found
+  * @param importToId The construct id used in the generated config for the AwsModelCardExportJob to import
+  * @param importFromId The id of the existing AwsModelCardExportJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsModelCardExportJob to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_model_card_export_job", importId: importFromId, provider });
@@ -71,9 +71,9 @@ export class TfModelCardExportJob extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfModelCardExportJobConfig
+  * @param options AwsModelCardExportJobConfig
   */
-  public constructor(scope: Construct, id: string, config: TfModelCardExportJobConfig) {
+  public constructor(scope: Construct, id: string, config: AwsModelCardExportJobConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_model_card_export_job',
       terraformGeneratorMetadata: {
@@ -102,7 +102,7 @@ export class TfModelCardExportJob extends cdktn.TerraformResource {
   // ==========
 
   // export_artifacts - computed: true, optional: false, required: false
-  private _exportArtifacts = new TfModelCardExportJob.ExportArtifactsPropertyList(this, "export_artifacts", false);
+  private _exportArtifacts = new AwsModelCardExportJob.ExportArtifactsPropertyList(this, "export_artifacts", false);
   public get exportArtifacts() {
     return this._exportArtifacts;
   }
@@ -171,11 +171,11 @@ export class TfModelCardExportJob extends cdktn.TerraformResource {
   }
 
   // output_config - computed: false, optional: true, required: false
-  private _outputConfig = new TfModelCardExportJob.OutputConfigPropertyList(this, "output_config", false);
+  private _outputConfig = new AwsModelCardExportJob.OutputConfigPropertyList(this, "output_config", false);
   public get outputConfig() {
     return this._outputConfig;
   }
-  public putOutputConfig(value: TfModelCardExportJob.OutputConfigProperty[] | cdktn.IResolvable) {
+  public putOutputConfig(value: AwsModelCardExportJob.OutputConfigProperty[] | cdktn.IResolvable) {
     this._outputConfig.internalValue = value;
   }
   public resetOutputConfig() {
@@ -187,11 +187,11 @@ export class TfModelCardExportJob extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfModelCardExportJob.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsModelCardExportJob.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfModelCardExportJob.TimeoutsProperty) {
+  public putTimeouts(value: AwsModelCardExportJob.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -212,8 +212,8 @@ export class TfModelCardExportJob extends cdktn.TerraformResource {
       model_card_name: cdktn.stringToTerraform(this._modelCardName),
       model_card_version: cdktn.numberToTerraform(this._modelCardVersion),
       region: cdktn.stringToTerraform(this._region),
-      output_config: cdktn.listMapper(tfModelCardExportJobOutputConfigPropertyToTerraform, true)(this._outputConfig.internalValue),
-      timeouts: tfModelCardExportJobTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      output_config: cdktn.listMapper(awsModelCardExportJobOutputConfigPropertyToTerraform, true)(this._outputConfig.internalValue),
+      timeouts: awsModelCardExportJobTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -244,16 +244,16 @@ export class TfModelCardExportJob extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       output_config: {
-        value: cdktn.listMapperHcl(tfModelCardExportJobOutputConfigPropertyToHclTerraform, true)(this._outputConfig.internalValue),
+        value: cdktn.listMapperHcl(awsModelCardExportJobOutputConfigPropertyToHclTerraform, true)(this._outputConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfModelCardExportJob.OutputConfigPropertyList",
+        storageClassType: "AwsModelCardExportJob.OutputConfigPropertyList",
       },
       timeouts: {
-        value: tfModelCardExportJobTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsModelCardExportJobTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfModelCardExportJob.TimeoutsProperty",
+        storageClassType: "AwsModelCardExportJob.TimeoutsProperty",
       },
     };
 
@@ -262,7 +262,7 @@ export class TfModelCardExportJob extends cdktn.TerraformResource {
   }
 }
 
-export function tfModelCardExportJobExportArtifactsPropertyToTerraform(struct?: TfModelCardExportJob.ExportArtifactsProperty): any {
+export function awsModelCardExportJobExportArtifactsPropertyToTerraform(struct?: AwsModelCardExportJob.ExportArtifactsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -272,7 +272,7 @@ export function tfModelCardExportJobExportArtifactsPropertyToTerraform(struct?: 
 }
 
 
-export function tfModelCardExportJobExportArtifactsPropertyToHclTerraform(struct?: TfModelCardExportJob.ExportArtifactsProperty): any {
+export function awsModelCardExportJobExportArtifactsPropertyToHclTerraform(struct?: AwsModelCardExportJob.ExportArtifactsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -283,7 +283,7 @@ export function tfModelCardExportJobExportArtifactsPropertyToHclTerraform(struct
 }
 
 
-export function tfModelCardExportJobOutputConfigPropertyToTerraform(struct?: TfModelCardExportJob.OutputConfigProperty | cdktn.IResolvable): any {
+export function awsModelCardExportJobOutputConfigPropertyToTerraform(struct?: AwsModelCardExportJob.OutputConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -294,7 +294,7 @@ export function tfModelCardExportJobOutputConfigPropertyToTerraform(struct?: TfM
 }
 
 
-export function tfModelCardExportJobOutputConfigPropertyToHclTerraform(struct?: TfModelCardExportJob.OutputConfigProperty | cdktn.IResolvable): any {
+export function awsModelCardExportJobOutputConfigPropertyToHclTerraform(struct?: AwsModelCardExportJob.OutputConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function tfModelCardExportJobOutputConfigPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfModelCardExportJobTimeoutsPropertyToTerraform(struct?: TfModelCardExportJob.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsModelCardExportJobTimeoutsPropertyToTerraform(struct?: AwsModelCardExportJob.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -324,7 +324,7 @@ export function tfModelCardExportJobTimeoutsPropertyToTerraform(struct?: TfModel
 }
 
 
-export function tfModelCardExportJobTimeoutsPropertyToHclTerraform(struct?: TfModelCardExportJob.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsModelCardExportJobTimeoutsPropertyToHclTerraform(struct?: AwsModelCardExportJob.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -343,7 +343,7 @@ export function tfModelCardExportJobTimeoutsPropertyToHclTerraform(struct?: TfMo
 }
 
 
-export namespace TfModelCardExportJob {
+export namespace AwsModelCardExportJob {
 export interface ExportArtifactsProperty {
 }
 export class ExportArtifactsPropertyOutputReference extends cdktn.ComplexObject {
@@ -400,7 +400,7 @@ export class ExportArtifactsPropertyList extends cdktn.ComplexList {
 }
 export interface OutputConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#s3_output_path TfModelCardExportJob#s3_output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#s3_output_path AwsModelCardExportJob#s3_output_path}
   */
   readonly s3OutputPath: string;
 }
@@ -485,7 +485,7 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#create TfModelCardExportJob#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_model_card_export_job#create AwsModelCardExportJob#create}
   */
   readonly create?: string;
 }

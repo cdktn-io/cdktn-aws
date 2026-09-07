@@ -5,23 +5,23 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataShareAuthorizationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDataShareAuthorizationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_authorization#allow_writes TfDataShareAuthorization#allow_writes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_authorization#allow_writes AwsDataShareAuthorization#allow_writes}
   */
   readonly allowWrites?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_authorization#consumer_identifier TfDataShareAuthorization#consumer_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_authorization#consumer_identifier AwsDataShareAuthorization#consumer_identifier}
   */
   readonly consumerIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_authorization#data_share_arn TfDataShareAuthorization#data_share_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_authorization#data_share_arn AwsDataShareAuthorization#data_share_arn}
   */
   readonly dataShareArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_authorization#region TfDataShareAuthorization#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_authorization#region AwsDataShareAuthorization#region}
   */
   readonly region?: string;
 }
@@ -29,7 +29,7 @@ export interface TfDataShareAuthorizationConfig extends cdktn.TerraformMetaArgum
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_authorization aws_redshift_data_share_authorization}
 */
-export class TfDataShareAuthorization extends cdktn.TerraformResource {
+export class AwsDataShareAuthorization extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -40,11 +40,11 @@ export class TfDataShareAuthorization extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataShareAuthorization resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDataShareAuthorization resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataShareAuthorization to import
-  * @param importFromId The id of the existing TfDataShareAuthorization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_authorization#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataShareAuthorization to import is found
+  * @param importToId The construct id used in the generated config for the AwsDataShareAuthorization to import
+  * @param importFromId The id of the existing AwsDataShareAuthorization that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_authorization#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDataShareAuthorization to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshift_data_share_authorization", importId: importFromId, provider });
@@ -59,9 +59,9 @@ export class TfDataShareAuthorization extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataShareAuthorizationConfig
+  * @param options AwsDataShareAuthorizationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataShareAuthorizationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDataShareAuthorizationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshift_data_share_authorization',
       terraformGeneratorMetadata: {

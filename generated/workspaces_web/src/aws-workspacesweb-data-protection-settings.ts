@@ -5,45 +5,45 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataProtectionSettingsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDataProtectionSettingsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#additional_encryption_context TfDataProtectionSettings#additional_encryption_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#additional_encryption_context AwsDataProtectionSettings#additional_encryption_context}
   */
   readonly additionalEncryptionContext?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#customer_managed_key TfDataProtectionSettings#customer_managed_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#customer_managed_key AwsDataProtectionSettings#customer_managed_key}
   */
   readonly customerManagedKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#description TfDataProtectionSettings#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#description AwsDataProtectionSettings#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#display_name TfDataProtectionSettings#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#display_name AwsDataProtectionSettings#display_name}
   */
   readonly displayName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#region TfDataProtectionSettings#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#region AwsDataProtectionSettings#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#tags TfDataProtectionSettings#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#tags AwsDataProtectionSettings#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * inline_redaction_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#inline_redaction_configuration TfDataProtectionSettings#inline_redaction_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#inline_redaction_configuration AwsDataProtectionSettings#inline_redaction_configuration}
   */
-  readonly inlineRedactionConfiguration?: TfDataProtectionSettings.InlineRedactionConfigurationProperty[] | cdktn.IResolvable;
+  readonly inlineRedactionConfiguration?: AwsDataProtectionSettings.InlineRedactionConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings aws_workspacesweb_data_protection_settings}
 */
-export class TfDataProtectionSettings extends cdktn.TerraformResource {
+export class AwsDataProtectionSettings extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -54,11 +54,11 @@ export class TfDataProtectionSettings extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataProtectionSettings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDataProtectionSettings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataProtectionSettings to import
-  * @param importFromId The id of the existing TfDataProtectionSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataProtectionSettings to import is found
+  * @param importToId The construct id used in the generated config for the AwsDataProtectionSettings to import
+  * @param importFromId The id of the existing AwsDataProtectionSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDataProtectionSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspacesweb_data_protection_settings", importId: importFromId, provider });
@@ -73,9 +73,9 @@ export class TfDataProtectionSettings extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataProtectionSettingsConfig
+  * @param options AwsDataProtectionSettingsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataProtectionSettingsConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDataProtectionSettingsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workspacesweb_data_protection_settings',
       terraformGeneratorMetadata: {
@@ -214,11 +214,11 @@ export class TfDataProtectionSettings extends cdktn.TerraformResource {
   }
 
   // inline_redaction_configuration - computed: false, optional: true, required: false
-  private _inlineRedactionConfiguration = new TfDataProtectionSettings.InlineRedactionConfigurationPropertyList(this, "inline_redaction_configuration", false);
+  private _inlineRedactionConfiguration = new AwsDataProtectionSettings.InlineRedactionConfigurationPropertyList(this, "inline_redaction_configuration", false);
   public get inlineRedactionConfiguration() {
     return this._inlineRedactionConfiguration;
   }
-  public putInlineRedactionConfiguration(value: TfDataProtectionSettings.InlineRedactionConfigurationProperty[] | cdktn.IResolvable) {
+  public putInlineRedactionConfiguration(value: AwsDataProtectionSettings.InlineRedactionConfigurationProperty[] | cdktn.IResolvable) {
     this._inlineRedactionConfiguration.internalValue = value;
   }
   public resetInlineRedactionConfiguration() {
@@ -241,7 +241,7 @@ export class TfDataProtectionSettings extends cdktn.TerraformResource {
       display_name: cdktn.stringToTerraform(this._displayName),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      inline_redaction_configuration: cdktn.listMapper(tfDataProtectionSettingsInlineRedactionConfigurationPropertyToTerraform, true)(this._inlineRedactionConfiguration.internalValue),
+      inline_redaction_configuration: cdktn.listMapper(awsDataProtectionSettingsInlineRedactionConfigurationPropertyToTerraform, true)(this._inlineRedactionConfiguration.internalValue),
     };
   }
 
@@ -284,10 +284,10 @@ export class TfDataProtectionSettings extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       inline_redaction_configuration: {
-        value: cdktn.listMapperHcl(tfDataProtectionSettingsInlineRedactionConfigurationPropertyToHclTerraform, true)(this._inlineRedactionConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsDataProtectionSettingsInlineRedactionConfigurationPropertyToHclTerraform, true)(this._inlineRedactionConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDataProtectionSettings.InlineRedactionConfigurationPropertyList",
+        storageClassType: "AwsDataProtectionSettings.InlineRedactionConfigurationPropertyList",
       },
     };
 
@@ -296,7 +296,7 @@ export class TfDataProtectionSettings extends cdktn.TerraformResource {
   }
 }
 
-export function tfDataProtectionSettingsCustomPatternPropertyToTerraform(struct?: TfDataProtectionSettings.CustomPatternProperty | cdktn.IResolvable): any {
+export function awsDataProtectionSettingsCustomPatternPropertyToTerraform(struct?: AwsDataProtectionSettings.CustomPatternProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -310,7 +310,7 @@ export function tfDataProtectionSettingsCustomPatternPropertyToTerraform(struct?
 }
 
 
-export function tfDataProtectionSettingsCustomPatternPropertyToHclTerraform(struct?: TfDataProtectionSettings.CustomPatternProperty | cdktn.IResolvable): any {
+export function awsDataProtectionSettingsCustomPatternPropertyToHclTerraform(struct?: AwsDataProtectionSettings.CustomPatternProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function tfDataProtectionSettingsCustomPatternPropertyToHclTerraform(stru
 }
 
 
-export function tfDataProtectionSettingsRedactionPlaceHolderPropertyToTerraform(struct?: TfDataProtectionSettings.RedactionPlaceHolderProperty | cdktn.IResolvable): any {
+export function awsDataProtectionSettingsRedactionPlaceHolderPropertyToTerraform(struct?: AwsDataProtectionSettings.RedactionPlaceHolderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -359,7 +359,7 @@ export function tfDataProtectionSettingsRedactionPlaceHolderPropertyToTerraform(
 }
 
 
-export function tfDataProtectionSettingsRedactionPlaceHolderPropertyToHclTerraform(struct?: TfDataProtectionSettings.RedactionPlaceHolderProperty | cdktn.IResolvable): any {
+export function awsDataProtectionSettingsRedactionPlaceHolderPropertyToHclTerraform(struct?: AwsDataProtectionSettings.RedactionPlaceHolderProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -384,7 +384,7 @@ export function tfDataProtectionSettingsRedactionPlaceHolderPropertyToHclTerrafo
 }
 
 
-export function tfDataProtectionSettingsInlineRedactionPatternPropertyToTerraform(struct?: TfDataProtectionSettings.InlineRedactionPatternProperty | cdktn.IResolvable): any {
+export function awsDataProtectionSettingsInlineRedactionPatternPropertyToTerraform(struct?: AwsDataProtectionSettings.InlineRedactionPatternProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -394,13 +394,13 @@ export function tfDataProtectionSettingsInlineRedactionPatternPropertyToTerrafor
     confidence_level: cdktn.numberToTerraform(struct!.confidenceLevel),
     enforced_urls: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.enforcedUrls),
     exempt_urls: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.exemptUrls),
-    custom_pattern: cdktn.listMapper(tfDataProtectionSettingsCustomPatternPropertyToTerraform, true)(struct!.customPattern),
-    redaction_place_holder: cdktn.listMapper(tfDataProtectionSettingsRedactionPlaceHolderPropertyToTerraform, true)(struct!.redactionPlaceHolder),
+    custom_pattern: cdktn.listMapper(awsDataProtectionSettingsCustomPatternPropertyToTerraform, true)(struct!.customPattern),
+    redaction_place_holder: cdktn.listMapper(awsDataProtectionSettingsRedactionPlaceHolderPropertyToTerraform, true)(struct!.redactionPlaceHolder),
   }
 }
 
 
-export function tfDataProtectionSettingsInlineRedactionPatternPropertyToHclTerraform(struct?: TfDataProtectionSettings.InlineRedactionPatternProperty | cdktn.IResolvable): any {
+export function awsDataProtectionSettingsInlineRedactionPatternPropertyToHclTerraform(struct?: AwsDataProtectionSettings.InlineRedactionPatternProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,13 +431,13 @@ export function tfDataProtectionSettingsInlineRedactionPatternPropertyToHclTerra
       storageClassType: "stringList",
     },
     custom_pattern: {
-      value: cdktn.listMapperHcl(tfDataProtectionSettingsCustomPatternPropertyToHclTerraform, true)(struct!.customPattern),
+      value: cdktn.listMapperHcl(awsDataProtectionSettingsCustomPatternPropertyToHclTerraform, true)(struct!.customPattern),
       isBlock: true,
       type: "list",
       storageClassType: "CustomPatternPropertyList",
     },
     redaction_place_holder: {
-      value: cdktn.listMapperHcl(tfDataProtectionSettingsRedactionPlaceHolderPropertyToHclTerraform, true)(struct!.redactionPlaceHolder),
+      value: cdktn.listMapperHcl(awsDataProtectionSettingsRedactionPlaceHolderPropertyToHclTerraform, true)(struct!.redactionPlaceHolder),
       isBlock: true,
       type: "list",
       storageClassType: "RedactionPlaceHolderPropertyList",
@@ -449,7 +449,7 @@ export function tfDataProtectionSettingsInlineRedactionPatternPropertyToHclTerra
 }
 
 
-export function tfDataProtectionSettingsInlineRedactionConfigurationPropertyToTerraform(struct?: TfDataProtectionSettings.InlineRedactionConfigurationProperty | cdktn.IResolvable): any {
+export function awsDataProtectionSettingsInlineRedactionConfigurationPropertyToTerraform(struct?: AwsDataProtectionSettings.InlineRedactionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -458,12 +458,12 @@ export function tfDataProtectionSettingsInlineRedactionConfigurationPropertyToTe
     global_confidence_level: cdktn.numberToTerraform(struct!.globalConfidenceLevel),
     global_enforced_urls: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.globalEnforcedUrls),
     global_exempt_urls: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.globalExemptUrls),
-    inline_redaction_pattern: cdktn.listMapper(tfDataProtectionSettingsInlineRedactionPatternPropertyToTerraform, true)(struct!.inlineRedactionPattern),
+    inline_redaction_pattern: cdktn.listMapper(awsDataProtectionSettingsInlineRedactionPatternPropertyToTerraform, true)(struct!.inlineRedactionPattern),
   }
 }
 
 
-export function tfDataProtectionSettingsInlineRedactionConfigurationPropertyToHclTerraform(struct?: TfDataProtectionSettings.InlineRedactionConfigurationProperty | cdktn.IResolvable): any {
+export function awsDataProtectionSettingsInlineRedactionConfigurationPropertyToHclTerraform(struct?: AwsDataProtectionSettings.InlineRedactionConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -488,7 +488,7 @@ export function tfDataProtectionSettingsInlineRedactionConfigurationPropertyToHc
       storageClassType: "stringList",
     },
     inline_redaction_pattern: {
-      value: cdktn.listMapperHcl(tfDataProtectionSettingsInlineRedactionPatternPropertyToHclTerraform, true)(struct!.inlineRedactionPattern),
+      value: cdktn.listMapperHcl(awsDataProtectionSettingsInlineRedactionPatternPropertyToHclTerraform, true)(struct!.inlineRedactionPattern),
       isBlock: true,
       type: "list",
       storageClassType: "InlineRedactionPatternPropertyList",
@@ -500,22 +500,22 @@ export function tfDataProtectionSettingsInlineRedactionConfigurationPropertyToHc
 }
 
 
-export namespace TfDataProtectionSettings {
+export namespace AwsDataProtectionSettings {
 export interface CustomPatternProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#keyword_regex TfDataProtectionSettings#keyword_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#keyword_regex AwsDataProtectionSettings#keyword_regex}
   */
   readonly keywordRegex?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#pattern_description TfDataProtectionSettings#pattern_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#pattern_description AwsDataProtectionSettings#pattern_description}
   */
   readonly patternDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#pattern_name TfDataProtectionSettings#pattern_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#pattern_name AwsDataProtectionSettings#pattern_name}
   */
   readonly patternName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#pattern_regex TfDataProtectionSettings#pattern_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#pattern_regex AwsDataProtectionSettings#pattern_regex}
   */
   readonly patternRegex: string;
 }
@@ -661,11 +661,11 @@ export class CustomPatternPropertyList extends cdktn.ComplexList {
 }
 export interface RedactionPlaceHolderProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#redaction_place_holder_text TfDataProtectionSettings#redaction_place_holder_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#redaction_place_holder_text AwsDataProtectionSettings#redaction_place_holder_text}
   */
   readonly redactionPlaceHolderText?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#redaction_place_holder_type TfDataProtectionSettings#redaction_place_holder_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#redaction_place_holder_type AwsDataProtectionSettings#redaction_place_holder_type}
   */
   readonly redactionPlaceHolderType: string;
 }
@@ -770,31 +770,31 @@ export class RedactionPlaceHolderPropertyList extends cdktn.ComplexList {
 }
 export interface InlineRedactionPatternProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#built_in_pattern_id TfDataProtectionSettings#built_in_pattern_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#built_in_pattern_id AwsDataProtectionSettings#built_in_pattern_id}
   */
   readonly builtInPatternId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#confidence_level TfDataProtectionSettings#confidence_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#confidence_level AwsDataProtectionSettings#confidence_level}
   */
   readonly confidenceLevel?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#enforced_urls TfDataProtectionSettings#enforced_urls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#enforced_urls AwsDataProtectionSettings#enforced_urls}
   */
   readonly enforcedUrls?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#exempt_urls TfDataProtectionSettings#exempt_urls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#exempt_urls AwsDataProtectionSettings#exempt_urls}
   */
   readonly exemptUrls?: string[];
   /**
   * custom_pattern block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#custom_pattern TfDataProtectionSettings#custom_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#custom_pattern AwsDataProtectionSettings#custom_pattern}
   */
   readonly customPattern?: CustomPatternProperty[] | cdktn.IResolvable;
   /**
   * redaction_place_holder block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#redaction_place_holder TfDataProtectionSettings#redaction_place_holder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#redaction_place_holder AwsDataProtectionSettings#redaction_place_holder}
   */
   readonly redactionPlaceHolder?: RedactionPlaceHolderProperty[] | cdktn.IResolvable;
 }
@@ -990,21 +990,21 @@ export class InlineRedactionPatternPropertyList extends cdktn.ComplexList {
 }
 export interface InlineRedactionConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#global_confidence_level TfDataProtectionSettings#global_confidence_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#global_confidence_level AwsDataProtectionSettings#global_confidence_level}
   */
   readonly globalConfidenceLevel?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#global_enforced_urls TfDataProtectionSettings#global_enforced_urls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#global_enforced_urls AwsDataProtectionSettings#global_enforced_urls}
   */
   readonly globalEnforcedUrls?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#global_exempt_urls TfDataProtectionSettings#global_exempt_urls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#global_exempt_urls AwsDataProtectionSettings#global_exempt_urls}
   */
   readonly globalExemptUrls?: string[];
   /**
   * inline_redaction_pattern block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#inline_redaction_pattern TfDataProtectionSettings#inline_redaction_pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_data_protection_settings#inline_redaction_pattern AwsDataProtectionSettings#inline_redaction_pattern}
   */
   readonly inlineRedactionPattern?: InlineRedactionPatternProperty[] | cdktn.IResolvable;
 }

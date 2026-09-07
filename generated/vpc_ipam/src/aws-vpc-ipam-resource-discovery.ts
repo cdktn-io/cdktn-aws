@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfResourceDiscoveryConfig extends cdktn.TerraformMetaArguments {
+export interface AwsResourceDiscoveryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#description TfResourceDiscovery#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#description AwsResourceDiscovery#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#id TfResourceDiscovery#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#id AwsResourceDiscovery#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,41 +20,41 @@ export interface TfResourceDiscoveryConfig extends cdktn.TerraformMetaArguments 
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#region TfResourceDiscovery#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#region AwsResourceDiscovery#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#tags TfResourceDiscovery#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#tags AwsResourceDiscovery#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#tags_all TfResourceDiscovery#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#tags_all AwsResourceDiscovery#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * operating_regions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#operating_regions TfResourceDiscovery#operating_regions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#operating_regions AwsResourceDiscovery#operating_regions}
   */
-  readonly operatingRegions: TfResourceDiscovery.OperatingRegionsProperty[] | cdktn.IResolvable;
+  readonly operatingRegions: AwsResourceDiscovery.OperatingRegionsProperty[] | cdktn.IResolvable;
   /**
   * organizational_unit_exclusion block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#organizational_unit_exclusion TfResourceDiscovery#organizational_unit_exclusion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#organizational_unit_exclusion AwsResourceDiscovery#organizational_unit_exclusion}
   */
-  readonly organizationalUnitExclusion?: TfResourceDiscovery.OrganizationalUnitExclusionProperty[] | cdktn.IResolvable;
+  readonly organizationalUnitExclusion?: AwsResourceDiscovery.OrganizationalUnitExclusionProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#timeouts TfResourceDiscovery#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#timeouts AwsResourceDiscovery#timeouts}
   */
-  readonly timeouts?: TfResourceDiscovery.TimeoutsProperty;
+  readonly timeouts?: AwsResourceDiscovery.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery aws_vpc_ipam_resource_discovery}
 */
-export class TfResourceDiscovery extends cdktn.TerraformResource {
+export class AwsResourceDiscovery extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfResourceDiscovery extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfResourceDiscovery resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsResourceDiscovery resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfResourceDiscovery to import
-  * @param importFromId The id of the existing TfResourceDiscovery that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfResourceDiscovery to import is found
+  * @param importToId The construct id used in the generated config for the AwsResourceDiscovery to import
+  * @param importFromId The id of the existing AwsResourceDiscovery that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsResourceDiscovery to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_ipam_resource_discovery", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfResourceDiscovery extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfResourceDiscoveryConfig
+  * @param options AwsResourceDiscoveryConfig
   */
-  public constructor(scope: Construct, id: string, config: TfResourceDiscoveryConfig) {
+  public constructor(scope: Construct, id: string, config: AwsResourceDiscoveryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_ipam_resource_discovery',
       terraformGeneratorMetadata: {
@@ -217,11 +217,11 @@ export class TfResourceDiscovery extends cdktn.TerraformResource {
   }
 
   // operating_regions - computed: false, optional: false, required: true
-  private _operatingRegions = new TfResourceDiscovery.OperatingRegionsPropertyList(this, "operating_regions", true);
+  private _operatingRegions = new AwsResourceDiscovery.OperatingRegionsPropertyList(this, "operating_regions", true);
   public get operatingRegions() {
     return this._operatingRegions;
   }
-  public putOperatingRegions(value: TfResourceDiscovery.OperatingRegionsProperty[] | cdktn.IResolvable) {
+  public putOperatingRegions(value: AwsResourceDiscovery.OperatingRegionsProperty[] | cdktn.IResolvable) {
     this._operatingRegions.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -230,11 +230,11 @@ export class TfResourceDiscovery extends cdktn.TerraformResource {
   }
 
   // organizational_unit_exclusion - computed: false, optional: true, required: false
-  private _organizationalUnitExclusion = new TfResourceDiscovery.OrganizationalUnitExclusionPropertyList(this, "organizational_unit_exclusion", true);
+  private _organizationalUnitExclusion = new AwsResourceDiscovery.OrganizationalUnitExclusionPropertyList(this, "organizational_unit_exclusion", true);
   public get organizationalUnitExclusion() {
     return this._organizationalUnitExclusion;
   }
-  public putOrganizationalUnitExclusion(value: TfResourceDiscovery.OrganizationalUnitExclusionProperty[] | cdktn.IResolvable) {
+  public putOrganizationalUnitExclusion(value: AwsResourceDiscovery.OrganizationalUnitExclusionProperty[] | cdktn.IResolvable) {
     this._organizationalUnitExclusion.internalValue = value;
   }
   public resetOrganizationalUnitExclusion() {
@@ -246,11 +246,11 @@ export class TfResourceDiscovery extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfResourceDiscovery.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsResourceDiscovery.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfResourceDiscovery.TimeoutsProperty) {
+  public putTimeouts(value: AwsResourceDiscovery.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -272,9 +272,9 @@ export class TfResourceDiscovery extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      operating_regions: cdktn.listMapper(tfResourceDiscoveryOperatingRegionsPropertyToTerraform, true)(this._operatingRegions.internalValue),
-      organizational_unit_exclusion: cdktn.listMapper(tfResourceDiscoveryOrganizationalUnitExclusionPropertyToTerraform, true)(this._organizationalUnitExclusion.internalValue),
-      timeouts: tfResourceDiscoveryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      operating_regions: cdktn.listMapper(awsResourceDiscoveryOperatingRegionsPropertyToTerraform, true)(this._operatingRegions.internalValue),
+      organizational_unit_exclusion: cdktn.listMapper(awsResourceDiscoveryOrganizationalUnitExclusionPropertyToTerraform, true)(this._organizationalUnitExclusion.internalValue),
+      timeouts: awsResourceDiscoveryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -311,22 +311,22 @@ export class TfResourceDiscovery extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       operating_regions: {
-        value: cdktn.listMapperHcl(tfResourceDiscoveryOperatingRegionsPropertyToHclTerraform, true)(this._operatingRegions.internalValue),
+        value: cdktn.listMapperHcl(awsResourceDiscoveryOperatingRegionsPropertyToHclTerraform, true)(this._operatingRegions.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfResourceDiscovery.OperatingRegionsPropertyList",
+        storageClassType: "AwsResourceDiscovery.OperatingRegionsPropertyList",
       },
       organizational_unit_exclusion: {
-        value: cdktn.listMapperHcl(tfResourceDiscoveryOrganizationalUnitExclusionPropertyToHclTerraform, true)(this._organizationalUnitExclusion.internalValue),
+        value: cdktn.listMapperHcl(awsResourceDiscoveryOrganizationalUnitExclusionPropertyToHclTerraform, true)(this._organizationalUnitExclusion.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfResourceDiscovery.OrganizationalUnitExclusionPropertyList",
+        storageClassType: "AwsResourceDiscovery.OrganizationalUnitExclusionPropertyList",
       },
       timeouts: {
-        value: tfResourceDiscoveryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsResourceDiscoveryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfResourceDiscovery.TimeoutsProperty",
+        storageClassType: "AwsResourceDiscovery.TimeoutsProperty",
       },
     };
 
@@ -335,7 +335,7 @@ export class TfResourceDiscovery extends cdktn.TerraformResource {
   }
 }
 
-export function tfResourceDiscoveryOperatingRegionsPropertyToTerraform(struct?: TfResourceDiscovery.OperatingRegionsProperty | cdktn.IResolvable): any {
+export function awsResourceDiscoveryOperatingRegionsPropertyToTerraform(struct?: AwsResourceDiscovery.OperatingRegionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -346,7 +346,7 @@ export function tfResourceDiscoveryOperatingRegionsPropertyToTerraform(struct?: 
 }
 
 
-export function tfResourceDiscoveryOperatingRegionsPropertyToHclTerraform(struct?: TfResourceDiscovery.OperatingRegionsProperty | cdktn.IResolvable): any {
+export function awsResourceDiscoveryOperatingRegionsPropertyToHclTerraform(struct?: AwsResourceDiscovery.OperatingRegionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -365,7 +365,7 @@ export function tfResourceDiscoveryOperatingRegionsPropertyToHclTerraform(struct
 }
 
 
-export function tfResourceDiscoveryOrganizationalUnitExclusionPropertyToTerraform(struct?: TfResourceDiscovery.OrganizationalUnitExclusionProperty | cdktn.IResolvable): any {
+export function awsResourceDiscoveryOrganizationalUnitExclusionPropertyToTerraform(struct?: AwsResourceDiscovery.OrganizationalUnitExclusionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -376,7 +376,7 @@ export function tfResourceDiscoveryOrganizationalUnitExclusionPropertyToTerrafor
 }
 
 
-export function tfResourceDiscoveryOrganizationalUnitExclusionPropertyToHclTerraform(struct?: TfResourceDiscovery.OrganizationalUnitExclusionProperty | cdktn.IResolvable): any {
+export function awsResourceDiscoveryOrganizationalUnitExclusionPropertyToHclTerraform(struct?: AwsResourceDiscovery.OrganizationalUnitExclusionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -395,7 +395,7 @@ export function tfResourceDiscoveryOrganizationalUnitExclusionPropertyToHclTerra
 }
 
 
-export function tfResourceDiscoveryTimeoutsPropertyToTerraform(struct?: TfResourceDiscovery.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsResourceDiscoveryTimeoutsPropertyToTerraform(struct?: AwsResourceDiscovery.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -408,7 +408,7 @@ export function tfResourceDiscoveryTimeoutsPropertyToTerraform(struct?: TfResour
 }
 
 
-export function tfResourceDiscoveryTimeoutsPropertyToHclTerraform(struct?: TfResourceDiscovery.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsResourceDiscoveryTimeoutsPropertyToHclTerraform(struct?: AwsResourceDiscovery.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -439,10 +439,10 @@ export function tfResourceDiscoveryTimeoutsPropertyToHclTerraform(struct?: TfRes
 }
 
 
-export namespace TfResourceDiscovery {
+export namespace AwsResourceDiscovery {
 export interface OperatingRegionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#region_name TfResourceDiscovery#region_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#region_name AwsResourceDiscovery#region_name}
   */
   readonly regionName: string;
 }
@@ -525,7 +525,7 @@ export class OperatingRegionsPropertyList extends cdktn.ComplexList {
 }
 export interface OrganizationalUnitExclusionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#organizations_entity_path TfResourceDiscovery#organizations_entity_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#organizations_entity_path AwsResourceDiscovery#organizations_entity_path}
   */
   readonly organizationsEntityPath: string;
 }
@@ -608,15 +608,15 @@ export class OrganizationalUnitExclusionPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#create TfResourceDiscovery#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#create AwsResourceDiscovery#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#delete TfResourceDiscovery#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#delete AwsResourceDiscovery#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#update TfResourceDiscovery#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery#update AwsResourceDiscovery#update}
   */
   readonly update?: string;
 }

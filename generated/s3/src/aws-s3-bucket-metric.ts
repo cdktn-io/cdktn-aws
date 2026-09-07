@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBucketMetricConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBucketMetricConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#bucket TfBucketMetric#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#bucket AwsBucketMetric#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#id TfBucketMetric#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#id AwsBucketMetric#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#name TfBucketMetric#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#name AwsBucketMetric#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#region TfBucketMetric#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#region AwsBucketMetric#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#filter TfBucketMetric#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#filter AwsBucketMetric#filter}
   */
-  readonly filter?: TfBucketMetric.FilterProperty;
+  readonly filter?: AwsBucketMetric.FilterProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric aws_s3_bucket_metric}
 */
-export class TfBucketMetric extends cdktn.TerraformResource {
+export class AwsBucketMetric extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfBucketMetric extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBucketMetric resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBucketMetric resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBucketMetric to import
-  * @param importFromId The id of the existing TfBucketMetric that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBucketMetric to import is found
+  * @param importToId The construct id used in the generated config for the AwsBucketMetric to import
+  * @param importFromId The id of the existing AwsBucketMetric that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBucketMetric to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_metric", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfBucketMetric extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBucketMetricConfig
+  * @param options AwsBucketMetricConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBucketMetricConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBucketMetricConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_metric',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class TfBucketMetric extends cdktn.TerraformResource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new TfBucketMetric.FilterPropertyOutputReference(this, "filter");
+  private _filter = new AwsBucketMetric.FilterPropertyOutputReference(this, "filter");
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: TfBucketMetric.FilterProperty) {
+  public putFilter(value: AwsBucketMetric.FilterProperty) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -181,7 +181,7 @@ export class TfBucketMetric extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      filter: tfBucketMetricFilterPropertyToTerraform(this._filter.internalValue),
+      filter: awsBucketMetricFilterPropertyToTerraform(this._filter.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class TfBucketMetric extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       filter: {
-        value: tfBucketMetricFilterPropertyToHclTerraform(this._filter.internalValue),
+        value: awsBucketMetricFilterPropertyToHclTerraform(this._filter.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBucketMetric.FilterPropertyList",
+        storageClassType: "AwsBucketMetric.FilterPropertyList",
       },
     };
 
@@ -224,7 +224,7 @@ export class TfBucketMetric extends cdktn.TerraformResource {
   }
 }
 
-export function tfBucketMetricFilterPropertyToTerraform(struct?: TfBucketMetric.FilterPropertyOutputReference | TfBucketMetric.FilterProperty): any {
+export function awsBucketMetricFilterPropertyToTerraform(struct?: AwsBucketMetric.FilterPropertyOutputReference | AwsBucketMetric.FilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -237,7 +237,7 @@ export function tfBucketMetricFilterPropertyToTerraform(struct?: TfBucketMetric.
 }
 
 
-export function tfBucketMetricFilterPropertyToHclTerraform(struct?: TfBucketMetric.FilterPropertyOutputReference | TfBucketMetric.FilterProperty): any {
+export function awsBucketMetricFilterPropertyToHclTerraform(struct?: AwsBucketMetric.FilterPropertyOutputReference | AwsBucketMetric.FilterProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -268,18 +268,18 @@ export function tfBucketMetricFilterPropertyToHclTerraform(struct?: TfBucketMetr
 }
 
 
-export namespace TfBucketMetric {
+export namespace AwsBucketMetric {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#access_point TfBucketMetric#access_point}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#access_point AwsBucketMetric#access_point}
   */
   readonly accessPoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#prefix TfBucketMetric#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#prefix AwsBucketMetric#prefix}
   */
   readonly prefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#tags TfBucketMetric#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_metric#tags AwsBucketMetric#tags}
   */
   readonly tags?: { [key: string]: string };
 }

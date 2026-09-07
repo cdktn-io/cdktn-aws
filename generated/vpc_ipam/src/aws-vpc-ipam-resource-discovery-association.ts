@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfResourceDiscoveryAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsResourceDiscoveryAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#id TfResourceDiscoveryAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#id AwsResourceDiscoveryAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#ipam_id TfResourceDiscoveryAssociation#ipam_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#ipam_id AwsResourceDiscoveryAssociation#ipam_id}
   */
   readonly ipamId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#ipam_resource_discovery_id TfResourceDiscoveryAssociation#ipam_resource_discovery_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#ipam_resource_discovery_id AwsResourceDiscoveryAssociation#ipam_resource_discovery_id}
   */
   readonly ipamResourceDiscoveryId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#region TfResourceDiscoveryAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#region AwsResourceDiscoveryAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#tags TfResourceDiscoveryAssociation#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#tags AwsResourceDiscoveryAssociation#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#tags_all TfResourceDiscoveryAssociation#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#tags_all AwsResourceDiscoveryAssociation#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#timeouts TfResourceDiscoveryAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#timeouts AwsResourceDiscoveryAssociation#timeouts}
   */
-  readonly timeouts?: TfResourceDiscoveryAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsResourceDiscoveryAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association aws_vpc_ipam_resource_discovery_association}
 */
-export class TfResourceDiscoveryAssociation extends cdktn.TerraformResource {
+export class AwsResourceDiscoveryAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfResourceDiscoveryAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfResourceDiscoveryAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsResourceDiscoveryAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfResourceDiscoveryAssociation to import
-  * @param importFromId The id of the existing TfResourceDiscoveryAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfResourceDiscoveryAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsResourceDiscoveryAssociation to import
+  * @param importFromId The id of the existing AwsResourceDiscoveryAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsResourceDiscoveryAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_ipam_resource_discovery_association", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfResourceDiscoveryAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfResourceDiscoveryAssociationConfig
+  * @param options AwsResourceDiscoveryAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfResourceDiscoveryAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsResourceDiscoveryAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_ipam_resource_discovery_association',
       terraformGeneratorMetadata: {
@@ -228,11 +228,11 @@ export class TfResourceDiscoveryAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfResourceDiscoveryAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsResourceDiscoveryAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfResourceDiscoveryAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsResourceDiscoveryAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -255,7 +255,7 @@ export class TfResourceDiscoveryAssociation extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfResourceDiscoveryAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsResourceDiscoveryAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -298,10 +298,10 @@ export class TfResourceDiscoveryAssociation extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfResourceDiscoveryAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsResourceDiscoveryAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfResourceDiscoveryAssociation.TimeoutsProperty",
+        storageClassType: "AwsResourceDiscoveryAssociation.TimeoutsProperty",
       },
     };
 
@@ -310,7 +310,7 @@ export class TfResourceDiscoveryAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfResourceDiscoveryAssociationTimeoutsPropertyToTerraform(struct?: TfResourceDiscoveryAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsResourceDiscoveryAssociationTimeoutsPropertyToTerraform(struct?: AwsResourceDiscoveryAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -323,7 +323,7 @@ export function tfResourceDiscoveryAssociationTimeoutsPropertyToTerraform(struct
 }
 
 
-export function tfResourceDiscoveryAssociationTimeoutsPropertyToHclTerraform(struct?: TfResourceDiscoveryAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsResourceDiscoveryAssociationTimeoutsPropertyToHclTerraform(struct?: AwsResourceDiscoveryAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,18 +354,18 @@ export function tfResourceDiscoveryAssociationTimeoutsPropertyToHclTerraform(str
 }
 
 
-export namespace TfResourceDiscoveryAssociation {
+export namespace AwsResourceDiscoveryAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#create TfResourceDiscoveryAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#create AwsResourceDiscoveryAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#delete TfResourceDiscoveryAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#delete AwsResourceDiscoveryAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#update TfResourceDiscoveryAssociation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_ipam_resource_discovery_association#update AwsResourceDiscoveryAssociation#update}
   */
   readonly update?: string;
 }

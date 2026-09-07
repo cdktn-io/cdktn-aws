@@ -5,78 +5,78 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEventDataStoreConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEventDataStoreConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#billing_mode TfEventDataStore#billing_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#billing_mode AwsEventDataStore#billing_mode}
   */
   readonly billingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#id TfEventDataStore#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#id AwsEventDataStore#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#kms_key_id TfEventDataStore#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#kms_key_id AwsEventDataStore#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#multi_region_enabled TfEventDataStore#multi_region_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#multi_region_enabled AwsEventDataStore#multi_region_enabled}
   */
   readonly multiRegionEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#name TfEventDataStore#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#name AwsEventDataStore#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#organization_enabled TfEventDataStore#organization_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#organization_enabled AwsEventDataStore#organization_enabled}
   */
   readonly organizationEnabled?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#region TfEventDataStore#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#region AwsEventDataStore#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#retention_period TfEventDataStore#retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#retention_period AwsEventDataStore#retention_period}
   */
   readonly retentionPeriod?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#suspend TfEventDataStore#suspend}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#suspend AwsEventDataStore#suspend}
   */
   readonly suspend?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#tags TfEventDataStore#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#tags AwsEventDataStore#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#tags_all TfEventDataStore#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#tags_all AwsEventDataStore#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#termination_protection_enabled TfEventDataStore#termination_protection_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#termination_protection_enabled AwsEventDataStore#termination_protection_enabled}
   */
   readonly terminationProtectionEnabled?: boolean | cdktn.IResolvable;
   /**
   * advanced_event_selector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#advanced_event_selector TfEventDataStore#advanced_event_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#advanced_event_selector AwsEventDataStore#advanced_event_selector}
   */
-  readonly advancedEventSelector?: TfEventDataStore.AdvancedEventSelectorProperty[] | cdktn.IResolvable;
+  readonly advancedEventSelector?: AwsEventDataStore.AdvancedEventSelectorProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#timeouts TfEventDataStore#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#timeouts AwsEventDataStore#timeouts}
   */
-  readonly timeouts?: TfEventDataStore.TimeoutsProperty;
+  readonly timeouts?: AwsEventDataStore.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store aws_cloudtrail_event_data_store}
 */
-export class TfEventDataStore extends cdktn.TerraformResource {
+export class AwsEventDataStore extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -87,11 +87,11 @@ export class TfEventDataStore extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEventDataStore resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEventDataStore resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEventDataStore to import
-  * @param importFromId The id of the existing TfEventDataStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEventDataStore to import is found
+  * @param importToId The construct id used in the generated config for the AwsEventDataStore to import
+  * @param importFromId The id of the existing AwsEventDataStore that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEventDataStore to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudtrail_event_data_store", importId: importFromId, provider });
@@ -106,9 +106,9 @@ export class TfEventDataStore extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEventDataStoreConfig
+  * @param options AwsEventDataStoreConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEventDataStoreConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEventDataStoreConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudtrail_event_data_store',
       terraformGeneratorMetadata: {
@@ -339,11 +339,11 @@ export class TfEventDataStore extends cdktn.TerraformResource {
   }
 
   // advanced_event_selector - computed: false, optional: true, required: false
-  private _advancedEventSelector = new TfEventDataStore.AdvancedEventSelectorPropertyList(this, "advanced_event_selector", false);
+  private _advancedEventSelector = new AwsEventDataStore.AdvancedEventSelectorPropertyList(this, "advanced_event_selector", false);
   public get advancedEventSelector() {
     return this._advancedEventSelector;
   }
-  public putAdvancedEventSelector(value: TfEventDataStore.AdvancedEventSelectorProperty[] | cdktn.IResolvable) {
+  public putAdvancedEventSelector(value: AwsEventDataStore.AdvancedEventSelectorProperty[] | cdktn.IResolvable) {
     this._advancedEventSelector.internalValue = value;
   }
   public resetAdvancedEventSelector() {
@@ -355,11 +355,11 @@ export class TfEventDataStore extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfEventDataStore.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsEventDataStore.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfEventDataStore.TimeoutsProperty) {
+  public putTimeouts(value: AwsEventDataStore.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -388,8 +388,8 @@ export class TfEventDataStore extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       termination_protection_enabled: cdktn.booleanToTerraform(this._terminationProtectionEnabled),
-      advanced_event_selector: cdktn.listMapper(tfEventDataStoreAdvancedEventSelectorPropertyToTerraform, true)(this._advancedEventSelector.internalValue),
-      timeouts: tfEventDataStoreTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      advanced_event_selector: cdktn.listMapper(awsEventDataStoreAdvancedEventSelectorPropertyToTerraform, true)(this._advancedEventSelector.internalValue),
+      timeouts: awsEventDataStoreTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -468,16 +468,16 @@ export class TfEventDataStore extends cdktn.TerraformResource {
         storageClassType: "boolean",
       },
       advanced_event_selector: {
-        value: cdktn.listMapperHcl(tfEventDataStoreAdvancedEventSelectorPropertyToHclTerraform, true)(this._advancedEventSelector.internalValue),
+        value: cdktn.listMapperHcl(awsEventDataStoreAdvancedEventSelectorPropertyToHclTerraform, true)(this._advancedEventSelector.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfEventDataStore.AdvancedEventSelectorPropertyList",
+        storageClassType: "AwsEventDataStore.AdvancedEventSelectorPropertyList",
       },
       timeouts: {
-        value: tfEventDataStoreTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsEventDataStoreTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfEventDataStore.TimeoutsProperty",
+        storageClassType: "AwsEventDataStore.TimeoutsProperty",
       },
     };
 
@@ -486,7 +486,7 @@ export class TfEventDataStore extends cdktn.TerraformResource {
   }
 }
 
-export function tfEventDataStoreFieldSelectorPropertyToTerraform(struct?: TfEventDataStore.FieldSelectorProperty | cdktn.IResolvable): any {
+export function awsEventDataStoreFieldSelectorPropertyToTerraform(struct?: AwsEventDataStore.FieldSelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -503,7 +503,7 @@ export function tfEventDataStoreFieldSelectorPropertyToTerraform(struct?: TfEven
 }
 
 
-export function tfEventDataStoreFieldSelectorPropertyToHclTerraform(struct?: TfEventDataStore.FieldSelectorProperty | cdktn.IResolvable): any {
+export function awsEventDataStoreFieldSelectorPropertyToHclTerraform(struct?: AwsEventDataStore.FieldSelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -558,19 +558,19 @@ export function tfEventDataStoreFieldSelectorPropertyToHclTerraform(struct?: TfE
 }
 
 
-export function tfEventDataStoreAdvancedEventSelectorPropertyToTerraform(struct?: TfEventDataStore.AdvancedEventSelectorProperty | cdktn.IResolvable): any {
+export function awsEventDataStoreAdvancedEventSelectorPropertyToTerraform(struct?: AwsEventDataStore.AdvancedEventSelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     name: cdktn.stringToTerraform(struct!.name),
-    field_selector: cdktn.listMapper(tfEventDataStoreFieldSelectorPropertyToTerraform, true)(struct!.fieldSelector),
+    field_selector: cdktn.listMapper(awsEventDataStoreFieldSelectorPropertyToTerraform, true)(struct!.fieldSelector),
   }
 }
 
 
-export function tfEventDataStoreAdvancedEventSelectorPropertyToHclTerraform(struct?: TfEventDataStore.AdvancedEventSelectorProperty | cdktn.IResolvable): any {
+export function awsEventDataStoreAdvancedEventSelectorPropertyToHclTerraform(struct?: AwsEventDataStore.AdvancedEventSelectorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -583,7 +583,7 @@ export function tfEventDataStoreAdvancedEventSelectorPropertyToHclTerraform(stru
       storageClassType: "string",
     },
     field_selector: {
-      value: cdktn.listMapperHcl(tfEventDataStoreFieldSelectorPropertyToHclTerraform, true)(struct!.fieldSelector),
+      value: cdktn.listMapperHcl(awsEventDataStoreFieldSelectorPropertyToHclTerraform, true)(struct!.fieldSelector),
       isBlock: true,
       type: "set",
       storageClassType: "FieldSelectorPropertyList",
@@ -595,7 +595,7 @@ export function tfEventDataStoreAdvancedEventSelectorPropertyToHclTerraform(stru
 }
 
 
-export function tfEventDataStoreTimeoutsPropertyToTerraform(struct?: TfEventDataStore.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsEventDataStoreTimeoutsPropertyToTerraform(struct?: AwsEventDataStore.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -608,7 +608,7 @@ export function tfEventDataStoreTimeoutsPropertyToTerraform(struct?: TfEventData
 }
 
 
-export function tfEventDataStoreTimeoutsPropertyToHclTerraform(struct?: TfEventDataStore.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsEventDataStoreTimeoutsPropertyToHclTerraform(struct?: AwsEventDataStore.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -639,34 +639,34 @@ export function tfEventDataStoreTimeoutsPropertyToHclTerraform(struct?: TfEventD
 }
 
 
-export namespace TfEventDataStore {
+export namespace AwsEventDataStore {
 export interface FieldSelectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#ends_with TfEventDataStore#ends_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#ends_with AwsEventDataStore#ends_with}
   */
   readonly endsWith?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#equals TfEventDataStore#equals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#equals AwsEventDataStore#equals}
   */
   readonly equalTo?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#field TfEventDataStore#field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#field AwsEventDataStore#field}
   */
   readonly field?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#not_ends_with TfEventDataStore#not_ends_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#not_ends_with AwsEventDataStore#not_ends_with}
   */
   readonly notEndsWith?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#not_equals TfEventDataStore#not_equals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#not_equals AwsEventDataStore#not_equals}
   */
   readonly notEquals?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#not_starts_with TfEventDataStore#not_starts_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#not_starts_with AwsEventDataStore#not_starts_with}
   */
   readonly notStartsWith?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#starts_with TfEventDataStore#starts_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#starts_with AwsEventDataStore#starts_with}
   */
   readonly startsWith?: string[];
 }
@@ -884,13 +884,13 @@ export class FieldSelectorPropertyList extends cdktn.ComplexList {
 }
 export interface AdvancedEventSelectorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#name TfEventDataStore#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#name AwsEventDataStore#name}
   */
   readonly name?: string;
   /**
   * field_selector block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#field_selector TfEventDataStore#field_selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#field_selector AwsEventDataStore#field_selector}
   */
   readonly fieldSelector?: FieldSelectorProperty[] | cdktn.IResolvable;
 }
@@ -998,15 +998,15 @@ export class AdvancedEventSelectorPropertyList extends cdktn.ComplexList {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#create TfEventDataStore#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#create AwsEventDataStore#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#delete TfEventDataStore#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#delete AwsEventDataStore#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#update TfEventDataStore#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudtrail_event_data_store#update AwsEventDataStore#update}
   */
   readonly update?: string;
 }

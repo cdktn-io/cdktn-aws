@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfVirtualGatewayConfig extends cdktn.TerraformMetaArguments {
+export interface AwsVirtualGatewayConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#id TfVirtualGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#id AwsVirtualGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#mesh_name TfVirtualGateway#mesh_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#mesh_name AwsVirtualGateway#mesh_name}
   */
   readonly meshName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#mesh_owner TfVirtualGateway#mesh_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#mesh_owner AwsVirtualGateway#mesh_owner}
   */
   readonly meshOwner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#name TfVirtualGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#name AwsVirtualGateway#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#region TfVirtualGateway#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#region AwsVirtualGateway#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#tags TfVirtualGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#tags AwsVirtualGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#tags_all TfVirtualGateway#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#tags_all AwsVirtualGateway#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * spec block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#spec TfVirtualGateway#spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#spec AwsVirtualGateway#spec}
   */
-  readonly spec: TfVirtualGateway.SpecProperty;
+  readonly spec: AwsVirtualGateway.SpecProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway aws_appmesh_virtual_gateway}
 */
-export class TfVirtualGateway extends cdktn.TerraformResource {
+export class AwsVirtualGateway extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfVirtualGateway extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfVirtualGateway resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsVirtualGateway resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfVirtualGateway to import
-  * @param importFromId The id of the existing TfVirtualGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfVirtualGateway to import is found
+  * @param importToId The construct id used in the generated config for the AwsVirtualGateway to import
+  * @param importFromId The id of the existing AwsVirtualGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsVirtualGateway to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appmesh_virtual_gateway", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfVirtualGateway extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfVirtualGatewayConfig
+  * @param options AwsVirtualGatewayConfig
   */
-  public constructor(scope: Construct, id: string, config: TfVirtualGatewayConfig) {
+  public constructor(scope: Construct, id: string, config: AwsVirtualGatewayConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appmesh_virtual_gateway',
       terraformGeneratorMetadata: {
@@ -239,11 +239,11 @@ export class TfVirtualGateway extends cdktn.TerraformResource {
   }
 
   // spec - computed: false, optional: false, required: true
-  private _spec = new TfVirtualGateway.SpecPropertyOutputReference(this, "spec");
+  private _spec = new AwsVirtualGateway.SpecPropertyOutputReference(this, "spec");
   public get spec() {
     return this._spec;
   }
-  public putSpec(value: TfVirtualGateway.SpecProperty) {
+  public putSpec(value: AwsVirtualGateway.SpecProperty) {
     this._spec.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -264,7 +264,7 @@ export class TfVirtualGateway extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      spec: tfVirtualGatewaySpecPropertyToTerraform(this._spec.internalValue),
+      spec: awsVirtualGatewaySpecPropertyToTerraform(this._spec.internalValue),
     };
   }
 
@@ -313,10 +313,10 @@ export class TfVirtualGateway extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       spec: {
-        value: tfVirtualGatewaySpecPropertyToHclTerraform(this._spec.internalValue),
+        value: awsVirtualGatewaySpecPropertyToHclTerraform(this._spec.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfVirtualGateway.SpecPropertyList",
+        storageClassType: "AwsVirtualGateway.SpecPropertyList",
       },
     };
 
@@ -325,7 +325,7 @@ export class TfVirtualGateway extends cdktn.TerraformResource {
   }
 }
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFilePropertyToTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateFilePropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateFileProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFilePropertyToTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateFilePropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFil
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFilePropertyToHclTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateFilePropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateFileProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFilePropertyToHclTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateFilePropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -362,7 +362,7 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFil
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyToTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateSdsProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyToTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateSdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -373,7 +373,7 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSds
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyToHclTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateSdsProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateSdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -392,32 +392,32 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSds
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificatePropertyToTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificatePropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificatePropertyToTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificatePropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    file: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFilePropertyToTerraform(struct!.file),
-    sds: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyToTerraform(struct!.sds),
+    file: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFilePropertyToTerraform(struct!.file),
+    sds: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyToTerraform(struct!.sds),
   }
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificatePropertyToHclTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificatePropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificatePropertyToHclTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificatePropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsCertificateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     file: {
-      value: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFilePropertyToHclTerraform(struct!.file),
+      value: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFilePropertyToHclTerraform(struct!.file),
       isBlock: true,
       type: "list",
       storageClassType: "SpecBackendDefaultsClientPolicyTlsCertificateFilePropertyList",
     },
     sds: {
-      value: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyToHclTerraform(struct!.sds),
+      value: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyToHclTerraform(struct!.sds),
       isBlock: true,
       type: "list",
       storageClassType: "SpecBackendDefaultsClientPolicyTlsCertificateSdsPropertyList",
@@ -429,7 +429,7 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificatePro
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyToTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyToTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -440,7 +440,7 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubj
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyToHclTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -459,25 +459,25 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubj
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyToTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyToTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    match: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyToTerraform(struct!.match),
+    match: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyToTerraform(struct!.match),
   }
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyToHclTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     match: {
-      value: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyToHclTerraform(struct!.match),
+      value: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyToHclTerraform(struct!.match),
       isBlock: true,
       type: "list",
       storageClassType: "SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchPropertyList",
@@ -489,7 +489,7 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubj
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyToTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustAcmProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyToTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustAcmProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,7 +500,7 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrus
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyToHclTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustAcmProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustAcmProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -519,7 +519,7 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrus
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyToTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustFileProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyToTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -530,7 +530,7 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrus
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyToHclTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustFileProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyToHclTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -549,7 +549,7 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrus
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyToTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustSdsProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyToTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustSdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -560,7 +560,7 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrus
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyToHclTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustSdsProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustSdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -579,39 +579,39 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrus
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustPropertyToTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustPropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustPropertyToTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustPropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    acm: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyToTerraform(struct!.acm),
-    file: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyToTerraform(struct!.file),
-    sds: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyToTerraform(struct!.sds),
+    acm: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyToTerraform(struct!.acm),
+    file: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyToTerraform(struct!.file),
+    sds: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyToTerraform(struct!.sds),
   }
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustPropertyToHclTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustPropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustPropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationTrustProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     acm: {
-      value: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyToHclTerraform(struct!.acm),
+      value: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyToHclTerraform(struct!.acm),
       isBlock: true,
       type: "list",
       storageClassType: "SpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyList",
     },
     file: {
-      value: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyToHclTerraform(struct!.file),
+      value: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyToHclTerraform(struct!.file),
       isBlock: true,
       type: "list",
       storageClassType: "SpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyList",
     },
     sds: {
-      value: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyToHclTerraform(struct!.sds),
+      value: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyToHclTerraform(struct!.sds),
       isBlock: true,
       type: "list",
       storageClassType: "SpecBackendDefaultsClientPolicyTlsValidationTrustSdsPropertyList",
@@ -623,32 +623,32 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrus
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationPropertyToTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationPropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationPropertyToTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationPropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    subject_alternative_names: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyToTerraform(struct!.subjectAlternativeNames),
-    trust: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustPropertyToTerraform(struct!.trust),
+    subject_alternative_names: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyToTerraform(struct!.subjectAlternativeNames),
+    trust: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustPropertyToTerraform(struct!.trust),
   }
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationPropertyToHclTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationPropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationPropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsValidationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     subject_alternative_names: {
-      value: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyToHclTerraform(struct!.subjectAlternativeNames),
+      value: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyToHclTerraform(struct!.subjectAlternativeNames),
       isBlock: true,
       type: "list",
       storageClassType: "SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesPropertyList",
     },
     trust: {
-      value: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustPropertyToHclTerraform(struct!.trust),
+      value: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustPropertyToHclTerraform(struct!.trust),
       isBlock: true,
       type: "list",
       storageClassType: "SpecBackendDefaultsClientPolicyTlsValidationTrustPropertyList",
@@ -660,7 +660,7 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationProp
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyToTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsPropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyToTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsPropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -668,13 +668,13 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyToTerr
   return {
     enforce: cdktn.booleanToTerraform(struct!.enforce),
     ports: cdktn.listMapper(cdktn.numberToTerraform, false)(struct!.ports),
-    certificate: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificatePropertyToTerraform(struct!.certificate),
-    validation: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationPropertyToTerraform(struct!.validation),
+    certificate: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificatePropertyToTerraform(struct!.certificate),
+    validation: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationPropertyToTerraform(struct!.validation),
   }
 }
 
 
-export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyToHclTerraform(struct?: TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsPropertyOutputReference | TfVirtualGateway.SpecBackendDefaultsClientPolicyTlsProperty): any {
+export function awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsPropertyOutputReference | AwsVirtualGateway.SpecBackendDefaultsClientPolicyTlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -693,13 +693,13 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyToHclT
       storageClassType: "numberList",
     },
     certificate: {
-      value: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificatePropertyToHclTerraform(struct!.certificate),
+      value: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificatePropertyToHclTerraform(struct!.certificate),
       isBlock: true,
       type: "list",
       storageClassType: "SpecBackendDefaultsClientPolicyTlsCertificatePropertyList",
     },
     validation: {
-      value: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationPropertyToHclTerraform(struct!.validation),
+      value: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationPropertyToHclTerraform(struct!.validation),
       isBlock: true,
       type: "list",
       storageClassType: "SpecBackendDefaultsClientPolicyTlsValidationPropertyList",
@@ -711,25 +711,25 @@ export function tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyToHclT
 }
 
 
-export function tfVirtualGatewayClientPolicyPropertyToTerraform(struct?: TfVirtualGateway.ClientPolicyPropertyOutputReference | TfVirtualGateway.ClientPolicyProperty): any {
+export function awsVirtualGatewayClientPolicyPropertyToTerraform(struct?: AwsVirtualGateway.ClientPolicyPropertyOutputReference | AwsVirtualGateway.ClientPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    tls: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyToTerraform(struct!.tls),
+    tls: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyToTerraform(struct!.tls),
   }
 }
 
 
-export function tfVirtualGatewayClientPolicyPropertyToHclTerraform(struct?: TfVirtualGateway.ClientPolicyPropertyOutputReference | TfVirtualGateway.ClientPolicyProperty): any {
+export function awsVirtualGatewayClientPolicyPropertyToHclTerraform(struct?: AwsVirtualGateway.ClientPolicyPropertyOutputReference | AwsVirtualGateway.ClientPolicyProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     tls: {
-      value: tfVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyToHclTerraform(struct!.tls),
+      value: awsVirtualGatewaySpecBackendDefaultsClientPolicyTlsPropertyToHclTerraform(struct!.tls),
       isBlock: true,
       type: "list",
       storageClassType: "SpecBackendDefaultsClientPolicyTlsPropertyList",
@@ -741,25 +741,25 @@ export function tfVirtualGatewayClientPolicyPropertyToHclTerraform(struct?: TfVi
 }
 
 
-export function tfVirtualGatewayBackendDefaultsPropertyToTerraform(struct?: TfVirtualGateway.BackendDefaultsPropertyOutputReference | TfVirtualGateway.BackendDefaultsProperty): any {
+export function awsVirtualGatewayBackendDefaultsPropertyToTerraform(struct?: AwsVirtualGateway.BackendDefaultsPropertyOutputReference | AwsVirtualGateway.BackendDefaultsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    client_policy: tfVirtualGatewayClientPolicyPropertyToTerraform(struct!.clientPolicy),
+    client_policy: awsVirtualGatewayClientPolicyPropertyToTerraform(struct!.clientPolicy),
   }
 }
 
 
-export function tfVirtualGatewayBackendDefaultsPropertyToHclTerraform(struct?: TfVirtualGateway.BackendDefaultsPropertyOutputReference | TfVirtualGateway.BackendDefaultsProperty): any {
+export function awsVirtualGatewayBackendDefaultsPropertyToHclTerraform(struct?: AwsVirtualGateway.BackendDefaultsPropertyOutputReference | AwsVirtualGateway.BackendDefaultsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     client_policy: {
-      value: tfVirtualGatewayClientPolicyPropertyToHclTerraform(struct!.clientPolicy),
+      value: awsVirtualGatewayClientPolicyPropertyToHclTerraform(struct!.clientPolicy),
       isBlock: true,
       type: "list",
       storageClassType: "ClientPolicyPropertyList",
@@ -771,7 +771,7 @@ export function tfVirtualGatewayBackendDefaultsPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfVirtualGatewayGrpcPropertyToTerraform(struct?: TfVirtualGateway.GrpcPropertyOutputReference | TfVirtualGateway.GrpcProperty): any {
+export function awsVirtualGatewayGrpcPropertyToTerraform(struct?: AwsVirtualGateway.GrpcPropertyOutputReference | AwsVirtualGateway.GrpcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -782,7 +782,7 @@ export function tfVirtualGatewayGrpcPropertyToTerraform(struct?: TfVirtualGatewa
 }
 
 
-export function tfVirtualGatewayGrpcPropertyToHclTerraform(struct?: TfVirtualGateway.GrpcPropertyOutputReference | TfVirtualGateway.GrpcProperty): any {
+export function awsVirtualGatewayGrpcPropertyToHclTerraform(struct?: AwsVirtualGateway.GrpcPropertyOutputReference | AwsVirtualGateway.GrpcProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -801,7 +801,7 @@ export function tfVirtualGatewayGrpcPropertyToHclTerraform(struct?: TfVirtualGat
 }
 
 
-export function tfVirtualGatewayHttpPropertyToTerraform(struct?: TfVirtualGateway.HttpPropertyOutputReference | TfVirtualGateway.HttpProperty): any {
+export function awsVirtualGatewayHttpPropertyToTerraform(struct?: AwsVirtualGateway.HttpPropertyOutputReference | AwsVirtualGateway.HttpProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -813,7 +813,7 @@ export function tfVirtualGatewayHttpPropertyToTerraform(struct?: TfVirtualGatewa
 }
 
 
-export function tfVirtualGatewayHttpPropertyToHclTerraform(struct?: TfVirtualGateway.HttpPropertyOutputReference | TfVirtualGateway.HttpProperty): any {
+export function awsVirtualGatewayHttpPropertyToHclTerraform(struct?: AwsVirtualGateway.HttpPropertyOutputReference | AwsVirtualGateway.HttpProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -838,7 +838,7 @@ export function tfVirtualGatewayHttpPropertyToHclTerraform(struct?: TfVirtualGat
 }
 
 
-export function tfVirtualGatewayHttp2PropertyToTerraform(struct?: TfVirtualGateway.Http2PropertyOutputReference | TfVirtualGateway.Http2Property): any {
+export function awsVirtualGatewayHttp2PropertyToTerraform(struct?: AwsVirtualGateway.Http2PropertyOutputReference | AwsVirtualGateway.Http2Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -849,7 +849,7 @@ export function tfVirtualGatewayHttp2PropertyToTerraform(struct?: TfVirtualGatew
 }
 
 
-export function tfVirtualGatewayHttp2PropertyToHclTerraform(struct?: TfVirtualGateway.Http2PropertyOutputReference | TfVirtualGateway.Http2Property): any {
+export function awsVirtualGatewayHttp2PropertyToHclTerraform(struct?: AwsVirtualGateway.Http2PropertyOutputReference | AwsVirtualGateway.Http2Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -868,39 +868,39 @@ export function tfVirtualGatewayHttp2PropertyToHclTerraform(struct?: TfVirtualGa
 }
 
 
-export function tfVirtualGatewayConnectionPoolPropertyToTerraform(struct?: TfVirtualGateway.ConnectionPoolPropertyOutputReference | TfVirtualGateway.ConnectionPoolProperty): any {
+export function awsVirtualGatewayConnectionPoolPropertyToTerraform(struct?: AwsVirtualGateway.ConnectionPoolPropertyOutputReference | AwsVirtualGateway.ConnectionPoolProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    grpc: tfVirtualGatewayGrpcPropertyToTerraform(struct!.grpc),
-    http: tfVirtualGatewayHttpPropertyToTerraform(struct!.http),
-    http2: tfVirtualGatewayHttp2PropertyToTerraform(struct!.http2),
+    grpc: awsVirtualGatewayGrpcPropertyToTerraform(struct!.grpc),
+    http: awsVirtualGatewayHttpPropertyToTerraform(struct!.http),
+    http2: awsVirtualGatewayHttp2PropertyToTerraform(struct!.http2),
   }
 }
 
 
-export function tfVirtualGatewayConnectionPoolPropertyToHclTerraform(struct?: TfVirtualGateway.ConnectionPoolPropertyOutputReference | TfVirtualGateway.ConnectionPoolProperty): any {
+export function awsVirtualGatewayConnectionPoolPropertyToHclTerraform(struct?: AwsVirtualGateway.ConnectionPoolPropertyOutputReference | AwsVirtualGateway.ConnectionPoolProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     grpc: {
-      value: tfVirtualGatewayGrpcPropertyToHclTerraform(struct!.grpc),
+      value: awsVirtualGatewayGrpcPropertyToHclTerraform(struct!.grpc),
       isBlock: true,
       type: "list",
       storageClassType: "GrpcPropertyList",
     },
     http: {
-      value: tfVirtualGatewayHttpPropertyToHclTerraform(struct!.http),
+      value: awsVirtualGatewayHttpPropertyToHclTerraform(struct!.http),
       isBlock: true,
       type: "list",
       storageClassType: "HttpPropertyList",
     },
     http2: {
-      value: tfVirtualGatewayHttp2PropertyToHclTerraform(struct!.http2),
+      value: awsVirtualGatewayHttp2PropertyToHclTerraform(struct!.http2),
       isBlock: true,
       type: "list",
       storageClassType: "Http2PropertyList",
@@ -912,7 +912,7 @@ export function tfVirtualGatewayConnectionPoolPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfVirtualGatewayHealthCheckPropertyToTerraform(struct?: TfVirtualGateway.HealthCheckPropertyOutputReference | TfVirtualGateway.HealthCheckProperty): any {
+export function awsVirtualGatewayHealthCheckPropertyToTerraform(struct?: AwsVirtualGateway.HealthCheckPropertyOutputReference | AwsVirtualGateway.HealthCheckProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -929,7 +929,7 @@ export function tfVirtualGatewayHealthCheckPropertyToTerraform(struct?: TfVirtua
 }
 
 
-export function tfVirtualGatewayHealthCheckPropertyToHclTerraform(struct?: TfVirtualGateway.HealthCheckPropertyOutputReference | TfVirtualGateway.HealthCheckProperty): any {
+export function awsVirtualGatewayHealthCheckPropertyToHclTerraform(struct?: AwsVirtualGateway.HealthCheckPropertyOutputReference | AwsVirtualGateway.HealthCheckProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -984,7 +984,7 @@ export function tfVirtualGatewayHealthCheckPropertyToHclTerraform(struct?: TfVir
 }
 
 
-export function tfVirtualGatewayPortMappingPropertyToTerraform(struct?: TfVirtualGateway.PortMappingPropertyOutputReference | TfVirtualGateway.PortMappingProperty): any {
+export function awsVirtualGatewayPortMappingPropertyToTerraform(struct?: AwsVirtualGateway.PortMappingPropertyOutputReference | AwsVirtualGateway.PortMappingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -996,7 +996,7 @@ export function tfVirtualGatewayPortMappingPropertyToTerraform(struct?: TfVirtua
 }
 
 
-export function tfVirtualGatewayPortMappingPropertyToHclTerraform(struct?: TfVirtualGateway.PortMappingPropertyOutputReference | TfVirtualGateway.PortMappingProperty): any {
+export function awsVirtualGatewayPortMappingPropertyToHclTerraform(struct?: AwsVirtualGateway.PortMappingPropertyOutputReference | AwsVirtualGateway.PortMappingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1021,7 +1021,7 @@ export function tfVirtualGatewayPortMappingPropertyToHclTerraform(struct?: TfVir
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsCertificateAcmPropertyToTerraform(struct?: TfVirtualGateway.SpecListenerTlsCertificateAcmPropertyOutputReference | TfVirtualGateway.SpecListenerTlsCertificateAcmProperty): any {
+export function awsVirtualGatewaySpecListenerTlsCertificateAcmPropertyToTerraform(struct?: AwsVirtualGateway.SpecListenerTlsCertificateAcmPropertyOutputReference | AwsVirtualGateway.SpecListenerTlsCertificateAcmProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1032,7 +1032,7 @@ export function tfVirtualGatewaySpecListenerTlsCertificateAcmPropertyToTerraform
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsCertificateAcmPropertyToHclTerraform(struct?: TfVirtualGateway.SpecListenerTlsCertificateAcmPropertyOutputReference | TfVirtualGateway.SpecListenerTlsCertificateAcmProperty): any {
+export function awsVirtualGatewaySpecListenerTlsCertificateAcmPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecListenerTlsCertificateAcmPropertyOutputReference | AwsVirtualGateway.SpecListenerTlsCertificateAcmProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1051,7 +1051,7 @@ export function tfVirtualGatewaySpecListenerTlsCertificateAcmPropertyToHclTerraf
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsCertificateFilePropertyToTerraform(struct?: TfVirtualGateway.SpecListenerTlsCertificateFilePropertyOutputReference | TfVirtualGateway.SpecListenerTlsCertificateFileProperty): any {
+export function awsVirtualGatewaySpecListenerTlsCertificateFilePropertyToTerraform(struct?: AwsVirtualGateway.SpecListenerTlsCertificateFilePropertyOutputReference | AwsVirtualGateway.SpecListenerTlsCertificateFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1063,7 +1063,7 @@ export function tfVirtualGatewaySpecListenerTlsCertificateFilePropertyToTerrafor
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsCertificateFilePropertyToHclTerraform(struct?: TfVirtualGateway.SpecListenerTlsCertificateFilePropertyOutputReference | TfVirtualGateway.SpecListenerTlsCertificateFileProperty): any {
+export function awsVirtualGatewaySpecListenerTlsCertificateFilePropertyToHclTerraform(struct?: AwsVirtualGateway.SpecListenerTlsCertificateFilePropertyOutputReference | AwsVirtualGateway.SpecListenerTlsCertificateFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1088,7 +1088,7 @@ export function tfVirtualGatewaySpecListenerTlsCertificateFilePropertyToHclTerra
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsCertificateSdsPropertyToTerraform(struct?: TfVirtualGateway.SpecListenerTlsCertificateSdsPropertyOutputReference | TfVirtualGateway.SpecListenerTlsCertificateSdsProperty): any {
+export function awsVirtualGatewaySpecListenerTlsCertificateSdsPropertyToTerraform(struct?: AwsVirtualGateway.SpecListenerTlsCertificateSdsPropertyOutputReference | AwsVirtualGateway.SpecListenerTlsCertificateSdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1099,7 +1099,7 @@ export function tfVirtualGatewaySpecListenerTlsCertificateSdsPropertyToTerraform
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsCertificateSdsPropertyToHclTerraform(struct?: TfVirtualGateway.SpecListenerTlsCertificateSdsPropertyOutputReference | TfVirtualGateway.SpecListenerTlsCertificateSdsProperty): any {
+export function awsVirtualGatewaySpecListenerTlsCertificateSdsPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecListenerTlsCertificateSdsPropertyOutputReference | AwsVirtualGateway.SpecListenerTlsCertificateSdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1118,39 +1118,39 @@ export function tfVirtualGatewaySpecListenerTlsCertificateSdsPropertyToHclTerraf
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsCertificatePropertyToTerraform(struct?: TfVirtualGateway.SpecListenerTlsCertificatePropertyOutputReference | TfVirtualGateway.SpecListenerTlsCertificateProperty): any {
+export function awsVirtualGatewaySpecListenerTlsCertificatePropertyToTerraform(struct?: AwsVirtualGateway.SpecListenerTlsCertificatePropertyOutputReference | AwsVirtualGateway.SpecListenerTlsCertificateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    acm: tfVirtualGatewaySpecListenerTlsCertificateAcmPropertyToTerraform(struct!.acm),
-    file: tfVirtualGatewaySpecListenerTlsCertificateFilePropertyToTerraform(struct!.file),
-    sds: tfVirtualGatewaySpecListenerTlsCertificateSdsPropertyToTerraform(struct!.sds),
+    acm: awsVirtualGatewaySpecListenerTlsCertificateAcmPropertyToTerraform(struct!.acm),
+    file: awsVirtualGatewaySpecListenerTlsCertificateFilePropertyToTerraform(struct!.file),
+    sds: awsVirtualGatewaySpecListenerTlsCertificateSdsPropertyToTerraform(struct!.sds),
   }
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsCertificatePropertyToHclTerraform(struct?: TfVirtualGateway.SpecListenerTlsCertificatePropertyOutputReference | TfVirtualGateway.SpecListenerTlsCertificateProperty): any {
+export function awsVirtualGatewaySpecListenerTlsCertificatePropertyToHclTerraform(struct?: AwsVirtualGateway.SpecListenerTlsCertificatePropertyOutputReference | AwsVirtualGateway.SpecListenerTlsCertificateProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     acm: {
-      value: tfVirtualGatewaySpecListenerTlsCertificateAcmPropertyToHclTerraform(struct!.acm),
+      value: awsVirtualGatewaySpecListenerTlsCertificateAcmPropertyToHclTerraform(struct!.acm),
       isBlock: true,
       type: "list",
       storageClassType: "SpecListenerTlsCertificateAcmPropertyList",
     },
     file: {
-      value: tfVirtualGatewaySpecListenerTlsCertificateFilePropertyToHclTerraform(struct!.file),
+      value: awsVirtualGatewaySpecListenerTlsCertificateFilePropertyToHclTerraform(struct!.file),
       isBlock: true,
       type: "list",
       storageClassType: "SpecListenerTlsCertificateFilePropertyList",
     },
     sds: {
-      value: tfVirtualGatewaySpecListenerTlsCertificateSdsPropertyToHclTerraform(struct!.sds),
+      value: awsVirtualGatewaySpecListenerTlsCertificateSdsPropertyToHclTerraform(struct!.sds),
       isBlock: true,
       type: "list",
       storageClassType: "SpecListenerTlsCertificateSdsPropertyList",
@@ -1162,7 +1162,7 @@ export function tfVirtualGatewaySpecListenerTlsCertificatePropertyToHclTerraform
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyToTerraform(struct?: TfVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyOutputReference | TfVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesMatchProperty): any {
+export function awsVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyToTerraform(struct?: AwsVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyOutputReference | AwsVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1173,7 +1173,7 @@ export function tfVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNames
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyToHclTerraform(struct?: TfVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyOutputReference | TfVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesMatchProperty): any {
+export function awsVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyOutputReference | AwsVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesMatchProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1192,25 +1192,25 @@ export function tfVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNames
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesPropertyToTerraform(struct?: TfVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesPropertyOutputReference | TfVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesProperty): any {
+export function awsVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesPropertyToTerraform(struct?: AwsVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesPropertyOutputReference | AwsVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    match: tfVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyToTerraform(struct!.match),
+    match: awsVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyToTerraform(struct!.match),
   }
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesPropertyToHclTerraform(struct?: TfVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesPropertyOutputReference | TfVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesProperty): any {
+export function awsVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesPropertyOutputReference | AwsVirtualGateway.SpecListenerTlsValidationSubjectAlternativeNamesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     match: {
-      value: tfVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyToHclTerraform(struct!.match),
+      value: awsVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyToHclTerraform(struct!.match),
       isBlock: true,
       type: "list",
       storageClassType: "SpecListenerTlsValidationSubjectAlternativeNamesMatchPropertyList",
@@ -1222,7 +1222,7 @@ export function tfVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNames
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsValidationTrustFilePropertyToTerraform(struct?: TfVirtualGateway.SpecListenerTlsValidationTrustFilePropertyOutputReference | TfVirtualGateway.SpecListenerTlsValidationTrustFileProperty): any {
+export function awsVirtualGatewaySpecListenerTlsValidationTrustFilePropertyToTerraform(struct?: AwsVirtualGateway.SpecListenerTlsValidationTrustFilePropertyOutputReference | AwsVirtualGateway.SpecListenerTlsValidationTrustFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1233,7 +1233,7 @@ export function tfVirtualGatewaySpecListenerTlsValidationTrustFilePropertyToTerr
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsValidationTrustFilePropertyToHclTerraform(struct?: TfVirtualGateway.SpecListenerTlsValidationTrustFilePropertyOutputReference | TfVirtualGateway.SpecListenerTlsValidationTrustFileProperty): any {
+export function awsVirtualGatewaySpecListenerTlsValidationTrustFilePropertyToHclTerraform(struct?: AwsVirtualGateway.SpecListenerTlsValidationTrustFilePropertyOutputReference | AwsVirtualGateway.SpecListenerTlsValidationTrustFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1252,7 +1252,7 @@ export function tfVirtualGatewaySpecListenerTlsValidationTrustFilePropertyToHclT
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsValidationTrustSdsPropertyToTerraform(struct?: TfVirtualGateway.SpecListenerTlsValidationTrustSdsPropertyOutputReference | TfVirtualGateway.SpecListenerTlsValidationTrustSdsProperty): any {
+export function awsVirtualGatewaySpecListenerTlsValidationTrustSdsPropertyToTerraform(struct?: AwsVirtualGateway.SpecListenerTlsValidationTrustSdsPropertyOutputReference | AwsVirtualGateway.SpecListenerTlsValidationTrustSdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1263,7 +1263,7 @@ export function tfVirtualGatewaySpecListenerTlsValidationTrustSdsPropertyToTerra
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsValidationTrustSdsPropertyToHclTerraform(struct?: TfVirtualGateway.SpecListenerTlsValidationTrustSdsPropertyOutputReference | TfVirtualGateway.SpecListenerTlsValidationTrustSdsProperty): any {
+export function awsVirtualGatewaySpecListenerTlsValidationTrustSdsPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecListenerTlsValidationTrustSdsPropertyOutputReference | AwsVirtualGateway.SpecListenerTlsValidationTrustSdsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1282,32 +1282,32 @@ export function tfVirtualGatewaySpecListenerTlsValidationTrustSdsPropertyToHclTe
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsValidationTrustPropertyToTerraform(struct?: TfVirtualGateway.SpecListenerTlsValidationTrustPropertyOutputReference | TfVirtualGateway.SpecListenerTlsValidationTrustProperty): any {
+export function awsVirtualGatewaySpecListenerTlsValidationTrustPropertyToTerraform(struct?: AwsVirtualGateway.SpecListenerTlsValidationTrustPropertyOutputReference | AwsVirtualGateway.SpecListenerTlsValidationTrustProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    file: tfVirtualGatewaySpecListenerTlsValidationTrustFilePropertyToTerraform(struct!.file),
-    sds: tfVirtualGatewaySpecListenerTlsValidationTrustSdsPropertyToTerraform(struct!.sds),
+    file: awsVirtualGatewaySpecListenerTlsValidationTrustFilePropertyToTerraform(struct!.file),
+    sds: awsVirtualGatewaySpecListenerTlsValidationTrustSdsPropertyToTerraform(struct!.sds),
   }
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsValidationTrustPropertyToHclTerraform(struct?: TfVirtualGateway.SpecListenerTlsValidationTrustPropertyOutputReference | TfVirtualGateway.SpecListenerTlsValidationTrustProperty): any {
+export function awsVirtualGatewaySpecListenerTlsValidationTrustPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecListenerTlsValidationTrustPropertyOutputReference | AwsVirtualGateway.SpecListenerTlsValidationTrustProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     file: {
-      value: tfVirtualGatewaySpecListenerTlsValidationTrustFilePropertyToHclTerraform(struct!.file),
+      value: awsVirtualGatewaySpecListenerTlsValidationTrustFilePropertyToHclTerraform(struct!.file),
       isBlock: true,
       type: "list",
       storageClassType: "SpecListenerTlsValidationTrustFilePropertyList",
     },
     sds: {
-      value: tfVirtualGatewaySpecListenerTlsValidationTrustSdsPropertyToHclTerraform(struct!.sds),
+      value: awsVirtualGatewaySpecListenerTlsValidationTrustSdsPropertyToHclTerraform(struct!.sds),
       isBlock: true,
       type: "list",
       storageClassType: "SpecListenerTlsValidationTrustSdsPropertyList",
@@ -1319,32 +1319,32 @@ export function tfVirtualGatewaySpecListenerTlsValidationTrustPropertyToHclTerra
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsValidationPropertyToTerraform(struct?: TfVirtualGateway.SpecListenerTlsValidationPropertyOutputReference | TfVirtualGateway.SpecListenerTlsValidationProperty): any {
+export function awsVirtualGatewaySpecListenerTlsValidationPropertyToTerraform(struct?: AwsVirtualGateway.SpecListenerTlsValidationPropertyOutputReference | AwsVirtualGateway.SpecListenerTlsValidationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    subject_alternative_names: tfVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesPropertyToTerraform(struct!.subjectAlternativeNames),
-    trust: tfVirtualGatewaySpecListenerTlsValidationTrustPropertyToTerraform(struct!.trust),
+    subject_alternative_names: awsVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesPropertyToTerraform(struct!.subjectAlternativeNames),
+    trust: awsVirtualGatewaySpecListenerTlsValidationTrustPropertyToTerraform(struct!.trust),
   }
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsValidationPropertyToHclTerraform(struct?: TfVirtualGateway.SpecListenerTlsValidationPropertyOutputReference | TfVirtualGateway.SpecListenerTlsValidationProperty): any {
+export function awsVirtualGatewaySpecListenerTlsValidationPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecListenerTlsValidationPropertyOutputReference | AwsVirtualGateway.SpecListenerTlsValidationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     subject_alternative_names: {
-      value: tfVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesPropertyToHclTerraform(struct!.subjectAlternativeNames),
+      value: awsVirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesPropertyToHclTerraform(struct!.subjectAlternativeNames),
       isBlock: true,
       type: "list",
       storageClassType: "SpecListenerTlsValidationSubjectAlternativeNamesPropertyList",
     },
     trust: {
-      value: tfVirtualGatewaySpecListenerTlsValidationTrustPropertyToHclTerraform(struct!.trust),
+      value: awsVirtualGatewaySpecListenerTlsValidationTrustPropertyToHclTerraform(struct!.trust),
       isBlock: true,
       type: "list",
       storageClassType: "SpecListenerTlsValidationTrustPropertyList",
@@ -1356,20 +1356,20 @@ export function tfVirtualGatewaySpecListenerTlsValidationPropertyToHclTerraform(
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsPropertyToTerraform(struct?: TfVirtualGateway.SpecListenerTlsPropertyOutputReference | TfVirtualGateway.SpecListenerTlsProperty): any {
+export function awsVirtualGatewaySpecListenerTlsPropertyToTerraform(struct?: AwsVirtualGateway.SpecListenerTlsPropertyOutputReference | AwsVirtualGateway.SpecListenerTlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     mode: cdktn.stringToTerraform(struct!.mode),
-    certificate: tfVirtualGatewaySpecListenerTlsCertificatePropertyToTerraform(struct!.certificate),
-    validation: tfVirtualGatewaySpecListenerTlsValidationPropertyToTerraform(struct!.validation),
+    certificate: awsVirtualGatewaySpecListenerTlsCertificatePropertyToTerraform(struct!.certificate),
+    validation: awsVirtualGatewaySpecListenerTlsValidationPropertyToTerraform(struct!.validation),
   }
 }
 
 
-export function tfVirtualGatewaySpecListenerTlsPropertyToHclTerraform(struct?: TfVirtualGateway.SpecListenerTlsPropertyOutputReference | TfVirtualGateway.SpecListenerTlsProperty): any {
+export function awsVirtualGatewaySpecListenerTlsPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecListenerTlsPropertyOutputReference | AwsVirtualGateway.SpecListenerTlsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1382,13 +1382,13 @@ export function tfVirtualGatewaySpecListenerTlsPropertyToHclTerraform(struct?: T
       storageClassType: "string",
     },
     certificate: {
-      value: tfVirtualGatewaySpecListenerTlsCertificatePropertyToHclTerraform(struct!.certificate),
+      value: awsVirtualGatewaySpecListenerTlsCertificatePropertyToHclTerraform(struct!.certificate),
       isBlock: true,
       type: "list",
       storageClassType: "SpecListenerTlsCertificatePropertyList",
     },
     validation: {
-      value: tfVirtualGatewaySpecListenerTlsValidationPropertyToHclTerraform(struct!.validation),
+      value: awsVirtualGatewaySpecListenerTlsValidationPropertyToHclTerraform(struct!.validation),
       isBlock: true,
       type: "list",
       storageClassType: "SpecListenerTlsValidationPropertyList",
@@ -1400,46 +1400,46 @@ export function tfVirtualGatewaySpecListenerTlsPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfVirtualGatewayListenerPropertyToTerraform(struct?: TfVirtualGateway.ListenerProperty | cdktn.IResolvable): any {
+export function awsVirtualGatewayListenerPropertyToTerraform(struct?: AwsVirtualGateway.ListenerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    connection_pool: tfVirtualGatewayConnectionPoolPropertyToTerraform(struct!.connectionPool),
-    health_check: tfVirtualGatewayHealthCheckPropertyToTerraform(struct!.healthCheck),
-    port_mapping: tfVirtualGatewayPortMappingPropertyToTerraform(struct!.portMapping),
-    tls: tfVirtualGatewaySpecListenerTlsPropertyToTerraform(struct!.tls),
+    connection_pool: awsVirtualGatewayConnectionPoolPropertyToTerraform(struct!.connectionPool),
+    health_check: awsVirtualGatewayHealthCheckPropertyToTerraform(struct!.healthCheck),
+    port_mapping: awsVirtualGatewayPortMappingPropertyToTerraform(struct!.portMapping),
+    tls: awsVirtualGatewaySpecListenerTlsPropertyToTerraform(struct!.tls),
   }
 }
 
 
-export function tfVirtualGatewayListenerPropertyToHclTerraform(struct?: TfVirtualGateway.ListenerProperty | cdktn.IResolvable): any {
+export function awsVirtualGatewayListenerPropertyToHclTerraform(struct?: AwsVirtualGateway.ListenerProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     connection_pool: {
-      value: tfVirtualGatewayConnectionPoolPropertyToHclTerraform(struct!.connectionPool),
+      value: awsVirtualGatewayConnectionPoolPropertyToHclTerraform(struct!.connectionPool),
       isBlock: true,
       type: "list",
       storageClassType: "ConnectionPoolPropertyList",
     },
     health_check: {
-      value: tfVirtualGatewayHealthCheckPropertyToHclTerraform(struct!.healthCheck),
+      value: awsVirtualGatewayHealthCheckPropertyToHclTerraform(struct!.healthCheck),
       isBlock: true,
       type: "list",
       storageClassType: "HealthCheckPropertyList",
     },
     port_mapping: {
-      value: tfVirtualGatewayPortMappingPropertyToHclTerraform(struct!.portMapping),
+      value: awsVirtualGatewayPortMappingPropertyToHclTerraform(struct!.portMapping),
       isBlock: true,
       type: "list",
       storageClassType: "PortMappingPropertyList",
     },
     tls: {
-      value: tfVirtualGatewaySpecListenerTlsPropertyToHclTerraform(struct!.tls),
+      value: awsVirtualGatewaySpecListenerTlsPropertyToHclTerraform(struct!.tls),
       isBlock: true,
       type: "list",
       storageClassType: "SpecListenerTlsPropertyList",
@@ -1451,7 +1451,7 @@ export function tfVirtualGatewayListenerPropertyToHclTerraform(struct?: TfVirtua
 }
 
 
-export function tfVirtualGatewayJsonPropertyToTerraform(struct?: TfVirtualGateway.JsonProperty | cdktn.IResolvable): any {
+export function awsVirtualGatewayJsonPropertyToTerraform(struct?: AwsVirtualGateway.JsonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1463,7 +1463,7 @@ export function tfVirtualGatewayJsonPropertyToTerraform(struct?: TfVirtualGatewa
 }
 
 
-export function tfVirtualGatewayJsonPropertyToHclTerraform(struct?: TfVirtualGateway.JsonProperty | cdktn.IResolvable): any {
+export function awsVirtualGatewayJsonPropertyToHclTerraform(struct?: AwsVirtualGateway.JsonProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1488,19 +1488,19 @@ export function tfVirtualGatewayJsonPropertyToHclTerraform(struct?: TfVirtualGat
 }
 
 
-export function tfVirtualGatewayFormatPropertyToTerraform(struct?: TfVirtualGateway.FormatPropertyOutputReference | TfVirtualGateway.FormatProperty): any {
+export function awsVirtualGatewayFormatPropertyToTerraform(struct?: AwsVirtualGateway.FormatPropertyOutputReference | AwsVirtualGateway.FormatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     text: cdktn.stringToTerraform(struct!.text),
-    json: cdktn.listMapper(tfVirtualGatewayJsonPropertyToTerraform, true)(struct!.json),
+    json: cdktn.listMapper(awsVirtualGatewayJsonPropertyToTerraform, true)(struct!.json),
   }
 }
 
 
-export function tfVirtualGatewayFormatPropertyToHclTerraform(struct?: TfVirtualGateway.FormatPropertyOutputReference | TfVirtualGateway.FormatProperty): any {
+export function awsVirtualGatewayFormatPropertyToHclTerraform(struct?: AwsVirtualGateway.FormatPropertyOutputReference | AwsVirtualGateway.FormatProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1513,7 +1513,7 @@ export function tfVirtualGatewayFormatPropertyToHclTerraform(struct?: TfVirtualG
       storageClassType: "string",
     },
     json: {
-      value: cdktn.listMapperHcl(tfVirtualGatewayJsonPropertyToHclTerraform, true)(struct!.json),
+      value: cdktn.listMapperHcl(awsVirtualGatewayJsonPropertyToHclTerraform, true)(struct!.json),
       isBlock: true,
       type: "list",
       storageClassType: "JsonPropertyList",
@@ -1525,19 +1525,19 @@ export function tfVirtualGatewayFormatPropertyToHclTerraform(struct?: TfVirtualG
 }
 
 
-export function tfVirtualGatewaySpecLoggingAccessLogFilePropertyToTerraform(struct?: TfVirtualGateway.SpecLoggingAccessLogFilePropertyOutputReference | TfVirtualGateway.SpecLoggingAccessLogFileProperty): any {
+export function awsVirtualGatewaySpecLoggingAccessLogFilePropertyToTerraform(struct?: AwsVirtualGateway.SpecLoggingAccessLogFilePropertyOutputReference | AwsVirtualGateway.SpecLoggingAccessLogFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     path: cdktn.stringToTerraform(struct!.path),
-    format: tfVirtualGatewayFormatPropertyToTerraform(struct!.format),
+    format: awsVirtualGatewayFormatPropertyToTerraform(struct!.format),
   }
 }
 
 
-export function tfVirtualGatewaySpecLoggingAccessLogFilePropertyToHclTerraform(struct?: TfVirtualGateway.SpecLoggingAccessLogFilePropertyOutputReference | TfVirtualGateway.SpecLoggingAccessLogFileProperty): any {
+export function awsVirtualGatewaySpecLoggingAccessLogFilePropertyToHclTerraform(struct?: AwsVirtualGateway.SpecLoggingAccessLogFilePropertyOutputReference | AwsVirtualGateway.SpecLoggingAccessLogFileProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1550,7 +1550,7 @@ export function tfVirtualGatewaySpecLoggingAccessLogFilePropertyToHclTerraform(s
       storageClassType: "string",
     },
     format: {
-      value: tfVirtualGatewayFormatPropertyToHclTerraform(struct!.format),
+      value: awsVirtualGatewayFormatPropertyToHclTerraform(struct!.format),
       isBlock: true,
       type: "list",
       storageClassType: "FormatPropertyList",
@@ -1562,25 +1562,25 @@ export function tfVirtualGatewaySpecLoggingAccessLogFilePropertyToHclTerraform(s
 }
 
 
-export function tfVirtualGatewayAccessLogPropertyToTerraform(struct?: TfVirtualGateway.AccessLogPropertyOutputReference | TfVirtualGateway.AccessLogProperty): any {
+export function awsVirtualGatewayAccessLogPropertyToTerraform(struct?: AwsVirtualGateway.AccessLogPropertyOutputReference | AwsVirtualGateway.AccessLogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    file: tfVirtualGatewaySpecLoggingAccessLogFilePropertyToTerraform(struct!.file),
+    file: awsVirtualGatewaySpecLoggingAccessLogFilePropertyToTerraform(struct!.file),
   }
 }
 
 
-export function tfVirtualGatewayAccessLogPropertyToHclTerraform(struct?: TfVirtualGateway.AccessLogPropertyOutputReference | TfVirtualGateway.AccessLogProperty): any {
+export function awsVirtualGatewayAccessLogPropertyToHclTerraform(struct?: AwsVirtualGateway.AccessLogPropertyOutputReference | AwsVirtualGateway.AccessLogProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     file: {
-      value: tfVirtualGatewaySpecLoggingAccessLogFilePropertyToHclTerraform(struct!.file),
+      value: awsVirtualGatewaySpecLoggingAccessLogFilePropertyToHclTerraform(struct!.file),
       isBlock: true,
       type: "list",
       storageClassType: "SpecLoggingAccessLogFilePropertyList",
@@ -1592,25 +1592,25 @@ export function tfVirtualGatewayAccessLogPropertyToHclTerraform(struct?: TfVirtu
 }
 
 
-export function tfVirtualGatewayLoggingPropertyToTerraform(struct?: TfVirtualGateway.LoggingPropertyOutputReference | TfVirtualGateway.LoggingProperty): any {
+export function awsVirtualGatewayLoggingPropertyToTerraform(struct?: AwsVirtualGateway.LoggingPropertyOutputReference | AwsVirtualGateway.LoggingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    access_log: tfVirtualGatewayAccessLogPropertyToTerraform(struct!.accessLog),
+    access_log: awsVirtualGatewayAccessLogPropertyToTerraform(struct!.accessLog),
   }
 }
 
 
-export function tfVirtualGatewayLoggingPropertyToHclTerraform(struct?: TfVirtualGateway.LoggingPropertyOutputReference | TfVirtualGateway.LoggingProperty): any {
+export function awsVirtualGatewayLoggingPropertyToHclTerraform(struct?: AwsVirtualGateway.LoggingPropertyOutputReference | AwsVirtualGateway.LoggingProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     access_log: {
-      value: tfVirtualGatewayAccessLogPropertyToHclTerraform(struct!.accessLog),
+      value: awsVirtualGatewayAccessLogPropertyToHclTerraform(struct!.accessLog),
       isBlock: true,
       type: "list",
       storageClassType: "AccessLogPropertyList",
@@ -1622,39 +1622,39 @@ export function tfVirtualGatewayLoggingPropertyToHclTerraform(struct?: TfVirtual
 }
 
 
-export function tfVirtualGatewaySpecPropertyToTerraform(struct?: TfVirtualGateway.SpecPropertyOutputReference | TfVirtualGateway.SpecProperty): any {
+export function awsVirtualGatewaySpecPropertyToTerraform(struct?: AwsVirtualGateway.SpecPropertyOutputReference | AwsVirtualGateway.SpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    backend_defaults: tfVirtualGatewayBackendDefaultsPropertyToTerraform(struct!.backendDefaults),
-    listener: cdktn.listMapper(tfVirtualGatewayListenerPropertyToTerraform, true)(struct!.listener),
-    logging: tfVirtualGatewayLoggingPropertyToTerraform(struct!.logging),
+    backend_defaults: awsVirtualGatewayBackendDefaultsPropertyToTerraform(struct!.backendDefaults),
+    listener: cdktn.listMapper(awsVirtualGatewayListenerPropertyToTerraform, true)(struct!.listener),
+    logging: awsVirtualGatewayLoggingPropertyToTerraform(struct!.logging),
   }
 }
 
 
-export function tfVirtualGatewaySpecPropertyToHclTerraform(struct?: TfVirtualGateway.SpecPropertyOutputReference | TfVirtualGateway.SpecProperty): any {
+export function awsVirtualGatewaySpecPropertyToHclTerraform(struct?: AwsVirtualGateway.SpecPropertyOutputReference | AwsVirtualGateway.SpecProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     backend_defaults: {
-      value: tfVirtualGatewayBackendDefaultsPropertyToHclTerraform(struct!.backendDefaults),
+      value: awsVirtualGatewayBackendDefaultsPropertyToHclTerraform(struct!.backendDefaults),
       isBlock: true,
       type: "list",
       storageClassType: "BackendDefaultsPropertyList",
     },
     listener: {
-      value: cdktn.listMapperHcl(tfVirtualGatewayListenerPropertyToHclTerraform, true)(struct!.listener),
+      value: cdktn.listMapperHcl(awsVirtualGatewayListenerPropertyToHclTerraform, true)(struct!.listener),
       isBlock: true,
       type: "list",
       storageClassType: "ListenerPropertyList",
     },
     logging: {
-      value: tfVirtualGatewayLoggingPropertyToHclTerraform(struct!.logging),
+      value: awsVirtualGatewayLoggingPropertyToHclTerraform(struct!.logging),
       isBlock: true,
       type: "list",
       storageClassType: "LoggingPropertyList",
@@ -1666,14 +1666,14 @@ export function tfVirtualGatewaySpecPropertyToHclTerraform(struct?: TfVirtualGat
 }
 
 
-export namespace TfVirtualGateway {
+export namespace AwsVirtualGateway {
 export interface SpecBackendDefaultsClientPolicyTlsCertificateFileProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#certificate_chain TfVirtualGateway#certificate_chain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#certificate_chain AwsVirtualGateway#certificate_chain}
   */
   readonly certificateChain: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#private_key TfVirtualGateway#private_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#private_key AwsVirtualGateway#private_key}
   */
   readonly privateKey: string;
 }
@@ -1743,7 +1743,7 @@ export class SpecBackendDefaultsClientPolicyTlsCertificateFilePropertyOutputRefe
 }
 export interface SpecBackendDefaultsClientPolicyTlsCertificateSdsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#secret_name TfVirtualGateway#secret_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#secret_name AwsVirtualGateway#secret_name}
   */
   readonly secretName: string;
 }
@@ -1796,13 +1796,13 @@ export interface SpecBackendDefaultsClientPolicyTlsCertificateProperty {
   /**
   * file block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#file TfVirtualGateway#file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#file AwsVirtualGateway#file}
   */
   readonly file?: SpecBackendDefaultsClientPolicyTlsCertificateFileProperty;
   /**
   * sds block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#sds TfVirtualGateway#sds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#sds AwsVirtualGateway#sds}
   */
   readonly sds?: SpecBackendDefaultsClientPolicyTlsCertificateSdsProperty;
 }
@@ -1878,7 +1878,7 @@ export class SpecBackendDefaultsClientPolicyTlsCertificatePropertyOutputReferenc
 }
 export interface SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#exact TfVirtualGateway#exact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#exact AwsVirtualGateway#exact}
   */
   readonly exact: string[];
 }
@@ -1931,7 +1931,7 @@ export interface SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeN
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#match TfVirtualGateway#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#match AwsVirtualGateway#match}
   */
   readonly match: SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchProperty;
 }
@@ -1982,7 +1982,7 @@ export class SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames
 }
 export interface SpecBackendDefaultsClientPolicyTlsValidationTrustAcmProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#certificate_authority_arns TfVirtualGateway#certificate_authority_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#certificate_authority_arns AwsVirtualGateway#certificate_authority_arns}
   */
   readonly certificateAuthorityArns: string[];
 }
@@ -2033,7 +2033,7 @@ export class SpecBackendDefaultsClientPolicyTlsValidationTrustAcmPropertyOutputR
 }
 export interface SpecBackendDefaultsClientPolicyTlsValidationTrustFileProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#certificate_chain TfVirtualGateway#certificate_chain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#certificate_chain AwsVirtualGateway#certificate_chain}
   */
   readonly certificateChain: string;
 }
@@ -2084,7 +2084,7 @@ export class SpecBackendDefaultsClientPolicyTlsValidationTrustFilePropertyOutput
 }
 export interface SpecBackendDefaultsClientPolicyTlsValidationTrustSdsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#secret_name TfVirtualGateway#secret_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#secret_name AwsVirtualGateway#secret_name}
   */
   readonly secretName: string;
 }
@@ -2137,19 +2137,19 @@ export interface SpecBackendDefaultsClientPolicyTlsValidationTrustProperty {
   /**
   * acm block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#acm TfVirtualGateway#acm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#acm AwsVirtualGateway#acm}
   */
   readonly acm?: SpecBackendDefaultsClientPolicyTlsValidationTrustAcmProperty;
   /**
   * file block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#file TfVirtualGateway#file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#file AwsVirtualGateway#file}
   */
   readonly file?: SpecBackendDefaultsClientPolicyTlsValidationTrustFileProperty;
   /**
   * sds block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#sds TfVirtualGateway#sds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#sds AwsVirtualGateway#sds}
   */
   readonly sds?: SpecBackendDefaultsClientPolicyTlsValidationTrustSdsProperty;
 }
@@ -2249,13 +2249,13 @@ export interface SpecBackendDefaultsClientPolicyTlsValidationProperty {
   /**
   * subject_alternative_names block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#subject_alternative_names TfVirtualGateway#subject_alternative_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#subject_alternative_names AwsVirtualGateway#subject_alternative_names}
   */
   readonly subjectAlternativeNames?: SpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesProperty;
   /**
   * trust block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#trust TfVirtualGateway#trust}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#trust AwsVirtualGateway#trust}
   */
   readonly trust: SpecBackendDefaultsClientPolicyTlsValidationTrustProperty;
 }
@@ -2328,23 +2328,23 @@ export class SpecBackendDefaultsClientPolicyTlsValidationPropertyOutputReference
 }
 export interface SpecBackendDefaultsClientPolicyTlsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#enforce TfVirtualGateway#enforce}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#enforce AwsVirtualGateway#enforce}
   */
   readonly enforce?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#ports TfVirtualGateway#ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#ports AwsVirtualGateway#ports}
   */
   readonly ports?: number[];
   /**
   * certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#certificate TfVirtualGateway#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#certificate AwsVirtualGateway#certificate}
   */
   readonly certificate?: SpecBackendDefaultsClientPolicyTlsCertificateProperty;
   /**
   * validation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#validation TfVirtualGateway#validation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#validation AwsVirtualGateway#validation}
   */
   readonly validation: SpecBackendDefaultsClientPolicyTlsValidationProperty;
 }
@@ -2463,7 +2463,7 @@ export interface ClientPolicyProperty {
   /**
   * tls block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#tls TfVirtualGateway#tls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#tls AwsVirtualGateway#tls}
   */
   readonly tls?: SpecBackendDefaultsClientPolicyTlsProperty;
 }
@@ -2519,7 +2519,7 @@ export interface BackendDefaultsProperty {
   /**
   * client_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#client_policy TfVirtualGateway#client_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#client_policy AwsVirtualGateway#client_policy}
   */
   readonly clientPolicy?: ClientPolicyProperty;
 }
@@ -2573,7 +2573,7 @@ export class BackendDefaultsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface GrpcProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#max_requests TfVirtualGateway#max_requests}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#max_requests AwsVirtualGateway#max_requests}
   */
   readonly maxRequests: number;
 }
@@ -2624,11 +2624,11 @@ export class GrpcPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HttpProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#max_connections TfVirtualGateway#max_connections}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#max_connections AwsVirtualGateway#max_connections}
   */
   readonly maxConnections: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#max_pending_requests TfVirtualGateway#max_pending_requests}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#max_pending_requests AwsVirtualGateway#max_pending_requests}
   */
   readonly maxPendingRequests?: number;
 }
@@ -2701,7 +2701,7 @@ export class HttpPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface Http2Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#max_requests TfVirtualGateway#max_requests}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#max_requests AwsVirtualGateway#max_requests}
   */
   readonly maxRequests: number;
 }
@@ -2754,19 +2754,19 @@ export interface ConnectionPoolProperty {
   /**
   * grpc block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#grpc TfVirtualGateway#grpc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#grpc AwsVirtualGateway#grpc}
   */
   readonly grpc?: GrpcProperty;
   /**
   * http block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#http TfVirtualGateway#http}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#http AwsVirtualGateway#http}
   */
   readonly http?: HttpProperty;
   /**
   * http2 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#http2 TfVirtualGateway#http2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#http2 AwsVirtualGateway#http2}
   */
   readonly http2?: Http2Property;
 }
@@ -2864,31 +2864,31 @@ export class ConnectionPoolPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface HealthCheckProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#healthy_threshold TfVirtualGateway#healthy_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#healthy_threshold AwsVirtualGateway#healthy_threshold}
   */
   readonly healthyThreshold: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#interval_millis TfVirtualGateway#interval_millis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#interval_millis AwsVirtualGateway#interval_millis}
   */
   readonly intervalMillis: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#path TfVirtualGateway#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#path AwsVirtualGateway#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#port TfVirtualGateway#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#port AwsVirtualGateway#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#protocol TfVirtualGateway#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#protocol AwsVirtualGateway#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#timeout_millis TfVirtualGateway#timeout_millis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#timeout_millis AwsVirtualGateway#timeout_millis}
   */
   readonly timeoutMillis: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#unhealthy_threshold TfVirtualGateway#unhealthy_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#unhealthy_threshold AwsVirtualGateway#unhealthy_threshold}
   */
   readonly unhealthyThreshold: number;
 }
@@ -3059,11 +3059,11 @@ export class HealthCheckPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface PortMappingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#port TfVirtualGateway#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#port AwsVirtualGateway#port}
   */
   readonly port: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#protocol TfVirtualGateway#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#protocol AwsVirtualGateway#protocol}
   */
   readonly protocol: string;
 }
@@ -3133,7 +3133,7 @@ export class PortMappingPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SpecListenerTlsCertificateAcmProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#certificate_arn TfVirtualGateway#certificate_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#certificate_arn AwsVirtualGateway#certificate_arn}
   */
   readonly certificateArn: string;
 }
@@ -3184,11 +3184,11 @@ export class SpecListenerTlsCertificateAcmPropertyOutputReference extends cdktn.
 }
 export interface SpecListenerTlsCertificateFileProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#certificate_chain TfVirtualGateway#certificate_chain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#certificate_chain AwsVirtualGateway#certificate_chain}
   */
   readonly certificateChain: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#private_key TfVirtualGateway#private_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#private_key AwsVirtualGateway#private_key}
   */
   readonly privateKey: string;
 }
@@ -3258,7 +3258,7 @@ export class SpecListenerTlsCertificateFilePropertyOutputReference extends cdktn
 }
 export interface SpecListenerTlsCertificateSdsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#secret_name TfVirtualGateway#secret_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#secret_name AwsVirtualGateway#secret_name}
   */
   readonly secretName: string;
 }
@@ -3311,19 +3311,19 @@ export interface SpecListenerTlsCertificateProperty {
   /**
   * acm block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#acm TfVirtualGateway#acm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#acm AwsVirtualGateway#acm}
   */
   readonly acm?: SpecListenerTlsCertificateAcmProperty;
   /**
   * file block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#file TfVirtualGateway#file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#file AwsVirtualGateway#file}
   */
   readonly file?: SpecListenerTlsCertificateFileProperty;
   /**
   * sds block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#sds TfVirtualGateway#sds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#sds AwsVirtualGateway#sds}
   */
   readonly sds?: SpecListenerTlsCertificateSdsProperty;
 }
@@ -3421,7 +3421,7 @@ export class SpecListenerTlsCertificatePropertyOutputReference extends cdktn.Com
 }
 export interface SpecListenerTlsValidationSubjectAlternativeNamesMatchProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#exact TfVirtualGateway#exact}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#exact AwsVirtualGateway#exact}
   */
   readonly exact: string[];
 }
@@ -3474,7 +3474,7 @@ export interface SpecListenerTlsValidationSubjectAlternativeNamesProperty {
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#match TfVirtualGateway#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#match AwsVirtualGateway#match}
   */
   readonly match: SpecListenerTlsValidationSubjectAlternativeNamesMatchProperty;
 }
@@ -3525,7 +3525,7 @@ export class SpecListenerTlsValidationSubjectAlternativeNamesPropertyOutputRefer
 }
 export interface SpecListenerTlsValidationTrustFileProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#certificate_chain TfVirtualGateway#certificate_chain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#certificate_chain AwsVirtualGateway#certificate_chain}
   */
   readonly certificateChain: string;
 }
@@ -3576,7 +3576,7 @@ export class SpecListenerTlsValidationTrustFilePropertyOutputReference extends c
 }
 export interface SpecListenerTlsValidationTrustSdsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#secret_name TfVirtualGateway#secret_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#secret_name AwsVirtualGateway#secret_name}
   */
   readonly secretName: string;
 }
@@ -3629,13 +3629,13 @@ export interface SpecListenerTlsValidationTrustProperty {
   /**
   * file block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#file TfVirtualGateway#file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#file AwsVirtualGateway#file}
   */
   readonly file?: SpecListenerTlsValidationTrustFileProperty;
   /**
   * sds block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#sds TfVirtualGateway#sds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#sds AwsVirtualGateway#sds}
   */
   readonly sds?: SpecListenerTlsValidationTrustSdsProperty;
 }
@@ -3713,13 +3713,13 @@ export interface SpecListenerTlsValidationProperty {
   /**
   * subject_alternative_names block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#subject_alternative_names TfVirtualGateway#subject_alternative_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#subject_alternative_names AwsVirtualGateway#subject_alternative_names}
   */
   readonly subjectAlternativeNames?: SpecListenerTlsValidationSubjectAlternativeNamesProperty;
   /**
   * trust block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#trust TfVirtualGateway#trust}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#trust AwsVirtualGateway#trust}
   */
   readonly trust: SpecListenerTlsValidationTrustProperty;
 }
@@ -3792,19 +3792,19 @@ export class SpecListenerTlsValidationPropertyOutputReference extends cdktn.Comp
 }
 export interface SpecListenerTlsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#mode TfVirtualGateway#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#mode AwsVirtualGateway#mode}
   */
   readonly mode: string;
   /**
   * certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#certificate TfVirtualGateway#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#certificate AwsVirtualGateway#certificate}
   */
   readonly certificate: SpecListenerTlsCertificateProperty;
   /**
   * validation block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#validation TfVirtualGateway#validation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#validation AwsVirtualGateway#validation}
   */
   readonly validation?: SpecListenerTlsValidationProperty;
 }
@@ -3898,25 +3898,25 @@ export interface ListenerProperty {
   /**
   * connection_pool block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#connection_pool TfVirtualGateway#connection_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#connection_pool AwsVirtualGateway#connection_pool}
   */
   readonly connectionPool?: ConnectionPoolProperty;
   /**
   * health_check block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#health_check TfVirtualGateway#health_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#health_check AwsVirtualGateway#health_check}
   */
   readonly healthCheck?: HealthCheckProperty;
   /**
   * port_mapping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#port_mapping TfVirtualGateway#port_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#port_mapping AwsVirtualGateway#port_mapping}
   */
   readonly portMapping: PortMappingProperty;
   /**
   * tls block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#tls TfVirtualGateway#tls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#tls AwsVirtualGateway#tls}
   */
   readonly tls?: SpecListenerTlsProperty;
 }
@@ -4065,11 +4065,11 @@ export class ListenerPropertyList extends cdktn.ComplexList {
 }
 export interface JsonProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#key TfVirtualGateway#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#key AwsVirtualGateway#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#value TfVirtualGateway#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#value AwsVirtualGateway#value}
   */
   readonly value: string;
 }
@@ -4171,13 +4171,13 @@ export class JsonPropertyList extends cdktn.ComplexList {
 }
 export interface FormatProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#text TfVirtualGateway#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#text AwsVirtualGateway#text}
   */
   readonly text?: string;
   /**
   * json block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#json TfVirtualGateway#json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#json AwsVirtualGateway#json}
   */
   readonly json?: JsonProperty[] | cdktn.IResolvable;
 }
@@ -4253,13 +4253,13 @@ export class FormatPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface SpecLoggingAccessLogFileProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#path TfVirtualGateway#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#path AwsVirtualGateway#path}
   */
   readonly path: string;
   /**
   * format block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#format TfVirtualGateway#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#format AwsVirtualGateway#format}
   */
   readonly format?: FormatProperty;
 }
@@ -4334,7 +4334,7 @@ export interface AccessLogProperty {
   /**
   * file block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#file TfVirtualGateway#file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#file AwsVirtualGateway#file}
   */
   readonly file?: SpecLoggingAccessLogFileProperty;
 }
@@ -4390,7 +4390,7 @@ export interface LoggingProperty {
   /**
   * access_log block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#access_log TfVirtualGateway#access_log}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#access_log AwsVirtualGateway#access_log}
   */
   readonly accessLog?: AccessLogProperty;
 }
@@ -4446,19 +4446,19 @@ export interface SpecProperty {
   /**
   * backend_defaults block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#backend_defaults TfVirtualGateway#backend_defaults}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#backend_defaults AwsVirtualGateway#backend_defaults}
   */
   readonly backendDefaults?: BackendDefaultsProperty;
   /**
   * listener block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#listener TfVirtualGateway#listener}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#listener AwsVirtualGateway#listener}
   */
   readonly listener: ListenerProperty[] | cdktn.IResolvable;
   /**
   * logging block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#logging TfVirtualGateway#logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appmesh_virtual_gateway#logging AwsVirtualGateway#logging}
   */
   readonly logging?: LoggingProperty;
 }

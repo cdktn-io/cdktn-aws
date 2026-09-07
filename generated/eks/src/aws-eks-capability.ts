@@ -5,55 +5,55 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCapabilityConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCapabilityConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#capability_name TfCapability#capability_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#capability_name AwsCapability#capability_name}
   */
   readonly capabilityName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#cluster_name TfCapability#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#cluster_name AwsCapability#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#delete_propagation_policy TfCapability#delete_propagation_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#delete_propagation_policy AwsCapability#delete_propagation_policy}
   */
   readonly deletePropagationPolicy: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#region TfCapability#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#region AwsCapability#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#role_arn TfCapability#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#role_arn AwsCapability#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#tags TfCapability#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#tags AwsCapability#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#type TfCapability#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#type AwsCapability#type}
   */
   readonly type: string;
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#configuration TfCapability#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#configuration AwsCapability#configuration}
   */
-  readonly configuration?: TfCapability.ConfigurationProperty[] | cdktn.IResolvable;
+  readonly configuration?: AwsCapability.ConfigurationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#timeouts TfCapability#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#timeouts AwsCapability#timeouts}
   */
-  readonly timeouts?: TfCapability.TimeoutsProperty;
+  readonly timeouts?: AwsCapability.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability aws_eks_capability}
 */
-export class TfCapability extends cdktn.TerraformResource {
+export class AwsCapability extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -64,11 +64,11 @@ export class TfCapability extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCapability resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCapability resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCapability to import
-  * @param importFromId The id of the existing TfCapability that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCapability to import is found
+  * @param importToId The construct id used in the generated config for the AwsCapability to import
+  * @param importFromId The id of the existing AwsCapability that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCapability to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eks_capability", importId: importFromId, provider });
@@ -83,9 +83,9 @@ export class TfCapability extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCapabilityConfig
+  * @param options AwsCapabilityConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCapabilityConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCapabilityConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_eks_capability',
       terraformGeneratorMetadata: {
@@ -230,11 +230,11 @@ export class TfCapability extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new TfCapability.ConfigurationPropertyList(this, "configuration", false);
+  private _configuration = new AwsCapability.ConfigurationPropertyList(this, "configuration", false);
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: TfCapability.ConfigurationProperty[] | cdktn.IResolvable) {
+  public putConfiguration(value: AwsCapability.ConfigurationProperty[] | cdktn.IResolvable) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -246,11 +246,11 @@ export class TfCapability extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCapability.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCapability.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCapability.TimeoutsProperty) {
+  public putTimeouts(value: AwsCapability.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -274,8 +274,8 @@ export class TfCapability extends cdktn.TerraformResource {
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       type: cdktn.stringToTerraform(this._type),
-      configuration: cdktn.listMapper(tfCapabilityConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
-      timeouts: tfCapabilityTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      configuration: cdktn.listMapper(awsCapabilityConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
+      timeouts: awsCapabilityTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -324,16 +324,16 @@ export class TfCapability extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       configuration: {
-        value: cdktn.listMapperHcl(tfCapabilityConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
+        value: cdktn.listMapperHcl(awsCapabilityConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCapability.ConfigurationPropertyList",
+        storageClassType: "AwsCapability.ConfigurationPropertyList",
       },
       timeouts: {
-        value: tfCapabilityTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCapabilityTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCapability.TimeoutsProperty",
+        storageClassType: "AwsCapability.TimeoutsProperty",
       },
     };
 
@@ -342,7 +342,7 @@ export class TfCapability extends cdktn.TerraformResource {
   }
 }
 
-export function tfCapabilityAwsIdcPropertyToTerraform(struct?: TfCapability.AwsIdcProperty | cdktn.IResolvable): any {
+export function awsCapabilityAwsIdcPropertyToTerraform(struct?: AwsCapability.AwsIdcProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -354,7 +354,7 @@ export function tfCapabilityAwsIdcPropertyToTerraform(struct?: TfCapability.AwsI
 }
 
 
-export function tfCapabilityAwsIdcPropertyToHclTerraform(struct?: TfCapability.AwsIdcProperty | cdktn.IResolvable): any {
+export function awsCapabilityAwsIdcPropertyToHclTerraform(struct?: AwsCapability.AwsIdcProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -379,7 +379,7 @@ export function tfCapabilityAwsIdcPropertyToHclTerraform(struct?: TfCapability.A
 }
 
 
-export function tfCapabilityNetworkAccessPropertyToTerraform(struct?: TfCapability.NetworkAccessProperty | cdktn.IResolvable): any {
+export function awsCapabilityNetworkAccessPropertyToTerraform(struct?: AwsCapability.NetworkAccessProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -390,7 +390,7 @@ export function tfCapabilityNetworkAccessPropertyToTerraform(struct?: TfCapabili
 }
 
 
-export function tfCapabilityNetworkAccessPropertyToHclTerraform(struct?: TfCapability.NetworkAccessProperty | cdktn.IResolvable): any {
+export function awsCapabilityNetworkAccessPropertyToHclTerraform(struct?: AwsCapability.NetworkAccessProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -409,7 +409,7 @@ export function tfCapabilityNetworkAccessPropertyToHclTerraform(struct?: TfCapab
 }
 
 
-export function tfCapabilityIdentityPropertyToTerraform(struct?: TfCapability.IdentityProperty | cdktn.IResolvable): any {
+export function awsCapabilityIdentityPropertyToTerraform(struct?: AwsCapability.IdentityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -421,7 +421,7 @@ export function tfCapabilityIdentityPropertyToTerraform(struct?: TfCapability.Id
 }
 
 
-export function tfCapabilityIdentityPropertyToHclTerraform(struct?: TfCapability.IdentityProperty | cdktn.IResolvable): any {
+export function awsCapabilityIdentityPropertyToHclTerraform(struct?: AwsCapability.IdentityProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -446,19 +446,19 @@ export function tfCapabilityIdentityPropertyToHclTerraform(struct?: TfCapability
 }
 
 
-export function tfCapabilityRbacRoleMappingPropertyToTerraform(struct?: TfCapability.RbacRoleMappingProperty | cdktn.IResolvable): any {
+export function awsCapabilityRbacRoleMappingPropertyToTerraform(struct?: AwsCapability.RbacRoleMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     role: cdktn.stringToTerraform(struct!.role),
-    identity: cdktn.listMapper(tfCapabilityIdentityPropertyToTerraform, true)(struct!.identity),
+    identity: cdktn.listMapper(awsCapabilityIdentityPropertyToTerraform, true)(struct!.identity),
   }
 }
 
 
-export function tfCapabilityRbacRoleMappingPropertyToHclTerraform(struct?: TfCapability.RbacRoleMappingProperty | cdktn.IResolvable): any {
+export function awsCapabilityRbacRoleMappingPropertyToHclTerraform(struct?: AwsCapability.RbacRoleMappingProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -471,7 +471,7 @@ export function tfCapabilityRbacRoleMappingPropertyToHclTerraform(struct?: TfCap
       storageClassType: "string",
     },
     identity: {
-      value: cdktn.listMapperHcl(tfCapabilityIdentityPropertyToHclTerraform, true)(struct!.identity),
+      value: cdktn.listMapperHcl(awsCapabilityIdentityPropertyToHclTerraform, true)(struct!.identity),
       isBlock: true,
       type: "set",
       storageClassType: "IdentityPropertyList",
@@ -483,21 +483,21 @@ export function tfCapabilityRbacRoleMappingPropertyToHclTerraform(struct?: TfCap
 }
 
 
-export function tfCapabilityArgoCdPropertyToTerraform(struct?: TfCapability.ArgoCdProperty | cdktn.IResolvable): any {
+export function awsCapabilityArgoCdPropertyToTerraform(struct?: AwsCapability.ArgoCdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     namespace: cdktn.stringToTerraform(struct!.namespace),
-    aws_idc: cdktn.listMapper(tfCapabilityAwsIdcPropertyToTerraform, true)(struct!.awsIdc),
-    network_access: cdktn.listMapper(tfCapabilityNetworkAccessPropertyToTerraform, true)(struct!.networkAccess),
-    rbac_role_mapping: cdktn.listMapper(tfCapabilityRbacRoleMappingPropertyToTerraform, true)(struct!.rbacRoleMapping),
+    aws_idc: cdktn.listMapper(awsCapabilityAwsIdcPropertyToTerraform, true)(struct!.awsIdc),
+    network_access: cdktn.listMapper(awsCapabilityNetworkAccessPropertyToTerraform, true)(struct!.networkAccess),
+    rbac_role_mapping: cdktn.listMapper(awsCapabilityRbacRoleMappingPropertyToTerraform, true)(struct!.rbacRoleMapping),
   }
 }
 
 
-export function tfCapabilityArgoCdPropertyToHclTerraform(struct?: TfCapability.ArgoCdProperty | cdktn.IResolvable): any {
+export function awsCapabilityArgoCdPropertyToHclTerraform(struct?: AwsCapability.ArgoCdProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -510,19 +510,19 @@ export function tfCapabilityArgoCdPropertyToHclTerraform(struct?: TfCapability.A
       storageClassType: "string",
     },
     aws_idc: {
-      value: cdktn.listMapperHcl(tfCapabilityAwsIdcPropertyToHclTerraform, true)(struct!.awsIdc),
+      value: cdktn.listMapperHcl(awsCapabilityAwsIdcPropertyToHclTerraform, true)(struct!.awsIdc),
       isBlock: true,
       type: "list",
       storageClassType: "AwsIdcPropertyList",
     },
     network_access: {
-      value: cdktn.listMapperHcl(tfCapabilityNetworkAccessPropertyToHclTerraform, true)(struct!.networkAccess),
+      value: cdktn.listMapperHcl(awsCapabilityNetworkAccessPropertyToHclTerraform, true)(struct!.networkAccess),
       isBlock: true,
       type: "list",
       storageClassType: "NetworkAccessPropertyList",
     },
     rbac_role_mapping: {
-      value: cdktn.listMapperHcl(tfCapabilityRbacRoleMappingPropertyToHclTerraform, true)(struct!.rbacRoleMapping),
+      value: cdktn.listMapperHcl(awsCapabilityRbacRoleMappingPropertyToHclTerraform, true)(struct!.rbacRoleMapping),
       isBlock: true,
       type: "set",
       storageClassType: "RbacRoleMappingPropertyList",
@@ -534,25 +534,25 @@ export function tfCapabilityArgoCdPropertyToHclTerraform(struct?: TfCapability.A
 }
 
 
-export function tfCapabilityConfigurationPropertyToTerraform(struct?: TfCapability.ConfigurationProperty | cdktn.IResolvable): any {
+export function awsCapabilityConfigurationPropertyToTerraform(struct?: AwsCapability.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    argo_cd: cdktn.listMapper(tfCapabilityArgoCdPropertyToTerraform, true)(struct!.argoCd),
+    argo_cd: cdktn.listMapper(awsCapabilityArgoCdPropertyToTerraform, true)(struct!.argoCd),
   }
 }
 
 
-export function tfCapabilityConfigurationPropertyToHclTerraform(struct?: TfCapability.ConfigurationProperty | cdktn.IResolvable): any {
+export function awsCapabilityConfigurationPropertyToHclTerraform(struct?: AwsCapability.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     argo_cd: {
-      value: cdktn.listMapperHcl(tfCapabilityArgoCdPropertyToHclTerraform, true)(struct!.argoCd),
+      value: cdktn.listMapperHcl(awsCapabilityArgoCdPropertyToHclTerraform, true)(struct!.argoCd),
       isBlock: true,
       type: "list",
       storageClassType: "ArgoCdPropertyList",
@@ -564,7 +564,7 @@ export function tfCapabilityConfigurationPropertyToHclTerraform(struct?: TfCapab
 }
 
 
-export function tfCapabilityTimeoutsPropertyToTerraform(struct?: TfCapability.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCapabilityTimeoutsPropertyToTerraform(struct?: AwsCapability.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -577,7 +577,7 @@ export function tfCapabilityTimeoutsPropertyToTerraform(struct?: TfCapability.Ti
 }
 
 
-export function tfCapabilityTimeoutsPropertyToHclTerraform(struct?: TfCapability.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCapabilityTimeoutsPropertyToHclTerraform(struct?: AwsCapability.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -608,14 +608,14 @@ export function tfCapabilityTimeoutsPropertyToHclTerraform(struct?: TfCapability
 }
 
 
-export namespace TfCapability {
+export namespace AwsCapability {
 export interface AwsIdcProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#idc_instance_arn TfCapability#idc_instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#idc_instance_arn AwsCapability#idc_instance_arn}
   */
   readonly idcInstanceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#idc_region TfCapability#idc_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#idc_region AwsCapability#idc_region}
   */
   readonly idcRegion?: string;
 }
@@ -725,7 +725,7 @@ export class AwsIdcPropertyList extends cdktn.ComplexList {
 }
 export interface NetworkAccessProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#vpce_ids TfCapability#vpce_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#vpce_ids AwsCapability#vpce_ids}
   */
   readonly vpceIds?: string[];
 }
@@ -811,14 +811,14 @@ export class NetworkAccessPropertyList extends cdktn.ComplexList {
 }
 export interface IdentityProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#id TfCapability#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#id AwsCapability#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#type TfCapability#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#type AwsCapability#type}
   */
   readonly type: string;
 }
@@ -920,13 +920,13 @@ export class IdentityPropertyList extends cdktn.ComplexList {
 }
 export interface RbacRoleMappingProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#role TfCapability#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#role AwsCapability#role}
   */
   readonly role: string;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#identity TfCapability#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#identity AwsCapability#identity}
   */
   readonly identity?: IdentityProperty[] | cdktn.IResolvable;
 }
@@ -1031,25 +1031,25 @@ export class RbacRoleMappingPropertyList extends cdktn.ComplexList {
 }
 export interface ArgoCdProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#namespace TfCapability#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#namespace AwsCapability#namespace}
   */
   readonly namespace?: string;
   /**
   * aws_idc block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#aws_idc TfCapability#aws_idc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#aws_idc AwsCapability#aws_idc}
   */
   readonly awsIdc?: AwsIdcProperty[] | cdktn.IResolvable;
   /**
   * network_access block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#network_access TfCapability#network_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#network_access AwsCapability#network_access}
   */
   readonly networkAccess?: NetworkAccessProperty[] | cdktn.IResolvable;
   /**
   * rbac_role_mapping block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#rbac_role_mapping TfCapability#rbac_role_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#rbac_role_mapping AwsCapability#rbac_role_mapping}
   */
   readonly rbacRoleMapping?: RbacRoleMappingProperty[] | cdktn.IResolvable;
 }
@@ -1208,7 +1208,7 @@ export interface ConfigurationProperty {
   /**
   * argo_cd block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#argo_cd TfCapability#argo_cd}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#argo_cd AwsCapability#argo_cd}
   */
   readonly argoCd?: ArgoCdProperty[] | cdktn.IResolvable;
 }
@@ -1296,19 +1296,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#create TfCapability#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#create AwsCapability#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#delete TfCapability#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#delete AwsCapability#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#update TfCapability#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_capability#update AwsCapability#update}
   */
   readonly update?: string;
 }

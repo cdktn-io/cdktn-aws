@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfAgentVersionsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsAgentVersionsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrockagent_agent_versions#agent_id DataTfAgentVersions#agent_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrockagent_agent_versions#agent_id DataAwsAgentVersions#agent_id}
   */
   readonly agentId: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrockagent_agent_versions#region DataTfAgentVersions#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrockagent_agent_versions#region DataAwsAgentVersions#region}
   */
   readonly region?: string;
   /**
   * agent_version_summaries block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrockagent_agent_versions#agent_version_summaries DataTfAgentVersions#agent_version_summaries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrockagent_agent_versions#agent_version_summaries DataAwsAgentVersions#agent_version_summaries}
   */
-  readonly agentVersionSummaries?: DataTfAgentVersions.AgentVersionSummariesProperty[] | cdktn.IResolvable;
+  readonly agentVersionSummaries?: DataAwsAgentVersions.AgentVersionSummariesProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrockagent_agent_versions aws_bedrockagent_agent_versions}
 */
-export class DataTfAgentVersions extends cdktn.TerraformDataSource {
+export class DataAwsAgentVersions extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class DataTfAgentVersions extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfAgentVersions resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsAgentVersions resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfAgentVersions to import
-  * @param importFromId The id of the existing DataTfAgentVersions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrockagent_agent_versions#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfAgentVersions to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsAgentVersions to import
+  * @param importFromId The id of the existing DataAwsAgentVersions that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrockagent_agent_versions#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsAgentVersions to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrockagent_agent_versions", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class DataTfAgentVersions extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfAgentVersionsConfig
+  * @param options DataAwsAgentVersionsConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfAgentVersionsConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsAgentVersionsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrockagent_agent_versions',
       terraformGeneratorMetadata: {
@@ -114,11 +114,11 @@ export class DataTfAgentVersions extends cdktn.TerraformDataSource {
   }
 
   // agent_version_summaries - computed: false, optional: true, required: false
-  private _agentVersionSummaries = new DataTfAgentVersions.AgentVersionSummariesPropertyList(this, "agent_version_summaries", false);
+  private _agentVersionSummaries = new DataAwsAgentVersions.AgentVersionSummariesPropertyList(this, "agent_version_summaries", false);
   public get agentVersionSummaries() {
     return this._agentVersionSummaries;
   }
-  public putAgentVersionSummaries(value: DataTfAgentVersions.AgentVersionSummariesProperty[] | cdktn.IResolvable) {
+  public putAgentVersionSummaries(value: DataAwsAgentVersions.AgentVersionSummariesProperty[] | cdktn.IResolvable) {
     this._agentVersionSummaries.internalValue = value;
   }
   public resetAgentVersionSummaries() {
@@ -137,7 +137,7 @@ export class DataTfAgentVersions extends cdktn.TerraformDataSource {
     return {
       agent_id: cdktn.stringToTerraform(this._agentId),
       region: cdktn.stringToTerraform(this._region),
-      agent_version_summaries: cdktn.listMapper(dataTfAgentVersionsAgentVersionSummariesPropertyToTerraform, true)(this._agentVersionSummaries.internalValue),
+      agent_version_summaries: cdktn.listMapper(dataAwsAgentVersionsAgentVersionSummariesPropertyToTerraform, true)(this._agentVersionSummaries.internalValue),
     };
   }
 
@@ -156,10 +156,10 @@ export class DataTfAgentVersions extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       agent_version_summaries: {
-        value: cdktn.listMapperHcl(dataTfAgentVersionsAgentVersionSummariesPropertyToHclTerraform, true)(this._agentVersionSummaries.internalValue),
+        value: cdktn.listMapperHcl(dataAwsAgentVersionsAgentVersionSummariesPropertyToHclTerraform, true)(this._agentVersionSummaries.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "DataTfAgentVersions.AgentVersionSummariesPropertyList",
+        storageClassType: "DataAwsAgentVersions.AgentVersionSummariesPropertyList",
       },
     };
 
@@ -168,7 +168,7 @@ export class DataTfAgentVersions extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfAgentVersionsGuardrailConfigurationPropertyToTerraform(struct?: DataTfAgentVersions.GuardrailConfigurationProperty | cdktn.IResolvable): any {
+export function dataAwsAgentVersionsGuardrailConfigurationPropertyToTerraform(struct?: DataAwsAgentVersions.GuardrailConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -178,7 +178,7 @@ export function dataTfAgentVersionsGuardrailConfigurationPropertyToTerraform(str
 }
 
 
-export function dataTfAgentVersionsGuardrailConfigurationPropertyToHclTerraform(struct?: DataTfAgentVersions.GuardrailConfigurationProperty | cdktn.IResolvable): any {
+export function dataAwsAgentVersionsGuardrailConfigurationPropertyToHclTerraform(struct?: DataAwsAgentVersions.GuardrailConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -189,25 +189,25 @@ export function dataTfAgentVersionsGuardrailConfigurationPropertyToHclTerraform(
 }
 
 
-export function dataTfAgentVersionsAgentVersionSummariesPropertyToTerraform(struct?: DataTfAgentVersions.AgentVersionSummariesProperty | cdktn.IResolvable): any {
+export function dataAwsAgentVersionsAgentVersionSummariesPropertyToTerraform(struct?: DataAwsAgentVersions.AgentVersionSummariesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    guardrail_configuration: cdktn.listMapper(dataTfAgentVersionsGuardrailConfigurationPropertyToTerraform, true)(struct!.guardrailConfiguration),
+    guardrail_configuration: cdktn.listMapper(dataAwsAgentVersionsGuardrailConfigurationPropertyToTerraform, true)(struct!.guardrailConfiguration),
   }
 }
 
 
-export function dataTfAgentVersionsAgentVersionSummariesPropertyToHclTerraform(struct?: DataTfAgentVersions.AgentVersionSummariesProperty | cdktn.IResolvable): any {
+export function dataAwsAgentVersionsAgentVersionSummariesPropertyToHclTerraform(struct?: DataAwsAgentVersions.AgentVersionSummariesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     guardrail_configuration: {
-      value: cdktn.listMapperHcl(dataTfAgentVersionsGuardrailConfigurationPropertyToHclTerraform, true)(struct!.guardrailConfiguration),
+      value: cdktn.listMapperHcl(dataAwsAgentVersionsGuardrailConfigurationPropertyToHclTerraform, true)(struct!.guardrailConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "GuardrailConfigurationPropertyList",
@@ -219,7 +219,7 @@ export function dataTfAgentVersionsAgentVersionSummariesPropertyToHclTerraform(s
 }
 
 
-export namespace DataTfAgentVersions {
+export namespace DataAwsAgentVersions {
 export interface GuardrailConfigurationProperty {
 }
 export class GuardrailConfigurationPropertyOutputReference extends cdktn.ComplexObject {
@@ -294,7 +294,7 @@ export interface AgentVersionSummariesProperty {
   /**
   * guardrail_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrockagent_agent_versions#guardrail_configuration DataTfAgentVersions#guardrail_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrockagent_agent_versions#guardrail_configuration DataAwsAgentVersions#guardrail_configuration}
   */
   readonly guardrailConfiguration?: GuardrailConfigurationProperty[] | cdktn.IResolvable;
 }

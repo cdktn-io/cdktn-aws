@@ -5,132 +5,132 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfServerConfig extends cdktn.TerraformMetaArguments {
+export interface AwsServerConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#certificate TfServer#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#certificate AwsServer#certificate}
   */
   readonly certificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#directory_id TfServer#directory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#directory_id AwsServer#directory_id}
   */
   readonly directoryId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#domain TfServer#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#domain AwsServer#domain}
   */
   readonly domain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#endpoint_type TfServer#endpoint_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#endpoint_type AwsServer#endpoint_type}
   */
   readonly endpointType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#force_destroy TfServer#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#force_destroy AwsServer#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#function TfServer#function}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#function AwsServer#function}
   */
   readonly function?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#host_key TfServer#host_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#host_key AwsServer#host_key}
   */
   readonly hostKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#id TfServer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#id AwsServer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#identity_provider_type TfServer#identity_provider_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#identity_provider_type AwsServer#identity_provider_type}
   */
   readonly identityProviderType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#invocation_role TfServer#invocation_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#invocation_role AwsServer#invocation_role}
   */
   readonly invocationRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#ip_address_type TfServer#ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#ip_address_type AwsServer#ip_address_type}
   */
   readonly ipAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#logging_role TfServer#logging_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#logging_role AwsServer#logging_role}
   */
   readonly loggingRole?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#post_authentication_login_banner TfServer#post_authentication_login_banner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#post_authentication_login_banner AwsServer#post_authentication_login_banner}
   */
   readonly postAuthenticationLoginBanner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#pre_authentication_login_banner TfServer#pre_authentication_login_banner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#pre_authentication_login_banner AwsServer#pre_authentication_login_banner}
   */
   readonly preAuthenticationLoginBanner?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#protocols TfServer#protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#protocols AwsServer#protocols}
   */
   readonly protocols?: string[];
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#region TfServer#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#region AwsServer#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#security_policy_name TfServer#security_policy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#security_policy_name AwsServer#security_policy_name}
   */
   readonly securityPolicyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#sftp_authentication_methods TfServer#sftp_authentication_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#sftp_authentication_methods AwsServer#sftp_authentication_methods}
   */
   readonly sftpAuthenticationMethods?: string;
   /**
   * This is a set of arns of destinations that will receive structured logs from the transfer server
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#structured_log_destinations TfServer#structured_log_destinations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#structured_log_destinations AwsServer#structured_log_destinations}
   */
   readonly structuredLogDestinations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#tags TfServer#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#tags AwsServer#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#tags_all TfServer#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#tags_all AwsServer#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#url TfServer#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#url AwsServer#url}
   */
   readonly url?: string;
   /**
   * endpoint_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#endpoint_details TfServer#endpoint_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#endpoint_details AwsServer#endpoint_details}
   */
-  readonly endpointDetails?: TfServer.EndpointDetailsProperty;
+  readonly endpointDetails?: AwsServer.EndpointDetailsProperty;
   /**
   * protocol_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#protocol_details TfServer#protocol_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#protocol_details AwsServer#protocol_details}
   */
-  readonly protocolDetails?: TfServer.ProtocolDetailsProperty;
+  readonly protocolDetails?: AwsServer.ProtocolDetailsProperty;
   /**
   * s3_storage_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#s3_storage_options TfServer#s3_storage_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#s3_storage_options AwsServer#s3_storage_options}
   */
-  readonly s3StorageOptions?: TfServer.S3StorageOptionsProperty;
+  readonly s3StorageOptions?: AwsServer.S3StorageOptionsProperty;
   /**
   * workflow_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#workflow_details TfServer#workflow_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#workflow_details AwsServer#workflow_details}
   */
-  readonly workflowDetails?: TfServer.WorkflowDetailsProperty;
+  readonly workflowDetails?: AwsServer.WorkflowDetailsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server aws_transfer_server}
 */
-export class TfServer extends cdktn.TerraformResource {
+export class AwsServer extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -141,11 +141,11 @@ export class TfServer extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfServer resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsServer resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfServer to import
-  * @param importFromId The id of the existing TfServer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfServer to import is found
+  * @param importToId The construct id used in the generated config for the AwsServer to import
+  * @param importFromId The id of the existing AwsServer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsServer to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_transfer_server", importId: importFromId, provider });
@@ -160,9 +160,9 @@ export class TfServer extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfServerConfig = {}
+  * @param options AwsServerConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfServerConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsServerConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_transfer_server',
       terraformGeneratorMetadata: {
@@ -578,11 +578,11 @@ export class TfServer extends cdktn.TerraformResource {
   }
 
   // endpoint_details - computed: false, optional: true, required: false
-  private _endpointDetails = new TfServer.EndpointDetailsPropertyOutputReference(this, "endpoint_details");
+  private _endpointDetails = new AwsServer.EndpointDetailsPropertyOutputReference(this, "endpoint_details");
   public get endpointDetails() {
     return this._endpointDetails;
   }
-  public putEndpointDetails(value: TfServer.EndpointDetailsProperty) {
+  public putEndpointDetails(value: AwsServer.EndpointDetailsProperty) {
     this._endpointDetails.internalValue = value;
   }
   public resetEndpointDetails() {
@@ -594,11 +594,11 @@ export class TfServer extends cdktn.TerraformResource {
   }
 
   // protocol_details - computed: false, optional: true, required: false
-  private _protocolDetails = new TfServer.ProtocolDetailsPropertyOutputReference(this, "protocol_details");
+  private _protocolDetails = new AwsServer.ProtocolDetailsPropertyOutputReference(this, "protocol_details");
   public get protocolDetails() {
     return this._protocolDetails;
   }
-  public putProtocolDetails(value: TfServer.ProtocolDetailsProperty) {
+  public putProtocolDetails(value: AwsServer.ProtocolDetailsProperty) {
     this._protocolDetails.internalValue = value;
   }
   public resetProtocolDetails() {
@@ -610,11 +610,11 @@ export class TfServer extends cdktn.TerraformResource {
   }
 
   // s3_storage_options - computed: false, optional: true, required: false
-  private _s3StorageOptions = new TfServer.S3StorageOptionsPropertyOutputReference(this, "s3_storage_options");
+  private _s3StorageOptions = new AwsServer.S3StorageOptionsPropertyOutputReference(this, "s3_storage_options");
   public get s3StorageOptions() {
     return this._s3StorageOptions;
   }
-  public putS3StorageOptions(value: TfServer.S3StorageOptionsProperty) {
+  public putS3StorageOptions(value: AwsServer.S3StorageOptionsProperty) {
     this._s3StorageOptions.internalValue = value;
   }
   public resetS3StorageOptions() {
@@ -626,11 +626,11 @@ export class TfServer extends cdktn.TerraformResource {
   }
 
   // workflow_details - computed: false, optional: true, required: false
-  private _workflowDetails = new TfServer.WorkflowDetailsPropertyOutputReference(this, "workflow_details");
+  private _workflowDetails = new AwsServer.WorkflowDetailsPropertyOutputReference(this, "workflow_details");
   public get workflowDetails() {
     return this._workflowDetails;
   }
-  public putWorkflowDetails(value: TfServer.WorkflowDetailsProperty) {
+  public putWorkflowDetails(value: AwsServer.WorkflowDetailsProperty) {
     this._workflowDetails.internalValue = value;
   }
   public resetWorkflowDetails() {
@@ -669,10 +669,10 @@ export class TfServer extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       url: cdktn.stringToTerraform(this._url),
-      endpoint_details: tfServerEndpointDetailsPropertyToTerraform(this._endpointDetails.internalValue),
-      protocol_details: tfServerProtocolDetailsPropertyToTerraform(this._protocolDetails.internalValue),
-      s3_storage_options: tfServerS3StorageOptionsPropertyToTerraform(this._s3StorageOptions.internalValue),
-      workflow_details: tfServerWorkflowDetailsPropertyToTerraform(this._workflowDetails.internalValue),
+      endpoint_details: awsServerEndpointDetailsPropertyToTerraform(this._endpointDetails.internalValue),
+      protocol_details: awsServerProtocolDetailsPropertyToTerraform(this._protocolDetails.internalValue),
+      s3_storage_options: awsServerS3StorageOptionsPropertyToTerraform(this._s3StorageOptions.internalValue),
+      workflow_details: awsServerWorkflowDetailsPropertyToTerraform(this._workflowDetails.internalValue),
     };
   }
 
@@ -811,28 +811,28 @@ export class TfServer extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       endpoint_details: {
-        value: tfServerEndpointDetailsPropertyToHclTerraform(this._endpointDetails.internalValue),
+        value: awsServerEndpointDetailsPropertyToHclTerraform(this._endpointDetails.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfServer.EndpointDetailsPropertyList",
+        storageClassType: "AwsServer.EndpointDetailsPropertyList",
       },
       protocol_details: {
-        value: tfServerProtocolDetailsPropertyToHclTerraform(this._protocolDetails.internalValue),
+        value: awsServerProtocolDetailsPropertyToHclTerraform(this._protocolDetails.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfServer.ProtocolDetailsPropertyList",
+        storageClassType: "AwsServer.ProtocolDetailsPropertyList",
       },
       s3_storage_options: {
-        value: tfServerS3StorageOptionsPropertyToHclTerraform(this._s3StorageOptions.internalValue),
+        value: awsServerS3StorageOptionsPropertyToHclTerraform(this._s3StorageOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfServer.S3StorageOptionsPropertyList",
+        storageClassType: "AwsServer.S3StorageOptionsPropertyList",
       },
       workflow_details: {
-        value: tfServerWorkflowDetailsPropertyToHclTerraform(this._workflowDetails.internalValue),
+        value: awsServerWorkflowDetailsPropertyToHclTerraform(this._workflowDetails.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfServer.WorkflowDetailsPropertyList",
+        storageClassType: "AwsServer.WorkflowDetailsPropertyList",
       },
     };
 
@@ -841,7 +841,7 @@ export class TfServer extends cdktn.TerraformResource {
   }
 }
 
-export function tfServerEndpointDetailsPropertyToTerraform(struct?: TfServer.EndpointDetailsPropertyOutputReference | TfServer.EndpointDetailsProperty): any {
+export function awsServerEndpointDetailsPropertyToTerraform(struct?: AwsServer.EndpointDetailsPropertyOutputReference | AwsServer.EndpointDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -856,7 +856,7 @@ export function tfServerEndpointDetailsPropertyToTerraform(struct?: TfServer.End
 }
 
 
-export function tfServerEndpointDetailsPropertyToHclTerraform(struct?: TfServer.EndpointDetailsPropertyOutputReference | TfServer.EndpointDetailsProperty): any {
+export function awsServerEndpointDetailsPropertyToHclTerraform(struct?: AwsServer.EndpointDetailsPropertyOutputReference | AwsServer.EndpointDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -899,7 +899,7 @@ export function tfServerEndpointDetailsPropertyToHclTerraform(struct?: TfServer.
 }
 
 
-export function tfServerProtocolDetailsPropertyToTerraform(struct?: TfServer.ProtocolDetailsPropertyOutputReference | TfServer.ProtocolDetailsProperty): any {
+export function awsServerProtocolDetailsPropertyToTerraform(struct?: AwsServer.ProtocolDetailsPropertyOutputReference | AwsServer.ProtocolDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -913,7 +913,7 @@ export function tfServerProtocolDetailsPropertyToTerraform(struct?: TfServer.Pro
 }
 
 
-export function tfServerProtocolDetailsPropertyToHclTerraform(struct?: TfServer.ProtocolDetailsPropertyOutputReference | TfServer.ProtocolDetailsProperty): any {
+export function awsServerProtocolDetailsPropertyToHclTerraform(struct?: AwsServer.ProtocolDetailsPropertyOutputReference | AwsServer.ProtocolDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -950,7 +950,7 @@ export function tfServerProtocolDetailsPropertyToHclTerraform(struct?: TfServer.
 }
 
 
-export function tfServerS3StorageOptionsPropertyToTerraform(struct?: TfServer.S3StorageOptionsPropertyOutputReference | TfServer.S3StorageOptionsProperty): any {
+export function awsServerS3StorageOptionsPropertyToTerraform(struct?: AwsServer.S3StorageOptionsPropertyOutputReference | AwsServer.S3StorageOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -961,7 +961,7 @@ export function tfServerS3StorageOptionsPropertyToTerraform(struct?: TfServer.S3
 }
 
 
-export function tfServerS3StorageOptionsPropertyToHclTerraform(struct?: TfServer.S3StorageOptionsPropertyOutputReference | TfServer.S3StorageOptionsProperty): any {
+export function awsServerS3StorageOptionsPropertyToHclTerraform(struct?: AwsServer.S3StorageOptionsPropertyOutputReference | AwsServer.S3StorageOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -980,7 +980,7 @@ export function tfServerS3StorageOptionsPropertyToHclTerraform(struct?: TfServer
 }
 
 
-export function tfServerOnPartialUploadPropertyToTerraform(struct?: TfServer.OnPartialUploadPropertyOutputReference | TfServer.OnPartialUploadProperty): any {
+export function awsServerOnPartialUploadPropertyToTerraform(struct?: AwsServer.OnPartialUploadPropertyOutputReference | AwsServer.OnPartialUploadProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -992,7 +992,7 @@ export function tfServerOnPartialUploadPropertyToTerraform(struct?: TfServer.OnP
 }
 
 
-export function tfServerOnPartialUploadPropertyToHclTerraform(struct?: TfServer.OnPartialUploadPropertyOutputReference | TfServer.OnPartialUploadProperty): any {
+export function awsServerOnPartialUploadPropertyToHclTerraform(struct?: AwsServer.OnPartialUploadPropertyOutputReference | AwsServer.OnPartialUploadProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1017,7 +1017,7 @@ export function tfServerOnPartialUploadPropertyToHclTerraform(struct?: TfServer.
 }
 
 
-export function tfServerOnUploadPropertyToTerraform(struct?: TfServer.OnUploadPropertyOutputReference | TfServer.OnUploadProperty): any {
+export function awsServerOnUploadPropertyToTerraform(struct?: AwsServer.OnUploadPropertyOutputReference | AwsServer.OnUploadProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1029,7 +1029,7 @@ export function tfServerOnUploadPropertyToTerraform(struct?: TfServer.OnUploadPr
 }
 
 
-export function tfServerOnUploadPropertyToHclTerraform(struct?: TfServer.OnUploadPropertyOutputReference | TfServer.OnUploadProperty): any {
+export function awsServerOnUploadPropertyToHclTerraform(struct?: AwsServer.OnUploadPropertyOutputReference | AwsServer.OnUploadProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1054,32 +1054,32 @@ export function tfServerOnUploadPropertyToHclTerraform(struct?: TfServer.OnUploa
 }
 
 
-export function tfServerWorkflowDetailsPropertyToTerraform(struct?: TfServer.WorkflowDetailsPropertyOutputReference | TfServer.WorkflowDetailsProperty): any {
+export function awsServerWorkflowDetailsPropertyToTerraform(struct?: AwsServer.WorkflowDetailsPropertyOutputReference | AwsServer.WorkflowDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    on_partial_upload: tfServerOnPartialUploadPropertyToTerraform(struct!.onPartialUpload),
-    on_upload: tfServerOnUploadPropertyToTerraform(struct!.onUpload),
+    on_partial_upload: awsServerOnPartialUploadPropertyToTerraform(struct!.onPartialUpload),
+    on_upload: awsServerOnUploadPropertyToTerraform(struct!.onUpload),
   }
 }
 
 
-export function tfServerWorkflowDetailsPropertyToHclTerraform(struct?: TfServer.WorkflowDetailsPropertyOutputReference | TfServer.WorkflowDetailsProperty): any {
+export function awsServerWorkflowDetailsPropertyToHclTerraform(struct?: AwsServer.WorkflowDetailsPropertyOutputReference | AwsServer.WorkflowDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     on_partial_upload: {
-      value: tfServerOnPartialUploadPropertyToHclTerraform(struct!.onPartialUpload),
+      value: awsServerOnPartialUploadPropertyToHclTerraform(struct!.onPartialUpload),
       isBlock: true,
       type: "list",
       storageClassType: "OnPartialUploadPropertyList",
     },
     on_upload: {
-      value: tfServerOnUploadPropertyToHclTerraform(struct!.onUpload),
+      value: awsServerOnUploadPropertyToHclTerraform(struct!.onUpload),
       isBlock: true,
       type: "list",
       storageClassType: "OnUploadPropertyList",
@@ -1091,26 +1091,26 @@ export function tfServerWorkflowDetailsPropertyToHclTerraform(struct?: TfServer.
 }
 
 
-export namespace TfServer {
+export namespace AwsServer {
 export interface EndpointDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#address_allocation_ids TfServer#address_allocation_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#address_allocation_ids AwsServer#address_allocation_ids}
   */
   readonly addressAllocationIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#security_group_ids TfServer#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#security_group_ids AwsServer#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#subnet_ids TfServer#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#subnet_ids AwsServer#subnet_ids}
   */
   readonly subnetIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#vpc_endpoint_id TfServer#vpc_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#vpc_endpoint_id AwsServer#vpc_endpoint_id}
   */
   readonly vpcEndpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#vpc_id TfServer#vpc_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#vpc_id AwsServer#vpc_id}
   */
   readonly vpcId?: string;
 }
@@ -1252,19 +1252,19 @@ export class EndpointDetailsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface ProtocolDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#as2_transports TfServer#as2_transports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#as2_transports AwsServer#as2_transports}
   */
   readonly as2Transports?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#passive_ip TfServer#passive_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#passive_ip AwsServer#passive_ip}
   */
   readonly passiveIp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#set_stat_option TfServer#set_stat_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#set_stat_option AwsServer#set_stat_option}
   */
   readonly setStatOption?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#tls_session_resumption_mode TfServer#tls_session_resumption_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#tls_session_resumption_mode AwsServer#tls_session_resumption_mode}
   */
   readonly tlsSessionResumptionMode?: string;
 }
@@ -1384,7 +1384,7 @@ export class ProtocolDetailsPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface S3StorageOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#directory_listing_optimization TfServer#directory_listing_optimization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#directory_listing_optimization AwsServer#directory_listing_optimization}
   */
   readonly directoryListingOptimization?: string;
 }
@@ -1438,11 +1438,11 @@ export class S3StorageOptionsPropertyOutputReference extends cdktn.ComplexObject
 }
 export interface OnPartialUploadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#execution_role TfServer#execution_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#execution_role AwsServer#execution_role}
   */
   readonly executionRole: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#workflow_id TfServer#workflow_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#workflow_id AwsServer#workflow_id}
   */
   readonly workflowId: string;
 }
@@ -1512,11 +1512,11 @@ export class OnPartialUploadPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface OnUploadProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#execution_role TfServer#execution_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#execution_role AwsServer#execution_role}
   */
   readonly executionRole: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#workflow_id TfServer#workflow_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#workflow_id AwsServer#workflow_id}
   */
   readonly workflowId: string;
 }
@@ -1588,13 +1588,13 @@ export interface WorkflowDetailsProperty {
   /**
   * on_partial_upload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#on_partial_upload TfServer#on_partial_upload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#on_partial_upload AwsServer#on_partial_upload}
   */
   readonly onPartialUpload?: OnPartialUploadProperty;
   /**
   * on_upload block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#on_upload TfServer#on_upload}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_server#on_upload AwsServer#on_upload}
   */
   readonly onUpload?: OnUploadProperty;
 }

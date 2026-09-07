@@ -5,76 +5,76 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPipelineConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPipelineConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#aws_kms_key_arn TfPipeline#aws_kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#aws_kms_key_arn AwsPipeline#aws_kms_key_arn}
   */
   readonly awsKmsKeyArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#id TfPipeline#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#id AwsPipeline#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#input_bucket TfPipeline#input_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#input_bucket AwsPipeline#input_bucket}
   */
   readonly inputBucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#name TfPipeline#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#name AwsPipeline#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#output_bucket TfPipeline#output_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#output_bucket AwsPipeline#output_bucket}
   */
   readonly outputBucket?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#region TfPipeline#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#region AwsPipeline#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#role TfPipeline#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#role AwsPipeline#role}
   */
   readonly role: string;
   /**
   * content_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#content_config TfPipeline#content_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#content_config AwsPipeline#content_config}
   */
-  readonly contentConfig?: TfPipeline.ContentConfigProperty;
+  readonly contentConfig?: AwsPipeline.ContentConfigProperty;
   /**
   * content_config_permissions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#content_config_permissions TfPipeline#content_config_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#content_config_permissions AwsPipeline#content_config_permissions}
   */
-  readonly contentConfigPermissions?: TfPipeline.ContentConfigPermissionsProperty[] | cdktn.IResolvable;
+  readonly contentConfigPermissions?: AwsPipeline.ContentConfigPermissionsProperty[] | cdktn.IResolvable;
   /**
   * notifications block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#notifications TfPipeline#notifications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#notifications AwsPipeline#notifications}
   */
-  readonly notifications?: TfPipeline.NotificationsProperty;
+  readonly notifications?: AwsPipeline.NotificationsProperty;
   /**
   * thumbnail_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#thumbnail_config TfPipeline#thumbnail_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#thumbnail_config AwsPipeline#thumbnail_config}
   */
-  readonly thumbnailConfig?: TfPipeline.ThumbnailConfigProperty;
+  readonly thumbnailConfig?: AwsPipeline.ThumbnailConfigProperty;
   /**
   * thumbnail_config_permissions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#thumbnail_config_permissions TfPipeline#thumbnail_config_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#thumbnail_config_permissions AwsPipeline#thumbnail_config_permissions}
   */
-  readonly thumbnailConfigPermissions?: TfPipeline.ThumbnailConfigPermissionsProperty[] | cdktn.IResolvable;
+  readonly thumbnailConfigPermissions?: AwsPipeline.ThumbnailConfigPermissionsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline aws_elastictranscoder_pipeline}
 */
-export class TfPipeline extends cdktn.TerraformResource {
+export class AwsPipeline extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -85,11 +85,11 @@ export class TfPipeline extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPipeline resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPipeline resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPipeline to import
-  * @param importFromId The id of the existing TfPipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPipeline to import is found
+  * @param importToId The construct id used in the generated config for the AwsPipeline to import
+  * @param importFromId The id of the existing AwsPipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPipeline to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_elastictranscoder_pipeline", importId: importFromId, provider });
@@ -104,9 +104,9 @@ export class TfPipeline extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPipelineConfig
+  * @param options AwsPipelineConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPipelineConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPipelineConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_elastictranscoder_pipeline',
       terraformGeneratorMetadata: {
@@ -252,11 +252,11 @@ export class TfPipeline extends cdktn.TerraformResource {
   }
 
   // content_config - computed: false, optional: true, required: false
-  private _contentConfig = new TfPipeline.ContentConfigPropertyOutputReference(this, "content_config");
+  private _contentConfig = new AwsPipeline.ContentConfigPropertyOutputReference(this, "content_config");
   public get contentConfig() {
     return this._contentConfig;
   }
-  public putContentConfig(value: TfPipeline.ContentConfigProperty) {
+  public putContentConfig(value: AwsPipeline.ContentConfigProperty) {
     this._contentConfig.internalValue = value;
   }
   public resetContentConfig() {
@@ -268,11 +268,11 @@ export class TfPipeline extends cdktn.TerraformResource {
   }
 
   // content_config_permissions - computed: false, optional: true, required: false
-  private _contentConfigPermissions = new TfPipeline.ContentConfigPermissionsPropertyList(this, "content_config_permissions", true);
+  private _contentConfigPermissions = new AwsPipeline.ContentConfigPermissionsPropertyList(this, "content_config_permissions", true);
   public get contentConfigPermissions() {
     return this._contentConfigPermissions;
   }
-  public putContentConfigPermissions(value: TfPipeline.ContentConfigPermissionsProperty[] | cdktn.IResolvable) {
+  public putContentConfigPermissions(value: AwsPipeline.ContentConfigPermissionsProperty[] | cdktn.IResolvable) {
     this._contentConfigPermissions.internalValue = value;
   }
   public resetContentConfigPermissions() {
@@ -284,11 +284,11 @@ export class TfPipeline extends cdktn.TerraformResource {
   }
 
   // notifications - computed: false, optional: true, required: false
-  private _notifications = new TfPipeline.NotificationsPropertyOutputReference(this, "notifications");
+  private _notifications = new AwsPipeline.NotificationsPropertyOutputReference(this, "notifications");
   public get notifications() {
     return this._notifications;
   }
-  public putNotifications(value: TfPipeline.NotificationsProperty) {
+  public putNotifications(value: AwsPipeline.NotificationsProperty) {
     this._notifications.internalValue = value;
   }
   public resetNotifications() {
@@ -300,11 +300,11 @@ export class TfPipeline extends cdktn.TerraformResource {
   }
 
   // thumbnail_config - computed: false, optional: true, required: false
-  private _thumbnailConfig = new TfPipeline.ThumbnailConfigPropertyOutputReference(this, "thumbnail_config");
+  private _thumbnailConfig = new AwsPipeline.ThumbnailConfigPropertyOutputReference(this, "thumbnail_config");
   public get thumbnailConfig() {
     return this._thumbnailConfig;
   }
-  public putThumbnailConfig(value: TfPipeline.ThumbnailConfigProperty) {
+  public putThumbnailConfig(value: AwsPipeline.ThumbnailConfigProperty) {
     this._thumbnailConfig.internalValue = value;
   }
   public resetThumbnailConfig() {
@@ -316,11 +316,11 @@ export class TfPipeline extends cdktn.TerraformResource {
   }
 
   // thumbnail_config_permissions - computed: false, optional: true, required: false
-  private _thumbnailConfigPermissions = new TfPipeline.ThumbnailConfigPermissionsPropertyList(this, "thumbnail_config_permissions", true);
+  private _thumbnailConfigPermissions = new AwsPipeline.ThumbnailConfigPermissionsPropertyList(this, "thumbnail_config_permissions", true);
   public get thumbnailConfigPermissions() {
     return this._thumbnailConfigPermissions;
   }
-  public putThumbnailConfigPermissions(value: TfPipeline.ThumbnailConfigPermissionsProperty[] | cdktn.IResolvable) {
+  public putThumbnailConfigPermissions(value: AwsPipeline.ThumbnailConfigPermissionsProperty[] | cdktn.IResolvable) {
     this._thumbnailConfigPermissions.internalValue = value;
   }
   public resetThumbnailConfigPermissions() {
@@ -344,11 +344,11 @@ export class TfPipeline extends cdktn.TerraformResource {
       output_bucket: cdktn.stringToTerraform(this._outputBucket),
       region: cdktn.stringToTerraform(this._region),
       role: cdktn.stringToTerraform(this._role),
-      content_config: tfPipelineContentConfigPropertyToTerraform(this._contentConfig.internalValue),
-      content_config_permissions: cdktn.listMapper(tfPipelineContentConfigPermissionsPropertyToTerraform, true)(this._contentConfigPermissions.internalValue),
-      notifications: tfPipelineNotificationsPropertyToTerraform(this._notifications.internalValue),
-      thumbnail_config: tfPipelineThumbnailConfigPropertyToTerraform(this._thumbnailConfig.internalValue),
-      thumbnail_config_permissions: cdktn.listMapper(tfPipelineThumbnailConfigPermissionsPropertyToTerraform, true)(this._thumbnailConfigPermissions.internalValue),
+      content_config: awsPipelineContentConfigPropertyToTerraform(this._contentConfig.internalValue),
+      content_config_permissions: cdktn.listMapper(awsPipelineContentConfigPermissionsPropertyToTerraform, true)(this._contentConfigPermissions.internalValue),
+      notifications: awsPipelineNotificationsPropertyToTerraform(this._notifications.internalValue),
+      thumbnail_config: awsPipelineThumbnailConfigPropertyToTerraform(this._thumbnailConfig.internalValue),
+      thumbnail_config_permissions: cdktn.listMapper(awsPipelineThumbnailConfigPermissionsPropertyToTerraform, true)(this._thumbnailConfigPermissions.internalValue),
     };
   }
 
@@ -397,34 +397,34 @@ export class TfPipeline extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       content_config: {
-        value: tfPipelineContentConfigPropertyToHclTerraform(this._contentConfig.internalValue),
+        value: awsPipelineContentConfigPropertyToHclTerraform(this._contentConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPipeline.ContentConfigPropertyList",
+        storageClassType: "AwsPipeline.ContentConfigPropertyList",
       },
       content_config_permissions: {
-        value: cdktn.listMapperHcl(tfPipelineContentConfigPermissionsPropertyToHclTerraform, true)(this._contentConfigPermissions.internalValue),
+        value: cdktn.listMapperHcl(awsPipelineContentConfigPermissionsPropertyToHclTerraform, true)(this._contentConfigPermissions.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfPipeline.ContentConfigPermissionsPropertyList",
+        storageClassType: "AwsPipeline.ContentConfigPermissionsPropertyList",
       },
       notifications: {
-        value: tfPipelineNotificationsPropertyToHclTerraform(this._notifications.internalValue),
+        value: awsPipelineNotificationsPropertyToHclTerraform(this._notifications.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPipeline.NotificationsPropertyList",
+        storageClassType: "AwsPipeline.NotificationsPropertyList",
       },
       thumbnail_config: {
-        value: tfPipelineThumbnailConfigPropertyToHclTerraform(this._thumbnailConfig.internalValue),
+        value: awsPipelineThumbnailConfigPropertyToHclTerraform(this._thumbnailConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPipeline.ThumbnailConfigPropertyList",
+        storageClassType: "AwsPipeline.ThumbnailConfigPropertyList",
       },
       thumbnail_config_permissions: {
-        value: cdktn.listMapperHcl(tfPipelineThumbnailConfigPermissionsPropertyToHclTerraform, true)(this._thumbnailConfigPermissions.internalValue),
+        value: cdktn.listMapperHcl(awsPipelineThumbnailConfigPermissionsPropertyToHclTerraform, true)(this._thumbnailConfigPermissions.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfPipeline.ThumbnailConfigPermissionsPropertyList",
+        storageClassType: "AwsPipeline.ThumbnailConfigPermissionsPropertyList",
       },
     };
 
@@ -433,7 +433,7 @@ export class TfPipeline extends cdktn.TerraformResource {
   }
 }
 
-export function tfPipelineContentConfigPropertyToTerraform(struct?: TfPipeline.ContentConfigPropertyOutputReference | TfPipeline.ContentConfigProperty): any {
+export function awsPipelineContentConfigPropertyToTerraform(struct?: AwsPipeline.ContentConfigPropertyOutputReference | AwsPipeline.ContentConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -445,7 +445,7 @@ export function tfPipelineContentConfigPropertyToTerraform(struct?: TfPipeline.C
 }
 
 
-export function tfPipelineContentConfigPropertyToHclTerraform(struct?: TfPipeline.ContentConfigPropertyOutputReference | TfPipeline.ContentConfigProperty): any {
+export function awsPipelineContentConfigPropertyToHclTerraform(struct?: AwsPipeline.ContentConfigPropertyOutputReference | AwsPipeline.ContentConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -470,7 +470,7 @@ export function tfPipelineContentConfigPropertyToHclTerraform(struct?: TfPipelin
 }
 
 
-export function tfPipelineContentConfigPermissionsPropertyToTerraform(struct?: TfPipeline.ContentConfigPermissionsProperty | cdktn.IResolvable): any {
+export function awsPipelineContentConfigPermissionsPropertyToTerraform(struct?: AwsPipeline.ContentConfigPermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -483,7 +483,7 @@ export function tfPipelineContentConfigPermissionsPropertyToTerraform(struct?: T
 }
 
 
-export function tfPipelineContentConfigPermissionsPropertyToHclTerraform(struct?: TfPipeline.ContentConfigPermissionsProperty | cdktn.IResolvable): any {
+export function awsPipelineContentConfigPermissionsPropertyToHclTerraform(struct?: AwsPipeline.ContentConfigPermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -514,7 +514,7 @@ export function tfPipelineContentConfigPermissionsPropertyToHclTerraform(struct?
 }
 
 
-export function tfPipelineNotificationsPropertyToTerraform(struct?: TfPipeline.NotificationsPropertyOutputReference | TfPipeline.NotificationsProperty): any {
+export function awsPipelineNotificationsPropertyToTerraform(struct?: AwsPipeline.NotificationsPropertyOutputReference | AwsPipeline.NotificationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -528,7 +528,7 @@ export function tfPipelineNotificationsPropertyToTerraform(struct?: TfPipeline.N
 }
 
 
-export function tfPipelineNotificationsPropertyToHclTerraform(struct?: TfPipeline.NotificationsPropertyOutputReference | TfPipeline.NotificationsProperty): any {
+export function awsPipelineNotificationsPropertyToHclTerraform(struct?: AwsPipeline.NotificationsPropertyOutputReference | AwsPipeline.NotificationsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -565,7 +565,7 @@ export function tfPipelineNotificationsPropertyToHclTerraform(struct?: TfPipelin
 }
 
 
-export function tfPipelineThumbnailConfigPropertyToTerraform(struct?: TfPipeline.ThumbnailConfigPropertyOutputReference | TfPipeline.ThumbnailConfigProperty): any {
+export function awsPipelineThumbnailConfigPropertyToTerraform(struct?: AwsPipeline.ThumbnailConfigPropertyOutputReference | AwsPipeline.ThumbnailConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -577,7 +577,7 @@ export function tfPipelineThumbnailConfigPropertyToTerraform(struct?: TfPipeline
 }
 
 
-export function tfPipelineThumbnailConfigPropertyToHclTerraform(struct?: TfPipeline.ThumbnailConfigPropertyOutputReference | TfPipeline.ThumbnailConfigProperty): any {
+export function awsPipelineThumbnailConfigPropertyToHclTerraform(struct?: AwsPipeline.ThumbnailConfigPropertyOutputReference | AwsPipeline.ThumbnailConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -602,7 +602,7 @@ export function tfPipelineThumbnailConfigPropertyToHclTerraform(struct?: TfPipel
 }
 
 
-export function tfPipelineThumbnailConfigPermissionsPropertyToTerraform(struct?: TfPipeline.ThumbnailConfigPermissionsProperty | cdktn.IResolvable): any {
+export function awsPipelineThumbnailConfigPermissionsPropertyToTerraform(struct?: AwsPipeline.ThumbnailConfigPermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -615,7 +615,7 @@ export function tfPipelineThumbnailConfigPermissionsPropertyToTerraform(struct?:
 }
 
 
-export function tfPipelineThumbnailConfigPermissionsPropertyToHclTerraform(struct?: TfPipeline.ThumbnailConfigPermissionsProperty | cdktn.IResolvable): any {
+export function awsPipelineThumbnailConfigPermissionsPropertyToHclTerraform(struct?: AwsPipeline.ThumbnailConfigPermissionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -646,14 +646,14 @@ export function tfPipelineThumbnailConfigPermissionsPropertyToHclTerraform(struc
 }
 
 
-export namespace TfPipeline {
+export namespace AwsPipeline {
 export interface ContentConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#bucket TfPipeline#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#bucket AwsPipeline#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#storage_class TfPipeline#storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#storage_class AwsPipeline#storage_class}
   */
   readonly storageClass?: string;
 }
@@ -729,15 +729,15 @@ export class ContentConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ContentConfigPermissionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#access TfPipeline#access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#access AwsPipeline#access}
   */
   readonly access?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#grantee TfPipeline#grantee}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#grantee AwsPipeline#grantee}
   */
   readonly grantee?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#grantee_type TfPipeline#grantee_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#grantee_type AwsPipeline#grantee_type}
   */
   readonly granteeType?: string;
 }
@@ -867,19 +867,19 @@ export class ContentConfigPermissionsPropertyList extends cdktn.ComplexList {
 }
 export interface NotificationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#completed TfPipeline#completed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#completed AwsPipeline#completed}
   */
   readonly completed?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#error TfPipeline#error}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#error AwsPipeline#error}
   */
   readonly error?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#progressing TfPipeline#progressing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#progressing AwsPipeline#progressing}
   */
   readonly progressing?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#warning TfPipeline#warning}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#warning AwsPipeline#warning}
   */
   readonly warning?: string;
 }
@@ -999,11 +999,11 @@ export class NotificationsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ThumbnailConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#bucket TfPipeline#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#bucket AwsPipeline#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#storage_class TfPipeline#storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#storage_class AwsPipeline#storage_class}
   */
   readonly storageClass?: string;
 }
@@ -1079,15 +1079,15 @@ export class ThumbnailConfigPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface ThumbnailConfigPermissionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#access TfPipeline#access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#access AwsPipeline#access}
   */
   readonly access?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#grantee TfPipeline#grantee}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#grantee AwsPipeline#grantee}
   */
   readonly grantee?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#grantee_type TfPipeline#grantee_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/elastictranscoder_pipeline#grantee_type AwsPipeline#grantee_type}
   */
   readonly granteeType?: string;
 }

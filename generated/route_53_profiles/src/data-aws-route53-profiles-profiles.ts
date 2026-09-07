@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfProfilesConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsProfilesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53profiles_profiles#region DataTfProfiles#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53profiles_profiles#region DataAwsProfiles#region}
   */
   readonly region?: string;
 }
@@ -17,7 +17,7 @@ export interface DataTfProfilesConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53profiles_profiles aws_route53profiles_profiles}
 */
-export class DataTfProfiles extends cdktn.TerraformDataSource {
+export class DataAwsProfiles extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -28,11 +28,11 @@ export class DataTfProfiles extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfProfiles resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsProfiles resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfProfiles to import
-  * @param importFromId The id of the existing DataTfProfiles that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53profiles_profiles#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfProfiles to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsProfiles to import
+  * @param importFromId The id of the existing DataAwsProfiles that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/route53profiles_profiles#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsProfiles to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_route53profiles_profiles", importId: importFromId, provider });
@@ -47,9 +47,9 @@ export class DataTfProfiles extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfProfilesConfig = {}
+  * @param options DataAwsProfilesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfProfilesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsProfilesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_route53profiles_profiles',
       terraformGeneratorMetadata: {
@@ -73,7 +73,7 @@ export class DataTfProfiles extends cdktn.TerraformDataSource {
   // ==========
 
   // profiles - computed: true, optional: false, required: false
-  private _profiles = new DataTfProfiles.ProfilesPropertyList(this, "profiles", false);
+  private _profiles = new DataAwsProfiles.ProfilesPropertyList(this, "profiles", false);
   public get profiles() {
     return this._profiles;
   }
@@ -119,7 +119,7 @@ export class DataTfProfiles extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfProfilesProfilesPropertyToTerraform(struct?: DataTfProfiles.ProfilesProperty): any {
+export function dataAwsProfilesProfilesPropertyToTerraform(struct?: DataAwsProfiles.ProfilesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -129,7 +129,7 @@ export function dataTfProfilesProfilesPropertyToTerraform(struct?: DataTfProfile
 }
 
 
-export function dataTfProfilesProfilesPropertyToHclTerraform(struct?: DataTfProfiles.ProfilesProperty): any {
+export function dataAwsProfilesProfilesPropertyToHclTerraform(struct?: DataAwsProfiles.ProfilesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -140,7 +140,7 @@ export function dataTfProfilesProfilesPropertyToHclTerraform(struct?: DataTfProf
 }
 
 
-export namespace DataTfProfiles {
+export namespace DataAwsProfiles {
 export interface ProfilesProperty {
 }
 export class ProfilesPropertyOutputReference extends cdktn.ComplexObject {

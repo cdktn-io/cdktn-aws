@@ -5,81 +5,81 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCustomModelConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCustomModelConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#base_model_identifier TfCustomModel#base_model_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#base_model_identifier AwsCustomModel#base_model_identifier}
   */
   readonly baseModelIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#custom_model_kms_key_id TfCustomModel#custom_model_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#custom_model_kms_key_id AwsCustomModel#custom_model_kms_key_id}
   */
   readonly customModelKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#custom_model_name TfCustomModel#custom_model_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#custom_model_name AwsCustomModel#custom_model_name}
   */
   readonly customModelName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#customization_type TfCustomModel#customization_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#customization_type AwsCustomModel#customization_type}
   */
   readonly customizationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#hyperparameters TfCustomModel#hyperparameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#hyperparameters AwsCustomModel#hyperparameters}
   */
   readonly hyperparameters: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#job_name TfCustomModel#job_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#job_name AwsCustomModel#job_name}
   */
   readonly jobName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#region TfCustomModel#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#region AwsCustomModel#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#role_arn TfCustomModel#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#role_arn AwsCustomModel#role_arn}
   */
   readonly roleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#tags TfCustomModel#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#tags AwsCustomModel#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * output_data_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#output_data_config TfCustomModel#output_data_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#output_data_config AwsCustomModel#output_data_config}
   */
-  readonly outputDataConfig?: TfCustomModel.OutputDataConfigProperty[] | cdktn.IResolvable;
+  readonly outputDataConfig?: AwsCustomModel.OutputDataConfigProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#timeouts TfCustomModel#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#timeouts AwsCustomModel#timeouts}
   */
-  readonly timeouts?: TfCustomModel.TimeoutsProperty;
+  readonly timeouts?: AwsCustomModel.TimeoutsProperty;
   /**
   * training_data_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#training_data_config TfCustomModel#training_data_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#training_data_config AwsCustomModel#training_data_config}
   */
-  readonly trainingDataConfig?: TfCustomModel.TrainingDataConfigProperty[] | cdktn.IResolvable;
+  readonly trainingDataConfig?: AwsCustomModel.TrainingDataConfigProperty[] | cdktn.IResolvable;
   /**
   * validation_data_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#validation_data_config TfCustomModel#validation_data_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#validation_data_config AwsCustomModel#validation_data_config}
   */
-  readonly validationDataConfig?: TfCustomModel.ValidationDataConfigProperty[] | cdktn.IResolvable;
+  readonly validationDataConfig?: AwsCustomModel.ValidationDataConfigProperty[] | cdktn.IResolvable;
   /**
   * vpc_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#vpc_config TfCustomModel#vpc_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#vpc_config AwsCustomModel#vpc_config}
   */
-  readonly vpcConfig?: TfCustomModel.VpcConfigProperty[] | cdktn.IResolvable;
+  readonly vpcConfig?: AwsCustomModel.VpcConfigProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model aws_bedrock_custom_model}
 */
-export class TfCustomModel extends cdktn.TerraformResource {
+export class AwsCustomModel extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -90,11 +90,11 @@ export class TfCustomModel extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCustomModel resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCustomModel resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCustomModel to import
-  * @param importFromId The id of the existing TfCustomModel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCustomModel to import is found
+  * @param importToId The construct id used in the generated config for the AwsCustomModel to import
+  * @param importFromId The id of the existing AwsCustomModel that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCustomModel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrock_custom_model", importId: importFromId, provider });
@@ -109,9 +109,9 @@ export class TfCustomModel extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCustomModelConfig
+  * @param options AwsCustomModelConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCustomModelConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCustomModelConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrock_custom_model',
       terraformGeneratorMetadata: {
@@ -303,23 +303,23 @@ export class TfCustomModel extends cdktn.TerraformResource {
   }
 
   // training_metrics - computed: true, optional: false, required: false
-  private _trainingMetrics = new TfCustomModel.TrainingMetricsPropertyList(this, "training_metrics", false);
+  private _trainingMetrics = new AwsCustomModel.TrainingMetricsPropertyList(this, "training_metrics", false);
   public get trainingMetrics() {
     return this._trainingMetrics;
   }
 
   // validation_metrics - computed: true, optional: false, required: false
-  private _validationMetrics = new TfCustomModel.ValidationMetricsPropertyList(this, "validation_metrics", false);
+  private _validationMetrics = new AwsCustomModel.ValidationMetricsPropertyList(this, "validation_metrics", false);
   public get validationMetrics() {
     return this._validationMetrics;
   }
 
   // output_data_config - computed: false, optional: true, required: false
-  private _outputDataConfig = new TfCustomModel.OutputDataConfigPropertyList(this, "output_data_config", false);
+  private _outputDataConfig = new AwsCustomModel.OutputDataConfigPropertyList(this, "output_data_config", false);
   public get outputDataConfig() {
     return this._outputDataConfig;
   }
-  public putOutputDataConfig(value: TfCustomModel.OutputDataConfigProperty[] | cdktn.IResolvable) {
+  public putOutputDataConfig(value: AwsCustomModel.OutputDataConfigProperty[] | cdktn.IResolvable) {
     this._outputDataConfig.internalValue = value;
   }
   public resetOutputDataConfig() {
@@ -331,11 +331,11 @@ export class TfCustomModel extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfCustomModel.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsCustomModel.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfCustomModel.TimeoutsProperty) {
+  public putTimeouts(value: AwsCustomModel.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -347,11 +347,11 @@ export class TfCustomModel extends cdktn.TerraformResource {
   }
 
   // training_data_config - computed: false, optional: true, required: false
-  private _trainingDataConfig = new TfCustomModel.TrainingDataConfigPropertyList(this, "training_data_config", false);
+  private _trainingDataConfig = new AwsCustomModel.TrainingDataConfigPropertyList(this, "training_data_config", false);
   public get trainingDataConfig() {
     return this._trainingDataConfig;
   }
-  public putTrainingDataConfig(value: TfCustomModel.TrainingDataConfigProperty[] | cdktn.IResolvable) {
+  public putTrainingDataConfig(value: AwsCustomModel.TrainingDataConfigProperty[] | cdktn.IResolvable) {
     this._trainingDataConfig.internalValue = value;
   }
   public resetTrainingDataConfig() {
@@ -363,11 +363,11 @@ export class TfCustomModel extends cdktn.TerraformResource {
   }
 
   // validation_data_config - computed: false, optional: true, required: false
-  private _validationDataConfig = new TfCustomModel.ValidationDataConfigPropertyList(this, "validation_data_config", false);
+  private _validationDataConfig = new AwsCustomModel.ValidationDataConfigPropertyList(this, "validation_data_config", false);
   public get validationDataConfig() {
     return this._validationDataConfig;
   }
-  public putValidationDataConfig(value: TfCustomModel.ValidationDataConfigProperty[] | cdktn.IResolvable) {
+  public putValidationDataConfig(value: AwsCustomModel.ValidationDataConfigProperty[] | cdktn.IResolvable) {
     this._validationDataConfig.internalValue = value;
   }
   public resetValidationDataConfig() {
@@ -379,11 +379,11 @@ export class TfCustomModel extends cdktn.TerraformResource {
   }
 
   // vpc_config - computed: false, optional: true, required: false
-  private _vpcConfig = new TfCustomModel.VpcConfigPropertyList(this, "vpc_config", false);
+  private _vpcConfig = new AwsCustomModel.VpcConfigPropertyList(this, "vpc_config", false);
   public get vpcConfig() {
     return this._vpcConfig;
   }
-  public putVpcConfig(value: TfCustomModel.VpcConfigProperty[] | cdktn.IResolvable) {
+  public putVpcConfig(value: AwsCustomModel.VpcConfigProperty[] | cdktn.IResolvable) {
     this._vpcConfig.internalValue = value;
   }
   public resetVpcConfig() {
@@ -409,11 +409,11 @@ export class TfCustomModel extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       role_arn: cdktn.stringToTerraform(this._roleArn),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      output_data_config: cdktn.listMapper(tfCustomModelOutputDataConfigPropertyToTerraform, true)(this._outputDataConfig.internalValue),
-      timeouts: tfCustomModelTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      training_data_config: cdktn.listMapper(tfCustomModelTrainingDataConfigPropertyToTerraform, true)(this._trainingDataConfig.internalValue),
-      validation_data_config: cdktn.listMapper(tfCustomModelValidationDataConfigPropertyToTerraform, true)(this._validationDataConfig.internalValue),
-      vpc_config: cdktn.listMapper(tfCustomModelVpcConfigPropertyToTerraform, true)(this._vpcConfig.internalValue),
+      output_data_config: cdktn.listMapper(awsCustomModelOutputDataConfigPropertyToTerraform, true)(this._outputDataConfig.internalValue),
+      timeouts: awsCustomModelTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      training_data_config: cdktn.listMapper(awsCustomModelTrainingDataConfigPropertyToTerraform, true)(this._trainingDataConfig.internalValue),
+      validation_data_config: cdktn.listMapper(awsCustomModelValidationDataConfigPropertyToTerraform, true)(this._validationDataConfig.internalValue),
+      vpc_config: cdktn.listMapper(awsCustomModelVpcConfigPropertyToTerraform, true)(this._vpcConfig.internalValue),
     };
   }
 
@@ -474,34 +474,34 @@ export class TfCustomModel extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       output_data_config: {
-        value: cdktn.listMapperHcl(tfCustomModelOutputDataConfigPropertyToHclTerraform, true)(this._outputDataConfig.internalValue),
+        value: cdktn.listMapperHcl(awsCustomModelOutputDataConfigPropertyToHclTerraform, true)(this._outputDataConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCustomModel.OutputDataConfigPropertyList",
+        storageClassType: "AwsCustomModel.OutputDataConfigPropertyList",
       },
       timeouts: {
-        value: tfCustomModelTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsCustomModelTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfCustomModel.TimeoutsProperty",
+        storageClassType: "AwsCustomModel.TimeoutsProperty",
       },
       training_data_config: {
-        value: cdktn.listMapperHcl(tfCustomModelTrainingDataConfigPropertyToHclTerraform, true)(this._trainingDataConfig.internalValue),
+        value: cdktn.listMapperHcl(awsCustomModelTrainingDataConfigPropertyToHclTerraform, true)(this._trainingDataConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCustomModel.TrainingDataConfigPropertyList",
+        storageClassType: "AwsCustomModel.TrainingDataConfigPropertyList",
       },
       validation_data_config: {
-        value: cdktn.listMapperHcl(tfCustomModelValidationDataConfigPropertyToHclTerraform, true)(this._validationDataConfig.internalValue),
+        value: cdktn.listMapperHcl(awsCustomModelValidationDataConfigPropertyToHclTerraform, true)(this._validationDataConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCustomModel.ValidationDataConfigPropertyList",
+        storageClassType: "AwsCustomModel.ValidationDataConfigPropertyList",
       },
       vpc_config: {
-        value: cdktn.listMapperHcl(tfCustomModelVpcConfigPropertyToHclTerraform, true)(this._vpcConfig.internalValue),
+        value: cdktn.listMapperHcl(awsCustomModelVpcConfigPropertyToHclTerraform, true)(this._vpcConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCustomModel.VpcConfigPropertyList",
+        storageClassType: "AwsCustomModel.VpcConfigPropertyList",
       },
     };
 
@@ -510,7 +510,7 @@ export class TfCustomModel extends cdktn.TerraformResource {
   }
 }
 
-export function tfCustomModelTrainingMetricsPropertyToTerraform(struct?: TfCustomModel.TrainingMetricsProperty): any {
+export function awsCustomModelTrainingMetricsPropertyToTerraform(struct?: AwsCustomModel.TrainingMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -520,7 +520,7 @@ export function tfCustomModelTrainingMetricsPropertyToTerraform(struct?: TfCusto
 }
 
 
-export function tfCustomModelTrainingMetricsPropertyToHclTerraform(struct?: TfCustomModel.TrainingMetricsProperty): any {
+export function awsCustomModelTrainingMetricsPropertyToHclTerraform(struct?: AwsCustomModel.TrainingMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -531,7 +531,7 @@ export function tfCustomModelTrainingMetricsPropertyToHclTerraform(struct?: TfCu
 }
 
 
-export function tfCustomModelValidationMetricsPropertyToTerraform(struct?: TfCustomModel.ValidationMetricsProperty): any {
+export function awsCustomModelValidationMetricsPropertyToTerraform(struct?: AwsCustomModel.ValidationMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -541,7 +541,7 @@ export function tfCustomModelValidationMetricsPropertyToTerraform(struct?: TfCus
 }
 
 
-export function tfCustomModelValidationMetricsPropertyToHclTerraform(struct?: TfCustomModel.ValidationMetricsProperty): any {
+export function awsCustomModelValidationMetricsPropertyToHclTerraform(struct?: AwsCustomModel.ValidationMetricsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -552,7 +552,7 @@ export function tfCustomModelValidationMetricsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfCustomModelOutputDataConfigPropertyToTerraform(struct?: TfCustomModel.OutputDataConfigProperty | cdktn.IResolvable): any {
+export function awsCustomModelOutputDataConfigPropertyToTerraform(struct?: AwsCustomModel.OutputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -563,7 +563,7 @@ export function tfCustomModelOutputDataConfigPropertyToTerraform(struct?: TfCust
 }
 
 
-export function tfCustomModelOutputDataConfigPropertyToHclTerraform(struct?: TfCustomModel.OutputDataConfigProperty | cdktn.IResolvable): any {
+export function awsCustomModelOutputDataConfigPropertyToHclTerraform(struct?: AwsCustomModel.OutputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -582,7 +582,7 @@ export function tfCustomModelOutputDataConfigPropertyToHclTerraform(struct?: TfC
 }
 
 
-export function tfCustomModelTimeoutsPropertyToTerraform(struct?: TfCustomModel.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCustomModelTimeoutsPropertyToTerraform(struct?: AwsCustomModel.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -594,7 +594,7 @@ export function tfCustomModelTimeoutsPropertyToTerraform(struct?: TfCustomModel.
 }
 
 
-export function tfCustomModelTimeoutsPropertyToHclTerraform(struct?: TfCustomModel.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsCustomModelTimeoutsPropertyToHclTerraform(struct?: AwsCustomModel.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -619,7 +619,7 @@ export function tfCustomModelTimeoutsPropertyToHclTerraform(struct?: TfCustomMod
 }
 
 
-export function tfCustomModelTrainingDataConfigPropertyToTerraform(struct?: TfCustomModel.TrainingDataConfigProperty | cdktn.IResolvable): any {
+export function awsCustomModelTrainingDataConfigPropertyToTerraform(struct?: AwsCustomModel.TrainingDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -630,7 +630,7 @@ export function tfCustomModelTrainingDataConfigPropertyToTerraform(struct?: TfCu
 }
 
 
-export function tfCustomModelTrainingDataConfigPropertyToHclTerraform(struct?: TfCustomModel.TrainingDataConfigProperty | cdktn.IResolvable): any {
+export function awsCustomModelTrainingDataConfigPropertyToHclTerraform(struct?: AwsCustomModel.TrainingDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -649,7 +649,7 @@ export function tfCustomModelTrainingDataConfigPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfCustomModelValidatorPropertyToTerraform(struct?: TfCustomModel.ValidatorProperty | cdktn.IResolvable): any {
+export function awsCustomModelValidatorPropertyToTerraform(struct?: AwsCustomModel.ValidatorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -660,7 +660,7 @@ export function tfCustomModelValidatorPropertyToTerraform(struct?: TfCustomModel
 }
 
 
-export function tfCustomModelValidatorPropertyToHclTerraform(struct?: TfCustomModel.ValidatorProperty | cdktn.IResolvable): any {
+export function awsCustomModelValidatorPropertyToHclTerraform(struct?: AwsCustomModel.ValidatorProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -679,25 +679,25 @@ export function tfCustomModelValidatorPropertyToHclTerraform(struct?: TfCustomMo
 }
 
 
-export function tfCustomModelValidationDataConfigPropertyToTerraform(struct?: TfCustomModel.ValidationDataConfigProperty | cdktn.IResolvable): any {
+export function awsCustomModelValidationDataConfigPropertyToTerraform(struct?: AwsCustomModel.ValidationDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    validator: cdktn.listMapper(tfCustomModelValidatorPropertyToTerraform, true)(struct!.validator),
+    validator: cdktn.listMapper(awsCustomModelValidatorPropertyToTerraform, true)(struct!.validator),
   }
 }
 
 
-export function tfCustomModelValidationDataConfigPropertyToHclTerraform(struct?: TfCustomModel.ValidationDataConfigProperty | cdktn.IResolvable): any {
+export function awsCustomModelValidationDataConfigPropertyToHclTerraform(struct?: AwsCustomModel.ValidationDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     validator: {
-      value: cdktn.listMapperHcl(tfCustomModelValidatorPropertyToHclTerraform, true)(struct!.validator),
+      value: cdktn.listMapperHcl(awsCustomModelValidatorPropertyToHclTerraform, true)(struct!.validator),
       isBlock: true,
       type: "list",
       storageClassType: "ValidatorPropertyList",
@@ -709,7 +709,7 @@ export function tfCustomModelValidationDataConfigPropertyToHclTerraform(struct?:
 }
 
 
-export function tfCustomModelVpcConfigPropertyToTerraform(struct?: TfCustomModel.VpcConfigProperty | cdktn.IResolvable): any {
+export function awsCustomModelVpcConfigPropertyToTerraform(struct?: AwsCustomModel.VpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -721,7 +721,7 @@ export function tfCustomModelVpcConfigPropertyToTerraform(struct?: TfCustomModel
 }
 
 
-export function tfCustomModelVpcConfigPropertyToHclTerraform(struct?: TfCustomModel.VpcConfigProperty | cdktn.IResolvable): any {
+export function awsCustomModelVpcConfigPropertyToHclTerraform(struct?: AwsCustomModel.VpcConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -746,7 +746,7 @@ export function tfCustomModelVpcConfigPropertyToHclTerraform(struct?: TfCustomMo
 }
 
 
-export namespace TfCustomModel {
+export namespace AwsCustomModel {
 export interface TrainingMetricsProperty {
 }
 export class TrainingMetricsPropertyOutputReference extends cdktn.ComplexObject {
@@ -857,7 +857,7 @@ export class ValidationMetricsPropertyList extends cdktn.ComplexList {
 }
 export interface OutputDataConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#s3_uri TfCustomModel#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#s3_uri AwsCustomModel#s3_uri}
   */
   readonly s3Uri: string;
 }
@@ -942,13 +942,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#create TfCustomModel#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#create AwsCustomModel#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#delete TfCustomModel#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#delete AwsCustomModel#delete}
   */
   readonly delete?: string;
 }
@@ -1034,7 +1034,7 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TrainingDataConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#s3_uri TfCustomModel#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#s3_uri AwsCustomModel#s3_uri}
   */
   readonly s3Uri: string;
 }
@@ -1117,7 +1117,7 @@ export class TrainingDataConfigPropertyList extends cdktn.ComplexList {
 }
 export interface ValidatorProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#s3_uri TfCustomModel#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#s3_uri AwsCustomModel#s3_uri}
   */
   readonly s3Uri: string;
 }
@@ -1202,7 +1202,7 @@ export interface ValidationDataConfigProperty {
   /**
   * validator block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#validator TfCustomModel#validator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#validator AwsCustomModel#validator}
   */
   readonly validator?: ValidatorProperty[] | cdktn.IResolvable;
 }
@@ -1288,11 +1288,11 @@ export class ValidationDataConfigPropertyList extends cdktn.ComplexList {
 }
 export interface VpcConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#security_group_ids TfCustomModel#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#security_group_ids AwsCustomModel#security_group_ids}
   */
   readonly securityGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#subnet_ids TfCustomModel#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/bedrock_custom_model#subnet_ids AwsCustomModel#subnet_ids}
   */
   readonly subnetIds: string[];
 }

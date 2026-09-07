@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfScriptConfig extends cdktn.TerraformMetaArguments {
+export interface AwsScriptConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#id TfScript#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#id AwsScript#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#name TfScript#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#name AwsScript#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#region TfScript#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#region AwsScript#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#tags TfScript#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#tags AwsScript#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#tags_all TfScript#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#tags_all AwsScript#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#version TfScript#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#version AwsScript#version}
   */
   readonly version?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#zip_file TfScript#zip_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#zip_file AwsScript#zip_file}
   */
   readonly zipFile?: string;
   /**
   * storage_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#storage_location TfScript#storage_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#storage_location AwsScript#storage_location}
   */
-  readonly storageLocation?: TfScript.StorageLocationProperty;
+  readonly storageLocation?: AwsScript.StorageLocationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script aws_gamelift_script}
 */
-export class TfScript extends cdktn.TerraformResource {
+export class AwsScript extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfScript extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfScript resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsScript resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfScript to import
-  * @param importFromId The id of the existing TfScript that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfScript to import is found
+  * @param importToId The construct id used in the generated config for the AwsScript to import
+  * @param importFromId The id of the existing AwsScript that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsScript to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_gamelift_script", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfScript extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfScriptConfig
+  * @param options AwsScriptConfig
   */
-  public constructor(scope: Construct, id: string, config: TfScriptConfig) {
+  public constructor(scope: Construct, id: string, config: AwsScriptConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_gamelift_script',
       terraformGeneratorMetadata: {
@@ -227,11 +227,11 @@ export class TfScript extends cdktn.TerraformResource {
   }
 
   // storage_location - computed: false, optional: true, required: false
-  private _storageLocation = new TfScript.StorageLocationPropertyOutputReference(this, "storage_location");
+  private _storageLocation = new AwsScript.StorageLocationPropertyOutputReference(this, "storage_location");
   public get storageLocation() {
     return this._storageLocation;
   }
-  public putStorageLocation(value: TfScript.StorageLocationProperty) {
+  public putStorageLocation(value: AwsScript.StorageLocationProperty) {
     this._storageLocation.internalValue = value;
   }
   public resetStorageLocation() {
@@ -255,7 +255,7 @@ export class TfScript extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       version: cdktn.stringToTerraform(this._version),
       zip_file: cdktn.stringToTerraform(this._zipFile),
-      storage_location: tfScriptStorageLocationPropertyToTerraform(this._storageLocation.internalValue),
+      storage_location: awsScriptStorageLocationPropertyToTerraform(this._storageLocation.internalValue),
     };
   }
 
@@ -304,10 +304,10 @@ export class TfScript extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       storage_location: {
-        value: tfScriptStorageLocationPropertyToHclTerraform(this._storageLocation.internalValue),
+        value: awsScriptStorageLocationPropertyToHclTerraform(this._storageLocation.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfScript.StorageLocationPropertyList",
+        storageClassType: "AwsScript.StorageLocationPropertyList",
       },
     };
 
@@ -316,7 +316,7 @@ export class TfScript extends cdktn.TerraformResource {
   }
 }
 
-export function tfScriptStorageLocationPropertyToTerraform(struct?: TfScript.StorageLocationPropertyOutputReference | TfScript.StorageLocationProperty): any {
+export function awsScriptStorageLocationPropertyToTerraform(struct?: AwsScript.StorageLocationPropertyOutputReference | AwsScript.StorageLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -330,7 +330,7 @@ export function tfScriptStorageLocationPropertyToTerraform(struct?: TfScript.Sto
 }
 
 
-export function tfScriptStorageLocationPropertyToHclTerraform(struct?: TfScript.StorageLocationPropertyOutputReference | TfScript.StorageLocationProperty): any {
+export function awsScriptStorageLocationPropertyToHclTerraform(struct?: AwsScript.StorageLocationPropertyOutputReference | AwsScript.StorageLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -367,22 +367,22 @@ export function tfScriptStorageLocationPropertyToHclTerraform(struct?: TfScript.
 }
 
 
-export namespace TfScript {
+export namespace AwsScript {
 export interface StorageLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#bucket TfScript#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#bucket AwsScript#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#key TfScript#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#key AwsScript#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#object_version TfScript#object_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#object_version AwsScript#object_version}
   */
   readonly objectVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#role_arn TfScript#role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/gamelift_script#role_arn AwsScript#role_arn}
   */
   readonly roleArn: string;
 }

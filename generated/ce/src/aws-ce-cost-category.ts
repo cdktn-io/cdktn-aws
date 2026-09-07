@@ -5,56 +5,56 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfCostCategoryConfig extends cdktn.TerraformMetaArguments {
+export interface AwsCostCategoryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#default_value TfCostCategory#default_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#default_value AwsCostCategory#default_value}
   */
   readonly defaultValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#effective_start TfCostCategory#effective_start}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#effective_start AwsCostCategory#effective_start}
   */
   readonly effectiveStart?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#id TfCostCategory#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#id AwsCostCategory#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#name TfCostCategory#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#name AwsCostCategory#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#rule_version TfCostCategory#rule_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#rule_version AwsCostCategory#rule_version}
   */
   readonly ruleVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags TfCostCategory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags AwsCostCategory#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags_all TfCostCategory#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags_all AwsCostCategory#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#rule TfCostCategory#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#rule AwsCostCategory#rule}
   */
-  readonly rule: TfCostCategory.RuleProperty[] | cdktn.IResolvable;
+  readonly rule: AwsCostCategory.RuleProperty[] | cdktn.IResolvable;
   /**
   * split_charge_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#split_charge_rule TfCostCategory#split_charge_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#split_charge_rule AwsCostCategory#split_charge_rule}
   */
-  readonly splitChargeRule?: TfCostCategory.SplitChargeRuleProperty[] | cdktn.IResolvable;
+  readonly splitChargeRule?: AwsCostCategory.SplitChargeRuleProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category aws_ce_cost_category}
 */
-export class TfCostCategory extends cdktn.TerraformResource {
+export class AwsCostCategory extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -65,11 +65,11 @@ export class TfCostCategory extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfCostCategory resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsCostCategory resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfCostCategory to import
-  * @param importFromId The id of the existing TfCostCategory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfCostCategory to import is found
+  * @param importToId The construct id used in the generated config for the AwsCostCategory to import
+  * @param importFromId The id of the existing AwsCostCategory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsCostCategory to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ce_cost_category", importId: importFromId, provider });
@@ -84,9 +84,9 @@ export class TfCostCategory extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfCostCategoryConfig
+  * @param options AwsCostCategoryConfig
   */
-  public constructor(scope: Construct, id: string, config: TfCostCategoryConfig) {
+  public constructor(scope: Construct, id: string, config: AwsCostCategoryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ce_cost_category',
       terraformGeneratorMetadata: {
@@ -234,11 +234,11 @@ export class TfCostCategory extends cdktn.TerraformResource {
   }
 
   // rule - computed: false, optional: false, required: true
-  private _rule = new TfCostCategory.RulePropertyList(this, "rule", false);
+  private _rule = new AwsCostCategory.RulePropertyList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
-  public putRule(value: TfCostCategory.RuleProperty[] | cdktn.IResolvable) {
+  public putRule(value: AwsCostCategory.RuleProperty[] | cdktn.IResolvable) {
     this._rule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -247,11 +247,11 @@ export class TfCostCategory extends cdktn.TerraformResource {
   }
 
   // split_charge_rule - computed: false, optional: true, required: false
-  private _splitChargeRule = new TfCostCategory.SplitChargeRulePropertyList(this, "split_charge_rule", true);
+  private _splitChargeRule = new AwsCostCategory.SplitChargeRulePropertyList(this, "split_charge_rule", true);
   public get splitChargeRule() {
     return this._splitChargeRule;
   }
-  public putSplitChargeRule(value: TfCostCategory.SplitChargeRuleProperty[] | cdktn.IResolvable) {
+  public putSplitChargeRule(value: AwsCostCategory.SplitChargeRuleProperty[] | cdktn.IResolvable) {
     this._splitChargeRule.internalValue = value;
   }
   public resetSplitChargeRule() {
@@ -275,8 +275,8 @@ export class TfCostCategory extends cdktn.TerraformResource {
       rule_version: cdktn.stringToTerraform(this._ruleVersion),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      rule: cdktn.listMapper(tfCostCategoryRulePropertyToTerraform, true)(this._rule.internalValue),
-      split_charge_rule: cdktn.listMapper(tfCostCategorySplitChargeRulePropertyToTerraform, true)(this._splitChargeRule.internalValue),
+      rule: cdktn.listMapper(awsCostCategoryRulePropertyToTerraform, true)(this._rule.internalValue),
+      split_charge_rule: cdktn.listMapper(awsCostCategorySplitChargeRulePropertyToTerraform, true)(this._splitChargeRule.internalValue),
     };
   }
 
@@ -325,16 +325,16 @@ export class TfCostCategory extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       rule: {
-        value: cdktn.listMapperHcl(tfCostCategoryRulePropertyToHclTerraform, true)(this._rule.internalValue),
+        value: cdktn.listMapperHcl(awsCostCategoryRulePropertyToHclTerraform, true)(this._rule.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfCostCategory.RulePropertyList",
+        storageClassType: "AwsCostCategory.RulePropertyList",
       },
       split_charge_rule: {
-        value: cdktn.listMapperHcl(tfCostCategorySplitChargeRulePropertyToHclTerraform, true)(this._splitChargeRule.internalValue),
+        value: cdktn.listMapperHcl(awsCostCategorySplitChargeRulePropertyToHclTerraform, true)(this._splitChargeRule.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfCostCategory.SplitChargeRulePropertyList",
+        storageClassType: "AwsCostCategory.SplitChargeRulePropertyList",
       },
     };
 
@@ -343,7 +343,7 @@ export class TfCostCategory extends cdktn.TerraformResource {
   }
 }
 
-export function tfCostCategoryInheritedValuePropertyToTerraform(struct?: TfCostCategory.InheritedValuePropertyOutputReference | TfCostCategory.InheritedValueProperty): any {
+export function awsCostCategoryInheritedValuePropertyToTerraform(struct?: AwsCostCategory.InheritedValuePropertyOutputReference | AwsCostCategory.InheritedValueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -355,7 +355,7 @@ export function tfCostCategoryInheritedValuePropertyToTerraform(struct?: TfCostC
 }
 
 
-export function tfCostCategoryInheritedValuePropertyToHclTerraform(struct?: TfCostCategory.InheritedValuePropertyOutputReference | TfCostCategory.InheritedValueProperty): any {
+export function awsCostCategoryInheritedValuePropertyToHclTerraform(struct?: AwsCostCategory.InheritedValuePropertyOutputReference | AwsCostCategory.InheritedValueProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -380,7 +380,7 @@ export function tfCostCategoryInheritedValuePropertyToHclTerraform(struct?: TfCo
 }
 
 
-export function tfCostCategoryRuleRuleAndAndCostCategoryPropertyToTerraform(struct?: TfCostCategory.RuleRuleAndAndCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleAndAndCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleAndAndCostCategoryPropertyToTerraform(struct?: AwsCostCategory.RuleRuleAndAndCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleAndAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -393,7 +393,7 @@ export function tfCostCategoryRuleRuleAndAndCostCategoryPropertyToTerraform(stru
 }
 
 
-export function tfCostCategoryRuleRuleAndAndCostCategoryPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleAndAndCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleAndAndCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleAndAndCostCategoryPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleAndAndCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleAndAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -424,7 +424,7 @@ export function tfCostCategoryRuleRuleAndAndCostCategoryPropertyToHclTerraform(s
 }
 
 
-export function tfCostCategoryRuleRuleAndAndDimensionPropertyToTerraform(struct?: TfCostCategory.RuleRuleAndAndDimensionPropertyOutputReference | TfCostCategory.RuleRuleAndAndDimensionProperty): any {
+export function awsCostCategoryRuleRuleAndAndDimensionPropertyToTerraform(struct?: AwsCostCategory.RuleRuleAndAndDimensionPropertyOutputReference | AwsCostCategory.RuleRuleAndAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -437,7 +437,7 @@ export function tfCostCategoryRuleRuleAndAndDimensionPropertyToTerraform(struct?
 }
 
 
-export function tfCostCategoryRuleRuleAndAndDimensionPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleAndAndDimensionPropertyOutputReference | TfCostCategory.RuleRuleAndAndDimensionProperty): any {
+export function awsCostCategoryRuleRuleAndAndDimensionPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleAndAndDimensionPropertyOutputReference | AwsCostCategory.RuleRuleAndAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -468,7 +468,7 @@ export function tfCostCategoryRuleRuleAndAndDimensionPropertyToHclTerraform(stru
 }
 
 
-export function tfCostCategoryRuleRuleAndAndTagsPropertyToTerraform(struct?: TfCostCategory.RuleRuleAndAndTagsPropertyOutputReference | TfCostCategory.RuleRuleAndAndTagsProperty): any {
+export function awsCostCategoryRuleRuleAndAndTagsPropertyToTerraform(struct?: AwsCostCategory.RuleRuleAndAndTagsPropertyOutputReference | AwsCostCategory.RuleRuleAndAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -481,7 +481,7 @@ export function tfCostCategoryRuleRuleAndAndTagsPropertyToTerraform(struct?: TfC
 }
 
 
-export function tfCostCategoryRuleRuleAndAndTagsPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleAndAndTagsPropertyOutputReference | TfCostCategory.RuleRuleAndAndTagsProperty): any {
+export function awsCostCategoryRuleRuleAndAndTagsPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleAndAndTagsPropertyOutputReference | AwsCostCategory.RuleRuleAndAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -512,39 +512,39 @@ export function tfCostCategoryRuleRuleAndAndTagsPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfCostCategoryRuleRuleAndAndPropertyToTerraform(struct?: TfCostCategory.RuleRuleAndAndProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRuleRuleAndAndPropertyToTerraform(struct?: AwsCostCategory.RuleRuleAndAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_category: tfCostCategoryRuleRuleAndAndCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfCostCategoryRuleRuleAndAndDimensionPropertyToTerraform(struct!.dimension),
-    tags: tfCostCategoryRuleRuleAndAndTagsPropertyToTerraform(struct!.tags),
+    cost_category: awsCostCategoryRuleRuleAndAndCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: awsCostCategoryRuleRuleAndAndDimensionPropertyToTerraform(struct!.dimension),
+    tags: awsCostCategoryRuleRuleAndAndTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfCostCategoryRuleRuleAndAndPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleAndAndProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRuleRuleAndAndPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleAndAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_category: {
-      value: tfCostCategoryRuleRuleAndAndCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: awsCostCategoryRuleRuleAndAndCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleAndAndCostCategoryPropertyList",
     },
     dimension: {
-      value: tfCostCategoryRuleRuleAndAndDimensionPropertyToHclTerraform(struct!.dimension),
+      value: awsCostCategoryRuleRuleAndAndDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleAndAndDimensionPropertyList",
     },
     tags: {
-      value: tfCostCategoryRuleRuleAndAndTagsPropertyToHclTerraform(struct!.tags),
+      value: awsCostCategoryRuleRuleAndAndTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleAndAndTagsPropertyList",
@@ -556,7 +556,7 @@ export function tfCostCategoryRuleRuleAndAndPropertyToHclTerraform(struct?: TfCo
 }
 
 
-export function tfCostCategoryRuleRuleAndCostCategoryPropertyToTerraform(struct?: TfCostCategory.RuleRuleAndCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleAndCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleAndCostCategoryPropertyToTerraform(struct?: AwsCostCategory.RuleRuleAndCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -569,7 +569,7 @@ export function tfCostCategoryRuleRuleAndCostCategoryPropertyToTerraform(struct?
 }
 
 
-export function tfCostCategoryRuleRuleAndCostCategoryPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleAndCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleAndCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleAndCostCategoryPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleAndCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -600,7 +600,7 @@ export function tfCostCategoryRuleRuleAndCostCategoryPropertyToHclTerraform(stru
 }
 
 
-export function tfCostCategoryRuleRuleAndDimensionPropertyToTerraform(struct?: TfCostCategory.RuleRuleAndDimensionPropertyOutputReference | TfCostCategory.RuleRuleAndDimensionProperty): any {
+export function awsCostCategoryRuleRuleAndDimensionPropertyToTerraform(struct?: AwsCostCategory.RuleRuleAndDimensionPropertyOutputReference | AwsCostCategory.RuleRuleAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -613,7 +613,7 @@ export function tfCostCategoryRuleRuleAndDimensionPropertyToTerraform(struct?: T
 }
 
 
-export function tfCostCategoryRuleRuleAndDimensionPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleAndDimensionPropertyOutputReference | TfCostCategory.RuleRuleAndDimensionProperty): any {
+export function awsCostCategoryRuleRuleAndDimensionPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleAndDimensionPropertyOutputReference | AwsCostCategory.RuleRuleAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -644,7 +644,7 @@ export function tfCostCategoryRuleRuleAndDimensionPropertyToHclTerraform(struct?
 }
 
 
-export function tfCostCategoryRuleRuleAndNotCostCategoryPropertyToTerraform(struct?: TfCostCategory.RuleRuleAndNotCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleAndNotCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleAndNotCostCategoryPropertyToTerraform(struct?: AwsCostCategory.RuleRuleAndNotCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleAndNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -657,7 +657,7 @@ export function tfCostCategoryRuleRuleAndNotCostCategoryPropertyToTerraform(stru
 }
 
 
-export function tfCostCategoryRuleRuleAndNotCostCategoryPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleAndNotCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleAndNotCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleAndNotCostCategoryPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleAndNotCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleAndNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -688,7 +688,7 @@ export function tfCostCategoryRuleRuleAndNotCostCategoryPropertyToHclTerraform(s
 }
 
 
-export function tfCostCategoryRuleRuleAndNotDimensionPropertyToTerraform(struct?: TfCostCategory.RuleRuleAndNotDimensionPropertyOutputReference | TfCostCategory.RuleRuleAndNotDimensionProperty): any {
+export function awsCostCategoryRuleRuleAndNotDimensionPropertyToTerraform(struct?: AwsCostCategory.RuleRuleAndNotDimensionPropertyOutputReference | AwsCostCategory.RuleRuleAndNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -701,7 +701,7 @@ export function tfCostCategoryRuleRuleAndNotDimensionPropertyToTerraform(struct?
 }
 
 
-export function tfCostCategoryRuleRuleAndNotDimensionPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleAndNotDimensionPropertyOutputReference | TfCostCategory.RuleRuleAndNotDimensionProperty): any {
+export function awsCostCategoryRuleRuleAndNotDimensionPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleAndNotDimensionPropertyOutputReference | AwsCostCategory.RuleRuleAndNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -732,7 +732,7 @@ export function tfCostCategoryRuleRuleAndNotDimensionPropertyToHclTerraform(stru
 }
 
 
-export function tfCostCategoryRuleRuleAndNotTagsPropertyToTerraform(struct?: TfCostCategory.RuleRuleAndNotTagsPropertyOutputReference | TfCostCategory.RuleRuleAndNotTagsProperty): any {
+export function awsCostCategoryRuleRuleAndNotTagsPropertyToTerraform(struct?: AwsCostCategory.RuleRuleAndNotTagsPropertyOutputReference | AwsCostCategory.RuleRuleAndNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -745,7 +745,7 @@ export function tfCostCategoryRuleRuleAndNotTagsPropertyToTerraform(struct?: TfC
 }
 
 
-export function tfCostCategoryRuleRuleAndNotTagsPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleAndNotTagsPropertyOutputReference | TfCostCategory.RuleRuleAndNotTagsProperty): any {
+export function awsCostCategoryRuleRuleAndNotTagsPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleAndNotTagsPropertyOutputReference | AwsCostCategory.RuleRuleAndNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -776,39 +776,39 @@ export function tfCostCategoryRuleRuleAndNotTagsPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfCostCategoryRuleRuleAndNotPropertyToTerraform(struct?: TfCostCategory.RuleRuleAndNotPropertyOutputReference | TfCostCategory.RuleRuleAndNotProperty): any {
+export function awsCostCategoryRuleRuleAndNotPropertyToTerraform(struct?: AwsCostCategory.RuleRuleAndNotPropertyOutputReference | AwsCostCategory.RuleRuleAndNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_category: tfCostCategoryRuleRuleAndNotCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfCostCategoryRuleRuleAndNotDimensionPropertyToTerraform(struct!.dimension),
-    tags: tfCostCategoryRuleRuleAndNotTagsPropertyToTerraform(struct!.tags),
+    cost_category: awsCostCategoryRuleRuleAndNotCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: awsCostCategoryRuleRuleAndNotDimensionPropertyToTerraform(struct!.dimension),
+    tags: awsCostCategoryRuleRuleAndNotTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfCostCategoryRuleRuleAndNotPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleAndNotPropertyOutputReference | TfCostCategory.RuleRuleAndNotProperty): any {
+export function awsCostCategoryRuleRuleAndNotPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleAndNotPropertyOutputReference | AwsCostCategory.RuleRuleAndNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_category: {
-      value: tfCostCategoryRuleRuleAndNotCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: awsCostCategoryRuleRuleAndNotCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleAndNotCostCategoryPropertyList",
     },
     dimension: {
-      value: tfCostCategoryRuleRuleAndNotDimensionPropertyToHclTerraform(struct!.dimension),
+      value: awsCostCategoryRuleRuleAndNotDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleAndNotDimensionPropertyList",
     },
     tags: {
-      value: tfCostCategoryRuleRuleAndNotTagsPropertyToHclTerraform(struct!.tags),
+      value: awsCostCategoryRuleRuleAndNotTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleAndNotTagsPropertyList",
@@ -820,7 +820,7 @@ export function tfCostCategoryRuleRuleAndNotPropertyToHclTerraform(struct?: TfCo
 }
 
 
-export function tfCostCategoryRuleRuleAndOrCostCategoryPropertyToTerraform(struct?: TfCostCategory.RuleRuleAndOrCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleAndOrCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleAndOrCostCategoryPropertyToTerraform(struct?: AwsCostCategory.RuleRuleAndOrCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleAndOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -833,7 +833,7 @@ export function tfCostCategoryRuleRuleAndOrCostCategoryPropertyToTerraform(struc
 }
 
 
-export function tfCostCategoryRuleRuleAndOrCostCategoryPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleAndOrCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleAndOrCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleAndOrCostCategoryPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleAndOrCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleAndOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -864,7 +864,7 @@ export function tfCostCategoryRuleRuleAndOrCostCategoryPropertyToHclTerraform(st
 }
 
 
-export function tfCostCategoryRuleRuleAndOrDimensionPropertyToTerraform(struct?: TfCostCategory.RuleRuleAndOrDimensionPropertyOutputReference | TfCostCategory.RuleRuleAndOrDimensionProperty): any {
+export function awsCostCategoryRuleRuleAndOrDimensionPropertyToTerraform(struct?: AwsCostCategory.RuleRuleAndOrDimensionPropertyOutputReference | AwsCostCategory.RuleRuleAndOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -877,7 +877,7 @@ export function tfCostCategoryRuleRuleAndOrDimensionPropertyToTerraform(struct?:
 }
 
 
-export function tfCostCategoryRuleRuleAndOrDimensionPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleAndOrDimensionPropertyOutputReference | TfCostCategory.RuleRuleAndOrDimensionProperty): any {
+export function awsCostCategoryRuleRuleAndOrDimensionPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleAndOrDimensionPropertyOutputReference | AwsCostCategory.RuleRuleAndOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -908,7 +908,7 @@ export function tfCostCategoryRuleRuleAndOrDimensionPropertyToHclTerraform(struc
 }
 
 
-export function tfCostCategoryRuleRuleAndOrTagsPropertyToTerraform(struct?: TfCostCategory.RuleRuleAndOrTagsPropertyOutputReference | TfCostCategory.RuleRuleAndOrTagsProperty): any {
+export function awsCostCategoryRuleRuleAndOrTagsPropertyToTerraform(struct?: AwsCostCategory.RuleRuleAndOrTagsPropertyOutputReference | AwsCostCategory.RuleRuleAndOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -921,7 +921,7 @@ export function tfCostCategoryRuleRuleAndOrTagsPropertyToTerraform(struct?: TfCo
 }
 
 
-export function tfCostCategoryRuleRuleAndOrTagsPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleAndOrTagsPropertyOutputReference | TfCostCategory.RuleRuleAndOrTagsProperty): any {
+export function awsCostCategoryRuleRuleAndOrTagsPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleAndOrTagsPropertyOutputReference | AwsCostCategory.RuleRuleAndOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -952,39 +952,39 @@ export function tfCostCategoryRuleRuleAndOrTagsPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfCostCategoryRuleRuleAndOrPropertyToTerraform(struct?: TfCostCategory.RuleRuleAndOrProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRuleRuleAndOrPropertyToTerraform(struct?: AwsCostCategory.RuleRuleAndOrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_category: tfCostCategoryRuleRuleAndOrCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfCostCategoryRuleRuleAndOrDimensionPropertyToTerraform(struct!.dimension),
-    tags: tfCostCategoryRuleRuleAndOrTagsPropertyToTerraform(struct!.tags),
+    cost_category: awsCostCategoryRuleRuleAndOrCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: awsCostCategoryRuleRuleAndOrDimensionPropertyToTerraform(struct!.dimension),
+    tags: awsCostCategoryRuleRuleAndOrTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfCostCategoryRuleRuleAndOrPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleAndOrProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRuleRuleAndOrPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleAndOrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_category: {
-      value: tfCostCategoryRuleRuleAndOrCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: awsCostCategoryRuleRuleAndOrCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleAndOrCostCategoryPropertyList",
     },
     dimension: {
-      value: tfCostCategoryRuleRuleAndOrDimensionPropertyToHclTerraform(struct!.dimension),
+      value: awsCostCategoryRuleRuleAndOrDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleAndOrDimensionPropertyList",
     },
     tags: {
-      value: tfCostCategoryRuleRuleAndOrTagsPropertyToHclTerraform(struct!.tags),
+      value: awsCostCategoryRuleRuleAndOrTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleAndOrTagsPropertyList",
@@ -996,7 +996,7 @@ export function tfCostCategoryRuleRuleAndOrPropertyToHclTerraform(struct?: TfCos
 }
 
 
-export function tfCostCategoryRuleRuleAndTagsPropertyToTerraform(struct?: TfCostCategory.RuleRuleAndTagsPropertyOutputReference | TfCostCategory.RuleRuleAndTagsProperty): any {
+export function awsCostCategoryRuleRuleAndTagsPropertyToTerraform(struct?: AwsCostCategory.RuleRuleAndTagsPropertyOutputReference | AwsCostCategory.RuleRuleAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1009,7 +1009,7 @@ export function tfCostCategoryRuleRuleAndTagsPropertyToTerraform(struct?: TfCost
 }
 
 
-export function tfCostCategoryRuleRuleAndTagsPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleAndTagsPropertyOutputReference | TfCostCategory.RuleRuleAndTagsProperty): any {
+export function awsCostCategoryRuleRuleAndTagsPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleAndTagsPropertyOutputReference | AwsCostCategory.RuleRuleAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1040,60 +1040,60 @@ export function tfCostCategoryRuleRuleAndTagsPropertyToHclTerraform(struct?: TfC
 }
 
 
-export function tfCostCategoryRuleRuleAndPropertyToTerraform(struct?: TfCostCategory.RuleRuleAndProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRuleRuleAndPropertyToTerraform(struct?: AwsCostCategory.RuleRuleAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    and: cdktn.listMapper(tfCostCategoryRuleRuleAndAndPropertyToTerraform, true)(struct!.and),
-    cost_category: tfCostCategoryRuleRuleAndCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfCostCategoryRuleRuleAndDimensionPropertyToTerraform(struct!.dimension),
-    not: tfCostCategoryRuleRuleAndNotPropertyToTerraform(struct!.not),
-    or: cdktn.listMapper(tfCostCategoryRuleRuleAndOrPropertyToTerraform, true)(struct!.or),
-    tags: tfCostCategoryRuleRuleAndTagsPropertyToTerraform(struct!.tags),
+    and: cdktn.listMapper(awsCostCategoryRuleRuleAndAndPropertyToTerraform, true)(struct!.and),
+    cost_category: awsCostCategoryRuleRuleAndCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: awsCostCategoryRuleRuleAndDimensionPropertyToTerraform(struct!.dimension),
+    not: awsCostCategoryRuleRuleAndNotPropertyToTerraform(struct!.not),
+    or: cdktn.listMapper(awsCostCategoryRuleRuleAndOrPropertyToTerraform, true)(struct!.or),
+    tags: awsCostCategoryRuleRuleAndTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfCostCategoryRuleRuleAndPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleAndProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRuleRuleAndPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     and: {
-      value: cdktn.listMapperHcl(tfCostCategoryRuleRuleAndAndPropertyToHclTerraform, true)(struct!.and),
+      value: cdktn.listMapperHcl(awsCostCategoryRuleRuleAndAndPropertyToHclTerraform, true)(struct!.and),
       isBlock: true,
       type: "set",
       storageClassType: "RuleRuleAndAndPropertyList",
     },
     cost_category: {
-      value: tfCostCategoryRuleRuleAndCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: awsCostCategoryRuleRuleAndCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleAndCostCategoryPropertyList",
     },
     dimension: {
-      value: tfCostCategoryRuleRuleAndDimensionPropertyToHclTerraform(struct!.dimension),
+      value: awsCostCategoryRuleRuleAndDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleAndDimensionPropertyList",
     },
     not: {
-      value: tfCostCategoryRuleRuleAndNotPropertyToHclTerraform(struct!.not),
+      value: awsCostCategoryRuleRuleAndNotPropertyToHclTerraform(struct!.not),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleAndNotPropertyList",
     },
     or: {
-      value: cdktn.listMapperHcl(tfCostCategoryRuleRuleAndOrPropertyToHclTerraform, true)(struct!.or),
+      value: cdktn.listMapperHcl(awsCostCategoryRuleRuleAndOrPropertyToHclTerraform, true)(struct!.or),
       isBlock: true,
       type: "set",
       storageClassType: "RuleRuleAndOrPropertyList",
     },
     tags: {
-      value: tfCostCategoryRuleRuleAndTagsPropertyToHclTerraform(struct!.tags),
+      value: awsCostCategoryRuleRuleAndTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleAndTagsPropertyList",
@@ -1105,7 +1105,7 @@ export function tfCostCategoryRuleRuleAndPropertyToHclTerraform(struct?: TfCostC
 }
 
 
-export function tfCostCategoryRuleRuleCostCategoryPropertyToTerraform(struct?: TfCostCategory.RuleRuleCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleCostCategoryPropertyToTerraform(struct?: AwsCostCategory.RuleRuleCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1118,7 +1118,7 @@ export function tfCostCategoryRuleRuleCostCategoryPropertyToTerraform(struct?: T
 }
 
 
-export function tfCostCategoryRuleRuleCostCategoryPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleCostCategoryPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1149,7 +1149,7 @@ export function tfCostCategoryRuleRuleCostCategoryPropertyToHclTerraform(struct?
 }
 
 
-export function tfCostCategoryRuleRuleDimensionPropertyToTerraform(struct?: TfCostCategory.RuleRuleDimensionPropertyOutputReference | TfCostCategory.RuleRuleDimensionProperty): any {
+export function awsCostCategoryRuleRuleDimensionPropertyToTerraform(struct?: AwsCostCategory.RuleRuleDimensionPropertyOutputReference | AwsCostCategory.RuleRuleDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1162,7 +1162,7 @@ export function tfCostCategoryRuleRuleDimensionPropertyToTerraform(struct?: TfCo
 }
 
 
-export function tfCostCategoryRuleRuleDimensionPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleDimensionPropertyOutputReference | TfCostCategory.RuleRuleDimensionProperty): any {
+export function awsCostCategoryRuleRuleDimensionPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleDimensionPropertyOutputReference | AwsCostCategory.RuleRuleDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1193,7 +1193,7 @@ export function tfCostCategoryRuleRuleDimensionPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfCostCategoryRuleRuleNotAndCostCategoryPropertyToTerraform(struct?: TfCostCategory.RuleRuleNotAndCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleNotAndCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleNotAndCostCategoryPropertyToTerraform(struct?: AwsCostCategory.RuleRuleNotAndCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleNotAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1206,7 +1206,7 @@ export function tfCostCategoryRuleRuleNotAndCostCategoryPropertyToTerraform(stru
 }
 
 
-export function tfCostCategoryRuleRuleNotAndCostCategoryPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleNotAndCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleNotAndCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleNotAndCostCategoryPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleNotAndCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleNotAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1237,7 +1237,7 @@ export function tfCostCategoryRuleRuleNotAndCostCategoryPropertyToHclTerraform(s
 }
 
 
-export function tfCostCategoryRuleRuleNotAndDimensionPropertyToTerraform(struct?: TfCostCategory.RuleRuleNotAndDimensionPropertyOutputReference | TfCostCategory.RuleRuleNotAndDimensionProperty): any {
+export function awsCostCategoryRuleRuleNotAndDimensionPropertyToTerraform(struct?: AwsCostCategory.RuleRuleNotAndDimensionPropertyOutputReference | AwsCostCategory.RuleRuleNotAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1250,7 +1250,7 @@ export function tfCostCategoryRuleRuleNotAndDimensionPropertyToTerraform(struct?
 }
 
 
-export function tfCostCategoryRuleRuleNotAndDimensionPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleNotAndDimensionPropertyOutputReference | TfCostCategory.RuleRuleNotAndDimensionProperty): any {
+export function awsCostCategoryRuleRuleNotAndDimensionPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleNotAndDimensionPropertyOutputReference | AwsCostCategory.RuleRuleNotAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1281,7 +1281,7 @@ export function tfCostCategoryRuleRuleNotAndDimensionPropertyToHclTerraform(stru
 }
 
 
-export function tfCostCategoryRuleRuleNotAndTagsPropertyToTerraform(struct?: TfCostCategory.RuleRuleNotAndTagsPropertyOutputReference | TfCostCategory.RuleRuleNotAndTagsProperty): any {
+export function awsCostCategoryRuleRuleNotAndTagsPropertyToTerraform(struct?: AwsCostCategory.RuleRuleNotAndTagsPropertyOutputReference | AwsCostCategory.RuleRuleNotAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1294,7 +1294,7 @@ export function tfCostCategoryRuleRuleNotAndTagsPropertyToTerraform(struct?: TfC
 }
 
 
-export function tfCostCategoryRuleRuleNotAndTagsPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleNotAndTagsPropertyOutputReference | TfCostCategory.RuleRuleNotAndTagsProperty): any {
+export function awsCostCategoryRuleRuleNotAndTagsPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleNotAndTagsPropertyOutputReference | AwsCostCategory.RuleRuleNotAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1325,39 +1325,39 @@ export function tfCostCategoryRuleRuleNotAndTagsPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfCostCategoryRuleRuleNotAndPropertyToTerraform(struct?: TfCostCategory.RuleRuleNotAndProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRuleRuleNotAndPropertyToTerraform(struct?: AwsCostCategory.RuleRuleNotAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_category: tfCostCategoryRuleRuleNotAndCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfCostCategoryRuleRuleNotAndDimensionPropertyToTerraform(struct!.dimension),
-    tags: tfCostCategoryRuleRuleNotAndTagsPropertyToTerraform(struct!.tags),
+    cost_category: awsCostCategoryRuleRuleNotAndCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: awsCostCategoryRuleRuleNotAndDimensionPropertyToTerraform(struct!.dimension),
+    tags: awsCostCategoryRuleRuleNotAndTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfCostCategoryRuleRuleNotAndPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleNotAndProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRuleRuleNotAndPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleNotAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_category: {
-      value: tfCostCategoryRuleRuleNotAndCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: awsCostCategoryRuleRuleNotAndCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleNotAndCostCategoryPropertyList",
     },
     dimension: {
-      value: tfCostCategoryRuleRuleNotAndDimensionPropertyToHclTerraform(struct!.dimension),
+      value: awsCostCategoryRuleRuleNotAndDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleNotAndDimensionPropertyList",
     },
     tags: {
-      value: tfCostCategoryRuleRuleNotAndTagsPropertyToHclTerraform(struct!.tags),
+      value: awsCostCategoryRuleRuleNotAndTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleNotAndTagsPropertyList",
@@ -1369,7 +1369,7 @@ export function tfCostCategoryRuleRuleNotAndPropertyToHclTerraform(struct?: TfCo
 }
 
 
-export function tfCostCategoryRuleRuleNotCostCategoryPropertyToTerraform(struct?: TfCostCategory.RuleRuleNotCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleNotCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleNotCostCategoryPropertyToTerraform(struct?: AwsCostCategory.RuleRuleNotCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1382,7 +1382,7 @@ export function tfCostCategoryRuleRuleNotCostCategoryPropertyToTerraform(struct?
 }
 
 
-export function tfCostCategoryRuleRuleNotCostCategoryPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleNotCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleNotCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleNotCostCategoryPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleNotCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1413,7 +1413,7 @@ export function tfCostCategoryRuleRuleNotCostCategoryPropertyToHclTerraform(stru
 }
 
 
-export function tfCostCategoryRuleRuleNotDimensionPropertyToTerraform(struct?: TfCostCategory.RuleRuleNotDimensionPropertyOutputReference | TfCostCategory.RuleRuleNotDimensionProperty): any {
+export function awsCostCategoryRuleRuleNotDimensionPropertyToTerraform(struct?: AwsCostCategory.RuleRuleNotDimensionPropertyOutputReference | AwsCostCategory.RuleRuleNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1426,7 +1426,7 @@ export function tfCostCategoryRuleRuleNotDimensionPropertyToTerraform(struct?: T
 }
 
 
-export function tfCostCategoryRuleRuleNotDimensionPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleNotDimensionPropertyOutputReference | TfCostCategory.RuleRuleNotDimensionProperty): any {
+export function awsCostCategoryRuleRuleNotDimensionPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleNotDimensionPropertyOutputReference | AwsCostCategory.RuleRuleNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1457,7 +1457,7 @@ export function tfCostCategoryRuleRuleNotDimensionPropertyToHclTerraform(struct?
 }
 
 
-export function tfCostCategoryRuleRuleNotNotCostCategoryPropertyToTerraform(struct?: TfCostCategory.RuleRuleNotNotCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleNotNotCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleNotNotCostCategoryPropertyToTerraform(struct?: AwsCostCategory.RuleRuleNotNotCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleNotNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1470,7 +1470,7 @@ export function tfCostCategoryRuleRuleNotNotCostCategoryPropertyToTerraform(stru
 }
 
 
-export function tfCostCategoryRuleRuleNotNotCostCategoryPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleNotNotCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleNotNotCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleNotNotCostCategoryPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleNotNotCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleNotNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1501,7 +1501,7 @@ export function tfCostCategoryRuleRuleNotNotCostCategoryPropertyToHclTerraform(s
 }
 
 
-export function tfCostCategoryRuleRuleNotNotDimensionPropertyToTerraform(struct?: TfCostCategory.RuleRuleNotNotDimensionPropertyOutputReference | TfCostCategory.RuleRuleNotNotDimensionProperty): any {
+export function awsCostCategoryRuleRuleNotNotDimensionPropertyToTerraform(struct?: AwsCostCategory.RuleRuleNotNotDimensionPropertyOutputReference | AwsCostCategory.RuleRuleNotNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1514,7 +1514,7 @@ export function tfCostCategoryRuleRuleNotNotDimensionPropertyToTerraform(struct?
 }
 
 
-export function tfCostCategoryRuleRuleNotNotDimensionPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleNotNotDimensionPropertyOutputReference | TfCostCategory.RuleRuleNotNotDimensionProperty): any {
+export function awsCostCategoryRuleRuleNotNotDimensionPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleNotNotDimensionPropertyOutputReference | AwsCostCategory.RuleRuleNotNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1545,7 +1545,7 @@ export function tfCostCategoryRuleRuleNotNotDimensionPropertyToHclTerraform(stru
 }
 
 
-export function tfCostCategoryRuleRuleNotNotTagsPropertyToTerraform(struct?: TfCostCategory.RuleRuleNotNotTagsPropertyOutputReference | TfCostCategory.RuleRuleNotNotTagsProperty): any {
+export function awsCostCategoryRuleRuleNotNotTagsPropertyToTerraform(struct?: AwsCostCategory.RuleRuleNotNotTagsPropertyOutputReference | AwsCostCategory.RuleRuleNotNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1558,7 +1558,7 @@ export function tfCostCategoryRuleRuleNotNotTagsPropertyToTerraform(struct?: TfC
 }
 
 
-export function tfCostCategoryRuleRuleNotNotTagsPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleNotNotTagsPropertyOutputReference | TfCostCategory.RuleRuleNotNotTagsProperty): any {
+export function awsCostCategoryRuleRuleNotNotTagsPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleNotNotTagsPropertyOutputReference | AwsCostCategory.RuleRuleNotNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1589,39 +1589,39 @@ export function tfCostCategoryRuleRuleNotNotTagsPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfCostCategoryRuleRuleNotNotPropertyToTerraform(struct?: TfCostCategory.RuleRuleNotNotPropertyOutputReference | TfCostCategory.RuleRuleNotNotProperty): any {
+export function awsCostCategoryRuleRuleNotNotPropertyToTerraform(struct?: AwsCostCategory.RuleRuleNotNotPropertyOutputReference | AwsCostCategory.RuleRuleNotNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_category: tfCostCategoryRuleRuleNotNotCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfCostCategoryRuleRuleNotNotDimensionPropertyToTerraform(struct!.dimension),
-    tags: tfCostCategoryRuleRuleNotNotTagsPropertyToTerraform(struct!.tags),
+    cost_category: awsCostCategoryRuleRuleNotNotCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: awsCostCategoryRuleRuleNotNotDimensionPropertyToTerraform(struct!.dimension),
+    tags: awsCostCategoryRuleRuleNotNotTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfCostCategoryRuleRuleNotNotPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleNotNotPropertyOutputReference | TfCostCategory.RuleRuleNotNotProperty): any {
+export function awsCostCategoryRuleRuleNotNotPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleNotNotPropertyOutputReference | AwsCostCategory.RuleRuleNotNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_category: {
-      value: tfCostCategoryRuleRuleNotNotCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: awsCostCategoryRuleRuleNotNotCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleNotNotCostCategoryPropertyList",
     },
     dimension: {
-      value: tfCostCategoryRuleRuleNotNotDimensionPropertyToHclTerraform(struct!.dimension),
+      value: awsCostCategoryRuleRuleNotNotDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleNotNotDimensionPropertyList",
     },
     tags: {
-      value: tfCostCategoryRuleRuleNotNotTagsPropertyToHclTerraform(struct!.tags),
+      value: awsCostCategoryRuleRuleNotNotTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleNotNotTagsPropertyList",
@@ -1633,7 +1633,7 @@ export function tfCostCategoryRuleRuleNotNotPropertyToHclTerraform(struct?: TfCo
 }
 
 
-export function tfCostCategoryRuleRuleNotOrCostCategoryPropertyToTerraform(struct?: TfCostCategory.RuleRuleNotOrCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleNotOrCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleNotOrCostCategoryPropertyToTerraform(struct?: AwsCostCategory.RuleRuleNotOrCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleNotOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1646,7 +1646,7 @@ export function tfCostCategoryRuleRuleNotOrCostCategoryPropertyToTerraform(struc
 }
 
 
-export function tfCostCategoryRuleRuleNotOrCostCategoryPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleNotOrCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleNotOrCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleNotOrCostCategoryPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleNotOrCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleNotOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1677,7 +1677,7 @@ export function tfCostCategoryRuleRuleNotOrCostCategoryPropertyToHclTerraform(st
 }
 
 
-export function tfCostCategoryRuleRuleNotOrDimensionPropertyToTerraform(struct?: TfCostCategory.RuleRuleNotOrDimensionPropertyOutputReference | TfCostCategory.RuleRuleNotOrDimensionProperty): any {
+export function awsCostCategoryRuleRuleNotOrDimensionPropertyToTerraform(struct?: AwsCostCategory.RuleRuleNotOrDimensionPropertyOutputReference | AwsCostCategory.RuleRuleNotOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1690,7 +1690,7 @@ export function tfCostCategoryRuleRuleNotOrDimensionPropertyToTerraform(struct?:
 }
 
 
-export function tfCostCategoryRuleRuleNotOrDimensionPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleNotOrDimensionPropertyOutputReference | TfCostCategory.RuleRuleNotOrDimensionProperty): any {
+export function awsCostCategoryRuleRuleNotOrDimensionPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleNotOrDimensionPropertyOutputReference | AwsCostCategory.RuleRuleNotOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1721,7 +1721,7 @@ export function tfCostCategoryRuleRuleNotOrDimensionPropertyToHclTerraform(struc
 }
 
 
-export function tfCostCategoryRuleRuleNotOrTagsPropertyToTerraform(struct?: TfCostCategory.RuleRuleNotOrTagsPropertyOutputReference | TfCostCategory.RuleRuleNotOrTagsProperty): any {
+export function awsCostCategoryRuleRuleNotOrTagsPropertyToTerraform(struct?: AwsCostCategory.RuleRuleNotOrTagsPropertyOutputReference | AwsCostCategory.RuleRuleNotOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1734,7 +1734,7 @@ export function tfCostCategoryRuleRuleNotOrTagsPropertyToTerraform(struct?: TfCo
 }
 
 
-export function tfCostCategoryRuleRuleNotOrTagsPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleNotOrTagsPropertyOutputReference | TfCostCategory.RuleRuleNotOrTagsProperty): any {
+export function awsCostCategoryRuleRuleNotOrTagsPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleNotOrTagsPropertyOutputReference | AwsCostCategory.RuleRuleNotOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1765,39 +1765,39 @@ export function tfCostCategoryRuleRuleNotOrTagsPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfCostCategoryRuleRuleNotOrPropertyToTerraform(struct?: TfCostCategory.RuleRuleNotOrProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRuleRuleNotOrPropertyToTerraform(struct?: AwsCostCategory.RuleRuleNotOrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_category: tfCostCategoryRuleRuleNotOrCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfCostCategoryRuleRuleNotOrDimensionPropertyToTerraform(struct!.dimension),
-    tags: tfCostCategoryRuleRuleNotOrTagsPropertyToTerraform(struct!.tags),
+    cost_category: awsCostCategoryRuleRuleNotOrCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: awsCostCategoryRuleRuleNotOrDimensionPropertyToTerraform(struct!.dimension),
+    tags: awsCostCategoryRuleRuleNotOrTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfCostCategoryRuleRuleNotOrPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleNotOrProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRuleRuleNotOrPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleNotOrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_category: {
-      value: tfCostCategoryRuleRuleNotOrCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: awsCostCategoryRuleRuleNotOrCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleNotOrCostCategoryPropertyList",
     },
     dimension: {
-      value: tfCostCategoryRuleRuleNotOrDimensionPropertyToHclTerraform(struct!.dimension),
+      value: awsCostCategoryRuleRuleNotOrDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleNotOrDimensionPropertyList",
     },
     tags: {
-      value: tfCostCategoryRuleRuleNotOrTagsPropertyToHclTerraform(struct!.tags),
+      value: awsCostCategoryRuleRuleNotOrTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleNotOrTagsPropertyList",
@@ -1809,7 +1809,7 @@ export function tfCostCategoryRuleRuleNotOrPropertyToHclTerraform(struct?: TfCos
 }
 
 
-export function tfCostCategoryRuleRuleNotTagsPropertyToTerraform(struct?: TfCostCategory.RuleRuleNotTagsPropertyOutputReference | TfCostCategory.RuleRuleNotTagsProperty): any {
+export function awsCostCategoryRuleRuleNotTagsPropertyToTerraform(struct?: AwsCostCategory.RuleRuleNotTagsPropertyOutputReference | AwsCostCategory.RuleRuleNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1822,7 +1822,7 @@ export function tfCostCategoryRuleRuleNotTagsPropertyToTerraform(struct?: TfCost
 }
 
 
-export function tfCostCategoryRuleRuleNotTagsPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleNotTagsPropertyOutputReference | TfCostCategory.RuleRuleNotTagsProperty): any {
+export function awsCostCategoryRuleRuleNotTagsPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleNotTagsPropertyOutputReference | AwsCostCategory.RuleRuleNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1853,60 +1853,60 @@ export function tfCostCategoryRuleRuleNotTagsPropertyToHclTerraform(struct?: TfC
 }
 
 
-export function tfCostCategoryRuleRuleNotPropertyToTerraform(struct?: TfCostCategory.RuleRuleNotPropertyOutputReference | TfCostCategory.RuleRuleNotProperty): any {
+export function awsCostCategoryRuleRuleNotPropertyToTerraform(struct?: AwsCostCategory.RuleRuleNotPropertyOutputReference | AwsCostCategory.RuleRuleNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    and: cdktn.listMapper(tfCostCategoryRuleRuleNotAndPropertyToTerraform, true)(struct!.and),
-    cost_category: tfCostCategoryRuleRuleNotCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfCostCategoryRuleRuleNotDimensionPropertyToTerraform(struct!.dimension),
-    not: tfCostCategoryRuleRuleNotNotPropertyToTerraform(struct!.not),
-    or: cdktn.listMapper(tfCostCategoryRuleRuleNotOrPropertyToTerraform, true)(struct!.or),
-    tags: tfCostCategoryRuleRuleNotTagsPropertyToTerraform(struct!.tags),
+    and: cdktn.listMapper(awsCostCategoryRuleRuleNotAndPropertyToTerraform, true)(struct!.and),
+    cost_category: awsCostCategoryRuleRuleNotCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: awsCostCategoryRuleRuleNotDimensionPropertyToTerraform(struct!.dimension),
+    not: awsCostCategoryRuleRuleNotNotPropertyToTerraform(struct!.not),
+    or: cdktn.listMapper(awsCostCategoryRuleRuleNotOrPropertyToTerraform, true)(struct!.or),
+    tags: awsCostCategoryRuleRuleNotTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfCostCategoryRuleRuleNotPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleNotPropertyOutputReference | TfCostCategory.RuleRuleNotProperty): any {
+export function awsCostCategoryRuleRuleNotPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleNotPropertyOutputReference | AwsCostCategory.RuleRuleNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     and: {
-      value: cdktn.listMapperHcl(tfCostCategoryRuleRuleNotAndPropertyToHclTerraform, true)(struct!.and),
+      value: cdktn.listMapperHcl(awsCostCategoryRuleRuleNotAndPropertyToHclTerraform, true)(struct!.and),
       isBlock: true,
       type: "set",
       storageClassType: "RuleRuleNotAndPropertyList",
     },
     cost_category: {
-      value: tfCostCategoryRuleRuleNotCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: awsCostCategoryRuleRuleNotCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleNotCostCategoryPropertyList",
     },
     dimension: {
-      value: tfCostCategoryRuleRuleNotDimensionPropertyToHclTerraform(struct!.dimension),
+      value: awsCostCategoryRuleRuleNotDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleNotDimensionPropertyList",
     },
     not: {
-      value: tfCostCategoryRuleRuleNotNotPropertyToHclTerraform(struct!.not),
+      value: awsCostCategoryRuleRuleNotNotPropertyToHclTerraform(struct!.not),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleNotNotPropertyList",
     },
     or: {
-      value: cdktn.listMapperHcl(tfCostCategoryRuleRuleNotOrPropertyToHclTerraform, true)(struct!.or),
+      value: cdktn.listMapperHcl(awsCostCategoryRuleRuleNotOrPropertyToHclTerraform, true)(struct!.or),
       isBlock: true,
       type: "set",
       storageClassType: "RuleRuleNotOrPropertyList",
     },
     tags: {
-      value: tfCostCategoryRuleRuleNotTagsPropertyToHclTerraform(struct!.tags),
+      value: awsCostCategoryRuleRuleNotTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleNotTagsPropertyList",
@@ -1918,7 +1918,7 @@ export function tfCostCategoryRuleRuleNotPropertyToHclTerraform(struct?: TfCostC
 }
 
 
-export function tfCostCategoryRuleRuleOrAndCostCategoryPropertyToTerraform(struct?: TfCostCategory.RuleRuleOrAndCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleOrAndCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleOrAndCostCategoryPropertyToTerraform(struct?: AwsCostCategory.RuleRuleOrAndCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleOrAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1931,7 +1931,7 @@ export function tfCostCategoryRuleRuleOrAndCostCategoryPropertyToTerraform(struc
 }
 
 
-export function tfCostCategoryRuleRuleOrAndCostCategoryPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleOrAndCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleOrAndCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleOrAndCostCategoryPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleOrAndCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleOrAndCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1962,7 +1962,7 @@ export function tfCostCategoryRuleRuleOrAndCostCategoryPropertyToHclTerraform(st
 }
 
 
-export function tfCostCategoryRuleRuleOrAndDimensionPropertyToTerraform(struct?: TfCostCategory.RuleRuleOrAndDimensionPropertyOutputReference | TfCostCategory.RuleRuleOrAndDimensionProperty): any {
+export function awsCostCategoryRuleRuleOrAndDimensionPropertyToTerraform(struct?: AwsCostCategory.RuleRuleOrAndDimensionPropertyOutputReference | AwsCostCategory.RuleRuleOrAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1975,7 +1975,7 @@ export function tfCostCategoryRuleRuleOrAndDimensionPropertyToTerraform(struct?:
 }
 
 
-export function tfCostCategoryRuleRuleOrAndDimensionPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleOrAndDimensionPropertyOutputReference | TfCostCategory.RuleRuleOrAndDimensionProperty): any {
+export function awsCostCategoryRuleRuleOrAndDimensionPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleOrAndDimensionPropertyOutputReference | AwsCostCategory.RuleRuleOrAndDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2006,7 +2006,7 @@ export function tfCostCategoryRuleRuleOrAndDimensionPropertyToHclTerraform(struc
 }
 
 
-export function tfCostCategoryRuleRuleOrAndTagsPropertyToTerraform(struct?: TfCostCategory.RuleRuleOrAndTagsPropertyOutputReference | TfCostCategory.RuleRuleOrAndTagsProperty): any {
+export function awsCostCategoryRuleRuleOrAndTagsPropertyToTerraform(struct?: AwsCostCategory.RuleRuleOrAndTagsPropertyOutputReference | AwsCostCategory.RuleRuleOrAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2019,7 +2019,7 @@ export function tfCostCategoryRuleRuleOrAndTagsPropertyToTerraform(struct?: TfCo
 }
 
 
-export function tfCostCategoryRuleRuleOrAndTagsPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleOrAndTagsPropertyOutputReference | TfCostCategory.RuleRuleOrAndTagsProperty): any {
+export function awsCostCategoryRuleRuleOrAndTagsPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleOrAndTagsPropertyOutputReference | AwsCostCategory.RuleRuleOrAndTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2050,39 +2050,39 @@ export function tfCostCategoryRuleRuleOrAndTagsPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfCostCategoryRuleRuleOrAndPropertyToTerraform(struct?: TfCostCategory.RuleRuleOrAndProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRuleRuleOrAndPropertyToTerraform(struct?: AwsCostCategory.RuleRuleOrAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_category: tfCostCategoryRuleRuleOrAndCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfCostCategoryRuleRuleOrAndDimensionPropertyToTerraform(struct!.dimension),
-    tags: tfCostCategoryRuleRuleOrAndTagsPropertyToTerraform(struct!.tags),
+    cost_category: awsCostCategoryRuleRuleOrAndCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: awsCostCategoryRuleRuleOrAndDimensionPropertyToTerraform(struct!.dimension),
+    tags: awsCostCategoryRuleRuleOrAndTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfCostCategoryRuleRuleOrAndPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleOrAndProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRuleRuleOrAndPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleOrAndProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_category: {
-      value: tfCostCategoryRuleRuleOrAndCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: awsCostCategoryRuleRuleOrAndCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleOrAndCostCategoryPropertyList",
     },
     dimension: {
-      value: tfCostCategoryRuleRuleOrAndDimensionPropertyToHclTerraform(struct!.dimension),
+      value: awsCostCategoryRuleRuleOrAndDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleOrAndDimensionPropertyList",
     },
     tags: {
-      value: tfCostCategoryRuleRuleOrAndTagsPropertyToHclTerraform(struct!.tags),
+      value: awsCostCategoryRuleRuleOrAndTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleOrAndTagsPropertyList",
@@ -2094,7 +2094,7 @@ export function tfCostCategoryRuleRuleOrAndPropertyToHclTerraform(struct?: TfCos
 }
 
 
-export function tfCostCategoryRuleRuleOrCostCategoryPropertyToTerraform(struct?: TfCostCategory.RuleRuleOrCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleOrCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleOrCostCategoryPropertyToTerraform(struct?: AwsCostCategory.RuleRuleOrCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2107,7 +2107,7 @@ export function tfCostCategoryRuleRuleOrCostCategoryPropertyToTerraform(struct?:
 }
 
 
-export function tfCostCategoryRuleRuleOrCostCategoryPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleOrCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleOrCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleOrCostCategoryPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleOrCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2138,7 +2138,7 @@ export function tfCostCategoryRuleRuleOrCostCategoryPropertyToHclTerraform(struc
 }
 
 
-export function tfCostCategoryRuleRuleOrDimensionPropertyToTerraform(struct?: TfCostCategory.RuleRuleOrDimensionPropertyOutputReference | TfCostCategory.RuleRuleOrDimensionProperty): any {
+export function awsCostCategoryRuleRuleOrDimensionPropertyToTerraform(struct?: AwsCostCategory.RuleRuleOrDimensionPropertyOutputReference | AwsCostCategory.RuleRuleOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2151,7 +2151,7 @@ export function tfCostCategoryRuleRuleOrDimensionPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfCostCategoryRuleRuleOrDimensionPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleOrDimensionPropertyOutputReference | TfCostCategory.RuleRuleOrDimensionProperty): any {
+export function awsCostCategoryRuleRuleOrDimensionPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleOrDimensionPropertyOutputReference | AwsCostCategory.RuleRuleOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2182,7 +2182,7 @@ export function tfCostCategoryRuleRuleOrDimensionPropertyToHclTerraform(struct?:
 }
 
 
-export function tfCostCategoryRuleRuleOrNotCostCategoryPropertyToTerraform(struct?: TfCostCategory.RuleRuleOrNotCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleOrNotCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleOrNotCostCategoryPropertyToTerraform(struct?: AwsCostCategory.RuleRuleOrNotCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleOrNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2195,7 +2195,7 @@ export function tfCostCategoryRuleRuleOrNotCostCategoryPropertyToTerraform(struc
 }
 
 
-export function tfCostCategoryRuleRuleOrNotCostCategoryPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleOrNotCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleOrNotCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleOrNotCostCategoryPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleOrNotCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleOrNotCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2226,7 +2226,7 @@ export function tfCostCategoryRuleRuleOrNotCostCategoryPropertyToHclTerraform(st
 }
 
 
-export function tfCostCategoryRuleRuleOrNotDimensionPropertyToTerraform(struct?: TfCostCategory.RuleRuleOrNotDimensionPropertyOutputReference | TfCostCategory.RuleRuleOrNotDimensionProperty): any {
+export function awsCostCategoryRuleRuleOrNotDimensionPropertyToTerraform(struct?: AwsCostCategory.RuleRuleOrNotDimensionPropertyOutputReference | AwsCostCategory.RuleRuleOrNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2239,7 +2239,7 @@ export function tfCostCategoryRuleRuleOrNotDimensionPropertyToTerraform(struct?:
 }
 
 
-export function tfCostCategoryRuleRuleOrNotDimensionPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleOrNotDimensionPropertyOutputReference | TfCostCategory.RuleRuleOrNotDimensionProperty): any {
+export function awsCostCategoryRuleRuleOrNotDimensionPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleOrNotDimensionPropertyOutputReference | AwsCostCategory.RuleRuleOrNotDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2270,7 +2270,7 @@ export function tfCostCategoryRuleRuleOrNotDimensionPropertyToHclTerraform(struc
 }
 
 
-export function tfCostCategoryRuleRuleOrNotTagsPropertyToTerraform(struct?: TfCostCategory.RuleRuleOrNotTagsPropertyOutputReference | TfCostCategory.RuleRuleOrNotTagsProperty): any {
+export function awsCostCategoryRuleRuleOrNotTagsPropertyToTerraform(struct?: AwsCostCategory.RuleRuleOrNotTagsPropertyOutputReference | AwsCostCategory.RuleRuleOrNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2283,7 +2283,7 @@ export function tfCostCategoryRuleRuleOrNotTagsPropertyToTerraform(struct?: TfCo
 }
 
 
-export function tfCostCategoryRuleRuleOrNotTagsPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleOrNotTagsPropertyOutputReference | TfCostCategory.RuleRuleOrNotTagsProperty): any {
+export function awsCostCategoryRuleRuleOrNotTagsPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleOrNotTagsPropertyOutputReference | AwsCostCategory.RuleRuleOrNotTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2314,39 +2314,39 @@ export function tfCostCategoryRuleRuleOrNotTagsPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfCostCategoryRuleRuleOrNotPropertyToTerraform(struct?: TfCostCategory.RuleRuleOrNotPropertyOutputReference | TfCostCategory.RuleRuleOrNotProperty): any {
+export function awsCostCategoryRuleRuleOrNotPropertyToTerraform(struct?: AwsCostCategory.RuleRuleOrNotPropertyOutputReference | AwsCostCategory.RuleRuleOrNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_category: tfCostCategoryRuleRuleOrNotCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfCostCategoryRuleRuleOrNotDimensionPropertyToTerraform(struct!.dimension),
-    tags: tfCostCategoryRuleRuleOrNotTagsPropertyToTerraform(struct!.tags),
+    cost_category: awsCostCategoryRuleRuleOrNotCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: awsCostCategoryRuleRuleOrNotDimensionPropertyToTerraform(struct!.dimension),
+    tags: awsCostCategoryRuleRuleOrNotTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfCostCategoryRuleRuleOrNotPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleOrNotPropertyOutputReference | TfCostCategory.RuleRuleOrNotProperty): any {
+export function awsCostCategoryRuleRuleOrNotPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleOrNotPropertyOutputReference | AwsCostCategory.RuleRuleOrNotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_category: {
-      value: tfCostCategoryRuleRuleOrNotCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: awsCostCategoryRuleRuleOrNotCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleOrNotCostCategoryPropertyList",
     },
     dimension: {
-      value: tfCostCategoryRuleRuleOrNotDimensionPropertyToHclTerraform(struct!.dimension),
+      value: awsCostCategoryRuleRuleOrNotDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleOrNotDimensionPropertyList",
     },
     tags: {
-      value: tfCostCategoryRuleRuleOrNotTagsPropertyToHclTerraform(struct!.tags),
+      value: awsCostCategoryRuleRuleOrNotTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleOrNotTagsPropertyList",
@@ -2358,7 +2358,7 @@ export function tfCostCategoryRuleRuleOrNotPropertyToHclTerraform(struct?: TfCos
 }
 
 
-export function tfCostCategoryRuleRuleOrOrCostCategoryPropertyToTerraform(struct?: TfCostCategory.RuleRuleOrOrCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleOrOrCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleOrOrCostCategoryPropertyToTerraform(struct?: AwsCostCategory.RuleRuleOrOrCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleOrOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2371,7 +2371,7 @@ export function tfCostCategoryRuleRuleOrOrCostCategoryPropertyToTerraform(struct
 }
 
 
-export function tfCostCategoryRuleRuleOrOrCostCategoryPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleOrOrCostCategoryPropertyOutputReference | TfCostCategory.RuleRuleOrOrCostCategoryProperty): any {
+export function awsCostCategoryRuleRuleOrOrCostCategoryPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleOrOrCostCategoryPropertyOutputReference | AwsCostCategory.RuleRuleOrOrCostCategoryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2402,7 +2402,7 @@ export function tfCostCategoryRuleRuleOrOrCostCategoryPropertyToHclTerraform(str
 }
 
 
-export function tfCostCategoryRuleRuleOrOrDimensionPropertyToTerraform(struct?: TfCostCategory.RuleRuleOrOrDimensionPropertyOutputReference | TfCostCategory.RuleRuleOrOrDimensionProperty): any {
+export function awsCostCategoryRuleRuleOrOrDimensionPropertyToTerraform(struct?: AwsCostCategory.RuleRuleOrOrDimensionPropertyOutputReference | AwsCostCategory.RuleRuleOrOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2415,7 +2415,7 @@ export function tfCostCategoryRuleRuleOrOrDimensionPropertyToTerraform(struct?: 
 }
 
 
-export function tfCostCategoryRuleRuleOrOrDimensionPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleOrOrDimensionPropertyOutputReference | TfCostCategory.RuleRuleOrOrDimensionProperty): any {
+export function awsCostCategoryRuleRuleOrOrDimensionPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleOrOrDimensionPropertyOutputReference | AwsCostCategory.RuleRuleOrOrDimensionProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2446,7 +2446,7 @@ export function tfCostCategoryRuleRuleOrOrDimensionPropertyToHclTerraform(struct
 }
 
 
-export function tfCostCategoryRuleRuleOrOrTagsPropertyToTerraform(struct?: TfCostCategory.RuleRuleOrOrTagsPropertyOutputReference | TfCostCategory.RuleRuleOrOrTagsProperty): any {
+export function awsCostCategoryRuleRuleOrOrTagsPropertyToTerraform(struct?: AwsCostCategory.RuleRuleOrOrTagsPropertyOutputReference | AwsCostCategory.RuleRuleOrOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2459,7 +2459,7 @@ export function tfCostCategoryRuleRuleOrOrTagsPropertyToTerraform(struct?: TfCos
 }
 
 
-export function tfCostCategoryRuleRuleOrOrTagsPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleOrOrTagsPropertyOutputReference | TfCostCategory.RuleRuleOrOrTagsProperty): any {
+export function awsCostCategoryRuleRuleOrOrTagsPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleOrOrTagsPropertyOutputReference | AwsCostCategory.RuleRuleOrOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2490,39 +2490,39 @@ export function tfCostCategoryRuleRuleOrOrTagsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfCostCategoryRuleRuleOrOrPropertyToTerraform(struct?: TfCostCategory.RuleRuleOrOrProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRuleRuleOrOrPropertyToTerraform(struct?: AwsCostCategory.RuleRuleOrOrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cost_category: tfCostCategoryRuleRuleOrOrCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfCostCategoryRuleRuleOrOrDimensionPropertyToTerraform(struct!.dimension),
-    tags: tfCostCategoryRuleRuleOrOrTagsPropertyToTerraform(struct!.tags),
+    cost_category: awsCostCategoryRuleRuleOrOrCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: awsCostCategoryRuleRuleOrOrDimensionPropertyToTerraform(struct!.dimension),
+    tags: awsCostCategoryRuleRuleOrOrTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfCostCategoryRuleRuleOrOrPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleOrOrProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRuleRuleOrOrPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleOrOrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cost_category: {
-      value: tfCostCategoryRuleRuleOrOrCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: awsCostCategoryRuleRuleOrOrCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleOrOrCostCategoryPropertyList",
     },
     dimension: {
-      value: tfCostCategoryRuleRuleOrOrDimensionPropertyToHclTerraform(struct!.dimension),
+      value: awsCostCategoryRuleRuleOrOrDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleOrOrDimensionPropertyList",
     },
     tags: {
-      value: tfCostCategoryRuleRuleOrOrTagsPropertyToHclTerraform(struct!.tags),
+      value: awsCostCategoryRuleRuleOrOrTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleOrOrTagsPropertyList",
@@ -2534,7 +2534,7 @@ export function tfCostCategoryRuleRuleOrOrPropertyToHclTerraform(struct?: TfCost
 }
 
 
-export function tfCostCategoryRuleRuleOrTagsPropertyToTerraform(struct?: TfCostCategory.RuleRuleOrTagsPropertyOutputReference | TfCostCategory.RuleRuleOrTagsProperty): any {
+export function awsCostCategoryRuleRuleOrTagsPropertyToTerraform(struct?: AwsCostCategory.RuleRuleOrTagsPropertyOutputReference | AwsCostCategory.RuleRuleOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2547,7 +2547,7 @@ export function tfCostCategoryRuleRuleOrTagsPropertyToTerraform(struct?: TfCostC
 }
 
 
-export function tfCostCategoryRuleRuleOrTagsPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleOrTagsPropertyOutputReference | TfCostCategory.RuleRuleOrTagsProperty): any {
+export function awsCostCategoryRuleRuleOrTagsPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleOrTagsPropertyOutputReference | AwsCostCategory.RuleRuleOrTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2578,60 +2578,60 @@ export function tfCostCategoryRuleRuleOrTagsPropertyToHclTerraform(struct?: TfCo
 }
 
 
-export function tfCostCategoryRuleRuleOrPropertyToTerraform(struct?: TfCostCategory.RuleRuleOrProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRuleRuleOrPropertyToTerraform(struct?: AwsCostCategory.RuleRuleOrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    and: cdktn.listMapper(tfCostCategoryRuleRuleOrAndPropertyToTerraform, true)(struct!.and),
-    cost_category: tfCostCategoryRuleRuleOrCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfCostCategoryRuleRuleOrDimensionPropertyToTerraform(struct!.dimension),
-    not: tfCostCategoryRuleRuleOrNotPropertyToTerraform(struct!.not),
-    or: cdktn.listMapper(tfCostCategoryRuleRuleOrOrPropertyToTerraform, true)(struct!.or),
-    tags: tfCostCategoryRuleRuleOrTagsPropertyToTerraform(struct!.tags),
+    and: cdktn.listMapper(awsCostCategoryRuleRuleOrAndPropertyToTerraform, true)(struct!.and),
+    cost_category: awsCostCategoryRuleRuleOrCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: awsCostCategoryRuleRuleOrDimensionPropertyToTerraform(struct!.dimension),
+    not: awsCostCategoryRuleRuleOrNotPropertyToTerraform(struct!.not),
+    or: cdktn.listMapper(awsCostCategoryRuleRuleOrOrPropertyToTerraform, true)(struct!.or),
+    tags: awsCostCategoryRuleRuleOrTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfCostCategoryRuleRuleOrPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleOrProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRuleRuleOrPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleOrProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     and: {
-      value: cdktn.listMapperHcl(tfCostCategoryRuleRuleOrAndPropertyToHclTerraform, true)(struct!.and),
+      value: cdktn.listMapperHcl(awsCostCategoryRuleRuleOrAndPropertyToHclTerraform, true)(struct!.and),
       isBlock: true,
       type: "set",
       storageClassType: "RuleRuleOrAndPropertyList",
     },
     cost_category: {
-      value: tfCostCategoryRuleRuleOrCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: awsCostCategoryRuleRuleOrCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleOrCostCategoryPropertyList",
     },
     dimension: {
-      value: tfCostCategoryRuleRuleOrDimensionPropertyToHclTerraform(struct!.dimension),
+      value: awsCostCategoryRuleRuleOrDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleOrDimensionPropertyList",
     },
     not: {
-      value: tfCostCategoryRuleRuleOrNotPropertyToHclTerraform(struct!.not),
+      value: awsCostCategoryRuleRuleOrNotPropertyToHclTerraform(struct!.not),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleOrNotPropertyList",
     },
     or: {
-      value: cdktn.listMapperHcl(tfCostCategoryRuleRuleOrOrPropertyToHclTerraform, true)(struct!.or),
+      value: cdktn.listMapperHcl(awsCostCategoryRuleRuleOrOrPropertyToHclTerraform, true)(struct!.or),
       isBlock: true,
       type: "set",
       storageClassType: "RuleRuleOrOrPropertyList",
     },
     tags: {
-      value: tfCostCategoryRuleRuleOrTagsPropertyToHclTerraform(struct!.tags),
+      value: awsCostCategoryRuleRuleOrTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleOrTagsPropertyList",
@@ -2643,7 +2643,7 @@ export function tfCostCategoryRuleRuleOrPropertyToHclTerraform(struct?: TfCostCa
 }
 
 
-export function tfCostCategoryRuleRuleTagsPropertyToTerraform(struct?: TfCostCategory.RuleRuleTagsPropertyOutputReference | TfCostCategory.RuleRuleTagsProperty): any {
+export function awsCostCategoryRuleRuleTagsPropertyToTerraform(struct?: AwsCostCategory.RuleRuleTagsPropertyOutputReference | AwsCostCategory.RuleRuleTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2656,7 +2656,7 @@ export function tfCostCategoryRuleRuleTagsPropertyToTerraform(struct?: TfCostCat
 }
 
 
-export function tfCostCategoryRuleRuleTagsPropertyToHclTerraform(struct?: TfCostCategory.RuleRuleTagsPropertyOutputReference | TfCostCategory.RuleRuleTagsProperty): any {
+export function awsCostCategoryRuleRuleTagsPropertyToHclTerraform(struct?: AwsCostCategory.RuleRuleTagsPropertyOutputReference | AwsCostCategory.RuleRuleTagsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2687,60 +2687,60 @@ export function tfCostCategoryRuleRuleTagsPropertyToHclTerraform(struct?: TfCost
 }
 
 
-export function tfCostCategoryRuleRulePropertyToTerraform(struct?: TfCostCategory.RuleRulePropertyOutputReference | TfCostCategory.RuleRuleProperty): any {
+export function awsCostCategoryRuleRulePropertyToTerraform(struct?: AwsCostCategory.RuleRulePropertyOutputReference | AwsCostCategory.RuleRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    and: cdktn.listMapper(tfCostCategoryRuleRuleAndPropertyToTerraform, true)(struct!.and),
-    cost_category: tfCostCategoryRuleRuleCostCategoryPropertyToTerraform(struct!.costCategory),
-    dimension: tfCostCategoryRuleRuleDimensionPropertyToTerraform(struct!.dimension),
-    not: tfCostCategoryRuleRuleNotPropertyToTerraform(struct!.not),
-    or: cdktn.listMapper(tfCostCategoryRuleRuleOrPropertyToTerraform, true)(struct!.or),
-    tags: tfCostCategoryRuleRuleTagsPropertyToTerraform(struct!.tags),
+    and: cdktn.listMapper(awsCostCategoryRuleRuleAndPropertyToTerraform, true)(struct!.and),
+    cost_category: awsCostCategoryRuleRuleCostCategoryPropertyToTerraform(struct!.costCategory),
+    dimension: awsCostCategoryRuleRuleDimensionPropertyToTerraform(struct!.dimension),
+    not: awsCostCategoryRuleRuleNotPropertyToTerraform(struct!.not),
+    or: cdktn.listMapper(awsCostCategoryRuleRuleOrPropertyToTerraform, true)(struct!.or),
+    tags: awsCostCategoryRuleRuleTagsPropertyToTerraform(struct!.tags),
   }
 }
 
 
-export function tfCostCategoryRuleRulePropertyToHclTerraform(struct?: TfCostCategory.RuleRulePropertyOutputReference | TfCostCategory.RuleRuleProperty): any {
+export function awsCostCategoryRuleRulePropertyToHclTerraform(struct?: AwsCostCategory.RuleRulePropertyOutputReference | AwsCostCategory.RuleRuleProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     and: {
-      value: cdktn.listMapperHcl(tfCostCategoryRuleRuleAndPropertyToHclTerraform, true)(struct!.and),
+      value: cdktn.listMapperHcl(awsCostCategoryRuleRuleAndPropertyToHclTerraform, true)(struct!.and),
       isBlock: true,
       type: "set",
       storageClassType: "RuleRuleAndPropertyList",
     },
     cost_category: {
-      value: tfCostCategoryRuleRuleCostCategoryPropertyToHclTerraform(struct!.costCategory),
+      value: awsCostCategoryRuleRuleCostCategoryPropertyToHclTerraform(struct!.costCategory),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleCostCategoryPropertyList",
     },
     dimension: {
-      value: tfCostCategoryRuleRuleDimensionPropertyToHclTerraform(struct!.dimension),
+      value: awsCostCategoryRuleRuleDimensionPropertyToHclTerraform(struct!.dimension),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleDimensionPropertyList",
     },
     not: {
-      value: tfCostCategoryRuleRuleNotPropertyToHclTerraform(struct!.not),
+      value: awsCostCategoryRuleRuleNotPropertyToHclTerraform(struct!.not),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleNotPropertyList",
     },
     or: {
-      value: cdktn.listMapperHcl(tfCostCategoryRuleRuleOrPropertyToHclTerraform, true)(struct!.or),
+      value: cdktn.listMapperHcl(awsCostCategoryRuleRuleOrPropertyToHclTerraform, true)(struct!.or),
       isBlock: true,
       type: "set",
       storageClassType: "RuleRuleOrPropertyList",
     },
     tags: {
-      value: tfCostCategoryRuleRuleTagsPropertyToHclTerraform(struct!.tags),
+      value: awsCostCategoryRuleRuleTagsPropertyToHclTerraform(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRuleTagsPropertyList",
@@ -2752,7 +2752,7 @@ export function tfCostCategoryRuleRulePropertyToHclTerraform(struct?: TfCostCate
 }
 
 
-export function tfCostCategoryRulePropertyToTerraform(struct?: TfCostCategory.RuleProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRulePropertyToTerraform(struct?: AwsCostCategory.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2760,13 +2760,13 @@ export function tfCostCategoryRulePropertyToTerraform(struct?: TfCostCategory.Ru
   return {
     type: cdktn.stringToTerraform(struct!.type),
     value: cdktn.stringToTerraform(struct!.value),
-    inherited_value: tfCostCategoryInheritedValuePropertyToTerraform(struct!.inheritedValue),
-    rule: tfCostCategoryRuleRulePropertyToTerraform(struct!.rule),
+    inherited_value: awsCostCategoryInheritedValuePropertyToTerraform(struct!.inheritedValue),
+    rule: awsCostCategoryRuleRulePropertyToTerraform(struct!.rule),
   }
 }
 
 
-export function tfCostCategoryRulePropertyToHclTerraform(struct?: TfCostCategory.RuleProperty | cdktn.IResolvable): any {
+export function awsCostCategoryRulePropertyToHclTerraform(struct?: AwsCostCategory.RuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2785,13 +2785,13 @@ export function tfCostCategoryRulePropertyToHclTerraform(struct?: TfCostCategory
       storageClassType: "string",
     },
     inherited_value: {
-      value: tfCostCategoryInheritedValuePropertyToHclTerraform(struct!.inheritedValue),
+      value: awsCostCategoryInheritedValuePropertyToHclTerraform(struct!.inheritedValue),
       isBlock: true,
       type: "list",
       storageClassType: "InheritedValuePropertyList",
     },
     rule: {
-      value: tfCostCategoryRuleRulePropertyToHclTerraform(struct!.rule),
+      value: awsCostCategoryRuleRulePropertyToHclTerraform(struct!.rule),
       isBlock: true,
       type: "list",
       storageClassType: "RuleRulePropertyList",
@@ -2803,7 +2803,7 @@ export function tfCostCategoryRulePropertyToHclTerraform(struct?: TfCostCategory
 }
 
 
-export function tfCostCategoryParameterPropertyToTerraform(struct?: TfCostCategory.ParameterProperty | cdktn.IResolvable): any {
+export function awsCostCategoryParameterPropertyToTerraform(struct?: AwsCostCategory.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2815,7 +2815,7 @@ export function tfCostCategoryParameterPropertyToTerraform(struct?: TfCostCatego
 }
 
 
-export function tfCostCategoryParameterPropertyToHclTerraform(struct?: TfCostCategory.ParameterProperty | cdktn.IResolvable): any {
+export function awsCostCategoryParameterPropertyToHclTerraform(struct?: AwsCostCategory.ParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2840,7 +2840,7 @@ export function tfCostCategoryParameterPropertyToHclTerraform(struct?: TfCostCat
 }
 
 
-export function tfCostCategorySplitChargeRulePropertyToTerraform(struct?: TfCostCategory.SplitChargeRuleProperty | cdktn.IResolvable): any {
+export function awsCostCategorySplitChargeRulePropertyToTerraform(struct?: AwsCostCategory.SplitChargeRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2849,12 +2849,12 @@ export function tfCostCategorySplitChargeRulePropertyToTerraform(struct?: TfCost
     method: cdktn.stringToTerraform(struct!.method),
     source: cdktn.stringToTerraform(struct!.source),
     targets: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.targets),
-    parameter: cdktn.listMapper(tfCostCategoryParameterPropertyToTerraform, true)(struct!.parameter),
+    parameter: cdktn.listMapper(awsCostCategoryParameterPropertyToTerraform, true)(struct!.parameter),
   }
 }
 
 
-export function tfCostCategorySplitChargeRulePropertyToHclTerraform(struct?: TfCostCategory.SplitChargeRuleProperty | cdktn.IResolvable): any {
+export function awsCostCategorySplitChargeRulePropertyToHclTerraform(struct?: AwsCostCategory.SplitChargeRuleProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2879,7 +2879,7 @@ export function tfCostCategorySplitChargeRulePropertyToHclTerraform(struct?: TfC
       storageClassType: "stringList",
     },
     parameter: {
-      value: cdktn.listMapperHcl(tfCostCategoryParameterPropertyToHclTerraform, true)(struct!.parameter),
+      value: cdktn.listMapperHcl(awsCostCategoryParameterPropertyToHclTerraform, true)(struct!.parameter),
       isBlock: true,
       type: "set",
       storageClassType: "ParameterPropertyList",
@@ -2891,14 +2891,14 @@ export function tfCostCategorySplitChargeRulePropertyToHclTerraform(struct?: TfC
 }
 
 
-export namespace TfCostCategory {
+export namespace AwsCostCategory {
 export interface InheritedValueProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension_key TfCostCategory#dimension_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension_key AwsCostCategory#dimension_key}
   */
   readonly dimensionKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension_name TfCostCategory#dimension_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension_name AwsCostCategory#dimension_name}
   */
   readonly dimensionName?: string;
 }
@@ -2974,15 +2974,15 @@ export class InheritedValuePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RuleRuleAndAndCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -3080,15 +3080,15 @@ export class RuleRuleAndAndCostCategoryPropertyOutputReference extends cdktn.Com
 }
 export interface RuleRuleAndAndDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -3186,15 +3186,15 @@ export class RuleRuleAndAndDimensionPropertyOutputReference extends cdktn.Comple
 }
 export interface RuleRuleAndAndTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -3294,19 +3294,19 @@ export interface RuleRuleAndAndProperty {
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category TfCostCategory#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category AwsCostCategory#cost_category}
   */
   readonly costCategory?: RuleRuleAndAndCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension TfCostCategory#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension AwsCostCategory#dimension}
   */
   readonly dimension?: RuleRuleAndAndDimensionProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags TfCostCategory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags AwsCostCategory#tags}
   */
   readonly tags?: RuleRuleAndAndTagsProperty;
 }
@@ -3436,15 +3436,15 @@ export class RuleRuleAndAndPropertyList extends cdktn.ComplexList {
 }
 export interface RuleRuleAndCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -3542,15 +3542,15 @@ export class RuleRuleAndCostCategoryPropertyOutputReference extends cdktn.Comple
 }
 export interface RuleRuleAndDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -3648,15 +3648,15 @@ export class RuleRuleAndDimensionPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface RuleRuleAndNotCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -3754,15 +3754,15 @@ export class RuleRuleAndNotCostCategoryPropertyOutputReference extends cdktn.Com
 }
 export interface RuleRuleAndNotDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -3860,15 +3860,15 @@ export class RuleRuleAndNotDimensionPropertyOutputReference extends cdktn.Comple
 }
 export interface RuleRuleAndNotTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -3968,19 +3968,19 @@ export interface RuleRuleAndNotProperty {
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category TfCostCategory#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category AwsCostCategory#cost_category}
   */
   readonly costCategory?: RuleRuleAndNotCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension TfCostCategory#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension AwsCostCategory#dimension}
   */
   readonly dimension?: RuleRuleAndNotDimensionProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags TfCostCategory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags AwsCostCategory#tags}
   */
   readonly tags?: RuleRuleAndNotTagsProperty;
 }
@@ -4078,15 +4078,15 @@ export class RuleRuleAndNotPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RuleRuleAndOrCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -4184,15 +4184,15 @@ export class RuleRuleAndOrCostCategoryPropertyOutputReference extends cdktn.Comp
 }
 export interface RuleRuleAndOrDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -4290,15 +4290,15 @@ export class RuleRuleAndOrDimensionPropertyOutputReference extends cdktn.Complex
 }
 export interface RuleRuleAndOrTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -4398,19 +4398,19 @@ export interface RuleRuleAndOrProperty {
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category TfCostCategory#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category AwsCostCategory#cost_category}
   */
   readonly costCategory?: RuleRuleAndOrCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension TfCostCategory#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension AwsCostCategory#dimension}
   */
   readonly dimension?: RuleRuleAndOrDimensionProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags TfCostCategory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags AwsCostCategory#tags}
   */
   readonly tags?: RuleRuleAndOrTagsProperty;
 }
@@ -4540,15 +4540,15 @@ export class RuleRuleAndOrPropertyList extends cdktn.ComplexList {
 }
 export interface RuleRuleAndTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -4648,37 +4648,37 @@ export interface RuleRuleAndProperty {
   /**
   * and block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#and TfCostCategory#and}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#and AwsCostCategory#and}
   */
   readonly and?: RuleRuleAndAndProperty[] | cdktn.IResolvable;
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category TfCostCategory#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category AwsCostCategory#cost_category}
   */
   readonly costCategory?: RuleRuleAndCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension TfCostCategory#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension AwsCostCategory#dimension}
   */
   readonly dimension?: RuleRuleAndDimensionProperty;
   /**
   * not block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#not TfCostCategory#not}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#not AwsCostCategory#not}
   */
   readonly not?: RuleRuleAndNotProperty;
   /**
   * or block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#or TfCostCategory#or}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#or AwsCostCategory#or}
   */
   readonly or?: RuleRuleAndOrProperty[] | cdktn.IResolvable;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags TfCostCategory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags AwsCostCategory#tags}
   */
   readonly tags?: RuleRuleAndTagsProperty;
 }
@@ -4874,15 +4874,15 @@ export class RuleRuleAndPropertyList extends cdktn.ComplexList {
 }
 export interface RuleRuleCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -4980,15 +4980,15 @@ export class RuleRuleCostCategoryPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface RuleRuleDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -5086,15 +5086,15 @@ export class RuleRuleDimensionPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface RuleRuleNotAndCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -5192,15 +5192,15 @@ export class RuleRuleNotAndCostCategoryPropertyOutputReference extends cdktn.Com
 }
 export interface RuleRuleNotAndDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -5298,15 +5298,15 @@ export class RuleRuleNotAndDimensionPropertyOutputReference extends cdktn.Comple
 }
 export interface RuleRuleNotAndTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -5406,19 +5406,19 @@ export interface RuleRuleNotAndProperty {
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category TfCostCategory#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category AwsCostCategory#cost_category}
   */
   readonly costCategory?: RuleRuleNotAndCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension TfCostCategory#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension AwsCostCategory#dimension}
   */
   readonly dimension?: RuleRuleNotAndDimensionProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags TfCostCategory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags AwsCostCategory#tags}
   */
   readonly tags?: RuleRuleNotAndTagsProperty;
 }
@@ -5548,15 +5548,15 @@ export class RuleRuleNotAndPropertyList extends cdktn.ComplexList {
 }
 export interface RuleRuleNotCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -5654,15 +5654,15 @@ export class RuleRuleNotCostCategoryPropertyOutputReference extends cdktn.Comple
 }
 export interface RuleRuleNotDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -5760,15 +5760,15 @@ export class RuleRuleNotDimensionPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface RuleRuleNotNotCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -5866,15 +5866,15 @@ export class RuleRuleNotNotCostCategoryPropertyOutputReference extends cdktn.Com
 }
 export interface RuleRuleNotNotDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -5972,15 +5972,15 @@ export class RuleRuleNotNotDimensionPropertyOutputReference extends cdktn.Comple
 }
 export interface RuleRuleNotNotTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -6080,19 +6080,19 @@ export interface RuleRuleNotNotProperty {
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category TfCostCategory#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category AwsCostCategory#cost_category}
   */
   readonly costCategory?: RuleRuleNotNotCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension TfCostCategory#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension AwsCostCategory#dimension}
   */
   readonly dimension?: RuleRuleNotNotDimensionProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags TfCostCategory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags AwsCostCategory#tags}
   */
   readonly tags?: RuleRuleNotNotTagsProperty;
 }
@@ -6190,15 +6190,15 @@ export class RuleRuleNotNotPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RuleRuleNotOrCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -6296,15 +6296,15 @@ export class RuleRuleNotOrCostCategoryPropertyOutputReference extends cdktn.Comp
 }
 export interface RuleRuleNotOrDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -6402,15 +6402,15 @@ export class RuleRuleNotOrDimensionPropertyOutputReference extends cdktn.Complex
 }
 export interface RuleRuleNotOrTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -6510,19 +6510,19 @@ export interface RuleRuleNotOrProperty {
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category TfCostCategory#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category AwsCostCategory#cost_category}
   */
   readonly costCategory?: RuleRuleNotOrCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension TfCostCategory#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension AwsCostCategory#dimension}
   */
   readonly dimension?: RuleRuleNotOrDimensionProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags TfCostCategory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags AwsCostCategory#tags}
   */
   readonly tags?: RuleRuleNotOrTagsProperty;
 }
@@ -6652,15 +6652,15 @@ export class RuleRuleNotOrPropertyList extends cdktn.ComplexList {
 }
 export interface RuleRuleNotTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -6760,37 +6760,37 @@ export interface RuleRuleNotProperty {
   /**
   * and block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#and TfCostCategory#and}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#and AwsCostCategory#and}
   */
   readonly and?: RuleRuleNotAndProperty[] | cdktn.IResolvable;
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category TfCostCategory#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category AwsCostCategory#cost_category}
   */
   readonly costCategory?: RuleRuleNotCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension TfCostCategory#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension AwsCostCategory#dimension}
   */
   readonly dimension?: RuleRuleNotDimensionProperty;
   /**
   * not block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#not TfCostCategory#not}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#not AwsCostCategory#not}
   */
   readonly not?: RuleRuleNotNotProperty;
   /**
   * or block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#or TfCostCategory#or}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#or AwsCostCategory#or}
   */
   readonly or?: RuleRuleNotOrProperty[] | cdktn.IResolvable;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags TfCostCategory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags AwsCostCategory#tags}
   */
   readonly tags?: RuleRuleNotTagsProperty;
 }
@@ -6954,15 +6954,15 @@ export class RuleRuleNotPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RuleRuleOrAndCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -7060,15 +7060,15 @@ export class RuleRuleOrAndCostCategoryPropertyOutputReference extends cdktn.Comp
 }
 export interface RuleRuleOrAndDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -7166,15 +7166,15 @@ export class RuleRuleOrAndDimensionPropertyOutputReference extends cdktn.Complex
 }
 export interface RuleRuleOrAndTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -7274,19 +7274,19 @@ export interface RuleRuleOrAndProperty {
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category TfCostCategory#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category AwsCostCategory#cost_category}
   */
   readonly costCategory?: RuleRuleOrAndCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension TfCostCategory#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension AwsCostCategory#dimension}
   */
   readonly dimension?: RuleRuleOrAndDimensionProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags TfCostCategory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags AwsCostCategory#tags}
   */
   readonly tags?: RuleRuleOrAndTagsProperty;
 }
@@ -7416,15 +7416,15 @@ export class RuleRuleOrAndPropertyList extends cdktn.ComplexList {
 }
 export interface RuleRuleOrCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -7522,15 +7522,15 @@ export class RuleRuleOrCostCategoryPropertyOutputReference extends cdktn.Complex
 }
 export interface RuleRuleOrDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -7628,15 +7628,15 @@ export class RuleRuleOrDimensionPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface RuleRuleOrNotCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -7734,15 +7734,15 @@ export class RuleRuleOrNotCostCategoryPropertyOutputReference extends cdktn.Comp
 }
 export interface RuleRuleOrNotDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -7840,15 +7840,15 @@ export class RuleRuleOrNotDimensionPropertyOutputReference extends cdktn.Complex
 }
 export interface RuleRuleOrNotTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -7948,19 +7948,19 @@ export interface RuleRuleOrNotProperty {
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category TfCostCategory#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category AwsCostCategory#cost_category}
   */
   readonly costCategory?: RuleRuleOrNotCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension TfCostCategory#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension AwsCostCategory#dimension}
   */
   readonly dimension?: RuleRuleOrNotDimensionProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags TfCostCategory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags AwsCostCategory#tags}
   */
   readonly tags?: RuleRuleOrNotTagsProperty;
 }
@@ -8058,15 +8058,15 @@ export class RuleRuleOrNotPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RuleRuleOrOrCostCategoryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -8164,15 +8164,15 @@ export class RuleRuleOrOrCostCategoryPropertyOutputReference extends cdktn.Compl
 }
 export interface RuleRuleOrOrDimensionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -8270,15 +8270,15 @@ export class RuleRuleOrOrDimensionPropertyOutputReference extends cdktn.ComplexO
 }
 export interface RuleRuleOrOrTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -8378,19 +8378,19 @@ export interface RuleRuleOrOrProperty {
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category TfCostCategory#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category AwsCostCategory#cost_category}
   */
   readonly costCategory?: RuleRuleOrOrCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension TfCostCategory#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension AwsCostCategory#dimension}
   */
   readonly dimension?: RuleRuleOrOrDimensionProperty;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags TfCostCategory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags AwsCostCategory#tags}
   */
   readonly tags?: RuleRuleOrOrTagsProperty;
 }
@@ -8520,15 +8520,15 @@ export class RuleRuleOrOrPropertyList extends cdktn.ComplexList {
 }
 export interface RuleRuleOrTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -8628,37 +8628,37 @@ export interface RuleRuleOrProperty {
   /**
   * and block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#and TfCostCategory#and}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#and AwsCostCategory#and}
   */
   readonly and?: RuleRuleOrAndProperty[] | cdktn.IResolvable;
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category TfCostCategory#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category AwsCostCategory#cost_category}
   */
   readonly costCategory?: RuleRuleOrCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension TfCostCategory#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension AwsCostCategory#dimension}
   */
   readonly dimension?: RuleRuleOrDimensionProperty;
   /**
   * not block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#not TfCostCategory#not}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#not AwsCostCategory#not}
   */
   readonly not?: RuleRuleOrNotProperty;
   /**
   * or block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#or TfCostCategory#or}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#or AwsCostCategory#or}
   */
   readonly or?: RuleRuleOrOrProperty[] | cdktn.IResolvable;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags TfCostCategory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags AwsCostCategory#tags}
   */
   readonly tags?: RuleRuleOrTagsProperty;
 }
@@ -8854,15 +8854,15 @@ export class RuleRuleOrPropertyList extends cdktn.ComplexList {
 }
 export interface RuleRuleTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key TfCostCategory#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#key AwsCostCategory#key}
   */
   readonly key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options TfCostCategory#match_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#match_options AwsCostCategory#match_options}
   */
   readonly matchOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -8962,37 +8962,37 @@ export interface RuleRuleProperty {
   /**
   * and block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#and TfCostCategory#and}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#and AwsCostCategory#and}
   */
   readonly and?: RuleRuleAndProperty[] | cdktn.IResolvable;
   /**
   * cost_category block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category TfCostCategory#cost_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#cost_category AwsCostCategory#cost_category}
   */
   readonly costCategory?: RuleRuleCostCategoryProperty;
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension TfCostCategory#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#dimension AwsCostCategory#dimension}
   */
   readonly dimension?: RuleRuleDimensionProperty;
   /**
   * not block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#not TfCostCategory#not}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#not AwsCostCategory#not}
   */
   readonly not?: RuleRuleNotProperty;
   /**
   * or block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#or TfCostCategory#or}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#or AwsCostCategory#or}
   */
   readonly or?: RuleRuleOrProperty[] | cdktn.IResolvable;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags TfCostCategory#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#tags AwsCostCategory#tags}
   */
   readonly tags?: RuleRuleTagsProperty;
 }
@@ -9156,23 +9156,23 @@ export class RuleRulePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface RuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#type TfCostCategory#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#type AwsCostCategory#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#value TfCostCategory#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#value AwsCostCategory#value}
   */
   readonly value?: string;
   /**
   * inherited_value block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#inherited_value TfCostCategory#inherited_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#inherited_value AwsCostCategory#inherited_value}
   */
   readonly inheritedValue?: InheritedValueProperty;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#rule TfCostCategory#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#rule AwsCostCategory#rule}
   */
   readonly rule?: RuleRuleProperty;
 }
@@ -9324,11 +9324,11 @@ export class RulePropertyList extends cdktn.ComplexList {
 }
 export interface ParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#type TfCostCategory#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#type AwsCostCategory#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values TfCostCategory#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#values AwsCostCategory#values}
   */
   readonly values?: string[];
 }
@@ -9436,21 +9436,21 @@ export class ParameterPropertyList extends cdktn.ComplexList {
 }
 export interface SplitChargeRuleProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#method TfCostCategory#method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#method AwsCostCategory#method}
   */
   readonly method: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#source TfCostCategory#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#source AwsCostCategory#source}
   */
   readonly source: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#targets TfCostCategory#targets}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#targets AwsCostCategory#targets}
   */
   readonly targets: string[];
   /**
   * parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#parameter TfCostCategory#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ce_cost_category#parameter AwsCostCategory#parameter}
   */
   readonly parameter?: ParameterProperty[] | cdktn.IResolvable;
 }

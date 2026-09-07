@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfMedicalVocabularyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsMedicalVocabularyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#id TfMedicalVocabulary#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#id AwsMedicalVocabulary#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#language_code TfMedicalVocabulary#language_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#language_code AwsMedicalVocabulary#language_code}
   */
   readonly languageCode: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#region TfMedicalVocabulary#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#region AwsMedicalVocabulary#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#tags TfMedicalVocabulary#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#tags AwsMedicalVocabulary#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#tags_all TfMedicalVocabulary#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#tags_all AwsMedicalVocabulary#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#vocabulary_file_uri TfMedicalVocabulary#vocabulary_file_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#vocabulary_file_uri AwsMedicalVocabulary#vocabulary_file_uri}
   */
   readonly vocabularyFileUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#vocabulary_name TfMedicalVocabulary#vocabulary_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#vocabulary_name AwsMedicalVocabulary#vocabulary_name}
   */
   readonly vocabularyName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#timeouts TfMedicalVocabulary#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#timeouts AwsMedicalVocabulary#timeouts}
   */
-  readonly timeouts?: TfMedicalVocabulary.TimeoutsProperty;
+  readonly timeouts?: AwsMedicalVocabulary.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary aws_transcribe_medical_vocabulary}
 */
-export class TfMedicalVocabulary extends cdktn.TerraformResource {
+export class AwsMedicalVocabulary extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfMedicalVocabulary extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfMedicalVocabulary resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsMedicalVocabulary resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfMedicalVocabulary to import
-  * @param importFromId The id of the existing TfMedicalVocabulary that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfMedicalVocabulary to import is found
+  * @param importToId The construct id used in the generated config for the AwsMedicalVocabulary to import
+  * @param importFromId The id of the existing AwsMedicalVocabulary that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsMedicalVocabulary to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_transcribe_medical_vocabulary", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfMedicalVocabulary extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfMedicalVocabularyConfig
+  * @param options AwsMedicalVocabularyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfMedicalVocabularyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsMedicalVocabularyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_transcribe_medical_vocabulary',
       terraformGeneratorMetadata: {
@@ -226,11 +226,11 @@ export class TfMedicalVocabulary extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfMedicalVocabulary.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsMedicalVocabulary.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfMedicalVocabulary.TimeoutsProperty) {
+  public putTimeouts(value: AwsMedicalVocabulary.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -254,7 +254,7 @@ export class TfMedicalVocabulary extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       vocabulary_file_uri: cdktn.stringToTerraform(this._vocabularyFileUri),
       vocabulary_name: cdktn.stringToTerraform(this._vocabularyName),
-      timeouts: tfMedicalVocabularyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsMedicalVocabularyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -303,10 +303,10 @@ export class TfMedicalVocabulary extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfMedicalVocabularyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsMedicalVocabularyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfMedicalVocabulary.TimeoutsProperty",
+        storageClassType: "AwsMedicalVocabulary.TimeoutsProperty",
       },
     };
 
@@ -315,7 +315,7 @@ export class TfMedicalVocabulary extends cdktn.TerraformResource {
   }
 }
 
-export function tfMedicalVocabularyTimeoutsPropertyToTerraform(struct?: TfMedicalVocabulary.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMedicalVocabularyTimeoutsPropertyToTerraform(struct?: AwsMedicalVocabulary.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function tfMedicalVocabularyTimeoutsPropertyToTerraform(struct?: TfMedica
 }
 
 
-export function tfMedicalVocabularyTimeoutsPropertyToHclTerraform(struct?: TfMedicalVocabulary.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsMedicalVocabularyTimeoutsPropertyToHclTerraform(struct?: AwsMedicalVocabulary.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -359,18 +359,18 @@ export function tfMedicalVocabularyTimeoutsPropertyToHclTerraform(struct?: TfMed
 }
 
 
-export namespace TfMedicalVocabulary {
+export namespace AwsMedicalVocabulary {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#create TfMedicalVocabulary#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#create AwsMedicalVocabulary#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#delete TfMedicalVocabulary#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#delete AwsMedicalVocabulary#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#update TfMedicalVocabulary#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transcribe_medical_vocabulary#update AwsMedicalVocabulary#update}
   */
   readonly update?: string;
 }

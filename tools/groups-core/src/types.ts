@@ -32,7 +32,7 @@ export interface Group {
   title: string;
   /**
    * The service-name token prefixes the group title already conveys, stripped off a member's
-   * terraform type to name its class (`aws_s3_bucket` in group `s3` -> `TfBucket`). Sorted and unique,
+   * terraform type to name its class (`aws_s3_bucket` in group `s3` -> `AwsBucket`). Sorted and unique,
    * and empty when the group has no service prefix at all; proposed by the miner
    * and curated in `mine-config.json#stripPrefixOverrides`.
    * See docs/curation.md ("stripPrefixes") and docs/m6-tf-naming.md.

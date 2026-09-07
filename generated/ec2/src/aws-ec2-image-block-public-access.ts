@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfImageBlockPublicAccessConfig extends cdktn.TerraformMetaArguments {
+export interface AwsImageBlockPublicAccessConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_image_block_public_access#id TfImageBlockPublicAccess#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_image_block_public_access#id AwsImageBlockPublicAccess#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,25 +16,25 @@ export interface TfImageBlockPublicAccessConfig extends cdktn.TerraformMetaArgum
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_image_block_public_access#region TfImageBlockPublicAccess#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_image_block_public_access#region AwsImageBlockPublicAccess#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_image_block_public_access#state TfImageBlockPublicAccess#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_image_block_public_access#state AwsImageBlockPublicAccess#state}
   */
   readonly state: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_image_block_public_access#timeouts TfImageBlockPublicAccess#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_image_block_public_access#timeouts AwsImageBlockPublicAccess#timeouts}
   */
-  readonly timeouts?: TfImageBlockPublicAccess.TimeoutsProperty;
+  readonly timeouts?: AwsImageBlockPublicAccess.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_image_block_public_access aws_ec2_image_block_public_access}
 */
-export class TfImageBlockPublicAccess extends cdktn.TerraformResource {
+export class AwsImageBlockPublicAccess extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfImageBlockPublicAccess extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfImageBlockPublicAccess resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsImageBlockPublicAccess resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfImageBlockPublicAccess to import
-  * @param importFromId The id of the existing TfImageBlockPublicAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_image_block_public_access#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfImageBlockPublicAccess to import is found
+  * @param importToId The construct id used in the generated config for the AwsImageBlockPublicAccess to import
+  * @param importFromId The id of the existing AwsImageBlockPublicAccess that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_image_block_public_access#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsImageBlockPublicAccess to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_image_block_public_access", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfImageBlockPublicAccess extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfImageBlockPublicAccessConfig
+  * @param options AwsImageBlockPublicAccessConfig
   */
-  public constructor(scope: Construct, id: string, config: TfImageBlockPublicAccessConfig) {
+  public constructor(scope: Construct, id: string, config: AwsImageBlockPublicAccessConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_image_block_public_access',
       terraformGeneratorMetadata: {
@@ -138,11 +138,11 @@ export class TfImageBlockPublicAccess extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfImageBlockPublicAccess.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsImageBlockPublicAccess.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfImageBlockPublicAccess.TimeoutsProperty) {
+  public putTimeouts(value: AwsImageBlockPublicAccess.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -162,7 +162,7 @@ export class TfImageBlockPublicAccess extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
       state: cdktn.stringToTerraform(this._state),
-      timeouts: tfImageBlockPublicAccessTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsImageBlockPublicAccessTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -187,10 +187,10 @@ export class TfImageBlockPublicAccess extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfImageBlockPublicAccessTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsImageBlockPublicAccessTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfImageBlockPublicAccess.TimeoutsProperty",
+        storageClassType: "AwsImageBlockPublicAccess.TimeoutsProperty",
       },
     };
 
@@ -199,7 +199,7 @@ export class TfImageBlockPublicAccess extends cdktn.TerraformResource {
   }
 }
 
-export function tfImageBlockPublicAccessTimeoutsPropertyToTerraform(struct?: TfImageBlockPublicAccess.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsImageBlockPublicAccessTimeoutsPropertyToTerraform(struct?: AwsImageBlockPublicAccess.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -210,7 +210,7 @@ export function tfImageBlockPublicAccessTimeoutsPropertyToTerraform(struct?: TfI
 }
 
 
-export function tfImageBlockPublicAccessTimeoutsPropertyToHclTerraform(struct?: TfImageBlockPublicAccess.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsImageBlockPublicAccessTimeoutsPropertyToHclTerraform(struct?: AwsImageBlockPublicAccess.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -229,10 +229,10 @@ export function tfImageBlockPublicAccessTimeoutsPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace TfImageBlockPublicAccess {
+export namespace AwsImageBlockPublicAccess {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_image_block_public_access#update TfImageBlockPublicAccess#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ec2_image_block_public_access#update AwsImageBlockPublicAccess#update}
   */
   readonly update?: string;
 }

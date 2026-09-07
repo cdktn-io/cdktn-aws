@@ -27,12 +27,12 @@ export const TARGET_PACKAGE = "@cdktn/aws";
  * this exact range. Bumping it is therefore a one-line change plus a red suite until the prose and
  * the example catch up.
  */
-export const TARGET_RANGE = "^0.2.0";
+export const TARGET_RANGE = "^0.3.0";
 
 /** Where a classic symbol lands: the group barrel, and the member path below it. */
 export interface Target {
   readonly group: string;
-  /** e.g. `TfBucket`, `TfBucketConfig`, `TfBucket.CorsRulePropertyList`, `tfBucketMapper…ToTerraform` */
+  /** e.g. `AwsBucket`, `AwsBucketConfig`, `AwsBucket.CorsRulePropertyList`, `awsBucketMapper…ToTerraform` */
   readonly member: string;
 }
 

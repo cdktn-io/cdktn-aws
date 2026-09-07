@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfVirtualClusterConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsVirtualClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emrcontainers_virtual_cluster#id DataTfVirtualCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emrcontainers_virtual_cluster#id DataAwsVirtualCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,15 +16,15 @@ export interface DataTfVirtualClusterConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emrcontainers_virtual_cluster#region DataTfVirtualCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emrcontainers_virtual_cluster#region DataAwsVirtualCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emrcontainers_virtual_cluster#tags DataTfVirtualCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emrcontainers_virtual_cluster#tags DataAwsVirtualCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emrcontainers_virtual_cluster#virtual_cluster_id DataTfVirtualCluster#virtual_cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emrcontainers_virtual_cluster#virtual_cluster_id DataAwsVirtualCluster#virtual_cluster_id}
   */
   readonly virtualClusterId: string;
 }
@@ -32,7 +32,7 @@ export interface DataTfVirtualClusterConfig extends cdktn.TerraformMetaArguments
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emrcontainers_virtual_cluster aws_emrcontainers_virtual_cluster}
 */
-export class DataTfVirtualCluster extends cdktn.TerraformDataSource {
+export class DataAwsVirtualCluster extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfVirtualCluster extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfVirtualCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsVirtualCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfVirtualCluster to import
-  * @param importFromId The id of the existing DataTfVirtualCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emrcontainers_virtual_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfVirtualCluster to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsVirtualCluster to import
+  * @param importFromId The id of the existing DataAwsVirtualCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/emrcontainers_virtual_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsVirtualCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_emrcontainers_virtual_cluster", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfVirtualCluster extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfVirtualClusterConfig
+  * @param options DataAwsVirtualClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfVirtualClusterConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsVirtualClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_emrcontainers_virtual_cluster',
       terraformGeneratorMetadata: {
@@ -96,7 +96,7 @@ export class DataTfVirtualCluster extends cdktn.TerraformDataSource {
   }
 
   // container_provider - computed: true, optional: false, required: false
-  private _containerProvider = new DataTfVirtualCluster.ContainerProviderPropertyList(this, "container_provider", false);
+  private _containerProvider = new DataAwsVirtualCluster.ContainerProviderPropertyList(this, "container_provider", false);
   public get containerProvider() {
     return this._containerProvider;
   }
@@ -223,7 +223,7 @@ export class DataTfVirtualCluster extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfVirtualClusterEksInfoPropertyToTerraform(struct?: DataTfVirtualCluster.EksInfoProperty): any {
+export function dataAwsVirtualClusterEksInfoPropertyToTerraform(struct?: DataAwsVirtualCluster.EksInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,7 +233,7 @@ export function dataTfVirtualClusterEksInfoPropertyToTerraform(struct?: DataTfVi
 }
 
 
-export function dataTfVirtualClusterEksInfoPropertyToHclTerraform(struct?: DataTfVirtualCluster.EksInfoProperty): any {
+export function dataAwsVirtualClusterEksInfoPropertyToHclTerraform(struct?: DataAwsVirtualCluster.EksInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -244,7 +244,7 @@ export function dataTfVirtualClusterEksInfoPropertyToHclTerraform(struct?: DataT
 }
 
 
-export function dataTfVirtualClusterInfoPropertyToTerraform(struct?: DataTfVirtualCluster.InfoProperty): any {
+export function dataAwsVirtualClusterInfoPropertyToTerraform(struct?: DataAwsVirtualCluster.InfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -254,7 +254,7 @@ export function dataTfVirtualClusterInfoPropertyToTerraform(struct?: DataTfVirtu
 }
 
 
-export function dataTfVirtualClusterInfoPropertyToHclTerraform(struct?: DataTfVirtualCluster.InfoProperty): any {
+export function dataAwsVirtualClusterInfoPropertyToHclTerraform(struct?: DataAwsVirtualCluster.InfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -265,7 +265,7 @@ export function dataTfVirtualClusterInfoPropertyToHclTerraform(struct?: DataTfVi
 }
 
 
-export function dataTfVirtualClusterContainerProviderPropertyToTerraform(struct?: DataTfVirtualCluster.ContainerProviderProperty): any {
+export function dataAwsVirtualClusterContainerProviderPropertyToTerraform(struct?: DataAwsVirtualCluster.ContainerProviderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -275,7 +275,7 @@ export function dataTfVirtualClusterContainerProviderPropertyToTerraform(struct?
 }
 
 
-export function dataTfVirtualClusterContainerProviderPropertyToHclTerraform(struct?: DataTfVirtualCluster.ContainerProviderProperty): any {
+export function dataAwsVirtualClusterContainerProviderPropertyToHclTerraform(struct?: DataAwsVirtualCluster.ContainerProviderProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -286,7 +286,7 @@ export function dataTfVirtualClusterContainerProviderPropertyToHclTerraform(stru
 }
 
 
-export namespace DataTfVirtualCluster {
+export namespace DataAwsVirtualCluster {
 export interface EksInfoProperty {
 }
 export class EksInfoPropertyOutputReference extends cdktn.ComplexObject {

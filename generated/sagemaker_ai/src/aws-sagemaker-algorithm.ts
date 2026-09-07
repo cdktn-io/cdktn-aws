@@ -5,59 +5,59 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAlgorithmConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAlgorithmConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#algorithm_description TfAlgorithm#algorithm_description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#algorithm_description AwsAlgorithm#algorithm_description}
   */
   readonly algorithmDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#algorithm_name TfAlgorithm#algorithm_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#algorithm_name AwsAlgorithm#algorithm_name}
   */
   readonly algorithmName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#certify_for_marketplace TfAlgorithm#certify_for_marketplace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#certify_for_marketplace AwsAlgorithm#certify_for_marketplace}
   */
   readonly certifyForMarketplace?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#region TfAlgorithm#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#region AwsAlgorithm#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#tags TfAlgorithm#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#tags AwsAlgorithm#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * inference_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#inference_specification TfAlgorithm#inference_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#inference_specification AwsAlgorithm#inference_specification}
   */
-  readonly inferenceSpecification?: TfAlgorithm.InferenceSpecificationProperty[] | cdktn.IResolvable;
+  readonly inferenceSpecification?: AwsAlgorithm.InferenceSpecificationProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#timeouts TfAlgorithm#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#timeouts AwsAlgorithm#timeouts}
   */
-  readonly timeouts?: TfAlgorithm.TimeoutsProperty;
+  readonly timeouts?: AwsAlgorithm.TimeoutsProperty;
   /**
   * training_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#training_specification TfAlgorithm#training_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#training_specification AwsAlgorithm#training_specification}
   */
-  readonly trainingSpecification?: TfAlgorithm.TrainingSpecificationProperty[] | cdktn.IResolvable;
+  readonly trainingSpecification?: AwsAlgorithm.TrainingSpecificationProperty[] | cdktn.IResolvable;
   /**
   * validation_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#validation_specification TfAlgorithm#validation_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#validation_specification AwsAlgorithm#validation_specification}
   */
-  readonly validationSpecification?: TfAlgorithm.ValidationSpecificationProperty[] | cdktn.IResolvable;
+  readonly validationSpecification?: AwsAlgorithm.ValidationSpecificationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm aws_sagemaker_algorithm}
 */
-export class TfAlgorithm extends cdktn.TerraformResource {
+export class AwsAlgorithm extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -68,11 +68,11 @@ export class TfAlgorithm extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAlgorithm resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAlgorithm resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAlgorithm to import
-  * @param importFromId The id of the existing TfAlgorithm that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAlgorithm to import is found
+  * @param importToId The construct id used in the generated config for the AwsAlgorithm to import
+  * @param importFromId The id of the existing AwsAlgorithm that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAlgorithm to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_sagemaker_algorithm", importId: importFromId, provider });
@@ -87,9 +87,9 @@ export class TfAlgorithm extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAlgorithmConfig
+  * @param options AwsAlgorithmConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAlgorithmConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAlgorithmConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_sagemaker_algorithm',
       terraformGeneratorMetadata: {
@@ -224,11 +224,11 @@ export class TfAlgorithm extends cdktn.TerraformResource {
   }
 
   // inference_specification - computed: false, optional: true, required: false
-  private _inferenceSpecification = new TfAlgorithm.InferenceSpecificationPropertyList(this, "inference_specification", false);
+  private _inferenceSpecification = new AwsAlgorithm.InferenceSpecificationPropertyList(this, "inference_specification", false);
   public get inferenceSpecification() {
     return this._inferenceSpecification;
   }
-  public putInferenceSpecification(value: TfAlgorithm.InferenceSpecificationProperty[] | cdktn.IResolvable) {
+  public putInferenceSpecification(value: AwsAlgorithm.InferenceSpecificationProperty[] | cdktn.IResolvable) {
     this._inferenceSpecification.internalValue = value;
   }
   public resetInferenceSpecification() {
@@ -240,11 +240,11 @@ export class TfAlgorithm extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfAlgorithm.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsAlgorithm.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfAlgorithm.TimeoutsProperty) {
+  public putTimeouts(value: AwsAlgorithm.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -256,11 +256,11 @@ export class TfAlgorithm extends cdktn.TerraformResource {
   }
 
   // training_specification - computed: false, optional: true, required: false
-  private _trainingSpecification = new TfAlgorithm.TrainingSpecificationPropertyList(this, "training_specification", false);
+  private _trainingSpecification = new AwsAlgorithm.TrainingSpecificationPropertyList(this, "training_specification", false);
   public get trainingSpecification() {
     return this._trainingSpecification;
   }
-  public putTrainingSpecification(value: TfAlgorithm.TrainingSpecificationProperty[] | cdktn.IResolvable) {
+  public putTrainingSpecification(value: AwsAlgorithm.TrainingSpecificationProperty[] | cdktn.IResolvable) {
     this._trainingSpecification.internalValue = value;
   }
   public resetTrainingSpecification() {
@@ -272,11 +272,11 @@ export class TfAlgorithm extends cdktn.TerraformResource {
   }
 
   // validation_specification - computed: false, optional: true, required: false
-  private _validationSpecification = new TfAlgorithm.ValidationSpecificationPropertyList(this, "validation_specification", false);
+  private _validationSpecification = new AwsAlgorithm.ValidationSpecificationPropertyList(this, "validation_specification", false);
   public get validationSpecification() {
     return this._validationSpecification;
   }
-  public putValidationSpecification(value: TfAlgorithm.ValidationSpecificationProperty[] | cdktn.IResolvable) {
+  public putValidationSpecification(value: AwsAlgorithm.ValidationSpecificationProperty[] | cdktn.IResolvable) {
     this._validationSpecification.internalValue = value;
   }
   public resetValidationSpecification() {
@@ -298,10 +298,10 @@ export class TfAlgorithm extends cdktn.TerraformResource {
       certify_for_marketplace: cdktn.booleanToTerraform(this._certifyForMarketplace),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      inference_specification: cdktn.listMapper(tfAlgorithmInferenceSpecificationPropertyToTerraform, true)(this._inferenceSpecification.internalValue),
-      timeouts: tfAlgorithmTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      training_specification: cdktn.listMapper(tfAlgorithmTrainingSpecificationPropertyToTerraform, true)(this._trainingSpecification.internalValue),
-      validation_specification: cdktn.listMapper(tfAlgorithmValidationSpecificationPropertyToTerraform, true)(this._validationSpecification.internalValue),
+      inference_specification: cdktn.listMapper(awsAlgorithmInferenceSpecificationPropertyToTerraform, true)(this._inferenceSpecification.internalValue),
+      timeouts: awsAlgorithmTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      training_specification: cdktn.listMapper(awsAlgorithmTrainingSpecificationPropertyToTerraform, true)(this._trainingSpecification.internalValue),
+      validation_specification: cdktn.listMapper(awsAlgorithmValidationSpecificationPropertyToTerraform, true)(this._validationSpecification.internalValue),
     };
   }
 
@@ -338,28 +338,28 @@ export class TfAlgorithm extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       inference_specification: {
-        value: cdktn.listMapperHcl(tfAlgorithmInferenceSpecificationPropertyToHclTerraform, true)(this._inferenceSpecification.internalValue),
+        value: cdktn.listMapperHcl(awsAlgorithmInferenceSpecificationPropertyToHclTerraform, true)(this._inferenceSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAlgorithm.InferenceSpecificationPropertyList",
+        storageClassType: "AwsAlgorithm.InferenceSpecificationPropertyList",
       },
       timeouts: {
-        value: tfAlgorithmTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsAlgorithmTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfAlgorithm.TimeoutsProperty",
+        storageClassType: "AwsAlgorithm.TimeoutsProperty",
       },
       training_specification: {
-        value: cdktn.listMapperHcl(tfAlgorithmTrainingSpecificationPropertyToHclTerraform, true)(this._trainingSpecification.internalValue),
+        value: cdktn.listMapperHcl(awsAlgorithmTrainingSpecificationPropertyToHclTerraform, true)(this._trainingSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAlgorithm.TrainingSpecificationPropertyList",
+        storageClassType: "AwsAlgorithm.TrainingSpecificationPropertyList",
       },
       validation_specification: {
-        value: cdktn.listMapperHcl(tfAlgorithmValidationSpecificationPropertyToHclTerraform, true)(this._validationSpecification.internalValue),
+        value: cdktn.listMapperHcl(awsAlgorithmValidationSpecificationPropertyToHclTerraform, true)(this._validationSpecification.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAlgorithm.ValidationSpecificationPropertyList",
+        storageClassType: "AwsAlgorithm.ValidationSpecificationPropertyList",
       },
     };
 
@@ -368,7 +368,7 @@ export class TfAlgorithm extends cdktn.TerraformResource {
   }
 }
 
-export function tfAlgorithmInferenceSpecificationContainersAdditionalS3DataSourcePropertyToTerraform(struct?: TfAlgorithm.InferenceSpecificationContainersAdditionalS3DataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmInferenceSpecificationContainersAdditionalS3DataSourcePropertyToTerraform(struct?: AwsAlgorithm.InferenceSpecificationContainersAdditionalS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -382,7 +382,7 @@ export function tfAlgorithmInferenceSpecificationContainersAdditionalS3DataSourc
 }
 
 
-export function tfAlgorithmInferenceSpecificationContainersAdditionalS3DataSourcePropertyToHclTerraform(struct?: TfAlgorithm.InferenceSpecificationContainersAdditionalS3DataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmInferenceSpecificationContainersAdditionalS3DataSourcePropertyToHclTerraform(struct?: AwsAlgorithm.InferenceSpecificationContainersAdditionalS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -419,7 +419,7 @@ export function tfAlgorithmInferenceSpecificationContainersAdditionalS3DataSourc
 }
 
 
-export function tfAlgorithmBaseModelPropertyToTerraform(struct?: TfAlgorithm.BaseModelProperty | cdktn.IResolvable): any {
+export function awsAlgorithmBaseModelPropertyToTerraform(struct?: AwsAlgorithm.BaseModelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -432,7 +432,7 @@ export function tfAlgorithmBaseModelPropertyToTerraform(struct?: TfAlgorithm.Bas
 }
 
 
-export function tfAlgorithmBaseModelPropertyToHclTerraform(struct?: TfAlgorithm.BaseModelProperty | cdktn.IResolvable): any {
+export function awsAlgorithmBaseModelPropertyToHclTerraform(struct?: AwsAlgorithm.BaseModelProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -463,7 +463,7 @@ export function tfAlgorithmBaseModelPropertyToHclTerraform(struct?: TfAlgorithm.
 }
 
 
-export function tfAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourceHubAccessConfigPropertyToTerraform(struct?: TfAlgorithm.InferenceSpecificationContainersModelDataSourceS3DataSourceHubAccessConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourceHubAccessConfigPropertyToTerraform(struct?: AwsAlgorithm.InferenceSpecificationContainersModelDataSourceS3DataSourceHubAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -474,7 +474,7 @@ export function tfAlgorithmInferenceSpecificationContainersModelDataSourceS3Data
 }
 
 
-export function tfAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourceHubAccessConfigPropertyToHclTerraform(struct?: TfAlgorithm.InferenceSpecificationContainersModelDataSourceS3DataSourceHubAccessConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourceHubAccessConfigPropertyToHclTerraform(struct?: AwsAlgorithm.InferenceSpecificationContainersModelDataSourceS3DataSourceHubAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -493,7 +493,7 @@ export function tfAlgorithmInferenceSpecificationContainersModelDataSourceS3Data
 }
 
 
-export function tfAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct?: TfAlgorithm.InferenceSpecificationContainersModelDataSourceS3DataSourceModelAccessConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct?: AwsAlgorithm.InferenceSpecificationContainersModelDataSourceS3DataSourceModelAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -504,7 +504,7 @@ export function tfAlgorithmInferenceSpecificationContainersModelDataSourceS3Data
 }
 
 
-export function tfAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct?: TfAlgorithm.InferenceSpecificationContainersModelDataSourceS3DataSourceModelAccessConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct?: AwsAlgorithm.InferenceSpecificationContainersModelDataSourceS3DataSourceModelAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -523,7 +523,7 @@ export function tfAlgorithmInferenceSpecificationContainersModelDataSourceS3Data
 }
 
 
-export function tfAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourcePropertyToTerraform(struct?: TfAlgorithm.InferenceSpecificationContainersModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourcePropertyToTerraform(struct?: AwsAlgorithm.InferenceSpecificationContainersModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -535,13 +535,13 @@ export function tfAlgorithmInferenceSpecificationContainersModelDataSourceS3Data
     manifest_s3_uri: cdktn.stringToTerraform(struct!.manifestS3Uri),
     s3_data_type: cdktn.stringToTerraform(struct!.s3DataType),
     s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
-    hub_access_config: cdktn.listMapper(tfAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourceHubAccessConfigPropertyToTerraform, true)(struct!.hubAccessConfig),
-    model_access_config: cdktn.listMapper(tfAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform, true)(struct!.modelAccessConfig),
+    hub_access_config: cdktn.listMapper(awsAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourceHubAccessConfigPropertyToTerraform, true)(struct!.hubAccessConfig),
+    model_access_config: cdktn.listMapper(awsAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourceModelAccessConfigPropertyToTerraform, true)(struct!.modelAccessConfig),
   }
 }
 
 
-export function tfAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourcePropertyToHclTerraform(struct?: TfAlgorithm.InferenceSpecificationContainersModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourcePropertyToHclTerraform(struct?: AwsAlgorithm.InferenceSpecificationContainersModelDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -584,13 +584,13 @@ export function tfAlgorithmInferenceSpecificationContainersModelDataSourceS3Data
       storageClassType: "string",
     },
     hub_access_config: {
-      value: cdktn.listMapperHcl(tfAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourceHubAccessConfigPropertyToHclTerraform, true)(struct!.hubAccessConfig),
+      value: cdktn.listMapperHcl(awsAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourceHubAccessConfigPropertyToHclTerraform, true)(struct!.hubAccessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "InferenceSpecificationContainersModelDataSourceS3DataSourceHubAccessConfigPropertyList",
     },
     model_access_config: {
-      value: cdktn.listMapperHcl(tfAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform, true)(struct!.modelAccessConfig),
+      value: cdktn.listMapperHcl(awsAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform, true)(struct!.modelAccessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "InferenceSpecificationContainersModelDataSourceS3DataSourceModelAccessConfigPropertyList",
@@ -602,25 +602,25 @@ export function tfAlgorithmInferenceSpecificationContainersModelDataSourceS3Data
 }
 
 
-export function tfAlgorithmModelDataSourcePropertyToTerraform(struct?: TfAlgorithm.ModelDataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmModelDataSourcePropertyToTerraform(struct?: AwsAlgorithm.ModelDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_data_source: cdktn.listMapper(tfAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
+    s3_data_source: cdktn.listMapper(awsAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
   }
 }
 
 
-export function tfAlgorithmModelDataSourcePropertyToHclTerraform(struct?: TfAlgorithm.ModelDataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmModelDataSourcePropertyToHclTerraform(struct?: AwsAlgorithm.ModelDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_data_source: {
-      value: cdktn.listMapperHcl(tfAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
+      value: cdktn.listMapperHcl(awsAlgorithmInferenceSpecificationContainersModelDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
       isBlock: true,
       type: "list",
       storageClassType: "InferenceSpecificationContainersModelDataSourceS3DataSourcePropertyList",
@@ -632,7 +632,7 @@ export function tfAlgorithmModelDataSourcePropertyToHclTerraform(struct?: TfAlgo
 }
 
 
-export function tfAlgorithmModelInputPropertyToTerraform(struct?: TfAlgorithm.ModelInputProperty | cdktn.IResolvable): any {
+export function awsAlgorithmModelInputPropertyToTerraform(struct?: AwsAlgorithm.ModelInputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -643,7 +643,7 @@ export function tfAlgorithmModelInputPropertyToTerraform(struct?: TfAlgorithm.Mo
 }
 
 
-export function tfAlgorithmModelInputPropertyToHclTerraform(struct?: TfAlgorithm.ModelInputProperty | cdktn.IResolvable): any {
+export function awsAlgorithmModelInputPropertyToHclTerraform(struct?: AwsAlgorithm.ModelInputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -662,7 +662,7 @@ export function tfAlgorithmModelInputPropertyToHclTerraform(struct?: TfAlgorithm
 }
 
 
-export function tfAlgorithmContainersPropertyToTerraform(struct?: TfAlgorithm.ContainersProperty | cdktn.IResolvable): any {
+export function awsAlgorithmContainersPropertyToTerraform(struct?: AwsAlgorithm.ContainersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -679,15 +679,15 @@ export function tfAlgorithmContainersPropertyToTerraform(struct?: TfAlgorithm.Co
     model_data_url: cdktn.stringToTerraform(struct!.modelDataUrl),
     nearest_model_name: cdktn.stringToTerraform(struct!.nearestModelName),
     product_id: cdktn.stringToTerraform(struct!.productId),
-    additional_s3_data_source: cdktn.listMapper(tfAlgorithmInferenceSpecificationContainersAdditionalS3DataSourcePropertyToTerraform, true)(struct!.additionalS3DataSource),
-    base_model: cdktn.listMapper(tfAlgorithmBaseModelPropertyToTerraform, true)(struct!.baseModel),
-    model_data_source: cdktn.listMapper(tfAlgorithmModelDataSourcePropertyToTerraform, true)(struct!.modelDataSource),
-    model_input: cdktn.listMapper(tfAlgorithmModelInputPropertyToTerraform, true)(struct!.modelInput),
+    additional_s3_data_source: cdktn.listMapper(awsAlgorithmInferenceSpecificationContainersAdditionalS3DataSourcePropertyToTerraform, true)(struct!.additionalS3DataSource),
+    base_model: cdktn.listMapper(awsAlgorithmBaseModelPropertyToTerraform, true)(struct!.baseModel),
+    model_data_source: cdktn.listMapper(awsAlgorithmModelDataSourcePropertyToTerraform, true)(struct!.modelDataSource),
+    model_input: cdktn.listMapper(awsAlgorithmModelInputPropertyToTerraform, true)(struct!.modelInput),
   }
 }
 
 
-export function tfAlgorithmContainersPropertyToHclTerraform(struct?: TfAlgorithm.ContainersProperty | cdktn.IResolvable): any {
+export function awsAlgorithmContainersPropertyToHclTerraform(struct?: AwsAlgorithm.ContainersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -760,25 +760,25 @@ export function tfAlgorithmContainersPropertyToHclTerraform(struct?: TfAlgorithm
       storageClassType: "string",
     },
     additional_s3_data_source: {
-      value: cdktn.listMapperHcl(tfAlgorithmInferenceSpecificationContainersAdditionalS3DataSourcePropertyToHclTerraform, true)(struct!.additionalS3DataSource),
+      value: cdktn.listMapperHcl(awsAlgorithmInferenceSpecificationContainersAdditionalS3DataSourcePropertyToHclTerraform, true)(struct!.additionalS3DataSource),
       isBlock: true,
       type: "list",
       storageClassType: "InferenceSpecificationContainersAdditionalS3DataSourcePropertyList",
     },
     base_model: {
-      value: cdktn.listMapperHcl(tfAlgorithmBaseModelPropertyToHclTerraform, true)(struct!.baseModel),
+      value: cdktn.listMapperHcl(awsAlgorithmBaseModelPropertyToHclTerraform, true)(struct!.baseModel),
       isBlock: true,
       type: "list",
       storageClassType: "BaseModelPropertyList",
     },
     model_data_source: {
-      value: cdktn.listMapperHcl(tfAlgorithmModelDataSourcePropertyToHclTerraform, true)(struct!.modelDataSource),
+      value: cdktn.listMapperHcl(awsAlgorithmModelDataSourcePropertyToHclTerraform, true)(struct!.modelDataSource),
       isBlock: true,
       type: "list",
       storageClassType: "ModelDataSourcePropertyList",
     },
     model_input: {
-      value: cdktn.listMapperHcl(tfAlgorithmModelInputPropertyToHclTerraform, true)(struct!.modelInput),
+      value: cdktn.listMapperHcl(awsAlgorithmModelInputPropertyToHclTerraform, true)(struct!.modelInput),
       isBlock: true,
       type: "list",
       storageClassType: "ModelInputPropertyList",
@@ -790,7 +790,7 @@ export function tfAlgorithmContainersPropertyToHclTerraform(struct?: TfAlgorithm
 }
 
 
-export function tfAlgorithmInferenceSpecificationPropertyToTerraform(struct?: TfAlgorithm.InferenceSpecificationProperty | cdktn.IResolvable): any {
+export function awsAlgorithmInferenceSpecificationPropertyToTerraform(struct?: AwsAlgorithm.InferenceSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -800,12 +800,12 @@ export function tfAlgorithmInferenceSpecificationPropertyToTerraform(struct?: Tf
     supported_realtime_inference_instance_types: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.supportedRealtimeInferenceInstanceTypes),
     supported_response_mime_types: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.supportedResponseMimeTypes),
     supported_transform_instance_types: cdktn.listMapper(cdktn.stringToTerraform, false)(struct!.supportedTransformInstanceTypes),
-    containers: cdktn.listMapper(tfAlgorithmContainersPropertyToTerraform, true)(struct!.containers),
+    containers: cdktn.listMapper(awsAlgorithmContainersPropertyToTerraform, true)(struct!.containers),
   }
 }
 
 
-export function tfAlgorithmInferenceSpecificationPropertyToHclTerraform(struct?: TfAlgorithm.InferenceSpecificationProperty | cdktn.IResolvable): any {
+export function awsAlgorithmInferenceSpecificationPropertyToHclTerraform(struct?: AwsAlgorithm.InferenceSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -836,7 +836,7 @@ export function tfAlgorithmInferenceSpecificationPropertyToHclTerraform(struct?:
       storageClassType: "stringList",
     },
     containers: {
-      value: cdktn.listMapperHcl(tfAlgorithmContainersPropertyToHclTerraform, true)(struct!.containers),
+      value: cdktn.listMapperHcl(awsAlgorithmContainersPropertyToHclTerraform, true)(struct!.containers),
       isBlock: true,
       type: "list",
       storageClassType: "ContainersPropertyList",
@@ -848,7 +848,7 @@ export function tfAlgorithmInferenceSpecificationPropertyToHclTerraform(struct?:
 }
 
 
-export function tfAlgorithmTimeoutsPropertyToTerraform(struct?: TfAlgorithm.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTimeoutsPropertyToTerraform(struct?: AwsAlgorithm.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -860,7 +860,7 @@ export function tfAlgorithmTimeoutsPropertyToTerraform(struct?: TfAlgorithm.Time
 }
 
 
-export function tfAlgorithmTimeoutsPropertyToHclTerraform(struct?: TfAlgorithm.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTimeoutsPropertyToHclTerraform(struct?: AwsAlgorithm.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -885,7 +885,7 @@ export function tfAlgorithmTimeoutsPropertyToHclTerraform(struct?: TfAlgorithm.T
 }
 
 
-export function tfAlgorithmTrainingSpecificationAdditionalS3DataSourcePropertyToTerraform(struct?: TfAlgorithm.TrainingSpecificationAdditionalS3DataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTrainingSpecificationAdditionalS3DataSourcePropertyToTerraform(struct?: AwsAlgorithm.TrainingSpecificationAdditionalS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -899,7 +899,7 @@ export function tfAlgorithmTrainingSpecificationAdditionalS3DataSourcePropertyTo
 }
 
 
-export function tfAlgorithmTrainingSpecificationAdditionalS3DataSourcePropertyToHclTerraform(struct?: TfAlgorithm.TrainingSpecificationAdditionalS3DataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTrainingSpecificationAdditionalS3DataSourcePropertyToHclTerraform(struct?: AwsAlgorithm.TrainingSpecificationAdditionalS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -936,7 +936,7 @@ export function tfAlgorithmTrainingSpecificationAdditionalS3DataSourcePropertyTo
 }
 
 
-export function tfAlgorithmMetricDefinitionsPropertyToTerraform(struct?: TfAlgorithm.MetricDefinitionsProperty | cdktn.IResolvable): any {
+export function awsAlgorithmMetricDefinitionsPropertyToTerraform(struct?: AwsAlgorithm.MetricDefinitionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -948,7 +948,7 @@ export function tfAlgorithmMetricDefinitionsPropertyToTerraform(struct?: TfAlgor
 }
 
 
-export function tfAlgorithmMetricDefinitionsPropertyToHclTerraform(struct?: TfAlgorithm.MetricDefinitionsProperty | cdktn.IResolvable): any {
+export function awsAlgorithmMetricDefinitionsPropertyToHclTerraform(struct?: AwsAlgorithm.MetricDefinitionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -973,7 +973,7 @@ export function tfAlgorithmMetricDefinitionsPropertyToHclTerraform(struct?: TfAl
 }
 
 
-export function tfAlgorithmCategoricalParameterRangeSpecificationPropertyToTerraform(struct?: TfAlgorithm.CategoricalParameterRangeSpecificationProperty | cdktn.IResolvable): any {
+export function awsAlgorithmCategoricalParameterRangeSpecificationPropertyToTerraform(struct?: AwsAlgorithm.CategoricalParameterRangeSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -984,7 +984,7 @@ export function tfAlgorithmCategoricalParameterRangeSpecificationPropertyToTerra
 }
 
 
-export function tfAlgorithmCategoricalParameterRangeSpecificationPropertyToHclTerraform(struct?: TfAlgorithm.CategoricalParameterRangeSpecificationProperty | cdktn.IResolvable): any {
+export function awsAlgorithmCategoricalParameterRangeSpecificationPropertyToHclTerraform(struct?: AwsAlgorithm.CategoricalParameterRangeSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1003,7 +1003,7 @@ export function tfAlgorithmCategoricalParameterRangeSpecificationPropertyToHclTe
 }
 
 
-export function tfAlgorithmContinuousParameterRangeSpecificationPropertyToTerraform(struct?: TfAlgorithm.ContinuousParameterRangeSpecificationProperty | cdktn.IResolvable): any {
+export function awsAlgorithmContinuousParameterRangeSpecificationPropertyToTerraform(struct?: AwsAlgorithm.ContinuousParameterRangeSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1015,7 +1015,7 @@ export function tfAlgorithmContinuousParameterRangeSpecificationPropertyToTerraf
 }
 
 
-export function tfAlgorithmContinuousParameterRangeSpecificationPropertyToHclTerraform(struct?: TfAlgorithm.ContinuousParameterRangeSpecificationProperty | cdktn.IResolvable): any {
+export function awsAlgorithmContinuousParameterRangeSpecificationPropertyToHclTerraform(struct?: AwsAlgorithm.ContinuousParameterRangeSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1040,7 +1040,7 @@ export function tfAlgorithmContinuousParameterRangeSpecificationPropertyToHclTer
 }
 
 
-export function tfAlgorithmIntegerParameterRangeSpecificationPropertyToTerraform(struct?: TfAlgorithm.IntegerParameterRangeSpecificationProperty | cdktn.IResolvable): any {
+export function awsAlgorithmIntegerParameterRangeSpecificationPropertyToTerraform(struct?: AwsAlgorithm.IntegerParameterRangeSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1052,7 +1052,7 @@ export function tfAlgorithmIntegerParameterRangeSpecificationPropertyToTerraform
 }
 
 
-export function tfAlgorithmIntegerParameterRangeSpecificationPropertyToHclTerraform(struct?: TfAlgorithm.IntegerParameterRangeSpecificationProperty | cdktn.IResolvable): any {
+export function awsAlgorithmIntegerParameterRangeSpecificationPropertyToHclTerraform(struct?: AwsAlgorithm.IntegerParameterRangeSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1077,39 +1077,39 @@ export function tfAlgorithmIntegerParameterRangeSpecificationPropertyToHclTerraf
 }
 
 
-export function tfAlgorithmRangePropertyToTerraform(struct?: TfAlgorithm.RangeProperty | cdktn.IResolvable): any {
+export function awsAlgorithmRangePropertyToTerraform(struct?: AwsAlgorithm.RangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    categorical_parameter_range_specification: cdktn.listMapper(tfAlgorithmCategoricalParameterRangeSpecificationPropertyToTerraform, true)(struct!.categoricalParameterRangeSpecification),
-    continuous_parameter_range_specification: cdktn.listMapper(tfAlgorithmContinuousParameterRangeSpecificationPropertyToTerraform, true)(struct!.continuousParameterRangeSpecification),
-    integer_parameter_range_specification: cdktn.listMapper(tfAlgorithmIntegerParameterRangeSpecificationPropertyToTerraform, true)(struct!.integerParameterRangeSpecification),
+    categorical_parameter_range_specification: cdktn.listMapper(awsAlgorithmCategoricalParameterRangeSpecificationPropertyToTerraform, true)(struct!.categoricalParameterRangeSpecification),
+    continuous_parameter_range_specification: cdktn.listMapper(awsAlgorithmContinuousParameterRangeSpecificationPropertyToTerraform, true)(struct!.continuousParameterRangeSpecification),
+    integer_parameter_range_specification: cdktn.listMapper(awsAlgorithmIntegerParameterRangeSpecificationPropertyToTerraform, true)(struct!.integerParameterRangeSpecification),
   }
 }
 
 
-export function tfAlgorithmRangePropertyToHclTerraform(struct?: TfAlgorithm.RangeProperty | cdktn.IResolvable): any {
+export function awsAlgorithmRangePropertyToHclTerraform(struct?: AwsAlgorithm.RangeProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     categorical_parameter_range_specification: {
-      value: cdktn.listMapperHcl(tfAlgorithmCategoricalParameterRangeSpecificationPropertyToHclTerraform, true)(struct!.categoricalParameterRangeSpecification),
+      value: cdktn.listMapperHcl(awsAlgorithmCategoricalParameterRangeSpecificationPropertyToHclTerraform, true)(struct!.categoricalParameterRangeSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "CategoricalParameterRangeSpecificationPropertyList",
     },
     continuous_parameter_range_specification: {
-      value: cdktn.listMapperHcl(tfAlgorithmContinuousParameterRangeSpecificationPropertyToHclTerraform, true)(struct!.continuousParameterRangeSpecification),
+      value: cdktn.listMapperHcl(awsAlgorithmContinuousParameterRangeSpecificationPropertyToHclTerraform, true)(struct!.continuousParameterRangeSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "ContinuousParameterRangeSpecificationPropertyList",
     },
     integer_parameter_range_specification: {
-      value: cdktn.listMapperHcl(tfAlgorithmIntegerParameterRangeSpecificationPropertyToHclTerraform, true)(struct!.integerParameterRangeSpecification),
+      value: cdktn.listMapperHcl(awsAlgorithmIntegerParameterRangeSpecificationPropertyToHclTerraform, true)(struct!.integerParameterRangeSpecification),
       isBlock: true,
       type: "list",
       storageClassType: "IntegerParameterRangeSpecificationPropertyList",
@@ -1121,7 +1121,7 @@ export function tfAlgorithmRangePropertyToHclTerraform(struct?: TfAlgorithm.Rang
 }
 
 
-export function tfAlgorithmSupportedHyperParametersPropertyToTerraform(struct?: TfAlgorithm.SupportedHyperParametersProperty | cdktn.IResolvable): any {
+export function awsAlgorithmSupportedHyperParametersPropertyToTerraform(struct?: AwsAlgorithm.SupportedHyperParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1133,12 +1133,12 @@ export function tfAlgorithmSupportedHyperParametersPropertyToTerraform(struct?: 
     is_tunable: cdktn.booleanToTerraform(struct!.isTunable),
     name: cdktn.stringToTerraform(struct!.name),
     type: cdktn.stringToTerraform(struct!.type),
-    range: cdktn.listMapper(tfAlgorithmRangePropertyToTerraform, true)(struct!.range),
+    range: cdktn.listMapper(awsAlgorithmRangePropertyToTerraform, true)(struct!.range),
   }
 }
 
 
-export function tfAlgorithmSupportedHyperParametersPropertyToHclTerraform(struct?: TfAlgorithm.SupportedHyperParametersProperty | cdktn.IResolvable): any {
+export function awsAlgorithmSupportedHyperParametersPropertyToHclTerraform(struct?: AwsAlgorithm.SupportedHyperParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1181,7 +1181,7 @@ export function tfAlgorithmSupportedHyperParametersPropertyToHclTerraform(struct
       storageClassType: "string",
     },
     range: {
-      value: cdktn.listMapperHcl(tfAlgorithmRangePropertyToHclTerraform, true)(struct!.range),
+      value: cdktn.listMapperHcl(awsAlgorithmRangePropertyToHclTerraform, true)(struct!.range),
       isBlock: true,
       type: "list",
       storageClassType: "RangePropertyList",
@@ -1193,7 +1193,7 @@ export function tfAlgorithmSupportedHyperParametersPropertyToHclTerraform(struct
 }
 
 
-export function tfAlgorithmSupportedTuningJobObjectiveMetricsPropertyToTerraform(struct?: TfAlgorithm.SupportedTuningJobObjectiveMetricsProperty | cdktn.IResolvable): any {
+export function awsAlgorithmSupportedTuningJobObjectiveMetricsPropertyToTerraform(struct?: AwsAlgorithm.SupportedTuningJobObjectiveMetricsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1205,7 +1205,7 @@ export function tfAlgorithmSupportedTuningJobObjectiveMetricsPropertyToTerraform
 }
 
 
-export function tfAlgorithmSupportedTuningJobObjectiveMetricsPropertyToHclTerraform(struct?: TfAlgorithm.SupportedTuningJobObjectiveMetricsProperty | cdktn.IResolvable): any {
+export function awsAlgorithmSupportedTuningJobObjectiveMetricsPropertyToHclTerraform(struct?: AwsAlgorithm.SupportedTuningJobObjectiveMetricsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1230,7 +1230,7 @@ export function tfAlgorithmSupportedTuningJobObjectiveMetricsPropertyToHclTerraf
 }
 
 
-export function tfAlgorithmTrainingChannelsPropertyToTerraform(struct?: TfAlgorithm.TrainingChannelsProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTrainingChannelsPropertyToTerraform(struct?: AwsAlgorithm.TrainingChannelsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1246,7 +1246,7 @@ export function tfAlgorithmTrainingChannelsPropertyToTerraform(struct?: TfAlgori
 }
 
 
-export function tfAlgorithmTrainingChannelsPropertyToHclTerraform(struct?: TfAlgorithm.TrainingChannelsProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTrainingChannelsPropertyToHclTerraform(struct?: AwsAlgorithm.TrainingChannelsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1295,7 +1295,7 @@ export function tfAlgorithmTrainingChannelsPropertyToHclTerraform(struct?: TfAlg
 }
 
 
-export function tfAlgorithmTrainingSpecificationPropertyToTerraform(struct?: TfAlgorithm.TrainingSpecificationProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTrainingSpecificationPropertyToTerraform(struct?: AwsAlgorithm.TrainingSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1305,16 +1305,16 @@ export function tfAlgorithmTrainingSpecificationPropertyToTerraform(struct?: TfA
     supports_distributed_training: cdktn.booleanToTerraform(struct!.supportsDistributedTraining),
     training_image: cdktn.stringToTerraform(struct!.trainingImage),
     training_image_digest: cdktn.stringToTerraform(struct!.trainingImageDigest),
-    additional_s3_data_source: cdktn.listMapper(tfAlgorithmTrainingSpecificationAdditionalS3DataSourcePropertyToTerraform, true)(struct!.additionalS3DataSource),
-    metric_definitions: cdktn.listMapper(tfAlgorithmMetricDefinitionsPropertyToTerraform, true)(struct!.metricDefinitions),
-    supported_hyper_parameters: cdktn.listMapper(tfAlgorithmSupportedHyperParametersPropertyToTerraform, true)(struct!.supportedHyperParameters),
-    supported_tuning_job_objective_metrics: cdktn.listMapper(tfAlgorithmSupportedTuningJobObjectiveMetricsPropertyToTerraform, true)(struct!.supportedTuningJobObjectiveMetrics),
-    training_channels: cdktn.listMapper(tfAlgorithmTrainingChannelsPropertyToTerraform, true)(struct!.trainingChannels),
+    additional_s3_data_source: cdktn.listMapper(awsAlgorithmTrainingSpecificationAdditionalS3DataSourcePropertyToTerraform, true)(struct!.additionalS3DataSource),
+    metric_definitions: cdktn.listMapper(awsAlgorithmMetricDefinitionsPropertyToTerraform, true)(struct!.metricDefinitions),
+    supported_hyper_parameters: cdktn.listMapper(awsAlgorithmSupportedHyperParametersPropertyToTerraform, true)(struct!.supportedHyperParameters),
+    supported_tuning_job_objective_metrics: cdktn.listMapper(awsAlgorithmSupportedTuningJobObjectiveMetricsPropertyToTerraform, true)(struct!.supportedTuningJobObjectiveMetrics),
+    training_channels: cdktn.listMapper(awsAlgorithmTrainingChannelsPropertyToTerraform, true)(struct!.trainingChannels),
   }
 }
 
 
-export function tfAlgorithmTrainingSpecificationPropertyToHclTerraform(struct?: TfAlgorithm.TrainingSpecificationProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTrainingSpecificationPropertyToHclTerraform(struct?: AwsAlgorithm.TrainingSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1345,31 +1345,31 @@ export function tfAlgorithmTrainingSpecificationPropertyToHclTerraform(struct?: 
       storageClassType: "string",
     },
     additional_s3_data_source: {
-      value: cdktn.listMapperHcl(tfAlgorithmTrainingSpecificationAdditionalS3DataSourcePropertyToHclTerraform, true)(struct!.additionalS3DataSource),
+      value: cdktn.listMapperHcl(awsAlgorithmTrainingSpecificationAdditionalS3DataSourcePropertyToHclTerraform, true)(struct!.additionalS3DataSource),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingSpecificationAdditionalS3DataSourcePropertyList",
     },
     metric_definitions: {
-      value: cdktn.listMapperHcl(tfAlgorithmMetricDefinitionsPropertyToHclTerraform, true)(struct!.metricDefinitions),
+      value: cdktn.listMapperHcl(awsAlgorithmMetricDefinitionsPropertyToHclTerraform, true)(struct!.metricDefinitions),
       isBlock: true,
       type: "list",
       storageClassType: "MetricDefinitionsPropertyList",
     },
     supported_hyper_parameters: {
-      value: cdktn.listMapperHcl(tfAlgorithmSupportedHyperParametersPropertyToHclTerraform, true)(struct!.supportedHyperParameters),
+      value: cdktn.listMapperHcl(awsAlgorithmSupportedHyperParametersPropertyToHclTerraform, true)(struct!.supportedHyperParameters),
       isBlock: true,
       type: "list",
       storageClassType: "SupportedHyperParametersPropertyList",
     },
     supported_tuning_job_objective_metrics: {
-      value: cdktn.listMapperHcl(tfAlgorithmSupportedTuningJobObjectiveMetricsPropertyToHclTerraform, true)(struct!.supportedTuningJobObjectiveMetrics),
+      value: cdktn.listMapperHcl(awsAlgorithmSupportedTuningJobObjectiveMetricsPropertyToHclTerraform, true)(struct!.supportedTuningJobObjectiveMetrics),
       isBlock: true,
       type: "list",
       storageClassType: "SupportedTuningJobObjectiveMetricsPropertyList",
     },
     training_channels: {
-      value: cdktn.listMapperHcl(tfAlgorithmTrainingChannelsPropertyToHclTerraform, true)(struct!.trainingChannels),
+      value: cdktn.listMapperHcl(awsAlgorithmTrainingChannelsPropertyToHclTerraform, true)(struct!.trainingChannels),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingChannelsPropertyList",
@@ -1381,7 +1381,7 @@ export function tfAlgorithmTrainingSpecificationPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfAlgorithmFileSystemDataSourcePropertyToTerraform(struct?: TfAlgorithm.FileSystemDataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmFileSystemDataSourcePropertyToTerraform(struct?: AwsAlgorithm.FileSystemDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1395,7 +1395,7 @@ export function tfAlgorithmFileSystemDataSourcePropertyToTerraform(struct?: TfAl
 }
 
 
-export function tfAlgorithmFileSystemDataSourcePropertyToHclTerraform(struct?: TfAlgorithm.FileSystemDataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmFileSystemDataSourcePropertyToHclTerraform(struct?: AwsAlgorithm.FileSystemDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1432,7 +1432,7 @@ export function tfAlgorithmFileSystemDataSourcePropertyToHclTerraform(struct?: T
 }
 
 
-export function tfAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToTerraform(struct?: TfAlgorithm.ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToTerraform(struct?: AwsAlgorithm.ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1443,7 +1443,7 @@ export function tfAlgorithmValidationSpecificationValidationProfilesTrainingJobD
 }
 
 
-export function tfAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToHclTerraform(struct?: TfAlgorithm.ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToHclTerraform(struct?: AwsAlgorithm.ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1462,7 +1462,7 @@ export function tfAlgorithmValidationSpecificationValidationProfilesTrainingJobD
 }
 
 
-export function tfAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct?: TfAlgorithm.ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToTerraform(struct?: AwsAlgorithm.ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1473,7 +1473,7 @@ export function tfAlgorithmValidationSpecificationValidationProfilesTrainingJobD
 }
 
 
-export function tfAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct?: TfAlgorithm.ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform(struct?: AwsAlgorithm.ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1492,7 +1492,7 @@ export function tfAlgorithmValidationSpecificationValidationProfilesTrainingJobD
 }
 
 
-export function tfAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyToTerraform(struct?: TfAlgorithm.ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyToTerraform(struct?: AwsAlgorithm.ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1503,13 +1503,13 @@ export function tfAlgorithmValidationSpecificationValidationProfilesTrainingJobD
     s3_data_distribution_type: cdktn.stringToTerraform(struct!.s3DataDistributionType),
     s3_data_type: cdktn.stringToTerraform(struct!.s3DataType),
     s3_uri: cdktn.stringToTerraform(struct!.s3Uri),
-    hub_access_config: cdktn.listMapper(tfAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToTerraform, true)(struct!.hubAccessConfig),
-    model_access_config: cdktn.listMapper(tfAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToTerraform, true)(struct!.modelAccessConfig),
+    hub_access_config: cdktn.listMapper(awsAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToTerraform, true)(struct!.hubAccessConfig),
+    model_access_config: cdktn.listMapper(awsAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToTerraform, true)(struct!.modelAccessConfig),
   }
 }
 
 
-export function tfAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyToHclTerraform(struct?: TfAlgorithm.ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyToHclTerraform(struct?: AwsAlgorithm.ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1546,13 +1546,13 @@ export function tfAlgorithmValidationSpecificationValidationProfilesTrainingJobD
       storageClassType: "string",
     },
     hub_access_config: {
-      value: cdktn.listMapperHcl(tfAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToHclTerraform, true)(struct!.hubAccessConfig),
+      value: cdktn.listMapperHcl(awsAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyToHclTerraform, true)(struct!.hubAccessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigPropertyList",
     },
     model_access_config: {
-      value: cdktn.listMapperHcl(tfAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform, true)(struct!.modelAccessConfig),
+      value: cdktn.listMapperHcl(awsAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyToHclTerraform, true)(struct!.modelAccessConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigPropertyList",
@@ -1564,32 +1564,32 @@ export function tfAlgorithmValidationSpecificationValidationProfilesTrainingJobD
 }
 
 
-export function tfAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourcePropertyToTerraform(struct?: TfAlgorithm.ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourcePropertyToTerraform(struct?: AwsAlgorithm.ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    file_system_data_source: cdktn.listMapper(tfAlgorithmFileSystemDataSourcePropertyToTerraform, true)(struct!.fileSystemDataSource),
-    s3_data_source: cdktn.listMapper(tfAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
+    file_system_data_source: cdktn.listMapper(awsAlgorithmFileSystemDataSourcePropertyToTerraform, true)(struct!.fileSystemDataSource),
+    s3_data_source: cdktn.listMapper(awsAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
   }
 }
 
 
-export function tfAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourcePropertyToHclTerraform(struct?: TfAlgorithm.ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourcePropertyToHclTerraform(struct?: AwsAlgorithm.ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     file_system_data_source: {
-      value: cdktn.listMapperHcl(tfAlgorithmFileSystemDataSourcePropertyToHclTerraform, true)(struct!.fileSystemDataSource),
+      value: cdktn.listMapperHcl(awsAlgorithmFileSystemDataSourcePropertyToHclTerraform, true)(struct!.fileSystemDataSource),
       isBlock: true,
       type: "list",
       storageClassType: "FileSystemDataSourcePropertyList",
     },
     s3_data_source: {
-      value: cdktn.listMapperHcl(tfAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
+      value: cdktn.listMapperHcl(awsAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
       isBlock: true,
       type: "list",
       storageClassType: "ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourcePropertyList",
@@ -1601,7 +1601,7 @@ export function tfAlgorithmValidationSpecificationValidationProfilesTrainingJobD
 }
 
 
-export function tfAlgorithmShuffleConfigPropertyToTerraform(struct?: TfAlgorithm.ShuffleConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmShuffleConfigPropertyToTerraform(struct?: AwsAlgorithm.ShuffleConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1612,7 +1612,7 @@ export function tfAlgorithmShuffleConfigPropertyToTerraform(struct?: TfAlgorithm
 }
 
 
-export function tfAlgorithmShuffleConfigPropertyToHclTerraform(struct?: TfAlgorithm.ShuffleConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmShuffleConfigPropertyToHclTerraform(struct?: AwsAlgorithm.ShuffleConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1631,7 +1631,7 @@ export function tfAlgorithmShuffleConfigPropertyToHclTerraform(struct?: TfAlgori
 }
 
 
-export function tfAlgorithmInputDataConfigPropertyToTerraform(struct?: TfAlgorithm.InputDataConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmInputDataConfigPropertyToTerraform(struct?: AwsAlgorithm.InputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1642,13 +1642,13 @@ export function tfAlgorithmInputDataConfigPropertyToTerraform(struct?: TfAlgorit
     content_type: cdktn.stringToTerraform(struct!.contentType),
     input_mode: cdktn.stringToTerraform(struct!.inputMode),
     record_wrapper_type: cdktn.stringToTerraform(struct!.recordWrapperType),
-    data_source: cdktn.listMapper(tfAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourcePropertyToTerraform, true)(struct!.dataSource),
-    shuffle_config: cdktn.listMapper(tfAlgorithmShuffleConfigPropertyToTerraform, true)(struct!.shuffleConfig),
+    data_source: cdktn.listMapper(awsAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourcePropertyToTerraform, true)(struct!.dataSource),
+    shuffle_config: cdktn.listMapper(awsAlgorithmShuffleConfigPropertyToTerraform, true)(struct!.shuffleConfig),
   }
 }
 
 
-export function tfAlgorithmInputDataConfigPropertyToHclTerraform(struct?: TfAlgorithm.InputDataConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmInputDataConfigPropertyToHclTerraform(struct?: AwsAlgorithm.InputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1685,13 +1685,13 @@ export function tfAlgorithmInputDataConfigPropertyToHclTerraform(struct?: TfAlgo
       storageClassType: "string",
     },
     data_source: {
-      value: cdktn.listMapperHcl(tfAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourcePropertyToHclTerraform, true)(struct!.dataSource),
+      value: cdktn.listMapperHcl(awsAlgorithmValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourcePropertyToHclTerraform, true)(struct!.dataSource),
       isBlock: true,
       type: "list",
       storageClassType: "ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourcePropertyList",
     },
     shuffle_config: {
-      value: cdktn.listMapperHcl(tfAlgorithmShuffleConfigPropertyToHclTerraform, true)(struct!.shuffleConfig),
+      value: cdktn.listMapperHcl(awsAlgorithmShuffleConfigPropertyToHclTerraform, true)(struct!.shuffleConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ShuffleConfigPropertyList",
@@ -1703,7 +1703,7 @@ export function tfAlgorithmInputDataConfigPropertyToHclTerraform(struct?: TfAlgo
 }
 
 
-export function tfAlgorithmOutputDataConfigPropertyToTerraform(struct?: TfAlgorithm.OutputDataConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmOutputDataConfigPropertyToTerraform(struct?: AwsAlgorithm.OutputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1716,7 +1716,7 @@ export function tfAlgorithmOutputDataConfigPropertyToTerraform(struct?: TfAlgori
 }
 
 
-export function tfAlgorithmOutputDataConfigPropertyToHclTerraform(struct?: TfAlgorithm.OutputDataConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmOutputDataConfigPropertyToHclTerraform(struct?: AwsAlgorithm.OutputDataConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1747,7 +1747,7 @@ export function tfAlgorithmOutputDataConfigPropertyToHclTerraform(struct?: TfAlg
 }
 
 
-export function tfAlgorithmInstanceGroupsPropertyToTerraform(struct?: TfAlgorithm.InstanceGroupsProperty | cdktn.IResolvable): any {
+export function awsAlgorithmInstanceGroupsPropertyToTerraform(struct?: AwsAlgorithm.InstanceGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1760,7 +1760,7 @@ export function tfAlgorithmInstanceGroupsPropertyToTerraform(struct?: TfAlgorith
 }
 
 
-export function tfAlgorithmInstanceGroupsPropertyToHclTerraform(struct?: TfAlgorithm.InstanceGroupsProperty | cdktn.IResolvable): any {
+export function awsAlgorithmInstanceGroupsPropertyToHclTerraform(struct?: AwsAlgorithm.InstanceGroupsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1791,7 +1791,7 @@ export function tfAlgorithmInstanceGroupsPropertyToHclTerraform(struct?: TfAlgor
 }
 
 
-export function tfAlgorithmPlacementSpecificationsPropertyToTerraform(struct?: TfAlgorithm.PlacementSpecificationsProperty | cdktn.IResolvable): any {
+export function awsAlgorithmPlacementSpecificationsPropertyToTerraform(struct?: AwsAlgorithm.PlacementSpecificationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1803,7 +1803,7 @@ export function tfAlgorithmPlacementSpecificationsPropertyToTerraform(struct?: T
 }
 
 
-export function tfAlgorithmPlacementSpecificationsPropertyToHclTerraform(struct?: TfAlgorithm.PlacementSpecificationsProperty | cdktn.IResolvable): any {
+export function awsAlgorithmPlacementSpecificationsPropertyToHclTerraform(struct?: AwsAlgorithm.PlacementSpecificationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1828,19 +1828,19 @@ export function tfAlgorithmPlacementSpecificationsPropertyToHclTerraform(struct?
 }
 
 
-export function tfAlgorithmInstancePlacementConfigPropertyToTerraform(struct?: TfAlgorithm.InstancePlacementConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmInstancePlacementConfigPropertyToTerraform(struct?: AwsAlgorithm.InstancePlacementConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     enable_multiple_jobs: cdktn.booleanToTerraform(struct!.enableMultipleJobs),
-    placement_specifications: cdktn.listMapper(tfAlgorithmPlacementSpecificationsPropertyToTerraform, true)(struct!.placementSpecifications),
+    placement_specifications: cdktn.listMapper(awsAlgorithmPlacementSpecificationsPropertyToTerraform, true)(struct!.placementSpecifications),
   }
 }
 
 
-export function tfAlgorithmInstancePlacementConfigPropertyToHclTerraform(struct?: TfAlgorithm.InstancePlacementConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmInstancePlacementConfigPropertyToHclTerraform(struct?: AwsAlgorithm.InstancePlacementConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1853,7 +1853,7 @@ export function tfAlgorithmInstancePlacementConfigPropertyToHclTerraform(struct?
       storageClassType: "boolean",
     },
     placement_specifications: {
-      value: cdktn.listMapperHcl(tfAlgorithmPlacementSpecificationsPropertyToHclTerraform, true)(struct!.placementSpecifications),
+      value: cdktn.listMapperHcl(awsAlgorithmPlacementSpecificationsPropertyToHclTerraform, true)(struct!.placementSpecifications),
       isBlock: true,
       type: "list",
       storageClassType: "PlacementSpecificationsPropertyList",
@@ -1865,7 +1865,7 @@ export function tfAlgorithmInstancePlacementConfigPropertyToHclTerraform(struct?
 }
 
 
-export function tfAlgorithmResourceConfigPropertyToTerraform(struct?: TfAlgorithm.ResourceConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmResourceConfigPropertyToTerraform(struct?: AwsAlgorithm.ResourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1877,13 +1877,13 @@ export function tfAlgorithmResourceConfigPropertyToTerraform(struct?: TfAlgorith
     training_plan_arn: cdktn.stringToTerraform(struct!.trainingPlanArn),
     volume_kms_key_id: cdktn.stringToTerraform(struct!.volumeKmsKeyId),
     volume_size_in_gb: cdktn.numberToTerraform(struct!.volumeSizeInGb),
-    instance_groups: cdktn.listMapper(tfAlgorithmInstanceGroupsPropertyToTerraform, true)(struct!.instanceGroups),
-    instance_placement_config: cdktn.listMapper(tfAlgorithmInstancePlacementConfigPropertyToTerraform, true)(struct!.instancePlacementConfig),
+    instance_groups: cdktn.listMapper(awsAlgorithmInstanceGroupsPropertyToTerraform, true)(struct!.instanceGroups),
+    instance_placement_config: cdktn.listMapper(awsAlgorithmInstancePlacementConfigPropertyToTerraform, true)(struct!.instancePlacementConfig),
   }
 }
 
 
-export function tfAlgorithmResourceConfigPropertyToHclTerraform(struct?: TfAlgorithm.ResourceConfigProperty | cdktn.IResolvable): any {
+export function awsAlgorithmResourceConfigPropertyToHclTerraform(struct?: AwsAlgorithm.ResourceConfigProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1926,13 +1926,13 @@ export function tfAlgorithmResourceConfigPropertyToHclTerraform(struct?: TfAlgor
       storageClassType: "number",
     },
     instance_groups: {
-      value: cdktn.listMapperHcl(tfAlgorithmInstanceGroupsPropertyToHclTerraform, true)(struct!.instanceGroups),
+      value: cdktn.listMapperHcl(awsAlgorithmInstanceGroupsPropertyToHclTerraform, true)(struct!.instanceGroups),
       isBlock: true,
       type: "list",
       storageClassType: "InstanceGroupsPropertyList",
     },
     instance_placement_config: {
-      value: cdktn.listMapperHcl(tfAlgorithmInstancePlacementConfigPropertyToHclTerraform, true)(struct!.instancePlacementConfig),
+      value: cdktn.listMapperHcl(awsAlgorithmInstancePlacementConfigPropertyToHclTerraform, true)(struct!.instancePlacementConfig),
       isBlock: true,
       type: "list",
       storageClassType: "InstancePlacementConfigPropertyList",
@@ -1944,7 +1944,7 @@ export function tfAlgorithmResourceConfigPropertyToHclTerraform(struct?: TfAlgor
 }
 
 
-export function tfAlgorithmStoppingConditionPropertyToTerraform(struct?: TfAlgorithm.StoppingConditionProperty | cdktn.IResolvable): any {
+export function awsAlgorithmStoppingConditionPropertyToTerraform(struct?: AwsAlgorithm.StoppingConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1957,7 +1957,7 @@ export function tfAlgorithmStoppingConditionPropertyToTerraform(struct?: TfAlgor
 }
 
 
-export function tfAlgorithmStoppingConditionPropertyToHclTerraform(struct?: TfAlgorithm.StoppingConditionProperty | cdktn.IResolvable): any {
+export function awsAlgorithmStoppingConditionPropertyToHclTerraform(struct?: AwsAlgorithm.StoppingConditionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1988,7 +1988,7 @@ export function tfAlgorithmStoppingConditionPropertyToHclTerraform(struct?: TfAl
 }
 
 
-export function tfAlgorithmTrainingJobDefinitionPropertyToTerraform(struct?: TfAlgorithm.TrainingJobDefinitionProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTrainingJobDefinitionPropertyToTerraform(struct?: AwsAlgorithm.TrainingJobDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1996,15 +1996,15 @@ export function tfAlgorithmTrainingJobDefinitionPropertyToTerraform(struct?: TfA
   return {
     hyper_parameters: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.hyperParameters),
     training_input_mode: cdktn.stringToTerraform(struct!.trainingInputMode),
-    input_data_config: cdktn.listMapper(tfAlgorithmInputDataConfigPropertyToTerraform, true)(struct!.inputDataConfig),
-    output_data_config: cdktn.listMapper(tfAlgorithmOutputDataConfigPropertyToTerraform, true)(struct!.outputDataConfig),
-    resource_config: cdktn.listMapper(tfAlgorithmResourceConfigPropertyToTerraform, true)(struct!.resourceConfig),
-    stopping_condition: cdktn.listMapper(tfAlgorithmStoppingConditionPropertyToTerraform, true)(struct!.stoppingCondition),
+    input_data_config: cdktn.listMapper(awsAlgorithmInputDataConfigPropertyToTerraform, true)(struct!.inputDataConfig),
+    output_data_config: cdktn.listMapper(awsAlgorithmOutputDataConfigPropertyToTerraform, true)(struct!.outputDataConfig),
+    resource_config: cdktn.listMapper(awsAlgorithmResourceConfigPropertyToTerraform, true)(struct!.resourceConfig),
+    stopping_condition: cdktn.listMapper(awsAlgorithmStoppingConditionPropertyToTerraform, true)(struct!.stoppingCondition),
   }
 }
 
 
-export function tfAlgorithmTrainingJobDefinitionPropertyToHclTerraform(struct?: TfAlgorithm.TrainingJobDefinitionProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTrainingJobDefinitionPropertyToHclTerraform(struct?: AwsAlgorithm.TrainingJobDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2023,25 +2023,25 @@ export function tfAlgorithmTrainingJobDefinitionPropertyToHclTerraform(struct?: 
       storageClassType: "string",
     },
     input_data_config: {
-      value: cdktn.listMapperHcl(tfAlgorithmInputDataConfigPropertyToHclTerraform, true)(struct!.inputDataConfig),
+      value: cdktn.listMapperHcl(awsAlgorithmInputDataConfigPropertyToHclTerraform, true)(struct!.inputDataConfig),
       isBlock: true,
       type: "list",
       storageClassType: "InputDataConfigPropertyList",
     },
     output_data_config: {
-      value: cdktn.listMapperHcl(tfAlgorithmOutputDataConfigPropertyToHclTerraform, true)(struct!.outputDataConfig),
+      value: cdktn.listMapperHcl(awsAlgorithmOutputDataConfigPropertyToHclTerraform, true)(struct!.outputDataConfig),
       isBlock: true,
       type: "list",
       storageClassType: "OutputDataConfigPropertyList",
     },
     resource_config: {
-      value: cdktn.listMapperHcl(tfAlgorithmResourceConfigPropertyToHclTerraform, true)(struct!.resourceConfig),
+      value: cdktn.listMapperHcl(awsAlgorithmResourceConfigPropertyToHclTerraform, true)(struct!.resourceConfig),
       isBlock: true,
       type: "list",
       storageClassType: "ResourceConfigPropertyList",
     },
     stopping_condition: {
-      value: cdktn.listMapperHcl(tfAlgorithmStoppingConditionPropertyToHclTerraform, true)(struct!.stoppingCondition),
+      value: cdktn.listMapperHcl(awsAlgorithmStoppingConditionPropertyToHclTerraform, true)(struct!.stoppingCondition),
       isBlock: true,
       type: "list",
       storageClassType: "StoppingConditionPropertyList",
@@ -2053,7 +2053,7 @@ export function tfAlgorithmTrainingJobDefinitionPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfAlgorithmValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSourcePropertyToTerraform(struct?: TfAlgorithm.ValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSourcePropertyToTerraform(struct?: AwsAlgorithm.ValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2065,7 +2065,7 @@ export function tfAlgorithmValidationSpecificationValidationProfilesTransformJob
 }
 
 
-export function tfAlgorithmValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSourcePropertyToHclTerraform(struct?: TfAlgorithm.ValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSourcePropertyToHclTerraform(struct?: AwsAlgorithm.ValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2090,25 +2090,25 @@ export function tfAlgorithmValidationSpecificationValidationProfilesTransformJob
 }
 
 
-export function tfAlgorithmValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourcePropertyToTerraform(struct?: TfAlgorithm.ValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourcePropertyToTerraform(struct?: AwsAlgorithm.ValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    s3_data_source: cdktn.listMapper(tfAlgorithmValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
+    s3_data_source: cdktn.listMapper(awsAlgorithmValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSourcePropertyToTerraform, true)(struct!.s3DataSource),
   }
 }
 
 
-export function tfAlgorithmValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourcePropertyToHclTerraform(struct?: TfAlgorithm.ValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceProperty | cdktn.IResolvable): any {
+export function awsAlgorithmValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourcePropertyToHclTerraform(struct?: AwsAlgorithm.ValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     s3_data_source: {
-      value: cdktn.listMapperHcl(tfAlgorithmValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
+      value: cdktn.listMapperHcl(awsAlgorithmValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSourcePropertyToHclTerraform, true)(struct!.s3DataSource),
       isBlock: true,
       type: "list",
       storageClassType: "ValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSourcePropertyList",
@@ -2120,7 +2120,7 @@ export function tfAlgorithmValidationSpecificationValidationProfilesTransformJob
 }
 
 
-export function tfAlgorithmTransformInputPropertyToTerraform(struct?: TfAlgorithm.TransformInputProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTransformInputPropertyToTerraform(struct?: AwsAlgorithm.TransformInputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2129,12 +2129,12 @@ export function tfAlgorithmTransformInputPropertyToTerraform(struct?: TfAlgorith
     compression_type: cdktn.stringToTerraform(struct!.compressionType),
     content_type: cdktn.stringToTerraform(struct!.contentType),
     split_type: cdktn.stringToTerraform(struct!.splitType),
-    data_source: cdktn.listMapper(tfAlgorithmValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourcePropertyToTerraform, true)(struct!.dataSource),
+    data_source: cdktn.listMapper(awsAlgorithmValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourcePropertyToTerraform, true)(struct!.dataSource),
   }
 }
 
 
-export function tfAlgorithmTransformInputPropertyToHclTerraform(struct?: TfAlgorithm.TransformInputProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTransformInputPropertyToHclTerraform(struct?: AwsAlgorithm.TransformInputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2159,7 +2159,7 @@ export function tfAlgorithmTransformInputPropertyToHclTerraform(struct?: TfAlgor
       storageClassType: "string",
     },
     data_source: {
-      value: cdktn.listMapperHcl(tfAlgorithmValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourcePropertyToHclTerraform, true)(struct!.dataSource),
+      value: cdktn.listMapperHcl(awsAlgorithmValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourcePropertyToHclTerraform, true)(struct!.dataSource),
       isBlock: true,
       type: "list",
       storageClassType: "ValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourcePropertyList",
@@ -2171,7 +2171,7 @@ export function tfAlgorithmTransformInputPropertyToHclTerraform(struct?: TfAlgor
 }
 
 
-export function tfAlgorithmTransformOutputPropertyToTerraform(struct?: TfAlgorithm.TransformOutputProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTransformOutputPropertyToTerraform(struct?: AwsAlgorithm.TransformOutputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2185,7 +2185,7 @@ export function tfAlgorithmTransformOutputPropertyToTerraform(struct?: TfAlgorit
 }
 
 
-export function tfAlgorithmTransformOutputPropertyToHclTerraform(struct?: TfAlgorithm.TransformOutputProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTransformOutputPropertyToHclTerraform(struct?: AwsAlgorithm.TransformOutputProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2222,7 +2222,7 @@ export function tfAlgorithmTransformOutputPropertyToHclTerraform(struct?: TfAlgo
 }
 
 
-export function tfAlgorithmTransformResourcesPropertyToTerraform(struct?: TfAlgorithm.TransformResourcesProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTransformResourcesPropertyToTerraform(struct?: AwsAlgorithm.TransformResourcesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2236,7 +2236,7 @@ export function tfAlgorithmTransformResourcesPropertyToTerraform(struct?: TfAlgo
 }
 
 
-export function tfAlgorithmTransformResourcesPropertyToHclTerraform(struct?: TfAlgorithm.TransformResourcesProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTransformResourcesPropertyToHclTerraform(struct?: AwsAlgorithm.TransformResourcesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2273,7 +2273,7 @@ export function tfAlgorithmTransformResourcesPropertyToHclTerraform(struct?: TfA
 }
 
 
-export function tfAlgorithmTransformJobDefinitionPropertyToTerraform(struct?: TfAlgorithm.TransformJobDefinitionProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTransformJobDefinitionPropertyToTerraform(struct?: AwsAlgorithm.TransformJobDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2283,14 +2283,14 @@ export function tfAlgorithmTransformJobDefinitionPropertyToTerraform(struct?: Tf
     environment: cdktn.hashMapper(cdktn.stringToTerraform)(struct!.environment),
     max_concurrent_transforms: cdktn.numberToTerraform(struct!.maxConcurrentTransforms),
     max_payload_in_mb: cdktn.numberToTerraform(struct!.maxPayloadInMb),
-    transform_input: cdktn.listMapper(tfAlgorithmTransformInputPropertyToTerraform, true)(struct!.transformInput),
-    transform_output: cdktn.listMapper(tfAlgorithmTransformOutputPropertyToTerraform, true)(struct!.transformOutput),
-    transform_resources: cdktn.listMapper(tfAlgorithmTransformResourcesPropertyToTerraform, true)(struct!.transformResources),
+    transform_input: cdktn.listMapper(awsAlgorithmTransformInputPropertyToTerraform, true)(struct!.transformInput),
+    transform_output: cdktn.listMapper(awsAlgorithmTransformOutputPropertyToTerraform, true)(struct!.transformOutput),
+    transform_resources: cdktn.listMapper(awsAlgorithmTransformResourcesPropertyToTerraform, true)(struct!.transformResources),
   }
 }
 
 
-export function tfAlgorithmTransformJobDefinitionPropertyToHclTerraform(struct?: TfAlgorithm.TransformJobDefinitionProperty | cdktn.IResolvable): any {
+export function awsAlgorithmTransformJobDefinitionPropertyToHclTerraform(struct?: AwsAlgorithm.TransformJobDefinitionProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2321,19 +2321,19 @@ export function tfAlgorithmTransformJobDefinitionPropertyToHclTerraform(struct?:
       storageClassType: "number",
     },
     transform_input: {
-      value: cdktn.listMapperHcl(tfAlgorithmTransformInputPropertyToHclTerraform, true)(struct!.transformInput),
+      value: cdktn.listMapperHcl(awsAlgorithmTransformInputPropertyToHclTerraform, true)(struct!.transformInput),
       isBlock: true,
       type: "list",
       storageClassType: "TransformInputPropertyList",
     },
     transform_output: {
-      value: cdktn.listMapperHcl(tfAlgorithmTransformOutputPropertyToHclTerraform, true)(struct!.transformOutput),
+      value: cdktn.listMapperHcl(awsAlgorithmTransformOutputPropertyToHclTerraform, true)(struct!.transformOutput),
       isBlock: true,
       type: "list",
       storageClassType: "TransformOutputPropertyList",
     },
     transform_resources: {
-      value: cdktn.listMapperHcl(tfAlgorithmTransformResourcesPropertyToHclTerraform, true)(struct!.transformResources),
+      value: cdktn.listMapperHcl(awsAlgorithmTransformResourcesPropertyToHclTerraform, true)(struct!.transformResources),
       isBlock: true,
       type: "list",
       storageClassType: "TransformResourcesPropertyList",
@@ -2345,20 +2345,20 @@ export function tfAlgorithmTransformJobDefinitionPropertyToHclTerraform(struct?:
 }
 
 
-export function tfAlgorithmValidationProfilesPropertyToTerraform(struct?: TfAlgorithm.ValidationProfilesProperty | cdktn.IResolvable): any {
+export function awsAlgorithmValidationProfilesPropertyToTerraform(struct?: AwsAlgorithm.ValidationProfilesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     profile_name: cdktn.stringToTerraform(struct!.profileName),
-    training_job_definition: cdktn.listMapper(tfAlgorithmTrainingJobDefinitionPropertyToTerraform, true)(struct!.trainingJobDefinition),
-    transform_job_definition: cdktn.listMapper(tfAlgorithmTransformJobDefinitionPropertyToTerraform, true)(struct!.transformJobDefinition),
+    training_job_definition: cdktn.listMapper(awsAlgorithmTrainingJobDefinitionPropertyToTerraform, true)(struct!.trainingJobDefinition),
+    transform_job_definition: cdktn.listMapper(awsAlgorithmTransformJobDefinitionPropertyToTerraform, true)(struct!.transformJobDefinition),
   }
 }
 
 
-export function tfAlgorithmValidationProfilesPropertyToHclTerraform(struct?: TfAlgorithm.ValidationProfilesProperty | cdktn.IResolvable): any {
+export function awsAlgorithmValidationProfilesPropertyToHclTerraform(struct?: AwsAlgorithm.ValidationProfilesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2371,13 +2371,13 @@ export function tfAlgorithmValidationProfilesPropertyToHclTerraform(struct?: TfA
       storageClassType: "string",
     },
     training_job_definition: {
-      value: cdktn.listMapperHcl(tfAlgorithmTrainingJobDefinitionPropertyToHclTerraform, true)(struct!.trainingJobDefinition),
+      value: cdktn.listMapperHcl(awsAlgorithmTrainingJobDefinitionPropertyToHclTerraform, true)(struct!.trainingJobDefinition),
       isBlock: true,
       type: "list",
       storageClassType: "TrainingJobDefinitionPropertyList",
     },
     transform_job_definition: {
-      value: cdktn.listMapperHcl(tfAlgorithmTransformJobDefinitionPropertyToHclTerraform, true)(struct!.transformJobDefinition),
+      value: cdktn.listMapperHcl(awsAlgorithmTransformJobDefinitionPropertyToHclTerraform, true)(struct!.transformJobDefinition),
       isBlock: true,
       type: "list",
       storageClassType: "TransformJobDefinitionPropertyList",
@@ -2389,19 +2389,19 @@ export function tfAlgorithmValidationProfilesPropertyToHclTerraform(struct?: TfA
 }
 
 
-export function tfAlgorithmValidationSpecificationPropertyToTerraform(struct?: TfAlgorithm.ValidationSpecificationProperty | cdktn.IResolvable): any {
+export function awsAlgorithmValidationSpecificationPropertyToTerraform(struct?: AwsAlgorithm.ValidationSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     validation_role: cdktn.stringToTerraform(struct!.validationRole),
-    validation_profiles: cdktn.listMapper(tfAlgorithmValidationProfilesPropertyToTerraform, true)(struct!.validationProfiles),
+    validation_profiles: cdktn.listMapper(awsAlgorithmValidationProfilesPropertyToTerraform, true)(struct!.validationProfiles),
   }
 }
 
 
-export function tfAlgorithmValidationSpecificationPropertyToHclTerraform(struct?: TfAlgorithm.ValidationSpecificationProperty | cdktn.IResolvable): any {
+export function awsAlgorithmValidationSpecificationPropertyToHclTerraform(struct?: AwsAlgorithm.ValidationSpecificationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2414,7 +2414,7 @@ export function tfAlgorithmValidationSpecificationPropertyToHclTerraform(struct?
       storageClassType: "string",
     },
     validation_profiles: {
-      value: cdktn.listMapperHcl(tfAlgorithmValidationProfilesPropertyToHclTerraform, true)(struct!.validationProfiles),
+      value: cdktn.listMapperHcl(awsAlgorithmValidationProfilesPropertyToHclTerraform, true)(struct!.validationProfiles),
       isBlock: true,
       type: "list",
       storageClassType: "ValidationProfilesPropertyList",
@@ -2426,22 +2426,22 @@ export function tfAlgorithmValidationSpecificationPropertyToHclTerraform(struct?
 }
 
 
-export namespace TfAlgorithm {
+export namespace AwsAlgorithm {
 export interface InferenceSpecificationContainersAdditionalS3DataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#compression_type TfAlgorithm#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#compression_type AwsAlgorithm#compression_type}
   */
   readonly compressionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#etag TfAlgorithm#etag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#etag AwsAlgorithm#etag}
   */
   readonly etag?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_type TfAlgorithm#s3_data_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_type AwsAlgorithm#s3_data_type}
   */
   readonly s3DataType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_uri TfAlgorithm#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_uri AwsAlgorithm#s3_uri}
   */
   readonly s3Uri: string;
 }
@@ -2587,15 +2587,15 @@ export class InferenceSpecificationContainersAdditionalS3DataSourcePropertyList 
 }
 export interface BaseModelProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#hub_content_name TfAlgorithm#hub_content_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#hub_content_name AwsAlgorithm#hub_content_name}
   */
   readonly hubContentName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#hub_content_version TfAlgorithm#hub_content_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#hub_content_version AwsAlgorithm#hub_content_version}
   */
   readonly hubContentVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#recipe_name TfAlgorithm#recipe_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#recipe_name AwsAlgorithm#recipe_name}
   */
   readonly recipeName?: string;
 }
@@ -2725,7 +2725,7 @@ export class BaseModelPropertyList extends cdktn.ComplexList {
 }
 export interface InferenceSpecificationContainersModelDataSourceS3DataSourceHubAccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#hub_content_arn TfAlgorithm#hub_content_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#hub_content_arn AwsAlgorithm#hub_content_arn}
   */
   readonly hubContentArn?: string;
 }
@@ -2811,7 +2811,7 @@ export class InferenceSpecificationContainersModelDataSourceS3DataSourceHubAcces
 }
 export interface InferenceSpecificationContainersModelDataSourceS3DataSourceModelAccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#accept_eula TfAlgorithm#accept_eula}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#accept_eula AwsAlgorithm#accept_eula}
   */
   readonly acceptEula?: boolean | cdktn.IResolvable;
 }
@@ -2897,39 +2897,39 @@ export class InferenceSpecificationContainersModelDataSourceS3DataSourceModelAcc
 }
 export interface InferenceSpecificationContainersModelDataSourceS3DataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#compression_type TfAlgorithm#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#compression_type AwsAlgorithm#compression_type}
   */
   readonly compressionType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#etag TfAlgorithm#etag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#etag AwsAlgorithm#etag}
   */
   readonly etag?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#manifest_etag TfAlgorithm#manifest_etag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#manifest_etag AwsAlgorithm#manifest_etag}
   */
   readonly manifestEtag?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#manifest_s3_uri TfAlgorithm#manifest_s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#manifest_s3_uri AwsAlgorithm#manifest_s3_uri}
   */
   readonly manifestS3Uri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_type TfAlgorithm#s3_data_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_type AwsAlgorithm#s3_data_type}
   */
   readonly s3DataType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_uri TfAlgorithm#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_uri AwsAlgorithm#s3_uri}
   */
   readonly s3Uri: string;
   /**
   * hub_access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#hub_access_config TfAlgorithm#hub_access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#hub_access_config AwsAlgorithm#hub_access_config}
   */
   readonly hubAccessConfig?: InferenceSpecificationContainersModelDataSourceS3DataSourceHubAccessConfigProperty[] | cdktn.IResolvable;
   /**
   * model_access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#model_access_config TfAlgorithm#model_access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#model_access_config AwsAlgorithm#model_access_config}
   */
   readonly modelAccessConfig?: InferenceSpecificationContainersModelDataSourceS3DataSourceModelAccessConfigProperty[] | cdktn.IResolvable;
 }
@@ -3162,7 +3162,7 @@ export interface ModelDataSourceProperty {
   /**
   * s3_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_source TfAlgorithm#s3_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_source AwsAlgorithm#s3_data_source}
   */
   readonly s3DataSource?: InferenceSpecificationContainersModelDataSourceS3DataSourceProperty[] | cdktn.IResolvable;
 }
@@ -3248,7 +3248,7 @@ export class ModelDataSourcePropertyList extends cdktn.ComplexList {
 }
 export interface ModelInputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#data_input_config TfAlgorithm#data_input_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#data_input_config AwsAlgorithm#data_input_config}
   */
   readonly dataInputConfig?: string;
 }
@@ -3334,71 +3334,71 @@ export class ModelInputPropertyList extends cdktn.ComplexList {
 }
 export interface ContainersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#container_hostname TfAlgorithm#container_hostname}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#container_hostname AwsAlgorithm#container_hostname}
   */
   readonly containerHostname?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#environment TfAlgorithm#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#environment AwsAlgorithm#environment}
   */
   readonly environment?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#framework TfAlgorithm#framework}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#framework AwsAlgorithm#framework}
   */
   readonly framework?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#framework_version TfAlgorithm#framework_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#framework_version AwsAlgorithm#framework_version}
   */
   readonly frameworkVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#image TfAlgorithm#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#image AwsAlgorithm#image}
   */
   readonly image?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#image_digest TfAlgorithm#image_digest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#image_digest AwsAlgorithm#image_digest}
   */
   readonly imageDigest?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#is_checkpoint TfAlgorithm#is_checkpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#is_checkpoint AwsAlgorithm#is_checkpoint}
   */
   readonly isCheckpoint?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#model_data_etag TfAlgorithm#model_data_etag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#model_data_etag AwsAlgorithm#model_data_etag}
   */
   readonly modelDataEtag?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#model_data_url TfAlgorithm#model_data_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#model_data_url AwsAlgorithm#model_data_url}
   */
   readonly modelDataUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#nearest_model_name TfAlgorithm#nearest_model_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#nearest_model_name AwsAlgorithm#nearest_model_name}
   */
   readonly nearestModelName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#product_id TfAlgorithm#product_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#product_id AwsAlgorithm#product_id}
   */
   readonly productId?: string;
   /**
   * additional_s3_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#additional_s3_data_source TfAlgorithm#additional_s3_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#additional_s3_data_source AwsAlgorithm#additional_s3_data_source}
   */
   readonly additionalS3DataSource?: InferenceSpecificationContainersAdditionalS3DataSourceProperty[] | cdktn.IResolvable;
   /**
   * base_model block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#base_model TfAlgorithm#base_model}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#base_model AwsAlgorithm#base_model}
   */
   readonly baseModel?: BaseModelProperty[] | cdktn.IResolvable;
   /**
   * model_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#model_data_source TfAlgorithm#model_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#model_data_source AwsAlgorithm#model_data_source}
   */
   readonly modelDataSource?: ModelDataSourceProperty[] | cdktn.IResolvable;
   /**
   * model_input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#model_input TfAlgorithm#model_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#model_input AwsAlgorithm#model_input}
   */
   readonly modelInput?: ModelInputProperty[] | cdktn.IResolvable;
 }
@@ -3792,25 +3792,25 @@ export class ContainersPropertyList extends cdktn.ComplexList {
 }
 export interface InferenceSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_content_types TfAlgorithm#supported_content_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_content_types AwsAlgorithm#supported_content_types}
   */
   readonly supportedContentTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_realtime_inference_instance_types TfAlgorithm#supported_realtime_inference_instance_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_realtime_inference_instance_types AwsAlgorithm#supported_realtime_inference_instance_types}
   */
   readonly supportedRealtimeInferenceInstanceTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_response_mime_types TfAlgorithm#supported_response_mime_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_response_mime_types AwsAlgorithm#supported_response_mime_types}
   */
   readonly supportedResponseMimeTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_transform_instance_types TfAlgorithm#supported_transform_instance_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_transform_instance_types AwsAlgorithm#supported_transform_instance_types}
   */
   readonly supportedTransformInstanceTypes?: string[];
   /**
   * containers block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#containers TfAlgorithm#containers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#containers AwsAlgorithm#containers}
   */
   readonly containers?: ContainersProperty[] | cdktn.IResolvable;
 }
@@ -3986,13 +3986,13 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#create TfAlgorithm#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#create AwsAlgorithm#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#delete TfAlgorithm#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#delete AwsAlgorithm#delete}
   */
   readonly delete?: string;
 }
@@ -4078,19 +4078,19 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TrainingSpecificationAdditionalS3DataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#compression_type TfAlgorithm#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#compression_type AwsAlgorithm#compression_type}
   */
   readonly compressionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#etag TfAlgorithm#etag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#etag AwsAlgorithm#etag}
   */
   readonly etag?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_type TfAlgorithm#s3_data_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_type AwsAlgorithm#s3_data_type}
   */
   readonly s3DataType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_uri TfAlgorithm#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_uri AwsAlgorithm#s3_uri}
   */
   readonly s3Uri: string;
 }
@@ -4236,11 +4236,11 @@ export class TrainingSpecificationAdditionalS3DataSourcePropertyList extends cdk
 }
 export interface MetricDefinitionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#name TfAlgorithm#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#name AwsAlgorithm#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#regex TfAlgorithm#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#regex AwsAlgorithm#regex}
   */
   readonly regex: string;
 }
@@ -4342,7 +4342,7 @@ export class MetricDefinitionsPropertyList extends cdktn.ComplexList {
 }
 export interface CategoricalParameterRangeSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#values TfAlgorithm#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#values AwsAlgorithm#values}
   */
   readonly values: string[];
 }
@@ -4425,11 +4425,11 @@ export class CategoricalParameterRangeSpecificationPropertyList extends cdktn.Co
 }
 export interface ContinuousParameterRangeSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#max_value TfAlgorithm#max_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#max_value AwsAlgorithm#max_value}
   */
   readonly maxValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#min_value TfAlgorithm#min_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#min_value AwsAlgorithm#min_value}
   */
   readonly minValue: string;
 }
@@ -4531,11 +4531,11 @@ export class ContinuousParameterRangeSpecificationPropertyList extends cdktn.Com
 }
 export interface IntegerParameterRangeSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#max_value TfAlgorithm#max_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#max_value AwsAlgorithm#max_value}
   */
   readonly maxValue: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#min_value TfAlgorithm#min_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#min_value AwsAlgorithm#min_value}
   */
   readonly minValue: string;
 }
@@ -4639,19 +4639,19 @@ export interface RangeProperty {
   /**
   * categorical_parameter_range_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#categorical_parameter_range_specification TfAlgorithm#categorical_parameter_range_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#categorical_parameter_range_specification AwsAlgorithm#categorical_parameter_range_specification}
   */
   readonly categoricalParameterRangeSpecification?: CategoricalParameterRangeSpecificationProperty[] | cdktn.IResolvable;
   /**
   * continuous_parameter_range_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#continuous_parameter_range_specification TfAlgorithm#continuous_parameter_range_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#continuous_parameter_range_specification AwsAlgorithm#continuous_parameter_range_specification}
   */
   readonly continuousParameterRangeSpecification?: ContinuousParameterRangeSpecificationProperty[] | cdktn.IResolvable;
   /**
   * integer_parameter_range_specification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#integer_parameter_range_specification TfAlgorithm#integer_parameter_range_specification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#integer_parameter_range_specification AwsAlgorithm#integer_parameter_range_specification}
   */
   readonly integerParameterRangeSpecification?: IntegerParameterRangeSpecificationProperty[] | cdktn.IResolvable;
 }
@@ -4781,33 +4781,33 @@ export class RangePropertyList extends cdktn.ComplexList {
 }
 export interface SupportedHyperParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#default_value TfAlgorithm#default_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#default_value AwsAlgorithm#default_value}
   */
   readonly defaultValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#description TfAlgorithm#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#description AwsAlgorithm#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#is_required TfAlgorithm#is_required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#is_required AwsAlgorithm#is_required}
   */
   readonly isRequired?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#is_tunable TfAlgorithm#is_tunable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#is_tunable AwsAlgorithm#is_tunable}
   */
   readonly isTunable?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#name TfAlgorithm#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#name AwsAlgorithm#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#type TfAlgorithm#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#type AwsAlgorithm#type}
   */
   readonly type: string;
   /**
   * range block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#range TfAlgorithm#range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#range AwsAlgorithm#range}
   */
   readonly range?: RangeProperty[] | cdktn.IResolvable;
 }
@@ -5019,11 +5019,11 @@ export class SupportedHyperParametersPropertyList extends cdktn.ComplexList {
 }
 export interface SupportedTuningJobObjectiveMetricsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#metric_name TfAlgorithm#metric_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#metric_name AwsAlgorithm#metric_name}
   */
   readonly metricName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#type TfAlgorithm#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#type AwsAlgorithm#type}
   */
   readonly type: string;
 }
@@ -5125,27 +5125,27 @@ export class SupportedTuningJobObjectiveMetricsPropertyList extends cdktn.Comple
 }
 export interface TrainingChannelsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#description TfAlgorithm#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#description AwsAlgorithm#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#is_required TfAlgorithm#is_required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#is_required AwsAlgorithm#is_required}
   */
   readonly isRequired?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#name TfAlgorithm#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#name AwsAlgorithm#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_compression_types TfAlgorithm#supported_compression_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_compression_types AwsAlgorithm#supported_compression_types}
   */
   readonly supportedCompressionTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_content_types TfAlgorithm#supported_content_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_content_types AwsAlgorithm#supported_content_types}
   */
   readonly supportedContentTypes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_input_modes TfAlgorithm#supported_input_modes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_input_modes AwsAlgorithm#supported_input_modes}
   */
   readonly supportedInputModes: string[];
 }
@@ -5332,49 +5332,49 @@ export class TrainingChannelsPropertyList extends cdktn.ComplexList {
 }
 export interface TrainingSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_training_instance_types TfAlgorithm#supported_training_instance_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_training_instance_types AwsAlgorithm#supported_training_instance_types}
   */
   readonly supportedTrainingInstanceTypes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supports_distributed_training TfAlgorithm#supports_distributed_training}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supports_distributed_training AwsAlgorithm#supports_distributed_training}
   */
   readonly supportsDistributedTraining?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#training_image TfAlgorithm#training_image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#training_image AwsAlgorithm#training_image}
   */
   readonly trainingImage: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#training_image_digest TfAlgorithm#training_image_digest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#training_image_digest AwsAlgorithm#training_image_digest}
   */
   readonly trainingImageDigest?: string;
   /**
   * additional_s3_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#additional_s3_data_source TfAlgorithm#additional_s3_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#additional_s3_data_source AwsAlgorithm#additional_s3_data_source}
   */
   readonly additionalS3DataSource?: TrainingSpecificationAdditionalS3DataSourceProperty[] | cdktn.IResolvable;
   /**
   * metric_definitions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#metric_definitions TfAlgorithm#metric_definitions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#metric_definitions AwsAlgorithm#metric_definitions}
   */
   readonly metricDefinitions?: MetricDefinitionsProperty[] | cdktn.IResolvable;
   /**
   * supported_hyper_parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_hyper_parameters TfAlgorithm#supported_hyper_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_hyper_parameters AwsAlgorithm#supported_hyper_parameters}
   */
   readonly supportedHyperParameters?: SupportedHyperParametersProperty[] | cdktn.IResolvable;
   /**
   * supported_tuning_job_objective_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_tuning_job_objective_metrics TfAlgorithm#supported_tuning_job_objective_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#supported_tuning_job_objective_metrics AwsAlgorithm#supported_tuning_job_objective_metrics}
   */
   readonly supportedTuningJobObjectiveMetrics?: SupportedTuningJobObjectiveMetricsProperty[] | cdktn.IResolvable;
   /**
   * training_channels block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#training_channels TfAlgorithm#training_channels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#training_channels AwsAlgorithm#training_channels}
   */
   readonly trainingChannels?: TrainingChannelsProperty[] | cdktn.IResolvable;
 }
@@ -5630,19 +5630,19 @@ export class TrainingSpecificationPropertyList extends cdktn.ComplexList {
 }
 export interface FileSystemDataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#directory_path TfAlgorithm#directory_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#directory_path AwsAlgorithm#directory_path}
   */
   readonly directoryPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#file_system_access_mode TfAlgorithm#file_system_access_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#file_system_access_mode AwsAlgorithm#file_system_access_mode}
   */
   readonly fileSystemAccessMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#file_system_id TfAlgorithm#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#file_system_id AwsAlgorithm#file_system_id}
   */
   readonly fileSystemId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#file_system_type TfAlgorithm#file_system_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#file_system_type AwsAlgorithm#file_system_type}
   */
   readonly fileSystemType: string;
 }
@@ -5782,7 +5782,7 @@ export class FileSystemDataSourcePropertyList extends cdktn.ComplexList {
 }
 export interface ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#hub_content_arn TfAlgorithm#hub_content_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#hub_content_arn AwsAlgorithm#hub_content_arn}
   */
   readonly hubContentArn?: string;
 }
@@ -5868,7 +5868,7 @@ export class ValidationSpecificationValidationProfilesTrainingJobDefinitionInput
 }
 export interface ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#accept_eula TfAlgorithm#accept_eula}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#accept_eula AwsAlgorithm#accept_eula}
   */
   readonly acceptEula?: boolean | cdktn.IResolvable;
 }
@@ -5954,35 +5954,35 @@ export class ValidationSpecificationValidationProfilesTrainingJobDefinitionInput
 }
 export interface ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#attribute_names TfAlgorithm#attribute_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#attribute_names AwsAlgorithm#attribute_names}
   */
   readonly attributeNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_group_names TfAlgorithm#instance_group_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_group_names AwsAlgorithm#instance_group_names}
   */
   readonly instanceGroupNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_distribution_type TfAlgorithm#s3_data_distribution_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_distribution_type AwsAlgorithm#s3_data_distribution_type}
   */
   readonly s3DataDistributionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_type TfAlgorithm#s3_data_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_type AwsAlgorithm#s3_data_type}
   */
   readonly s3DataType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_uri TfAlgorithm#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_uri AwsAlgorithm#s3_uri}
   */
   readonly s3Uri: string;
   /**
   * hub_access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#hub_access_config TfAlgorithm#hub_access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#hub_access_config AwsAlgorithm#hub_access_config}
   */
   readonly hubAccessConfig?: ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceHubAccessConfigProperty[] | cdktn.IResolvable;
   /**
   * model_access_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#model_access_config TfAlgorithm#model_access_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#model_access_config AwsAlgorithm#model_access_config}
   */
   readonly modelAccessConfig?: ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceModelAccessConfigProperty[] | cdktn.IResolvable;
 }
@@ -6196,13 +6196,13 @@ export interface ValidationSpecificationValidationProfilesTrainingJobDefinitionI
   /**
   * file_system_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#file_system_data_source TfAlgorithm#file_system_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#file_system_data_source AwsAlgorithm#file_system_data_source}
   */
   readonly fileSystemDataSource?: FileSystemDataSourceProperty[] | cdktn.IResolvable;
   /**
   * s3_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_source TfAlgorithm#s3_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_source AwsAlgorithm#s3_data_source}
   */
   readonly s3DataSource?: ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceS3DataSourceProperty[] | cdktn.IResolvable;
 }
@@ -6310,7 +6310,7 @@ export class ValidationSpecificationValidationProfilesTrainingJobDefinitionInput
 }
 export interface ShuffleConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#seed TfAlgorithm#seed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#seed AwsAlgorithm#seed}
   */
   readonly seed: number;
 }
@@ -6393,35 +6393,35 @@ export class ShuffleConfigPropertyList extends cdktn.ComplexList {
 }
 export interface InputDataConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#channel_name TfAlgorithm#channel_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#channel_name AwsAlgorithm#channel_name}
   */
   readonly channelName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#compression_type TfAlgorithm#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#compression_type AwsAlgorithm#compression_type}
   */
   readonly compressionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#content_type TfAlgorithm#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#content_type AwsAlgorithm#content_type}
   */
   readonly contentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#input_mode TfAlgorithm#input_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#input_mode AwsAlgorithm#input_mode}
   */
   readonly inputMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#record_wrapper_type TfAlgorithm#record_wrapper_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#record_wrapper_type AwsAlgorithm#record_wrapper_type}
   */
   readonly recordWrapperType?: string;
   /**
   * data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#data_source TfAlgorithm#data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#data_source AwsAlgorithm#data_source}
   */
   readonly dataSource?: ValidationSpecificationValidationProfilesTrainingJobDefinitionInputDataConfigDataSourceProperty[] | cdktn.IResolvable;
   /**
   * shuffle_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#shuffle_config TfAlgorithm#shuffle_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#shuffle_config AwsAlgorithm#shuffle_config}
   */
   readonly shuffleConfig?: ShuffleConfigProperty[] | cdktn.IResolvable;
 }
@@ -6636,15 +6636,15 @@ export class InputDataConfigPropertyList extends cdktn.ComplexList {
 }
 export interface OutputDataConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#compression_type TfAlgorithm#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#compression_type AwsAlgorithm#compression_type}
   */
   readonly compressionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#kms_key_id TfAlgorithm#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#kms_key_id AwsAlgorithm#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_output_path TfAlgorithm#s3_output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_output_path AwsAlgorithm#s3_output_path}
   */
   readonly s3OutputPath: string;
 }
@@ -6771,15 +6771,15 @@ export class OutputDataConfigPropertyList extends cdktn.ComplexList {
 }
 export interface InstanceGroupsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_count TfAlgorithm#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_count AwsAlgorithm#instance_count}
   */
   readonly instanceCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_group_name TfAlgorithm#instance_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_group_name AwsAlgorithm#instance_group_name}
   */
   readonly instanceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_type TfAlgorithm#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_type AwsAlgorithm#instance_type}
   */
   readonly instanceType: string;
 }
@@ -6900,11 +6900,11 @@ export class InstanceGroupsPropertyList extends cdktn.ComplexList {
 }
 export interface PlacementSpecificationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_count TfAlgorithm#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_count AwsAlgorithm#instance_count}
   */
   readonly instanceCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#ultra_server_id TfAlgorithm#ultra_server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#ultra_server_id AwsAlgorithm#ultra_server_id}
   */
   readonly ultraServerId?: string;
 }
@@ -7009,13 +7009,13 @@ export class PlacementSpecificationsPropertyList extends cdktn.ComplexList {
 }
 export interface InstancePlacementConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#enable_multiple_jobs TfAlgorithm#enable_multiple_jobs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#enable_multiple_jobs AwsAlgorithm#enable_multiple_jobs}
   */
   readonly enableMultipleJobs?: boolean | cdktn.IResolvable;
   /**
   * placement_specifications block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#placement_specifications TfAlgorithm#placement_specifications}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#placement_specifications AwsAlgorithm#placement_specifications}
   */
   readonly placementSpecifications?: PlacementSpecificationsProperty[] | cdktn.IResolvable;
 }
@@ -7123,39 +7123,39 @@ export class InstancePlacementConfigPropertyList extends cdktn.ComplexList {
 }
 export interface ResourceConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_count TfAlgorithm#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_count AwsAlgorithm#instance_count}
   */
   readonly instanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_type TfAlgorithm#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_type AwsAlgorithm#instance_type}
   */
   readonly instanceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#keep_alive_period_in_seconds TfAlgorithm#keep_alive_period_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#keep_alive_period_in_seconds AwsAlgorithm#keep_alive_period_in_seconds}
   */
   readonly keepAlivePeriodInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#training_plan_arn TfAlgorithm#training_plan_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#training_plan_arn AwsAlgorithm#training_plan_arn}
   */
   readonly trainingPlanArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#volume_kms_key_id TfAlgorithm#volume_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#volume_kms_key_id AwsAlgorithm#volume_kms_key_id}
   */
   readonly volumeKmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#volume_size_in_gb TfAlgorithm#volume_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#volume_size_in_gb AwsAlgorithm#volume_size_in_gb}
   */
   readonly volumeSizeInGb?: number;
   /**
   * instance_groups block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_groups TfAlgorithm#instance_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_groups AwsAlgorithm#instance_groups}
   */
   readonly instanceGroups?: InstanceGroupsProperty[] | cdktn.IResolvable;
   /**
   * instance_placement_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_placement_config TfAlgorithm#instance_placement_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_placement_config AwsAlgorithm#instance_placement_config}
   */
   readonly instancePlacementConfig?: InstancePlacementConfigProperty[] | cdktn.IResolvable;
 }
@@ -7395,15 +7395,15 @@ export class ResourceConfigPropertyList extends cdktn.ComplexList {
 }
 export interface StoppingConditionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#max_pending_time_in_seconds TfAlgorithm#max_pending_time_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#max_pending_time_in_seconds AwsAlgorithm#max_pending_time_in_seconds}
   */
   readonly maxPendingTimeInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#max_runtime_in_seconds TfAlgorithm#max_runtime_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#max_runtime_in_seconds AwsAlgorithm#max_runtime_in_seconds}
   */
   readonly maxRuntimeInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#max_wait_time_in_seconds TfAlgorithm#max_wait_time_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#max_wait_time_in_seconds AwsAlgorithm#max_wait_time_in_seconds}
   */
   readonly maxWaitTimeInSeconds?: number;
 }
@@ -7533,35 +7533,35 @@ export class StoppingConditionPropertyList extends cdktn.ComplexList {
 }
 export interface TrainingJobDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#hyper_parameters TfAlgorithm#hyper_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#hyper_parameters AwsAlgorithm#hyper_parameters}
   */
   readonly hyperParameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#training_input_mode TfAlgorithm#training_input_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#training_input_mode AwsAlgorithm#training_input_mode}
   */
   readonly trainingInputMode: string;
   /**
   * input_data_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#input_data_config TfAlgorithm#input_data_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#input_data_config AwsAlgorithm#input_data_config}
   */
   readonly inputDataConfig?: InputDataConfigProperty[] | cdktn.IResolvable;
   /**
   * output_data_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#output_data_config TfAlgorithm#output_data_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#output_data_config AwsAlgorithm#output_data_config}
   */
   readonly outputDataConfig?: OutputDataConfigProperty[] | cdktn.IResolvable;
   /**
   * resource_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#resource_config TfAlgorithm#resource_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#resource_config AwsAlgorithm#resource_config}
   */
   readonly resourceConfig?: ResourceConfigProperty[] | cdktn.IResolvable;
   /**
   * stopping_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#stopping_condition TfAlgorithm#stopping_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#stopping_condition AwsAlgorithm#stopping_condition}
   */
   readonly stoppingCondition?: StoppingConditionProperty[] | cdktn.IResolvable;
 }
@@ -7754,11 +7754,11 @@ export class TrainingJobDefinitionPropertyList extends cdktn.ComplexList {
 }
 export interface ValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSourceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_type TfAlgorithm#s3_data_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_type AwsAlgorithm#s3_data_type}
   */
   readonly s3DataType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_uri TfAlgorithm#s3_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_uri AwsAlgorithm#s3_uri}
   */
   readonly s3Uri: string;
 }
@@ -7862,7 +7862,7 @@ export interface ValidationSpecificationValidationProfilesTransformJobDefinition
   /**
   * s3_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_source TfAlgorithm#s3_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_data_source AwsAlgorithm#s3_data_source}
   */
   readonly s3DataSource?: ValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceS3DataSourceProperty[] | cdktn.IResolvable;
 }
@@ -7948,21 +7948,21 @@ export class ValidationSpecificationValidationProfilesTransformJobDefinitionTran
 }
 export interface TransformInputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#compression_type TfAlgorithm#compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#compression_type AwsAlgorithm#compression_type}
   */
   readonly compressionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#content_type TfAlgorithm#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#content_type AwsAlgorithm#content_type}
   */
   readonly contentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#split_type TfAlgorithm#split_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#split_type AwsAlgorithm#split_type}
   */
   readonly splitType?: string;
   /**
   * data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#data_source TfAlgorithm#data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#data_source AwsAlgorithm#data_source}
   */
   readonly dataSource?: ValidationSpecificationValidationProfilesTransformJobDefinitionTransformInputDataSourceProperty[] | cdktn.IResolvable;
 }
@@ -8114,19 +8114,19 @@ export class TransformInputPropertyList extends cdktn.ComplexList {
 }
 export interface TransformOutputProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#accept TfAlgorithm#accept}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#accept AwsAlgorithm#accept}
   */
   readonly accept?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#assemble_with TfAlgorithm#assemble_with}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#assemble_with AwsAlgorithm#assemble_with}
   */
   readonly assembleWith?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#kms_key_id TfAlgorithm#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#kms_key_id AwsAlgorithm#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_output_path TfAlgorithm#s3_output_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#s3_output_path AwsAlgorithm#s3_output_path}
   */
   readonly s3OutputPath: string;
 }
@@ -8275,19 +8275,19 @@ export class TransformOutputPropertyList extends cdktn.ComplexList {
 }
 export interface TransformResourcesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_count TfAlgorithm#instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_count AwsAlgorithm#instance_count}
   */
   readonly instanceCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_type TfAlgorithm#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#instance_type AwsAlgorithm#instance_type}
   */
   readonly instanceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#transform_ami_version TfAlgorithm#transform_ami_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#transform_ami_version AwsAlgorithm#transform_ami_version}
   */
   readonly transformAmiVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#volume_kms_key_id TfAlgorithm#volume_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#volume_kms_key_id AwsAlgorithm#volume_kms_key_id}
   */
   readonly volumeKmsKeyId?: string;
 }
@@ -8433,37 +8433,37 @@ export class TransformResourcesPropertyList extends cdktn.ComplexList {
 }
 export interface TransformJobDefinitionProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#batch_strategy TfAlgorithm#batch_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#batch_strategy AwsAlgorithm#batch_strategy}
   */
   readonly batchStrategy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#environment TfAlgorithm#environment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#environment AwsAlgorithm#environment}
   */
   readonly environment?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#max_concurrent_transforms TfAlgorithm#max_concurrent_transforms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#max_concurrent_transforms AwsAlgorithm#max_concurrent_transforms}
   */
   readonly maxConcurrentTransforms?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#max_payload_in_mb TfAlgorithm#max_payload_in_mb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#max_payload_in_mb AwsAlgorithm#max_payload_in_mb}
   */
   readonly maxPayloadInMb?: number;
   /**
   * transform_input block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#transform_input TfAlgorithm#transform_input}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#transform_input AwsAlgorithm#transform_input}
   */
   readonly transformInput?: TransformInputProperty[] | cdktn.IResolvable;
   /**
   * transform_output block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#transform_output TfAlgorithm#transform_output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#transform_output AwsAlgorithm#transform_output}
   */
   readonly transformOutput?: TransformOutputProperty[] | cdktn.IResolvable;
   /**
   * transform_resources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#transform_resources TfAlgorithm#transform_resources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#transform_resources AwsAlgorithm#transform_resources}
   */
   readonly transformResources?: TransformResourcesProperty[] | cdktn.IResolvable;
 }
@@ -8681,19 +8681,19 @@ export class TransformJobDefinitionPropertyList extends cdktn.ComplexList {
 }
 export interface ValidationProfilesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#profile_name TfAlgorithm#profile_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#profile_name AwsAlgorithm#profile_name}
   */
   readonly profileName: string;
   /**
   * training_job_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#training_job_definition TfAlgorithm#training_job_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#training_job_definition AwsAlgorithm#training_job_definition}
   */
   readonly trainingJobDefinition?: TrainingJobDefinitionProperty[] | cdktn.IResolvable;
   /**
   * transform_job_definition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#transform_job_definition TfAlgorithm#transform_job_definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#transform_job_definition AwsAlgorithm#transform_job_definition}
   */
   readonly transformJobDefinition?: TransformJobDefinitionProperty[] | cdktn.IResolvable;
 }
@@ -8820,13 +8820,13 @@ export class ValidationProfilesPropertyList extends cdktn.ComplexList {
 }
 export interface ValidationSpecificationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#validation_role TfAlgorithm#validation_role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#validation_role AwsAlgorithm#validation_role}
   */
   readonly validationRole: string;
   /**
   * validation_profiles block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#validation_profiles TfAlgorithm#validation_profiles}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/sagemaker_algorithm#validation_profiles AwsAlgorithm#validation_profiles}
   */
   readonly validationProfiles?: ValidationProfilesProperty[] | cdktn.IResolvable;
 }

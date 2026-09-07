@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPlanConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPlanConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#contact_id TfPlan#contact_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#contact_id AwsPlan#contact_id}
   */
   readonly contactId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#id TfPlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#id AwsPlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,21 +20,21 @@ export interface TfPlanConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#region TfPlan#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#region AwsPlan#region}
   */
   readonly region?: string;
   /**
   * stage block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#stage TfPlan#stage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#stage AwsPlan#stage}
   */
-  readonly stage: TfPlan.StageProperty[] | cdktn.IResolvable;
+  readonly stage: AwsPlan.StageProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan aws_ssmcontacts_plan}
 */
-export class TfPlan extends cdktn.TerraformResource {
+export class AwsPlan extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -45,11 +45,11 @@ export class TfPlan extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPlan resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPlan resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPlan to import
-  * @param importFromId The id of the existing TfPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPlan to import is found
+  * @param importToId The construct id used in the generated config for the AwsPlan to import
+  * @param importFromId The id of the existing AwsPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssmcontacts_plan", importId: importFromId, provider });
@@ -64,9 +64,9 @@ export class TfPlan extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPlanConfig
+  * @param options AwsPlanConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPlanConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPlanConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssmcontacts_plan',
       terraformGeneratorMetadata: {
@@ -138,11 +138,11 @@ export class TfPlan extends cdktn.TerraformResource {
   }
 
   // stage - computed: false, optional: false, required: true
-  private _stage = new TfPlan.StagePropertyList(this, "stage", false);
+  private _stage = new AwsPlan.StagePropertyList(this, "stage", false);
   public get stage() {
     return this._stage;
   }
-  public putStage(value: TfPlan.StageProperty[] | cdktn.IResolvable) {
+  public putStage(value: AwsPlan.StageProperty[] | cdktn.IResolvable) {
     this._stage.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -159,7 +159,7 @@ export class TfPlan extends cdktn.TerraformResource {
       contact_id: cdktn.stringToTerraform(this._contactId),
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      stage: cdktn.listMapper(tfPlanStagePropertyToTerraform, true)(this._stage.internalValue),
+      stage: cdktn.listMapper(awsPlanStagePropertyToTerraform, true)(this._stage.internalValue),
     };
   }
 
@@ -184,10 +184,10 @@ export class TfPlan extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       stage: {
-        value: cdktn.listMapperHcl(tfPlanStagePropertyToHclTerraform, true)(this._stage.internalValue),
+        value: cdktn.listMapperHcl(awsPlanStagePropertyToHclTerraform, true)(this._stage.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPlan.StagePropertyList",
+        storageClassType: "AwsPlan.StagePropertyList",
       },
     };
 
@@ -196,7 +196,7 @@ export class TfPlan extends cdktn.TerraformResource {
   }
 }
 
-export function tfPlanChannelTargetInfoPropertyToTerraform(struct?: TfPlan.ChannelTargetInfoPropertyOutputReference | TfPlan.ChannelTargetInfoProperty): any {
+export function awsPlanChannelTargetInfoPropertyToTerraform(struct?: AwsPlan.ChannelTargetInfoPropertyOutputReference | AwsPlan.ChannelTargetInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -208,7 +208,7 @@ export function tfPlanChannelTargetInfoPropertyToTerraform(struct?: TfPlan.Chann
 }
 
 
-export function tfPlanChannelTargetInfoPropertyToHclTerraform(struct?: TfPlan.ChannelTargetInfoPropertyOutputReference | TfPlan.ChannelTargetInfoProperty): any {
+export function awsPlanChannelTargetInfoPropertyToHclTerraform(struct?: AwsPlan.ChannelTargetInfoPropertyOutputReference | AwsPlan.ChannelTargetInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -233,7 +233,7 @@ export function tfPlanChannelTargetInfoPropertyToHclTerraform(struct?: TfPlan.Ch
 }
 
 
-export function tfPlanContactTargetInfoPropertyToTerraform(struct?: TfPlan.ContactTargetInfoPropertyOutputReference | TfPlan.ContactTargetInfoProperty): any {
+export function awsPlanContactTargetInfoPropertyToTerraform(struct?: AwsPlan.ContactTargetInfoPropertyOutputReference | AwsPlan.ContactTargetInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -245,7 +245,7 @@ export function tfPlanContactTargetInfoPropertyToTerraform(struct?: TfPlan.Conta
 }
 
 
-export function tfPlanContactTargetInfoPropertyToHclTerraform(struct?: TfPlan.ContactTargetInfoPropertyOutputReference | TfPlan.ContactTargetInfoProperty): any {
+export function awsPlanContactTargetInfoPropertyToHclTerraform(struct?: AwsPlan.ContactTargetInfoPropertyOutputReference | AwsPlan.ContactTargetInfoProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -270,32 +270,32 @@ export function tfPlanContactTargetInfoPropertyToHclTerraform(struct?: TfPlan.Co
 }
 
 
-export function tfPlanTargetPropertyToTerraform(struct?: TfPlan.TargetProperty | cdktn.IResolvable): any {
+export function awsPlanTargetPropertyToTerraform(struct?: AwsPlan.TargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    channel_target_info: tfPlanChannelTargetInfoPropertyToTerraform(struct!.channelTargetInfo),
-    contact_target_info: tfPlanContactTargetInfoPropertyToTerraform(struct!.contactTargetInfo),
+    channel_target_info: awsPlanChannelTargetInfoPropertyToTerraform(struct!.channelTargetInfo),
+    contact_target_info: awsPlanContactTargetInfoPropertyToTerraform(struct!.contactTargetInfo),
   }
 }
 
 
-export function tfPlanTargetPropertyToHclTerraform(struct?: TfPlan.TargetProperty | cdktn.IResolvable): any {
+export function awsPlanTargetPropertyToHclTerraform(struct?: AwsPlan.TargetProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     channel_target_info: {
-      value: tfPlanChannelTargetInfoPropertyToHclTerraform(struct!.channelTargetInfo),
+      value: awsPlanChannelTargetInfoPropertyToHclTerraform(struct!.channelTargetInfo),
       isBlock: true,
       type: "list",
       storageClassType: "ChannelTargetInfoPropertyList",
     },
     contact_target_info: {
-      value: tfPlanContactTargetInfoPropertyToHclTerraform(struct!.contactTargetInfo),
+      value: awsPlanContactTargetInfoPropertyToHclTerraform(struct!.contactTargetInfo),
       isBlock: true,
       type: "list",
       storageClassType: "ContactTargetInfoPropertyList",
@@ -307,19 +307,19 @@ export function tfPlanTargetPropertyToHclTerraform(struct?: TfPlan.TargetPropert
 }
 
 
-export function tfPlanStagePropertyToTerraform(struct?: TfPlan.StageProperty | cdktn.IResolvable): any {
+export function awsPlanStagePropertyToTerraform(struct?: AwsPlan.StageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     duration_in_minutes: cdktn.numberToTerraform(struct!.durationInMinutes),
-    target: cdktn.listMapper(tfPlanTargetPropertyToTerraform, true)(struct!.target),
+    target: cdktn.listMapper(awsPlanTargetPropertyToTerraform, true)(struct!.target),
   }
 }
 
 
-export function tfPlanStagePropertyToHclTerraform(struct?: TfPlan.StageProperty | cdktn.IResolvable): any {
+export function awsPlanStagePropertyToHclTerraform(struct?: AwsPlan.StageProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -332,7 +332,7 @@ export function tfPlanStagePropertyToHclTerraform(struct?: TfPlan.StageProperty 
       storageClassType: "number",
     },
     target: {
-      value: cdktn.listMapperHcl(tfPlanTargetPropertyToHclTerraform, true)(struct!.target),
+      value: cdktn.listMapperHcl(awsPlanTargetPropertyToHclTerraform, true)(struct!.target),
       isBlock: true,
       type: "list",
       storageClassType: "TargetPropertyList",
@@ -344,14 +344,14 @@ export function tfPlanStagePropertyToHclTerraform(struct?: TfPlan.StageProperty 
 }
 
 
-export namespace TfPlan {
+export namespace AwsPlan {
 export interface ChannelTargetInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#contact_channel_id TfPlan#contact_channel_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#contact_channel_id AwsPlan#contact_channel_id}
   */
   readonly contactChannelId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#retry_interval_in_minutes TfPlan#retry_interval_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#retry_interval_in_minutes AwsPlan#retry_interval_in_minutes}
   */
   readonly retryIntervalInMinutes?: number;
 }
@@ -424,11 +424,11 @@ export class ChannelTargetInfoPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface ContactTargetInfoProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#contact_id TfPlan#contact_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#contact_id AwsPlan#contact_id}
   */
   readonly contactId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#is_essential TfPlan#is_essential}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#is_essential AwsPlan#is_essential}
   */
   readonly isEssential: boolean | cdktn.IResolvable;
 }
@@ -503,13 +503,13 @@ export interface TargetProperty {
   /**
   * channel_target_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#channel_target_info TfPlan#channel_target_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#channel_target_info AwsPlan#channel_target_info}
   */
   readonly channelTargetInfo?: ChannelTargetInfoProperty;
   /**
   * contact_target_info block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#contact_target_info TfPlan#contact_target_info}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#contact_target_info AwsPlan#contact_target_info}
   */
   readonly contactTargetInfo?: ContactTargetInfoProperty;
 }
@@ -617,13 +617,13 @@ export class TargetPropertyList extends cdktn.ComplexList {
 }
 export interface StageProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#duration_in_minutes TfPlan#duration_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#duration_in_minutes AwsPlan#duration_in_minutes}
   */
   readonly durationInMinutes: number;
   /**
   * target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#target TfPlan#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssmcontacts_plan#target AwsPlan#target}
   */
   readonly target?: TargetProperty[] | cdktn.IResolvable;
 }

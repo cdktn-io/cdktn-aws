@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfEndpointSubnetAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsEndpointSubnetAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association#id TfEndpointSubnetAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association#id AwsEndpointSubnetAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,29 +16,29 @@ export interface TfEndpointSubnetAssociationConfig extends cdktn.TerraformMetaAr
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association#region TfEndpointSubnetAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association#region AwsEndpointSubnetAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association#subnet_id TfEndpointSubnetAssociation#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association#subnet_id AwsEndpointSubnetAssociation#subnet_id}
   */
   readonly subnetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association#vpc_endpoint_id TfEndpointSubnetAssociation#vpc_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association#vpc_endpoint_id AwsEndpointSubnetAssociation#vpc_endpoint_id}
   */
   readonly vpcEndpointId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association#timeouts TfEndpointSubnetAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association#timeouts AwsEndpointSubnetAssociation#timeouts}
   */
-  readonly timeouts?: TfEndpointSubnetAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsEndpointSubnetAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association aws_vpc_endpoint_subnet_association}
 */
-export class TfEndpointSubnetAssociation extends cdktn.TerraformResource {
+export class AwsEndpointSubnetAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfEndpointSubnetAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfEndpointSubnetAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsEndpointSubnetAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfEndpointSubnetAssociation to import
-  * @param importFromId The id of the existing TfEndpointSubnetAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfEndpointSubnetAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsEndpointSubnetAssociation to import
+  * @param importFromId The id of the existing AwsEndpointSubnetAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsEndpointSubnetAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpc_endpoint_subnet_association", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfEndpointSubnetAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfEndpointSubnetAssociationConfig
+  * @param options AwsEndpointSubnetAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfEndpointSubnetAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsEndpointSubnetAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpc_endpoint_subnet_association',
       terraformGeneratorMetadata: {
@@ -156,11 +156,11 @@ export class TfEndpointSubnetAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfEndpointSubnetAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsEndpointSubnetAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfEndpointSubnetAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsEndpointSubnetAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -181,7 +181,7 @@ export class TfEndpointSubnetAssociation extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       subnet_id: cdktn.stringToTerraform(this._subnetId),
       vpc_endpoint_id: cdktn.stringToTerraform(this._vpcEndpointId),
-      timeouts: tfEndpointSubnetAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsEndpointSubnetAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -212,10 +212,10 @@ export class TfEndpointSubnetAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfEndpointSubnetAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsEndpointSubnetAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfEndpointSubnetAssociation.TimeoutsProperty",
+        storageClassType: "AwsEndpointSubnetAssociation.TimeoutsProperty",
       },
     };
 
@@ -224,7 +224,7 @@ export class TfEndpointSubnetAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfEndpointSubnetAssociationTimeoutsPropertyToTerraform(struct?: TfEndpointSubnetAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsEndpointSubnetAssociationTimeoutsPropertyToTerraform(struct?: AwsEndpointSubnetAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -236,7 +236,7 @@ export function tfEndpointSubnetAssociationTimeoutsPropertyToTerraform(struct?: 
 }
 
 
-export function tfEndpointSubnetAssociationTimeoutsPropertyToHclTerraform(struct?: TfEndpointSubnetAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsEndpointSubnetAssociationTimeoutsPropertyToHclTerraform(struct?: AwsEndpointSubnetAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -261,14 +261,14 @@ export function tfEndpointSubnetAssociationTimeoutsPropertyToHclTerraform(struct
 }
 
 
-export namespace TfEndpointSubnetAssociation {
+export namespace AwsEndpointSubnetAssociation {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association#create TfEndpointSubnetAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association#create AwsEndpointSubnetAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association#delete TfEndpointSubnetAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpc_endpoint_subnet_association#delete AwsEndpointSubnetAssociation#delete}
   */
   readonly delete?: string;
 }

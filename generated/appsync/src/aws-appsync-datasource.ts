@@ -5,88 +5,88 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDatasourceConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDatasourceConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#api_id TfDatasource#api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#api_id AwsDatasource#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#description TfDatasource#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#description AwsDatasource#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#id TfDatasource#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#id AwsDatasource#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#name TfDatasource#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#name AwsDatasource#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#region TfDatasource#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#region AwsDatasource#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#service_role_arn TfDatasource#service_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#service_role_arn AwsDatasource#service_role_arn}
   */
   readonly serviceRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#type TfDatasource#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#type AwsDatasource#type}
   */
   readonly type: string;
   /**
   * dynamodb_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#dynamodb_config TfDatasource#dynamodb_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#dynamodb_config AwsDatasource#dynamodb_config}
   */
-  readonly dynamodbConfig?: TfDatasource.DynamodbConfigProperty;
+  readonly dynamodbConfig?: AwsDatasource.DynamodbConfigProperty;
   /**
   * elasticsearch_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#elasticsearch_config TfDatasource#elasticsearch_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#elasticsearch_config AwsDatasource#elasticsearch_config}
   */
-  readonly elasticsearchConfig?: TfDatasource.ElasticsearchConfigProperty;
+  readonly elasticsearchConfig?: AwsDatasource.ElasticsearchConfigProperty;
   /**
   * event_bridge_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#event_bridge_config TfDatasource#event_bridge_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#event_bridge_config AwsDatasource#event_bridge_config}
   */
-  readonly eventBridgeConfig?: TfDatasource.EventBridgeConfigProperty;
+  readonly eventBridgeConfig?: AwsDatasource.EventBridgeConfigProperty;
   /**
   * http_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#http_config TfDatasource#http_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#http_config AwsDatasource#http_config}
   */
-  readonly httpConfig?: TfDatasource.HttpConfigProperty;
+  readonly httpConfig?: AwsDatasource.HttpConfigProperty;
   /**
   * lambda_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#lambda_config TfDatasource#lambda_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#lambda_config AwsDatasource#lambda_config}
   */
-  readonly lambdaConfig?: TfDatasource.LambdaConfigProperty;
+  readonly lambdaConfig?: AwsDatasource.LambdaConfigProperty;
   /**
   * opensearchservice_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#opensearchservice_config TfDatasource#opensearchservice_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#opensearchservice_config AwsDatasource#opensearchservice_config}
   */
-  readonly opensearchserviceConfig?: TfDatasource.OpensearchserviceConfigProperty;
+  readonly opensearchserviceConfig?: AwsDatasource.OpensearchserviceConfigProperty;
   /**
   * relational_database_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#relational_database_config TfDatasource#relational_database_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#relational_database_config AwsDatasource#relational_database_config}
   */
-  readonly relationalDatabaseConfig?: TfDatasource.RelationalDatabaseConfigProperty;
+  readonly relationalDatabaseConfig?: AwsDatasource.RelationalDatabaseConfigProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource aws_appsync_datasource}
 */
-export class TfDatasource extends cdktn.TerraformResource {
+export class AwsDatasource extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -97,11 +97,11 @@ export class TfDatasource extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDatasource resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDatasource resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDatasource to import
-  * @param importFromId The id of the existing TfDatasource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDatasource to import is found
+  * @param importToId The construct id used in the generated config for the AwsDatasource to import
+  * @param importFromId The id of the existing AwsDatasource that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDatasource to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_appsync_datasource", importId: importFromId, provider });
@@ -116,9 +116,9 @@ export class TfDatasource extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDatasourceConfig
+  * @param options AwsDatasourceConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDatasourceConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDatasourceConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_appsync_datasource',
       terraformGeneratorMetadata: {
@@ -263,11 +263,11 @@ export class TfDatasource extends cdktn.TerraformResource {
   }
 
   // dynamodb_config - computed: false, optional: true, required: false
-  private _dynamodbConfig = new TfDatasource.DynamodbConfigPropertyOutputReference(this, "dynamodb_config");
+  private _dynamodbConfig = new AwsDatasource.DynamodbConfigPropertyOutputReference(this, "dynamodb_config");
   public get dynamodbConfig() {
     return this._dynamodbConfig;
   }
-  public putDynamodbConfig(value: TfDatasource.DynamodbConfigProperty) {
+  public putDynamodbConfig(value: AwsDatasource.DynamodbConfigProperty) {
     this._dynamodbConfig.internalValue = value;
   }
   public resetDynamodbConfig() {
@@ -279,11 +279,11 @@ export class TfDatasource extends cdktn.TerraformResource {
   }
 
   // elasticsearch_config - computed: false, optional: true, required: false
-  private _elasticsearchConfig = new TfDatasource.ElasticsearchConfigPropertyOutputReference(this, "elasticsearch_config");
+  private _elasticsearchConfig = new AwsDatasource.ElasticsearchConfigPropertyOutputReference(this, "elasticsearch_config");
   public get elasticsearchConfig() {
     return this._elasticsearchConfig;
   }
-  public putElasticsearchConfig(value: TfDatasource.ElasticsearchConfigProperty) {
+  public putElasticsearchConfig(value: AwsDatasource.ElasticsearchConfigProperty) {
     this._elasticsearchConfig.internalValue = value;
   }
   public resetElasticsearchConfig() {
@@ -295,11 +295,11 @@ export class TfDatasource extends cdktn.TerraformResource {
   }
 
   // event_bridge_config - computed: false, optional: true, required: false
-  private _eventBridgeConfig = new TfDatasource.EventBridgeConfigPropertyOutputReference(this, "event_bridge_config");
+  private _eventBridgeConfig = new AwsDatasource.EventBridgeConfigPropertyOutputReference(this, "event_bridge_config");
   public get eventBridgeConfig() {
     return this._eventBridgeConfig;
   }
-  public putEventBridgeConfig(value: TfDatasource.EventBridgeConfigProperty) {
+  public putEventBridgeConfig(value: AwsDatasource.EventBridgeConfigProperty) {
     this._eventBridgeConfig.internalValue = value;
   }
   public resetEventBridgeConfig() {
@@ -311,11 +311,11 @@ export class TfDatasource extends cdktn.TerraformResource {
   }
 
   // http_config - computed: false, optional: true, required: false
-  private _httpConfig = new TfDatasource.HttpConfigPropertyOutputReference(this, "http_config");
+  private _httpConfig = new AwsDatasource.HttpConfigPropertyOutputReference(this, "http_config");
   public get httpConfig() {
     return this._httpConfig;
   }
-  public putHttpConfig(value: TfDatasource.HttpConfigProperty) {
+  public putHttpConfig(value: AwsDatasource.HttpConfigProperty) {
     this._httpConfig.internalValue = value;
   }
   public resetHttpConfig() {
@@ -327,11 +327,11 @@ export class TfDatasource extends cdktn.TerraformResource {
   }
 
   // lambda_config - computed: false, optional: true, required: false
-  private _lambdaConfig = new TfDatasource.LambdaConfigPropertyOutputReference(this, "lambda_config");
+  private _lambdaConfig = new AwsDatasource.LambdaConfigPropertyOutputReference(this, "lambda_config");
   public get lambdaConfig() {
     return this._lambdaConfig;
   }
-  public putLambdaConfig(value: TfDatasource.LambdaConfigProperty) {
+  public putLambdaConfig(value: AwsDatasource.LambdaConfigProperty) {
     this._lambdaConfig.internalValue = value;
   }
   public resetLambdaConfig() {
@@ -343,11 +343,11 @@ export class TfDatasource extends cdktn.TerraformResource {
   }
 
   // opensearchservice_config - computed: false, optional: true, required: false
-  private _opensearchserviceConfig = new TfDatasource.OpensearchserviceConfigPropertyOutputReference(this, "opensearchservice_config");
+  private _opensearchserviceConfig = new AwsDatasource.OpensearchserviceConfigPropertyOutputReference(this, "opensearchservice_config");
   public get opensearchserviceConfig() {
     return this._opensearchserviceConfig;
   }
-  public putOpensearchserviceConfig(value: TfDatasource.OpensearchserviceConfigProperty) {
+  public putOpensearchserviceConfig(value: AwsDatasource.OpensearchserviceConfigProperty) {
     this._opensearchserviceConfig.internalValue = value;
   }
   public resetOpensearchserviceConfig() {
@@ -359,11 +359,11 @@ export class TfDatasource extends cdktn.TerraformResource {
   }
 
   // relational_database_config - computed: false, optional: true, required: false
-  private _relationalDatabaseConfig = new TfDatasource.RelationalDatabaseConfigPropertyOutputReference(this, "relational_database_config");
+  private _relationalDatabaseConfig = new AwsDatasource.RelationalDatabaseConfigPropertyOutputReference(this, "relational_database_config");
   public get relationalDatabaseConfig() {
     return this._relationalDatabaseConfig;
   }
-  public putRelationalDatabaseConfig(value: TfDatasource.RelationalDatabaseConfigProperty) {
+  public putRelationalDatabaseConfig(value: AwsDatasource.RelationalDatabaseConfigProperty) {
     this._relationalDatabaseConfig.internalValue = value;
   }
   public resetRelationalDatabaseConfig() {
@@ -387,13 +387,13 @@ export class TfDatasource extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       service_role_arn: cdktn.stringToTerraform(this._serviceRoleArn),
       type: cdktn.stringToTerraform(this._type),
-      dynamodb_config: tfDatasourceDynamodbConfigPropertyToTerraform(this._dynamodbConfig.internalValue),
-      elasticsearch_config: tfDatasourceElasticsearchConfigPropertyToTerraform(this._elasticsearchConfig.internalValue),
-      event_bridge_config: tfDatasourceEventBridgeConfigPropertyToTerraform(this._eventBridgeConfig.internalValue),
-      http_config: tfDatasourceHttpConfigPropertyToTerraform(this._httpConfig.internalValue),
-      lambda_config: tfDatasourceLambdaConfigPropertyToTerraform(this._lambdaConfig.internalValue),
-      opensearchservice_config: tfDatasourceOpensearchserviceConfigPropertyToTerraform(this._opensearchserviceConfig.internalValue),
-      relational_database_config: tfDatasourceRelationalDatabaseConfigPropertyToTerraform(this._relationalDatabaseConfig.internalValue),
+      dynamodb_config: awsDatasourceDynamodbConfigPropertyToTerraform(this._dynamodbConfig.internalValue),
+      elasticsearch_config: awsDatasourceElasticsearchConfigPropertyToTerraform(this._elasticsearchConfig.internalValue),
+      event_bridge_config: awsDatasourceEventBridgeConfigPropertyToTerraform(this._eventBridgeConfig.internalValue),
+      http_config: awsDatasourceHttpConfigPropertyToTerraform(this._httpConfig.internalValue),
+      lambda_config: awsDatasourceLambdaConfigPropertyToTerraform(this._lambdaConfig.internalValue),
+      opensearchservice_config: awsDatasourceOpensearchserviceConfigPropertyToTerraform(this._opensearchserviceConfig.internalValue),
+      relational_database_config: awsDatasourceRelationalDatabaseConfigPropertyToTerraform(this._relationalDatabaseConfig.internalValue),
     };
   }
 
@@ -442,46 +442,46 @@ export class TfDatasource extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       dynamodb_config: {
-        value: tfDatasourceDynamodbConfigPropertyToHclTerraform(this._dynamodbConfig.internalValue),
+        value: awsDatasourceDynamodbConfigPropertyToHclTerraform(this._dynamodbConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDatasource.DynamodbConfigPropertyList",
+        storageClassType: "AwsDatasource.DynamodbConfigPropertyList",
       },
       elasticsearch_config: {
-        value: tfDatasourceElasticsearchConfigPropertyToHclTerraform(this._elasticsearchConfig.internalValue),
+        value: awsDatasourceElasticsearchConfigPropertyToHclTerraform(this._elasticsearchConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDatasource.ElasticsearchConfigPropertyList",
+        storageClassType: "AwsDatasource.ElasticsearchConfigPropertyList",
       },
       event_bridge_config: {
-        value: tfDatasourceEventBridgeConfigPropertyToHclTerraform(this._eventBridgeConfig.internalValue),
+        value: awsDatasourceEventBridgeConfigPropertyToHclTerraform(this._eventBridgeConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDatasource.EventBridgeConfigPropertyList",
+        storageClassType: "AwsDatasource.EventBridgeConfigPropertyList",
       },
       http_config: {
-        value: tfDatasourceHttpConfigPropertyToHclTerraform(this._httpConfig.internalValue),
+        value: awsDatasourceHttpConfigPropertyToHclTerraform(this._httpConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDatasource.HttpConfigPropertyList",
+        storageClassType: "AwsDatasource.HttpConfigPropertyList",
       },
       lambda_config: {
-        value: tfDatasourceLambdaConfigPropertyToHclTerraform(this._lambdaConfig.internalValue),
+        value: awsDatasourceLambdaConfigPropertyToHclTerraform(this._lambdaConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDatasource.LambdaConfigPropertyList",
+        storageClassType: "AwsDatasource.LambdaConfigPropertyList",
       },
       opensearchservice_config: {
-        value: tfDatasourceOpensearchserviceConfigPropertyToHclTerraform(this._opensearchserviceConfig.internalValue),
+        value: awsDatasourceOpensearchserviceConfigPropertyToHclTerraform(this._opensearchserviceConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDatasource.OpensearchserviceConfigPropertyList",
+        storageClassType: "AwsDatasource.OpensearchserviceConfigPropertyList",
       },
       relational_database_config: {
-        value: tfDatasourceRelationalDatabaseConfigPropertyToHclTerraform(this._relationalDatabaseConfig.internalValue),
+        value: awsDatasourceRelationalDatabaseConfigPropertyToHclTerraform(this._relationalDatabaseConfig.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfDatasource.RelationalDatabaseConfigPropertyList",
+        storageClassType: "AwsDatasource.RelationalDatabaseConfigPropertyList",
       },
     };
 
@@ -490,7 +490,7 @@ export class TfDatasource extends cdktn.TerraformResource {
   }
 }
 
-export function tfDatasourceDeltaSyncConfigPropertyToTerraform(struct?: TfDatasource.DeltaSyncConfigPropertyOutputReference | TfDatasource.DeltaSyncConfigProperty): any {
+export function awsDatasourceDeltaSyncConfigPropertyToTerraform(struct?: AwsDatasource.DeltaSyncConfigPropertyOutputReference | AwsDatasource.DeltaSyncConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -503,7 +503,7 @@ export function tfDatasourceDeltaSyncConfigPropertyToTerraform(struct?: TfDataso
 }
 
 
-export function tfDatasourceDeltaSyncConfigPropertyToHclTerraform(struct?: TfDatasource.DeltaSyncConfigPropertyOutputReference | TfDatasource.DeltaSyncConfigProperty): any {
+export function awsDatasourceDeltaSyncConfigPropertyToHclTerraform(struct?: AwsDatasource.DeltaSyncConfigPropertyOutputReference | AwsDatasource.DeltaSyncConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -534,7 +534,7 @@ export function tfDatasourceDeltaSyncConfigPropertyToHclTerraform(struct?: TfDat
 }
 
 
-export function tfDatasourceDynamodbConfigPropertyToTerraform(struct?: TfDatasource.DynamodbConfigPropertyOutputReference | TfDatasource.DynamodbConfigProperty): any {
+export function awsDatasourceDynamodbConfigPropertyToTerraform(struct?: AwsDatasource.DynamodbConfigPropertyOutputReference | AwsDatasource.DynamodbConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -544,12 +544,12 @@ export function tfDatasourceDynamodbConfigPropertyToTerraform(struct?: TfDatasou
     table_name: cdktn.stringToTerraform(struct!.tableName),
     use_caller_credentials: cdktn.booleanToTerraform(struct!.useCallerCredentials),
     versioned: cdktn.booleanToTerraform(struct!.versioned),
-    delta_sync_config: tfDatasourceDeltaSyncConfigPropertyToTerraform(struct!.deltaSyncConfig),
+    delta_sync_config: awsDatasourceDeltaSyncConfigPropertyToTerraform(struct!.deltaSyncConfig),
   }
 }
 
 
-export function tfDatasourceDynamodbConfigPropertyToHclTerraform(struct?: TfDatasource.DynamodbConfigPropertyOutputReference | TfDatasource.DynamodbConfigProperty): any {
+export function awsDatasourceDynamodbConfigPropertyToHclTerraform(struct?: AwsDatasource.DynamodbConfigPropertyOutputReference | AwsDatasource.DynamodbConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -580,7 +580,7 @@ export function tfDatasourceDynamodbConfigPropertyToHclTerraform(struct?: TfData
       storageClassType: "boolean",
     },
     delta_sync_config: {
-      value: tfDatasourceDeltaSyncConfigPropertyToHclTerraform(struct!.deltaSyncConfig),
+      value: awsDatasourceDeltaSyncConfigPropertyToHclTerraform(struct!.deltaSyncConfig),
       isBlock: true,
       type: "list",
       storageClassType: "DeltaSyncConfigPropertyList",
@@ -592,7 +592,7 @@ export function tfDatasourceDynamodbConfigPropertyToHclTerraform(struct?: TfData
 }
 
 
-export function tfDatasourceElasticsearchConfigPropertyToTerraform(struct?: TfDatasource.ElasticsearchConfigPropertyOutputReference | TfDatasource.ElasticsearchConfigProperty): any {
+export function awsDatasourceElasticsearchConfigPropertyToTerraform(struct?: AwsDatasource.ElasticsearchConfigPropertyOutputReference | AwsDatasource.ElasticsearchConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -604,7 +604,7 @@ export function tfDatasourceElasticsearchConfigPropertyToTerraform(struct?: TfDa
 }
 
 
-export function tfDatasourceElasticsearchConfigPropertyToHclTerraform(struct?: TfDatasource.ElasticsearchConfigPropertyOutputReference | TfDatasource.ElasticsearchConfigProperty): any {
+export function awsDatasourceElasticsearchConfigPropertyToHclTerraform(struct?: AwsDatasource.ElasticsearchConfigPropertyOutputReference | AwsDatasource.ElasticsearchConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -629,7 +629,7 @@ export function tfDatasourceElasticsearchConfigPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDatasourceEventBridgeConfigPropertyToTerraform(struct?: TfDatasource.EventBridgeConfigPropertyOutputReference | TfDatasource.EventBridgeConfigProperty): any {
+export function awsDatasourceEventBridgeConfigPropertyToTerraform(struct?: AwsDatasource.EventBridgeConfigPropertyOutputReference | AwsDatasource.EventBridgeConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -640,7 +640,7 @@ export function tfDatasourceEventBridgeConfigPropertyToTerraform(struct?: TfData
 }
 
 
-export function tfDatasourceEventBridgeConfigPropertyToHclTerraform(struct?: TfDatasource.EventBridgeConfigPropertyOutputReference | TfDatasource.EventBridgeConfigProperty): any {
+export function awsDatasourceEventBridgeConfigPropertyToHclTerraform(struct?: AwsDatasource.EventBridgeConfigPropertyOutputReference | AwsDatasource.EventBridgeConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -659,7 +659,7 @@ export function tfDatasourceEventBridgeConfigPropertyToHclTerraform(struct?: TfD
 }
 
 
-export function tfDatasourceAwsIamConfigPropertyToTerraform(struct?: TfDatasource.AwsIamConfigPropertyOutputReference | TfDatasource.AwsIamConfigProperty): any {
+export function awsDatasourceAwsIamConfigPropertyToTerraform(struct?: AwsDatasource.AwsIamConfigPropertyOutputReference | AwsDatasource.AwsIamConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -671,7 +671,7 @@ export function tfDatasourceAwsIamConfigPropertyToTerraform(struct?: TfDatasourc
 }
 
 
-export function tfDatasourceAwsIamConfigPropertyToHclTerraform(struct?: TfDatasource.AwsIamConfigPropertyOutputReference | TfDatasource.AwsIamConfigProperty): any {
+export function awsDatasourceAwsIamConfigPropertyToHclTerraform(struct?: AwsDatasource.AwsIamConfigPropertyOutputReference | AwsDatasource.AwsIamConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -696,19 +696,19 @@ export function tfDatasourceAwsIamConfigPropertyToHclTerraform(struct?: TfDataso
 }
 
 
-export function tfDatasourceAuthorizationConfigPropertyToTerraform(struct?: TfDatasource.AuthorizationConfigPropertyOutputReference | TfDatasource.AuthorizationConfigProperty): any {
+export function awsDatasourceAuthorizationConfigPropertyToTerraform(struct?: AwsDatasource.AuthorizationConfigPropertyOutputReference | AwsDatasource.AuthorizationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     authorization_type: cdktn.stringToTerraform(struct!.authorizationType),
-    aws_iam_config: tfDatasourceAwsIamConfigPropertyToTerraform(struct!.awsIamConfig),
+    aws_iam_config: awsDatasourceAwsIamConfigPropertyToTerraform(struct!.awsIamConfig),
   }
 }
 
 
-export function tfDatasourceAuthorizationConfigPropertyToHclTerraform(struct?: TfDatasource.AuthorizationConfigPropertyOutputReference | TfDatasource.AuthorizationConfigProperty): any {
+export function awsDatasourceAuthorizationConfigPropertyToHclTerraform(struct?: AwsDatasource.AuthorizationConfigPropertyOutputReference | AwsDatasource.AuthorizationConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -721,7 +721,7 @@ export function tfDatasourceAuthorizationConfigPropertyToHclTerraform(struct?: T
       storageClassType: "string",
     },
     aws_iam_config: {
-      value: tfDatasourceAwsIamConfigPropertyToHclTerraform(struct!.awsIamConfig),
+      value: awsDatasourceAwsIamConfigPropertyToHclTerraform(struct!.awsIamConfig),
       isBlock: true,
       type: "list",
       storageClassType: "AwsIamConfigPropertyList",
@@ -733,19 +733,19 @@ export function tfDatasourceAuthorizationConfigPropertyToHclTerraform(struct?: T
 }
 
 
-export function tfDatasourceHttpConfigPropertyToTerraform(struct?: TfDatasource.HttpConfigPropertyOutputReference | TfDatasource.HttpConfigProperty): any {
+export function awsDatasourceHttpConfigPropertyToTerraform(struct?: AwsDatasource.HttpConfigPropertyOutputReference | AwsDatasource.HttpConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     endpoint: cdktn.stringToTerraform(struct!.endpoint),
-    authorization_config: tfDatasourceAuthorizationConfigPropertyToTerraform(struct!.authorizationConfig),
+    authorization_config: awsDatasourceAuthorizationConfigPropertyToTerraform(struct!.authorizationConfig),
   }
 }
 
 
-export function tfDatasourceHttpConfigPropertyToHclTerraform(struct?: TfDatasource.HttpConfigPropertyOutputReference | TfDatasource.HttpConfigProperty): any {
+export function awsDatasourceHttpConfigPropertyToHclTerraform(struct?: AwsDatasource.HttpConfigPropertyOutputReference | AwsDatasource.HttpConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -758,7 +758,7 @@ export function tfDatasourceHttpConfigPropertyToHclTerraform(struct?: TfDatasour
       storageClassType: "string",
     },
     authorization_config: {
-      value: tfDatasourceAuthorizationConfigPropertyToHclTerraform(struct!.authorizationConfig),
+      value: awsDatasourceAuthorizationConfigPropertyToHclTerraform(struct!.authorizationConfig),
       isBlock: true,
       type: "list",
       storageClassType: "AuthorizationConfigPropertyList",
@@ -770,7 +770,7 @@ export function tfDatasourceHttpConfigPropertyToHclTerraform(struct?: TfDatasour
 }
 
 
-export function tfDatasourceLambdaConfigPropertyToTerraform(struct?: TfDatasource.LambdaConfigPropertyOutputReference | TfDatasource.LambdaConfigProperty): any {
+export function awsDatasourceLambdaConfigPropertyToTerraform(struct?: AwsDatasource.LambdaConfigPropertyOutputReference | AwsDatasource.LambdaConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -781,7 +781,7 @@ export function tfDatasourceLambdaConfigPropertyToTerraform(struct?: TfDatasourc
 }
 
 
-export function tfDatasourceLambdaConfigPropertyToHclTerraform(struct?: TfDatasource.LambdaConfigPropertyOutputReference | TfDatasource.LambdaConfigProperty): any {
+export function awsDatasourceLambdaConfigPropertyToHclTerraform(struct?: AwsDatasource.LambdaConfigPropertyOutputReference | AwsDatasource.LambdaConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -800,7 +800,7 @@ export function tfDatasourceLambdaConfigPropertyToHclTerraform(struct?: TfDataso
 }
 
 
-export function tfDatasourceOpensearchserviceConfigPropertyToTerraform(struct?: TfDatasource.OpensearchserviceConfigPropertyOutputReference | TfDatasource.OpensearchserviceConfigProperty): any {
+export function awsDatasourceOpensearchserviceConfigPropertyToTerraform(struct?: AwsDatasource.OpensearchserviceConfigPropertyOutputReference | AwsDatasource.OpensearchserviceConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -812,7 +812,7 @@ export function tfDatasourceOpensearchserviceConfigPropertyToTerraform(struct?: 
 }
 
 
-export function tfDatasourceOpensearchserviceConfigPropertyToHclTerraform(struct?: TfDatasource.OpensearchserviceConfigPropertyOutputReference | TfDatasource.OpensearchserviceConfigProperty): any {
+export function awsDatasourceOpensearchserviceConfigPropertyToHclTerraform(struct?: AwsDatasource.OpensearchserviceConfigPropertyOutputReference | AwsDatasource.OpensearchserviceConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -837,7 +837,7 @@ export function tfDatasourceOpensearchserviceConfigPropertyToHclTerraform(struct
 }
 
 
-export function tfDatasourceHttpEndpointConfigPropertyToTerraform(struct?: TfDatasource.HttpEndpointConfigPropertyOutputReference | TfDatasource.HttpEndpointConfigProperty): any {
+export function awsDatasourceHttpEndpointConfigPropertyToTerraform(struct?: AwsDatasource.HttpEndpointConfigPropertyOutputReference | AwsDatasource.HttpEndpointConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -852,7 +852,7 @@ export function tfDatasourceHttpEndpointConfigPropertyToTerraform(struct?: TfDat
 }
 
 
-export function tfDatasourceHttpEndpointConfigPropertyToHclTerraform(struct?: TfDatasource.HttpEndpointConfigPropertyOutputReference | TfDatasource.HttpEndpointConfigProperty): any {
+export function awsDatasourceHttpEndpointConfigPropertyToHclTerraform(struct?: AwsDatasource.HttpEndpointConfigPropertyOutputReference | AwsDatasource.HttpEndpointConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -895,19 +895,19 @@ export function tfDatasourceHttpEndpointConfigPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfDatasourceRelationalDatabaseConfigPropertyToTerraform(struct?: TfDatasource.RelationalDatabaseConfigPropertyOutputReference | TfDatasource.RelationalDatabaseConfigProperty): any {
+export function awsDatasourceRelationalDatabaseConfigPropertyToTerraform(struct?: AwsDatasource.RelationalDatabaseConfigPropertyOutputReference | AwsDatasource.RelationalDatabaseConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     source_type: cdktn.stringToTerraform(struct!.sourceType),
-    http_endpoint_config: tfDatasourceHttpEndpointConfigPropertyToTerraform(struct!.httpEndpointConfig),
+    http_endpoint_config: awsDatasourceHttpEndpointConfigPropertyToTerraform(struct!.httpEndpointConfig),
   }
 }
 
 
-export function tfDatasourceRelationalDatabaseConfigPropertyToHclTerraform(struct?: TfDatasource.RelationalDatabaseConfigPropertyOutputReference | TfDatasource.RelationalDatabaseConfigProperty): any {
+export function awsDatasourceRelationalDatabaseConfigPropertyToHclTerraform(struct?: AwsDatasource.RelationalDatabaseConfigPropertyOutputReference | AwsDatasource.RelationalDatabaseConfigProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -920,7 +920,7 @@ export function tfDatasourceRelationalDatabaseConfigPropertyToHclTerraform(struc
       storageClassType: "string",
     },
     http_endpoint_config: {
-      value: tfDatasourceHttpEndpointConfigPropertyToHclTerraform(struct!.httpEndpointConfig),
+      value: awsDatasourceHttpEndpointConfigPropertyToHclTerraform(struct!.httpEndpointConfig),
       isBlock: true,
       type: "list",
       storageClassType: "HttpEndpointConfigPropertyList",
@@ -932,18 +932,18 @@ export function tfDatasourceRelationalDatabaseConfigPropertyToHclTerraform(struc
 }
 
 
-export namespace TfDatasource {
+export namespace AwsDatasource {
 export interface DeltaSyncConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#base_table_ttl TfDatasource#base_table_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#base_table_ttl AwsDatasource#base_table_ttl}
   */
   readonly baseTableTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#delta_sync_table_name TfDatasource#delta_sync_table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#delta_sync_table_name AwsDatasource#delta_sync_table_name}
   */
   readonly deltaSyncTableName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#delta_sync_table_ttl TfDatasource#delta_sync_table_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#delta_sync_table_ttl AwsDatasource#delta_sync_table_ttl}
   */
   readonly deltaSyncTableTtl?: number;
 }
@@ -1038,25 +1038,25 @@ export class DeltaSyncConfigPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface DynamodbConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#region TfDatasource#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#region AwsDatasource#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#table_name TfDatasource#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#table_name AwsDatasource#table_name}
   */
   readonly tableName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#use_caller_credentials TfDatasource#use_caller_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#use_caller_credentials AwsDatasource#use_caller_credentials}
   */
   readonly useCallerCredentials?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#versioned TfDatasource#versioned}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#versioned AwsDatasource#versioned}
   */
   readonly versioned?: boolean | cdktn.IResolvable;
   /**
   * delta_sync_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#delta_sync_config TfDatasource#delta_sync_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#delta_sync_config AwsDatasource#delta_sync_config}
   */
   readonly deltaSyncConfig?: DeltaSyncConfigProperty;
 }
@@ -1195,11 +1195,11 @@ export class DynamodbConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface ElasticsearchConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#endpoint TfDatasource#endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#endpoint AwsDatasource#endpoint}
   */
   readonly endpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#region TfDatasource#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#region AwsDatasource#region}
   */
   readonly region?: string;
 }
@@ -1272,7 +1272,7 @@ export class ElasticsearchConfigPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface EventBridgeConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#event_bus_arn TfDatasource#event_bus_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#event_bus_arn AwsDatasource#event_bus_arn}
   */
   readonly eventBusArn: string;
 }
@@ -1323,11 +1323,11 @@ export class EventBridgeConfigPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface AwsIamConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#signing_region TfDatasource#signing_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#signing_region AwsDatasource#signing_region}
   */
   readonly signingRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#signing_service_name TfDatasource#signing_service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#signing_service_name AwsDatasource#signing_service_name}
   */
   readonly signingServiceName?: string;
 }
@@ -1403,13 +1403,13 @@ export class AwsIamConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface AuthorizationConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#authorization_type TfDatasource#authorization_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#authorization_type AwsDatasource#authorization_type}
   */
   readonly authorizationType?: string;
   /**
   * aws_iam_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#aws_iam_config TfDatasource#aws_iam_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#aws_iam_config AwsDatasource#aws_iam_config}
   */
   readonly awsIamConfig?: AwsIamConfigProperty;
 }
@@ -1485,13 +1485,13 @@ export class AuthorizationConfigPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface HttpConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#endpoint TfDatasource#endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#endpoint AwsDatasource#endpoint}
   */
   readonly endpoint: string;
   /**
   * authorization_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#authorization_config TfDatasource#authorization_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#authorization_config AwsDatasource#authorization_config}
   */
   readonly authorizationConfig?: AuthorizationConfigProperty;
 }
@@ -1564,7 +1564,7 @@ export class HttpConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface LambdaConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#function_arn TfDatasource#function_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#function_arn AwsDatasource#function_arn}
   */
   readonly functionArn: string;
 }
@@ -1615,11 +1615,11 @@ export class LambdaConfigPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OpensearchserviceConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#endpoint TfDatasource#endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#endpoint AwsDatasource#endpoint}
   */
   readonly endpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#region TfDatasource#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#region AwsDatasource#region}
   */
   readonly region?: string;
 }
@@ -1692,23 +1692,23 @@ export class OpensearchserviceConfigPropertyOutputReference extends cdktn.Comple
 }
 export interface HttpEndpointConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#aws_secret_store_arn TfDatasource#aws_secret_store_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#aws_secret_store_arn AwsDatasource#aws_secret_store_arn}
   */
   readonly awsSecretStoreArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#database_name TfDatasource#database_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#database_name AwsDatasource#database_name}
   */
   readonly databaseName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#db_cluster_identifier TfDatasource#db_cluster_identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#db_cluster_identifier AwsDatasource#db_cluster_identifier}
   */
   readonly dbClusterIdentifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#region TfDatasource#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#region AwsDatasource#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#schema TfDatasource#schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#schema AwsDatasource#schema}
   */
   readonly schema?: string;
 }
@@ -1844,13 +1844,13 @@ export class HttpEndpointConfigPropertyOutputReference extends cdktn.ComplexObje
 }
 export interface RelationalDatabaseConfigProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#source_type TfDatasource#source_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#source_type AwsDatasource#source_type}
   */
   readonly sourceType?: string;
   /**
   * http_endpoint_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#http_endpoint_config TfDatasource#http_endpoint_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/appsync_datasource#http_endpoint_config AwsDatasource#http_endpoint_config}
   */
   readonly httpEndpointConfig?: HttpEndpointConfigProperty;
 }

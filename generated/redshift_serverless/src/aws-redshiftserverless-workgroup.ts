@@ -5,92 +5,92 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfWorkgroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsWorkgroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#base_capacity TfWorkgroup#base_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#base_capacity AwsWorkgroup#base_capacity}
   */
   readonly baseCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#enhanced_vpc_routing TfWorkgroup#enhanced_vpc_routing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#enhanced_vpc_routing AwsWorkgroup#enhanced_vpc_routing}
   */
   readonly enhancedVpcRouting?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#id TfWorkgroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#id AwsWorkgroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#max_capacity TfWorkgroup#max_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#max_capacity AwsWorkgroup#max_capacity}
   */
   readonly maxCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#namespace_name TfWorkgroup#namespace_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#namespace_name AwsWorkgroup#namespace_name}
   */
   readonly namespaceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#port TfWorkgroup#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#port AwsWorkgroup#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#publicly_accessible TfWorkgroup#publicly_accessible}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#publicly_accessible AwsWorkgroup#publicly_accessible}
   */
   readonly publiclyAccessible?: boolean | cdktn.IResolvable;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#region TfWorkgroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#region AwsWorkgroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#security_group_ids TfWorkgroup#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#security_group_ids AwsWorkgroup#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#subnet_ids TfWorkgroup#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#subnet_ids AwsWorkgroup#subnet_ids}
   */
   readonly subnetIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#tags TfWorkgroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#tags AwsWorkgroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#tags_all TfWorkgroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#tags_all AwsWorkgroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#track_name TfWorkgroup#track_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#track_name AwsWorkgroup#track_name}
   */
   readonly trackName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#workgroup_name TfWorkgroup#workgroup_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#workgroup_name AwsWorkgroup#workgroup_name}
   */
   readonly workgroupName: string;
   /**
   * config_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#config_parameter TfWorkgroup#config_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#config_parameter AwsWorkgroup#config_parameter}
   */
-  readonly configParameter?: TfWorkgroup.ConfigParameterProperty[] | cdktn.IResolvable;
+  readonly configParameter?: AwsWorkgroup.ConfigParameterProperty[] | cdktn.IResolvable;
   /**
   * price_performance_target block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#price_performance_target TfWorkgroup#price_performance_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#price_performance_target AwsWorkgroup#price_performance_target}
   */
-  readonly pricePerformanceTarget?: TfWorkgroup.PricePerformanceTargetProperty;
+  readonly pricePerformanceTarget?: AwsWorkgroup.PricePerformanceTargetProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#timeouts TfWorkgroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#timeouts AwsWorkgroup#timeouts}
   */
-  readonly timeouts?: TfWorkgroup.TimeoutsProperty;
+  readonly timeouts?: AwsWorkgroup.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup aws_redshiftserverless_workgroup}
 */
-export class TfWorkgroup extends cdktn.TerraformResource {
+export class AwsWorkgroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -101,11 +101,11 @@ export class TfWorkgroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfWorkgroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsWorkgroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfWorkgroup to import
-  * @param importFromId The id of the existing TfWorkgroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfWorkgroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsWorkgroup to import
+  * @param importFromId The id of the existing AwsWorkgroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsWorkgroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshiftserverless_workgroup", importId: importFromId, provider });
@@ -120,9 +120,9 @@ export class TfWorkgroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfWorkgroupConfig
+  * @param options AwsWorkgroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfWorkgroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsWorkgroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshiftserverless_workgroup',
       terraformGeneratorMetadata: {
@@ -183,7 +183,7 @@ export class TfWorkgroup extends cdktn.TerraformResource {
   }
 
   // endpoint - computed: true, optional: false, required: false
-  private _endpoint = new TfWorkgroup.EndpointPropertyList(this, "endpoint", false);
+  private _endpoint = new AwsWorkgroup.EndpointPropertyList(this, "endpoint", false);
   public get endpoint() {
     return this._endpoint;
   }
@@ -396,11 +396,11 @@ export class TfWorkgroup extends cdktn.TerraformResource {
   }
 
   // config_parameter - computed: false, optional: true, required: false
-  private _configParameter = new TfWorkgroup.ConfigParameterPropertyList(this, "config_parameter", true);
+  private _configParameter = new AwsWorkgroup.ConfigParameterPropertyList(this, "config_parameter", true);
   public get configParameter() {
     return this._configParameter;
   }
-  public putConfigParameter(value: TfWorkgroup.ConfigParameterProperty[] | cdktn.IResolvable) {
+  public putConfigParameter(value: AwsWorkgroup.ConfigParameterProperty[] | cdktn.IResolvable) {
     this._configParameter.internalValue = value;
   }
   public resetConfigParameter() {
@@ -412,11 +412,11 @@ export class TfWorkgroup extends cdktn.TerraformResource {
   }
 
   // price_performance_target - computed: false, optional: true, required: false
-  private _pricePerformanceTarget = new TfWorkgroup.PricePerformanceTargetPropertyOutputReference(this, "price_performance_target");
+  private _pricePerformanceTarget = new AwsWorkgroup.PricePerformanceTargetPropertyOutputReference(this, "price_performance_target");
   public get pricePerformanceTarget() {
     return this._pricePerformanceTarget;
   }
-  public putPricePerformanceTarget(value: TfWorkgroup.PricePerformanceTargetProperty) {
+  public putPricePerformanceTarget(value: AwsWorkgroup.PricePerformanceTargetProperty) {
     this._pricePerformanceTarget.internalValue = value;
   }
   public resetPricePerformanceTarget() {
@@ -428,11 +428,11 @@ export class TfWorkgroup extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfWorkgroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsWorkgroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfWorkgroup.TimeoutsProperty) {
+  public putTimeouts(value: AwsWorkgroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -463,9 +463,9 @@ export class TfWorkgroup extends cdktn.TerraformResource {
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       track_name: cdktn.stringToTerraform(this._trackName),
       workgroup_name: cdktn.stringToTerraform(this._workgroupName),
-      config_parameter: cdktn.listMapper(tfWorkgroupConfigParameterPropertyToTerraform, true)(this._configParameter.internalValue),
-      price_performance_target: tfWorkgroupPricePerformanceTargetPropertyToTerraform(this._pricePerformanceTarget.internalValue),
-      timeouts: tfWorkgroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      config_parameter: cdktn.listMapper(awsWorkgroupConfigParameterPropertyToTerraform, true)(this._configParameter.internalValue),
+      price_performance_target: awsWorkgroupPricePerformanceTargetPropertyToTerraform(this._pricePerformanceTarget.internalValue),
+      timeouts: awsWorkgroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -556,22 +556,22 @@ export class TfWorkgroup extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       config_parameter: {
-        value: cdktn.listMapperHcl(tfWorkgroupConfigParameterPropertyToHclTerraform, true)(this._configParameter.internalValue),
+        value: cdktn.listMapperHcl(awsWorkgroupConfigParameterPropertyToHclTerraform, true)(this._configParameter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfWorkgroup.ConfigParameterPropertyList",
+        storageClassType: "AwsWorkgroup.ConfigParameterPropertyList",
       },
       price_performance_target: {
-        value: tfWorkgroupPricePerformanceTargetPropertyToHclTerraform(this._pricePerformanceTarget.internalValue),
+        value: awsWorkgroupPricePerformanceTargetPropertyToHclTerraform(this._pricePerformanceTarget.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfWorkgroup.PricePerformanceTargetPropertyList",
+        storageClassType: "AwsWorkgroup.PricePerformanceTargetPropertyList",
       },
       timeouts: {
-        value: tfWorkgroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsWorkgroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfWorkgroup.TimeoutsProperty",
+        storageClassType: "AwsWorkgroup.TimeoutsProperty",
       },
     };
 
@@ -580,7 +580,7 @@ export class TfWorkgroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfWorkgroupNetworkInterfacePropertyToTerraform(struct?: TfWorkgroup.NetworkInterfaceProperty): any {
+export function awsWorkgroupNetworkInterfacePropertyToTerraform(struct?: AwsWorkgroup.NetworkInterfaceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -590,7 +590,7 @@ export function tfWorkgroupNetworkInterfacePropertyToTerraform(struct?: TfWorkgr
 }
 
 
-export function tfWorkgroupNetworkInterfacePropertyToHclTerraform(struct?: TfWorkgroup.NetworkInterfaceProperty): any {
+export function awsWorkgroupNetworkInterfacePropertyToHclTerraform(struct?: AwsWorkgroup.NetworkInterfaceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -601,7 +601,7 @@ export function tfWorkgroupNetworkInterfacePropertyToHclTerraform(struct?: TfWor
 }
 
 
-export function tfWorkgroupVpcEndpointPropertyToTerraform(struct?: TfWorkgroup.VpcEndpointProperty): any {
+export function awsWorkgroupVpcEndpointPropertyToTerraform(struct?: AwsWorkgroup.VpcEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -611,7 +611,7 @@ export function tfWorkgroupVpcEndpointPropertyToTerraform(struct?: TfWorkgroup.V
 }
 
 
-export function tfWorkgroupVpcEndpointPropertyToHclTerraform(struct?: TfWorkgroup.VpcEndpointProperty): any {
+export function awsWorkgroupVpcEndpointPropertyToHclTerraform(struct?: AwsWorkgroup.VpcEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -622,7 +622,7 @@ export function tfWorkgroupVpcEndpointPropertyToHclTerraform(struct?: TfWorkgrou
 }
 
 
-export function tfWorkgroupEndpointPropertyToTerraform(struct?: TfWorkgroup.EndpointProperty): any {
+export function awsWorkgroupEndpointPropertyToTerraform(struct?: AwsWorkgroup.EndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -632,7 +632,7 @@ export function tfWorkgroupEndpointPropertyToTerraform(struct?: TfWorkgroup.Endp
 }
 
 
-export function tfWorkgroupEndpointPropertyToHclTerraform(struct?: TfWorkgroup.EndpointProperty): any {
+export function awsWorkgroupEndpointPropertyToHclTerraform(struct?: AwsWorkgroup.EndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -643,7 +643,7 @@ export function tfWorkgroupEndpointPropertyToHclTerraform(struct?: TfWorkgroup.E
 }
 
 
-export function tfWorkgroupConfigParameterPropertyToTerraform(struct?: TfWorkgroup.ConfigParameterProperty | cdktn.IResolvable): any {
+export function awsWorkgroupConfigParameterPropertyToTerraform(struct?: AwsWorkgroup.ConfigParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -655,7 +655,7 @@ export function tfWorkgroupConfigParameterPropertyToTerraform(struct?: TfWorkgro
 }
 
 
-export function tfWorkgroupConfigParameterPropertyToHclTerraform(struct?: TfWorkgroup.ConfigParameterProperty | cdktn.IResolvable): any {
+export function awsWorkgroupConfigParameterPropertyToHclTerraform(struct?: AwsWorkgroup.ConfigParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -680,7 +680,7 @@ export function tfWorkgroupConfigParameterPropertyToHclTerraform(struct?: TfWork
 }
 
 
-export function tfWorkgroupPricePerformanceTargetPropertyToTerraform(struct?: TfWorkgroup.PricePerformanceTargetPropertyOutputReference | TfWorkgroup.PricePerformanceTargetProperty): any {
+export function awsWorkgroupPricePerformanceTargetPropertyToTerraform(struct?: AwsWorkgroup.PricePerformanceTargetPropertyOutputReference | AwsWorkgroup.PricePerformanceTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -692,7 +692,7 @@ export function tfWorkgroupPricePerformanceTargetPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfWorkgroupPricePerformanceTargetPropertyToHclTerraform(struct?: TfWorkgroup.PricePerformanceTargetPropertyOutputReference | TfWorkgroup.PricePerformanceTargetProperty): any {
+export function awsWorkgroupPricePerformanceTargetPropertyToHclTerraform(struct?: AwsWorkgroup.PricePerformanceTargetPropertyOutputReference | AwsWorkgroup.PricePerformanceTargetProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -717,7 +717,7 @@ export function tfWorkgroupPricePerformanceTargetPropertyToHclTerraform(struct?:
 }
 
 
-export function tfWorkgroupTimeoutsPropertyToTerraform(struct?: TfWorkgroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsWorkgroupTimeoutsPropertyToTerraform(struct?: AwsWorkgroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -730,7 +730,7 @@ export function tfWorkgroupTimeoutsPropertyToTerraform(struct?: TfWorkgroup.Time
 }
 
 
-export function tfWorkgroupTimeoutsPropertyToHclTerraform(struct?: TfWorkgroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsWorkgroupTimeoutsPropertyToHclTerraform(struct?: AwsWorkgroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -761,7 +761,7 @@ export function tfWorkgroupTimeoutsPropertyToHclTerraform(struct?: TfWorkgroup.T
 }
 
 
-export namespace TfWorkgroup {
+export namespace AwsWorkgroup {
 export interface NetworkInterfaceProperty {
 }
 export class NetworkInterfacePropertyOutputReference extends cdktn.ComplexObject {
@@ -963,11 +963,11 @@ export class EndpointPropertyList extends cdktn.ComplexList {
 }
 export interface ConfigParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#parameter_key TfWorkgroup#parameter_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#parameter_key AwsWorkgroup#parameter_key}
   */
   readonly parameterKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#parameter_value TfWorkgroup#parameter_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#parameter_value AwsWorkgroup#parameter_value}
   */
   readonly parameterValue: string;
 }
@@ -1069,11 +1069,11 @@ export class ConfigParameterPropertyList extends cdktn.ComplexList {
 }
 export interface PricePerformanceTargetProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#enabled TfWorkgroup#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#enabled AwsWorkgroup#enabled}
   */
   readonly enabled: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#level TfWorkgroup#level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#level AwsWorkgroup#level}
   */
   readonly level?: number;
 }
@@ -1146,15 +1146,15 @@ export class PricePerformanceTargetPropertyOutputReference extends cdktn.Complex
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#create TfWorkgroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#create AwsWorkgroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#delete TfWorkgroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#delete AwsWorkgroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#update TfWorkgroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshiftserverless_workgroup#update AwsWorkgroup#update}
   */
   readonly update?: string;
 }

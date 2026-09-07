@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfClusterConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsClusterConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_cluster#id DataTfCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_cluster#id DataAwsCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_cluster#name DataTfCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_cluster#name DataAwsCluster#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_cluster#region DataTfCluster#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_cluster#region DataAwsCluster#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_cluster#tags DataTfCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_cluster#tags DataAwsCluster#tags}
   */
   readonly tags?: { [key: string]: string };
 }
@@ -32,7 +32,7 @@ export interface DataTfClusterConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_cluster aws_memorydb_cluster}
 */
-export class DataTfCluster extends cdktn.TerraformDataSource {
+export class DataAwsCluster extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class DataTfCluster extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfCluster resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsCluster resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfCluster to import
-  * @param importFromId The id of the existing DataTfCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_cluster#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfCluster to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsCluster to import
+  * @param importFromId The id of the existing DataAwsCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/memorydb_cluster#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_memorydb_cluster", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class DataTfCluster extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfClusterConfig
+  * @param options DataAwsClusterConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfClusterConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_memorydb_cluster',
       terraformGeneratorMetadata: {
@@ -106,7 +106,7 @@ export class DataTfCluster extends cdktn.TerraformDataSource {
   }
 
   // cluster_endpoint - computed: true, optional: false, required: false
-  private _clusterEndpoint = new DataTfCluster.ClusterEndpointPropertyList(this, "cluster_endpoint", false);
+  private _clusterEndpoint = new DataAwsCluster.ClusterEndpointPropertyList(this, "cluster_endpoint", false);
   public get clusterEndpoint() {
     return this._clusterEndpoint;
   }
@@ -237,7 +237,7 @@ export class DataTfCluster extends cdktn.TerraformDataSource {
   }
 
   // shards - computed: true, optional: false, required: false
-  private _shards = new DataTfCluster.ShardsPropertyList(this, "shards", true);
+  private _shards = new DataAwsCluster.ShardsPropertyList(this, "shards", true);
   public get shards() {
     return this._shards;
   }
@@ -329,7 +329,7 @@ export class DataTfCluster extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfClusterClusterEndpointPropertyToTerraform(struct?: DataTfCluster.ClusterEndpointProperty): any {
+export function dataAwsClusterClusterEndpointPropertyToTerraform(struct?: DataAwsCluster.ClusterEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function dataTfClusterClusterEndpointPropertyToTerraform(struct?: DataTfC
 }
 
 
-export function dataTfClusterClusterEndpointPropertyToHclTerraform(struct?: DataTfCluster.ClusterEndpointProperty): any {
+export function dataAwsClusterClusterEndpointPropertyToHclTerraform(struct?: DataAwsCluster.ClusterEndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -350,7 +350,7 @@ export function dataTfClusterClusterEndpointPropertyToHclTerraform(struct?: Data
 }
 
 
-export function dataTfClusterEndpointPropertyToTerraform(struct?: DataTfCluster.EndpointProperty): any {
+export function dataAwsClusterEndpointPropertyToTerraform(struct?: DataAwsCluster.EndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function dataTfClusterEndpointPropertyToTerraform(struct?: DataTfCluster.
 }
 
 
-export function dataTfClusterEndpointPropertyToHclTerraform(struct?: DataTfCluster.EndpointProperty): any {
+export function dataAwsClusterEndpointPropertyToHclTerraform(struct?: DataAwsCluster.EndpointProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -371,7 +371,7 @@ export function dataTfClusterEndpointPropertyToHclTerraform(struct?: DataTfClust
 }
 
 
-export function dataTfClusterNodesPropertyToTerraform(struct?: DataTfCluster.NodesProperty): any {
+export function dataAwsClusterNodesPropertyToTerraform(struct?: DataAwsCluster.NodesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -381,7 +381,7 @@ export function dataTfClusterNodesPropertyToTerraform(struct?: DataTfCluster.Nod
 }
 
 
-export function dataTfClusterNodesPropertyToHclTerraform(struct?: DataTfCluster.NodesProperty): any {
+export function dataAwsClusterNodesPropertyToHclTerraform(struct?: DataAwsCluster.NodesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -392,7 +392,7 @@ export function dataTfClusterNodesPropertyToHclTerraform(struct?: DataTfCluster.
 }
 
 
-export function dataTfClusterShardsPropertyToTerraform(struct?: DataTfCluster.ShardsProperty): any {
+export function dataAwsClusterShardsPropertyToTerraform(struct?: DataAwsCluster.ShardsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -402,7 +402,7 @@ export function dataTfClusterShardsPropertyToTerraform(struct?: DataTfCluster.Sh
 }
 
 
-export function dataTfClusterShardsPropertyToHclTerraform(struct?: DataTfCluster.ShardsProperty): any {
+export function dataAwsClusterShardsPropertyToHclTerraform(struct?: DataAwsCluster.ShardsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -413,7 +413,7 @@ export function dataTfClusterShardsPropertyToHclTerraform(struct?: DataTfCluster
 }
 
 
-export namespace DataTfCluster {
+export namespace DataAwsCluster {
 export interface ClusterEndpointProperty {
 }
 export class ClusterEndpointPropertyOutputReference extends cdktn.ComplexObject {

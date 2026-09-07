@@ -19,8 +19,8 @@
  * Each is rewritten into one common spelling by erasing exactly the two things the two naming
  * schemes disagree about, and nothing else:
  *
- *   ours: drop the `TfLb.` namespace qualifier; drop the `Property` infix from every type name
- *         and mapper-function name; `TfLb`/`TfLbConfig` -> `Resource`/`Config`.
+ *   ours: drop the `AwsLb.` namespace qualifier; drop the `Property` infix from every type name
+ *         and mapper-function name; `AwsLb`/`AwsLbConfig` -> `Resource`/`Config`.
  *   ref:  drop the `Lb`/`lb` resource-name prefix from every nested type and mapper-function
  *         name;                     `Lb`/`LbConfig`     -> `Resource`/`Config`.
  *
@@ -92,8 +92,8 @@ const [ourFileArg, ourClassArg, refFileArg, refClassArg] = positional;
 const ourFile = ourFileArg ?? path.join(repoRoot, "generated", "elb", "src", "aws-lb.ts");
 /**
  * Our class name is READ OUT OF THE FILE, never derived from its name: since M6 the two disagree
- * on purpose (`aws-lb.ts` exports `TfLb`, `aws-s3-bucket-versioning.ts` exports
- * `TfBucketVersioning`), because the file is keyed on the terraform type and the class on the
+ * on purpose (`aws-lb.ts` exports `AwsLb`, `aws-s3-bucket-versioning.ts` exports
+ * `AwsBucketVersioning`), because the file is keyed on the terraform type and the class on the
  * group's stripPrefixes. The declaration line is the only place both are true at once.
  */
 function ourClassNameIn(file) {
@@ -184,7 +184,7 @@ function normalizeOurs(text, cls) {
   const lower = lcfirst(cls);
   return (
     text
-      // `TfLb.AccessLogsProperty` -> `AccessLogsProperty`
+      // `AwsLb.AccessLogsProperty` -> `AccessLogsProperty`
       .replaceAll(`${cls}.`, "")
       // `awsLbAccessLogsPropertyToTerraform` -> `accessLogsToTerraform`
       .replace(
@@ -247,7 +247,7 @@ function units(text) {
       .slice(starts[i].index, end)
       .replace(/\n\/\*\*[\s\S]*$/, "")
       .replace(/\s+$/, "");
-    // The LAST unit inside `export namespace TfLb { ... }` is followed by the namespace's own
+    // The LAST unit inside `export namespace AwsLb { ... }` is followed by the namespace's own
     // closing brace, which the flat reference file has no counterpart for. Drop trailing lone
     // `}` lines while the slice has more closes than opens.
     const balance = (t) => (t.match(/\{/g) ?? []).length - (t.match(/\}/g) ?? []).length;

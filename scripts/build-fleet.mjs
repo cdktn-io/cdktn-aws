@@ -74,7 +74,7 @@ const allGroups = readdirSync(generatedDir, { withFileTypes: true })
  * `--shard i/N` — the slice of the fleet this worker owns, 1-based.
  *
  * Not `groups.filter((_, k) => k % N === i)`: the fleet spans three orders of magnitude in size
- * (`lex_v2_models` is 60 MB packed, `awsswf` is 88 KB), and any index-based split leaves one shard
+ * (`lex_v2_models` is 60 MB packed, `swf` is 88 KB), and any index-based split leaves one shard
  * carrying the two giants while another finishes in seconds — a matrix is only as fast as its
  * slowest leg. Groups are dealt largest-first into whichever shard is currently lightest (LPT),
  * using the committed `hashes.json` byte counts, so the split is balanced AND identical on every

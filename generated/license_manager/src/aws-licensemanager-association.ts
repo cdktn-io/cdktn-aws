@@ -5,26 +5,26 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_association#id TfAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_association#id AwsAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_association#license_configuration_arn TfAssociation#license_configuration_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_association#license_configuration_arn AwsAssociation#license_configuration_arn}
   */
   readonly licenseConfigurationArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_association#region TfAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_association#region AwsAssociation#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_association#resource_arn TfAssociation#resource_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_association#resource_arn AwsAssociation#resource_arn}
   */
   readonly resourceArn: string;
 }
@@ -32,7 +32,7 @@ export interface TfAssociationConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_association aws_licensemanager_association}
 */
-export class TfAssociation extends cdktn.TerraformResource {
+export class AwsAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -43,11 +43,11 @@ export class TfAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAssociation to import
-  * @param importFromId The id of the existing TfAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsAssociation to import
+  * @param importFromId The id of the existing AwsAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/licensemanager_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_licensemanager_association", importId: importFromId, provider });
@@ -62,9 +62,9 @@ export class TfAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAssociationConfig
+  * @param options AwsAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_licensemanager_association',
       terraformGeneratorMetadata: {

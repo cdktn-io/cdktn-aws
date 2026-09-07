@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfAccessPolicyAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsAccessPolicyAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#cluster_name TfAccessPolicyAssociation#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#cluster_name AwsAccessPolicyAssociation#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#id TfAccessPolicyAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#id AwsAccessPolicyAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#policy_arn TfAccessPolicyAssociation#policy_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#policy_arn AwsAccessPolicyAssociation#policy_arn}
   */
   readonly policyArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#principal_arn TfAccessPolicyAssociation#principal_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#principal_arn AwsAccessPolicyAssociation#principal_arn}
   */
   readonly principalArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#region TfAccessPolicyAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#region AwsAccessPolicyAssociation#region}
   */
   readonly region?: string;
   /**
   * access_scope block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#access_scope TfAccessPolicyAssociation#access_scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#access_scope AwsAccessPolicyAssociation#access_scope}
   */
-  readonly accessScope: TfAccessPolicyAssociation.AccessScopeProperty;
+  readonly accessScope: AwsAccessPolicyAssociation.AccessScopeProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#timeouts TfAccessPolicyAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#timeouts AwsAccessPolicyAssociation#timeouts}
   */
-  readonly timeouts?: TfAccessPolicyAssociation.TimeoutsProperty;
+  readonly timeouts?: AwsAccessPolicyAssociation.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association aws_eks_access_policy_association}
 */
-export class TfAccessPolicyAssociation extends cdktn.TerraformResource {
+export class AwsAccessPolicyAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfAccessPolicyAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfAccessPolicyAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsAccessPolicyAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfAccessPolicyAssociation to import
-  * @param importFromId The id of the existing TfAccessPolicyAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfAccessPolicyAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsAccessPolicyAssociation to import
+  * @param importFromId The id of the existing AwsAccessPolicyAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsAccessPolicyAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_eks_access_policy_association", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfAccessPolicyAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfAccessPolicyAssociationConfig
+  * @param options AwsAccessPolicyAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfAccessPolicyAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsAccessPolicyAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_eks_access_policy_association',
       terraformGeneratorMetadata: {
@@ -191,11 +191,11 @@ export class TfAccessPolicyAssociation extends cdktn.TerraformResource {
   }
 
   // access_scope - computed: false, optional: false, required: true
-  private _accessScope = new TfAccessPolicyAssociation.AccessScopePropertyOutputReference(this, "access_scope");
+  private _accessScope = new AwsAccessPolicyAssociation.AccessScopePropertyOutputReference(this, "access_scope");
   public get accessScope() {
     return this._accessScope;
   }
-  public putAccessScope(value: TfAccessPolicyAssociation.AccessScopeProperty) {
+  public putAccessScope(value: AwsAccessPolicyAssociation.AccessScopeProperty) {
     this._accessScope.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -204,11 +204,11 @@ export class TfAccessPolicyAssociation extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfAccessPolicyAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsAccessPolicyAssociation.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfAccessPolicyAssociation.TimeoutsProperty) {
+  public putTimeouts(value: AwsAccessPolicyAssociation.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -230,8 +230,8 @@ export class TfAccessPolicyAssociation extends cdktn.TerraformResource {
       policy_arn: cdktn.stringToTerraform(this._policyArn),
       principal_arn: cdktn.stringToTerraform(this._principalArn),
       region: cdktn.stringToTerraform(this._region),
-      access_scope: tfAccessPolicyAssociationAccessScopePropertyToTerraform(this._accessScope.internalValue),
-      timeouts: tfAccessPolicyAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      access_scope: awsAccessPolicyAssociationAccessScopePropertyToTerraform(this._accessScope.internalValue),
+      timeouts: awsAccessPolicyAssociationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -268,16 +268,16 @@ export class TfAccessPolicyAssociation extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       access_scope: {
-        value: tfAccessPolicyAssociationAccessScopePropertyToHclTerraform(this._accessScope.internalValue),
+        value: awsAccessPolicyAssociationAccessScopePropertyToHclTerraform(this._accessScope.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfAccessPolicyAssociation.AccessScopePropertyList",
+        storageClassType: "AwsAccessPolicyAssociation.AccessScopePropertyList",
       },
       timeouts: {
-        value: tfAccessPolicyAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsAccessPolicyAssociationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfAccessPolicyAssociation.TimeoutsProperty",
+        storageClassType: "AwsAccessPolicyAssociation.TimeoutsProperty",
       },
     };
 
@@ -286,7 +286,7 @@ export class TfAccessPolicyAssociation extends cdktn.TerraformResource {
   }
 }
 
-export function tfAccessPolicyAssociationAccessScopePropertyToTerraform(struct?: TfAccessPolicyAssociation.AccessScopePropertyOutputReference | TfAccessPolicyAssociation.AccessScopeProperty): any {
+export function awsAccessPolicyAssociationAccessScopePropertyToTerraform(struct?: AwsAccessPolicyAssociation.AccessScopePropertyOutputReference | AwsAccessPolicyAssociation.AccessScopeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -298,7 +298,7 @@ export function tfAccessPolicyAssociationAccessScopePropertyToTerraform(struct?:
 }
 
 
-export function tfAccessPolicyAssociationAccessScopePropertyToHclTerraform(struct?: TfAccessPolicyAssociation.AccessScopePropertyOutputReference | TfAccessPolicyAssociation.AccessScopeProperty): any {
+export function awsAccessPolicyAssociationAccessScopePropertyToHclTerraform(struct?: AwsAccessPolicyAssociation.AccessScopePropertyOutputReference | AwsAccessPolicyAssociation.AccessScopeProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -323,7 +323,7 @@ export function tfAccessPolicyAssociationAccessScopePropertyToHclTerraform(struc
 }
 
 
-export function tfAccessPolicyAssociationTimeoutsPropertyToTerraform(struct?: TfAccessPolicyAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAccessPolicyAssociationTimeoutsPropertyToTerraform(struct?: AwsAccessPolicyAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -335,7 +335,7 @@ export function tfAccessPolicyAssociationTimeoutsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfAccessPolicyAssociationTimeoutsPropertyToHclTerraform(struct?: TfAccessPolicyAssociation.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsAccessPolicyAssociationTimeoutsPropertyToHclTerraform(struct?: AwsAccessPolicyAssociation.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,14 +360,14 @@ export function tfAccessPolicyAssociationTimeoutsPropertyToHclTerraform(struct?:
 }
 
 
-export namespace TfAccessPolicyAssociation {
+export namespace AwsAccessPolicyAssociation {
 export interface AccessScopeProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#namespaces TfAccessPolicyAssociation#namespaces}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#namespaces AwsAccessPolicyAssociation#namespaces}
   */
   readonly namespaces?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#type TfAccessPolicyAssociation#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#type AwsAccessPolicyAssociation#type}
   */
   readonly type: string;
 }
@@ -440,11 +440,11 @@ export class AccessScopePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#create TfAccessPolicyAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#create AwsAccessPolicyAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#delete TfAccessPolicyAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_access_policy_association#delete AwsAccessPolicyAssociation#delete}
   */
   readonly delete?: string;
 }

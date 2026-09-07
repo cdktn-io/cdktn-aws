@@ -5,13 +5,13 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfWorkflowConfig extends cdktn.TerraformMetaArguments {
+export interface AwsWorkflowConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#description TfWorkflow#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#description AwsWorkflow#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#id TfWorkflow#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#id AwsWorkflow#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -20,35 +20,35 @@ export interface TfWorkflowConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#region TfWorkflow#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#region AwsWorkflow#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#tags TfWorkflow#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#tags AwsWorkflow#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#tags_all TfWorkflow#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#tags_all AwsWorkflow#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * on_exception_steps block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#on_exception_steps TfWorkflow#on_exception_steps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#on_exception_steps AwsWorkflow#on_exception_steps}
   */
-  readonly onExceptionSteps?: TfWorkflow.OnExceptionStepsProperty[] | cdktn.IResolvable;
+  readonly onExceptionSteps?: AwsWorkflow.OnExceptionStepsProperty[] | cdktn.IResolvable;
   /**
   * steps block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#steps TfWorkflow#steps}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#steps AwsWorkflow#steps}
   */
-  readonly steps: TfWorkflow.StepsProperty[] | cdktn.IResolvable;
+  readonly steps: AwsWorkflow.StepsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow aws_transfer_workflow}
 */
-export class TfWorkflow extends cdktn.TerraformResource {
+export class AwsWorkflow extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfWorkflow extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfWorkflow resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsWorkflow resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfWorkflow to import
-  * @param importFromId The id of the existing TfWorkflow that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfWorkflow to import is found
+  * @param importToId The construct id used in the generated config for the AwsWorkflow to import
+  * @param importFromId The id of the existing AwsWorkflow that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsWorkflow to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_transfer_workflow", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfWorkflow extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfWorkflowConfig
+  * @param options AwsWorkflowConfig
   */
-  public constructor(scope: Construct, id: string, config: TfWorkflowConfig) {
+  public constructor(scope: Construct, id: string, config: AwsWorkflowConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_transfer_workflow',
       terraformGeneratorMetadata: {
@@ -195,11 +195,11 @@ export class TfWorkflow extends cdktn.TerraformResource {
   }
 
   // on_exception_steps - computed: false, optional: true, required: false
-  private _onExceptionSteps = new TfWorkflow.OnExceptionStepsPropertyList(this, "on_exception_steps", false);
+  private _onExceptionSteps = new AwsWorkflow.OnExceptionStepsPropertyList(this, "on_exception_steps", false);
   public get onExceptionSteps() {
     return this._onExceptionSteps;
   }
-  public putOnExceptionSteps(value: TfWorkflow.OnExceptionStepsProperty[] | cdktn.IResolvable) {
+  public putOnExceptionSteps(value: AwsWorkflow.OnExceptionStepsProperty[] | cdktn.IResolvable) {
     this._onExceptionSteps.internalValue = value;
   }
   public resetOnExceptionSteps() {
@@ -211,11 +211,11 @@ export class TfWorkflow extends cdktn.TerraformResource {
   }
 
   // steps - computed: false, optional: false, required: true
-  private _steps = new TfWorkflow.StepsPropertyList(this, "steps", false);
+  private _steps = new AwsWorkflow.StepsPropertyList(this, "steps", false);
   public get steps() {
     return this._steps;
   }
-  public putSteps(value: TfWorkflow.StepsProperty[] | cdktn.IResolvable) {
+  public putSteps(value: AwsWorkflow.StepsProperty[] | cdktn.IResolvable) {
     this._steps.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -234,8 +234,8 @@ export class TfWorkflow extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      on_exception_steps: cdktn.listMapper(tfWorkflowOnExceptionStepsPropertyToTerraform, true)(this._onExceptionSteps.internalValue),
-      steps: cdktn.listMapper(tfWorkflowStepsPropertyToTerraform, true)(this._steps.internalValue),
+      on_exception_steps: cdktn.listMapper(awsWorkflowOnExceptionStepsPropertyToTerraform, true)(this._onExceptionSteps.internalValue),
+      steps: cdktn.listMapper(awsWorkflowStepsPropertyToTerraform, true)(this._steps.internalValue),
     };
   }
 
@@ -272,16 +272,16 @@ export class TfWorkflow extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       on_exception_steps: {
-        value: cdktn.listMapperHcl(tfWorkflowOnExceptionStepsPropertyToHclTerraform, true)(this._onExceptionSteps.internalValue),
+        value: cdktn.listMapperHcl(awsWorkflowOnExceptionStepsPropertyToHclTerraform, true)(this._onExceptionSteps.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfWorkflow.OnExceptionStepsPropertyList",
+        storageClassType: "AwsWorkflow.OnExceptionStepsPropertyList",
       },
       steps: {
-        value: cdktn.listMapperHcl(tfWorkflowStepsPropertyToHclTerraform, true)(this._steps.internalValue),
+        value: cdktn.listMapperHcl(awsWorkflowStepsPropertyToHclTerraform, true)(this._steps.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfWorkflow.StepsPropertyList",
+        storageClassType: "AwsWorkflow.StepsPropertyList",
       },
     };
 
@@ -290,7 +290,7 @@ export class TfWorkflow extends cdktn.TerraformResource {
   }
 }
 
-export function tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyToTerraform(struct?: TfWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyOutputReference | TfWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationProperty): any {
+export function awsWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyToTerraform(struct?: AwsWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyOutputReference | AwsWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -302,7 +302,7 @@ export function tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocation
 }
 
 
-export function tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyToHclTerraform(struct?: TfWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyOutputReference | TfWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationProperty): any {
+export function awsWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyToHclTerraform(struct?: AwsWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyOutputReference | AwsWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -327,7 +327,7 @@ export function tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocation
 }
 
 
-export function tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyToTerraform(struct?: TfWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyOutputReference | TfWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationProperty): any {
+export function awsWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyToTerraform(struct?: AwsWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyOutputReference | AwsWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocation
 }
 
 
-export function tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyToHclTerraform(struct?: TfWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyOutputReference | TfWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationProperty): any {
+export function awsWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyToHclTerraform(struct?: AwsWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyOutputReference | AwsWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,32 +364,32 @@ export function tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocation
 }
 
 
-export function tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationPropertyToTerraform(struct?: TfWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationPropertyOutputReference | TfWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationProperty): any {
+export function awsWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationPropertyToTerraform(struct?: AwsWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationPropertyOutputReference | AwsWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    efs_file_location: tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyToTerraform(struct!.efsFileLocation),
-    s3_file_location: tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyToTerraform(struct!.s3FileLocation),
+    efs_file_location: awsWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyToTerraform(struct!.efsFileLocation),
+    s3_file_location: awsWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyToTerraform(struct!.s3FileLocation),
   }
 }
 
 
-export function tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationPropertyToHclTerraform(struct?: TfWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationPropertyOutputReference | TfWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationProperty): any {
+export function awsWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationPropertyToHclTerraform(struct?: AwsWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationPropertyOutputReference | AwsWorkflow.OnExceptionStepsCopyStepDetailsDestinationFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     efs_file_location: {
-      value: tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyToHclTerraform(struct!.efsFileLocation),
+      value: awsWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyToHclTerraform(struct!.efsFileLocation),
       isBlock: true,
       type: "list",
       storageClassType: "OnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyList",
     },
     s3_file_location: {
-      value: tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyToHclTerraform(struct!.s3FileLocation),
+      value: awsWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyToHclTerraform(struct!.s3FileLocation),
       isBlock: true,
       type: "list",
       storageClassType: "OnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyList",
@@ -401,7 +401,7 @@ export function tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocation
 }
 
 
-export function tfWorkflowOnExceptionStepsCopyStepDetailsPropertyToTerraform(struct?: TfWorkflow.OnExceptionStepsCopyStepDetailsPropertyOutputReference | TfWorkflow.OnExceptionStepsCopyStepDetailsProperty): any {
+export function awsWorkflowOnExceptionStepsCopyStepDetailsPropertyToTerraform(struct?: AwsWorkflow.OnExceptionStepsCopyStepDetailsPropertyOutputReference | AwsWorkflow.OnExceptionStepsCopyStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -410,12 +410,12 @@ export function tfWorkflowOnExceptionStepsCopyStepDetailsPropertyToTerraform(str
     name: cdktn.stringToTerraform(struct!.name),
     overwrite_existing: cdktn.stringToTerraform(struct!.overwriteExisting),
     source_file_location: cdktn.stringToTerraform(struct!.sourceFileLocation),
-    destination_file_location: tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationPropertyToTerraform(struct!.destinationFileLocation),
+    destination_file_location: awsWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationPropertyToTerraform(struct!.destinationFileLocation),
   }
 }
 
 
-export function tfWorkflowOnExceptionStepsCopyStepDetailsPropertyToHclTerraform(struct?: TfWorkflow.OnExceptionStepsCopyStepDetailsPropertyOutputReference | TfWorkflow.OnExceptionStepsCopyStepDetailsProperty): any {
+export function awsWorkflowOnExceptionStepsCopyStepDetailsPropertyToHclTerraform(struct?: AwsWorkflow.OnExceptionStepsCopyStepDetailsPropertyOutputReference | AwsWorkflow.OnExceptionStepsCopyStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -440,7 +440,7 @@ export function tfWorkflowOnExceptionStepsCopyStepDetailsPropertyToHclTerraform(
       storageClassType: "string",
     },
     destination_file_location: {
-      value: tfWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationPropertyToHclTerraform(struct!.destinationFileLocation),
+      value: awsWorkflowOnExceptionStepsCopyStepDetailsDestinationFileLocationPropertyToHclTerraform(struct!.destinationFileLocation),
       isBlock: true,
       type: "list",
       storageClassType: "OnExceptionStepsCopyStepDetailsDestinationFileLocationPropertyList",
@@ -452,7 +452,7 @@ export function tfWorkflowOnExceptionStepsCopyStepDetailsPropertyToHclTerraform(
 }
 
 
-export function tfWorkflowOnExceptionStepsCustomStepDetailsPropertyToTerraform(struct?: TfWorkflow.OnExceptionStepsCustomStepDetailsPropertyOutputReference | TfWorkflow.OnExceptionStepsCustomStepDetailsProperty): any {
+export function awsWorkflowOnExceptionStepsCustomStepDetailsPropertyToTerraform(struct?: AwsWorkflow.OnExceptionStepsCustomStepDetailsPropertyOutputReference | AwsWorkflow.OnExceptionStepsCustomStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,7 +466,7 @@ export function tfWorkflowOnExceptionStepsCustomStepDetailsPropertyToTerraform(s
 }
 
 
-export function tfWorkflowOnExceptionStepsCustomStepDetailsPropertyToHclTerraform(struct?: TfWorkflow.OnExceptionStepsCustomStepDetailsPropertyOutputReference | TfWorkflow.OnExceptionStepsCustomStepDetailsProperty): any {
+export function awsWorkflowOnExceptionStepsCustomStepDetailsPropertyToHclTerraform(struct?: AwsWorkflow.OnExceptionStepsCustomStepDetailsPropertyOutputReference | AwsWorkflow.OnExceptionStepsCustomStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -503,7 +503,7 @@ export function tfWorkflowOnExceptionStepsCustomStepDetailsPropertyToHclTerrafor
 }
 
 
-export function tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyToTerraform(struct?: TfWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyOutputReference | TfWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationProperty): any {
+export function awsWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyToTerraform(struct?: AwsWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyOutputReference | AwsWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -515,7 +515,7 @@ export function tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocat
 }
 
 
-export function tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyToHclTerraform(struct?: TfWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyOutputReference | TfWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationProperty): any {
+export function awsWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyToHclTerraform(struct?: AwsWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyOutputReference | AwsWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -540,7 +540,7 @@ export function tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocat
 }
 
 
-export function tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyToTerraform(struct?: TfWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyOutputReference | TfWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationProperty): any {
+export function awsWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyToTerraform(struct?: AwsWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyOutputReference | AwsWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -552,7 +552,7 @@ export function tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocat
 }
 
 
-export function tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyToHclTerraform(struct?: TfWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyOutputReference | TfWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationProperty): any {
+export function awsWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyToHclTerraform(struct?: AwsWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyOutputReference | AwsWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -577,32 +577,32 @@ export function tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocat
 }
 
 
-export function tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationPropertyToTerraform(struct?: TfWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationPropertyOutputReference | TfWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationProperty): any {
+export function awsWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationPropertyToTerraform(struct?: AwsWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationPropertyOutputReference | AwsWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    efs_file_location: tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyToTerraform(struct!.efsFileLocation),
-    s3_file_location: tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyToTerraform(struct!.s3FileLocation),
+    efs_file_location: awsWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyToTerraform(struct!.efsFileLocation),
+    s3_file_location: awsWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyToTerraform(struct!.s3FileLocation),
   }
 }
 
 
-export function tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationPropertyToHclTerraform(struct?: TfWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationPropertyOutputReference | TfWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationProperty): any {
+export function awsWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationPropertyToHclTerraform(struct?: AwsWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationPropertyOutputReference | AwsWorkflow.OnExceptionStepsDecryptStepDetailsDestinationFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     efs_file_location: {
-      value: tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyToHclTerraform(struct!.efsFileLocation),
+      value: awsWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyToHclTerraform(struct!.efsFileLocation),
       isBlock: true,
       type: "list",
       storageClassType: "OnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyList",
     },
     s3_file_location: {
-      value: tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyToHclTerraform(struct!.s3FileLocation),
+      value: awsWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyToHclTerraform(struct!.s3FileLocation),
       isBlock: true,
       type: "list",
       storageClassType: "OnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyList",
@@ -614,7 +614,7 @@ export function tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocat
 }
 
 
-export function tfWorkflowOnExceptionStepsDecryptStepDetailsPropertyToTerraform(struct?: TfWorkflow.OnExceptionStepsDecryptStepDetailsPropertyOutputReference | TfWorkflow.OnExceptionStepsDecryptStepDetailsProperty): any {
+export function awsWorkflowOnExceptionStepsDecryptStepDetailsPropertyToTerraform(struct?: AwsWorkflow.OnExceptionStepsDecryptStepDetailsPropertyOutputReference | AwsWorkflow.OnExceptionStepsDecryptStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -624,12 +624,12 @@ export function tfWorkflowOnExceptionStepsDecryptStepDetailsPropertyToTerraform(
     overwrite_existing: cdktn.stringToTerraform(struct!.overwriteExisting),
     source_file_location: cdktn.stringToTerraform(struct!.sourceFileLocation),
     type: cdktn.stringToTerraform(struct!.type),
-    destination_file_location: tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationPropertyToTerraform(struct!.destinationFileLocation),
+    destination_file_location: awsWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationPropertyToTerraform(struct!.destinationFileLocation),
   }
 }
 
 
-export function tfWorkflowOnExceptionStepsDecryptStepDetailsPropertyToHclTerraform(struct?: TfWorkflow.OnExceptionStepsDecryptStepDetailsPropertyOutputReference | TfWorkflow.OnExceptionStepsDecryptStepDetailsProperty): any {
+export function awsWorkflowOnExceptionStepsDecryptStepDetailsPropertyToHclTerraform(struct?: AwsWorkflow.OnExceptionStepsDecryptStepDetailsPropertyOutputReference | AwsWorkflow.OnExceptionStepsDecryptStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -660,7 +660,7 @@ export function tfWorkflowOnExceptionStepsDecryptStepDetailsPropertyToHclTerrafo
       storageClassType: "string",
     },
     destination_file_location: {
-      value: tfWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationPropertyToHclTerraform(struct!.destinationFileLocation),
+      value: awsWorkflowOnExceptionStepsDecryptStepDetailsDestinationFileLocationPropertyToHclTerraform(struct!.destinationFileLocation),
       isBlock: true,
       type: "list",
       storageClassType: "OnExceptionStepsDecryptStepDetailsDestinationFileLocationPropertyList",
@@ -672,7 +672,7 @@ export function tfWorkflowOnExceptionStepsDecryptStepDetailsPropertyToHclTerrafo
 }
 
 
-export function tfWorkflowOnExceptionStepsDeleteStepDetailsPropertyToTerraform(struct?: TfWorkflow.OnExceptionStepsDeleteStepDetailsPropertyOutputReference | TfWorkflow.OnExceptionStepsDeleteStepDetailsProperty): any {
+export function awsWorkflowOnExceptionStepsDeleteStepDetailsPropertyToTerraform(struct?: AwsWorkflow.OnExceptionStepsDeleteStepDetailsPropertyOutputReference | AwsWorkflow.OnExceptionStepsDeleteStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -684,7 +684,7 @@ export function tfWorkflowOnExceptionStepsDeleteStepDetailsPropertyToTerraform(s
 }
 
 
-export function tfWorkflowOnExceptionStepsDeleteStepDetailsPropertyToHclTerraform(struct?: TfWorkflow.OnExceptionStepsDeleteStepDetailsPropertyOutputReference | TfWorkflow.OnExceptionStepsDeleteStepDetailsProperty): any {
+export function awsWorkflowOnExceptionStepsDeleteStepDetailsPropertyToHclTerraform(struct?: AwsWorkflow.OnExceptionStepsDeleteStepDetailsPropertyOutputReference | AwsWorkflow.OnExceptionStepsDeleteStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -709,7 +709,7 @@ export function tfWorkflowOnExceptionStepsDeleteStepDetailsPropertyToHclTerrafor
 }
 
 
-export function tfWorkflowOnExceptionStepsTagStepDetailsTagsPropertyToTerraform(struct?: TfWorkflow.OnExceptionStepsTagStepDetailsTagsProperty | cdktn.IResolvable): any {
+export function awsWorkflowOnExceptionStepsTagStepDetailsTagsPropertyToTerraform(struct?: AwsWorkflow.OnExceptionStepsTagStepDetailsTagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -721,7 +721,7 @@ export function tfWorkflowOnExceptionStepsTagStepDetailsTagsPropertyToTerraform(
 }
 
 
-export function tfWorkflowOnExceptionStepsTagStepDetailsTagsPropertyToHclTerraform(struct?: TfWorkflow.OnExceptionStepsTagStepDetailsTagsProperty | cdktn.IResolvable): any {
+export function awsWorkflowOnExceptionStepsTagStepDetailsTagsPropertyToHclTerraform(struct?: AwsWorkflow.OnExceptionStepsTagStepDetailsTagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -746,7 +746,7 @@ export function tfWorkflowOnExceptionStepsTagStepDetailsTagsPropertyToHclTerrafo
 }
 
 
-export function tfWorkflowOnExceptionStepsTagStepDetailsPropertyToTerraform(struct?: TfWorkflow.OnExceptionStepsTagStepDetailsPropertyOutputReference | TfWorkflow.OnExceptionStepsTagStepDetailsProperty): any {
+export function awsWorkflowOnExceptionStepsTagStepDetailsPropertyToTerraform(struct?: AwsWorkflow.OnExceptionStepsTagStepDetailsPropertyOutputReference | AwsWorkflow.OnExceptionStepsTagStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -754,12 +754,12 @@ export function tfWorkflowOnExceptionStepsTagStepDetailsPropertyToTerraform(stru
   return {
     name: cdktn.stringToTerraform(struct!.name),
     source_file_location: cdktn.stringToTerraform(struct!.sourceFileLocation),
-    tags: cdktn.listMapper(tfWorkflowOnExceptionStepsTagStepDetailsTagsPropertyToTerraform, true)(struct!.tags),
+    tags: cdktn.listMapper(awsWorkflowOnExceptionStepsTagStepDetailsTagsPropertyToTerraform, true)(struct!.tags),
   }
 }
 
 
-export function tfWorkflowOnExceptionStepsTagStepDetailsPropertyToHclTerraform(struct?: TfWorkflow.OnExceptionStepsTagStepDetailsPropertyOutputReference | TfWorkflow.OnExceptionStepsTagStepDetailsProperty): any {
+export function awsWorkflowOnExceptionStepsTagStepDetailsPropertyToHclTerraform(struct?: AwsWorkflow.OnExceptionStepsTagStepDetailsPropertyOutputReference | AwsWorkflow.OnExceptionStepsTagStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -778,7 +778,7 @@ export function tfWorkflowOnExceptionStepsTagStepDetailsPropertyToHclTerraform(s
       storageClassType: "string",
     },
     tags: {
-      value: cdktn.listMapperHcl(tfWorkflowOnExceptionStepsTagStepDetailsTagsPropertyToHclTerraform, true)(struct!.tags),
+      value: cdktn.listMapperHcl(awsWorkflowOnExceptionStepsTagStepDetailsTagsPropertyToHclTerraform, true)(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "OnExceptionStepsTagStepDetailsTagsPropertyList",
@@ -790,23 +790,23 @@ export function tfWorkflowOnExceptionStepsTagStepDetailsPropertyToHclTerraform(s
 }
 
 
-export function tfWorkflowOnExceptionStepsPropertyToTerraform(struct?: TfWorkflow.OnExceptionStepsProperty | cdktn.IResolvable): any {
+export function awsWorkflowOnExceptionStepsPropertyToTerraform(struct?: AwsWorkflow.OnExceptionStepsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    copy_step_details: tfWorkflowOnExceptionStepsCopyStepDetailsPropertyToTerraform(struct!.copyStepDetails),
-    custom_step_details: tfWorkflowOnExceptionStepsCustomStepDetailsPropertyToTerraform(struct!.customStepDetails),
-    decrypt_step_details: tfWorkflowOnExceptionStepsDecryptStepDetailsPropertyToTerraform(struct!.decryptStepDetails),
-    delete_step_details: tfWorkflowOnExceptionStepsDeleteStepDetailsPropertyToTerraform(struct!.deleteStepDetails),
-    tag_step_details: tfWorkflowOnExceptionStepsTagStepDetailsPropertyToTerraform(struct!.tagStepDetails),
+    copy_step_details: awsWorkflowOnExceptionStepsCopyStepDetailsPropertyToTerraform(struct!.copyStepDetails),
+    custom_step_details: awsWorkflowOnExceptionStepsCustomStepDetailsPropertyToTerraform(struct!.customStepDetails),
+    decrypt_step_details: awsWorkflowOnExceptionStepsDecryptStepDetailsPropertyToTerraform(struct!.decryptStepDetails),
+    delete_step_details: awsWorkflowOnExceptionStepsDeleteStepDetailsPropertyToTerraform(struct!.deleteStepDetails),
+    tag_step_details: awsWorkflowOnExceptionStepsTagStepDetailsPropertyToTerraform(struct!.tagStepDetails),
   }
 }
 
 
-export function tfWorkflowOnExceptionStepsPropertyToHclTerraform(struct?: TfWorkflow.OnExceptionStepsProperty | cdktn.IResolvable): any {
+export function awsWorkflowOnExceptionStepsPropertyToHclTerraform(struct?: AwsWorkflow.OnExceptionStepsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -819,31 +819,31 @@ export function tfWorkflowOnExceptionStepsPropertyToHclTerraform(struct?: TfWork
       storageClassType: "string",
     },
     copy_step_details: {
-      value: tfWorkflowOnExceptionStepsCopyStepDetailsPropertyToHclTerraform(struct!.copyStepDetails),
+      value: awsWorkflowOnExceptionStepsCopyStepDetailsPropertyToHclTerraform(struct!.copyStepDetails),
       isBlock: true,
       type: "list",
       storageClassType: "OnExceptionStepsCopyStepDetailsPropertyList",
     },
     custom_step_details: {
-      value: tfWorkflowOnExceptionStepsCustomStepDetailsPropertyToHclTerraform(struct!.customStepDetails),
+      value: awsWorkflowOnExceptionStepsCustomStepDetailsPropertyToHclTerraform(struct!.customStepDetails),
       isBlock: true,
       type: "list",
       storageClassType: "OnExceptionStepsCustomStepDetailsPropertyList",
     },
     decrypt_step_details: {
-      value: tfWorkflowOnExceptionStepsDecryptStepDetailsPropertyToHclTerraform(struct!.decryptStepDetails),
+      value: awsWorkflowOnExceptionStepsDecryptStepDetailsPropertyToHclTerraform(struct!.decryptStepDetails),
       isBlock: true,
       type: "list",
       storageClassType: "OnExceptionStepsDecryptStepDetailsPropertyList",
     },
     delete_step_details: {
-      value: tfWorkflowOnExceptionStepsDeleteStepDetailsPropertyToHclTerraform(struct!.deleteStepDetails),
+      value: awsWorkflowOnExceptionStepsDeleteStepDetailsPropertyToHclTerraform(struct!.deleteStepDetails),
       isBlock: true,
       type: "list",
       storageClassType: "OnExceptionStepsDeleteStepDetailsPropertyList",
     },
     tag_step_details: {
-      value: tfWorkflowOnExceptionStepsTagStepDetailsPropertyToHclTerraform(struct!.tagStepDetails),
+      value: awsWorkflowOnExceptionStepsTagStepDetailsPropertyToHclTerraform(struct!.tagStepDetails),
       isBlock: true,
       type: "list",
       storageClassType: "OnExceptionStepsTagStepDetailsPropertyList",
@@ -855,7 +855,7 @@ export function tfWorkflowOnExceptionStepsPropertyToHclTerraform(struct?: TfWork
 }
 
 
-export function tfWorkflowStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyToTerraform(struct?: TfWorkflow.StepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyOutputReference | TfWorkflow.StepsCopyStepDetailsDestinationFileLocationEfsFileLocationProperty): any {
+export function awsWorkflowStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyToTerraform(struct?: AwsWorkflow.StepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyOutputReference | AwsWorkflow.StepsCopyStepDetailsDestinationFileLocationEfsFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -867,7 +867,7 @@ export function tfWorkflowStepsCopyStepDetailsDestinationFileLocationEfsFileLoca
 }
 
 
-export function tfWorkflowStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyToHclTerraform(struct?: TfWorkflow.StepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyOutputReference | TfWorkflow.StepsCopyStepDetailsDestinationFileLocationEfsFileLocationProperty): any {
+export function awsWorkflowStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyToHclTerraform(struct?: AwsWorkflow.StepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyOutputReference | AwsWorkflow.StepsCopyStepDetailsDestinationFileLocationEfsFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -892,7 +892,7 @@ export function tfWorkflowStepsCopyStepDetailsDestinationFileLocationEfsFileLoca
 }
 
 
-export function tfWorkflowStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyToTerraform(struct?: TfWorkflow.StepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyOutputReference | TfWorkflow.StepsCopyStepDetailsDestinationFileLocationS3FileLocationProperty): any {
+export function awsWorkflowStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyToTerraform(struct?: AwsWorkflow.StepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyOutputReference | AwsWorkflow.StepsCopyStepDetailsDestinationFileLocationS3FileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -904,7 +904,7 @@ export function tfWorkflowStepsCopyStepDetailsDestinationFileLocationS3FileLocat
 }
 
 
-export function tfWorkflowStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyToHclTerraform(struct?: TfWorkflow.StepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyOutputReference | TfWorkflow.StepsCopyStepDetailsDestinationFileLocationS3FileLocationProperty): any {
+export function awsWorkflowStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyToHclTerraform(struct?: AwsWorkflow.StepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyOutputReference | AwsWorkflow.StepsCopyStepDetailsDestinationFileLocationS3FileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -929,32 +929,32 @@ export function tfWorkflowStepsCopyStepDetailsDestinationFileLocationS3FileLocat
 }
 
 
-export function tfWorkflowStepsCopyStepDetailsDestinationFileLocationPropertyToTerraform(struct?: TfWorkflow.StepsCopyStepDetailsDestinationFileLocationPropertyOutputReference | TfWorkflow.StepsCopyStepDetailsDestinationFileLocationProperty): any {
+export function awsWorkflowStepsCopyStepDetailsDestinationFileLocationPropertyToTerraform(struct?: AwsWorkflow.StepsCopyStepDetailsDestinationFileLocationPropertyOutputReference | AwsWorkflow.StepsCopyStepDetailsDestinationFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    efs_file_location: tfWorkflowStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyToTerraform(struct!.efsFileLocation),
-    s3_file_location: tfWorkflowStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyToTerraform(struct!.s3FileLocation),
+    efs_file_location: awsWorkflowStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyToTerraform(struct!.efsFileLocation),
+    s3_file_location: awsWorkflowStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyToTerraform(struct!.s3FileLocation),
   }
 }
 
 
-export function tfWorkflowStepsCopyStepDetailsDestinationFileLocationPropertyToHclTerraform(struct?: TfWorkflow.StepsCopyStepDetailsDestinationFileLocationPropertyOutputReference | TfWorkflow.StepsCopyStepDetailsDestinationFileLocationProperty): any {
+export function awsWorkflowStepsCopyStepDetailsDestinationFileLocationPropertyToHclTerraform(struct?: AwsWorkflow.StepsCopyStepDetailsDestinationFileLocationPropertyOutputReference | AwsWorkflow.StepsCopyStepDetailsDestinationFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     efs_file_location: {
-      value: tfWorkflowStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyToHclTerraform(struct!.efsFileLocation),
+      value: awsWorkflowStepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyToHclTerraform(struct!.efsFileLocation),
       isBlock: true,
       type: "list",
       storageClassType: "StepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyList",
     },
     s3_file_location: {
-      value: tfWorkflowStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyToHclTerraform(struct!.s3FileLocation),
+      value: awsWorkflowStepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyToHclTerraform(struct!.s3FileLocation),
       isBlock: true,
       type: "list",
       storageClassType: "StepsCopyStepDetailsDestinationFileLocationS3FileLocationPropertyList",
@@ -966,7 +966,7 @@ export function tfWorkflowStepsCopyStepDetailsDestinationFileLocationPropertyToH
 }
 
 
-export function tfWorkflowStepsCopyStepDetailsPropertyToTerraform(struct?: TfWorkflow.StepsCopyStepDetailsPropertyOutputReference | TfWorkflow.StepsCopyStepDetailsProperty): any {
+export function awsWorkflowStepsCopyStepDetailsPropertyToTerraform(struct?: AwsWorkflow.StepsCopyStepDetailsPropertyOutputReference | AwsWorkflow.StepsCopyStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -975,12 +975,12 @@ export function tfWorkflowStepsCopyStepDetailsPropertyToTerraform(struct?: TfWor
     name: cdktn.stringToTerraform(struct!.name),
     overwrite_existing: cdktn.stringToTerraform(struct!.overwriteExisting),
     source_file_location: cdktn.stringToTerraform(struct!.sourceFileLocation),
-    destination_file_location: tfWorkflowStepsCopyStepDetailsDestinationFileLocationPropertyToTerraform(struct!.destinationFileLocation),
+    destination_file_location: awsWorkflowStepsCopyStepDetailsDestinationFileLocationPropertyToTerraform(struct!.destinationFileLocation),
   }
 }
 
 
-export function tfWorkflowStepsCopyStepDetailsPropertyToHclTerraform(struct?: TfWorkflow.StepsCopyStepDetailsPropertyOutputReference | TfWorkflow.StepsCopyStepDetailsProperty): any {
+export function awsWorkflowStepsCopyStepDetailsPropertyToHclTerraform(struct?: AwsWorkflow.StepsCopyStepDetailsPropertyOutputReference | AwsWorkflow.StepsCopyStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1005,7 +1005,7 @@ export function tfWorkflowStepsCopyStepDetailsPropertyToHclTerraform(struct?: Tf
       storageClassType: "string",
     },
     destination_file_location: {
-      value: tfWorkflowStepsCopyStepDetailsDestinationFileLocationPropertyToHclTerraform(struct!.destinationFileLocation),
+      value: awsWorkflowStepsCopyStepDetailsDestinationFileLocationPropertyToHclTerraform(struct!.destinationFileLocation),
       isBlock: true,
       type: "list",
       storageClassType: "StepsCopyStepDetailsDestinationFileLocationPropertyList",
@@ -1017,7 +1017,7 @@ export function tfWorkflowStepsCopyStepDetailsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfWorkflowStepsCustomStepDetailsPropertyToTerraform(struct?: TfWorkflow.StepsCustomStepDetailsPropertyOutputReference | TfWorkflow.StepsCustomStepDetailsProperty): any {
+export function awsWorkflowStepsCustomStepDetailsPropertyToTerraform(struct?: AwsWorkflow.StepsCustomStepDetailsPropertyOutputReference | AwsWorkflow.StepsCustomStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1031,7 +1031,7 @@ export function tfWorkflowStepsCustomStepDetailsPropertyToTerraform(struct?: TfW
 }
 
 
-export function tfWorkflowStepsCustomStepDetailsPropertyToHclTerraform(struct?: TfWorkflow.StepsCustomStepDetailsPropertyOutputReference | TfWorkflow.StepsCustomStepDetailsProperty): any {
+export function awsWorkflowStepsCustomStepDetailsPropertyToHclTerraform(struct?: AwsWorkflow.StepsCustomStepDetailsPropertyOutputReference | AwsWorkflow.StepsCustomStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1068,7 +1068,7 @@ export function tfWorkflowStepsCustomStepDetailsPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfWorkflowStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyToTerraform(struct?: TfWorkflow.StepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyOutputReference | TfWorkflow.StepsDecryptStepDetailsDestinationFileLocationEfsFileLocationProperty): any {
+export function awsWorkflowStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyToTerraform(struct?: AwsWorkflow.StepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyOutputReference | AwsWorkflow.StepsDecryptStepDetailsDestinationFileLocationEfsFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1080,7 +1080,7 @@ export function tfWorkflowStepsDecryptStepDetailsDestinationFileLocationEfsFileL
 }
 
 
-export function tfWorkflowStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyToHclTerraform(struct?: TfWorkflow.StepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyOutputReference | TfWorkflow.StepsDecryptStepDetailsDestinationFileLocationEfsFileLocationProperty): any {
+export function awsWorkflowStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyToHclTerraform(struct?: AwsWorkflow.StepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyOutputReference | AwsWorkflow.StepsDecryptStepDetailsDestinationFileLocationEfsFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1105,7 +1105,7 @@ export function tfWorkflowStepsDecryptStepDetailsDestinationFileLocationEfsFileL
 }
 
 
-export function tfWorkflowStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyToTerraform(struct?: TfWorkflow.StepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyOutputReference | TfWorkflow.StepsDecryptStepDetailsDestinationFileLocationS3FileLocationProperty): any {
+export function awsWorkflowStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyToTerraform(struct?: AwsWorkflow.StepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyOutputReference | AwsWorkflow.StepsDecryptStepDetailsDestinationFileLocationS3FileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1117,7 +1117,7 @@ export function tfWorkflowStepsDecryptStepDetailsDestinationFileLocationS3FileLo
 }
 
 
-export function tfWorkflowStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyToHclTerraform(struct?: TfWorkflow.StepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyOutputReference | TfWorkflow.StepsDecryptStepDetailsDestinationFileLocationS3FileLocationProperty): any {
+export function awsWorkflowStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyToHclTerraform(struct?: AwsWorkflow.StepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyOutputReference | AwsWorkflow.StepsDecryptStepDetailsDestinationFileLocationS3FileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1142,32 +1142,32 @@ export function tfWorkflowStepsDecryptStepDetailsDestinationFileLocationS3FileLo
 }
 
 
-export function tfWorkflowStepsDecryptStepDetailsDestinationFileLocationPropertyToTerraform(struct?: TfWorkflow.StepsDecryptStepDetailsDestinationFileLocationPropertyOutputReference | TfWorkflow.StepsDecryptStepDetailsDestinationFileLocationProperty): any {
+export function awsWorkflowStepsDecryptStepDetailsDestinationFileLocationPropertyToTerraform(struct?: AwsWorkflow.StepsDecryptStepDetailsDestinationFileLocationPropertyOutputReference | AwsWorkflow.StepsDecryptStepDetailsDestinationFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    efs_file_location: tfWorkflowStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyToTerraform(struct!.efsFileLocation),
-    s3_file_location: tfWorkflowStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyToTerraform(struct!.s3FileLocation),
+    efs_file_location: awsWorkflowStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyToTerraform(struct!.efsFileLocation),
+    s3_file_location: awsWorkflowStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyToTerraform(struct!.s3FileLocation),
   }
 }
 
 
-export function tfWorkflowStepsDecryptStepDetailsDestinationFileLocationPropertyToHclTerraform(struct?: TfWorkflow.StepsDecryptStepDetailsDestinationFileLocationPropertyOutputReference | TfWorkflow.StepsDecryptStepDetailsDestinationFileLocationProperty): any {
+export function awsWorkflowStepsDecryptStepDetailsDestinationFileLocationPropertyToHclTerraform(struct?: AwsWorkflow.StepsDecryptStepDetailsDestinationFileLocationPropertyOutputReference | AwsWorkflow.StepsDecryptStepDetailsDestinationFileLocationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     efs_file_location: {
-      value: tfWorkflowStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyToHclTerraform(struct!.efsFileLocation),
+      value: awsWorkflowStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyToHclTerraform(struct!.efsFileLocation),
       isBlock: true,
       type: "list",
       storageClassType: "StepsDecryptStepDetailsDestinationFileLocationEfsFileLocationPropertyList",
     },
     s3_file_location: {
-      value: tfWorkflowStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyToHclTerraform(struct!.s3FileLocation),
+      value: awsWorkflowStepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyToHclTerraform(struct!.s3FileLocation),
       isBlock: true,
       type: "list",
       storageClassType: "StepsDecryptStepDetailsDestinationFileLocationS3FileLocationPropertyList",
@@ -1179,7 +1179,7 @@ export function tfWorkflowStepsDecryptStepDetailsDestinationFileLocationProperty
 }
 
 
-export function tfWorkflowStepsDecryptStepDetailsPropertyToTerraform(struct?: TfWorkflow.StepsDecryptStepDetailsPropertyOutputReference | TfWorkflow.StepsDecryptStepDetailsProperty): any {
+export function awsWorkflowStepsDecryptStepDetailsPropertyToTerraform(struct?: AwsWorkflow.StepsDecryptStepDetailsPropertyOutputReference | AwsWorkflow.StepsDecryptStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1189,12 +1189,12 @@ export function tfWorkflowStepsDecryptStepDetailsPropertyToTerraform(struct?: Tf
     overwrite_existing: cdktn.stringToTerraform(struct!.overwriteExisting),
     source_file_location: cdktn.stringToTerraform(struct!.sourceFileLocation),
     type: cdktn.stringToTerraform(struct!.type),
-    destination_file_location: tfWorkflowStepsDecryptStepDetailsDestinationFileLocationPropertyToTerraform(struct!.destinationFileLocation),
+    destination_file_location: awsWorkflowStepsDecryptStepDetailsDestinationFileLocationPropertyToTerraform(struct!.destinationFileLocation),
   }
 }
 
 
-export function tfWorkflowStepsDecryptStepDetailsPropertyToHclTerraform(struct?: TfWorkflow.StepsDecryptStepDetailsPropertyOutputReference | TfWorkflow.StepsDecryptStepDetailsProperty): any {
+export function awsWorkflowStepsDecryptStepDetailsPropertyToHclTerraform(struct?: AwsWorkflow.StepsDecryptStepDetailsPropertyOutputReference | AwsWorkflow.StepsDecryptStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1225,7 +1225,7 @@ export function tfWorkflowStepsDecryptStepDetailsPropertyToHclTerraform(struct?:
       storageClassType: "string",
     },
     destination_file_location: {
-      value: tfWorkflowStepsDecryptStepDetailsDestinationFileLocationPropertyToHclTerraform(struct!.destinationFileLocation),
+      value: awsWorkflowStepsDecryptStepDetailsDestinationFileLocationPropertyToHclTerraform(struct!.destinationFileLocation),
       isBlock: true,
       type: "list",
       storageClassType: "StepsDecryptStepDetailsDestinationFileLocationPropertyList",
@@ -1237,7 +1237,7 @@ export function tfWorkflowStepsDecryptStepDetailsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfWorkflowStepsDeleteStepDetailsPropertyToTerraform(struct?: TfWorkflow.StepsDeleteStepDetailsPropertyOutputReference | TfWorkflow.StepsDeleteStepDetailsProperty): any {
+export function awsWorkflowStepsDeleteStepDetailsPropertyToTerraform(struct?: AwsWorkflow.StepsDeleteStepDetailsPropertyOutputReference | AwsWorkflow.StepsDeleteStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1249,7 +1249,7 @@ export function tfWorkflowStepsDeleteStepDetailsPropertyToTerraform(struct?: TfW
 }
 
 
-export function tfWorkflowStepsDeleteStepDetailsPropertyToHclTerraform(struct?: TfWorkflow.StepsDeleteStepDetailsPropertyOutputReference | TfWorkflow.StepsDeleteStepDetailsProperty): any {
+export function awsWorkflowStepsDeleteStepDetailsPropertyToHclTerraform(struct?: AwsWorkflow.StepsDeleteStepDetailsPropertyOutputReference | AwsWorkflow.StepsDeleteStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1274,7 +1274,7 @@ export function tfWorkflowStepsDeleteStepDetailsPropertyToHclTerraform(struct?: 
 }
 
 
-export function tfWorkflowStepsTagStepDetailsTagsPropertyToTerraform(struct?: TfWorkflow.StepsTagStepDetailsTagsProperty | cdktn.IResolvable): any {
+export function awsWorkflowStepsTagStepDetailsTagsPropertyToTerraform(struct?: AwsWorkflow.StepsTagStepDetailsTagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1286,7 +1286,7 @@ export function tfWorkflowStepsTagStepDetailsTagsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfWorkflowStepsTagStepDetailsTagsPropertyToHclTerraform(struct?: TfWorkflow.StepsTagStepDetailsTagsProperty | cdktn.IResolvable): any {
+export function awsWorkflowStepsTagStepDetailsTagsPropertyToHclTerraform(struct?: AwsWorkflow.StepsTagStepDetailsTagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1311,7 +1311,7 @@ export function tfWorkflowStepsTagStepDetailsTagsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfWorkflowStepsTagStepDetailsPropertyToTerraform(struct?: TfWorkflow.StepsTagStepDetailsPropertyOutputReference | TfWorkflow.StepsTagStepDetailsProperty): any {
+export function awsWorkflowStepsTagStepDetailsPropertyToTerraform(struct?: AwsWorkflow.StepsTagStepDetailsPropertyOutputReference | AwsWorkflow.StepsTagStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1319,12 +1319,12 @@ export function tfWorkflowStepsTagStepDetailsPropertyToTerraform(struct?: TfWork
   return {
     name: cdktn.stringToTerraform(struct!.name),
     source_file_location: cdktn.stringToTerraform(struct!.sourceFileLocation),
-    tags: cdktn.listMapper(tfWorkflowStepsTagStepDetailsTagsPropertyToTerraform, true)(struct!.tags),
+    tags: cdktn.listMapper(awsWorkflowStepsTagStepDetailsTagsPropertyToTerraform, true)(struct!.tags),
   }
 }
 
 
-export function tfWorkflowStepsTagStepDetailsPropertyToHclTerraform(struct?: TfWorkflow.StepsTagStepDetailsPropertyOutputReference | TfWorkflow.StepsTagStepDetailsProperty): any {
+export function awsWorkflowStepsTagStepDetailsPropertyToHclTerraform(struct?: AwsWorkflow.StepsTagStepDetailsPropertyOutputReference | AwsWorkflow.StepsTagStepDetailsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1343,7 +1343,7 @@ export function tfWorkflowStepsTagStepDetailsPropertyToHclTerraform(struct?: TfW
       storageClassType: "string",
     },
     tags: {
-      value: cdktn.listMapperHcl(tfWorkflowStepsTagStepDetailsTagsPropertyToHclTerraform, true)(struct!.tags),
+      value: cdktn.listMapperHcl(awsWorkflowStepsTagStepDetailsTagsPropertyToHclTerraform, true)(struct!.tags),
       isBlock: true,
       type: "list",
       storageClassType: "StepsTagStepDetailsTagsPropertyList",
@@ -1355,23 +1355,23 @@ export function tfWorkflowStepsTagStepDetailsPropertyToHclTerraform(struct?: TfW
 }
 
 
-export function tfWorkflowStepsPropertyToTerraform(struct?: TfWorkflow.StepsProperty | cdktn.IResolvable): any {
+export function awsWorkflowStepsPropertyToTerraform(struct?: AwsWorkflow.StepsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     type: cdktn.stringToTerraform(struct!.type),
-    copy_step_details: tfWorkflowStepsCopyStepDetailsPropertyToTerraform(struct!.copyStepDetails),
-    custom_step_details: tfWorkflowStepsCustomStepDetailsPropertyToTerraform(struct!.customStepDetails),
-    decrypt_step_details: tfWorkflowStepsDecryptStepDetailsPropertyToTerraform(struct!.decryptStepDetails),
-    delete_step_details: tfWorkflowStepsDeleteStepDetailsPropertyToTerraform(struct!.deleteStepDetails),
-    tag_step_details: tfWorkflowStepsTagStepDetailsPropertyToTerraform(struct!.tagStepDetails),
+    copy_step_details: awsWorkflowStepsCopyStepDetailsPropertyToTerraform(struct!.copyStepDetails),
+    custom_step_details: awsWorkflowStepsCustomStepDetailsPropertyToTerraform(struct!.customStepDetails),
+    decrypt_step_details: awsWorkflowStepsDecryptStepDetailsPropertyToTerraform(struct!.decryptStepDetails),
+    delete_step_details: awsWorkflowStepsDeleteStepDetailsPropertyToTerraform(struct!.deleteStepDetails),
+    tag_step_details: awsWorkflowStepsTagStepDetailsPropertyToTerraform(struct!.tagStepDetails),
   }
 }
 
 
-export function tfWorkflowStepsPropertyToHclTerraform(struct?: TfWorkflow.StepsProperty | cdktn.IResolvable): any {
+export function awsWorkflowStepsPropertyToHclTerraform(struct?: AwsWorkflow.StepsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1384,31 +1384,31 @@ export function tfWorkflowStepsPropertyToHclTerraform(struct?: TfWorkflow.StepsP
       storageClassType: "string",
     },
     copy_step_details: {
-      value: tfWorkflowStepsCopyStepDetailsPropertyToHclTerraform(struct!.copyStepDetails),
+      value: awsWorkflowStepsCopyStepDetailsPropertyToHclTerraform(struct!.copyStepDetails),
       isBlock: true,
       type: "list",
       storageClassType: "StepsCopyStepDetailsPropertyList",
     },
     custom_step_details: {
-      value: tfWorkflowStepsCustomStepDetailsPropertyToHclTerraform(struct!.customStepDetails),
+      value: awsWorkflowStepsCustomStepDetailsPropertyToHclTerraform(struct!.customStepDetails),
       isBlock: true,
       type: "list",
       storageClassType: "StepsCustomStepDetailsPropertyList",
     },
     decrypt_step_details: {
-      value: tfWorkflowStepsDecryptStepDetailsPropertyToHclTerraform(struct!.decryptStepDetails),
+      value: awsWorkflowStepsDecryptStepDetailsPropertyToHclTerraform(struct!.decryptStepDetails),
       isBlock: true,
       type: "list",
       storageClassType: "StepsDecryptStepDetailsPropertyList",
     },
     delete_step_details: {
-      value: tfWorkflowStepsDeleteStepDetailsPropertyToHclTerraform(struct!.deleteStepDetails),
+      value: awsWorkflowStepsDeleteStepDetailsPropertyToHclTerraform(struct!.deleteStepDetails),
       isBlock: true,
       type: "list",
       storageClassType: "StepsDeleteStepDetailsPropertyList",
     },
     tag_step_details: {
-      value: tfWorkflowStepsTagStepDetailsPropertyToHclTerraform(struct!.tagStepDetails),
+      value: awsWorkflowStepsTagStepDetailsPropertyToHclTerraform(struct!.tagStepDetails),
       isBlock: true,
       type: "list",
       storageClassType: "StepsTagStepDetailsPropertyList",
@@ -1420,14 +1420,14 @@ export function tfWorkflowStepsPropertyToHclTerraform(struct?: TfWorkflow.StepsP
 }
 
 
-export namespace TfWorkflow {
+export namespace AwsWorkflow {
 export interface OnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#file_system_id TfWorkflow#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#file_system_id AwsWorkflow#file_system_id}
   */
   readonly fileSystemId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#path TfWorkflow#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#path AwsWorkflow#path}
   */
   readonly path?: string;
 }
@@ -1503,11 +1503,11 @@ export class OnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocati
 }
 export interface OnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#bucket TfWorkflow#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#bucket AwsWorkflow#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#key TfWorkflow#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#key AwsWorkflow#key}
   */
   readonly key?: string;
 }
@@ -1585,13 +1585,13 @@ export interface OnExceptionStepsCopyStepDetailsDestinationFileLocationProperty 
   /**
   * efs_file_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#efs_file_location TfWorkflow#efs_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#efs_file_location AwsWorkflow#efs_file_location}
   */
   readonly efsFileLocation?: OnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocationProperty;
   /**
   * s3_file_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#s3_file_location TfWorkflow#s3_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#s3_file_location AwsWorkflow#s3_file_location}
   */
   readonly s3FileLocation?: OnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocationProperty;
 }
@@ -1667,21 +1667,21 @@ export class OnExceptionStepsCopyStepDetailsDestinationFileLocationPropertyOutpu
 }
 export interface OnExceptionStepsCopyStepDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name TfWorkflow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name AwsWorkflow#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#overwrite_existing TfWorkflow#overwrite_existing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#overwrite_existing AwsWorkflow#overwrite_existing}
   */
   readonly overwriteExisting?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location TfWorkflow#source_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location AwsWorkflow#source_file_location}
   */
   readonly sourceFileLocation?: string;
   /**
   * destination_file_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#destination_file_location TfWorkflow#destination_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#destination_file_location AwsWorkflow#destination_file_location}
   */
   readonly destinationFileLocation?: OnExceptionStepsCopyStepDetailsDestinationFileLocationProperty;
 }
@@ -1801,19 +1801,19 @@ export class OnExceptionStepsCopyStepDetailsPropertyOutputReference extends cdkt
 }
 export interface OnExceptionStepsCustomStepDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name TfWorkflow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name AwsWorkflow#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location TfWorkflow#source_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location AwsWorkflow#source_file_location}
   */
   readonly sourceFileLocation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#target TfWorkflow#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#target AwsWorkflow#target}
   */
   readonly target?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#timeout_seconds TfWorkflow#timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#timeout_seconds AwsWorkflow#timeout_seconds}
   */
   readonly timeoutSeconds?: number;
 }
@@ -1933,11 +1933,11 @@ export class OnExceptionStepsCustomStepDetailsPropertyOutputReference extends cd
 }
 export interface OnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#file_system_id TfWorkflow#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#file_system_id AwsWorkflow#file_system_id}
   */
   readonly fileSystemId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#path TfWorkflow#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#path AwsWorkflow#path}
   */
   readonly path?: string;
 }
@@ -2013,11 +2013,11 @@ export class OnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLoc
 }
 export interface OnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#bucket TfWorkflow#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#bucket AwsWorkflow#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#key TfWorkflow#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#key AwsWorkflow#key}
   */
   readonly key?: string;
 }
@@ -2095,13 +2095,13 @@ export interface OnExceptionStepsDecryptStepDetailsDestinationFileLocationProper
   /**
   * efs_file_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#efs_file_location TfWorkflow#efs_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#efs_file_location AwsWorkflow#efs_file_location}
   */
   readonly efsFileLocation?: OnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocationProperty;
   /**
   * s3_file_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#s3_file_location TfWorkflow#s3_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#s3_file_location AwsWorkflow#s3_file_location}
   */
   readonly s3FileLocation?: OnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocationProperty;
 }
@@ -2177,25 +2177,25 @@ export class OnExceptionStepsDecryptStepDetailsDestinationFileLocationPropertyOu
 }
 export interface OnExceptionStepsDecryptStepDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name TfWorkflow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name AwsWorkflow#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#overwrite_existing TfWorkflow#overwrite_existing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#overwrite_existing AwsWorkflow#overwrite_existing}
   */
   readonly overwriteExisting?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location TfWorkflow#source_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location AwsWorkflow#source_file_location}
   */
   readonly sourceFileLocation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#type TfWorkflow#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#type AwsWorkflow#type}
   */
   readonly type: string;
   /**
   * destination_file_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#destination_file_location TfWorkflow#destination_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#destination_file_location AwsWorkflow#destination_file_location}
   */
   readonly destinationFileLocation?: OnExceptionStepsDecryptStepDetailsDestinationFileLocationProperty;
 }
@@ -2334,11 +2334,11 @@ export class OnExceptionStepsDecryptStepDetailsPropertyOutputReference extends c
 }
 export interface OnExceptionStepsDeleteStepDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name TfWorkflow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name AwsWorkflow#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location TfWorkflow#source_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location AwsWorkflow#source_file_location}
   */
   readonly sourceFileLocation?: string;
 }
@@ -2414,11 +2414,11 @@ export class OnExceptionStepsDeleteStepDetailsPropertyOutputReference extends cd
 }
 export interface OnExceptionStepsTagStepDetailsTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#key TfWorkflow#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#key AwsWorkflow#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#value TfWorkflow#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#value AwsWorkflow#value}
   */
   readonly value: string;
 }
@@ -2520,17 +2520,17 @@ export class OnExceptionStepsTagStepDetailsTagsPropertyList extends cdktn.Comple
 }
 export interface OnExceptionStepsTagStepDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name TfWorkflow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name AwsWorkflow#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location TfWorkflow#source_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location AwsWorkflow#source_file_location}
   */
   readonly sourceFileLocation?: string;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#tags TfWorkflow#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#tags AwsWorkflow#tags}
   */
   readonly tags?: OnExceptionStepsTagStepDetailsTagsProperty[] | cdktn.IResolvable;
 }
@@ -2628,37 +2628,37 @@ export class OnExceptionStepsTagStepDetailsPropertyOutputReference extends cdktn
 }
 export interface OnExceptionStepsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#type TfWorkflow#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#type AwsWorkflow#type}
   */
   readonly type: string;
   /**
   * copy_step_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#copy_step_details TfWorkflow#copy_step_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#copy_step_details AwsWorkflow#copy_step_details}
   */
   readonly copyStepDetails?: OnExceptionStepsCopyStepDetailsProperty;
   /**
   * custom_step_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#custom_step_details TfWorkflow#custom_step_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#custom_step_details AwsWorkflow#custom_step_details}
   */
   readonly customStepDetails?: OnExceptionStepsCustomStepDetailsProperty;
   /**
   * decrypt_step_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#decrypt_step_details TfWorkflow#decrypt_step_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#decrypt_step_details AwsWorkflow#decrypt_step_details}
   */
   readonly decryptStepDetails?: OnExceptionStepsDecryptStepDetailsProperty;
   /**
   * delete_step_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#delete_step_details TfWorkflow#delete_step_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#delete_step_details AwsWorkflow#delete_step_details}
   */
   readonly deleteStepDetails?: OnExceptionStepsDeleteStepDetailsProperty;
   /**
   * tag_step_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#tag_step_details TfWorkflow#tag_step_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#tag_step_details AwsWorkflow#tag_step_details}
   */
   readonly tagStepDetails?: OnExceptionStepsTagStepDetailsProperty;
 }
@@ -2851,11 +2851,11 @@ export class OnExceptionStepsPropertyList extends cdktn.ComplexList {
 }
 export interface StepsCopyStepDetailsDestinationFileLocationEfsFileLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#file_system_id TfWorkflow#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#file_system_id AwsWorkflow#file_system_id}
   */
   readonly fileSystemId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#path TfWorkflow#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#path AwsWorkflow#path}
   */
   readonly path?: string;
 }
@@ -2931,11 +2931,11 @@ export class StepsCopyStepDetailsDestinationFileLocationEfsFileLocationPropertyO
 }
 export interface StepsCopyStepDetailsDestinationFileLocationS3FileLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#bucket TfWorkflow#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#bucket AwsWorkflow#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#key TfWorkflow#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#key AwsWorkflow#key}
   */
   readonly key?: string;
 }
@@ -3013,13 +3013,13 @@ export interface StepsCopyStepDetailsDestinationFileLocationProperty {
   /**
   * efs_file_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#efs_file_location TfWorkflow#efs_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#efs_file_location AwsWorkflow#efs_file_location}
   */
   readonly efsFileLocation?: StepsCopyStepDetailsDestinationFileLocationEfsFileLocationProperty;
   /**
   * s3_file_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#s3_file_location TfWorkflow#s3_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#s3_file_location AwsWorkflow#s3_file_location}
   */
   readonly s3FileLocation?: StepsCopyStepDetailsDestinationFileLocationS3FileLocationProperty;
 }
@@ -3095,21 +3095,21 @@ export class StepsCopyStepDetailsDestinationFileLocationPropertyOutputReference 
 }
 export interface StepsCopyStepDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name TfWorkflow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name AwsWorkflow#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#overwrite_existing TfWorkflow#overwrite_existing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#overwrite_existing AwsWorkflow#overwrite_existing}
   */
   readonly overwriteExisting?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location TfWorkflow#source_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location AwsWorkflow#source_file_location}
   */
   readonly sourceFileLocation?: string;
   /**
   * destination_file_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#destination_file_location TfWorkflow#destination_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#destination_file_location AwsWorkflow#destination_file_location}
   */
   readonly destinationFileLocation?: StepsCopyStepDetailsDestinationFileLocationProperty;
 }
@@ -3229,19 +3229,19 @@ export class StepsCopyStepDetailsPropertyOutputReference extends cdktn.ComplexOb
 }
 export interface StepsCustomStepDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name TfWorkflow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name AwsWorkflow#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location TfWorkflow#source_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location AwsWorkflow#source_file_location}
   */
   readonly sourceFileLocation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#target TfWorkflow#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#target AwsWorkflow#target}
   */
   readonly target?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#timeout_seconds TfWorkflow#timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#timeout_seconds AwsWorkflow#timeout_seconds}
   */
   readonly timeoutSeconds?: number;
 }
@@ -3361,11 +3361,11 @@ export class StepsCustomStepDetailsPropertyOutputReference extends cdktn.Complex
 }
 export interface StepsDecryptStepDetailsDestinationFileLocationEfsFileLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#file_system_id TfWorkflow#file_system_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#file_system_id AwsWorkflow#file_system_id}
   */
   readonly fileSystemId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#path TfWorkflow#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#path AwsWorkflow#path}
   */
   readonly path?: string;
 }
@@ -3441,11 +3441,11 @@ export class StepsDecryptStepDetailsDestinationFileLocationEfsFileLocationProper
 }
 export interface StepsDecryptStepDetailsDestinationFileLocationS3FileLocationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#bucket TfWorkflow#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#bucket AwsWorkflow#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#key TfWorkflow#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#key AwsWorkflow#key}
   */
   readonly key?: string;
 }
@@ -3523,13 +3523,13 @@ export interface StepsDecryptStepDetailsDestinationFileLocationProperty {
   /**
   * efs_file_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#efs_file_location TfWorkflow#efs_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#efs_file_location AwsWorkflow#efs_file_location}
   */
   readonly efsFileLocation?: StepsDecryptStepDetailsDestinationFileLocationEfsFileLocationProperty;
   /**
   * s3_file_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#s3_file_location TfWorkflow#s3_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#s3_file_location AwsWorkflow#s3_file_location}
   */
   readonly s3FileLocation?: StepsDecryptStepDetailsDestinationFileLocationS3FileLocationProperty;
 }
@@ -3605,25 +3605,25 @@ export class StepsDecryptStepDetailsDestinationFileLocationPropertyOutputReferen
 }
 export interface StepsDecryptStepDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name TfWorkflow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name AwsWorkflow#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#overwrite_existing TfWorkflow#overwrite_existing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#overwrite_existing AwsWorkflow#overwrite_existing}
   */
   readonly overwriteExisting?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location TfWorkflow#source_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location AwsWorkflow#source_file_location}
   */
   readonly sourceFileLocation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#type TfWorkflow#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#type AwsWorkflow#type}
   */
   readonly type: string;
   /**
   * destination_file_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#destination_file_location TfWorkflow#destination_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#destination_file_location AwsWorkflow#destination_file_location}
   */
   readonly destinationFileLocation?: StepsDecryptStepDetailsDestinationFileLocationProperty;
 }
@@ -3762,11 +3762,11 @@ export class StepsDecryptStepDetailsPropertyOutputReference extends cdktn.Comple
 }
 export interface StepsDeleteStepDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name TfWorkflow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name AwsWorkflow#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location TfWorkflow#source_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location AwsWorkflow#source_file_location}
   */
   readonly sourceFileLocation?: string;
 }
@@ -3842,11 +3842,11 @@ export class StepsDeleteStepDetailsPropertyOutputReference extends cdktn.Complex
 }
 export interface StepsTagStepDetailsTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#key TfWorkflow#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#key AwsWorkflow#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#value TfWorkflow#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#value AwsWorkflow#value}
   */
   readonly value: string;
 }
@@ -3948,17 +3948,17 @@ export class StepsTagStepDetailsTagsPropertyList extends cdktn.ComplexList {
 }
 export interface StepsTagStepDetailsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name TfWorkflow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#name AwsWorkflow#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location TfWorkflow#source_file_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#source_file_location AwsWorkflow#source_file_location}
   */
   readonly sourceFileLocation?: string;
   /**
   * tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#tags TfWorkflow#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#tags AwsWorkflow#tags}
   */
   readonly tags?: StepsTagStepDetailsTagsProperty[] | cdktn.IResolvable;
 }
@@ -4056,37 +4056,37 @@ export class StepsTagStepDetailsPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface StepsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#type TfWorkflow#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#type AwsWorkflow#type}
   */
   readonly type: string;
   /**
   * copy_step_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#copy_step_details TfWorkflow#copy_step_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#copy_step_details AwsWorkflow#copy_step_details}
   */
   readonly copyStepDetails?: StepsCopyStepDetailsProperty;
   /**
   * custom_step_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#custom_step_details TfWorkflow#custom_step_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#custom_step_details AwsWorkflow#custom_step_details}
   */
   readonly customStepDetails?: StepsCustomStepDetailsProperty;
   /**
   * decrypt_step_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#decrypt_step_details TfWorkflow#decrypt_step_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#decrypt_step_details AwsWorkflow#decrypt_step_details}
   */
   readonly decryptStepDetails?: StepsDecryptStepDetailsProperty;
   /**
   * delete_step_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#delete_step_details TfWorkflow#delete_step_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#delete_step_details AwsWorkflow#delete_step_details}
   */
   readonly deleteStepDetails?: StepsDeleteStepDetailsProperty;
   /**
   * tag_step_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#tag_step_details TfWorkflow#tag_step_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/transfer_workflow#tag_step_details AwsWorkflow#tag_step_details}
   */
   readonly tagStepDetails?: StepsTagStepDetailsProperty;
 }

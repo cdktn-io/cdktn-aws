@@ -5,76 +5,76 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRouteConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRouteConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#api_id TfRoute#api_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#api_id AwsRoute#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#api_key_required TfRoute#api_key_required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#api_key_required AwsRoute#api_key_required}
   */
   readonly apiKeyRequired?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#authorization_scopes TfRoute#authorization_scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#authorization_scopes AwsRoute#authorization_scopes}
   */
   readonly authorizationScopes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#authorization_type TfRoute#authorization_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#authorization_type AwsRoute#authorization_type}
   */
   readonly authorizationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#authorizer_id TfRoute#authorizer_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#authorizer_id AwsRoute#authorizer_id}
   */
   readonly authorizerId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#id TfRoute#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#id AwsRoute#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#model_selection_expression TfRoute#model_selection_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#model_selection_expression AwsRoute#model_selection_expression}
   */
   readonly modelSelectionExpression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#operation_name TfRoute#operation_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#operation_name AwsRoute#operation_name}
   */
   readonly operationName?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#region TfRoute#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#region AwsRoute#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#request_models TfRoute#request_models}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#request_models AwsRoute#request_models}
   */
   readonly requestModels?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#route_key TfRoute#route_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#route_key AwsRoute#route_key}
   */
   readonly routeKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#route_response_selection_expression TfRoute#route_response_selection_expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#route_response_selection_expression AwsRoute#route_response_selection_expression}
   */
   readonly routeResponseSelectionExpression?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#target TfRoute#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#target AwsRoute#target}
   */
   readonly target?: string;
   /**
   * request_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#request_parameter TfRoute#request_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#request_parameter AwsRoute#request_parameter}
   */
-  readonly requestParameter?: TfRoute.RequestParameterProperty[] | cdktn.IResolvable;
+  readonly requestParameter?: AwsRoute.RequestParameterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route aws_apigatewayv2_route}
 */
-export class TfRoute extends cdktn.TerraformResource {
+export class AwsRoute extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -85,11 +85,11 @@ export class TfRoute extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRoute resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRoute resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRoute to import
-  * @param importFromId The id of the existing TfRoute that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRoute to import is found
+  * @param importToId The construct id used in the generated config for the AwsRoute to import
+  * @param importFromId The id of the existing AwsRoute that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRoute to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_apigatewayv2_route", importId: importFromId, provider });
@@ -104,9 +104,9 @@ export class TfRoute extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRouteConfig
+  * @param options AwsRouteConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRouteConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRouteConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_apigatewayv2_route',
       terraformGeneratorMetadata: {
@@ -345,11 +345,11 @@ export class TfRoute extends cdktn.TerraformResource {
   }
 
   // request_parameter - computed: false, optional: true, required: false
-  private _requestParameter = new TfRoute.RequestParameterPropertyList(this, "request_parameter", true);
+  private _requestParameter = new AwsRoute.RequestParameterPropertyList(this, "request_parameter", true);
   public get requestParameter() {
     return this._requestParameter;
   }
-  public putRequestParameter(value: TfRoute.RequestParameterProperty[] | cdktn.IResolvable) {
+  public putRequestParameter(value: AwsRoute.RequestParameterProperty[] | cdktn.IResolvable) {
     this._requestParameter.internalValue = value;
   }
   public resetRequestParameter() {
@@ -379,7 +379,7 @@ export class TfRoute extends cdktn.TerraformResource {
       route_key: cdktn.stringToTerraform(this._routeKey),
       route_response_selection_expression: cdktn.stringToTerraform(this._routeResponseSelectionExpression),
       target: cdktn.stringToTerraform(this._target),
-      request_parameter: cdktn.listMapper(tfRouteRequestParameterPropertyToTerraform, true)(this._requestParameter.internalValue),
+      request_parameter: cdktn.listMapper(awsRouteRequestParameterPropertyToTerraform, true)(this._requestParameter.internalValue),
     };
   }
 
@@ -464,10 +464,10 @@ export class TfRoute extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       request_parameter: {
-        value: cdktn.listMapperHcl(tfRouteRequestParameterPropertyToHclTerraform, true)(this._requestParameter.internalValue),
+        value: cdktn.listMapperHcl(awsRouteRequestParameterPropertyToHclTerraform, true)(this._requestParameter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfRoute.RequestParameterPropertyList",
+        storageClassType: "AwsRoute.RequestParameterPropertyList",
       },
     };
 
@@ -476,7 +476,7 @@ export class TfRoute extends cdktn.TerraformResource {
   }
 }
 
-export function tfRouteRequestParameterPropertyToTerraform(struct?: TfRoute.RequestParameterProperty | cdktn.IResolvable): any {
+export function awsRouteRequestParameterPropertyToTerraform(struct?: AwsRoute.RequestParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -488,7 +488,7 @@ export function tfRouteRequestParameterPropertyToTerraform(struct?: TfRoute.Requ
 }
 
 
-export function tfRouteRequestParameterPropertyToHclTerraform(struct?: TfRoute.RequestParameterProperty | cdktn.IResolvable): any {
+export function awsRouteRequestParameterPropertyToHclTerraform(struct?: AwsRoute.RequestParameterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -513,14 +513,14 @@ export function tfRouteRequestParameterPropertyToHclTerraform(struct?: TfRoute.R
 }
 
 
-export namespace TfRoute {
+export namespace AwsRoute {
 export interface RequestParameterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#request_parameter_key TfRoute#request_parameter_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#request_parameter_key AwsRoute#request_parameter_key}
   */
   readonly requestParameterKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#required TfRoute#required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/apigatewayv2_route#required AwsRoute#required}
   */
   readonly required: boolean | cdktn.IResolvable;
 }

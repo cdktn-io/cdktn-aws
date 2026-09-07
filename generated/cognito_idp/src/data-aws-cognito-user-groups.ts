@@ -5,15 +5,15 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfUserGroupsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsUserGroupsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_groups#region DataTfUserGroups#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_groups#region DataAwsUserGroups#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_groups#user_pool_id DataTfUserGroups#user_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_groups#user_pool_id DataAwsUserGroups#user_pool_id}
   */
   readonly userPoolId: string;
 }
@@ -21,7 +21,7 @@ export interface DataTfUserGroupsConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_groups aws_cognito_user_groups}
 */
-export class DataTfUserGroups extends cdktn.TerraformDataSource {
+export class DataAwsUserGroups extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -32,11 +32,11 @@ export class DataTfUserGroups extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfUserGroups resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsUserGroups resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfUserGroups to import
-  * @param importFromId The id of the existing DataTfUserGroups that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_groups#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfUserGroups to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsUserGroups to import
+  * @param importFromId The id of the existing DataAwsUserGroups that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/cognito_user_groups#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsUserGroups to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cognito_user_groups", importId: importFromId, provider });
@@ -51,9 +51,9 @@ export class DataTfUserGroups extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfUserGroupsConfig
+  * @param options DataAwsUserGroupsConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfUserGroupsConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsUserGroupsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cognito_user_groups',
       terraformGeneratorMetadata: {
@@ -78,7 +78,7 @@ export class DataTfUserGroups extends cdktn.TerraformDataSource {
   // ==========
 
   // groups - computed: true, optional: false, required: false
-  private _groups = new DataTfUserGroups.GroupsPropertyList(this, "groups", false);
+  private _groups = new DataAwsUserGroups.GroupsPropertyList(this, "groups", false);
   public get groups() {
     return this._groups;
   }
@@ -149,7 +149,7 @@ export class DataTfUserGroups extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfUserGroupsGroupsPropertyToTerraform(struct?: DataTfUserGroups.GroupsProperty): any {
+export function dataAwsUserGroupsGroupsPropertyToTerraform(struct?: DataAwsUserGroups.GroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -159,7 +159,7 @@ export function dataTfUserGroupsGroupsPropertyToTerraform(struct?: DataTfUserGro
 }
 
 
-export function dataTfUserGroupsGroupsPropertyToHclTerraform(struct?: DataTfUserGroups.GroupsProperty): any {
+export function dataAwsUserGroupsGroupsPropertyToHclTerraform(struct?: DataAwsUserGroups.GroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -170,7 +170,7 @@ export function dataTfUserGroupsGroupsPropertyToHclTerraform(struct?: DataTfUser
 }
 
 
-export namespace DataTfUserGroups {
+export namespace DataAwsUserGroups {
 export interface GroupsProperty {
 }
 export class GroupsPropertyOutputReference extends cdktn.ComplexObject {

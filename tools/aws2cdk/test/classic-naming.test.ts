@@ -98,24 +98,24 @@ describe("naming-map.json", () => {
   });
 
   // The worked-examples table in docs/m6-tf-naming.md, its classic column. A doc that promises a
-  // migrating consumer "`s3.TfBucketVersioning` was `s3BucketVersioning.S3BucketVersioningA`" is
+  // migrating consumer "`s3.AwsBucketVersioning` was `s3BucketVersioning.S3BucketVersioningA`" is
   // only true while these hold.
   it.each([
-    ["aws_s3_bucket_versioning", "TfBucketVersioning", "S3BucketVersioningA", "s3-bucket-versioning"],
-    ["data_aws_s3_bucket", "DataTfBucket", "DataAwsS3Bucket", "data-aws-s3-bucket"],
-    ["aws_instance", "TfInstance", "Instance", "instance"],
-    ["aws_ec2_capacity_reservation", "TfCapacityReservation", "Ec2CapacityReservation", "ec2-capacity-reservation"],
-    ["aws_prometheus_workspace", "TfWorkspace", "PrometheusWorkspace", "prometheus-workspace"],
-    ["aws_acmpca_certificate_authority", "TfCertificateAuthority", "AcmpcaCertificateAuthority", "acmpca-certificate-authority"],
-    ["aws_vpc", "TfVpc", "Vpc", "vpc"],
-    ["aws_ec2_transit_gateway", "TfTransitGateway", "Ec2TransitGateway", "ec2-transit-gateway"],
-    ["aws_lb", "TfLb", "Lb", "lb"],
-    ["aws_alb", "TfAlb", "Alb", "alb"],
-    ["aws_lb_listener", "TfListener", "LbListener", "lb-listener"],
-    ["aws_lambda_function", "TfFunction", "LambdaFunction", "lambda-function"],
-    ["ephemeral_aws_lambda_invocation", "EphemeralTfInvocation", "EphemeralAwsLambdaInvocation", "ephemeral-aws-lambda-invocation"],
-    ["data_aws_identitystore_user", "DataTfUser", "DataAwsIdentitystoreUser", "data-aws-identitystore-user"],
-    ["aws_cloudwatch_log_group", "TfGroup", "CloudwatchLogGroup", "cloudwatch-log-group"],
+    ["aws_s3_bucket_versioning", "AwsBucketVersioning", "S3BucketVersioningA", "s3-bucket-versioning"],
+    ["data_aws_s3_bucket", "DataAwsBucket", "DataAwsS3Bucket", "data-aws-s3-bucket"],
+    ["aws_instance", "AwsInstance", "Instance", "instance"],
+    ["aws_ec2_capacity_reservation", "AwsCapacityReservation", "Ec2CapacityReservation", "ec2-capacity-reservation"],
+    ["aws_prometheus_workspace", "AwsWorkspace", "PrometheusWorkspace", "prometheus-workspace"],
+    ["aws_acmpca_certificate_authority", "AwsCertificateAuthority", "AcmpcaCertificateAuthority", "acmpca-certificate-authority"],
+    ["aws_vpc", "AwsVpc", "Vpc", "vpc"],
+    ["aws_ec2_transit_gateway", "AwsTransitGateway", "Ec2TransitGateway", "ec2-transit-gateway"],
+    ["aws_lb", "AwsLb", "Lb", "lb"],
+    ["aws_alb", "AwsAlb", "Alb", "alb"],
+    ["aws_lb_listener", "AwsListener", "LbListener", "lb-listener"],
+    ["aws_lambda_function", "AwsFunction", "LambdaFunction", "lambda-function"],
+    ["ephemeral_aws_lambda_invocation", "EphemeralAwsInvocation", "EphemeralAwsLambdaInvocation", "ephemeral-aws-lambda-invocation"],
+    ["data_aws_identitystore_user", "DataAwsUser", "DataAwsIdentitystoreUser", "data-aws-identitystore-user"],
+    ["aws_cloudwatch_log_group", "AwsGroup", "CloudwatchLogGroup", "cloudwatch-log-group"],
     ["aws_provider", "AwsProvider", "AwsProvider", "provider"],
   ])("%s: %s was %s", (key, className, classicClass, classicModule) => {
     const entry = map.entries[key];
@@ -191,8 +191,8 @@ describe("naming-map.json's nested section", () => {
       "aws_wafv2_web_acl_rule",
     ]);
     expect(new Set(overridden.map((r) => r[1]))).toEqual(new Set(["s3", "waf"]));
-    expect(map.entries["aws_s3_bucket"].mapperPrefix).toBe("TfBucketMapper");
-    expect(map.entries["aws_wafv2_web_acl"].mapperPrefix).toBe("TfWebAclMapper");
+    expect(map.entries["aws_s3_bucket"].mapperPrefix).toBe("AwsBucketMapper");
+    expect(map.entries["aws_wafv2_web_acl"].mapperPrefix).toBe("AwsWebAclMapper");
     expect(map.entries["aws_lambda_function"].mapperPrefix).toBeUndefined();
   });
 
@@ -308,7 +308,7 @@ describeClassic(`the classic library at ${classicRepo}`, () => {
 
     it("has the same wrapper classes there as `<className><suffix>` has here", () => {
       // The suffix rules are symmetric or they are useless: a consumer holding
-      // `S3BucketCorsRuleList` has to land on `TfBucket.CorsRulePropertyList` and nowhere else.
+      // `S3BucketCorsRuleList` has to land on `AwsBucket.CorsRulePropertyList` and nowhere else.
       const ours = fs.readFileSync(
         path.join(repoRoot, "generated", entry.group, "src", `${fileNameForTerraformType(key)}.ts`),
         "utf-8",

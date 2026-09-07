@@ -5,98 +5,98 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfOpenzfsVolumeConfig extends cdktn.TerraformMetaArguments {
+export interface AwsOpenzfsVolumeConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#copy_tags_to_snapshots TfOpenzfsVolume#copy_tags_to_snapshots}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#copy_tags_to_snapshots AwsOpenzfsVolume#copy_tags_to_snapshots}
   */
   readonly copyTagsToSnapshots?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#data_compression_type TfOpenzfsVolume#data_compression_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#data_compression_type AwsOpenzfsVolume#data_compression_type}
   */
   readonly dataCompressionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#delete_volume_options TfOpenzfsVolume#delete_volume_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#delete_volume_options AwsOpenzfsVolume#delete_volume_options}
   */
   readonly deleteVolumeOptions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#id TfOpenzfsVolume#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#id AwsOpenzfsVolume#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#name TfOpenzfsVolume#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#name AwsOpenzfsVolume#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#parent_volume_id TfOpenzfsVolume#parent_volume_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#parent_volume_id AwsOpenzfsVolume#parent_volume_id}
   */
   readonly parentVolumeId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#read_only TfOpenzfsVolume#read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#read_only AwsOpenzfsVolume#read_only}
   */
   readonly readOnly?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#record_size_kib TfOpenzfsVolume#record_size_kib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#record_size_kib AwsOpenzfsVolume#record_size_kib}
   */
   readonly recordSizeKib?: number;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#region TfOpenzfsVolume#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#region AwsOpenzfsVolume#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#storage_capacity_quota_gib TfOpenzfsVolume#storage_capacity_quota_gib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#storage_capacity_quota_gib AwsOpenzfsVolume#storage_capacity_quota_gib}
   */
   readonly storageCapacityQuotaGib?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#storage_capacity_reservation_gib TfOpenzfsVolume#storage_capacity_reservation_gib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#storage_capacity_reservation_gib AwsOpenzfsVolume#storage_capacity_reservation_gib}
   */
   readonly storageCapacityReservationGib?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#tags TfOpenzfsVolume#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#tags AwsOpenzfsVolume#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#tags_all TfOpenzfsVolume#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#tags_all AwsOpenzfsVolume#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#volume_type TfOpenzfsVolume#volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#volume_type AwsOpenzfsVolume#volume_type}
   */
   readonly volumeType?: string;
   /**
   * nfs_exports block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#nfs_exports TfOpenzfsVolume#nfs_exports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#nfs_exports AwsOpenzfsVolume#nfs_exports}
   */
-  readonly nfsExports?: TfOpenzfsVolume.NfsExportsProperty;
+  readonly nfsExports?: AwsOpenzfsVolume.NfsExportsProperty;
   /**
   * origin_snapshot block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#origin_snapshot TfOpenzfsVolume#origin_snapshot}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#origin_snapshot AwsOpenzfsVolume#origin_snapshot}
   */
-  readonly originSnapshot?: TfOpenzfsVolume.OriginSnapshotProperty;
+  readonly originSnapshot?: AwsOpenzfsVolume.OriginSnapshotProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#timeouts TfOpenzfsVolume#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#timeouts AwsOpenzfsVolume#timeouts}
   */
-  readonly timeouts?: TfOpenzfsVolume.TimeoutsProperty;
+  readonly timeouts?: AwsOpenzfsVolume.TimeoutsProperty;
   /**
   * user_and_group_quotas block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#user_and_group_quotas TfOpenzfsVolume#user_and_group_quotas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#user_and_group_quotas AwsOpenzfsVolume#user_and_group_quotas}
   */
-  readonly userAndGroupQuotas?: TfOpenzfsVolume.UserAndGroupQuotasProperty[] | cdktn.IResolvable;
+  readonly userAndGroupQuotas?: AwsOpenzfsVolume.UserAndGroupQuotasProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume aws_fsx_openzfs_volume}
 */
-export class TfOpenzfsVolume extends cdktn.TerraformResource {
+export class AwsOpenzfsVolume extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -107,11 +107,11 @@ export class TfOpenzfsVolume extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfOpenzfsVolume resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsOpenzfsVolume resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfOpenzfsVolume to import
-  * @param importFromId The id of the existing TfOpenzfsVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfOpenzfsVolume to import is found
+  * @param importToId The construct id used in the generated config for the AwsOpenzfsVolume to import
+  * @param importFromId The id of the existing AwsOpenzfsVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsOpenzfsVolume to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_fsx_openzfs_volume", importId: importFromId, provider });
@@ -126,9 +126,9 @@ export class TfOpenzfsVolume extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfOpenzfsVolumeConfig
+  * @param options AwsOpenzfsVolumeConfig
   */
-  public constructor(scope: Construct, id: string, config: TfOpenzfsVolumeConfig) {
+  public constructor(scope: Construct, id: string, config: AwsOpenzfsVolumeConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_fsx_openzfs_volume',
       terraformGeneratorMetadata: {
@@ -392,11 +392,11 @@ export class TfOpenzfsVolume extends cdktn.TerraformResource {
   }
 
   // nfs_exports - computed: false, optional: true, required: false
-  private _nfsExports = new TfOpenzfsVolume.NfsExportsPropertyOutputReference(this, "nfs_exports");
+  private _nfsExports = new AwsOpenzfsVolume.NfsExportsPropertyOutputReference(this, "nfs_exports");
   public get nfsExports() {
     return this._nfsExports;
   }
-  public putNfsExports(value: TfOpenzfsVolume.NfsExportsProperty) {
+  public putNfsExports(value: AwsOpenzfsVolume.NfsExportsProperty) {
     this._nfsExports.internalValue = value;
   }
   public resetNfsExports() {
@@ -408,11 +408,11 @@ export class TfOpenzfsVolume extends cdktn.TerraformResource {
   }
 
   // origin_snapshot - computed: false, optional: true, required: false
-  private _originSnapshot = new TfOpenzfsVolume.OriginSnapshotPropertyOutputReference(this, "origin_snapshot");
+  private _originSnapshot = new AwsOpenzfsVolume.OriginSnapshotPropertyOutputReference(this, "origin_snapshot");
   public get originSnapshot() {
     return this._originSnapshot;
   }
-  public putOriginSnapshot(value: TfOpenzfsVolume.OriginSnapshotProperty) {
+  public putOriginSnapshot(value: AwsOpenzfsVolume.OriginSnapshotProperty) {
     this._originSnapshot.internalValue = value;
   }
   public resetOriginSnapshot() {
@@ -424,11 +424,11 @@ export class TfOpenzfsVolume extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfOpenzfsVolume.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsOpenzfsVolume.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfOpenzfsVolume.TimeoutsProperty) {
+  public putTimeouts(value: AwsOpenzfsVolume.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -440,11 +440,11 @@ export class TfOpenzfsVolume extends cdktn.TerraformResource {
   }
 
   // user_and_group_quotas - computed: false, optional: true, required: false
-  private _userAndGroupQuotas = new TfOpenzfsVolume.UserAndGroupQuotasPropertyList(this, "user_and_group_quotas", true);
+  private _userAndGroupQuotas = new AwsOpenzfsVolume.UserAndGroupQuotasPropertyList(this, "user_and_group_quotas", true);
   public get userAndGroupQuotas() {
     return this._userAndGroupQuotas;
   }
-  public putUserAndGroupQuotas(value: TfOpenzfsVolume.UserAndGroupQuotasProperty[] | cdktn.IResolvable) {
+  public putUserAndGroupQuotas(value: AwsOpenzfsVolume.UserAndGroupQuotasProperty[] | cdktn.IResolvable) {
     this._userAndGroupQuotas.internalValue = value;
   }
   public resetUserAndGroupQuotas() {
@@ -475,10 +475,10 @@ export class TfOpenzfsVolume extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       volume_type: cdktn.stringToTerraform(this._volumeType),
-      nfs_exports: tfOpenzfsVolumeNfsExportsPropertyToTerraform(this._nfsExports.internalValue),
-      origin_snapshot: tfOpenzfsVolumeOriginSnapshotPropertyToTerraform(this._originSnapshot.internalValue),
-      timeouts: tfOpenzfsVolumeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      user_and_group_quotas: cdktn.listMapper(tfOpenzfsVolumeUserAndGroupQuotasPropertyToTerraform, true)(this._userAndGroupQuotas.internalValue),
+      nfs_exports: awsOpenzfsVolumeNfsExportsPropertyToTerraform(this._nfsExports.internalValue),
+      origin_snapshot: awsOpenzfsVolumeOriginSnapshotPropertyToTerraform(this._originSnapshot.internalValue),
+      timeouts: awsOpenzfsVolumeTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      user_and_group_quotas: cdktn.listMapper(awsOpenzfsVolumeUserAndGroupQuotasPropertyToTerraform, true)(this._userAndGroupQuotas.internalValue),
     };
   }
 
@@ -569,28 +569,28 @@ export class TfOpenzfsVolume extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       nfs_exports: {
-        value: tfOpenzfsVolumeNfsExportsPropertyToHclTerraform(this._nfsExports.internalValue),
+        value: awsOpenzfsVolumeNfsExportsPropertyToHclTerraform(this._nfsExports.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfOpenzfsVolume.NfsExportsPropertyList",
+        storageClassType: "AwsOpenzfsVolume.NfsExportsPropertyList",
       },
       origin_snapshot: {
-        value: tfOpenzfsVolumeOriginSnapshotPropertyToHclTerraform(this._originSnapshot.internalValue),
+        value: awsOpenzfsVolumeOriginSnapshotPropertyToHclTerraform(this._originSnapshot.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfOpenzfsVolume.OriginSnapshotPropertyList",
+        storageClassType: "AwsOpenzfsVolume.OriginSnapshotPropertyList",
       },
       timeouts: {
-        value: tfOpenzfsVolumeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsOpenzfsVolumeTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfOpenzfsVolume.TimeoutsProperty",
+        storageClassType: "AwsOpenzfsVolume.TimeoutsProperty",
       },
       user_and_group_quotas: {
-        value: cdktn.listMapperHcl(tfOpenzfsVolumeUserAndGroupQuotasPropertyToHclTerraform, true)(this._userAndGroupQuotas.internalValue),
+        value: cdktn.listMapperHcl(awsOpenzfsVolumeUserAndGroupQuotasPropertyToHclTerraform, true)(this._userAndGroupQuotas.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfOpenzfsVolume.UserAndGroupQuotasPropertyList",
+        storageClassType: "AwsOpenzfsVolume.UserAndGroupQuotasPropertyList",
       },
     };
 
@@ -599,7 +599,7 @@ export class TfOpenzfsVolume extends cdktn.TerraformResource {
   }
 }
 
-export function tfOpenzfsVolumeClientConfigurationsPropertyToTerraform(struct?: TfOpenzfsVolume.ClientConfigurationsProperty | cdktn.IResolvable): any {
+export function awsOpenzfsVolumeClientConfigurationsPropertyToTerraform(struct?: AwsOpenzfsVolume.ClientConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -611,7 +611,7 @@ export function tfOpenzfsVolumeClientConfigurationsPropertyToTerraform(struct?: 
 }
 
 
-export function tfOpenzfsVolumeClientConfigurationsPropertyToHclTerraform(struct?: TfOpenzfsVolume.ClientConfigurationsProperty | cdktn.IResolvable): any {
+export function awsOpenzfsVolumeClientConfigurationsPropertyToHclTerraform(struct?: AwsOpenzfsVolume.ClientConfigurationsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -636,25 +636,25 @@ export function tfOpenzfsVolumeClientConfigurationsPropertyToHclTerraform(struct
 }
 
 
-export function tfOpenzfsVolumeNfsExportsPropertyToTerraform(struct?: TfOpenzfsVolume.NfsExportsPropertyOutputReference | TfOpenzfsVolume.NfsExportsProperty): any {
+export function awsOpenzfsVolumeNfsExportsPropertyToTerraform(struct?: AwsOpenzfsVolume.NfsExportsPropertyOutputReference | AwsOpenzfsVolume.NfsExportsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    client_configurations: cdktn.listMapper(tfOpenzfsVolumeClientConfigurationsPropertyToTerraform, true)(struct!.clientConfigurations),
+    client_configurations: cdktn.listMapper(awsOpenzfsVolumeClientConfigurationsPropertyToTerraform, true)(struct!.clientConfigurations),
   }
 }
 
 
-export function tfOpenzfsVolumeNfsExportsPropertyToHclTerraform(struct?: TfOpenzfsVolume.NfsExportsPropertyOutputReference | TfOpenzfsVolume.NfsExportsProperty): any {
+export function awsOpenzfsVolumeNfsExportsPropertyToHclTerraform(struct?: AwsOpenzfsVolume.NfsExportsPropertyOutputReference | AwsOpenzfsVolume.NfsExportsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     client_configurations: {
-      value: cdktn.listMapperHcl(tfOpenzfsVolumeClientConfigurationsPropertyToHclTerraform, true)(struct!.clientConfigurations),
+      value: cdktn.listMapperHcl(awsOpenzfsVolumeClientConfigurationsPropertyToHclTerraform, true)(struct!.clientConfigurations),
       isBlock: true,
       type: "set",
       storageClassType: "ClientConfigurationsPropertyList",
@@ -666,7 +666,7 @@ export function tfOpenzfsVolumeNfsExportsPropertyToHclTerraform(struct?: TfOpenz
 }
 
 
-export function tfOpenzfsVolumeOriginSnapshotPropertyToTerraform(struct?: TfOpenzfsVolume.OriginSnapshotPropertyOutputReference | TfOpenzfsVolume.OriginSnapshotProperty): any {
+export function awsOpenzfsVolumeOriginSnapshotPropertyToTerraform(struct?: AwsOpenzfsVolume.OriginSnapshotPropertyOutputReference | AwsOpenzfsVolume.OriginSnapshotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -678,7 +678,7 @@ export function tfOpenzfsVolumeOriginSnapshotPropertyToTerraform(struct?: TfOpen
 }
 
 
-export function tfOpenzfsVolumeOriginSnapshotPropertyToHclTerraform(struct?: TfOpenzfsVolume.OriginSnapshotPropertyOutputReference | TfOpenzfsVolume.OriginSnapshotProperty): any {
+export function awsOpenzfsVolumeOriginSnapshotPropertyToHclTerraform(struct?: AwsOpenzfsVolume.OriginSnapshotPropertyOutputReference | AwsOpenzfsVolume.OriginSnapshotProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -703,7 +703,7 @@ export function tfOpenzfsVolumeOriginSnapshotPropertyToHclTerraform(struct?: TfO
 }
 
 
-export function tfOpenzfsVolumeTimeoutsPropertyToTerraform(struct?: TfOpenzfsVolume.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsOpenzfsVolumeTimeoutsPropertyToTerraform(struct?: AwsOpenzfsVolume.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -716,7 +716,7 @@ export function tfOpenzfsVolumeTimeoutsPropertyToTerraform(struct?: TfOpenzfsVol
 }
 
 
-export function tfOpenzfsVolumeTimeoutsPropertyToHclTerraform(struct?: TfOpenzfsVolume.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsOpenzfsVolumeTimeoutsPropertyToHclTerraform(struct?: AwsOpenzfsVolume.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -747,7 +747,7 @@ export function tfOpenzfsVolumeTimeoutsPropertyToHclTerraform(struct?: TfOpenzfs
 }
 
 
-export function tfOpenzfsVolumeUserAndGroupQuotasPropertyToTerraform(struct?: TfOpenzfsVolume.UserAndGroupQuotasProperty | cdktn.IResolvable): any {
+export function awsOpenzfsVolumeUserAndGroupQuotasPropertyToTerraform(struct?: AwsOpenzfsVolume.UserAndGroupQuotasProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -760,7 +760,7 @@ export function tfOpenzfsVolumeUserAndGroupQuotasPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfOpenzfsVolumeUserAndGroupQuotasPropertyToHclTerraform(struct?: TfOpenzfsVolume.UserAndGroupQuotasProperty | cdktn.IResolvable): any {
+export function awsOpenzfsVolumeUserAndGroupQuotasPropertyToHclTerraform(struct?: AwsOpenzfsVolume.UserAndGroupQuotasProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -791,14 +791,14 @@ export function tfOpenzfsVolumeUserAndGroupQuotasPropertyToHclTerraform(struct?:
 }
 
 
-export namespace TfOpenzfsVolume {
+export namespace AwsOpenzfsVolume {
 export interface ClientConfigurationsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#clients TfOpenzfsVolume#clients}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#clients AwsOpenzfsVolume#clients}
   */
   readonly clients: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#options TfOpenzfsVolume#options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#options AwsOpenzfsVolume#options}
   */
   readonly options: string[];
 }
@@ -902,7 +902,7 @@ export interface NfsExportsProperty {
   /**
   * client_configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#client_configurations TfOpenzfsVolume#client_configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#client_configurations AwsOpenzfsVolume#client_configurations}
   */
   readonly clientConfigurations: ClientConfigurationsProperty[] | cdktn.IResolvable;
 }
@@ -953,11 +953,11 @@ export class NfsExportsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface OriginSnapshotProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#copy_strategy TfOpenzfsVolume#copy_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#copy_strategy AwsOpenzfsVolume#copy_strategy}
   */
   readonly copyStrategy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#snapshot_arn TfOpenzfsVolume#snapshot_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#snapshot_arn AwsOpenzfsVolume#snapshot_arn}
   */
   readonly snapshotArn: string;
 }
@@ -1027,15 +1027,15 @@ export class OriginSnapshotPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#create TfOpenzfsVolume#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#create AwsOpenzfsVolume#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#delete TfOpenzfsVolume#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#delete AwsOpenzfsVolume#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#update TfOpenzfsVolume#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#update AwsOpenzfsVolume#update}
   */
   readonly update?: string;
 }
@@ -1143,18 +1143,18 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface UserAndGroupQuotasProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#id TfOpenzfsVolume#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#id AwsOpenzfsVolume#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#storage_capacity_quota_gib TfOpenzfsVolume#storage_capacity_quota_gib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#storage_capacity_quota_gib AwsOpenzfsVolume#storage_capacity_quota_gib}
   */
   readonly storageCapacityQuotaGib: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#type TfOpenzfsVolume#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/fsx_openzfs_volume#type AwsOpenzfsVolume#type}
   */
   readonly type: string;
 }

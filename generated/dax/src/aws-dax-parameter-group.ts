@@ -5,40 +5,40 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfParameterGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsParameterGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group#description TfParameterGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group#description AwsParameterGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group#id TfParameterGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group#id AwsParameterGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group#name TfParameterGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group#name AwsParameterGroup#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group#region TfParameterGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group#region AwsParameterGroup#region}
   */
   readonly region?: string;
   /**
   * parameters block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group#parameters TfParameterGroup#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group#parameters AwsParameterGroup#parameters}
   */
-  readonly parameters?: TfParameterGroup.ParametersProperty[] | cdktn.IResolvable;
+  readonly parameters?: AwsParameterGroup.ParametersProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group aws_dax_parameter_group}
 */
-export class TfParameterGroup extends cdktn.TerraformResource {
+export class AwsParameterGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfParameterGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfParameterGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsParameterGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfParameterGroup to import
-  * @param importFromId The id of the existing TfParameterGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfParameterGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsParameterGroup to import
+  * @param importFromId The id of the existing AwsParameterGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsParameterGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dax_parameter_group", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfParameterGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfParameterGroupConfig
+  * @param options AwsParameterGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfParameterGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsParameterGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_dax_parameter_group',
       terraformGeneratorMetadata: {
@@ -159,11 +159,11 @@ export class TfParameterGroup extends cdktn.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters = new TfParameterGroup.ParametersPropertyList(this, "parameters", true);
+  private _parameters = new AwsParameterGroup.ParametersPropertyList(this, "parameters", true);
   public get parameters() {
     return this._parameters;
   }
-  public putParameters(value: TfParameterGroup.ParametersProperty[] | cdktn.IResolvable) {
+  public putParameters(value: AwsParameterGroup.ParametersProperty[] | cdktn.IResolvable) {
     this._parameters.internalValue = value;
   }
   public resetParameters() {
@@ -184,7 +184,7 @@ export class TfParameterGroup extends cdktn.TerraformResource {
       id: cdktn.stringToTerraform(this._id),
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
-      parameters: cdktn.listMapper(tfParameterGroupParametersPropertyToTerraform, true)(this._parameters.internalValue),
+      parameters: cdktn.listMapper(awsParameterGroupParametersPropertyToTerraform, true)(this._parameters.internalValue),
     };
   }
 
@@ -215,10 +215,10 @@ export class TfParameterGroup extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       parameters: {
-        value: cdktn.listMapperHcl(tfParameterGroupParametersPropertyToHclTerraform, true)(this._parameters.internalValue),
+        value: cdktn.listMapperHcl(awsParameterGroupParametersPropertyToHclTerraform, true)(this._parameters.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfParameterGroup.ParametersPropertyList",
+        storageClassType: "AwsParameterGroup.ParametersPropertyList",
       },
     };
 
@@ -227,7 +227,7 @@ export class TfParameterGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfParameterGroupParametersPropertyToTerraform(struct?: TfParameterGroup.ParametersProperty | cdktn.IResolvable): any {
+export function awsParameterGroupParametersPropertyToTerraform(struct?: AwsParameterGroup.ParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -239,7 +239,7 @@ export function tfParameterGroupParametersPropertyToTerraform(struct?: TfParamet
 }
 
 
-export function tfParameterGroupParametersPropertyToHclTerraform(struct?: TfParameterGroup.ParametersProperty | cdktn.IResolvable): any {
+export function awsParameterGroupParametersPropertyToHclTerraform(struct?: AwsParameterGroup.ParametersProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -264,14 +264,14 @@ export function tfParameterGroupParametersPropertyToHclTerraform(struct?: TfPara
 }
 
 
-export namespace TfParameterGroup {
+export namespace AwsParameterGroup {
 export interface ParametersProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group#name TfParameterGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group#name AwsParameterGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group#value TfParameterGroup#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/dax_parameter_group#value AwsParameterGroup#value}
   */
   readonly value: string;
 }

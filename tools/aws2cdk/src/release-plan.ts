@@ -20,7 +20,7 @@ export const GO_MODULE_ROOT = "github.com/cdktn-io/cdktn-aws-go";
 
 export interface GroupChange {
   readonly slug: string;
-  /** The Go directory / tag prefix: `aws` + slug with underscores stripped. */
+  /** The Go directory / tag prefix: the slug with underscores stripped. */
   readonly packageName: string;
   readonly kind: "added" | "changed" | "removed";
   readonly beforeHash?: string;
@@ -35,21 +35,21 @@ export interface ReleasePlan {
   readonly providerVersionAfter: string;
   readonly totalGroups: number;
   readonly changes: readonly GroupChange[];
-  /** Tags to create, `awsdetective/v1.2.3`, sorted. Removed groups are never tagged. */
+  /** Tags to create, `detective/v1.2.3`, sorted. Removed groups are never tagged. */
   readonly tags: readonly string[];
   /** Loud warnings the operator must clear before any tag is pushed. */
   readonly warnings: readonly string[];
 }
 
 /**
- * `aws` + slug with underscores stripped — the jsii `targets.go.packageName`, which is also the
+ * The slug with underscores stripped — the jsii `targets.go.packageName`, which is also the
  * directory in `cdktn-aws-go` and the tag prefix. Restated here rather than imported from
- * `naming.ts` on purpose: a release must not be able to change the name of a published module
+ * `groups.ts` on purpose: a release must not be able to change the name of a published module
  * because the generator's idea of a name moved. If these two ever disagree, the manifest tests
  * (which assert the real `package.json` against this same rule) fail first.
  */
 export function goPackageName(slug: string): string {
-  return `aws${slug.replace(/_/g, "")}`;
+  return slug.replace(/_/g, "");
 }
 
 /**
@@ -255,7 +255,7 @@ export function planCommands(plan: ReleasePlan, goRoot: string): string[] {
   return out;
 }
 
-/** `awsdetective/v0.1.0` → `["awsdetective", "v0.1.0"]`; `awsec2/v2/v2.0.0` keeps the `/v2`. */
+/** `detective/v0.1.0` → `["detective", "v0.1.0"]`; `ec2/v2/v2.0.0` keeps the `/v2`. */
 export function splitTag(tag: string): [string, string] {
   const i = tag.lastIndexOf("/v");
   return [tag.slice(0, i), tag.slice(i + 1)];

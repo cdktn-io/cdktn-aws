@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfHostsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsHostsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_hosts#outpost_arn DataTfHosts#outpost_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_hosts#outpost_arn DataAwsHosts#outpost_arn}
   */
   readonly outpostArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_hosts#region DataTfHosts#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_hosts#region DataAwsHosts#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_hosts#tags DataTfHosts#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_hosts#tags DataAwsHosts#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_hosts#filter DataTfHosts#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_hosts#filter DataAwsHosts#filter}
   */
-  readonly filter?: DataTfHosts.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsHosts.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_hosts aws_ec2_hosts}
 */
-export class DataTfHosts extends cdktn.TerraformDataSource {
+export class DataAwsHosts extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class DataTfHosts extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfHosts resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsHosts resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfHosts to import
-  * @param importFromId The id of the existing DataTfHosts that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_hosts#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfHosts to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsHosts to import
+  * @param importFromId The id of the existing DataAwsHosts that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_hosts#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsHosts to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ec2_hosts", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class DataTfHosts extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfHostsConfig = {}
+  * @param options DataAwsHostsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfHostsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsHostsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ec2_hosts',
       terraformGeneratorMetadata: {
@@ -143,11 +143,11 @@ export class DataTfHosts extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfHosts.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsHosts.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfHosts.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsHosts.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -167,7 +167,7 @@ export class DataTfHosts extends cdktn.TerraformDataSource {
       outpost_arn: cdktn.stringToTerraform(this._outpostArn),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      filter: cdktn.listMapper(dataTfHostsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataAwsHostsFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -192,10 +192,10 @@ export class DataTfHosts extends cdktn.TerraformDataSource {
         storageClassType: "stringMap",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfHostsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsHostsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfHosts.FilterPropertyList",
+        storageClassType: "DataAwsHosts.FilterPropertyList",
       },
     };
 
@@ -204,7 +204,7 @@ export class DataTfHosts extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfHostsFilterPropertyToTerraform(struct?: DataTfHosts.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsHostsFilterPropertyToTerraform(struct?: DataAwsHosts.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,7 +216,7 @@ export function dataTfHostsFilterPropertyToTerraform(struct?: DataTfHosts.Filter
 }
 
 
-export function dataTfHostsFilterPropertyToHclTerraform(struct?: DataTfHosts.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsHostsFilterPropertyToHclTerraform(struct?: DataAwsHosts.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,14 +241,14 @@ export function dataTfHostsFilterPropertyToHclTerraform(struct?: DataTfHosts.Fil
 }
 
 
-export namespace DataTfHosts {
+export namespace DataAwsHosts {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_hosts#name DataTfHosts#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_hosts#name DataAwsHosts#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_hosts#values DataTfHosts#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ec2_hosts#values DataAwsHosts#values}
   */
   readonly values: string[];
 }

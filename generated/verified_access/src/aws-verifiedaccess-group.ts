@@ -5,52 +5,52 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#description TfGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#description AwsGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#id TfGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#id AwsGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#policy_document TfGroup#policy_document}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#policy_document AwsGroup#policy_document}
   */
   readonly policyDocument?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#region TfGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#region AwsGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#tags TfGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#tags AwsGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#tags_all TfGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#tags_all AwsGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#verifiedaccess_instance_id TfGroup#verifiedaccess_instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#verifiedaccess_instance_id AwsGroup#verifiedaccess_instance_id}
   */
   readonly verifiedaccessInstanceId: string;
   /**
   * sse_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#sse_configuration TfGroup#sse_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#sse_configuration AwsGroup#sse_configuration}
   */
-  readonly sseConfiguration?: TfGroup.SseConfigurationProperty;
+  readonly sseConfiguration?: AwsGroup.SseConfigurationProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group aws_verifiedaccess_group}
 */
-export class TfGroup extends cdktn.TerraformResource {
+export class AwsGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -61,11 +61,11 @@ export class TfGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfGroup to import
-  * @param importFromId The id of the existing TfGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsGroup to import
+  * @param importFromId The id of the existing AwsGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_verifiedaccess_group", importId: importFromId, provider });
@@ -80,9 +80,9 @@ export class TfGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfGroupConfig
+  * @param options AwsGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_verifiedaccess_group',
       terraformGeneratorMetadata: {
@@ -252,11 +252,11 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 
   // sse_configuration - computed: false, optional: true, required: false
-  private _sseConfiguration = new TfGroup.SseConfigurationPropertyOutputReference(this, "sse_configuration");
+  private _sseConfiguration = new AwsGroup.SseConfigurationPropertyOutputReference(this, "sse_configuration");
   public get sseConfiguration() {
     return this._sseConfiguration;
   }
-  public putSseConfiguration(value: TfGroup.SseConfigurationProperty) {
+  public putSseConfiguration(value: AwsGroup.SseConfigurationProperty) {
     this._sseConfiguration.internalValue = value;
   }
   public resetSseConfiguration() {
@@ -280,7 +280,7 @@ export class TfGroup extends cdktn.TerraformResource {
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
       verifiedaccess_instance_id: cdktn.stringToTerraform(this._verifiedaccessInstanceId),
-      sse_configuration: tfGroupSseConfigurationPropertyToTerraform(this._sseConfiguration.internalValue),
+      sse_configuration: awsGroupSseConfigurationPropertyToTerraform(this._sseConfiguration.internalValue),
     };
   }
 
@@ -329,10 +329,10 @@ export class TfGroup extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       sse_configuration: {
-        value: tfGroupSseConfigurationPropertyToHclTerraform(this._sseConfiguration.internalValue),
+        value: awsGroupSseConfigurationPropertyToHclTerraform(this._sseConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfGroup.SseConfigurationPropertyList",
+        storageClassType: "AwsGroup.SseConfigurationPropertyList",
       },
     };
 
@@ -341,7 +341,7 @@ export class TfGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfGroupSseConfigurationPropertyToTerraform(struct?: TfGroup.SseConfigurationPropertyOutputReference | TfGroup.SseConfigurationProperty): any {
+export function awsGroupSseConfigurationPropertyToTerraform(struct?: AwsGroup.SseConfigurationPropertyOutputReference | AwsGroup.SseConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -353,7 +353,7 @@ export function tfGroupSseConfigurationPropertyToTerraform(struct?: TfGroup.SseC
 }
 
 
-export function tfGroupSseConfigurationPropertyToHclTerraform(struct?: TfGroup.SseConfigurationPropertyOutputReference | TfGroup.SseConfigurationProperty): any {
+export function awsGroupSseConfigurationPropertyToHclTerraform(struct?: AwsGroup.SseConfigurationPropertyOutputReference | AwsGroup.SseConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,14 +378,14 @@ export function tfGroupSseConfigurationPropertyToHclTerraform(struct?: TfGroup.S
 }
 
 
-export namespace TfGroup {
+export namespace AwsGroup {
 export interface SseConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#customer_managed_key_enabled TfGroup#customer_managed_key_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#customer_managed_key_enabled AwsGroup#customer_managed_key_enabled}
   */
   readonly customerManagedKeyEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#kms_key_arn TfGroup#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/verifiedaccess_group#kms_key_arn AwsGroup#kms_key_arn}
   */
   readonly kmsKeyArn?: string;
 }

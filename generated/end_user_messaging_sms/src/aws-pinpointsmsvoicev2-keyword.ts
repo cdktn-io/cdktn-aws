@@ -5,35 +5,35 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfKeywordConfig extends cdktn.TerraformMetaArguments {
+export interface AwsKeywordConfig extends cdktn.TerraformMetaArguments {
   /**
   * Keyword to configure. 1-30 characters, upper-case, and cannot start or end with a space.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_keyword#keyword TfKeyword#keyword}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_keyword#keyword AwsKeyword#keyword}
   */
   readonly keyword: string;
   /**
   * Action to perform when the keyword is received.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_keyword#keyword_action TfKeyword#keyword_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_keyword#keyword_action AwsKeyword#keyword_action}
   */
   readonly keywordAction?: string;
   /**
   * Message to send when the keyword is received.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_keyword#keyword_message TfKeyword#keyword_message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_keyword#keyword_message AwsKeyword#keyword_message}
   */
   readonly keywordMessage: string;
   /**
   * ARN of the origination identity (phone number or pool) to attach the keyword to.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_keyword#origination_identity_arn TfKeyword#origination_identity_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_keyword#origination_identity_arn AwsKeyword#origination_identity_arn}
   */
   readonly originationIdentityArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_keyword#region TfKeyword#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_keyword#region AwsKeyword#region}
   */
   readonly region?: string;
 }
@@ -41,7 +41,7 @@ export interface TfKeywordConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_keyword aws_pinpointsmsvoicev2_keyword}
 */
-export class TfKeyword extends cdktn.TerraformResource {
+export class AwsKeyword extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -52,11 +52,11 @@ export class TfKeyword extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfKeyword resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsKeyword resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfKeyword to import
-  * @param importFromId The id of the existing TfKeyword that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_keyword#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfKeyword to import is found
+  * @param importToId The construct id used in the generated config for the AwsKeyword to import
+  * @param importFromId The id of the existing AwsKeyword that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/pinpointsmsvoicev2_keyword#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsKeyword to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_pinpointsmsvoicev2_keyword", importId: importFromId, provider });
@@ -71,9 +71,9 @@ export class TfKeyword extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfKeywordConfig
+  * @param options AwsKeywordConfig
   */
-  public constructor(scope: Construct, id: string, config: TfKeywordConfig) {
+  public constructor(scope: Construct, id: string, config: AwsKeywordConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_pinpointsmsvoicev2_keyword',
       terraformGeneratorMetadata: {

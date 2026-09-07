@@ -5,31 +5,31 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfDataShareConsumerAssociationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsDataShareConsumerAssociationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#allow_writes TfDataShareConsumerAssociation#allow_writes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#allow_writes AwsDataShareConsumerAssociation#allow_writes}
   */
   readonly allowWrites?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#associate_entire_account TfDataShareConsumerAssociation#associate_entire_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#associate_entire_account AwsDataShareConsumerAssociation#associate_entire_account}
   */
   readonly associateEntireAccount?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#consumer_arn TfDataShareConsumerAssociation#consumer_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#consumer_arn AwsDataShareConsumerAssociation#consumer_arn}
   */
   readonly consumerArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#consumer_region TfDataShareConsumerAssociation#consumer_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#consumer_region AwsDataShareConsumerAssociation#consumer_region}
   */
   readonly consumerRegion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#data_share_arn TfDataShareConsumerAssociation#data_share_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#data_share_arn AwsDataShareConsumerAssociation#data_share_arn}
   */
   readonly dataShareArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#region TfDataShareConsumerAssociation#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#region AwsDataShareConsumerAssociation#region}
   */
   readonly region?: string;
 }
@@ -37,7 +37,7 @@ export interface TfDataShareConsumerAssociationConfig extends cdktn.TerraformMet
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association aws_redshift_data_share_consumer_association}
 */
-export class TfDataShareConsumerAssociation extends cdktn.TerraformResource {
+export class AwsDataShareConsumerAssociation extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -48,11 +48,11 @@ export class TfDataShareConsumerAssociation extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfDataShareConsumerAssociation resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsDataShareConsumerAssociation resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfDataShareConsumerAssociation to import
-  * @param importFromId The id of the existing TfDataShareConsumerAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfDataShareConsumerAssociation to import is found
+  * @param importToId The construct id used in the generated config for the AwsDataShareConsumerAssociation to import
+  * @param importFromId The id of the existing AwsDataShareConsumerAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/redshift_data_share_consumer_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsDataShareConsumerAssociation to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_redshift_data_share_consumer_association", importId: importFromId, provider });
@@ -67,9 +67,9 @@ export class TfDataShareConsumerAssociation extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfDataShareConsumerAssociationConfig
+  * @param options AwsDataShareConsumerAssociationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfDataShareConsumerAssociationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsDataShareConsumerAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_redshift_data_share_consumer_association',
       terraformGeneratorMetadata: {

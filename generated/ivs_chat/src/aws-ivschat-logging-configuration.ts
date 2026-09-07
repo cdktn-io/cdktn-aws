@@ -5,50 +5,50 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfLoggingConfigurationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsLoggingConfigurationConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#id TfLoggingConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#id AwsLoggingConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#name TfLoggingConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#name AwsLoggingConfiguration#name}
   */
   readonly name?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#region TfLoggingConfiguration#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#region AwsLoggingConfiguration#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#tags TfLoggingConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#tags AwsLoggingConfiguration#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#tags_all TfLoggingConfiguration#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#tags_all AwsLoggingConfiguration#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * destination_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#destination_configuration TfLoggingConfiguration#destination_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#destination_configuration AwsLoggingConfiguration#destination_configuration}
   */
-  readonly destinationConfiguration?: TfLoggingConfiguration.DestinationConfigurationProperty;
+  readonly destinationConfiguration?: AwsLoggingConfiguration.DestinationConfigurationProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#timeouts TfLoggingConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#timeouts AwsLoggingConfiguration#timeouts}
   */
-  readonly timeouts?: TfLoggingConfiguration.TimeoutsProperty;
+  readonly timeouts?: AwsLoggingConfiguration.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration aws_ivschat_logging_configuration}
 */
-export class TfLoggingConfiguration extends cdktn.TerraformResource {
+export class AwsLoggingConfiguration extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -59,11 +59,11 @@ export class TfLoggingConfiguration extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfLoggingConfiguration resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsLoggingConfiguration resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfLoggingConfiguration to import
-  * @param importFromId The id of the existing TfLoggingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfLoggingConfiguration to import is found
+  * @param importToId The construct id used in the generated config for the AwsLoggingConfiguration to import
+  * @param importFromId The id of the existing AwsLoggingConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsLoggingConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ivschat_logging_configuration", importId: importFromId, provider });
@@ -78,9 +78,9 @@ export class TfLoggingConfiguration extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfLoggingConfigurationConfig = {}
+  * @param options AwsLoggingConfigurationConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: TfLoggingConfigurationConfig = {}) {
+  public constructor(scope: Construct, id: string, config: AwsLoggingConfigurationConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ivschat_logging_configuration',
       terraformGeneratorMetadata: {
@@ -200,11 +200,11 @@ export class TfLoggingConfiguration extends cdktn.TerraformResource {
   }
 
   // destination_configuration - computed: false, optional: true, required: false
-  private _destinationConfiguration = new TfLoggingConfiguration.DestinationConfigurationPropertyOutputReference(this, "destination_configuration");
+  private _destinationConfiguration = new AwsLoggingConfiguration.DestinationConfigurationPropertyOutputReference(this, "destination_configuration");
   public get destinationConfiguration() {
     return this._destinationConfiguration;
   }
-  public putDestinationConfiguration(value: TfLoggingConfiguration.DestinationConfigurationProperty) {
+  public putDestinationConfiguration(value: AwsLoggingConfiguration.DestinationConfigurationProperty) {
     this._destinationConfiguration.internalValue = value;
   }
   public resetDestinationConfiguration() {
@@ -216,11 +216,11 @@ export class TfLoggingConfiguration extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfLoggingConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsLoggingConfiguration.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfLoggingConfiguration.TimeoutsProperty) {
+  public putTimeouts(value: AwsLoggingConfiguration.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -242,8 +242,8 @@ export class TfLoggingConfiguration extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      destination_configuration: tfLoggingConfigurationDestinationConfigurationPropertyToTerraform(this._destinationConfiguration.internalValue),
-      timeouts: tfLoggingConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      destination_configuration: awsLoggingConfigurationDestinationConfigurationPropertyToTerraform(this._destinationConfiguration.internalValue),
+      timeouts: awsLoggingConfigurationTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -280,16 +280,16 @@ export class TfLoggingConfiguration extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       destination_configuration: {
-        value: tfLoggingConfigurationDestinationConfigurationPropertyToHclTerraform(this._destinationConfiguration.internalValue),
+        value: awsLoggingConfigurationDestinationConfigurationPropertyToHclTerraform(this._destinationConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfLoggingConfiguration.DestinationConfigurationPropertyList",
+        storageClassType: "AwsLoggingConfiguration.DestinationConfigurationPropertyList",
       },
       timeouts: {
-        value: tfLoggingConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsLoggingConfigurationTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfLoggingConfiguration.TimeoutsProperty",
+        storageClassType: "AwsLoggingConfiguration.TimeoutsProperty",
       },
     };
 
@@ -298,7 +298,7 @@ export class TfLoggingConfiguration extends cdktn.TerraformResource {
   }
 }
 
-export function tfLoggingConfigurationCloudwatchLogsPropertyToTerraform(struct?: TfLoggingConfiguration.CloudwatchLogsPropertyOutputReference | TfLoggingConfiguration.CloudwatchLogsProperty): any {
+export function awsLoggingConfigurationCloudwatchLogsPropertyToTerraform(struct?: AwsLoggingConfiguration.CloudwatchLogsPropertyOutputReference | AwsLoggingConfiguration.CloudwatchLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,7 +309,7 @@ export function tfLoggingConfigurationCloudwatchLogsPropertyToTerraform(struct?:
 }
 
 
-export function tfLoggingConfigurationCloudwatchLogsPropertyToHclTerraform(struct?: TfLoggingConfiguration.CloudwatchLogsPropertyOutputReference | TfLoggingConfiguration.CloudwatchLogsProperty): any {
+export function awsLoggingConfigurationCloudwatchLogsPropertyToHclTerraform(struct?: AwsLoggingConfiguration.CloudwatchLogsPropertyOutputReference | AwsLoggingConfiguration.CloudwatchLogsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -328,7 +328,7 @@ export function tfLoggingConfigurationCloudwatchLogsPropertyToHclTerraform(struc
 }
 
 
-export function tfLoggingConfigurationFirehosePropertyToTerraform(struct?: TfLoggingConfiguration.FirehosePropertyOutputReference | TfLoggingConfiguration.FirehoseProperty): any {
+export function awsLoggingConfigurationFirehosePropertyToTerraform(struct?: AwsLoggingConfiguration.FirehosePropertyOutputReference | AwsLoggingConfiguration.FirehoseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function tfLoggingConfigurationFirehosePropertyToTerraform(struct?: TfLog
 }
 
 
-export function tfLoggingConfigurationFirehosePropertyToHclTerraform(struct?: TfLoggingConfiguration.FirehosePropertyOutputReference | TfLoggingConfiguration.FirehoseProperty): any {
+export function awsLoggingConfigurationFirehosePropertyToHclTerraform(struct?: AwsLoggingConfiguration.FirehosePropertyOutputReference | AwsLoggingConfiguration.FirehoseProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -358,7 +358,7 @@ export function tfLoggingConfigurationFirehosePropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfLoggingConfigurationS3PropertyToTerraform(struct?: TfLoggingConfiguration.S3PropertyOutputReference | TfLoggingConfiguration.S3Property): any {
+export function awsLoggingConfigurationS3PropertyToTerraform(struct?: AwsLoggingConfiguration.S3PropertyOutputReference | AwsLoggingConfiguration.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -369,7 +369,7 @@ export function tfLoggingConfigurationS3PropertyToTerraform(struct?: TfLoggingCo
 }
 
 
-export function tfLoggingConfigurationS3PropertyToHclTerraform(struct?: TfLoggingConfiguration.S3PropertyOutputReference | TfLoggingConfiguration.S3Property): any {
+export function awsLoggingConfigurationS3PropertyToHclTerraform(struct?: AwsLoggingConfiguration.S3PropertyOutputReference | AwsLoggingConfiguration.S3Property): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -388,39 +388,39 @@ export function tfLoggingConfigurationS3PropertyToHclTerraform(struct?: TfLoggin
 }
 
 
-export function tfLoggingConfigurationDestinationConfigurationPropertyToTerraform(struct?: TfLoggingConfiguration.DestinationConfigurationPropertyOutputReference | TfLoggingConfiguration.DestinationConfigurationProperty): any {
+export function awsLoggingConfigurationDestinationConfigurationPropertyToTerraform(struct?: AwsLoggingConfiguration.DestinationConfigurationPropertyOutputReference | AwsLoggingConfiguration.DestinationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cloudwatch_logs: tfLoggingConfigurationCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
-    firehose: tfLoggingConfigurationFirehosePropertyToTerraform(struct!.firehose),
-    s3: tfLoggingConfigurationS3PropertyToTerraform(struct!.s3),
+    cloudwatch_logs: awsLoggingConfigurationCloudwatchLogsPropertyToTerraform(struct!.cloudwatchLogs),
+    firehose: awsLoggingConfigurationFirehosePropertyToTerraform(struct!.firehose),
+    s3: awsLoggingConfigurationS3PropertyToTerraform(struct!.s3),
   }
 }
 
 
-export function tfLoggingConfigurationDestinationConfigurationPropertyToHclTerraform(struct?: TfLoggingConfiguration.DestinationConfigurationPropertyOutputReference | TfLoggingConfiguration.DestinationConfigurationProperty): any {
+export function awsLoggingConfigurationDestinationConfigurationPropertyToHclTerraform(struct?: AwsLoggingConfiguration.DestinationConfigurationPropertyOutputReference | AwsLoggingConfiguration.DestinationConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cloudwatch_logs: {
-      value: tfLoggingConfigurationCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
+      value: awsLoggingConfigurationCloudwatchLogsPropertyToHclTerraform(struct!.cloudwatchLogs),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchLogsPropertyList",
     },
     firehose: {
-      value: tfLoggingConfigurationFirehosePropertyToHclTerraform(struct!.firehose),
+      value: awsLoggingConfigurationFirehosePropertyToHclTerraform(struct!.firehose),
       isBlock: true,
       type: "list",
       storageClassType: "FirehosePropertyList",
     },
     s3: {
-      value: tfLoggingConfigurationS3PropertyToHclTerraform(struct!.s3),
+      value: awsLoggingConfigurationS3PropertyToHclTerraform(struct!.s3),
       isBlock: true,
       type: "list",
       storageClassType: "S3PropertyList",
@@ -432,7 +432,7 @@ export function tfLoggingConfigurationDestinationConfigurationPropertyToHclTerra
 }
 
 
-export function tfLoggingConfigurationTimeoutsPropertyToTerraform(struct?: TfLoggingConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsLoggingConfigurationTimeoutsPropertyToTerraform(struct?: AwsLoggingConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -445,7 +445,7 @@ export function tfLoggingConfigurationTimeoutsPropertyToTerraform(struct?: TfLog
 }
 
 
-export function tfLoggingConfigurationTimeoutsPropertyToHclTerraform(struct?: TfLoggingConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsLoggingConfigurationTimeoutsPropertyToHclTerraform(struct?: AwsLoggingConfiguration.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -476,10 +476,10 @@ export function tfLoggingConfigurationTimeoutsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export namespace TfLoggingConfiguration {
+export namespace AwsLoggingConfiguration {
 export interface CloudwatchLogsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#log_group_name TfLoggingConfiguration#log_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#log_group_name AwsLoggingConfiguration#log_group_name}
   */
   readonly logGroupName: string;
 }
@@ -530,7 +530,7 @@ export class CloudwatchLogsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface FirehoseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#delivery_stream_name TfLoggingConfiguration#delivery_stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#delivery_stream_name AwsLoggingConfiguration#delivery_stream_name}
   */
   readonly deliveryStreamName: string;
 }
@@ -581,7 +581,7 @@ export class FirehosePropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface S3Property {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#bucket_name TfLoggingConfiguration#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#bucket_name AwsLoggingConfiguration#bucket_name}
   */
   readonly bucketName: string;
 }
@@ -634,19 +634,19 @@ export interface DestinationConfigurationProperty {
   /**
   * cloudwatch_logs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#cloudwatch_logs TfLoggingConfiguration#cloudwatch_logs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#cloudwatch_logs AwsLoggingConfiguration#cloudwatch_logs}
   */
   readonly cloudwatchLogs?: CloudwatchLogsProperty;
   /**
   * firehose block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#firehose TfLoggingConfiguration#firehose}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#firehose AwsLoggingConfiguration#firehose}
   */
   readonly firehose?: FirehoseProperty;
   /**
   * s3 block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#s3 TfLoggingConfiguration#s3}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#s3 AwsLoggingConfiguration#s3}
   */
   readonly s3?: S3Property;
 }
@@ -744,15 +744,15 @@ export class DestinationConfigurationPropertyOutputReference extends cdktn.Compl
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#create TfLoggingConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#create AwsLoggingConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#delete TfLoggingConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#delete AwsLoggingConfiguration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#update TfLoggingConfiguration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ivschat_logging_configuration#update AwsLoggingConfiguration#update}
   */
   readonly update?: string;
 }

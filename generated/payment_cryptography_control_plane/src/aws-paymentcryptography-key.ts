@@ -5,51 +5,51 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfKeyConfig extends cdktn.TerraformMetaArguments {
+export interface AwsKeyConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#deletion_window_in_days TfKey#deletion_window_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#deletion_window_in_days AwsKey#deletion_window_in_days}
   */
   readonly deletionWindowInDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#enabled TfKey#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#enabled AwsKey#enabled}
   */
   readonly enabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#exportable TfKey#exportable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#exportable AwsKey#exportable}
   */
   readonly exportable: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#key_check_value_algorithm TfKey#key_check_value_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#key_check_value_algorithm AwsKey#key_check_value_algorithm}
   */
   readonly keyCheckValueAlgorithm?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#region TfKey#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#region AwsKey#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#tags TfKey#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#tags AwsKey#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * key_attributes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#key_attributes TfKey#key_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#key_attributes AwsKey#key_attributes}
   */
-  readonly keyAttributes?: TfKey.KeyAttributesProperty[] | cdktn.IResolvable;
+  readonly keyAttributes?: AwsKey.KeyAttributesProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#timeouts TfKey#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#timeouts AwsKey#timeouts}
   */
-  readonly timeouts?: TfKey.TimeoutsProperty;
+  readonly timeouts?: AwsKey.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key aws_paymentcryptography_key}
 */
-export class TfKey extends cdktn.TerraformResource {
+export class AwsKey extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -60,11 +60,11 @@ export class TfKey extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfKey resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsKey resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfKey to import
-  * @param importFromId The id of the existing TfKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfKey to import is found
+  * @param importToId The construct id used in the generated config for the AwsKey to import
+  * @param importFromId The id of the existing AwsKey that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsKey to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_paymentcryptography_key", importId: importFromId, provider });
@@ -79,9 +79,9 @@ export class TfKey extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfKeyConfig
+  * @param options AwsKeyConfig
   */
-  public constructor(scope: Construct, id: string, config: TfKeyConfig) {
+  public constructor(scope: Construct, id: string, config: AwsKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_paymentcryptography_key',
       terraformGeneratorMetadata: {
@@ -236,11 +236,11 @@ export class TfKey extends cdktn.TerraformResource {
   }
 
   // key_attributes - computed: false, optional: true, required: false
-  private _keyAttributes = new TfKey.KeyAttributesPropertyList(this, "key_attributes", false);
+  private _keyAttributes = new AwsKey.KeyAttributesPropertyList(this, "key_attributes", false);
   public get keyAttributes() {
     return this._keyAttributes;
   }
-  public putKeyAttributes(value: TfKey.KeyAttributesProperty[] | cdktn.IResolvable) {
+  public putKeyAttributes(value: AwsKey.KeyAttributesProperty[] | cdktn.IResolvable) {
     this._keyAttributes.internalValue = value;
   }
   public resetKeyAttributes() {
@@ -252,11 +252,11 @@ export class TfKey extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfKey.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsKey.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfKey.TimeoutsProperty) {
+  public putTimeouts(value: AwsKey.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -279,8 +279,8 @@ export class TfKey extends cdktn.TerraformResource {
       key_check_value_algorithm: cdktn.stringToTerraform(this._keyCheckValueAlgorithm),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      key_attributes: cdktn.listMapper(tfKeyKeyAttributesPropertyToTerraform, true)(this._keyAttributes.internalValue),
-      timeouts: tfKeyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      key_attributes: cdktn.listMapper(awsKeyKeyAttributesPropertyToTerraform, true)(this._keyAttributes.internalValue),
+      timeouts: awsKeyTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -323,16 +323,16 @@ export class TfKey extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       key_attributes: {
-        value: cdktn.listMapperHcl(tfKeyKeyAttributesPropertyToHclTerraform, true)(this._keyAttributes.internalValue),
+        value: cdktn.listMapperHcl(awsKeyKeyAttributesPropertyToHclTerraform, true)(this._keyAttributes.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfKey.KeyAttributesPropertyList",
+        storageClassType: "AwsKey.KeyAttributesPropertyList",
       },
       timeouts: {
-        value: tfKeyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsKeyTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfKey.TimeoutsProperty",
+        storageClassType: "AwsKey.TimeoutsProperty",
       },
     };
 
@@ -341,7 +341,7 @@ export class TfKey extends cdktn.TerraformResource {
   }
 }
 
-export function tfKeyKeyModesOfUsePropertyToTerraform(struct?: TfKey.KeyModesOfUseProperty | cdktn.IResolvable): any {
+export function awsKeyKeyModesOfUsePropertyToTerraform(struct?: AwsKey.KeyModesOfUseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -360,7 +360,7 @@ export function tfKeyKeyModesOfUsePropertyToTerraform(struct?: TfKey.KeyModesOfU
 }
 
 
-export function tfKeyKeyModesOfUsePropertyToHclTerraform(struct?: TfKey.KeyModesOfUseProperty | cdktn.IResolvable): any {
+export function awsKeyKeyModesOfUsePropertyToHclTerraform(struct?: AwsKey.KeyModesOfUseProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -427,7 +427,7 @@ export function tfKeyKeyModesOfUsePropertyToHclTerraform(struct?: TfKey.KeyModes
 }
 
 
-export function tfKeyKeyAttributesPropertyToTerraform(struct?: TfKey.KeyAttributesProperty | cdktn.IResolvable): any {
+export function awsKeyKeyAttributesPropertyToTerraform(struct?: AwsKey.KeyAttributesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -436,12 +436,12 @@ export function tfKeyKeyAttributesPropertyToTerraform(struct?: TfKey.KeyAttribut
     key_algorithm: cdktn.stringToTerraform(struct!.keyAlgorithm),
     key_class: cdktn.stringToTerraform(struct!.keyClass),
     key_usage: cdktn.stringToTerraform(struct!.keyUsage),
-    key_modes_of_use: cdktn.listMapper(tfKeyKeyModesOfUsePropertyToTerraform, true)(struct!.keyModesOfUse),
+    key_modes_of_use: cdktn.listMapper(awsKeyKeyModesOfUsePropertyToTerraform, true)(struct!.keyModesOfUse),
   }
 }
 
 
-export function tfKeyKeyAttributesPropertyToHclTerraform(struct?: TfKey.KeyAttributesProperty | cdktn.IResolvable): any {
+export function awsKeyKeyAttributesPropertyToHclTerraform(struct?: AwsKey.KeyAttributesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -466,7 +466,7 @@ export function tfKeyKeyAttributesPropertyToHclTerraform(struct?: TfKey.KeyAttri
       storageClassType: "string",
     },
     key_modes_of_use: {
-      value: cdktn.listMapperHcl(tfKeyKeyModesOfUsePropertyToHclTerraform, true)(struct!.keyModesOfUse),
+      value: cdktn.listMapperHcl(awsKeyKeyModesOfUsePropertyToHclTerraform, true)(struct!.keyModesOfUse),
       isBlock: true,
       type: "list",
       storageClassType: "KeyModesOfUsePropertyList",
@@ -478,7 +478,7 @@ export function tfKeyKeyAttributesPropertyToHclTerraform(struct?: TfKey.KeyAttri
 }
 
 
-export function tfKeyTimeoutsPropertyToTerraform(struct?: TfKey.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsKeyTimeoutsPropertyToTerraform(struct?: AwsKey.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -491,7 +491,7 @@ export function tfKeyTimeoutsPropertyToTerraform(struct?: TfKey.TimeoutsProperty
 }
 
 
-export function tfKeyTimeoutsPropertyToHclTerraform(struct?: TfKey.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsKeyTimeoutsPropertyToHclTerraform(struct?: AwsKey.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -522,42 +522,42 @@ export function tfKeyTimeoutsPropertyToHclTerraform(struct?: TfKey.TimeoutsPrope
 }
 
 
-export namespace TfKey {
+export namespace AwsKey {
 export interface KeyModesOfUseProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#decrypt TfKey#decrypt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#decrypt AwsKey#decrypt}
   */
   readonly decrypt?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#derive_key TfKey#derive_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#derive_key AwsKey#derive_key}
   */
   readonly deriveKey?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#encrypt TfKey#encrypt}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#encrypt AwsKey#encrypt}
   */
   readonly encrypt?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#generate TfKey#generate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#generate AwsKey#generate}
   */
   readonly generate?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#no_restrictions TfKey#no_restrictions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#no_restrictions AwsKey#no_restrictions}
   */
   readonly noRestrictions?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#sign TfKey#sign}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#sign AwsKey#sign}
   */
   readonly sign?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#unwrap TfKey#unwrap}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#unwrap AwsKey#unwrap}
   */
   readonly unwrap?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#verify TfKey#verify}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#verify AwsKey#verify}
   */
   readonly verify?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#wrap TfKey#wrap}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#wrap AwsKey#wrap}
   */
   readonly wrap?: boolean | cdktn.IResolvable;
 }
@@ -819,21 +819,21 @@ export class KeyModesOfUsePropertyList extends cdktn.ComplexList {
 }
 export interface KeyAttributesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#key_algorithm TfKey#key_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#key_algorithm AwsKey#key_algorithm}
   */
   readonly keyAlgorithm: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#key_class TfKey#key_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#key_class AwsKey#key_class}
   */
   readonly keyClass: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#key_usage TfKey#key_usage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#key_usage AwsKey#key_usage}
   */
   readonly keyUsage: string;
   /**
   * key_modes_of_use block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#key_modes_of_use TfKey#key_modes_of_use}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#key_modes_of_use AwsKey#key_modes_of_use}
   */
   readonly keyModesOfUse?: KeyModesOfUseProperty[] | cdktn.IResolvable;
 }
@@ -978,19 +978,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#create TfKey#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#create AwsKey#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#delete TfKey#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#delete AwsKey#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#update TfKey#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/paymentcryptography_key#update AwsKey#update}
   */
   readonly update?: string;
 }

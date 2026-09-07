@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfTablesConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsTablesConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_tables#region DataTfTables#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_tables#region DataAwsTables#region}
   */
   readonly region?: string;
 }
@@ -17,7 +17,7 @@ export interface DataTfTablesConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_tables aws_dynamodb_tables}
 */
-export class DataTfTables extends cdktn.TerraformDataSource {
+export class DataAwsTables extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -28,11 +28,11 @@ export class DataTfTables extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfTables resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsTables resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfTables to import
-  * @param importFromId The id of the existing DataTfTables that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_tables#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfTables to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsTables to import
+  * @param importFromId The id of the existing DataAwsTables that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/dynamodb_tables#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsTables to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_dynamodb_tables", importId: importFromId, provider });
@@ -47,9 +47,9 @@ export class DataTfTables extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfTablesConfig = {}
+  * @param options DataAwsTablesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfTablesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsTablesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_dynamodb_tables',
       terraformGeneratorMetadata: {

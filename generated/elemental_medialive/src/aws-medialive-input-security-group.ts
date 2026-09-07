@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfInputSecurityGroupConfig extends cdktn.TerraformMetaArguments {
+export interface AwsInputSecurityGroupConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#id TfInputSecurityGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#id AwsInputSecurityGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,35 +16,35 @@ export interface TfInputSecurityGroupConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#region TfInputSecurityGroup#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#region AwsInputSecurityGroup#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#tags TfInputSecurityGroup#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#tags AwsInputSecurityGroup#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#tags_all TfInputSecurityGroup#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#tags_all AwsInputSecurityGroup#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#timeouts TfInputSecurityGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#timeouts AwsInputSecurityGroup#timeouts}
   */
-  readonly timeouts?: TfInputSecurityGroup.TimeoutsProperty;
+  readonly timeouts?: AwsInputSecurityGroup.TimeoutsProperty;
   /**
   * whitelist_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#whitelist_rules TfInputSecurityGroup#whitelist_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#whitelist_rules AwsInputSecurityGroup#whitelist_rules}
   */
-  readonly whitelistRules: TfInputSecurityGroup.WhitelistRulesProperty[] | cdktn.IResolvable;
+  readonly whitelistRules: AwsInputSecurityGroup.WhitelistRulesProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group aws_medialive_input_security_group}
 */
-export class TfInputSecurityGroup extends cdktn.TerraformResource {
+export class AwsInputSecurityGroup extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfInputSecurityGroup extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfInputSecurityGroup resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsInputSecurityGroup resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfInputSecurityGroup to import
-  * @param importFromId The id of the existing TfInputSecurityGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfInputSecurityGroup to import is found
+  * @param importToId The construct id used in the generated config for the AwsInputSecurityGroup to import
+  * @param importFromId The id of the existing AwsInputSecurityGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsInputSecurityGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_medialive_input_security_group", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfInputSecurityGroup extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfInputSecurityGroupConfig
+  * @param options AwsInputSecurityGroupConfig
   */
-  public constructor(scope: Construct, id: string, config: TfInputSecurityGroupConfig) {
+  public constructor(scope: Construct, id: string, config: AwsInputSecurityGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_medialive_input_security_group',
       terraformGeneratorMetadata: {
@@ -179,11 +179,11 @@ export class TfInputSecurityGroup extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfInputSecurityGroup.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsInputSecurityGroup.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfInputSecurityGroup.TimeoutsProperty) {
+  public putTimeouts(value: AwsInputSecurityGroup.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -195,11 +195,11 @@ export class TfInputSecurityGroup extends cdktn.TerraformResource {
   }
 
   // whitelist_rules - computed: false, optional: false, required: true
-  private _whitelistRules = new TfInputSecurityGroup.WhitelistRulesPropertyList(this, "whitelist_rules", true);
+  private _whitelistRules = new AwsInputSecurityGroup.WhitelistRulesPropertyList(this, "whitelist_rules", true);
   public get whitelistRules() {
     return this._whitelistRules;
   }
-  public putWhitelistRules(value: TfInputSecurityGroup.WhitelistRulesProperty[] | cdktn.IResolvable) {
+  public putWhitelistRules(value: AwsInputSecurityGroup.WhitelistRulesProperty[] | cdktn.IResolvable) {
     this._whitelistRules.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -217,8 +217,8 @@ export class TfInputSecurityGroup extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      timeouts: tfInputSecurityGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      whitelist_rules: cdktn.listMapper(tfInputSecurityGroupWhitelistRulesPropertyToTerraform, true)(this._whitelistRules.internalValue),
+      timeouts: awsInputSecurityGroupTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      whitelist_rules: cdktn.listMapper(awsInputSecurityGroupWhitelistRulesPropertyToTerraform, true)(this._whitelistRules.internalValue),
     };
   }
 
@@ -249,16 +249,16 @@ export class TfInputSecurityGroup extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       timeouts: {
-        value: tfInputSecurityGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsInputSecurityGroupTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfInputSecurityGroup.TimeoutsProperty",
+        storageClassType: "AwsInputSecurityGroup.TimeoutsProperty",
       },
       whitelist_rules: {
-        value: cdktn.listMapperHcl(tfInputSecurityGroupWhitelistRulesPropertyToHclTerraform, true)(this._whitelistRules.internalValue),
+        value: cdktn.listMapperHcl(awsInputSecurityGroupWhitelistRulesPropertyToHclTerraform, true)(this._whitelistRules.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfInputSecurityGroup.WhitelistRulesPropertyList",
+        storageClassType: "AwsInputSecurityGroup.WhitelistRulesPropertyList",
       },
     };
 
@@ -267,7 +267,7 @@ export class TfInputSecurityGroup extends cdktn.TerraformResource {
   }
 }
 
-export function tfInputSecurityGroupTimeoutsPropertyToTerraform(struct?: TfInputSecurityGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsInputSecurityGroupTimeoutsPropertyToTerraform(struct?: AwsInputSecurityGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -280,7 +280,7 @@ export function tfInputSecurityGroupTimeoutsPropertyToTerraform(struct?: TfInput
 }
 
 
-export function tfInputSecurityGroupTimeoutsPropertyToHclTerraform(struct?: TfInputSecurityGroup.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsInputSecurityGroupTimeoutsPropertyToHclTerraform(struct?: AwsInputSecurityGroup.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -311,7 +311,7 @@ export function tfInputSecurityGroupTimeoutsPropertyToHclTerraform(struct?: TfIn
 }
 
 
-export function tfInputSecurityGroupWhitelistRulesPropertyToTerraform(struct?: TfInputSecurityGroup.WhitelistRulesProperty | cdktn.IResolvable): any {
+export function awsInputSecurityGroupWhitelistRulesPropertyToTerraform(struct?: AwsInputSecurityGroup.WhitelistRulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -322,7 +322,7 @@ export function tfInputSecurityGroupWhitelistRulesPropertyToTerraform(struct?: T
 }
 
 
-export function tfInputSecurityGroupWhitelistRulesPropertyToHclTerraform(struct?: TfInputSecurityGroup.WhitelistRulesProperty | cdktn.IResolvable): any {
+export function awsInputSecurityGroupWhitelistRulesPropertyToHclTerraform(struct?: AwsInputSecurityGroup.WhitelistRulesProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -341,18 +341,18 @@ export function tfInputSecurityGroupWhitelistRulesPropertyToHclTerraform(struct?
 }
 
 
-export namespace TfInputSecurityGroup {
+export namespace AwsInputSecurityGroup {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#create TfInputSecurityGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#create AwsInputSecurityGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#delete TfInputSecurityGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#delete AwsInputSecurityGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#update TfInputSecurityGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#update AwsInputSecurityGroup#update}
   */
   readonly update?: string;
 }
@@ -460,7 +460,7 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface WhitelistRulesProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#cidr TfInputSecurityGroup#cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/medialive_input_security_group#cidr AwsInputSecurityGroup#cidr}
   */
   readonly cidr: string;
 }

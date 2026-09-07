@@ -5,75 +5,75 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfUserSettingsConfig extends cdktn.TerraformMetaArguments {
+export interface AwsUserSettingsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#additional_encryption_context TfUserSettings#additional_encryption_context}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#additional_encryption_context AwsUserSettings#additional_encryption_context}
   */
   readonly additionalEncryptionContext?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#copy_allowed TfUserSettings#copy_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#copy_allowed AwsUserSettings#copy_allowed}
   */
   readonly copyAllowed: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#customer_managed_key TfUserSettings#customer_managed_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#customer_managed_key AwsUserSettings#customer_managed_key}
   */
   readonly customerManagedKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#deep_link_allowed TfUserSettings#deep_link_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#deep_link_allowed AwsUserSettings#deep_link_allowed}
   */
   readonly deepLinkAllowed?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#disconnect_timeout_in_minutes TfUserSettings#disconnect_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#disconnect_timeout_in_minutes AwsUserSettings#disconnect_timeout_in_minutes}
   */
   readonly disconnectTimeoutInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#download_allowed TfUserSettings#download_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#download_allowed AwsUserSettings#download_allowed}
   */
   readonly downloadAllowed: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#idle_disconnect_timeout_in_minutes TfUserSettings#idle_disconnect_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#idle_disconnect_timeout_in_minutes AwsUserSettings#idle_disconnect_timeout_in_minutes}
   */
   readonly idleDisconnectTimeoutInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#paste_allowed TfUserSettings#paste_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#paste_allowed AwsUserSettings#paste_allowed}
   */
   readonly pasteAllowed: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#print_allowed TfUserSettings#print_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#print_allowed AwsUserSettings#print_allowed}
   */
   readonly printAllowed: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#region TfUserSettings#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#region AwsUserSettings#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#tags TfUserSettings#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#tags AwsUserSettings#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#upload_allowed TfUserSettings#upload_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#upload_allowed AwsUserSettings#upload_allowed}
   */
   readonly uploadAllowed: string;
   /**
   * cookie_synchronization_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#cookie_synchronization_configuration TfUserSettings#cookie_synchronization_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#cookie_synchronization_configuration AwsUserSettings#cookie_synchronization_configuration}
   */
-  readonly cookieSynchronizationConfiguration?: TfUserSettings.CookieSynchronizationConfigurationProperty[] | cdktn.IResolvable;
+  readonly cookieSynchronizationConfiguration?: AwsUserSettings.CookieSynchronizationConfigurationProperty[] | cdktn.IResolvable;
   /**
   * toolbar_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#toolbar_configuration TfUserSettings#toolbar_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#toolbar_configuration AwsUserSettings#toolbar_configuration}
   */
-  readonly toolbarConfiguration?: TfUserSettings.ToolbarConfigurationProperty[] | cdktn.IResolvable;
+  readonly toolbarConfiguration?: AwsUserSettings.ToolbarConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings aws_workspacesweb_user_settings}
 */
-export class TfUserSettings extends cdktn.TerraformResource {
+export class AwsUserSettings extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -84,11 +84,11 @@ export class TfUserSettings extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfUserSettings resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsUserSettings resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfUserSettings to import
-  * @param importFromId The id of the existing TfUserSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfUserSettings to import is found
+  * @param importToId The construct id used in the generated config for the AwsUserSettings to import
+  * @param importFromId The id of the existing AwsUserSettings that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsUserSettings to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_workspacesweb_user_settings", importId: importFromId, provider });
@@ -103,9 +103,9 @@ export class TfUserSettings extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfUserSettingsConfig
+  * @param options AwsUserSettingsConfig
   */
-  public constructor(scope: Construct, id: string, config: TfUserSettingsConfig) {
+  public constructor(scope: Construct, id: string, config: AwsUserSettingsConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_workspacesweb_user_settings',
       terraformGeneratorMetadata: {
@@ -335,11 +335,11 @@ export class TfUserSettings extends cdktn.TerraformResource {
   }
 
   // cookie_synchronization_configuration - computed: false, optional: true, required: false
-  private _cookieSynchronizationConfiguration = new TfUserSettings.CookieSynchronizationConfigurationPropertyList(this, "cookie_synchronization_configuration", false);
+  private _cookieSynchronizationConfiguration = new AwsUserSettings.CookieSynchronizationConfigurationPropertyList(this, "cookie_synchronization_configuration", false);
   public get cookieSynchronizationConfiguration() {
     return this._cookieSynchronizationConfiguration;
   }
-  public putCookieSynchronizationConfiguration(value: TfUserSettings.CookieSynchronizationConfigurationProperty[] | cdktn.IResolvable) {
+  public putCookieSynchronizationConfiguration(value: AwsUserSettings.CookieSynchronizationConfigurationProperty[] | cdktn.IResolvable) {
     this._cookieSynchronizationConfiguration.internalValue = value;
   }
   public resetCookieSynchronizationConfiguration() {
@@ -351,11 +351,11 @@ export class TfUserSettings extends cdktn.TerraformResource {
   }
 
   // toolbar_configuration - computed: false, optional: true, required: false
-  private _toolbarConfiguration = new TfUserSettings.ToolbarConfigurationPropertyList(this, "toolbar_configuration", false);
+  private _toolbarConfiguration = new AwsUserSettings.ToolbarConfigurationPropertyList(this, "toolbar_configuration", false);
   public get toolbarConfiguration() {
     return this._toolbarConfiguration;
   }
-  public putToolbarConfiguration(value: TfUserSettings.ToolbarConfigurationProperty[] | cdktn.IResolvable) {
+  public putToolbarConfiguration(value: AwsUserSettings.ToolbarConfigurationProperty[] | cdktn.IResolvable) {
     this._toolbarConfiguration.internalValue = value;
   }
   public resetToolbarConfiguration() {
@@ -384,8 +384,8 @@ export class TfUserSettings extends cdktn.TerraformResource {
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       upload_allowed: cdktn.stringToTerraform(this._uploadAllowed),
-      cookie_synchronization_configuration: cdktn.listMapper(tfUserSettingsCookieSynchronizationConfigurationPropertyToTerraform, true)(this._cookieSynchronizationConfiguration.internalValue),
-      toolbar_configuration: cdktn.listMapper(tfUserSettingsToolbarConfigurationPropertyToTerraform, true)(this._toolbarConfiguration.internalValue),
+      cookie_synchronization_configuration: cdktn.listMapper(awsUserSettingsCookieSynchronizationConfigurationPropertyToTerraform, true)(this._cookieSynchronizationConfiguration.internalValue),
+      toolbar_configuration: cdktn.listMapper(awsUserSettingsToolbarConfigurationPropertyToTerraform, true)(this._toolbarConfiguration.internalValue),
     };
   }
 
@@ -464,16 +464,16 @@ export class TfUserSettings extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       cookie_synchronization_configuration: {
-        value: cdktn.listMapperHcl(tfUserSettingsCookieSynchronizationConfigurationPropertyToHclTerraform, true)(this._cookieSynchronizationConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsUserSettingsCookieSynchronizationConfigurationPropertyToHclTerraform, true)(this._cookieSynchronizationConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserSettings.CookieSynchronizationConfigurationPropertyList",
+        storageClassType: "AwsUserSettings.CookieSynchronizationConfigurationPropertyList",
       },
       toolbar_configuration: {
-        value: cdktn.listMapperHcl(tfUserSettingsToolbarConfigurationPropertyToHclTerraform, true)(this._toolbarConfiguration.internalValue),
+        value: cdktn.listMapperHcl(awsUserSettingsToolbarConfigurationPropertyToHclTerraform, true)(this._toolbarConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfUserSettings.ToolbarConfigurationPropertyList",
+        storageClassType: "AwsUserSettings.ToolbarConfigurationPropertyList",
       },
     };
 
@@ -482,7 +482,7 @@ export class TfUserSettings extends cdktn.TerraformResource {
   }
 }
 
-export function tfUserSettingsAllowlistPropertyToTerraform(struct?: TfUserSettings.AllowlistProperty | cdktn.IResolvable): any {
+export function awsUserSettingsAllowlistPropertyToTerraform(struct?: AwsUserSettings.AllowlistProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -495,7 +495,7 @@ export function tfUserSettingsAllowlistPropertyToTerraform(struct?: TfUserSettin
 }
 
 
-export function tfUserSettingsAllowlistPropertyToHclTerraform(struct?: TfUserSettings.AllowlistProperty | cdktn.IResolvable): any {
+export function awsUserSettingsAllowlistPropertyToHclTerraform(struct?: AwsUserSettings.AllowlistProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -526,7 +526,7 @@ export function tfUserSettingsAllowlistPropertyToHclTerraform(struct?: TfUserSet
 }
 
 
-export function tfUserSettingsBlocklistPropertyToTerraform(struct?: TfUserSettings.BlocklistProperty | cdktn.IResolvable): any {
+export function awsUserSettingsBlocklistPropertyToTerraform(struct?: AwsUserSettings.BlocklistProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -539,7 +539,7 @@ export function tfUserSettingsBlocklistPropertyToTerraform(struct?: TfUserSettin
 }
 
 
-export function tfUserSettingsBlocklistPropertyToHclTerraform(struct?: TfUserSettings.BlocklistProperty | cdktn.IResolvable): any {
+export function awsUserSettingsBlocklistPropertyToHclTerraform(struct?: AwsUserSettings.BlocklistProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -570,32 +570,32 @@ export function tfUserSettingsBlocklistPropertyToHclTerraform(struct?: TfUserSet
 }
 
 
-export function tfUserSettingsCookieSynchronizationConfigurationPropertyToTerraform(struct?: TfUserSettings.CookieSynchronizationConfigurationProperty | cdktn.IResolvable): any {
+export function awsUserSettingsCookieSynchronizationConfigurationPropertyToTerraform(struct?: AwsUserSettings.CookieSynchronizationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    allowlist: cdktn.listMapper(tfUserSettingsAllowlistPropertyToTerraform, true)(struct!.allowlist),
-    blocklist: cdktn.listMapper(tfUserSettingsBlocklistPropertyToTerraform, true)(struct!.blocklist),
+    allowlist: cdktn.listMapper(awsUserSettingsAllowlistPropertyToTerraform, true)(struct!.allowlist),
+    blocklist: cdktn.listMapper(awsUserSettingsBlocklistPropertyToTerraform, true)(struct!.blocklist),
   }
 }
 
 
-export function tfUserSettingsCookieSynchronizationConfigurationPropertyToHclTerraform(struct?: TfUserSettings.CookieSynchronizationConfigurationProperty | cdktn.IResolvable): any {
+export function awsUserSettingsCookieSynchronizationConfigurationPropertyToHclTerraform(struct?: AwsUserSettings.CookieSynchronizationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     allowlist: {
-      value: cdktn.listMapperHcl(tfUserSettingsAllowlistPropertyToHclTerraform, true)(struct!.allowlist),
+      value: cdktn.listMapperHcl(awsUserSettingsAllowlistPropertyToHclTerraform, true)(struct!.allowlist),
       isBlock: true,
       type: "list",
       storageClassType: "AllowlistPropertyList",
     },
     blocklist: {
-      value: cdktn.listMapperHcl(tfUserSettingsBlocklistPropertyToHclTerraform, true)(struct!.blocklist),
+      value: cdktn.listMapperHcl(awsUserSettingsBlocklistPropertyToHclTerraform, true)(struct!.blocklist),
       isBlock: true,
       type: "list",
       storageClassType: "BlocklistPropertyList",
@@ -607,7 +607,7 @@ export function tfUserSettingsCookieSynchronizationConfigurationPropertyToHclTer
 }
 
 
-export function tfUserSettingsToolbarConfigurationPropertyToTerraform(struct?: TfUserSettings.ToolbarConfigurationProperty | cdktn.IResolvable): any {
+export function awsUserSettingsToolbarConfigurationPropertyToTerraform(struct?: AwsUserSettings.ToolbarConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -621,7 +621,7 @@ export function tfUserSettingsToolbarConfigurationPropertyToTerraform(struct?: T
 }
 
 
-export function tfUserSettingsToolbarConfigurationPropertyToHclTerraform(struct?: TfUserSettings.ToolbarConfigurationProperty | cdktn.IResolvable): any {
+export function awsUserSettingsToolbarConfigurationPropertyToHclTerraform(struct?: AwsUserSettings.ToolbarConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -658,18 +658,18 @@ export function tfUserSettingsToolbarConfigurationPropertyToHclTerraform(struct?
 }
 
 
-export namespace TfUserSettings {
+export namespace AwsUserSettings {
 export interface AllowlistProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#domain TfUserSettings#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#domain AwsUserSettings#domain}
   */
   readonly domain: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#name TfUserSettings#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#name AwsUserSettings#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#path TfUserSettings#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#path AwsUserSettings#path}
   */
   readonly path?: string;
 }
@@ -796,15 +796,15 @@ export class AllowlistPropertyList extends cdktn.ComplexList {
 }
 export interface BlocklistProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#domain TfUserSettings#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#domain AwsUserSettings#domain}
   */
   readonly domain: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#name TfUserSettings#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#name AwsUserSettings#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#path TfUserSettings#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#path AwsUserSettings#path}
   */
   readonly path?: string;
 }
@@ -933,13 +933,13 @@ export interface CookieSynchronizationConfigurationProperty {
   /**
   * allowlist block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#allowlist TfUserSettings#allowlist}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#allowlist AwsUserSettings#allowlist}
   */
   readonly allowlist?: AllowlistProperty[] | cdktn.IResolvable;
   /**
   * blocklist block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#blocklist TfUserSettings#blocklist}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#blocklist AwsUserSettings#blocklist}
   */
   readonly blocklist?: BlocklistProperty[] | cdktn.IResolvable;
 }
@@ -1047,19 +1047,19 @@ export class CookieSynchronizationConfigurationPropertyList extends cdktn.Comple
 }
 export interface ToolbarConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#hidden_toolbar_items TfUserSettings#hidden_toolbar_items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#hidden_toolbar_items AwsUserSettings#hidden_toolbar_items}
   */
   readonly hiddenToolbarItems?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#max_display_resolution TfUserSettings#max_display_resolution}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#max_display_resolution AwsUserSettings#max_display_resolution}
   */
   readonly maxDisplayResolution?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#toolbar_type TfUserSettings#toolbar_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#toolbar_type AwsUserSettings#toolbar_type}
   */
   readonly toolbarType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#visual_mode TfUserSettings#visual_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/workspacesweb_user_settings#visual_mode AwsUserSettings#visual_mode}
   */
   readonly visualMode?: string;
 }

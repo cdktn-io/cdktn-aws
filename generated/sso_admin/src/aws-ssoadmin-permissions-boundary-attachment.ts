@@ -5,46 +5,46 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPermissionsBoundaryAttachmentConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPermissionsBoundaryAttachmentConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#id TfPermissionsBoundaryAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#id AwsPermissionsBoundaryAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#instance_arn TfPermissionsBoundaryAttachment#instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#instance_arn AwsPermissionsBoundaryAttachment#instance_arn}
   */
   readonly instanceArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#permission_set_arn TfPermissionsBoundaryAttachment#permission_set_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#permission_set_arn AwsPermissionsBoundaryAttachment#permission_set_arn}
   */
   readonly permissionSetArn: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#region TfPermissionsBoundaryAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#region AwsPermissionsBoundaryAttachment#region}
   */
   readonly region?: string;
   /**
   * permissions_boundary block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#permissions_boundary TfPermissionsBoundaryAttachment#permissions_boundary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#permissions_boundary AwsPermissionsBoundaryAttachment#permissions_boundary}
   */
-  readonly permissionsBoundary: TfPermissionsBoundaryAttachment.PermissionsBoundaryProperty;
+  readonly permissionsBoundary: AwsPermissionsBoundaryAttachment.PermissionsBoundaryProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#timeouts TfPermissionsBoundaryAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#timeouts AwsPermissionsBoundaryAttachment#timeouts}
   */
-  readonly timeouts?: TfPermissionsBoundaryAttachment.TimeoutsProperty;
+  readonly timeouts?: AwsPermissionsBoundaryAttachment.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment aws_ssoadmin_permissions_boundary_attachment}
 */
-export class TfPermissionsBoundaryAttachment extends cdktn.TerraformResource {
+export class AwsPermissionsBoundaryAttachment extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfPermissionsBoundaryAttachment extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPermissionsBoundaryAttachment resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPermissionsBoundaryAttachment resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPermissionsBoundaryAttachment to import
-  * @param importFromId The id of the existing TfPermissionsBoundaryAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPermissionsBoundaryAttachment to import is found
+  * @param importToId The construct id used in the generated config for the AwsPermissionsBoundaryAttachment to import
+  * @param importFromId The id of the existing AwsPermissionsBoundaryAttachment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPermissionsBoundaryAttachment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssoadmin_permissions_boundary_attachment", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfPermissionsBoundaryAttachment extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPermissionsBoundaryAttachmentConfig
+  * @param options AwsPermissionsBoundaryAttachmentConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPermissionsBoundaryAttachmentConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPermissionsBoundaryAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ssoadmin_permissions_boundary_attachment',
       terraformGeneratorMetadata: {
@@ -163,11 +163,11 @@ export class TfPermissionsBoundaryAttachment extends cdktn.TerraformResource {
   }
 
   // permissions_boundary - computed: false, optional: false, required: true
-  private _permissionsBoundary = new TfPermissionsBoundaryAttachment.PermissionsBoundaryPropertyOutputReference(this, "permissions_boundary");
+  private _permissionsBoundary = new AwsPermissionsBoundaryAttachment.PermissionsBoundaryPropertyOutputReference(this, "permissions_boundary");
   public get permissionsBoundary() {
     return this._permissionsBoundary;
   }
-  public putPermissionsBoundary(value: TfPermissionsBoundaryAttachment.PermissionsBoundaryProperty) {
+  public putPermissionsBoundary(value: AwsPermissionsBoundaryAttachment.PermissionsBoundaryProperty) {
     this._permissionsBoundary.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -176,11 +176,11 @@ export class TfPermissionsBoundaryAttachment extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfPermissionsBoundaryAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsPermissionsBoundaryAttachment.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfPermissionsBoundaryAttachment.TimeoutsProperty) {
+  public putTimeouts(value: AwsPermissionsBoundaryAttachment.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -201,8 +201,8 @@ export class TfPermissionsBoundaryAttachment extends cdktn.TerraformResource {
       instance_arn: cdktn.stringToTerraform(this._instanceArn),
       permission_set_arn: cdktn.stringToTerraform(this._permissionSetArn),
       region: cdktn.stringToTerraform(this._region),
-      permissions_boundary: tfPermissionsBoundaryAttachmentPermissionsBoundaryPropertyToTerraform(this._permissionsBoundary.internalValue),
-      timeouts: tfPermissionsBoundaryAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      permissions_boundary: awsPermissionsBoundaryAttachmentPermissionsBoundaryPropertyToTerraform(this._permissionsBoundary.internalValue),
+      timeouts: awsPermissionsBoundaryAttachmentTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -233,16 +233,16 @@ export class TfPermissionsBoundaryAttachment extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       permissions_boundary: {
-        value: tfPermissionsBoundaryAttachmentPermissionsBoundaryPropertyToHclTerraform(this._permissionsBoundary.internalValue),
+        value: awsPermissionsBoundaryAttachmentPermissionsBoundaryPropertyToHclTerraform(this._permissionsBoundary.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPermissionsBoundaryAttachment.PermissionsBoundaryPropertyList",
+        storageClassType: "AwsPermissionsBoundaryAttachment.PermissionsBoundaryPropertyList",
       },
       timeouts: {
-        value: tfPermissionsBoundaryAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsPermissionsBoundaryAttachmentTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfPermissionsBoundaryAttachment.TimeoutsProperty",
+        storageClassType: "AwsPermissionsBoundaryAttachment.TimeoutsProperty",
       },
     };
 
@@ -251,7 +251,7 @@ export class TfPermissionsBoundaryAttachment extends cdktn.TerraformResource {
   }
 }
 
-export function tfPermissionsBoundaryAttachmentCustomerManagedPolicyReferencePropertyToTerraform(struct?: TfPermissionsBoundaryAttachment.CustomerManagedPolicyReferencePropertyOutputReference | TfPermissionsBoundaryAttachment.CustomerManagedPolicyReferenceProperty): any {
+export function awsPermissionsBoundaryAttachmentCustomerManagedPolicyReferencePropertyToTerraform(struct?: AwsPermissionsBoundaryAttachment.CustomerManagedPolicyReferencePropertyOutputReference | AwsPermissionsBoundaryAttachment.CustomerManagedPolicyReferenceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -263,7 +263,7 @@ export function tfPermissionsBoundaryAttachmentCustomerManagedPolicyReferencePro
 }
 
 
-export function tfPermissionsBoundaryAttachmentCustomerManagedPolicyReferencePropertyToHclTerraform(struct?: TfPermissionsBoundaryAttachment.CustomerManagedPolicyReferencePropertyOutputReference | TfPermissionsBoundaryAttachment.CustomerManagedPolicyReferenceProperty): any {
+export function awsPermissionsBoundaryAttachmentCustomerManagedPolicyReferencePropertyToHclTerraform(struct?: AwsPermissionsBoundaryAttachment.CustomerManagedPolicyReferencePropertyOutputReference | AwsPermissionsBoundaryAttachment.CustomerManagedPolicyReferenceProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -288,19 +288,19 @@ export function tfPermissionsBoundaryAttachmentCustomerManagedPolicyReferencePro
 }
 
 
-export function tfPermissionsBoundaryAttachmentPermissionsBoundaryPropertyToTerraform(struct?: TfPermissionsBoundaryAttachment.PermissionsBoundaryPropertyOutputReference | TfPermissionsBoundaryAttachment.PermissionsBoundaryProperty): any {
+export function awsPermissionsBoundaryAttachmentPermissionsBoundaryPropertyToTerraform(struct?: AwsPermissionsBoundaryAttachment.PermissionsBoundaryPropertyOutputReference | AwsPermissionsBoundaryAttachment.PermissionsBoundaryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     managed_policy_arn: cdktn.stringToTerraform(struct!.managedPolicyArn),
-    customer_managed_policy_reference: tfPermissionsBoundaryAttachmentCustomerManagedPolicyReferencePropertyToTerraform(struct!.customerManagedPolicyReference),
+    customer_managed_policy_reference: awsPermissionsBoundaryAttachmentCustomerManagedPolicyReferencePropertyToTerraform(struct!.customerManagedPolicyReference),
   }
 }
 
 
-export function tfPermissionsBoundaryAttachmentPermissionsBoundaryPropertyToHclTerraform(struct?: TfPermissionsBoundaryAttachment.PermissionsBoundaryPropertyOutputReference | TfPermissionsBoundaryAttachment.PermissionsBoundaryProperty): any {
+export function awsPermissionsBoundaryAttachmentPermissionsBoundaryPropertyToHclTerraform(struct?: AwsPermissionsBoundaryAttachment.PermissionsBoundaryPropertyOutputReference | AwsPermissionsBoundaryAttachment.PermissionsBoundaryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -313,7 +313,7 @@ export function tfPermissionsBoundaryAttachmentPermissionsBoundaryPropertyToHclT
       storageClassType: "string",
     },
     customer_managed_policy_reference: {
-      value: tfPermissionsBoundaryAttachmentCustomerManagedPolicyReferencePropertyToHclTerraform(struct!.customerManagedPolicyReference),
+      value: awsPermissionsBoundaryAttachmentCustomerManagedPolicyReferencePropertyToHclTerraform(struct!.customerManagedPolicyReference),
       isBlock: true,
       type: "list",
       storageClassType: "CustomerManagedPolicyReferencePropertyList",
@@ -325,7 +325,7 @@ export function tfPermissionsBoundaryAttachmentPermissionsBoundaryPropertyToHclT
 }
 
 
-export function tfPermissionsBoundaryAttachmentTimeoutsPropertyToTerraform(struct?: TfPermissionsBoundaryAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPermissionsBoundaryAttachmentTimeoutsPropertyToTerraform(struct?: AwsPermissionsBoundaryAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -337,7 +337,7 @@ export function tfPermissionsBoundaryAttachmentTimeoutsPropertyToTerraform(struc
 }
 
 
-export function tfPermissionsBoundaryAttachmentTimeoutsPropertyToHclTerraform(struct?: TfPermissionsBoundaryAttachment.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPermissionsBoundaryAttachmentTimeoutsPropertyToHclTerraform(struct?: AwsPermissionsBoundaryAttachment.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -362,14 +362,14 @@ export function tfPermissionsBoundaryAttachmentTimeoutsPropertyToHclTerraform(st
 }
 
 
-export namespace TfPermissionsBoundaryAttachment {
+export namespace AwsPermissionsBoundaryAttachment {
 export interface CustomerManagedPolicyReferenceProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#name TfPermissionsBoundaryAttachment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#name AwsPermissionsBoundaryAttachment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#path TfPermissionsBoundaryAttachment#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#path AwsPermissionsBoundaryAttachment#path}
   */
   readonly path?: string;
 }
@@ -442,13 +442,13 @@ export class CustomerManagedPolicyReferencePropertyOutputReference extends cdktn
 }
 export interface PermissionsBoundaryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#managed_policy_arn TfPermissionsBoundaryAttachment#managed_policy_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#managed_policy_arn AwsPermissionsBoundaryAttachment#managed_policy_arn}
   */
   readonly managedPolicyArn?: string;
   /**
   * customer_managed_policy_reference block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#customer_managed_policy_reference TfPermissionsBoundaryAttachment#customer_managed_policy_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#customer_managed_policy_reference AwsPermissionsBoundaryAttachment#customer_managed_policy_reference}
   */
   readonly customerManagedPolicyReference?: CustomerManagedPolicyReferenceProperty;
 }
@@ -524,11 +524,11 @@ export class PermissionsBoundaryPropertyOutputReference extends cdktn.ComplexObj
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#create TfPermissionsBoundaryAttachment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#create AwsPermissionsBoundaryAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#delete TfPermissionsBoundaryAttachment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ssoadmin_permissions_boundary_attachment#delete AwsPermissionsBoundaryAttachment#delete}
   */
   readonly delete?: string;
 }

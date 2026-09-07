@@ -5,48 +5,48 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSourceRepositoryConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSourceRepositoryConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#description TfSourceRepository#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#description AwsSourceRepository#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#id TfSourceRepository#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#id AwsSourceRepository#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#name TfSourceRepository#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#name AwsSourceRepository#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#project_name TfSourceRepository#project_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#project_name AwsSourceRepository#project_name}
   */
   readonly projectName: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#region TfSourceRepository#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#region AwsSourceRepository#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#space_name TfSourceRepository#space_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#space_name AwsSourceRepository#space_name}
   */
   readonly spaceName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#timeouts TfSourceRepository#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#timeouts AwsSourceRepository#timeouts}
   */
-  readonly timeouts?: TfSourceRepository.TimeoutsProperty;
+  readonly timeouts?: AwsSourceRepository.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository aws_codecatalyst_source_repository}
 */
-export class TfSourceRepository extends cdktn.TerraformResource {
+export class AwsSourceRepository extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -57,11 +57,11 @@ export class TfSourceRepository extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSourceRepository resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSourceRepository resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSourceRepository to import
-  * @param importFromId The id of the existing TfSourceRepository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSourceRepository to import is found
+  * @param importToId The construct id used in the generated config for the AwsSourceRepository to import
+  * @param importFromId The id of the existing AwsSourceRepository that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSourceRepository to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_codecatalyst_source_repository", importId: importFromId, provider });
@@ -76,9 +76,9 @@ export class TfSourceRepository extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSourceRepositoryConfig
+  * @param options AwsSourceRepositoryConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSourceRepositoryConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSourceRepositoryConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_codecatalyst_source_repository',
       terraformGeneratorMetadata: {
@@ -195,11 +195,11 @@ export class TfSourceRepository extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfSourceRepository.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsSourceRepository.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfSourceRepository.TimeoutsProperty) {
+  public putTimeouts(value: AwsSourceRepository.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -222,7 +222,7 @@ export class TfSourceRepository extends cdktn.TerraformResource {
       project_name: cdktn.stringToTerraform(this._projectName),
       region: cdktn.stringToTerraform(this._region),
       space_name: cdktn.stringToTerraform(this._spaceName),
-      timeouts: tfSourceRepositoryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      timeouts: awsSourceRepositoryTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -265,10 +265,10 @@ export class TfSourceRepository extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       timeouts: {
-        value: tfSourceRepositoryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsSourceRepositoryTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfSourceRepository.TimeoutsProperty",
+        storageClassType: "AwsSourceRepository.TimeoutsProperty",
       },
     };
 
@@ -277,7 +277,7 @@ export class TfSourceRepository extends cdktn.TerraformResource {
   }
 }
 
-export function tfSourceRepositoryTimeoutsPropertyToTerraform(struct?: TfSourceRepository.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSourceRepositoryTimeoutsPropertyToTerraform(struct?: AwsSourceRepository.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -290,7 +290,7 @@ export function tfSourceRepositoryTimeoutsPropertyToTerraform(struct?: TfSourceR
 }
 
 
-export function tfSourceRepositoryTimeoutsPropertyToHclTerraform(struct?: TfSourceRepository.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsSourceRepositoryTimeoutsPropertyToHclTerraform(struct?: AwsSourceRepository.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -321,18 +321,18 @@ export function tfSourceRepositoryTimeoutsPropertyToHclTerraform(struct?: TfSour
 }
 
 
-export namespace TfSourceRepository {
+export namespace AwsSourceRepository {
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#create TfSourceRepository#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#create AwsSourceRepository#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#delete TfSourceRepository#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#delete AwsSourceRepository#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#update TfSourceRepository#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/codecatalyst_source_repository#update AwsSourceRepository#update}
   */
   readonly update?: string;
 }

@@ -45,7 +45,7 @@ if (missing.length > 0) {
 // through one of them — the same copy the compiled lib/ was type-checked and linked against.
 const cdktn = require(path.join(repoRoot, "generated", "provider", "node_modules", "cdktn"));
 const { AwsProvider } = require(path.join(repoRoot, "generated", "provider", "lib"));
-const { TfLb, TfAlb } = require(path.join(repoRoot, "generated", "elb", "lib"));
+const { AwsLb, AwsAlb } = require(path.join(repoRoot, "generated", "elb", "lib"));
 
 const outdir = mkdtempSync(path.join(os.tmpdir(), "cdktn-aws-synth-"));
 
@@ -53,9 +53,9 @@ class SmokeStack extends cdktn.TerraformStack {
   constructor(scope, id) {
     super(scope, id);
     new AwsProvider(this, "aws", { region: "eu-west-1" });
-    new TfLb(this, "lb", { name: "smoke-lb", internal: true });
+    new AwsLb(this, "lb", { name: "smoke-lb", internal: true });
     // the alias type, generated as its own class in the same group
-    new TfAlb(this, "alb", { name: "smoke-alb" });
+    new AwsAlb(this, "alb", { name: "smoke-alb" });
   }
 }
 

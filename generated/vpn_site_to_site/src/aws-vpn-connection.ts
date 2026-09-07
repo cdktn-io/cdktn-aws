@@ -5,262 +5,262 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfConnectionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsConnectionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#customer_gateway_id TfConnection#customer_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#customer_gateway_id AwsConnection#customer_gateway_id}
   */
   readonly customerGatewayId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#enable_acceleration TfConnection#enable_acceleration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#enable_acceleration AwsConnection#enable_acceleration}
   */
   readonly enableAcceleration?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#id TfConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#id AwsConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#local_ipv4_network_cidr TfConnection#local_ipv4_network_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#local_ipv4_network_cidr AwsConnection#local_ipv4_network_cidr}
   */
   readonly localIpv4NetworkCidr?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#local_ipv6_network_cidr TfConnection#local_ipv6_network_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#local_ipv6_network_cidr AwsConnection#local_ipv6_network_cidr}
   */
   readonly localIpv6NetworkCidr?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#outside_ip_address_type TfConnection#outside_ip_address_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#outside_ip_address_type AwsConnection#outside_ip_address_type}
   */
   readonly outsideIpAddressType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#preshared_key_storage TfConnection#preshared_key_storage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#preshared_key_storage AwsConnection#preshared_key_storage}
   */
   readonly presharedKeyStorage?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#region TfConnection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#region AwsConnection#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#remote_ipv4_network_cidr TfConnection#remote_ipv4_network_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#remote_ipv4_network_cidr AwsConnection#remote_ipv4_network_cidr}
   */
   readonly remoteIpv4NetworkCidr?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#remote_ipv6_network_cidr TfConnection#remote_ipv6_network_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#remote_ipv6_network_cidr AwsConnection#remote_ipv6_network_cidr}
   */
   readonly remoteIpv6NetworkCidr?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#static_routes_only TfConnection#static_routes_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#static_routes_only AwsConnection#static_routes_only}
   */
   readonly staticRoutesOnly?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tags TfConnection#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tags AwsConnection#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tags_all TfConnection#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tags_all AwsConnection#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#transit_gateway_id TfConnection#transit_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#transit_gateway_id AwsConnection#transit_gateway_id}
   */
   readonly transitGatewayId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#transport_transit_gateway_attachment_id TfConnection#transport_transit_gateway_attachment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#transport_transit_gateway_attachment_id AwsConnection#transport_transit_gateway_attachment_id}
   */
   readonly transportTransitGatewayAttachmentId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_dpd_timeout_action TfConnection#tunnel1_dpd_timeout_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_dpd_timeout_action AwsConnection#tunnel1_dpd_timeout_action}
   */
   readonly tunnel1DpdTimeoutAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_dpd_timeout_seconds TfConnection#tunnel1_dpd_timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_dpd_timeout_seconds AwsConnection#tunnel1_dpd_timeout_seconds}
   */
   readonly tunnel1DpdTimeoutSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_enable_tunnel_lifecycle_control TfConnection#tunnel1_enable_tunnel_lifecycle_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_enable_tunnel_lifecycle_control AwsConnection#tunnel1_enable_tunnel_lifecycle_control}
   */
   readonly tunnel1EnableTunnelLifecycleControl?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_ike_versions TfConnection#tunnel1_ike_versions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_ike_versions AwsConnection#tunnel1_ike_versions}
   */
   readonly tunnel1IkeVersions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_inside_cidr TfConnection#tunnel1_inside_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_inside_cidr AwsConnection#tunnel1_inside_cidr}
   */
   readonly tunnel1InsideCidr?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_inside_ipv6_cidr TfConnection#tunnel1_inside_ipv6_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_inside_ipv6_cidr AwsConnection#tunnel1_inside_ipv6_cidr}
   */
   readonly tunnel1InsideIpv6Cidr?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_phase1_dh_group_numbers TfConnection#tunnel1_phase1_dh_group_numbers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_phase1_dh_group_numbers AwsConnection#tunnel1_phase1_dh_group_numbers}
   */
   readonly tunnel1Phase1DhGroupNumbers?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_phase1_encryption_algorithms TfConnection#tunnel1_phase1_encryption_algorithms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_phase1_encryption_algorithms AwsConnection#tunnel1_phase1_encryption_algorithms}
   */
   readonly tunnel1Phase1EncryptionAlgorithms?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_phase1_integrity_algorithms TfConnection#tunnel1_phase1_integrity_algorithms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_phase1_integrity_algorithms AwsConnection#tunnel1_phase1_integrity_algorithms}
   */
   readonly tunnel1Phase1IntegrityAlgorithms?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_phase1_lifetime_seconds TfConnection#tunnel1_phase1_lifetime_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_phase1_lifetime_seconds AwsConnection#tunnel1_phase1_lifetime_seconds}
   */
   readonly tunnel1Phase1LifetimeSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_phase2_dh_group_numbers TfConnection#tunnel1_phase2_dh_group_numbers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_phase2_dh_group_numbers AwsConnection#tunnel1_phase2_dh_group_numbers}
   */
   readonly tunnel1Phase2DhGroupNumbers?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_phase2_encryption_algorithms TfConnection#tunnel1_phase2_encryption_algorithms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_phase2_encryption_algorithms AwsConnection#tunnel1_phase2_encryption_algorithms}
   */
   readonly tunnel1Phase2EncryptionAlgorithms?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_phase2_integrity_algorithms TfConnection#tunnel1_phase2_integrity_algorithms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_phase2_integrity_algorithms AwsConnection#tunnel1_phase2_integrity_algorithms}
   */
   readonly tunnel1Phase2IntegrityAlgorithms?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_phase2_lifetime_seconds TfConnection#tunnel1_phase2_lifetime_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_phase2_lifetime_seconds AwsConnection#tunnel1_phase2_lifetime_seconds}
   */
   readonly tunnel1Phase2LifetimeSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_preshared_key TfConnection#tunnel1_preshared_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_preshared_key AwsConnection#tunnel1_preshared_key}
   */
   readonly tunnel1PresharedKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_rekey_fuzz_percentage TfConnection#tunnel1_rekey_fuzz_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_rekey_fuzz_percentage AwsConnection#tunnel1_rekey_fuzz_percentage}
   */
   readonly tunnel1RekeyFuzzPercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_rekey_margin_time_seconds TfConnection#tunnel1_rekey_margin_time_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_rekey_margin_time_seconds AwsConnection#tunnel1_rekey_margin_time_seconds}
   */
   readonly tunnel1RekeyMarginTimeSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_replay_window_size TfConnection#tunnel1_replay_window_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_replay_window_size AwsConnection#tunnel1_replay_window_size}
   */
   readonly tunnel1ReplayWindowSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_startup_action TfConnection#tunnel1_startup_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_startup_action AwsConnection#tunnel1_startup_action}
   */
   readonly tunnel1StartupAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_dpd_timeout_action TfConnection#tunnel2_dpd_timeout_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_dpd_timeout_action AwsConnection#tunnel2_dpd_timeout_action}
   */
   readonly tunnel2DpdTimeoutAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_dpd_timeout_seconds TfConnection#tunnel2_dpd_timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_dpd_timeout_seconds AwsConnection#tunnel2_dpd_timeout_seconds}
   */
   readonly tunnel2DpdTimeoutSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_enable_tunnel_lifecycle_control TfConnection#tunnel2_enable_tunnel_lifecycle_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_enable_tunnel_lifecycle_control AwsConnection#tunnel2_enable_tunnel_lifecycle_control}
   */
   readonly tunnel2EnableTunnelLifecycleControl?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_ike_versions TfConnection#tunnel2_ike_versions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_ike_versions AwsConnection#tunnel2_ike_versions}
   */
   readonly tunnel2IkeVersions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_inside_cidr TfConnection#tunnel2_inside_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_inside_cidr AwsConnection#tunnel2_inside_cidr}
   */
   readonly tunnel2InsideCidr?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_inside_ipv6_cidr TfConnection#tunnel2_inside_ipv6_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_inside_ipv6_cidr AwsConnection#tunnel2_inside_ipv6_cidr}
   */
   readonly tunnel2InsideIpv6Cidr?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_phase1_dh_group_numbers TfConnection#tunnel2_phase1_dh_group_numbers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_phase1_dh_group_numbers AwsConnection#tunnel2_phase1_dh_group_numbers}
   */
   readonly tunnel2Phase1DhGroupNumbers?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_phase1_encryption_algorithms TfConnection#tunnel2_phase1_encryption_algorithms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_phase1_encryption_algorithms AwsConnection#tunnel2_phase1_encryption_algorithms}
   */
   readonly tunnel2Phase1EncryptionAlgorithms?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_phase1_integrity_algorithms TfConnection#tunnel2_phase1_integrity_algorithms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_phase1_integrity_algorithms AwsConnection#tunnel2_phase1_integrity_algorithms}
   */
   readonly tunnel2Phase1IntegrityAlgorithms?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_phase1_lifetime_seconds TfConnection#tunnel2_phase1_lifetime_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_phase1_lifetime_seconds AwsConnection#tunnel2_phase1_lifetime_seconds}
   */
   readonly tunnel2Phase1LifetimeSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_phase2_dh_group_numbers TfConnection#tunnel2_phase2_dh_group_numbers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_phase2_dh_group_numbers AwsConnection#tunnel2_phase2_dh_group_numbers}
   */
   readonly tunnel2Phase2DhGroupNumbers?: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_phase2_encryption_algorithms TfConnection#tunnel2_phase2_encryption_algorithms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_phase2_encryption_algorithms AwsConnection#tunnel2_phase2_encryption_algorithms}
   */
   readonly tunnel2Phase2EncryptionAlgorithms?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_phase2_integrity_algorithms TfConnection#tunnel2_phase2_integrity_algorithms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_phase2_integrity_algorithms AwsConnection#tunnel2_phase2_integrity_algorithms}
   */
   readonly tunnel2Phase2IntegrityAlgorithms?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_phase2_lifetime_seconds TfConnection#tunnel2_phase2_lifetime_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_phase2_lifetime_seconds AwsConnection#tunnel2_phase2_lifetime_seconds}
   */
   readonly tunnel2Phase2LifetimeSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_preshared_key TfConnection#tunnel2_preshared_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_preshared_key AwsConnection#tunnel2_preshared_key}
   */
   readonly tunnel2PresharedKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_rekey_fuzz_percentage TfConnection#tunnel2_rekey_fuzz_percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_rekey_fuzz_percentage AwsConnection#tunnel2_rekey_fuzz_percentage}
   */
   readonly tunnel2RekeyFuzzPercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_rekey_margin_time_seconds TfConnection#tunnel2_rekey_margin_time_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_rekey_margin_time_seconds AwsConnection#tunnel2_rekey_margin_time_seconds}
   */
   readonly tunnel2RekeyMarginTimeSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_replay_window_size TfConnection#tunnel2_replay_window_size}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_replay_window_size AwsConnection#tunnel2_replay_window_size}
   */
   readonly tunnel2ReplayWindowSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_startup_action TfConnection#tunnel2_startup_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_startup_action AwsConnection#tunnel2_startup_action}
   */
   readonly tunnel2StartupAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel_bandwidth TfConnection#tunnel_bandwidth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel_bandwidth AwsConnection#tunnel_bandwidth}
   */
   readonly tunnelBandwidth?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel_inside_ip_version TfConnection#tunnel_inside_ip_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel_inside_ip_version AwsConnection#tunnel_inside_ip_version}
   */
   readonly tunnelInsideIpVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#type TfConnection#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#type AwsConnection#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#vpn_concentrator_id TfConnection#vpn_concentrator_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#vpn_concentrator_id AwsConnection#vpn_concentrator_id}
   */
   readonly vpnConcentratorId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#vpn_gateway_id TfConnection#vpn_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#vpn_gateway_id AwsConnection#vpn_gateway_id}
   */
   readonly vpnGatewayId?: string;
   /**
   * tunnel1_log_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_log_options TfConnection#tunnel1_log_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel1_log_options AwsConnection#tunnel1_log_options}
   */
-  readonly tunnel1LogOptions?: TfConnection.Tunnel1LogOptionsProperty;
+  readonly tunnel1LogOptions?: AwsConnection.Tunnel1LogOptionsProperty;
   /**
   * tunnel2_log_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_log_options TfConnection#tunnel2_log_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#tunnel2_log_options AwsConnection#tunnel2_log_options}
   */
-  readonly tunnel2LogOptions?: TfConnection.Tunnel2LogOptionsProperty;
+  readonly tunnel2LogOptions?: AwsConnection.Tunnel2LogOptionsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection aws_vpn_connection}
 */
-export class TfConnection extends cdktn.TerraformResource {
+export class AwsConnection extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -271,11 +271,11 @@ export class TfConnection extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfConnection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsConnection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfConnection to import
-  * @param importFromId The id of the existing TfConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfConnection to import is found
+  * @param importToId The construct id used in the generated config for the AwsConnection to import
+  * @param importFromId The id of the existing AwsConnection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsConnection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_vpn_connection", importId: importFromId, provider });
@@ -290,9 +290,9 @@ export class TfConnection extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfConnectionConfig
+  * @param options AwsConnectionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfConnectionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_vpn_connection',
       terraformGeneratorMetadata: {
@@ -557,7 +557,7 @@ export class TfConnection extends cdktn.TerraformResource {
   }
 
   // routes - computed: true, optional: false, required: false
-  private _routes = new TfConnection.RoutesPropertyList(this, "routes", true);
+  private _routes = new AwsConnection.RoutesPropertyList(this, "routes", true);
   public get routes() {
     return this._routes;
   }
@@ -1351,7 +1351,7 @@ export class TfConnection extends cdktn.TerraformResource {
   }
 
   // vgw_telemetry - computed: true, optional: false, required: false
-  private _vgwTelemetry = new TfConnection.VgwTelemetryPropertyList(this, "vgw_telemetry", true);
+  private _vgwTelemetry = new AwsConnection.VgwTelemetryPropertyList(this, "vgw_telemetry", true);
   public get vgwTelemetry() {
     return this._vgwTelemetry;
   }
@@ -1389,11 +1389,11 @@ export class TfConnection extends cdktn.TerraformResource {
   }
 
   // tunnel1_log_options - computed: false, optional: true, required: false
-  private _tunnel1LogOptions = new TfConnection.Tunnel1LogOptionsPropertyOutputReference(this, "tunnel1_log_options");
+  private _tunnel1LogOptions = new AwsConnection.Tunnel1LogOptionsPropertyOutputReference(this, "tunnel1_log_options");
   public get tunnel1LogOptions() {
     return this._tunnel1LogOptions;
   }
-  public putTunnel1LogOptions(value: TfConnection.Tunnel1LogOptionsProperty) {
+  public putTunnel1LogOptions(value: AwsConnection.Tunnel1LogOptionsProperty) {
     this._tunnel1LogOptions.internalValue = value;
   }
   public resetTunnel1LogOptions() {
@@ -1405,11 +1405,11 @@ export class TfConnection extends cdktn.TerraformResource {
   }
 
   // tunnel2_log_options - computed: false, optional: true, required: false
-  private _tunnel2LogOptions = new TfConnection.Tunnel2LogOptionsPropertyOutputReference(this, "tunnel2_log_options");
+  private _tunnel2LogOptions = new AwsConnection.Tunnel2LogOptionsPropertyOutputReference(this, "tunnel2_log_options");
   public get tunnel2LogOptions() {
     return this._tunnel2LogOptions;
   }
-  public putTunnel2LogOptions(value: TfConnection.Tunnel2LogOptionsProperty) {
+  public putTunnel2LogOptions(value: AwsConnection.Tunnel2LogOptionsProperty) {
     this._tunnel2LogOptions.internalValue = value;
   }
   public resetTunnel2LogOptions() {
@@ -1484,8 +1484,8 @@ export class TfConnection extends cdktn.TerraformResource {
       type: cdktn.stringToTerraform(this._type),
       vpn_concentrator_id: cdktn.stringToTerraform(this._vpnConcentratorId),
       vpn_gateway_id: cdktn.stringToTerraform(this._vpnGatewayId),
-      tunnel1_log_options: tfConnectionTunnel1LogOptionsPropertyToTerraform(this._tunnel1LogOptions.internalValue),
-      tunnel2_log_options: tfConnectionTunnel2LogOptionsPropertyToTerraform(this._tunnel2LogOptions.internalValue),
+      tunnel1_log_options: awsConnectionTunnel1LogOptionsPropertyToTerraform(this._tunnel1LogOptions.internalValue),
+      tunnel2_log_options: awsConnectionTunnel2LogOptionsPropertyToTerraform(this._tunnel2LogOptions.internalValue),
     };
   }
 
@@ -1840,16 +1840,16 @@ export class TfConnection extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       tunnel1_log_options: {
-        value: tfConnectionTunnel1LogOptionsPropertyToHclTerraform(this._tunnel1LogOptions.internalValue),
+        value: awsConnectionTunnel1LogOptionsPropertyToHclTerraform(this._tunnel1LogOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfConnection.Tunnel1LogOptionsPropertyList",
+        storageClassType: "AwsConnection.Tunnel1LogOptionsPropertyList",
       },
       tunnel2_log_options: {
-        value: tfConnectionTunnel2LogOptionsPropertyToHclTerraform(this._tunnel2LogOptions.internalValue),
+        value: awsConnectionTunnel2LogOptionsPropertyToHclTerraform(this._tunnel2LogOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfConnection.Tunnel2LogOptionsPropertyList",
+        storageClassType: "AwsConnection.Tunnel2LogOptionsPropertyList",
       },
     };
 
@@ -1858,7 +1858,7 @@ export class TfConnection extends cdktn.TerraformResource {
   }
 }
 
-export function tfConnectionRoutesPropertyToTerraform(struct?: TfConnection.RoutesProperty): any {
+export function awsConnectionRoutesPropertyToTerraform(struct?: AwsConnection.RoutesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1868,7 +1868,7 @@ export function tfConnectionRoutesPropertyToTerraform(struct?: TfConnection.Rout
 }
 
 
-export function tfConnectionRoutesPropertyToHclTerraform(struct?: TfConnection.RoutesProperty): any {
+export function awsConnectionRoutesPropertyToHclTerraform(struct?: AwsConnection.RoutesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1879,7 +1879,7 @@ export function tfConnectionRoutesPropertyToHclTerraform(struct?: TfConnection.R
 }
 
 
-export function tfConnectionVgwTelemetryPropertyToTerraform(struct?: TfConnection.VgwTelemetryProperty): any {
+export function awsConnectionVgwTelemetryPropertyToTerraform(struct?: AwsConnection.VgwTelemetryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1889,7 +1889,7 @@ export function tfConnectionVgwTelemetryPropertyToTerraform(struct?: TfConnectio
 }
 
 
-export function tfConnectionVgwTelemetryPropertyToHclTerraform(struct?: TfConnection.VgwTelemetryProperty): any {
+export function awsConnectionVgwTelemetryPropertyToHclTerraform(struct?: AwsConnection.VgwTelemetryProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1900,7 +1900,7 @@ export function tfConnectionVgwTelemetryPropertyToHclTerraform(struct?: TfConnec
 }
 
 
-export function tfConnectionTunnel1LogOptionsCloudwatchLogOptionsPropertyToTerraform(struct?: TfConnection.Tunnel1LogOptionsCloudwatchLogOptionsPropertyOutputReference | TfConnection.Tunnel1LogOptionsCloudwatchLogOptionsProperty): any {
+export function awsConnectionTunnel1LogOptionsCloudwatchLogOptionsPropertyToTerraform(struct?: AwsConnection.Tunnel1LogOptionsCloudwatchLogOptionsPropertyOutputReference | AwsConnection.Tunnel1LogOptionsCloudwatchLogOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1916,7 +1916,7 @@ export function tfConnectionTunnel1LogOptionsCloudwatchLogOptionsPropertyToTerra
 }
 
 
-export function tfConnectionTunnel1LogOptionsCloudwatchLogOptionsPropertyToHclTerraform(struct?: TfConnection.Tunnel1LogOptionsCloudwatchLogOptionsPropertyOutputReference | TfConnection.Tunnel1LogOptionsCloudwatchLogOptionsProperty): any {
+export function awsConnectionTunnel1LogOptionsCloudwatchLogOptionsPropertyToHclTerraform(struct?: AwsConnection.Tunnel1LogOptionsCloudwatchLogOptionsPropertyOutputReference | AwsConnection.Tunnel1LogOptionsCloudwatchLogOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -1965,25 +1965,25 @@ export function tfConnectionTunnel1LogOptionsCloudwatchLogOptionsPropertyToHclTe
 }
 
 
-export function tfConnectionTunnel1LogOptionsPropertyToTerraform(struct?: TfConnection.Tunnel1LogOptionsPropertyOutputReference | TfConnection.Tunnel1LogOptionsProperty): any {
+export function awsConnectionTunnel1LogOptionsPropertyToTerraform(struct?: AwsConnection.Tunnel1LogOptionsPropertyOutputReference | AwsConnection.Tunnel1LogOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cloudwatch_log_options: tfConnectionTunnel1LogOptionsCloudwatchLogOptionsPropertyToTerraform(struct!.cloudwatchLogOptions),
+    cloudwatch_log_options: awsConnectionTunnel1LogOptionsCloudwatchLogOptionsPropertyToTerraform(struct!.cloudwatchLogOptions),
   }
 }
 
 
-export function tfConnectionTunnel1LogOptionsPropertyToHclTerraform(struct?: TfConnection.Tunnel1LogOptionsPropertyOutputReference | TfConnection.Tunnel1LogOptionsProperty): any {
+export function awsConnectionTunnel1LogOptionsPropertyToHclTerraform(struct?: AwsConnection.Tunnel1LogOptionsPropertyOutputReference | AwsConnection.Tunnel1LogOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cloudwatch_log_options: {
-      value: tfConnectionTunnel1LogOptionsCloudwatchLogOptionsPropertyToHclTerraform(struct!.cloudwatchLogOptions),
+      value: awsConnectionTunnel1LogOptionsCloudwatchLogOptionsPropertyToHclTerraform(struct!.cloudwatchLogOptions),
       isBlock: true,
       type: "list",
       storageClassType: "Tunnel1LogOptionsCloudwatchLogOptionsPropertyList",
@@ -1995,7 +1995,7 @@ export function tfConnectionTunnel1LogOptionsPropertyToHclTerraform(struct?: TfC
 }
 
 
-export function tfConnectionTunnel2LogOptionsCloudwatchLogOptionsPropertyToTerraform(struct?: TfConnection.Tunnel2LogOptionsCloudwatchLogOptionsPropertyOutputReference | TfConnection.Tunnel2LogOptionsCloudwatchLogOptionsProperty): any {
+export function awsConnectionTunnel2LogOptionsCloudwatchLogOptionsPropertyToTerraform(struct?: AwsConnection.Tunnel2LogOptionsCloudwatchLogOptionsPropertyOutputReference | AwsConnection.Tunnel2LogOptionsCloudwatchLogOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2011,7 +2011,7 @@ export function tfConnectionTunnel2LogOptionsCloudwatchLogOptionsPropertyToTerra
 }
 
 
-export function tfConnectionTunnel2LogOptionsCloudwatchLogOptionsPropertyToHclTerraform(struct?: TfConnection.Tunnel2LogOptionsCloudwatchLogOptionsPropertyOutputReference | TfConnection.Tunnel2LogOptionsCloudwatchLogOptionsProperty): any {
+export function awsConnectionTunnel2LogOptionsCloudwatchLogOptionsPropertyToHclTerraform(struct?: AwsConnection.Tunnel2LogOptionsCloudwatchLogOptionsPropertyOutputReference | AwsConnection.Tunnel2LogOptionsCloudwatchLogOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -2060,25 +2060,25 @@ export function tfConnectionTunnel2LogOptionsCloudwatchLogOptionsPropertyToHclTe
 }
 
 
-export function tfConnectionTunnel2LogOptionsPropertyToTerraform(struct?: TfConnection.Tunnel2LogOptionsPropertyOutputReference | TfConnection.Tunnel2LogOptionsProperty): any {
+export function awsConnectionTunnel2LogOptionsPropertyToTerraform(struct?: AwsConnection.Tunnel2LogOptionsPropertyOutputReference | AwsConnection.Tunnel2LogOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    cloudwatch_log_options: tfConnectionTunnel2LogOptionsCloudwatchLogOptionsPropertyToTerraform(struct!.cloudwatchLogOptions),
+    cloudwatch_log_options: awsConnectionTunnel2LogOptionsCloudwatchLogOptionsPropertyToTerraform(struct!.cloudwatchLogOptions),
   }
 }
 
 
-export function tfConnectionTunnel2LogOptionsPropertyToHclTerraform(struct?: TfConnection.Tunnel2LogOptionsPropertyOutputReference | TfConnection.Tunnel2LogOptionsProperty): any {
+export function awsConnectionTunnel2LogOptionsPropertyToHclTerraform(struct?: AwsConnection.Tunnel2LogOptionsPropertyOutputReference | AwsConnection.Tunnel2LogOptionsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     cloudwatch_log_options: {
-      value: tfConnectionTunnel2LogOptionsCloudwatchLogOptionsPropertyToHclTerraform(struct!.cloudwatchLogOptions),
+      value: awsConnectionTunnel2LogOptionsCloudwatchLogOptionsPropertyToHclTerraform(struct!.cloudwatchLogOptions),
       isBlock: true,
       type: "list",
       storageClassType: "Tunnel2LogOptionsCloudwatchLogOptionsPropertyList",
@@ -2090,7 +2090,7 @@ export function tfConnectionTunnel2LogOptionsPropertyToHclTerraform(struct?: TfC
 }
 
 
-export namespace TfConnection {
+export namespace AwsConnection {
 export interface RoutesProperty {
 }
 export class RoutesPropertyOutputReference extends cdktn.ComplexObject {
@@ -2236,27 +2236,27 @@ export class VgwTelemetryPropertyList extends cdktn.ComplexList {
 }
 export interface Tunnel1LogOptionsCloudwatchLogOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#bgp_log_enabled TfConnection#bgp_log_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#bgp_log_enabled AwsConnection#bgp_log_enabled}
   */
   readonly bgpLogEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#bgp_log_group_arn TfConnection#bgp_log_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#bgp_log_group_arn AwsConnection#bgp_log_group_arn}
   */
   readonly bgpLogGroupArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#bgp_log_output_format TfConnection#bgp_log_output_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#bgp_log_output_format AwsConnection#bgp_log_output_format}
   */
   readonly bgpLogOutputFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#log_enabled TfConnection#log_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#log_enabled AwsConnection#log_enabled}
   */
   readonly logEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#log_group_arn TfConnection#log_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#log_group_arn AwsConnection#log_group_arn}
   */
   readonly logGroupArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#log_output_format TfConnection#log_output_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#log_output_format AwsConnection#log_output_format}
   */
   readonly logOutputFormat?: string;
 }
@@ -2422,7 +2422,7 @@ export interface Tunnel1LogOptionsProperty {
   /**
   * cloudwatch_log_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#cloudwatch_log_options TfConnection#cloudwatch_log_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#cloudwatch_log_options AwsConnection#cloudwatch_log_options}
   */
   readonly cloudwatchLogOptions?: Tunnel1LogOptionsCloudwatchLogOptionsProperty;
 }
@@ -2476,27 +2476,27 @@ export class Tunnel1LogOptionsPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface Tunnel2LogOptionsCloudwatchLogOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#bgp_log_enabled TfConnection#bgp_log_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#bgp_log_enabled AwsConnection#bgp_log_enabled}
   */
   readonly bgpLogEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#bgp_log_group_arn TfConnection#bgp_log_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#bgp_log_group_arn AwsConnection#bgp_log_group_arn}
   */
   readonly bgpLogGroupArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#bgp_log_output_format TfConnection#bgp_log_output_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#bgp_log_output_format AwsConnection#bgp_log_output_format}
   */
   readonly bgpLogOutputFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#log_enabled TfConnection#log_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#log_enabled AwsConnection#log_enabled}
   */
   readonly logEnabled?: boolean | cdktn.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#log_group_arn TfConnection#log_group_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#log_group_arn AwsConnection#log_group_arn}
   */
   readonly logGroupArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#log_output_format TfConnection#log_output_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#log_output_format AwsConnection#log_output_format}
   */
   readonly logOutputFormat?: string;
 }
@@ -2662,7 +2662,7 @@ export interface Tunnel2LogOptionsProperty {
   /**
   * cloudwatch_log_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#cloudwatch_log_options TfConnection#cloudwatch_log_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/vpn_connection#cloudwatch_log_options AwsConnection#cloudwatch_log_options}
   */
   readonly cloudwatchLogOptions?: Tunnel2LogOptionsCloudwatchLogOptionsProperty;
 }

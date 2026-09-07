@@ -5,33 +5,33 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfBucketAbacConfig extends cdktn.TerraformMetaArguments {
+export interface AwsBucketAbacConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_abac#bucket TfBucketAbac#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_abac#bucket AwsBucketAbac#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_abac#expected_bucket_owner TfBucketAbac#expected_bucket_owner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_abac#expected_bucket_owner AwsBucketAbac#expected_bucket_owner}
   */
   readonly expectedBucketOwner?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_abac#region TfBucketAbac#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_abac#region AwsBucketAbac#region}
   */
   readonly region?: string;
   /**
   * abac_status block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_abac#abac_status TfBucketAbac#abac_status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_abac#abac_status AwsBucketAbac#abac_status}
   */
-  readonly abacStatus?: TfBucketAbac.AbacStatusProperty[] | cdktn.IResolvable;
+  readonly abacStatus?: AwsBucketAbac.AbacStatusProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_abac aws_s3_bucket_abac}
 */
-export class TfBucketAbac extends cdktn.TerraformResource {
+export class AwsBucketAbac extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -42,11 +42,11 @@ export class TfBucketAbac extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfBucketAbac resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsBucketAbac resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfBucketAbac to import
-  * @param importFromId The id of the existing TfBucketAbac that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_abac#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfBucketAbac to import is found
+  * @param importToId The construct id used in the generated config for the AwsBucketAbac to import
+  * @param importFromId The id of the existing AwsBucketAbac that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_abac#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsBucketAbac to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_s3_bucket_abac", importId: importFromId, provider });
@@ -61,9 +61,9 @@ export class TfBucketAbac extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfBucketAbacConfig
+  * @param options AwsBucketAbacConfig
   */
-  public constructor(scope: Construct, id: string, config: TfBucketAbacConfig) {
+  public constructor(scope: Construct, id: string, config: AwsBucketAbacConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_s3_bucket_abac',
       terraformGeneratorMetadata: {
@@ -135,11 +135,11 @@ export class TfBucketAbac extends cdktn.TerraformResource {
   }
 
   // abac_status - computed: false, optional: true, required: false
-  private _abacStatus = new TfBucketAbac.AbacStatusPropertyList(this, "abac_status", false);
+  private _abacStatus = new AwsBucketAbac.AbacStatusPropertyList(this, "abac_status", false);
   public get abacStatus() {
     return this._abacStatus;
   }
-  public putAbacStatus(value: TfBucketAbac.AbacStatusProperty[] | cdktn.IResolvable) {
+  public putAbacStatus(value: AwsBucketAbac.AbacStatusProperty[] | cdktn.IResolvable) {
     this._abacStatus.internalValue = value;
   }
   public resetAbacStatus() {
@@ -159,7 +159,7 @@ export class TfBucketAbac extends cdktn.TerraformResource {
       bucket: cdktn.stringToTerraform(this._bucket),
       expected_bucket_owner: cdktn.stringToTerraform(this._expectedBucketOwner),
       region: cdktn.stringToTerraform(this._region),
-      abac_status: cdktn.listMapper(tfBucketAbacAbacStatusPropertyToTerraform, true)(this._abacStatus.internalValue),
+      abac_status: cdktn.listMapper(awsBucketAbacAbacStatusPropertyToTerraform, true)(this._abacStatus.internalValue),
     };
   }
 
@@ -184,10 +184,10 @@ export class TfBucketAbac extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       abac_status: {
-        value: cdktn.listMapperHcl(tfBucketAbacAbacStatusPropertyToHclTerraform, true)(this._abacStatus.internalValue),
+        value: cdktn.listMapperHcl(awsBucketAbacAbacStatusPropertyToHclTerraform, true)(this._abacStatus.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfBucketAbac.AbacStatusPropertyList",
+        storageClassType: "AwsBucketAbac.AbacStatusPropertyList",
       },
     };
 
@@ -196,7 +196,7 @@ export class TfBucketAbac extends cdktn.TerraformResource {
   }
 }
 
-export function tfBucketAbacAbacStatusPropertyToTerraform(struct?: TfBucketAbac.AbacStatusProperty | cdktn.IResolvable): any {
+export function awsBucketAbacAbacStatusPropertyToTerraform(struct?: AwsBucketAbac.AbacStatusProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -207,7 +207,7 @@ export function tfBucketAbacAbacStatusPropertyToTerraform(struct?: TfBucketAbac.
 }
 
 
-export function tfBucketAbacAbacStatusPropertyToHclTerraform(struct?: TfBucketAbac.AbacStatusProperty | cdktn.IResolvable): any {
+export function awsBucketAbacAbacStatusPropertyToHclTerraform(struct?: AwsBucketAbac.AbacStatusProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -226,10 +226,10 @@ export function tfBucketAbacAbacStatusPropertyToHclTerraform(struct?: TfBucketAb
 }
 
 
-export namespace TfBucketAbac {
+export namespace AwsBucketAbac {
 export interface AbacStatusProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_abac#status TfBucketAbac#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/s3_bucket_abac#status AwsBucketAbac#status}
   */
   readonly status: string;
 }

@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfMaintenanceWindowsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsMaintenanceWindowsConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_maintenance_windows#id DataTfMaintenanceWindows#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_maintenance_windows#id DataAwsMaintenanceWindows#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface DataTfMaintenanceWindowsConfig extends cdktn.TerraformMetaArgum
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_maintenance_windows#region DataTfMaintenanceWindows#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_maintenance_windows#region DataAwsMaintenanceWindows#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_maintenance_windows#filter DataTfMaintenanceWindows#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_maintenance_windows#filter DataAwsMaintenanceWindows#filter}
   */
-  readonly filter?: DataTfMaintenanceWindows.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsMaintenanceWindows.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_maintenance_windows aws_ssm_maintenance_windows}
 */
-export class DataTfMaintenanceWindows extends cdktn.TerraformDataSource {
+export class DataAwsMaintenanceWindows extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class DataTfMaintenanceWindows extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfMaintenanceWindows resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsMaintenanceWindows resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfMaintenanceWindows to import
-  * @param importFromId The id of the existing DataTfMaintenanceWindows that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_maintenance_windows#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfMaintenanceWindows to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsMaintenanceWindows to import
+  * @param importFromId The id of the existing DataAwsMaintenanceWindows that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_maintenance_windows#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsMaintenanceWindows to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ssm_maintenance_windows", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class DataTfMaintenanceWindows extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfMaintenanceWindowsConfig = {}
+  * @param options DataAwsMaintenanceWindowsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfMaintenanceWindowsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsMaintenanceWindowsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_ssm_maintenance_windows',
       terraformGeneratorMetadata: {
@@ -125,11 +125,11 @@ export class DataTfMaintenanceWindows extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfMaintenanceWindows.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsMaintenanceWindows.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfMaintenanceWindows.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsMaintenanceWindows.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -148,7 +148,7 @@ export class DataTfMaintenanceWindows extends cdktn.TerraformDataSource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(dataTfMaintenanceWindowsFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataAwsMaintenanceWindowsFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -167,10 +167,10 @@ export class DataTfMaintenanceWindows extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfMaintenanceWindowsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsMaintenanceWindowsFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfMaintenanceWindows.FilterPropertyList",
+        storageClassType: "DataAwsMaintenanceWindows.FilterPropertyList",
       },
     };
 
@@ -179,7 +179,7 @@ export class DataTfMaintenanceWindows extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfMaintenanceWindowsFilterPropertyToTerraform(struct?: DataTfMaintenanceWindows.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsMaintenanceWindowsFilterPropertyToTerraform(struct?: DataAwsMaintenanceWindows.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -191,7 +191,7 @@ export function dataTfMaintenanceWindowsFilterPropertyToTerraform(struct?: DataT
 }
 
 
-export function dataTfMaintenanceWindowsFilterPropertyToHclTerraform(struct?: DataTfMaintenanceWindows.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsMaintenanceWindowsFilterPropertyToHclTerraform(struct?: DataAwsMaintenanceWindows.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -216,14 +216,14 @@ export function dataTfMaintenanceWindowsFilterPropertyToHclTerraform(struct?: Da
 }
 
 
-export namespace DataTfMaintenanceWindows {
+export namespace DataAwsMaintenanceWindows {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_maintenance_windows#name DataTfMaintenanceWindows#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_maintenance_windows#name DataAwsMaintenanceWindows#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_maintenance_windows#values DataTfMaintenanceWindows#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/ssm_maintenance_windows#values DataAwsMaintenanceWindows#values}
   */
   readonly values: string[];
 }

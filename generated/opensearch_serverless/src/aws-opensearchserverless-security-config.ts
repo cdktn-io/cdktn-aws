@@ -5,55 +5,55 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSecurityConfigConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSecurityConfigConfig extends cdktn.TerraformMetaArguments {
   /**
   * Description of the security configuration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#description TfSecurityConfig#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#description AwsSecurityConfig#description}
   */
   readonly description?: string;
   /**
   * Name of the policy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#name TfSecurityConfig#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#name AwsSecurityConfig#name}
   */
   readonly name: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#region TfSecurityConfig#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#region AwsSecurityConfig#region}
   */
   readonly region?: string;
   /**
   * Type of configuration. Valid values: `saml`, `iamidentitycenter` or `iamfederation`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#type TfSecurityConfig#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#type AwsSecurityConfig#type}
   */
   readonly type: string;
   /**
   * iam_federation_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#iam_federation_options TfSecurityConfig#iam_federation_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#iam_federation_options AwsSecurityConfig#iam_federation_options}
   */
-  readonly iamFederationOptions?: TfSecurityConfig.IamFederationOptionsProperty[] | cdktn.IResolvable;
+  readonly iamFederationOptions?: AwsSecurityConfig.IamFederationOptionsProperty[] | cdktn.IResolvable;
   /**
   * iam_identity_center_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#iam_identity_center_options TfSecurityConfig#iam_identity_center_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#iam_identity_center_options AwsSecurityConfig#iam_identity_center_options}
   */
-  readonly iamIdentityCenterOptions?: TfSecurityConfig.IamIdentityCenterOptionsProperty[] | cdktn.IResolvable;
+  readonly iamIdentityCenterOptions?: AwsSecurityConfig.IamIdentityCenterOptionsProperty[] | cdktn.IResolvable;
   /**
   * saml_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#saml_options TfSecurityConfig#saml_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#saml_options AwsSecurityConfig#saml_options}
   */
-  readonly samlOptions?: TfSecurityConfig.SamlOptionsProperty[] | cdktn.IResolvable;
+  readonly samlOptions?: AwsSecurityConfig.SamlOptionsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config aws_opensearchserverless_security_config}
 */
-export class TfSecurityConfig extends cdktn.TerraformResource {
+export class AwsSecurityConfig extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -64,11 +64,11 @@ export class TfSecurityConfig extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSecurityConfig resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSecurityConfig resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSecurityConfig to import
-  * @param importFromId The id of the existing TfSecurityConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSecurityConfig to import is found
+  * @param importToId The construct id used in the generated config for the AwsSecurityConfig to import
+  * @param importFromId The id of the existing AwsSecurityConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSecurityConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_opensearchserverless_security_config", importId: importFromId, provider });
@@ -83,9 +83,9 @@ export class TfSecurityConfig extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSecurityConfigConfig
+  * @param options AwsSecurityConfigConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSecurityConfigConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSecurityConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_opensearchserverless_security_config',
       terraformGeneratorMetadata: {
@@ -183,11 +183,11 @@ export class TfSecurityConfig extends cdktn.TerraformResource {
   }
 
   // iam_federation_options - computed: false, optional: true, required: false
-  private _iamFederationOptions = new TfSecurityConfig.IamFederationOptionsPropertyList(this, "iam_federation_options", false);
+  private _iamFederationOptions = new AwsSecurityConfig.IamFederationOptionsPropertyList(this, "iam_federation_options", false);
   public get iamFederationOptions() {
     return this._iamFederationOptions;
   }
-  public putIamFederationOptions(value: TfSecurityConfig.IamFederationOptionsProperty[] | cdktn.IResolvable) {
+  public putIamFederationOptions(value: AwsSecurityConfig.IamFederationOptionsProperty[] | cdktn.IResolvable) {
     this._iamFederationOptions.internalValue = value;
   }
   public resetIamFederationOptions() {
@@ -199,11 +199,11 @@ export class TfSecurityConfig extends cdktn.TerraformResource {
   }
 
   // iam_identity_center_options - computed: false, optional: true, required: false
-  private _iamIdentityCenterOptions = new TfSecurityConfig.IamIdentityCenterOptionsPropertyList(this, "iam_identity_center_options", false);
+  private _iamIdentityCenterOptions = new AwsSecurityConfig.IamIdentityCenterOptionsPropertyList(this, "iam_identity_center_options", false);
   public get iamIdentityCenterOptions() {
     return this._iamIdentityCenterOptions;
   }
-  public putIamIdentityCenterOptions(value: TfSecurityConfig.IamIdentityCenterOptionsProperty[] | cdktn.IResolvable) {
+  public putIamIdentityCenterOptions(value: AwsSecurityConfig.IamIdentityCenterOptionsProperty[] | cdktn.IResolvable) {
     this._iamIdentityCenterOptions.internalValue = value;
   }
   public resetIamIdentityCenterOptions() {
@@ -215,11 +215,11 @@ export class TfSecurityConfig extends cdktn.TerraformResource {
   }
 
   // saml_options - computed: false, optional: true, required: false
-  private _samlOptions = new TfSecurityConfig.SamlOptionsPropertyList(this, "saml_options", false);
+  private _samlOptions = new AwsSecurityConfig.SamlOptionsPropertyList(this, "saml_options", false);
   public get samlOptions() {
     return this._samlOptions;
   }
-  public putSamlOptions(value: TfSecurityConfig.SamlOptionsProperty[] | cdktn.IResolvable) {
+  public putSamlOptions(value: AwsSecurityConfig.SamlOptionsProperty[] | cdktn.IResolvable) {
     this._samlOptions.internalValue = value;
   }
   public resetSamlOptions() {
@@ -240,9 +240,9 @@ export class TfSecurityConfig extends cdktn.TerraformResource {
       name: cdktn.stringToTerraform(this._name),
       region: cdktn.stringToTerraform(this._region),
       type: cdktn.stringToTerraform(this._type),
-      iam_federation_options: cdktn.listMapper(tfSecurityConfigIamFederationOptionsPropertyToTerraform, true)(this._iamFederationOptions.internalValue),
-      iam_identity_center_options: cdktn.listMapper(tfSecurityConfigIamIdentityCenterOptionsPropertyToTerraform, true)(this._iamIdentityCenterOptions.internalValue),
-      saml_options: cdktn.listMapper(tfSecurityConfigSamlOptionsPropertyToTerraform, true)(this._samlOptions.internalValue),
+      iam_federation_options: cdktn.listMapper(awsSecurityConfigIamFederationOptionsPropertyToTerraform, true)(this._iamFederationOptions.internalValue),
+      iam_identity_center_options: cdktn.listMapper(awsSecurityConfigIamIdentityCenterOptionsPropertyToTerraform, true)(this._iamIdentityCenterOptions.internalValue),
+      saml_options: cdktn.listMapper(awsSecurityConfigSamlOptionsPropertyToTerraform, true)(this._samlOptions.internalValue),
     };
   }
 
@@ -273,22 +273,22 @@ export class TfSecurityConfig extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       iam_federation_options: {
-        value: cdktn.listMapperHcl(tfSecurityConfigIamFederationOptionsPropertyToHclTerraform, true)(this._iamFederationOptions.internalValue),
+        value: cdktn.listMapperHcl(awsSecurityConfigIamFederationOptionsPropertyToHclTerraform, true)(this._iamFederationOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSecurityConfig.IamFederationOptionsPropertyList",
+        storageClassType: "AwsSecurityConfig.IamFederationOptionsPropertyList",
       },
       iam_identity_center_options: {
-        value: cdktn.listMapperHcl(tfSecurityConfigIamIdentityCenterOptionsPropertyToHclTerraform, true)(this._iamIdentityCenterOptions.internalValue),
+        value: cdktn.listMapperHcl(awsSecurityConfigIamIdentityCenterOptionsPropertyToHclTerraform, true)(this._iamIdentityCenterOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSecurityConfig.IamIdentityCenterOptionsPropertyList",
+        storageClassType: "AwsSecurityConfig.IamIdentityCenterOptionsPropertyList",
       },
       saml_options: {
-        value: cdktn.listMapperHcl(tfSecurityConfigSamlOptionsPropertyToHclTerraform, true)(this._samlOptions.internalValue),
+        value: cdktn.listMapperHcl(awsSecurityConfigSamlOptionsPropertyToHclTerraform, true)(this._samlOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSecurityConfig.SamlOptionsPropertyList",
+        storageClassType: "AwsSecurityConfig.SamlOptionsPropertyList",
       },
     };
 
@@ -297,7 +297,7 @@ export class TfSecurityConfig extends cdktn.TerraformResource {
   }
 }
 
-export function tfSecurityConfigIamFederationOptionsPropertyToTerraform(struct?: TfSecurityConfig.IamFederationOptionsProperty | cdktn.IResolvable): any {
+export function awsSecurityConfigIamFederationOptionsPropertyToTerraform(struct?: AwsSecurityConfig.IamFederationOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -309,7 +309,7 @@ export function tfSecurityConfigIamFederationOptionsPropertyToTerraform(struct?:
 }
 
 
-export function tfSecurityConfigIamFederationOptionsPropertyToHclTerraform(struct?: TfSecurityConfig.IamFederationOptionsProperty | cdktn.IResolvable): any {
+export function awsSecurityConfigIamFederationOptionsPropertyToHclTerraform(struct?: AwsSecurityConfig.IamFederationOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -334,7 +334,7 @@ export function tfSecurityConfigIamFederationOptionsPropertyToHclTerraform(struc
 }
 
 
-export function tfSecurityConfigIamIdentityCenterOptionsPropertyToTerraform(struct?: TfSecurityConfig.IamIdentityCenterOptionsProperty | cdktn.IResolvable): any {
+export function awsSecurityConfigIamIdentityCenterOptionsPropertyToTerraform(struct?: AwsSecurityConfig.IamIdentityCenterOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -347,7 +347,7 @@ export function tfSecurityConfigIamIdentityCenterOptionsPropertyToTerraform(stru
 }
 
 
-export function tfSecurityConfigIamIdentityCenterOptionsPropertyToHclTerraform(struct?: TfSecurityConfig.IamIdentityCenterOptionsProperty | cdktn.IResolvable): any {
+export function awsSecurityConfigIamIdentityCenterOptionsPropertyToHclTerraform(struct?: AwsSecurityConfig.IamIdentityCenterOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -378,7 +378,7 @@ export function tfSecurityConfigIamIdentityCenterOptionsPropertyToHclTerraform(s
 }
 
 
-export function tfSecurityConfigSamlOptionsPropertyToTerraform(struct?: TfSecurityConfig.SamlOptionsProperty | cdktn.IResolvable): any {
+export function awsSecurityConfigSamlOptionsPropertyToTerraform(struct?: AwsSecurityConfig.SamlOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -392,7 +392,7 @@ export function tfSecurityConfigSamlOptionsPropertyToTerraform(struct?: TfSecuri
 }
 
 
-export function tfSecurityConfigSamlOptionsPropertyToHclTerraform(struct?: TfSecurityConfig.SamlOptionsProperty | cdktn.IResolvable): any {
+export function awsSecurityConfigSamlOptionsPropertyToHclTerraform(struct?: AwsSecurityConfig.SamlOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -429,18 +429,18 @@ export function tfSecurityConfigSamlOptionsPropertyToHclTerraform(struct?: TfSec
 }
 
 
-export namespace TfSecurityConfig {
+export namespace AwsSecurityConfig {
 export interface IamFederationOptionsProperty {
   /**
   * Group attribute.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#group_attribute TfSecurityConfig#group_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#group_attribute AwsSecurityConfig#group_attribute}
   */
   readonly groupAttribute?: string;
   /**
   * User attribute.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#user_attribute TfSecurityConfig#user_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#user_attribute AwsSecurityConfig#user_attribute}
   */
   readonly userAttribute?: string;
 }
@@ -550,19 +550,19 @@ export interface IamIdentityCenterOptionsProperty {
   /**
   * Group attribute.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#group_attribute TfSecurityConfig#group_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#group_attribute AwsSecurityConfig#group_attribute}
   */
   readonly groupAttribute?: string;
   /**
   * Instance ARN.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#instance_arn TfSecurityConfig#instance_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#instance_arn AwsSecurityConfig#instance_arn}
   */
   readonly instanceArn: string;
   /**
   * User attribute.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#user_attribute TfSecurityConfig#user_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#user_attribute AwsSecurityConfig#user_attribute}
   */
   readonly userAttribute?: string;
 }
@@ -691,25 +691,25 @@ export interface SamlOptionsProperty {
   /**
   * Group attribute for this SAML integration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#group_attribute TfSecurityConfig#group_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#group_attribute AwsSecurityConfig#group_attribute}
   */
   readonly groupAttribute?: string;
   /**
   * The XML IdP metadata file generated from your identity provider.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#metadata TfSecurityConfig#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#metadata AwsSecurityConfig#metadata}
   */
   readonly metadata: string;
   /**
   * Session timeout, in minutes. Minimum is 5 minutes and maximum is 720 minutes (12 hours). Default is 60 minutes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#session_timeout TfSecurityConfig#session_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#session_timeout AwsSecurityConfig#session_timeout}
   */
   readonly sessionTimeout?: number;
   /**
   * User attribute for this SAML integration.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#user_attribute TfSecurityConfig#user_attribute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/opensearchserverless_security_config#user_attribute AwsSecurityConfig#user_attribute}
   */
   readonly userAttribute?: string;
 }

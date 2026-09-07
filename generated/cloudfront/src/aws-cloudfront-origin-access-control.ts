@@ -5,32 +5,32 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfOriginAccessControlConfig extends cdktn.TerraformMetaArguments {
+export interface AwsOriginAccessControlConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_access_control#description TfOriginAccessControl#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_access_control#description AwsOriginAccessControl#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_access_control#id TfOriginAccessControl#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_access_control#id AwsOriginAccessControl#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_access_control#name TfOriginAccessControl#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_access_control#name AwsOriginAccessControl#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_access_control#origin_access_control_origin_type TfOriginAccessControl#origin_access_control_origin_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_access_control#origin_access_control_origin_type AwsOriginAccessControl#origin_access_control_origin_type}
   */
   readonly originAccessControlOriginType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_access_control#signing_behavior TfOriginAccessControl#signing_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_access_control#signing_behavior AwsOriginAccessControl#signing_behavior}
   */
   readonly signingBehavior: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_access_control#signing_protocol TfOriginAccessControl#signing_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_access_control#signing_protocol AwsOriginAccessControl#signing_protocol}
   */
   readonly signingProtocol: string;
 }
@@ -38,7 +38,7 @@ export interface TfOriginAccessControlConfig extends cdktn.TerraformMetaArgument
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_access_control aws_cloudfront_origin_access_control}
 */
-export class TfOriginAccessControl extends cdktn.TerraformResource {
+export class AwsOriginAccessControl extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -49,11 +49,11 @@ export class TfOriginAccessControl extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfOriginAccessControl resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsOriginAccessControl resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfOriginAccessControl to import
-  * @param importFromId The id of the existing TfOriginAccessControl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_access_control#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfOriginAccessControl to import is found
+  * @param importToId The construct id used in the generated config for the AwsOriginAccessControl to import
+  * @param importFromId The id of the existing AwsOriginAccessControl that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/cloudfront_origin_access_control#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsOriginAccessControl to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_cloudfront_origin_access_control", importId: importFromId, provider });
@@ -68,9 +68,9 @@ export class TfOriginAccessControl extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfOriginAccessControlConfig
+  * @param options AwsOriginAccessControlConfig
   */
-  public constructor(scope: Construct, id: string, config: TfOriginAccessControlConfig) {
+  public constructor(scope: Construct, id: string, config: AwsOriginAccessControlConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_cloudfront_origin_access_control',
       terraformGeneratorMetadata: {

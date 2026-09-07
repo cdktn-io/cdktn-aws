@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfCoreNetworkConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsCoreNetworkConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network#core_network_id DataTfCoreNetwork#core_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network#core_network_id DataAwsCoreNetwork#core_network_id}
   */
   readonly coreNetworkId: string;
 }
@@ -15,7 +15,7 @@ export interface DataTfCoreNetworkConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network aws_networkmanager_core_network}
 */
-export class DataTfCoreNetwork extends cdktn.TerraformDataSource {
+export class DataAwsCoreNetwork extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -26,11 +26,11 @@ export class DataTfCoreNetwork extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfCoreNetwork resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsCoreNetwork resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfCoreNetwork to import
-  * @param importFromId The id of the existing DataTfCoreNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfCoreNetwork to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsCoreNetwork to import
+  * @param importFromId The id of the existing DataAwsCoreNetwork that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/networkmanager_core_network#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsCoreNetwork to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_networkmanager_core_network", importId: importFromId, provider });
@@ -45,9 +45,9 @@ export class DataTfCoreNetwork extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfCoreNetworkConfig
+  * @param options DataAwsCoreNetworkConfig
   */
-  public constructor(scope: Construct, id: string, config: DataTfCoreNetworkConfig) {
+  public constructor(scope: Construct, id: string, config: DataAwsCoreNetworkConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_networkmanager_core_network',
       terraformGeneratorMetadata: {
@@ -99,7 +99,7 @@ export class DataTfCoreNetwork extends cdktn.TerraformDataSource {
   }
 
   // edges - computed: true, optional: false, required: false
-  private _edges = new DataTfCoreNetwork.EdgesPropertyList(this, "edges", false);
+  private _edges = new DataAwsCoreNetwork.EdgesPropertyList(this, "edges", false);
   public get edges() {
     return this._edges;
   }
@@ -110,13 +110,13 @@ export class DataTfCoreNetwork extends cdktn.TerraformDataSource {
   }
 
   // network_function_groups - computed: true, optional: false, required: false
-  private _networkFunctionGroups = new DataTfCoreNetwork.NetworkFunctionGroupsPropertyList(this, "network_function_groups", false);
+  private _networkFunctionGroups = new DataAwsCoreNetwork.NetworkFunctionGroupsPropertyList(this, "network_function_groups", false);
   public get networkFunctionGroups() {
     return this._networkFunctionGroups;
   }
 
   // segments - computed: true, optional: false, required: false
-  private _segments = new DataTfCoreNetwork.SegmentsPropertyList(this, "segments", false);
+  private _segments = new DataAwsCoreNetwork.SegmentsPropertyList(this, "segments", false);
   public get segments() {
     return this._segments;
   }
@@ -157,7 +157,7 @@ export class DataTfCoreNetwork extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfCoreNetworkEdgesPropertyToTerraform(struct?: DataTfCoreNetwork.EdgesProperty): any {
+export function dataAwsCoreNetworkEdgesPropertyToTerraform(struct?: DataAwsCoreNetwork.EdgesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -167,7 +167,7 @@ export function dataTfCoreNetworkEdgesPropertyToTerraform(struct?: DataTfCoreNet
 }
 
 
-export function dataTfCoreNetworkEdgesPropertyToHclTerraform(struct?: DataTfCoreNetwork.EdgesProperty): any {
+export function dataAwsCoreNetworkEdgesPropertyToHclTerraform(struct?: DataAwsCoreNetwork.EdgesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -178,7 +178,7 @@ export function dataTfCoreNetworkEdgesPropertyToHclTerraform(struct?: DataTfCore
 }
 
 
-export function dataTfCoreNetworkNetworkFunctionGroupsSegmentsPropertyToTerraform(struct?: DataTfCoreNetwork.NetworkFunctionGroupsSegmentsProperty): any {
+export function dataAwsCoreNetworkNetworkFunctionGroupsSegmentsPropertyToTerraform(struct?: DataAwsCoreNetwork.NetworkFunctionGroupsSegmentsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -188,7 +188,7 @@ export function dataTfCoreNetworkNetworkFunctionGroupsSegmentsPropertyToTerrafor
 }
 
 
-export function dataTfCoreNetworkNetworkFunctionGroupsSegmentsPropertyToHclTerraform(struct?: DataTfCoreNetwork.NetworkFunctionGroupsSegmentsProperty): any {
+export function dataAwsCoreNetworkNetworkFunctionGroupsSegmentsPropertyToHclTerraform(struct?: DataAwsCoreNetwork.NetworkFunctionGroupsSegmentsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -199,7 +199,7 @@ export function dataTfCoreNetworkNetworkFunctionGroupsSegmentsPropertyToHclTerra
 }
 
 
-export function dataTfCoreNetworkNetworkFunctionGroupsPropertyToTerraform(struct?: DataTfCoreNetwork.NetworkFunctionGroupsProperty): any {
+export function dataAwsCoreNetworkNetworkFunctionGroupsPropertyToTerraform(struct?: DataAwsCoreNetwork.NetworkFunctionGroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -209,7 +209,7 @@ export function dataTfCoreNetworkNetworkFunctionGroupsPropertyToTerraform(struct
 }
 
 
-export function dataTfCoreNetworkNetworkFunctionGroupsPropertyToHclTerraform(struct?: DataTfCoreNetwork.NetworkFunctionGroupsProperty): any {
+export function dataAwsCoreNetworkNetworkFunctionGroupsPropertyToHclTerraform(struct?: DataAwsCoreNetwork.NetworkFunctionGroupsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -220,7 +220,7 @@ export function dataTfCoreNetworkNetworkFunctionGroupsPropertyToHclTerraform(str
 }
 
 
-export function dataTfCoreNetworkSegmentsPropertyToTerraform(struct?: DataTfCoreNetwork.SegmentsProperty): any {
+export function dataAwsCoreNetworkSegmentsPropertyToTerraform(struct?: DataAwsCoreNetwork.SegmentsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -230,7 +230,7 @@ export function dataTfCoreNetworkSegmentsPropertyToTerraform(struct?: DataTfCore
 }
 
 
-export function dataTfCoreNetworkSegmentsPropertyToHclTerraform(struct?: DataTfCoreNetwork.SegmentsProperty): any {
+export function dataAwsCoreNetworkSegmentsPropertyToHclTerraform(struct?: DataAwsCoreNetwork.SegmentsProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function dataTfCoreNetworkSegmentsPropertyToHclTerraform(struct?: DataTfC
 }
 
 
-export namespace DataTfCoreNetwork {
+export namespace DataAwsCoreNetwork {
 export interface EdgesProperty {
 }
 export class EdgesPropertyOutputReference extends cdktn.ComplexObject {

@@ -5,29 +5,29 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfSubscriberNotificationConfig extends cdktn.TerraformMetaArguments {
+export interface AwsSubscriberNotificationConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#region TfSubscriberNotification#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#region AwsSubscriberNotification#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#subscriber_id TfSubscriberNotification#subscriber_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#subscriber_id AwsSubscriberNotification#subscriber_id}
   */
   readonly subscriberId: string;
   /**
   * configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#configuration TfSubscriberNotification#configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#configuration AwsSubscriberNotification#configuration}
   */
-  readonly configuration?: TfSubscriberNotification.ConfigurationProperty[] | cdktn.IResolvable;
+  readonly configuration?: AwsSubscriberNotification.ConfigurationProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification aws_securitylake_subscriber_notification}
 */
-export class TfSubscriberNotification extends cdktn.TerraformResource {
+export class AwsSubscriberNotification extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -38,11 +38,11 @@ export class TfSubscriberNotification extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfSubscriberNotification resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsSubscriberNotification resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfSubscriberNotification to import
-  * @param importFromId The id of the existing TfSubscriberNotification that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfSubscriberNotification to import is found
+  * @param importToId The construct id used in the generated config for the AwsSubscriberNotification to import
+  * @param importFromId The id of the existing AwsSubscriberNotification that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsSubscriberNotification to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_securitylake_subscriber_notification", importId: importFromId, provider });
@@ -57,9 +57,9 @@ export class TfSubscriberNotification extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfSubscriberNotificationConfig
+  * @param options AwsSubscriberNotificationConfig
   */
-  public constructor(scope: Construct, id: string, config: TfSubscriberNotificationConfig) {
+  public constructor(scope: Construct, id: string, config: AwsSubscriberNotificationConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_securitylake_subscriber_notification',
       terraformGeneratorMetadata: {
@@ -129,11 +129,11 @@ export class TfSubscriberNotification extends cdktn.TerraformResource {
   }
 
   // configuration - computed: false, optional: true, required: false
-  private _configuration = new TfSubscriberNotification.ConfigurationPropertyList(this, "configuration", false);
+  private _configuration = new AwsSubscriberNotification.ConfigurationPropertyList(this, "configuration", false);
   public get configuration() {
     return this._configuration;
   }
-  public putConfiguration(value: TfSubscriberNotification.ConfigurationProperty[] | cdktn.IResolvable) {
+  public putConfiguration(value: AwsSubscriberNotification.ConfigurationProperty[] | cdktn.IResolvable) {
     this._configuration.internalValue = value;
   }
   public resetConfiguration() {
@@ -152,7 +152,7 @@ export class TfSubscriberNotification extends cdktn.TerraformResource {
     return {
       region: cdktn.stringToTerraform(this._region),
       subscriber_id: cdktn.stringToTerraform(this._subscriberId),
-      configuration: cdktn.listMapper(tfSubscriberNotificationConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
+      configuration: cdktn.listMapper(awsSubscriberNotificationConfigurationPropertyToTerraform, true)(this._configuration.internalValue),
     };
   }
 
@@ -171,10 +171,10 @@ export class TfSubscriberNotification extends cdktn.TerraformResource {
         storageClassType: "string",
       },
       configuration: {
-        value: cdktn.listMapperHcl(tfSubscriberNotificationConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
+        value: cdktn.listMapperHcl(awsSubscriberNotificationConfigurationPropertyToHclTerraform, true)(this._configuration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfSubscriberNotification.ConfigurationPropertyList",
+        storageClassType: "AwsSubscriberNotification.ConfigurationPropertyList",
       },
     };
 
@@ -183,7 +183,7 @@ export class TfSubscriberNotification extends cdktn.TerraformResource {
   }
 }
 
-export function tfSubscriberNotificationHttpsNotificationConfigurationPropertyToTerraform(struct?: TfSubscriberNotification.HttpsNotificationConfigurationProperty | cdktn.IResolvable): any {
+export function awsSubscriberNotificationHttpsNotificationConfigurationPropertyToTerraform(struct?: AwsSubscriberNotification.HttpsNotificationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -198,7 +198,7 @@ export function tfSubscriberNotificationHttpsNotificationConfigurationPropertyTo
 }
 
 
-export function tfSubscriberNotificationHttpsNotificationConfigurationPropertyToHclTerraform(struct?: TfSubscriberNotification.HttpsNotificationConfigurationProperty | cdktn.IResolvable): any {
+export function awsSubscriberNotificationHttpsNotificationConfigurationPropertyToHclTerraform(struct?: AwsSubscriberNotification.HttpsNotificationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -241,7 +241,7 @@ export function tfSubscriberNotificationHttpsNotificationConfigurationPropertyTo
 }
 
 
-export function tfSubscriberNotificationSqsNotificationConfigurationPropertyToTerraform(struct?: TfSubscriberNotification.SqsNotificationConfigurationProperty | cdktn.IResolvable): any {
+export function awsSubscriberNotificationSqsNotificationConfigurationPropertyToTerraform(struct?: AwsSubscriberNotification.SqsNotificationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -251,7 +251,7 @@ export function tfSubscriberNotificationSqsNotificationConfigurationPropertyToTe
 }
 
 
-export function tfSubscriberNotificationSqsNotificationConfigurationPropertyToHclTerraform(struct?: TfSubscriberNotification.SqsNotificationConfigurationProperty | cdktn.IResolvable): any {
+export function awsSubscriberNotificationSqsNotificationConfigurationPropertyToHclTerraform(struct?: AwsSubscriberNotification.SqsNotificationConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -262,32 +262,32 @@ export function tfSubscriberNotificationSqsNotificationConfigurationPropertyToHc
 }
 
 
-export function tfSubscriberNotificationConfigurationPropertyToTerraform(struct?: TfSubscriberNotification.ConfigurationProperty | cdktn.IResolvable): any {
+export function awsSubscriberNotificationConfigurationPropertyToTerraform(struct?: AwsSubscriberNotification.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    https_notification_configuration: cdktn.listMapper(tfSubscriberNotificationHttpsNotificationConfigurationPropertyToTerraform, true)(struct!.httpsNotificationConfiguration),
-    sqs_notification_configuration: cdktn.listMapper(tfSubscriberNotificationSqsNotificationConfigurationPropertyToTerraform, true)(struct!.sqsNotificationConfiguration),
+    https_notification_configuration: cdktn.listMapper(awsSubscriberNotificationHttpsNotificationConfigurationPropertyToTerraform, true)(struct!.httpsNotificationConfiguration),
+    sqs_notification_configuration: cdktn.listMapper(awsSubscriberNotificationSqsNotificationConfigurationPropertyToTerraform, true)(struct!.sqsNotificationConfiguration),
   }
 }
 
 
-export function tfSubscriberNotificationConfigurationPropertyToHclTerraform(struct?: TfSubscriberNotification.ConfigurationProperty | cdktn.IResolvable): any {
+export function awsSubscriberNotificationConfigurationPropertyToHclTerraform(struct?: AwsSubscriberNotification.ConfigurationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     https_notification_configuration: {
-      value: cdktn.listMapperHcl(tfSubscriberNotificationHttpsNotificationConfigurationPropertyToHclTerraform, true)(struct!.httpsNotificationConfiguration),
+      value: cdktn.listMapperHcl(awsSubscriberNotificationHttpsNotificationConfigurationPropertyToHclTerraform, true)(struct!.httpsNotificationConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "HttpsNotificationConfigurationPropertyList",
     },
     sqs_notification_configuration: {
-      value: cdktn.listMapperHcl(tfSubscriberNotificationSqsNotificationConfigurationPropertyToHclTerraform, true)(struct!.sqsNotificationConfiguration),
+      value: cdktn.listMapperHcl(awsSubscriberNotificationSqsNotificationConfigurationPropertyToHclTerraform, true)(struct!.sqsNotificationConfiguration),
       isBlock: true,
       type: "list",
       storageClassType: "SqsNotificationConfigurationPropertyList",
@@ -299,26 +299,26 @@ export function tfSubscriberNotificationConfigurationPropertyToHclTerraform(stru
 }
 
 
-export namespace TfSubscriberNotification {
+export namespace AwsSubscriberNotification {
 export interface HttpsNotificationConfigurationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#authorization_api_key_name TfSubscriberNotification#authorization_api_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#authorization_api_key_name AwsSubscriberNotification#authorization_api_key_name}
   */
   readonly authorizationApiKeyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#authorization_api_key_value TfSubscriberNotification#authorization_api_key_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#authorization_api_key_value AwsSubscriberNotification#authorization_api_key_value}
   */
   readonly authorizationApiKeyValue?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#endpoint TfSubscriberNotification#endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#endpoint AwsSubscriberNotification#endpoint}
   */
   readonly endpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#http_method TfSubscriberNotification#http_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#http_method AwsSubscriberNotification#http_method}
   */
   readonly httpMethod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#target_role_arn TfSubscriberNotification#target_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#target_role_arn AwsSubscriberNotification#target_role_arn}
   */
   readonly targetRoleArn: string;
 }
@@ -548,13 +548,13 @@ export interface ConfigurationProperty {
   /**
   * https_notification_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#https_notification_configuration TfSubscriberNotification#https_notification_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#https_notification_configuration AwsSubscriberNotification#https_notification_configuration}
   */
   readonly httpsNotificationConfiguration?: HttpsNotificationConfigurationProperty[] | cdktn.IResolvable;
   /**
   * sqs_notification_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#sqs_notification_configuration TfSubscriberNotification#sqs_notification_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/securitylake_subscriber_notification#sqs_notification_configuration AwsSubscriberNotification#sqs_notification_configuration}
   */
   readonly sqsNotificationConfiguration?: SqsNotificationConfigurationProperty[] | cdktn.IResolvable;
 }

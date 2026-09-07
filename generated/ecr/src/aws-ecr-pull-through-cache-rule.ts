@@ -5,21 +5,21 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPullThroughCacheRuleConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPullThroughCacheRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule#credential_arn TfPullThroughCacheRule#credential_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule#credential_arn AwsPullThroughCacheRule#credential_arn}
   */
   readonly credentialArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule#custom_role_arn TfPullThroughCacheRule#custom_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule#custom_role_arn AwsPullThroughCacheRule#custom_role_arn}
   */
   readonly customRoleArn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule#ecr_repository_prefix TfPullThroughCacheRule#ecr_repository_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule#ecr_repository_prefix AwsPullThroughCacheRule#ecr_repository_prefix}
   */
   readonly ecrRepositoryPrefix: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule#id TfPullThroughCacheRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule#id AwsPullThroughCacheRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,15 +28,15 @@ export interface TfPullThroughCacheRuleConfig extends cdktn.TerraformMetaArgumen
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule#region TfPullThroughCacheRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule#region AwsPullThroughCacheRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule#upstream_registry_url TfPullThroughCacheRule#upstream_registry_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule#upstream_registry_url AwsPullThroughCacheRule#upstream_registry_url}
   */
   readonly upstreamRegistryUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule#upstream_repository_prefix TfPullThroughCacheRule#upstream_repository_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule#upstream_repository_prefix AwsPullThroughCacheRule#upstream_repository_prefix}
   */
   readonly upstreamRepositoryPrefix?: string;
 }
@@ -44,7 +44,7 @@ export interface TfPullThroughCacheRuleConfig extends cdktn.TerraformMetaArgumen
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule aws_ecr_pull_through_cache_rule}
 */
-export class TfPullThroughCacheRule extends cdktn.TerraformResource {
+export class AwsPullThroughCacheRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -55,11 +55,11 @@ export class TfPullThroughCacheRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPullThroughCacheRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPullThroughCacheRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPullThroughCacheRule to import
-  * @param importFromId The id of the existing TfPullThroughCacheRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPullThroughCacheRule to import is found
+  * @param importToId The construct id used in the generated config for the AwsPullThroughCacheRule to import
+  * @param importFromId The id of the existing AwsPullThroughCacheRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/ecr_pull_through_cache_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPullThroughCacheRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_ecr_pull_through_cache_rule", importId: importFromId, provider });
@@ -74,9 +74,9 @@ export class TfPullThroughCacheRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPullThroughCacheRuleConfig
+  * @param options AwsPullThroughCacheRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPullThroughCacheRuleConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPullThroughCacheRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_ecr_pull_through_cache_rule',
       terraformGeneratorMetadata: {

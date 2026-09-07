@@ -5,73 +5,73 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfPipelineConfig extends cdktn.TerraformMetaArguments {
+export interface AwsPipelineConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#max_units TfPipeline#max_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#max_units AwsPipeline#max_units}
   */
   readonly maxUnits: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#min_units TfPipeline#min_units}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#min_units AwsPipeline#min_units}
   */
   readonly minUnits: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#pipeline_configuration_body TfPipeline#pipeline_configuration_body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#pipeline_configuration_body AwsPipeline#pipeline_configuration_body}
   */
   readonly pipelineConfigurationBody: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#pipeline_name TfPipeline#pipeline_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#pipeline_name AwsPipeline#pipeline_name}
   */
   readonly pipelineName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#pipeline_role_arn TfPipeline#pipeline_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#pipeline_role_arn AwsPipeline#pipeline_role_arn}
   */
   readonly pipelineRoleArn?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#region TfPipeline#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#region AwsPipeline#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#tags TfPipeline#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#tags AwsPipeline#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * buffer_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#buffer_options TfPipeline#buffer_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#buffer_options AwsPipeline#buffer_options}
   */
-  readonly bufferOptions?: TfPipeline.BufferOptionsProperty[] | cdktn.IResolvable;
+  readonly bufferOptions?: AwsPipeline.BufferOptionsProperty[] | cdktn.IResolvable;
   /**
   * encryption_at_rest_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#encryption_at_rest_options TfPipeline#encryption_at_rest_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#encryption_at_rest_options AwsPipeline#encryption_at_rest_options}
   */
-  readonly encryptionAtRestOptions?: TfPipeline.EncryptionAtRestOptionsProperty[] | cdktn.IResolvable;
+  readonly encryptionAtRestOptions?: AwsPipeline.EncryptionAtRestOptionsProperty[] | cdktn.IResolvable;
   /**
   * log_publishing_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#log_publishing_options TfPipeline#log_publishing_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#log_publishing_options AwsPipeline#log_publishing_options}
   */
-  readonly logPublishingOptions?: TfPipeline.LogPublishingOptionsProperty[] | cdktn.IResolvable;
+  readonly logPublishingOptions?: AwsPipeline.LogPublishingOptionsProperty[] | cdktn.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#timeouts TfPipeline#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#timeouts AwsPipeline#timeouts}
   */
-  readonly timeouts?: TfPipeline.TimeoutsProperty;
+  readonly timeouts?: AwsPipeline.TimeoutsProperty;
   /**
   * vpc_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#vpc_options TfPipeline#vpc_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#vpc_options AwsPipeline#vpc_options}
   */
-  readonly vpcOptions?: TfPipeline.VpcOptionsProperty[] | cdktn.IResolvable;
+  readonly vpcOptions?: AwsPipeline.VpcOptionsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline aws_osis_pipeline}
 */
-export class TfPipeline extends cdktn.TerraformResource {
+export class AwsPipeline extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -82,11 +82,11 @@ export class TfPipeline extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfPipeline resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsPipeline resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfPipeline to import
-  * @param importFromId The id of the existing TfPipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfPipeline to import is found
+  * @param importToId The construct id used in the generated config for the AwsPipeline to import
+  * @param importFromId The id of the existing AwsPipeline that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsPipeline to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_osis_pipeline", importId: importFromId, provider });
@@ -101,9 +101,9 @@ export class TfPipeline extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfPipelineConfig
+  * @param options AwsPipelineConfig
   */
-  public constructor(scope: Construct, id: string, config: TfPipelineConfig) {
+  public constructor(scope: Construct, id: string, config: AwsPipelineConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_osis_pipeline',
       terraformGeneratorMetadata: {
@@ -259,11 +259,11 @@ export class TfPipeline extends cdktn.TerraformResource {
   }
 
   // buffer_options - computed: false, optional: true, required: false
-  private _bufferOptions = new TfPipeline.BufferOptionsPropertyList(this, "buffer_options", false);
+  private _bufferOptions = new AwsPipeline.BufferOptionsPropertyList(this, "buffer_options", false);
   public get bufferOptions() {
     return this._bufferOptions;
   }
-  public putBufferOptions(value: TfPipeline.BufferOptionsProperty[] | cdktn.IResolvable) {
+  public putBufferOptions(value: AwsPipeline.BufferOptionsProperty[] | cdktn.IResolvable) {
     this._bufferOptions.internalValue = value;
   }
   public resetBufferOptions() {
@@ -275,11 +275,11 @@ export class TfPipeline extends cdktn.TerraformResource {
   }
 
   // encryption_at_rest_options - computed: false, optional: true, required: false
-  private _encryptionAtRestOptions = new TfPipeline.EncryptionAtRestOptionsPropertyList(this, "encryption_at_rest_options", false);
+  private _encryptionAtRestOptions = new AwsPipeline.EncryptionAtRestOptionsPropertyList(this, "encryption_at_rest_options", false);
   public get encryptionAtRestOptions() {
     return this._encryptionAtRestOptions;
   }
-  public putEncryptionAtRestOptions(value: TfPipeline.EncryptionAtRestOptionsProperty[] | cdktn.IResolvable) {
+  public putEncryptionAtRestOptions(value: AwsPipeline.EncryptionAtRestOptionsProperty[] | cdktn.IResolvable) {
     this._encryptionAtRestOptions.internalValue = value;
   }
   public resetEncryptionAtRestOptions() {
@@ -291,11 +291,11 @@ export class TfPipeline extends cdktn.TerraformResource {
   }
 
   // log_publishing_options - computed: false, optional: true, required: false
-  private _logPublishingOptions = new TfPipeline.LogPublishingOptionsPropertyList(this, "log_publishing_options", false);
+  private _logPublishingOptions = new AwsPipeline.LogPublishingOptionsPropertyList(this, "log_publishing_options", false);
   public get logPublishingOptions() {
     return this._logPublishingOptions;
   }
-  public putLogPublishingOptions(value: TfPipeline.LogPublishingOptionsProperty[] | cdktn.IResolvable) {
+  public putLogPublishingOptions(value: AwsPipeline.LogPublishingOptionsProperty[] | cdktn.IResolvable) {
     this._logPublishingOptions.internalValue = value;
   }
   public resetLogPublishingOptions() {
@@ -307,11 +307,11 @@ export class TfPipeline extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfPipeline.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsPipeline.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfPipeline.TimeoutsProperty) {
+  public putTimeouts(value: AwsPipeline.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -323,11 +323,11 @@ export class TfPipeline extends cdktn.TerraformResource {
   }
 
   // vpc_options - computed: false, optional: true, required: false
-  private _vpcOptions = new TfPipeline.VpcOptionsPropertyList(this, "vpc_options", false);
+  private _vpcOptions = new AwsPipeline.VpcOptionsPropertyList(this, "vpc_options", false);
   public get vpcOptions() {
     return this._vpcOptions;
   }
-  public putVpcOptions(value: TfPipeline.VpcOptionsProperty[] | cdktn.IResolvable) {
+  public putVpcOptions(value: AwsPipeline.VpcOptionsProperty[] | cdktn.IResolvable) {
     this._vpcOptions.internalValue = value;
   }
   public resetVpcOptions() {
@@ -351,11 +351,11 @@ export class TfPipeline extends cdktn.TerraformResource {
       pipeline_role_arn: cdktn.stringToTerraform(this._pipelineRoleArn),
       region: cdktn.stringToTerraform(this._region),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
-      buffer_options: cdktn.listMapper(tfPipelineBufferOptionsPropertyToTerraform, true)(this._bufferOptions.internalValue),
-      encryption_at_rest_options: cdktn.listMapper(tfPipelineEncryptionAtRestOptionsPropertyToTerraform, true)(this._encryptionAtRestOptions.internalValue),
-      log_publishing_options: cdktn.listMapper(tfPipelineLogPublishingOptionsPropertyToTerraform, true)(this._logPublishingOptions.internalValue),
-      timeouts: tfPipelineTimeoutsPropertyToTerraform(this._timeouts.internalValue),
-      vpc_options: cdktn.listMapper(tfPipelineVpcOptionsPropertyToTerraform, true)(this._vpcOptions.internalValue),
+      buffer_options: cdktn.listMapper(awsPipelineBufferOptionsPropertyToTerraform, true)(this._bufferOptions.internalValue),
+      encryption_at_rest_options: cdktn.listMapper(awsPipelineEncryptionAtRestOptionsPropertyToTerraform, true)(this._encryptionAtRestOptions.internalValue),
+      log_publishing_options: cdktn.listMapper(awsPipelineLogPublishingOptionsPropertyToTerraform, true)(this._logPublishingOptions.internalValue),
+      timeouts: awsPipelineTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      vpc_options: cdktn.listMapper(awsPipelineVpcOptionsPropertyToTerraform, true)(this._vpcOptions.internalValue),
     };
   }
 
@@ -404,34 +404,34 @@ export class TfPipeline extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       buffer_options: {
-        value: cdktn.listMapperHcl(tfPipelineBufferOptionsPropertyToHclTerraform, true)(this._bufferOptions.internalValue),
+        value: cdktn.listMapperHcl(awsPipelineBufferOptionsPropertyToHclTerraform, true)(this._bufferOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPipeline.BufferOptionsPropertyList",
+        storageClassType: "AwsPipeline.BufferOptionsPropertyList",
       },
       encryption_at_rest_options: {
-        value: cdktn.listMapperHcl(tfPipelineEncryptionAtRestOptionsPropertyToHclTerraform, true)(this._encryptionAtRestOptions.internalValue),
+        value: cdktn.listMapperHcl(awsPipelineEncryptionAtRestOptionsPropertyToHclTerraform, true)(this._encryptionAtRestOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPipeline.EncryptionAtRestOptionsPropertyList",
+        storageClassType: "AwsPipeline.EncryptionAtRestOptionsPropertyList",
       },
       log_publishing_options: {
-        value: cdktn.listMapperHcl(tfPipelineLogPublishingOptionsPropertyToHclTerraform, true)(this._logPublishingOptions.internalValue),
+        value: cdktn.listMapperHcl(awsPipelineLogPublishingOptionsPropertyToHclTerraform, true)(this._logPublishingOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPipeline.LogPublishingOptionsPropertyList",
+        storageClassType: "AwsPipeline.LogPublishingOptionsPropertyList",
       },
       timeouts: {
-        value: tfPipelineTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsPipelineTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfPipeline.TimeoutsProperty",
+        storageClassType: "AwsPipeline.TimeoutsProperty",
       },
       vpc_options: {
-        value: cdktn.listMapperHcl(tfPipelineVpcOptionsPropertyToHclTerraform, true)(this._vpcOptions.internalValue),
+        value: cdktn.listMapperHcl(awsPipelineVpcOptionsPropertyToHclTerraform, true)(this._vpcOptions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfPipeline.VpcOptionsPropertyList",
+        storageClassType: "AwsPipeline.VpcOptionsPropertyList",
       },
     };
 
@@ -440,7 +440,7 @@ export class TfPipeline extends cdktn.TerraformResource {
   }
 }
 
-export function tfPipelineBufferOptionsPropertyToTerraform(struct?: TfPipeline.BufferOptionsProperty | cdktn.IResolvable): any {
+export function awsPipelineBufferOptionsPropertyToTerraform(struct?: AwsPipeline.BufferOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -451,7 +451,7 @@ export function tfPipelineBufferOptionsPropertyToTerraform(struct?: TfPipeline.B
 }
 
 
-export function tfPipelineBufferOptionsPropertyToHclTerraform(struct?: TfPipeline.BufferOptionsProperty | cdktn.IResolvable): any {
+export function awsPipelineBufferOptionsPropertyToHclTerraform(struct?: AwsPipeline.BufferOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -470,7 +470,7 @@ export function tfPipelineBufferOptionsPropertyToHclTerraform(struct?: TfPipelin
 }
 
 
-export function tfPipelineEncryptionAtRestOptionsPropertyToTerraform(struct?: TfPipeline.EncryptionAtRestOptionsProperty | cdktn.IResolvable): any {
+export function awsPipelineEncryptionAtRestOptionsPropertyToTerraform(struct?: AwsPipeline.EncryptionAtRestOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -481,7 +481,7 @@ export function tfPipelineEncryptionAtRestOptionsPropertyToTerraform(struct?: Tf
 }
 
 
-export function tfPipelineEncryptionAtRestOptionsPropertyToHclTerraform(struct?: TfPipeline.EncryptionAtRestOptionsProperty | cdktn.IResolvable): any {
+export function awsPipelineEncryptionAtRestOptionsPropertyToHclTerraform(struct?: AwsPipeline.EncryptionAtRestOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -500,7 +500,7 @@ export function tfPipelineEncryptionAtRestOptionsPropertyToHclTerraform(struct?:
 }
 
 
-export function tfPipelineCloudwatchLogDestinationPropertyToTerraform(struct?: TfPipeline.CloudwatchLogDestinationProperty | cdktn.IResolvable): any {
+export function awsPipelineCloudwatchLogDestinationPropertyToTerraform(struct?: AwsPipeline.CloudwatchLogDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -511,7 +511,7 @@ export function tfPipelineCloudwatchLogDestinationPropertyToTerraform(struct?: T
 }
 
 
-export function tfPipelineCloudwatchLogDestinationPropertyToHclTerraform(struct?: TfPipeline.CloudwatchLogDestinationProperty | cdktn.IResolvable): any {
+export function awsPipelineCloudwatchLogDestinationPropertyToHclTerraform(struct?: AwsPipeline.CloudwatchLogDestinationProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -530,19 +530,19 @@ export function tfPipelineCloudwatchLogDestinationPropertyToHclTerraform(struct?
 }
 
 
-export function tfPipelineLogPublishingOptionsPropertyToTerraform(struct?: TfPipeline.LogPublishingOptionsProperty | cdktn.IResolvable): any {
+export function awsPipelineLogPublishingOptionsPropertyToTerraform(struct?: AwsPipeline.LogPublishingOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
     is_logging_enabled: cdktn.booleanToTerraform(struct!.isLoggingEnabled),
-    cloudwatch_log_destination: cdktn.listMapper(tfPipelineCloudwatchLogDestinationPropertyToTerraform, true)(struct!.cloudwatchLogDestination),
+    cloudwatch_log_destination: cdktn.listMapper(awsPipelineCloudwatchLogDestinationPropertyToTerraform, true)(struct!.cloudwatchLogDestination),
   }
 }
 
 
-export function tfPipelineLogPublishingOptionsPropertyToHclTerraform(struct?: TfPipeline.LogPublishingOptionsProperty | cdktn.IResolvable): any {
+export function awsPipelineLogPublishingOptionsPropertyToHclTerraform(struct?: AwsPipeline.LogPublishingOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -555,7 +555,7 @@ export function tfPipelineLogPublishingOptionsPropertyToHclTerraform(struct?: Tf
       storageClassType: "boolean",
     },
     cloudwatch_log_destination: {
-      value: cdktn.listMapperHcl(tfPipelineCloudwatchLogDestinationPropertyToHclTerraform, true)(struct!.cloudwatchLogDestination),
+      value: cdktn.listMapperHcl(awsPipelineCloudwatchLogDestinationPropertyToHclTerraform, true)(struct!.cloudwatchLogDestination),
       isBlock: true,
       type: "list",
       storageClassType: "CloudwatchLogDestinationPropertyList",
@@ -567,7 +567,7 @@ export function tfPipelineLogPublishingOptionsPropertyToHclTerraform(struct?: Tf
 }
 
 
-export function tfPipelineTimeoutsPropertyToTerraform(struct?: TfPipeline.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPipelineTimeoutsPropertyToTerraform(struct?: AwsPipeline.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -580,7 +580,7 @@ export function tfPipelineTimeoutsPropertyToTerraform(struct?: TfPipeline.Timeou
 }
 
 
-export function tfPipelineTimeoutsPropertyToHclTerraform(struct?: TfPipeline.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsPipelineTimeoutsPropertyToHclTerraform(struct?: AwsPipeline.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -611,7 +611,7 @@ export function tfPipelineTimeoutsPropertyToHclTerraform(struct?: TfPipeline.Tim
 }
 
 
-export function tfPipelineVpcOptionsPropertyToTerraform(struct?: TfPipeline.VpcOptionsProperty | cdktn.IResolvable): any {
+export function awsPipelineVpcOptionsPropertyToTerraform(struct?: AwsPipeline.VpcOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -624,7 +624,7 @@ export function tfPipelineVpcOptionsPropertyToTerraform(struct?: TfPipeline.VpcO
 }
 
 
-export function tfPipelineVpcOptionsPropertyToHclTerraform(struct?: TfPipeline.VpcOptionsProperty | cdktn.IResolvable): any {
+export function awsPipelineVpcOptionsPropertyToHclTerraform(struct?: AwsPipeline.VpcOptionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -655,10 +655,10 @@ export function tfPipelineVpcOptionsPropertyToHclTerraform(struct?: TfPipeline.V
 }
 
 
-export namespace TfPipeline {
+export namespace AwsPipeline {
 export interface BufferOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#persistent_buffer_enabled TfPipeline#persistent_buffer_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#persistent_buffer_enabled AwsPipeline#persistent_buffer_enabled}
   */
   readonly persistentBufferEnabled: boolean | cdktn.IResolvable;
 }
@@ -741,7 +741,7 @@ export class BufferOptionsPropertyList extends cdktn.ComplexList {
 }
 export interface EncryptionAtRestOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#kms_key_arn TfPipeline#kms_key_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#kms_key_arn AwsPipeline#kms_key_arn}
   */
   readonly kmsKeyArn: string;
 }
@@ -824,7 +824,7 @@ export class EncryptionAtRestOptionsPropertyList extends cdktn.ComplexList {
 }
 export interface CloudwatchLogDestinationProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#log_group TfPipeline#log_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#log_group AwsPipeline#log_group}
   */
   readonly logGroup: string;
 }
@@ -907,13 +907,13 @@ export class CloudwatchLogDestinationPropertyList extends cdktn.ComplexList {
 }
 export interface LogPublishingOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#is_logging_enabled TfPipeline#is_logging_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#is_logging_enabled AwsPipeline#is_logging_enabled}
   */
   readonly isLoggingEnabled?: boolean | cdktn.IResolvable;
   /**
   * cloudwatch_log_destination block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#cloudwatch_log_destination TfPipeline#cloudwatch_log_destination}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#cloudwatch_log_destination AwsPipeline#cloudwatch_log_destination}
   */
   readonly cloudwatchLogDestination?: CloudwatchLogDestinationProperty[] | cdktn.IResolvable;
 }
@@ -1023,19 +1023,19 @@ export interface TimeoutsProperty {
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#create TfPipeline#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#create AwsPipeline#create}
   */
   readonly create?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#delete TfPipeline#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#delete AwsPipeline#delete}
   */
   readonly delete?: string;
   /**
   * A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#update TfPipeline#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#update AwsPipeline#update}
   */
   readonly update?: string;
 }
@@ -1143,15 +1143,15 @@ export class TimeoutsPropertyOutputReference extends cdktn.ComplexObject {
 }
 export interface VpcOptionsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#security_group_ids TfPipeline#security_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#security_group_ids AwsPipeline#security_group_ids}
   */
   readonly securityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#subnet_ids TfPipeline#subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#subnet_ids AwsPipeline#subnet_ids}
   */
   readonly subnetIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#vpc_endpoint_management TfPipeline#vpc_endpoint_management}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/osis_pipeline#vpc_endpoint_management AwsPipeline#vpc_endpoint_management}
   */
   readonly vpcEndpointManagement?: string;
 }

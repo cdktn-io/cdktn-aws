@@ -5,53 +5,53 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRestoreTestingSelectionConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRestoreTestingSelectionConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#iam_role_arn TfRestoreTestingSelection#iam_role_arn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#iam_role_arn AwsRestoreTestingSelection#iam_role_arn}
   */
   readonly iamRoleArn: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#name TfRestoreTestingSelection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#name AwsRestoreTestingSelection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#protected_resource_arns TfRestoreTestingSelection#protected_resource_arns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#protected_resource_arns AwsRestoreTestingSelection#protected_resource_arns}
   */
   readonly protectedResourceArns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#protected_resource_type TfRestoreTestingSelection#protected_resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#protected_resource_type AwsRestoreTestingSelection#protected_resource_type}
   */
   readonly protectedResourceType: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#region TfRestoreTestingSelection#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#region AwsRestoreTestingSelection#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#restore_metadata_overrides TfRestoreTestingSelection#restore_metadata_overrides}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#restore_metadata_overrides AwsRestoreTestingSelection#restore_metadata_overrides}
   */
   readonly restoreMetadataOverrides?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#restore_testing_plan_name TfRestoreTestingSelection#restore_testing_plan_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#restore_testing_plan_name AwsRestoreTestingSelection#restore_testing_plan_name}
   */
   readonly restoreTestingPlanName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#validation_window_hours TfRestoreTestingSelection#validation_window_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#validation_window_hours AwsRestoreTestingSelection#validation_window_hours}
   */
   readonly validationWindowHours?: number;
   /**
   * protected_resource_conditions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#protected_resource_conditions TfRestoreTestingSelection#protected_resource_conditions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#protected_resource_conditions AwsRestoreTestingSelection#protected_resource_conditions}
   */
-  readonly protectedResourceConditions?: TfRestoreTestingSelection.ProtectedResourceConditionsProperty[] | cdktn.IResolvable;
+  readonly protectedResourceConditions?: AwsRestoreTestingSelection.ProtectedResourceConditionsProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection aws_backup_restore_testing_selection}
 */
-export class TfRestoreTestingSelection extends cdktn.TerraformResource {
+export class AwsRestoreTestingSelection extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -62,11 +62,11 @@ export class TfRestoreTestingSelection extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRestoreTestingSelection resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRestoreTestingSelection resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRestoreTestingSelection to import
-  * @param importFromId The id of the existing TfRestoreTestingSelection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRestoreTestingSelection to import is found
+  * @param importToId The construct id used in the generated config for the AwsRestoreTestingSelection to import
+  * @param importFromId The id of the existing AwsRestoreTestingSelection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRestoreTestingSelection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_backup_restore_testing_selection", importId: importFromId, provider });
@@ -81,9 +81,9 @@ export class TfRestoreTestingSelection extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRestoreTestingSelectionConfig
+  * @param options AwsRestoreTestingSelectionConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRestoreTestingSelectionConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRestoreTestingSelectionConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_backup_restore_testing_selection',
       terraformGeneratorMetadata: {
@@ -231,11 +231,11 @@ export class TfRestoreTestingSelection extends cdktn.TerraformResource {
   }
 
   // protected_resource_conditions - computed: false, optional: true, required: false
-  private _protectedResourceConditions = new TfRestoreTestingSelection.ProtectedResourceConditionsPropertyList(this, "protected_resource_conditions", false);
+  private _protectedResourceConditions = new AwsRestoreTestingSelection.ProtectedResourceConditionsPropertyList(this, "protected_resource_conditions", false);
   public get protectedResourceConditions() {
     return this._protectedResourceConditions;
   }
-  public putProtectedResourceConditions(value: TfRestoreTestingSelection.ProtectedResourceConditionsProperty[] | cdktn.IResolvable) {
+  public putProtectedResourceConditions(value: AwsRestoreTestingSelection.ProtectedResourceConditionsProperty[] | cdktn.IResolvable) {
     this._protectedResourceConditions.internalValue = value;
   }
   public resetProtectedResourceConditions() {
@@ -260,7 +260,7 @@ export class TfRestoreTestingSelection extends cdktn.TerraformResource {
       restore_metadata_overrides: cdktn.hashMapper(cdktn.stringToTerraform)(this._restoreMetadataOverrides),
       restore_testing_plan_name: cdktn.stringToTerraform(this._restoreTestingPlanName),
       validation_window_hours: cdktn.numberToTerraform(this._validationWindowHours),
-      protected_resource_conditions: cdktn.listMapper(tfRestoreTestingSelectionProtectedResourceConditionsPropertyToTerraform, true)(this._protectedResourceConditions.internalValue),
+      protected_resource_conditions: cdktn.listMapper(awsRestoreTestingSelectionProtectedResourceConditionsPropertyToTerraform, true)(this._protectedResourceConditions.internalValue),
     };
   }
 
@@ -315,10 +315,10 @@ export class TfRestoreTestingSelection extends cdktn.TerraformResource {
         storageClassType: "number",
       },
       protected_resource_conditions: {
-        value: cdktn.listMapperHcl(tfRestoreTestingSelectionProtectedResourceConditionsPropertyToHclTerraform, true)(this._protectedResourceConditions.internalValue),
+        value: cdktn.listMapperHcl(awsRestoreTestingSelectionProtectedResourceConditionsPropertyToHclTerraform, true)(this._protectedResourceConditions.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRestoreTestingSelection.ProtectedResourceConditionsPropertyList",
+        storageClassType: "AwsRestoreTestingSelection.ProtectedResourceConditionsPropertyList",
       },
     };
 
@@ -327,7 +327,7 @@ export class TfRestoreTestingSelection extends cdktn.TerraformResource {
   }
 }
 
-export function tfRestoreTestingSelectionStringEqualsPropertyToTerraform(struct?: TfRestoreTestingSelection.StringEqualsProperty | cdktn.IResolvable): any {
+export function awsRestoreTestingSelectionStringEqualsPropertyToTerraform(struct?: AwsRestoreTestingSelection.StringEqualsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -339,7 +339,7 @@ export function tfRestoreTestingSelectionStringEqualsPropertyToTerraform(struct?
 }
 
 
-export function tfRestoreTestingSelectionStringEqualsPropertyToHclTerraform(struct?: TfRestoreTestingSelection.StringEqualsProperty | cdktn.IResolvable): any {
+export function awsRestoreTestingSelectionStringEqualsPropertyToHclTerraform(struct?: AwsRestoreTestingSelection.StringEqualsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -364,7 +364,7 @@ export function tfRestoreTestingSelectionStringEqualsPropertyToHclTerraform(stru
 }
 
 
-export function tfRestoreTestingSelectionStringNotEqualsPropertyToTerraform(struct?: TfRestoreTestingSelection.StringNotEqualsProperty | cdktn.IResolvable): any {
+export function awsRestoreTestingSelectionStringNotEqualsPropertyToTerraform(struct?: AwsRestoreTestingSelection.StringNotEqualsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -376,7 +376,7 @@ export function tfRestoreTestingSelectionStringNotEqualsPropertyToTerraform(stru
 }
 
 
-export function tfRestoreTestingSelectionStringNotEqualsPropertyToHclTerraform(struct?: TfRestoreTestingSelection.StringNotEqualsProperty | cdktn.IResolvable): any {
+export function awsRestoreTestingSelectionStringNotEqualsPropertyToHclTerraform(struct?: AwsRestoreTestingSelection.StringNotEqualsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -401,32 +401,32 @@ export function tfRestoreTestingSelectionStringNotEqualsPropertyToHclTerraform(s
 }
 
 
-export function tfRestoreTestingSelectionProtectedResourceConditionsPropertyToTerraform(struct?: TfRestoreTestingSelection.ProtectedResourceConditionsProperty | cdktn.IResolvable): any {
+export function awsRestoreTestingSelectionProtectedResourceConditionsPropertyToTerraform(struct?: AwsRestoreTestingSelection.ProtectedResourceConditionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    string_equals: cdktn.listMapper(tfRestoreTestingSelectionStringEqualsPropertyToTerraform, true)(struct!.stringEquals),
-    string_not_equals: cdktn.listMapper(tfRestoreTestingSelectionStringNotEqualsPropertyToTerraform, true)(struct!.stringNotEquals),
+    string_equals: cdktn.listMapper(awsRestoreTestingSelectionStringEqualsPropertyToTerraform, true)(struct!.stringEquals),
+    string_not_equals: cdktn.listMapper(awsRestoreTestingSelectionStringNotEqualsPropertyToTerraform, true)(struct!.stringNotEquals),
   }
 }
 
 
-export function tfRestoreTestingSelectionProtectedResourceConditionsPropertyToHclTerraform(struct?: TfRestoreTestingSelection.ProtectedResourceConditionsProperty | cdktn.IResolvable): any {
+export function awsRestoreTestingSelectionProtectedResourceConditionsPropertyToHclTerraform(struct?: AwsRestoreTestingSelection.ProtectedResourceConditionsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     string_equals: {
-      value: cdktn.listMapperHcl(tfRestoreTestingSelectionStringEqualsPropertyToHclTerraform, true)(struct!.stringEquals),
+      value: cdktn.listMapperHcl(awsRestoreTestingSelectionStringEqualsPropertyToHclTerraform, true)(struct!.stringEquals),
       isBlock: true,
       type: "list",
       storageClassType: "StringEqualsPropertyList",
     },
     string_not_equals: {
-      value: cdktn.listMapperHcl(tfRestoreTestingSelectionStringNotEqualsPropertyToHclTerraform, true)(struct!.stringNotEquals),
+      value: cdktn.listMapperHcl(awsRestoreTestingSelectionStringNotEqualsPropertyToHclTerraform, true)(struct!.stringNotEquals),
       isBlock: true,
       type: "list",
       storageClassType: "StringNotEqualsPropertyList",
@@ -438,14 +438,14 @@ export function tfRestoreTestingSelectionProtectedResourceConditionsPropertyToHc
 }
 
 
-export namespace TfRestoreTestingSelection {
+export namespace AwsRestoreTestingSelection {
 export interface StringEqualsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#key TfRestoreTestingSelection#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#key AwsRestoreTestingSelection#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#value TfRestoreTestingSelection#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#value AwsRestoreTestingSelection#value}
   */
   readonly value: string;
 }
@@ -547,11 +547,11 @@ export class StringEqualsPropertyList extends cdktn.ComplexList {
 }
 export interface StringNotEqualsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#key TfRestoreTestingSelection#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#key AwsRestoreTestingSelection#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#value TfRestoreTestingSelection#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#value AwsRestoreTestingSelection#value}
   */
   readonly value: string;
 }
@@ -655,13 +655,13 @@ export interface ProtectedResourceConditionsProperty {
   /**
   * string_equals block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#string_equals TfRestoreTestingSelection#string_equals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#string_equals AwsRestoreTestingSelection#string_equals}
   */
   readonly stringEquals?: StringEqualsProperty[] | cdktn.IResolvable;
   /**
   * string_not_equals block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#string_not_equals TfRestoreTestingSelection#string_not_equals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/backup_restore_testing_selection#string_not_equals AwsRestoreTestingSelection#string_not_equals}
   */
   readonly stringNotEquals?: StringNotEqualsProperty[] | cdktn.IResolvable;
 }

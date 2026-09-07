@@ -5,9 +5,9 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfImagePipelinesConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsImagePipelinesConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipelines#id DataTfImagePipelines#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipelines#id DataAwsImagePipelines#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -16,21 +16,21 @@ export interface DataTfImagePipelinesConfig extends cdktn.TerraformMetaArguments
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipelines#region DataTfImagePipelines#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipelines#region DataAwsImagePipelines#region}
   */
   readonly region?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipelines#filter DataTfImagePipelines#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipelines#filter DataAwsImagePipelines#filter}
   */
-  readonly filter?: DataTfImagePipelines.FilterProperty[] | cdktn.IResolvable;
+  readonly filter?: DataAwsImagePipelines.FilterProperty[] | cdktn.IResolvable;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipelines aws_imagebuilder_image_pipelines}
 */
-export class DataTfImagePipelines extends cdktn.TerraformDataSource {
+export class DataAwsImagePipelines extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -41,11 +41,11 @@ export class DataTfImagePipelines extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfImagePipelines resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsImagePipelines resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfImagePipelines to import
-  * @param importFromId The id of the existing DataTfImagePipelines that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipelines#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfImagePipelines to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsImagePipelines to import
+  * @param importFromId The id of the existing DataAwsImagePipelines that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipelines#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsImagePipelines to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_imagebuilder_image_pipelines", importId: importFromId, provider });
@@ -60,9 +60,9 @@ export class DataTfImagePipelines extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfImagePipelinesConfig = {}
+  * @param options DataAwsImagePipelinesConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfImagePipelinesConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsImagePipelinesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_imagebuilder_image_pipelines',
       terraformGeneratorMetadata: {
@@ -130,11 +130,11 @@ export class DataTfImagePipelines extends cdktn.TerraformDataSource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new DataTfImagePipelines.FilterPropertyList(this, "filter", true);
+  private _filter = new DataAwsImagePipelines.FilterPropertyList(this, "filter", true);
   public get filter() {
     return this._filter;
   }
-  public putFilter(value: DataTfImagePipelines.FilterProperty[] | cdktn.IResolvable) {
+  public putFilter(value: DataAwsImagePipelines.FilterProperty[] | cdktn.IResolvable) {
     this._filter.internalValue = value;
   }
   public resetFilter() {
@@ -153,7 +153,7 @@ export class DataTfImagePipelines extends cdktn.TerraformDataSource {
     return {
       id: cdktn.stringToTerraform(this._id),
       region: cdktn.stringToTerraform(this._region),
-      filter: cdktn.listMapper(dataTfImagePipelinesFilterPropertyToTerraform, true)(this._filter.internalValue),
+      filter: cdktn.listMapper(dataAwsImagePipelinesFilterPropertyToTerraform, true)(this._filter.internalValue),
     };
   }
 
@@ -172,10 +172,10 @@ export class DataTfImagePipelines extends cdktn.TerraformDataSource {
         storageClassType: "string",
       },
       filter: {
-        value: cdktn.listMapperHcl(dataTfImagePipelinesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
+        value: cdktn.listMapperHcl(dataAwsImagePipelinesFilterPropertyToHclTerraform, true)(this._filter.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "DataTfImagePipelines.FilterPropertyList",
+        storageClassType: "DataAwsImagePipelines.FilterPropertyList",
       },
     };
 
@@ -184,7 +184,7 @@ export class DataTfImagePipelines extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfImagePipelinesFilterPropertyToTerraform(struct?: DataTfImagePipelines.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsImagePipelinesFilterPropertyToTerraform(struct?: DataAwsImagePipelines.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -196,7 +196,7 @@ export function dataTfImagePipelinesFilterPropertyToTerraform(struct?: DataTfIma
 }
 
 
-export function dataTfImagePipelinesFilterPropertyToHclTerraform(struct?: DataTfImagePipelines.FilterProperty | cdktn.IResolvable): any {
+export function dataAwsImagePipelinesFilterPropertyToHclTerraform(struct?: DataAwsImagePipelines.FilterProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -221,14 +221,14 @@ export function dataTfImagePipelinesFilterPropertyToHclTerraform(struct?: DataTf
 }
 
 
-export namespace DataTfImagePipelines {
+export namespace DataAwsImagePipelines {
 export interface FilterProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipelines#name DataTfImagePipelines#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipelines#name DataAwsImagePipelines#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipelines#values DataTfImagePipelines#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/imagebuilder_image_pipelines#values DataAwsImagePipelines#values}
   */
   readonly values: string[];
 }

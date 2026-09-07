@@ -5,65 +5,65 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface TfRuleConfig extends cdktn.TerraformMetaArguments {
+export interface AwsRuleConfig extends cdktn.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#description TfRule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#description AwsRule#description}
   */
   readonly description?: string;
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#region TfRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#region AwsRule#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#resource_type TfRule#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#resource_type AwsRule#resource_type}
   */
   readonly resourceType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#tags TfRule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#tags AwsRule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#tags_all TfRule#tags_all}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#tags_all AwsRule#tags_all}
   */
   readonly tagsAll?: { [key: string]: string };
   /**
   * exclude_resource_tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#exclude_resource_tags TfRule#exclude_resource_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#exclude_resource_tags AwsRule#exclude_resource_tags}
   */
-  readonly excludeResourceTags?: TfRule.ExcludeResourceTagsProperty[] | cdktn.IResolvable;
+  readonly excludeResourceTags?: AwsRule.ExcludeResourceTagsProperty[] | cdktn.IResolvable;
   /**
   * lock_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#lock_configuration TfRule#lock_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#lock_configuration AwsRule#lock_configuration}
   */
-  readonly lockConfiguration?: TfRule.LockConfigurationProperty;
+  readonly lockConfiguration?: AwsRule.LockConfigurationProperty;
   /**
   * resource_tags block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#resource_tags TfRule#resource_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#resource_tags AwsRule#resource_tags}
   */
-  readonly resourceTags?: TfRule.ResourceTagsProperty[] | cdktn.IResolvable;
+  readonly resourceTags?: AwsRule.ResourceTagsProperty[] | cdktn.IResolvable;
   /**
   * retention_period block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#retention_period TfRule#retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#retention_period AwsRule#retention_period}
   */
-  readonly retentionPeriod: TfRule.RetentionPeriodProperty;
+  readonly retentionPeriod: AwsRule.RetentionPeriodProperty;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#timeouts TfRule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#timeouts AwsRule#timeouts}
   */
-  readonly timeouts?: TfRule.TimeoutsProperty;
+  readonly timeouts?: AwsRule.TimeoutsProperty;
 }
 
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule aws_rbin_rule}
 */
-export class TfRule extends cdktn.TerraformResource {
+export class AwsRule extends cdktn.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -74,11 +74,11 @@ export class TfRule extends cdktn.TerraformResource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a TfRule resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a AwsRule resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the TfRule to import
-  * @param importFromId The id of the existing TfRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the TfRule to import is found
+  * @param importToId The construct id used in the generated config for the AwsRule to import
+  * @param importFromId The id of the existing AwsRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AwsRule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_rbin_rule", importId: importFromId, provider });
@@ -93,9 +93,9 @@ export class TfRule extends cdktn.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options TfRuleConfig
+  * @param options AwsRuleConfig
   */
-  public constructor(scope: Construct, id: string, config: TfRuleConfig) {
+  public constructor(scope: Construct, id: string, config: AwsRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'aws_rbin_rule',
       terraformGeneratorMetadata: {
@@ -230,11 +230,11 @@ export class TfRule extends cdktn.TerraformResource {
   }
 
   // exclude_resource_tags - computed: false, optional: true, required: false
-  private _excludeResourceTags = new TfRule.ExcludeResourceTagsPropertyList(this, "exclude_resource_tags", true);
+  private _excludeResourceTags = new AwsRule.ExcludeResourceTagsPropertyList(this, "exclude_resource_tags", true);
   public get excludeResourceTags() {
     return this._excludeResourceTags;
   }
-  public putExcludeResourceTags(value: TfRule.ExcludeResourceTagsProperty[] | cdktn.IResolvable) {
+  public putExcludeResourceTags(value: AwsRule.ExcludeResourceTagsProperty[] | cdktn.IResolvable) {
     this._excludeResourceTags.internalValue = value;
   }
   public resetExcludeResourceTags() {
@@ -246,11 +246,11 @@ export class TfRule extends cdktn.TerraformResource {
   }
 
   // lock_configuration - computed: false, optional: true, required: false
-  private _lockConfiguration = new TfRule.LockConfigurationPropertyOutputReference(this, "lock_configuration");
+  private _lockConfiguration = new AwsRule.LockConfigurationPropertyOutputReference(this, "lock_configuration");
   public get lockConfiguration() {
     return this._lockConfiguration;
   }
-  public putLockConfiguration(value: TfRule.LockConfigurationProperty) {
+  public putLockConfiguration(value: AwsRule.LockConfigurationProperty) {
     this._lockConfiguration.internalValue = value;
   }
   public resetLockConfiguration() {
@@ -262,11 +262,11 @@ export class TfRule extends cdktn.TerraformResource {
   }
 
   // resource_tags - computed: false, optional: true, required: false
-  private _resourceTags = new TfRule.ResourceTagsPropertyList(this, "resource_tags", true);
+  private _resourceTags = new AwsRule.ResourceTagsPropertyList(this, "resource_tags", true);
   public get resourceTags() {
     return this._resourceTags;
   }
-  public putResourceTags(value: TfRule.ResourceTagsProperty[] | cdktn.IResolvable) {
+  public putResourceTags(value: AwsRule.ResourceTagsProperty[] | cdktn.IResolvable) {
     this._resourceTags.internalValue = value;
   }
   public resetResourceTags() {
@@ -278,11 +278,11 @@ export class TfRule extends cdktn.TerraformResource {
   }
 
   // retention_period - computed: false, optional: false, required: true
-  private _retentionPeriod = new TfRule.RetentionPeriodPropertyOutputReference(this, "retention_period");
+  private _retentionPeriod = new AwsRule.RetentionPeriodPropertyOutputReference(this, "retention_period");
   public get retentionPeriod() {
     return this._retentionPeriod;
   }
-  public putRetentionPeriod(value: TfRule.RetentionPeriodProperty) {
+  public putRetentionPeriod(value: AwsRule.RetentionPeriodProperty) {
     this._retentionPeriod.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -291,11 +291,11 @@ export class TfRule extends cdktn.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TfRule.TimeoutsPropertyOutputReference(this, "timeouts");
+  private _timeouts = new AwsRule.TimeoutsPropertyOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
-  public putTimeouts(value: TfRule.TimeoutsProperty) {
+  public putTimeouts(value: AwsRule.TimeoutsProperty) {
     this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
@@ -317,11 +317,11 @@ export class TfRule extends cdktn.TerraformResource {
       resource_type: cdktn.stringToTerraform(this._resourceType),
       tags: cdktn.hashMapper(cdktn.stringToTerraform)(this._tags),
       tags_all: cdktn.hashMapper(cdktn.stringToTerraform)(this._tagsAll),
-      exclude_resource_tags: cdktn.listMapper(tfRuleExcludeResourceTagsPropertyToTerraform, true)(this._excludeResourceTags.internalValue),
-      lock_configuration: tfRuleLockConfigurationPropertyToTerraform(this._lockConfiguration.internalValue),
-      resource_tags: cdktn.listMapper(tfRuleResourceTagsPropertyToTerraform, true)(this._resourceTags.internalValue),
-      retention_period: tfRuleRetentionPeriodPropertyToTerraform(this._retentionPeriod.internalValue),
-      timeouts: tfRuleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
+      exclude_resource_tags: cdktn.listMapper(awsRuleExcludeResourceTagsPropertyToTerraform, true)(this._excludeResourceTags.internalValue),
+      lock_configuration: awsRuleLockConfigurationPropertyToTerraform(this._lockConfiguration.internalValue),
+      resource_tags: cdktn.listMapper(awsRuleResourceTagsPropertyToTerraform, true)(this._resourceTags.internalValue),
+      retention_period: awsRuleRetentionPeriodPropertyToTerraform(this._retentionPeriod.internalValue),
+      timeouts: awsRuleTimeoutsPropertyToTerraform(this._timeouts.internalValue),
     };
   }
 
@@ -358,34 +358,34 @@ export class TfRule extends cdktn.TerraformResource {
         storageClassType: "stringMap",
       },
       exclude_resource_tags: {
-        value: cdktn.listMapperHcl(tfRuleExcludeResourceTagsPropertyToHclTerraform, true)(this._excludeResourceTags.internalValue),
+        value: cdktn.listMapperHcl(awsRuleExcludeResourceTagsPropertyToHclTerraform, true)(this._excludeResourceTags.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfRule.ExcludeResourceTagsPropertyList",
+        storageClassType: "AwsRule.ExcludeResourceTagsPropertyList",
       },
       lock_configuration: {
-        value: tfRuleLockConfigurationPropertyToHclTerraform(this._lockConfiguration.internalValue),
+        value: awsRuleLockConfigurationPropertyToHclTerraform(this._lockConfiguration.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRule.LockConfigurationPropertyList",
+        storageClassType: "AwsRule.LockConfigurationPropertyList",
       },
       resource_tags: {
-        value: cdktn.listMapperHcl(tfRuleResourceTagsPropertyToHclTerraform, true)(this._resourceTags.internalValue),
+        value: cdktn.listMapperHcl(awsRuleResourceTagsPropertyToHclTerraform, true)(this._resourceTags.internalValue),
         isBlock: true,
         type: "set",
-        storageClassType: "TfRule.ResourceTagsPropertyList",
+        storageClassType: "AwsRule.ResourceTagsPropertyList",
       },
       retention_period: {
-        value: tfRuleRetentionPeriodPropertyToHclTerraform(this._retentionPeriod.internalValue),
+        value: awsRuleRetentionPeriodPropertyToHclTerraform(this._retentionPeriod.internalValue),
         isBlock: true,
         type: "list",
-        storageClassType: "TfRule.RetentionPeriodPropertyList",
+        storageClassType: "AwsRule.RetentionPeriodPropertyList",
       },
       timeouts: {
-        value: tfRuleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
+        value: awsRuleTimeoutsPropertyToHclTerraform(this._timeouts.internalValue),
         isBlock: true,
         type: "struct",
-        storageClassType: "TfRule.TimeoutsProperty",
+        storageClassType: "AwsRule.TimeoutsProperty",
       },
     };
 
@@ -394,7 +394,7 @@ export class TfRule extends cdktn.TerraformResource {
   }
 }
 
-export function tfRuleExcludeResourceTagsPropertyToTerraform(struct?: TfRule.ExcludeResourceTagsProperty | cdktn.IResolvable): any {
+export function awsRuleExcludeResourceTagsPropertyToTerraform(struct?: AwsRule.ExcludeResourceTagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -406,7 +406,7 @@ export function tfRuleExcludeResourceTagsPropertyToTerraform(struct?: TfRule.Exc
 }
 
 
-export function tfRuleExcludeResourceTagsPropertyToHclTerraform(struct?: TfRule.ExcludeResourceTagsProperty | cdktn.IResolvable): any {
+export function awsRuleExcludeResourceTagsPropertyToHclTerraform(struct?: AwsRule.ExcludeResourceTagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -431,7 +431,7 @@ export function tfRuleExcludeResourceTagsPropertyToHclTerraform(struct?: TfRule.
 }
 
 
-export function tfRuleUnlockDelayPropertyToTerraform(struct?: TfRule.UnlockDelayPropertyOutputReference | TfRule.UnlockDelayProperty): any {
+export function awsRuleUnlockDelayPropertyToTerraform(struct?: AwsRule.UnlockDelayPropertyOutputReference | AwsRule.UnlockDelayProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -443,7 +443,7 @@ export function tfRuleUnlockDelayPropertyToTerraform(struct?: TfRule.UnlockDelay
 }
 
 
-export function tfRuleUnlockDelayPropertyToHclTerraform(struct?: TfRule.UnlockDelayPropertyOutputReference | TfRule.UnlockDelayProperty): any {
+export function awsRuleUnlockDelayPropertyToHclTerraform(struct?: AwsRule.UnlockDelayPropertyOutputReference | AwsRule.UnlockDelayProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -468,25 +468,25 @@ export function tfRuleUnlockDelayPropertyToHclTerraform(struct?: TfRule.UnlockDe
 }
 
 
-export function tfRuleLockConfigurationPropertyToTerraform(struct?: TfRule.LockConfigurationPropertyOutputReference | TfRule.LockConfigurationProperty): any {
+export function awsRuleLockConfigurationPropertyToTerraform(struct?: AwsRule.LockConfigurationPropertyOutputReference | AwsRule.LockConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   return {
-    unlock_delay: tfRuleUnlockDelayPropertyToTerraform(struct!.unlockDelay),
+    unlock_delay: awsRuleUnlockDelayPropertyToTerraform(struct!.unlockDelay),
   }
 }
 
 
-export function tfRuleLockConfigurationPropertyToHclTerraform(struct?: TfRule.LockConfigurationPropertyOutputReference | TfRule.LockConfigurationProperty): any {
+export function awsRuleLockConfigurationPropertyToHclTerraform(struct?: AwsRule.LockConfigurationPropertyOutputReference | AwsRule.LockConfigurationProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
   }
   const attrs = {
     unlock_delay: {
-      value: tfRuleUnlockDelayPropertyToHclTerraform(struct!.unlockDelay),
+      value: awsRuleUnlockDelayPropertyToHclTerraform(struct!.unlockDelay),
       isBlock: true,
       type: "list",
       storageClassType: "UnlockDelayPropertyList",
@@ -498,7 +498,7 @@ export function tfRuleLockConfigurationPropertyToHclTerraform(struct?: TfRule.Lo
 }
 
 
-export function tfRuleResourceTagsPropertyToTerraform(struct?: TfRule.ResourceTagsProperty | cdktn.IResolvable): any {
+export function awsRuleResourceTagsPropertyToTerraform(struct?: AwsRule.ResourceTagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -510,7 +510,7 @@ export function tfRuleResourceTagsPropertyToTerraform(struct?: TfRule.ResourceTa
 }
 
 
-export function tfRuleResourceTagsPropertyToHclTerraform(struct?: TfRule.ResourceTagsProperty | cdktn.IResolvable): any {
+export function awsRuleResourceTagsPropertyToHclTerraform(struct?: AwsRule.ResourceTagsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -535,7 +535,7 @@ export function tfRuleResourceTagsPropertyToHclTerraform(struct?: TfRule.Resourc
 }
 
 
-export function tfRuleRetentionPeriodPropertyToTerraform(struct?: TfRule.RetentionPeriodPropertyOutputReference | TfRule.RetentionPeriodProperty): any {
+export function awsRuleRetentionPeriodPropertyToTerraform(struct?: AwsRule.RetentionPeriodPropertyOutputReference | AwsRule.RetentionPeriodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -547,7 +547,7 @@ export function tfRuleRetentionPeriodPropertyToTerraform(struct?: TfRule.Retenti
 }
 
 
-export function tfRuleRetentionPeriodPropertyToHclTerraform(struct?: TfRule.RetentionPeriodPropertyOutputReference | TfRule.RetentionPeriodProperty): any {
+export function awsRuleRetentionPeriodPropertyToHclTerraform(struct?: AwsRule.RetentionPeriodPropertyOutputReference | AwsRule.RetentionPeriodProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -572,7 +572,7 @@ export function tfRuleRetentionPeriodPropertyToHclTerraform(struct?: TfRule.Rete
 }
 
 
-export function tfRuleTimeoutsPropertyToTerraform(struct?: TfRule.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRuleTimeoutsPropertyToTerraform(struct?: AwsRule.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -585,7 +585,7 @@ export function tfRuleTimeoutsPropertyToTerraform(struct?: TfRule.TimeoutsProper
 }
 
 
-export function tfRuleTimeoutsPropertyToHclTerraform(struct?: TfRule.TimeoutsProperty | cdktn.IResolvable): any {
+export function awsRuleTimeoutsPropertyToHclTerraform(struct?: AwsRule.TimeoutsProperty | cdktn.IResolvable): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -616,14 +616,14 @@ export function tfRuleTimeoutsPropertyToHclTerraform(struct?: TfRule.TimeoutsPro
 }
 
 
-export namespace TfRule {
+export namespace AwsRule {
 export interface ExcludeResourceTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#resource_tag_key TfRule#resource_tag_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#resource_tag_key AwsRule#resource_tag_key}
   */
   readonly resourceTagKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#resource_tag_value TfRule#resource_tag_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#resource_tag_value AwsRule#resource_tag_value}
   */
   readonly resourceTagValue?: string;
 }
@@ -728,11 +728,11 @@ export class ExcludeResourceTagsPropertyList extends cdktn.ComplexList {
 }
 export interface UnlockDelayProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#unlock_delay_unit TfRule#unlock_delay_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#unlock_delay_unit AwsRule#unlock_delay_unit}
   */
   readonly unlockDelayUnit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#unlock_delay_value TfRule#unlock_delay_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#unlock_delay_value AwsRule#unlock_delay_value}
   */
   readonly unlockDelayValue: number;
 }
@@ -804,7 +804,7 @@ export interface LockConfigurationProperty {
   /**
   * unlock_delay block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#unlock_delay TfRule#unlock_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#unlock_delay AwsRule#unlock_delay}
   */
   readonly unlockDelay: UnlockDelayProperty;
 }
@@ -855,11 +855,11 @@ export class LockConfigurationPropertyOutputReference extends cdktn.ComplexObjec
 }
 export interface ResourceTagsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#resource_tag_key TfRule#resource_tag_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#resource_tag_key AwsRule#resource_tag_key}
   */
   readonly resourceTagKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#resource_tag_value TfRule#resource_tag_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#resource_tag_value AwsRule#resource_tag_value}
   */
   readonly resourceTagValue?: string;
 }
@@ -964,11 +964,11 @@ export class ResourceTagsPropertyList extends cdktn.ComplexList {
 }
 export interface RetentionPeriodProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#retention_period_unit TfRule#retention_period_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#retention_period_unit AwsRule#retention_period_unit}
   */
   readonly retentionPeriodUnit: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#retention_period_value TfRule#retention_period_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#retention_period_value AwsRule#retention_period_value}
   */
   readonly retentionPeriodValue: number;
 }
@@ -1038,15 +1038,15 @@ export class RetentionPeriodPropertyOutputReference extends cdktn.ComplexObject 
 }
 export interface TimeoutsProperty {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#create TfRule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#create AwsRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#delete TfRule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#delete AwsRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#update TfRule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/rbin_rule#update AwsRule#update}
   */
   readonly update?: string;
 }

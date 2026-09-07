@@ -5,11 +5,11 @@
 
 import { Construct } from 'constructs';
 import * as cdktn from 'cdktn';
-export interface DataTfCustomModelsConfig extends cdktn.TerraformMetaArguments {
+export interface DataAwsCustomModelsConfig extends cdktn.TerraformMetaArguments {
   /**
   * Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_custom_models#region DataTfCustomModels#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_custom_models#region DataAwsCustomModels#region}
   */
   readonly region?: string;
 }
@@ -17,7 +17,7 @@ export interface DataTfCustomModelsConfig extends cdktn.TerraformMetaArguments {
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_custom_models aws_bedrock_custom_models}
 */
-export class DataTfCustomModels extends cdktn.TerraformDataSource {
+export class DataAwsCustomModels extends cdktn.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
@@ -28,11 +28,11 @@ export class DataTfCustomModels extends cdktn.TerraformDataSource {
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTN code for importing a DataTfCustomModels resource upon running "cdktn plan <stack-name>"
+  * Generates CDKTN code for importing a DataAwsCustomModels resource upon running "cdktn plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the DataTfCustomModels to import
-  * @param importFromId The id of the existing DataTfCustomModels that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_custom_models#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the DataTfCustomModels to import is found
+  * @param importToId The construct id used in the generated config for the DataAwsCustomModels to import
+  * @param importFromId The id of the existing DataAwsCustomModels that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/data-sources/bedrock_custom_models#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAwsCustomModels to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktn.TerraformProvider) {
         return new cdktn.ImportableResource(scope, importToId, { terraformResourceType: "aws_bedrock_custom_models", importId: importFromId, provider });
@@ -47,9 +47,9 @@ export class DataTfCustomModels extends cdktn.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTfCustomModelsConfig = {}
+  * @param options DataAwsCustomModelsConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTfCustomModelsConfig = {}) {
+  public constructor(scope: Construct, id: string, config: DataAwsCustomModelsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'aws_bedrock_custom_models',
       terraformGeneratorMetadata: {
@@ -78,7 +78,7 @@ export class DataTfCustomModels extends cdktn.TerraformDataSource {
   }
 
   // model_summaries - computed: true, optional: false, required: false
-  private _modelSummaries = new DataTfCustomModels.ModelSummariesPropertyList(this, "model_summaries", false);
+  private _modelSummaries = new DataAwsCustomModels.ModelSummariesPropertyList(this, "model_summaries", false);
   public get modelSummaries() {
     return this._modelSummaries;
   }
@@ -124,7 +124,7 @@ export class DataTfCustomModels extends cdktn.TerraformDataSource {
   }
 }
 
-export function dataTfCustomModelsModelSummariesPropertyToTerraform(struct?: DataTfCustomModels.ModelSummariesProperty): any {
+export function dataAwsCustomModelsModelSummariesPropertyToTerraform(struct?: DataAwsCustomModels.ModelSummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -134,7 +134,7 @@ export function dataTfCustomModelsModelSummariesPropertyToTerraform(struct?: Dat
 }
 
 
-export function dataTfCustomModelsModelSummariesPropertyToHclTerraform(struct?: DataTfCustomModels.ModelSummariesProperty): any {
+export function dataAwsCustomModelsModelSummariesPropertyToHclTerraform(struct?: DataAwsCustomModels.ModelSummariesProperty): any {
   if (!cdktn.canInspect(struct) || cdktn.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktn.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdktn.io/docs/concepts/resources#references");
@@ -145,7 +145,7 @@ export function dataTfCustomModelsModelSummariesPropertyToHclTerraform(struct?: 
 }
 
 
-export namespace DataTfCustomModels {
+export namespace DataAwsCustomModels {
 export interface ModelSummariesProperty {
 }
 export class ModelSummariesPropertyOutputReference extends cdktn.ComplexObject {
